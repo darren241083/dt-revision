@@ -112,7 +112,7 @@
           "text": "Fine teeth for hard materials, such as plastic pipe."
         },
         {
-          "term": "Jigsaw",
+          "term": "Jig saw",
           "tags": [
             "timber",
             "polymer"
@@ -195,12 +195,9 @@
       "summary": "A drill bit cuts a circular hole.",
       "items": [
         {
-          "term": "Twist bit",
-          "tags": [
-            "timber",
-            "polymer"
-          ],
-          "text": "General-purpose bit for drilling holes."
+          "term": "Countersink bit",
+          "tags": [],
+          "text": "Cuts a wider recess so a screw head sits flush with, or just below, the surface."
         },
         {
           "term": "Flat bit",
@@ -216,14 +213,17 @@
           "text": "A cylindrical blade that cuts bigger holes."
         },
         {
-          "term": "Countersink bit",
-          "tags": [],
-          "text": "Cuts a wider recess so a screw head sits flush with, or just below, the surface."
-        },
-        {
           "term": "Bradawl",
           "tags": [],
           "text": "Marks and starts a hole accurately before drilling or screwing."
+        },
+        {
+          "term": "Twist bit",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "General-purpose bit for drilling holes."
         }
       ],
       "check": [
@@ -330,8 +330,8 @@
           {
             "x": 49,
             "y": 44,
-            "name": "Chuck and bit",
-            "text": "Holds the drill bit. Usually drills at 90°."
+            "name": "Drill bit",
+            "text": "Cuts the hole. Usually drills at 90°."
           },
           {
             "x": 30,
@@ -403,7 +403,7 @@
     },
     {
       "term": "Reciprocating",
-      "def": "Back-and-forth motion in a straight line, like a jigsaw blade."
+      "def": "Back-and-forth motion in a straight line, like a jig saw blade."
     },
     {
       "term": "Abrading",
@@ -433,7 +433,7 @@
         "Band saw",
         "Tenon saw",
         "Coping saw",
-        "Jigsaw"
+        "Jig saw"
       ],
       "tool": 0,
       "reasons": [
@@ -565,7 +565,7 @@
       "chunk": "saw"
     },
     {
-      "q": "A jigsaw blade moves with which motion?",
+      "q": "A jig saw blade moves with which motion?",
       "options": [
         "Reciprocating",
         "Rotary",
@@ -635,6 +635,84 @@
       "answer": 0,
       "why": "Parts must fit and match each other.",
       "chunk": "turn"
+    },
+    {
+      "q": "A tenon saw is used for long cuts along the grain of a timber board.",
+      "tf": false,
+      "why": "That is a rip saw. A tenon saw makes shallow, accurate cuts in small pieces of wood.",
+      "chunk": "saw"
+    },
+    {
+      "q": "A chisel is struck with a mallet to give it cutting force.",
+      "tf": true,
+      "why": "The mallet hits the handle so the bevelled blade cuts into the wood.",
+      "chunk": "shape"
+    },
+    {
+      "q": "Which hand tool carves, chips and pares wood to shape?",
+      "options": [
+        "Chisel",
+        "Planer",
+        "Rasp",
+        "Bradawl"
+      ],
+      "answer": 0,
+      "why": "Chisels have a bevelled blade and come in many shapes and widths.",
+      "chunk": "shape"
+    },
+    {
+      "q": "Which bit is the general-purpose choice for drilling holes in timber or plastic?",
+      "options": [
+        "Twist bit",
+        "Flat bit",
+        "Countersink bit",
+        "Hole saw"
+      ],
+      "answer": 0,
+      "why": "A twist bit is the everyday bit for holes in timber or plastic.",
+      "chunk": "drill"
+    },
+    {
+      "q": "What is a flat bit used for?",
+      "options": [
+        "Drilling larger-diameter holes",
+        "Letting a screw head sit flush",
+        "Marking where a hole goes",
+        "Cutting curved lines"
+      ],
+      "answer": 0,
+      "why": "Its wide, flat blade cuts larger holes.",
+      "chunk": "drill"
+    },
+    {
+      "q": "A band saw has a long continuous blade running between two wheels.",
+      "tf": true,
+      "why": "Fitting a finer blade lets it cut curves and shapes too.",
+      "chunk": "machine"
+    },
+    {
+      "q": "Which machine would you use to strip old paint off a timber surface?",
+      "options": [
+        "Disc or belt sander",
+        "Pillar drill",
+        "Band saw",
+        "Lathe"
+      ],
+      "answer": 0,
+      "why": "Its rotating abrasive paper can remove thick surfaces such as old paint.",
+      "chunk": "machine"
+    },
+    {
+      "q": "When turning on a lathe, what spins?",
+      "options": [
+        "The material",
+        "Only the tool",
+        "The tool and the bench",
+        "Nothing: the tool moves round the work"
+      ],
+      "answer": 0,
+      "why": "The work spins at speed while a tool is held against it.",
+      "chunk": "turn"
     }
   ],
   "written": [
@@ -676,7 +754,7 @@
   ],
   "related": [
     {
-      "title": "Forming and moulding polymers",
+      "id": "g18-polymers-processes-finishes",
       "spec": "3.2.8"
     },
     {
@@ -688,7 +766,7 @@
       "spec": "3.2.8 / 3.3.8"
     },
     {
-      "title": "Health and safety",
+      "id": "g31-specialist-tools-equipment-processes",
       "spec": "3.3.10"
     }
   ]
