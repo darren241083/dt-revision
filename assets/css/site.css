@@ -4,10 +4,9 @@
   /* Type */
   --f-body: "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
-  --fs-body: 19px;
-  --fs-body-min: 18px;
-  --fs-body-max: 21px;
-  --fs-h1: 56px;
+  /* rem = 16px (x1.2 in teaching mode), so every size scales together */
+  --fs-body: 1.1875rem;   /* 19px; range 18-21px */
+  --fs-h1: 3.5rem;        /* 56px */
   --lh-body: 1.55;
   --tracking-head: -0.03em;
   --scale: 1;
@@ -51,6 +50,11 @@
   --alevel: #4B3B8F;
   --alevel-bg: #E8E5F4;
 
+  /* Controls */
+  --seg: #EDF1F2;
+  --dot-grey: #C9D4D8;
+  --line-grey: #DCE3E6;
+
   /* Interaction */
   --tap: 44px;
 }
@@ -61,7 +65,7 @@ html.teach { --scale: 1.2; }
 [hidden] { display: none !important; }
 
 html {
-  font-size: calc(var(--fs-body) * var(--scale));
+  font-size: calc(16px * var(--scale));
   -webkit-text-size-adjust: 100%;
 }
 
@@ -70,7 +74,7 @@ body {
   background: var(--ground);
   color: var(--body);
   font-family: var(--f-body);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   line-height: var(--lh-body);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -84,14 +88,13 @@ h1, h2, h3 {
   margin: 0;
   text-wrap: balance;
 }
-h1 { font-size: calc(var(--fs-h1) * var(--scale)); }
+h1 { font-size: var(--fs-h1); }
 
 p { margin: 0; }
 a { color: var(--teal-dark); }
 img { max-width: 100%; height: auto; }
 
 button { font: inherit; color: inherit; cursor: pointer; }
-button, a, [role="button"] { min-height: var(--tap); }
 
 :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 
@@ -103,14 +106,22 @@ button, a, [role="button"] { min-height: var(--tap); }
   border-radius: var(--radius);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .skip {
   position: absolute;
   left: -9999px;
 }
-.skip:focus { left: 16px; top: 16px; z-index: 100; background: var(--card); padding: 8px 12px; }
+.skip:focus { left: 16px; top: 16px; z-index: 100; display: inline-flex; align-items: center; min-height: var(--tap); padding: 0 16px; border-radius: 10px; background: var(--card); }
 
 @media (max-width: 620px) {
-  :root { --fs-body: var(--fs-body-min); --fs-h1: 40px; }
+  :root { --fs-body: 1.125rem; --fs-h1: 2.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
