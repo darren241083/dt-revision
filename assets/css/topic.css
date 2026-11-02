@@ -201,7 +201,7 @@ html.teach .stage { padding-bottom: 128px; }
 
   .chunk-strip { display: flex; }
   .stage { gap: 20px; padding: 20px 16px 40px; }
-  .stage-head { align-items: flex-start; }
+  .stage-head { flex-direction: column; align-items: flex-start; }
   .lead { font-size: 1.125rem; }
   .present { right: 12px; bottom: 12px; }
 }

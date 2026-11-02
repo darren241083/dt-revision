@@ -10,15 +10,20 @@
 import { h, icon, hint } from "./dom.js";
 import * as store from "./store.js";
 import { findTopic, loadTopic } from "./data.js";
+import { timer } from "./components/timer.js";
+import { revealGroup } from "./components/reveal.js";
+import { whatAmI } from "./components/whatami.js";
+import { mindMap } from "./components/mindmap.js";
+import { learnChunk } from "./components/learn.js";
 
 const MATERIAL = { timber: "Timber", polymer: "Polymer" };
 
 const RECALL = {
-  id: "recall", label: "Recall", eyebrow: "Recall · no looking back", title: "From memory",
+  id: "recall", label: "Recall", title: "From memory",
   hints: [["brain", "Books closed"]], tip: "Books closed. Pairs fill the map from memory, then check."
 };
 const TEST = {
-  id: "test", label: "Test", sub: "Quiz and exam questions", eyebrow: "Test", title: "Prove it",
+  id: "test", label: "Test", sub: "Quiz and exam questions", title: "Prove it",
   hints: [["tap", "Answer, then say how sure"]], tip: "Sure, Unsure or Guess shows who is guessing."
 };
 
@@ -26,14 +31,14 @@ const MODES = {
   lesson: {
     label: "Lesson",
     stages: [
-      { id: "do-now", label: "Do now", sub: "Starter", eyebrow: "Do now · answer first, then reveal", title: "Do now",
+      { id: "do-now", label: "Do now", sub: "Starter", title: "Do now",
         hints: [["tap", "Tap a card to reveal"]], tip: "Answers on whiteboards first. Reveal one card at a time." },
-      { id: "big-picture", label: "Big picture", sub: "Topic map", eyebrow: (t) => `Big picture · ${t.chunks.length} chunks`,
+      { id: "big-picture", label: "Big picture", sub: "Topic map",
         title: "The whole topic", hints: [["tap", "Tap a branch, then an item"]],
         tip: "Open each branch. Ask what pupils already know before reading it." },
       { id: "learn", label: "Learn", sub: (t) => `${t.chunks.length} short chunks`,
         tip: "One chunk at a time. Use the check before moving on." },
-      { id: "apply", label: "Apply", sub: "Which tool, and why?", eyebrow: "Apply", title: "Which tool, and why?",
+      { id: "apply", label: "Apply", sub: "Which tool, and why?", title: "Which tool, and why?",
         hints: [["tap", "Pick a tool, then a reason"]], tip: "Pupils say the reason aloud before you show the answer." },
       { ...RECALL, sub: "From memory" },
       TEST
@@ -44,9 +49,9 @@ const MODES = {
     stages: [
       { ...RECALL, sub: "Map and key words" },
       TEST,
-      { id: "fix", label: "Fix", sub: "Re-read only what you missed", eyebrow: "Fix · what you missed", title: "Fix these first",
+      { id: "fix", label: "Fix", sub: "Re-read only what you missed", title: "Fix these first",
         hints: [["book", "Re-read, then retest"]], tip: "Re-teach the chunk most pupils missed." },
-      { id: "whole", label: "Whole topic", sub: "Cover and test", eyebrow: "Whole topic · cover and test", title: "Everything on one page",
+      { id: "whole", label: "Whole topic", sub: "Cover and test", title: "Everything on one page",
         hints: [["eye", "Cover, then check"]], tip: "Cover the answers and cold-call." }
     ]
   }
@@ -242,8 +247,22 @@ function stageView() {
     h("main", { id: "main", class: "stage" },
       st.id === "learn" && chunkList("chunk-strip"),
       stageHead(st),
-      h("div", { class: "card placeholder" }, "Coming soon"),
+      stageBody(st),
       stageFoot()));
+}
+
+function stageBody(st) {
+  const T = S.topic;
+  switch (st.id) {
+    case "do-now":
+      return [revealGroup(T.doNow), T.starter && whatAmI(T.starter)];
+    case "big-picture":
+      return mindMap(T, { chunkHref: (c) => hashFor("lesson", MODES.lesson.stages.findIndex((s) => s.id === "learn"), T.chunks.indexOf(c)) });
+    case "learn":
+      return learnChunk(T.chunks[S.chunk]);
+    default:
+      return h("div", { class: "card placeholder" }, "Coming soon");
+  }
 }
 
 function rail() {
@@ -278,19 +297,22 @@ function chunkList(cls) {
 
 function stageHead(st) {
   const T = S.topic;
-  let eyebrow = val(st.eyebrow), title = st.title, lead = null;
+  const n = MODES[S.mode].stages.length;
+  let kicker = `Stage ${S.stage + 1} of ${n}`, title = st.title, lead = null;
   if (st.id === "learn") {
     const c = T.chunks[S.chunk];
-    eyebrow = `Learn · ${S.chunk + 1} of ${T.chunks.length} · Book p${c.pages}`;
+    kicker += ` · Chunk ${S.chunk + 1} of ${T.chunks.length} · Book p${c.pages}`;
     title = c.label;
     lead = c.summary;
   }
   return h("header", { class: "stage-head" },
     h("div", { class: "stage-titles" },
-      h("span", { class: "eyebrow" }, eyebrow),
+      h("span", { class: "eyebrow" }, kicker),
       h("h1", { id: "page-title", tabindex: "-1" }, title),
       lead && h("p", { class: "lead" }, lead)),
-    st.hints && h("div", { class: "hints" }, st.hints.map(([i, t]) => hint(i, t))),
+    h("div", { class: "stage-aside" },
+      st.hints && h("div", { class: "hints" }, st.hints.map(([i, t]) => hint(i, t))),
+      st.id === "do-now" && h("div", { class: "teach-only" }, timer())),
     h("p", { class: "teach-tip" }, h("b", {}, "Teaching tip"), st.tip));
 }
 
