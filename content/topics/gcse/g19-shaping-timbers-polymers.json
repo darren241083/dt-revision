@@ -1,0 +1,695 @@
+{
+  "id": "g19-shaping-timbers-polymers",
+  "level": "gcse",
+  "title": "Shaping timbers and polymers",
+  "titleMark": "timbers and polymers",
+  "short": "Shaping",
+  "spec": [
+    "3.2.5",
+    "3.2.8"
+  ],
+  "section": "B",
+  "materials": [
+    "timber",
+    "polymer"
+  ],
+  "book": {
+    "title": "ClearRevise AQA GCSE D&T 8552",
+    "pages": "83–86"
+  },
+  "audio": null,
+  "needs": [
+    "Make an accurate saw cut in four steps.",
+    "Choose the right saw, drill bit or abrasive for timber or polymer.",
+    "Know what each power and machine tool is used for.",
+    "Explain why CNC turning is used commercially."
+  ],
+  "doNow": [
+    {
+      "q": "Which hand saw cuts curved lines through thin material?",
+      "a": "A coping saw.",
+      "from": "Pre-read p83"
+    },
+    {
+      "q": "What does 'abrading' mean?",
+      "a": "Wearing or scraping material away by friction.",
+      "from": "Pre-read p85"
+    },
+    {
+      "q": "Hardwoods come from which type of tree?",
+      "a": "Deciduous: broad-leaved trees that lose their leaves in winter.",
+      "from": "3.1.6"
+    },
+    {
+      "q": "What happens to a thermoforming polymer when it is heated?",
+      "a": "It softens and can be reshaped, again and again.",
+      "from": "3.1.6"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I'm only used on timber.",
+      "I slice off thin shavings.",
+      "Always use me in the direction of the grain."
+    ],
+    "answer": "Planer",
+    "options": [
+      "Planer",
+      "Rasp",
+      "Chisel",
+      "Router"
+    ]
+  },
+  "chunks": [
+    {
+      "id": "saw",
+      "label": "Sawing and cutting",
+      "icon": "saw",
+      "pages": "83–84",
+      "summary": "Wasting: cutting away material you don't need from a larger piece.",
+      "items": [
+        {
+          "term": "Accurate sawing",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "Four steps for a clean, accurate cut:",
+          "steps": [
+            "Mark out the cutting line, measuring from a datum point.",
+            "Clamp the material or hold it in a vice so it can't move.",
+            "Draw the saw backwards to make a nick at the start point, then use the whole blade without pressing hard.",
+            "Support the end piece as you finish so the cut stays clean. Remove rough edges."
+          ]
+        },
+        {
+          "term": "Rip / cross-cut saw",
+          "tags": [
+            "timber"
+          ],
+          "text": "Cuts wood along the grain (rip) or across it (cross-cut)."
+        },
+        {
+          "term": "Tenon saw",
+          "tags": [
+            "timber"
+          ],
+          "text": "Shallow, accurate cuts in small pieces of wood, such as wood joints."
+        },
+        {
+          "term": "Coping saw",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "Curved cuts through thin material."
+        },
+        {
+          "term": "Hacksaw / junior hacksaw",
+          "tags": [
+            "polymer"
+          ],
+          "text": "Fine teeth for hard materials, such as plastic pipe."
+        },
+        {
+          "term": "Jigsaw",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "Handheld power tool with a narrow, reciprocating blade. Cuts straight lines or curves."
+        }
+      ],
+      "check": [
+        {
+          "q": "What is the first step before cutting?",
+          "a": "Mark out the cutting line, measuring from a datum point."
+        },
+        {
+          "q": "Which saw would you use for a wood joint in a small piece of pine?",
+          "a": "A tenon saw."
+        }
+      ]
+    },
+    {
+      "id": "shape",
+      "label": "Shaping tools",
+      "icon": "chisel",
+      "pages": "84",
+      "summary": "Hand and power tools that shape and smooth timber.",
+      "items": [
+        {
+          "term": "Chisel",
+          "tags": [
+            "timber"
+          ],
+          "text": "Carves, chips, pares and cuts wood to shape. Struck with a mallet for cutting force. The bevelled blade comes in different shapes and widths."
+        },
+        {
+          "term": "Planer",
+          "tags": [
+            "timber"
+          ],
+          "text": "Shapes and smooths wood by slicing thin shavings. Always plane with the grain."
+        },
+        {
+          "term": "Sander",
+          "tags": [
+            "timber"
+          ],
+          "text": "A wheel or pad covered in abrasive paper that spins or vibrates fast to remove waste."
+        },
+        {
+          "term": "Router",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "Handheld. Cuts a shape or profile by moving through the material."
+        },
+        {
+          "term": "CNC routing",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "The router follows a programmed cutting path. The material is fixed to a bed and only the router moves."
+        }
+      ],
+      "check": [
+        {
+          "q": "Which way should you plane?",
+          "a": "In the direction of the grain."
+        },
+        {
+          "q": "What moves during CNC routing: the material or the router?",
+          "a": "Only the router. The material is fixed to the cutting bed."
+        }
+      ]
+    },
+    {
+      "id": "drill",
+      "label": "Drilling",
+      "icon": "drill",
+      "pages": "85",
+      "summary": "A drill bit cuts a circular hole.",
+      "items": [
+        {
+          "term": "Twist bit",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "General-purpose bit for drilling holes."
+        },
+        {
+          "term": "Flat bit",
+          "tags": [],
+          "text": "Wide, flat blade for larger-diameter holes."
+        },
+        {
+          "term": "Hole saw",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "A cylindrical blade that cuts bigger holes."
+        },
+        {
+          "term": "Countersink bit",
+          "tags": [],
+          "text": "Cuts a wider recess so a screw head sits flush with, or just below, the surface."
+        },
+        {
+          "term": "Bradawl",
+          "tags": [],
+          "text": "Marks and starts a hole accurately before drilling or screwing."
+        }
+      ],
+      "check": [
+        {
+          "q": "Which bit lets a screw head sit flush with the surface?",
+          "a": "A countersink bit."
+        },
+        {
+          "q": "What would you use to mark a hole's position accurately before drilling?",
+          "a": "A bradawl."
+        }
+      ]
+    },
+    {
+      "id": "abrade",
+      "label": "Abrading",
+      "icon": "file",
+      "pages": "85",
+      "summary": "Wearing or scraping material away by friction.",
+      "items": [
+        {
+          "term": "Rasp",
+          "tags": [
+            "timber"
+          ],
+          "text": "A coarse file with separate teeth for shaping wood. Leaves a rough surface that needs sanding."
+        },
+        {
+          "term": "File",
+          "tags": [],
+          "text": "Removes small amounts of material. Comes in many shapes and grades of coarseness."
+        },
+        {
+          "term": "Abrasive paper",
+          "tags": [],
+          "text": "Sandpaper, from coarse to fine. Rubbed on a surface to shape and smooth it."
+        },
+        {
+          "term": "Wet and dry paper",
+          "tags": [
+            "polymer"
+          ],
+          "text": "Waterproof abrasive paper, used with water. Gives acrylic edges a very smooth finish."
+        }
+      ],
+      "check": [
+        {
+          "q": "Why does wood need sanding after using a rasp?",
+          "a": "A rasp leaves a rough surface."
+        },
+        {
+          "q": "Which abrasive finishes acrylic edges?",
+          "a": "Wet and dry paper."
+        }
+      ]
+    },
+    {
+      "id": "machine",
+      "label": "Machine tools",
+      "icon": "pillar",
+      "pages": "86",
+      "summary": "Powered, fixed machines for faster, more accurate work.",
+      "items": [
+        {
+          "term": "Disc / belt sander",
+          "tags": [
+            "timber"
+          ],
+          "text": "A rotating length of abrasive paper. Press the work against it to sand, or to strip thick surfaces such as old paint."
+        },
+        {
+          "term": "Band saw",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "A long continuous blade running between two wheels. Very large cuts, or curves with a finer blade."
+        },
+        {
+          "term": "Pillar drill",
+          "tags": [
+            "timber",
+            "polymer"
+          ],
+          "text": "Floor or bench mounted. Adjustable table and a depth stop for holes of a set depth. Usually drills at 90°, quickly and accurately through thick pieces."
+        }
+      ],
+      "diagram": {
+        "title": "Pillar drill",
+        "svg": "<svg viewBox=\"0 0 300 400\" aria-hidden=\"true\"><rect class=\"f\" x=\"55\" y=\"360\" width=\"190\" height=\"22\" rx=\"4\"/><rect class=\"f\" x=\"192\" y=\"60\" width=\"18\" height=\"302\"/><rect class=\"f\" x=\"95\" y=\"12\" width=\"130\" height=\"58\" rx=\"10\"/><rect class=\"f\" x=\"105\" y=\"70\" width=\"110\" height=\"60\" rx=\"8\"/><path class=\"d\" d=\"M215 95 L262 82 M215 100 L262 118 M215 98 L258 100\"/><circle class=\"f\" cx=\"262\" cy=\"82\" r=\"5\"/><circle class=\"f\" cx=\"262\" cy=\"118\" r=\"5\"/><circle class=\"f\" cx=\"258\" cy=\"100\" r=\"5\"/><rect class=\"f\" x=\"141\" y=\"130\" width=\"12\" height=\"22\"/><path class=\"f\" d=\"M137 152 h20 l-4 20 h-12 z\"/><path class=\"d\" d=\"M147 172 v52\"/><path class=\"d\" d=\"M144 180 l6 4 M144 190 l6 4 M144 200 l6 4 M144 210 l6 4\"/><path class=\"d\" d=\"M75 84 v62\"/><rect class=\"f\" x=\"69\" y=\"98\" width=\"12\" height=\"7\"/><rect class=\"f\" x=\"69\" y=\"128\" width=\"12\" height=\"7\"/><path class=\"d\" d=\"M75 84 h30 M75 146 h30\"/><rect class=\"f\" x=\"72\" y=\"232\" width=\"150\" height=\"12\" rx=\"3\"/><rect class=\"f\" x=\"186\" y=\"226\" width=\"30\" height=\"26\" rx=\"3\"/><rect class=\"f\" x=\"110\" y=\"222\" width=\"70\" height=\"10\" rx=\"2\"/></svg>",
+        "parts": [
+          {
+            "x": 66,
+            "y": 9,
+            "name": "Motor",
+            "text": "Powerful enough to drill thick pieces quickly and accurately."
+          },
+          {
+            "x": 25,
+            "y": 26,
+            "name": "Depth stop",
+            "text": "Set it so every hole is drilled to the same depth."
+          },
+          {
+            "x": 49,
+            "y": 44,
+            "name": "Chuck and bit",
+            "text": "Holds the drill bit. Usually drills at 90°."
+          },
+          {
+            "x": 30,
+            "y": 60,
+            "name": "Adjustable table",
+            "text": "Moves up and down to suit the work."
+          },
+          {
+            "x": 68,
+            "y": 93,
+            "name": "Base",
+            "text": "Floor-standing or bench-mounted."
+          }
+        ]
+      },
+      "check": [
+        {
+          "q": "What does the depth stop on a pillar drill do?",
+          "a": "Makes sure every hole is drilled to the same set depth."
+        },
+        {
+          "q": "Which machine would you use to cut a large curve in thick timber?",
+          "a": "A band saw with a finer blade."
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "label": "Turning",
+      "icon": "lathe",
+      "pages": "86",
+      "summary": "Shaping material while it spins on a lathe.",
+      "items": [
+        {
+          "term": "Lathe",
+          "tags": [
+            "timber"
+          ],
+          "text": "Spins the material at speed while a tool is held against it to cut, sand or shape it evenly all the way round."
+        },
+        {
+          "term": "CNC wood turning",
+          "tags": [
+            "timber"
+          ],
+          "text": "Used commercially for stair spindles, chair parts, table legs and columns. Every part is sized accurately and identical, so they fit and match."
+        }
+      ],
+      "check": [
+        {
+          "q": "Name two products made by commercial CNC turning.",
+          "a": "Any two: stair spindles, chair parts, table legs, architectural columns."
+        },
+        {
+          "q": "Why is CNC used for turning chair legs?",
+          "a": "Each leg is accurately sized and identical, so they fit and match."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Wasting",
+      "def": "Removing unwanted material by cutting it off or out of a larger piece."
+    },
+    {
+      "term": "Datum point",
+      "def": "The point all measurements are taken from."
+    },
+    {
+      "term": "Reciprocating",
+      "def": "Back-and-forth motion in a straight line, like a jigsaw blade."
+    },
+    {
+      "term": "Abrading",
+      "def": "Wearing or scraping material away by friction."
+    },
+    {
+      "term": "Countersink",
+      "def": "A recess so a screw head sits flush with, or below, the surface."
+    },
+    {
+      "term": "Depth stop",
+      "def": "Sets how deep a drill goes, so every hole is the same depth."
+    },
+    {
+      "term": "Lathe",
+      "def": "A machine that spins the work so a tool can shape it evenly all round."
+    },
+    {
+      "term": "CNC",
+      "def": "Computer control: the machine follows a programmed path, accurately and repeatably."
+    }
+  ],
+  "apply": [
+    {
+      "q": "A furniture workshop needs to cut a very large panel of timber.",
+      "tools": [
+        "Band saw",
+        "Tenon saw",
+        "Coping saw",
+        "Jigsaw"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Its long continuous blade makes very large cuts",
+        "It cuts shallow, accurate joints",
+        "It's a hand tool, so it's more accurate",
+        "It's only used on polymers"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "You need to smooth the cut edge of an acrylic phone stand.",
+      "tools": [
+        "Wet and dry paper",
+        "Rasp",
+        "Planer",
+        "Disc sander"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Used with water, it gives acrylic edges a very smooth finish",
+        "Its coarse teeth shape material quickly",
+        "It slices thin shavings along the grain",
+        "It strips thick surfaces such as old paint"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A factory needs 30 identical beech chair legs.",
+      "tools": [
+        "CNC wood turning",
+        "Planer",
+        "Chisel",
+        "Rasp"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Every leg is accurately sized and identical, so they fit and match",
+        "It leaves a rough surface that holds paint",
+        "It can only cut straight lines",
+        "It doesn't need a programmed path"
+      ],
+      "reason": 0
+    }
+  ],
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      {
+        "n": "Tenon saw",
+        "why": "The only one for cutting wood joints."
+      },
+      {
+        "n": "Coping saw",
+        "why": "The only hand saw that cuts curves."
+      },
+      {
+        "n": "Hacksaw",
+        "why": "The only one not used on timber: it's for hard materials such as plastic pipe."
+      },
+      {
+        "n": "Planer",
+        "why": "The only one that isn't a saw: it slices shavings rather than cutting through."
+      }
+    ]
+  },
+  "order": {
+    "q": "Put the steps for an accurate saw cut in order.",
+    "steps": [
+      "Mark out from a datum point",
+      "Clamp the material",
+      "Draw the saw back to make a nick",
+      "Support the end piece and finish"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "A rasp leaves a smooth finish.",
+      "tf": false,
+      "why": "A rasp leaves a rough surface that needs sanding.",
+      "chunk": "abrade"
+    },
+    {
+      "q": "A pillar drill usually drills at 90°.",
+      "tf": true,
+      "why": "Its table and column keep the bit at 90°.",
+      "chunk": "machine"
+    },
+    {
+      "q": "Wet and dry paper is used with water.",
+      "tf": true,
+      "why": "Its waterproof backing allows it.",
+      "chunk": "abrade"
+    },
+    {
+      "q": "What does 'wasting' mean?",
+      "options": [
+        "Cutting away unwanted material from a larger piece",
+        "Throwing offcuts in the bin",
+        "Adding material to a workpiece",
+        "Softening material with heat"
+      ],
+      "answer": 0,
+      "why": "Sawing, drilling and abrading are all wasting.",
+      "chunk": "saw"
+    },
+    {
+      "q": "After marking out, what is the next step for an accurate cut?",
+      "options": [
+        "Clamp the material securely",
+        "Sand the edge",
+        "Press hard on the first stroke",
+        "Drill a pilot hole"
+      ],
+      "answer": 0,
+      "why": "Clamping stops the material moving.",
+      "chunk": "saw"
+    },
+    {
+      "q": "Which saw cuts wood joints in small pieces of wood?",
+      "options": [
+        "Tenon saw",
+        "Coping saw",
+        "Hacksaw",
+        "Band saw"
+      ],
+      "answer": 0,
+      "why": "A tenon saw makes shallow, accurate cuts.",
+      "chunk": "saw"
+    },
+    {
+      "q": "A jigsaw blade moves with which motion?",
+      "options": [
+        "Reciprocating",
+        "Rotary",
+        "Oscillating",
+        "Linear, one way only"
+      ],
+      "answer": 0,
+      "why": "Back and forth in a straight line.",
+      "chunk": "saw"
+    },
+    {
+      "q": "In CNC routing, what moves?",
+      "options": [
+        "Only the router",
+        "Only the material",
+        "Both together",
+        "Neither: it is a laser"
+      ],
+      "answer": 0,
+      "why": "The material is fixed to a bed and the router follows a programmed path.",
+      "chunk": "shape"
+    },
+    {
+      "q": "Which bit lets a screw head sit flush?",
+      "options": [
+        "Countersink bit",
+        "Flat bit",
+        "Hole saw",
+        "Twist bit"
+      ],
+      "answer": 0,
+      "why": "It cuts a wider recess for the screw head.",
+      "chunk": "drill"
+    },
+    {
+      "q": "Which tool has separate teeth and leaves wood rough?",
+      "options": [
+        "Rasp",
+        "File",
+        "Wet and dry paper",
+        "Planer"
+      ],
+      "answer": 0,
+      "why": "A rasp shapes quickly but needs sanding after.",
+      "chunk": "abrade"
+    },
+    {
+      "q": "What does a pillar drill's depth stop do?",
+      "options": [
+        "Drills every hole to a set depth",
+        "Stops the drill overheating",
+        "Holds the work at 90°",
+        "Changes the drill speed"
+      ],
+      "answer": 0,
+      "why": "It controls how far the bit goes in.",
+      "chunk": "machine"
+    },
+    {
+      "q": "Why is CNC used to turn stair spindles?",
+      "options": [
+        "Every spindle is accurate and identical",
+        "It needs no electricity",
+        "It is the only way to cut timber",
+        "It leaves a rough surface for paint"
+      ],
+      "answer": 0,
+      "why": "Parts must fit and match each other.",
+      "chunk": "turn"
+    }
+  ],
+  "written": [
+    {
+      "q": "Describe how to make an accurate straight cut across a length of pine using a tenon saw.",
+      "marks": 4,
+      "points": [
+        "Mark out the line, measuring from a datum point.",
+        "Clamp the pine or hold it in a vice.",
+        "Draw the saw backwards to make a starting nick.",
+        "Use the full length of the blade without pressing hard.",
+        "Support the end piece as the cut finishes.",
+        "Remove rough edges after cutting."
+      ],
+      "model": "Mark out the cutting line, measuring from a datum point. Clamp the pine in a vice so it can't move. Draw the saw backwards to make a starting nick, then use the full length of the blade without pressing hard. Support the end piece as the cut finishes, then remove any rough edges.",
+      "note": "1 mark per step, up to 4."
+    },
+    {
+      "q": "A batch of beech toy parts each needs a hole drilled to the same depth. Explain why a pillar drill is a good choice.",
+      "marks": 2,
+      "points": [
+        "It has a depth stop.",
+        "So every hole is drilled to the same set depth.",
+        "It drills accurately at 90°."
+      ],
+      "model": "A pillar drill has a depth stop, so every hole in the batch is drilled to the same set depth.",
+      "note": "1 mark for a feature, 1 for why it helps. Up to 2."
+    },
+    {
+      "q": "A manufacturer makes 500 identical oak table legs. Explain one reason for using CNC turning rather than turning each leg by hand.",
+      "marks": 2,
+      "points": [
+        "Each leg is accurately sized.",
+        "They are identical, so they fit and match in the final product."
+      ],
+      "model": "CNC turning makes each leg accurately sized and identical, so all the legs fit and match in the finished tables.",
+      "note": "1 mark for the reason, 1 for developing it."
+    }
+  ],
+  "related": [
+    {
+      "title": "Forming and moulding polymers",
+      "spec": "3.2.8"
+    },
+    {
+      "id": "g30-templates-marking-out-material-management",
+      "spec": "3.3.9"
+    },
+    {
+      "id": "g29-materials-quality-control-tolerance",
+      "spec": "3.2.8 / 3.3.8"
+    },
+    {
+      "title": "Health and safety",
+      "spec": "3.3.10"
+    }
+  ]
+}

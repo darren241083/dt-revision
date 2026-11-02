@@ -1,0 +1,123 @@
+/* D&T Revision · shared styles. Design: "E · Lesson path". */
+
+:root {
+  /* Type */
+  --f-body: "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --fs-body: 19px;
+  --fs-body-min: 18px;
+  --fs-body-max: 21px;
+  --fs-h1: 56px;
+  --lh-body: 1.55;
+  --tracking-head: -0.03em;
+  --scale: 1;
+
+  /* Ground and cards */
+  --ground: #F3F6F6;
+  --card: #FFFFFF;
+  --card-border: #DCE3E6;
+  --radius: 18px;
+
+  /* Text */
+  --ink: #10212B;
+  --body: #33464F;
+  --muted: #5A6B75;
+  --rule: #E8EEF0;
+
+  /* Accent */
+  --teal: #0F766E;
+  --teal-soft: #E2F2EF;
+  --teal-dark: #0B5550;
+  --teal-light: #5EC4B6;
+  --panel-dark: #10212B;
+
+  /* Semantic */
+  --correct: #1F7A45;
+  --correct-bg: #E3F3E9;
+  --unsure: #9A6200;
+  --unsure-bg: #FBEFD6;
+  --wrong: #B4301D;
+  --wrong-bg: #FBE4E0;
+
+  /* Material tags */
+  --timber: #7A4D24;
+  --timber-bg: #F3E8DC;
+  --polymer: #1F5590;
+  --polymer-bg: #E3EDF8;
+
+  /* Level tags */
+  --gcse: var(--teal);
+  --gcse-bg: var(--teal-soft);
+  --alevel: #4B3B8F;
+  --alevel-bg: #E8E5F4;
+
+  /* Interaction */
+  --tap: 44px;
+}
+
+html.teach { --scale: 1.2; }
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html {
+  font-size: calc(var(--fs-body) * var(--scale));
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--body);
+  font-family: var(--f-body);
+  font-size: 1rem;
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: var(--tracking-head);
+  margin: 0;
+  text-wrap: balance;
+}
+h1 { font-size: calc(var(--fs-h1) * var(--scale)); }
+
+p { margin: 0; }
+a { color: var(--teal-dark); }
+img { max-width: 100%; height: auto; }
+
+button { font: inherit; color: inherit; cursor: pointer; }
+button, a, [role="button"] { min-height: var(--tap); }
+
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+
+.mono { font-family: var(--f-mono); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus { left: 16px; top: 16px; z-index: 100; background: var(--card); padding: 8px 12px; }
+
+@media (max-width: 620px) {
+  :root { --fs-body: var(--fs-body-min); --fs-h1: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "levels": {
+    "gcse": {
+      "name": "GCSE Design and Technology",
+      "short": "GCSE",
+      "board": "AQA",
+      "spec": "8552",
+      "book": "ClearRevise AQA GCSE D&T 8552",
+      "sections": [
+        { "ref": "A", "name": "Core technical principles" },
+        { "ref": "B", "name": "Specialist technical principles", "materials": ["timber", "polymer"] },
+        { "ref": "C", "name": "Designing and making principles" }
+      ],
+      "topics": [
+        { "id": "g01-new-technologies-industry-enterprise", "code": "G01", "title": "New technologies, industry and enterprise", "spec": ["3.1.1"], "section": "A", "pages": "2–4", "built": false },
+        { "id": "g02-sustainability-environment-people", "code": "G02", "title": "Sustainability, environment and people", "spec": ["3.1.1"], "section": "A", "pages": "5–7", "built": false },
+        { "id": "g03-culture-society-production-systems", "code": "G03", "title": "Culture, society and production systems", "spec": ["3.1.1"], "section": "A", "pages": "8–11", "built": false },
+        { "id": "g04-energy-generation-storage", "code": "G04", "title": "Energy generation and storage", "spec": ["3.1.2"], "section": "A", "pages": "13–16", "built": false },
+        { "id": "g05-modern-smart-materials", "code": "G05", "title": "Modern and smart materials", "spec": ["3.1.3"], "section": "A", "pages": "17–18", "built": false },
+        { "id": "g06-composites-technical-textiles", "code": "G06", "title": "Composites and technical textiles", "spec": ["3.1.3"], "section": "A", "pages": "19–21", "built": false },
+        { "id": "g07-systems-approach-to-designing", "code": "G07", "title": "Systems approach to designing", "spec": ["3.1.4"], "section": "A", "pages": "22–23", "built": false },
+        { "id": "g08-mechanical-devices", "code": "G08", "title": "Mechanical devices", "spec": ["3.1.5"], "section": "A", "pages": "24–27", "built": false },
+        { "id": "g09-properties-papers-boards-timbers", "code": "G09", "title": "Properties, papers, boards and timbers", "spec": ["3.1.6"], "section": "A", "pages": "30–33", "built": false },
+        { "id": "g10-metals-alloys-polymers", "code": "G10", "title": "Metals, alloys and polymers", "spec": ["3.1.6"], "section": "A", "pages": "34–37", "built": false },
+        { "id": "g11-textiles", "code": "G11", "title": "Textiles", "spec": ["3.1.6"], "section": "A", "pages": "38–39", "built": false },
+        { "id": "g12-selection-of-materials-or-components", "code": "G12", "title": "Selection of materials or components", "spec": ["3.2.1"], "section": "B", "pages": "42–43", "built": false },
+        { "id": "g13-forces-stresses-enhancing-materials", "code": "G13", "title": "Forces, stresses and enhancing materials", "spec": ["3.2.2"], "section": "B", "pages": "44–45", "built": false },
+        { "id": "g14-ecological-social-footprint", "code": "G14", "title": "Ecological and social footprint", "spec": ["3.2.3"], "section": "B", "pages": "46–48", "built": false },
+        { "id": "g15-timbers-sources-properties", "code": "G15", "title": "Timbers: sources and properties", "spec": ["3.2.4", "3.2.5"], "section": "B", "pages": "62–63", "built": false },
+        { "id": "g16-timbers-stock-forms-finishes", "code": "G16", "title": "Timbers: stock forms and finishes", "spec": ["3.2.6", "3.2.9"], "section": "B", "pages": "64–67", "built": false },
+        { "id": "g17-polymers-sources-properties-stock-forms", "code": "G17", "title": "Polymers: sources, properties and stock forms", "spec": ["3.2.4", "3.2.5", "3.2.6"], "section": "B", "pages": "75–78", "built": false },
+        { "id": "g18-polymers-processes-finishes", "code": "G18", "title": "Polymers: processes and finishes", "spec": ["3.2.8", "3.2.9"], "section": "B", "pages": "79–82", "built": false },
+        { "id": "g19-shaping-timbers-polymers", "code": "G19", "title": "Shaping timbers and polymers", "spec": ["3.2.5", "3.2.8"], "section": "B", "pages": "83–86", "built": true },
+        { "id": "g20-scales-of-production", "code": "G20", "title": "Scales of production", "spec": ["3.2.7"], "section": "B", "pages": "104–105", "built": false },
+        { "id": "g21-specialist-techniques-processes", "code": "G21", "title": "Specialist techniques and processes", "spec": ["3.2.8"], "section": "B", "pages": "106", "built": false },
+        { "id": "g22-investigation-primary-secondary-data", "code": "G22", "title": "Investigation, primary and secondary data", "spec": ["3.3.1"], "section": "C", "pages": "110–111", "built": false },
+        { "id": "g23-ergonomics", "code": "G23", "title": "Ergonomics", "spec": ["3.3.2"], "section": "C", "pages": "112–113", "built": false },
+        { "id": "g24-designing-manufacturing-challenges", "code": "G24", "title": "Designing, manufacturing and challenges", "spec": ["3.3.2"], "section": "C", "pages": "114–116", "built": false },
+        { "id": "g25-the-work-of-others", "code": "G25", "title": "The work of others", "spec": ["3.3.3"], "section": "C", "pages": "117–121", "built": false },
+        { "id": "g26-design-strategies", "code": "G26", "title": "Design strategies", "spec": ["3.3.4"], "section": "C", "pages": "122–123", "built": false },
+        { "id": "g27-communication-of-design-ideas", "code": "G27", "title": "Communication of design ideas", "spec": ["3.3.5"], "section": "C", "pages": "124–127", "built": false },
+        { "id": "g28-prototype-development", "code": "G28", "title": "Prototype development", "spec": ["3.3.6"], "section": "C", "pages": "128", "built": false },
+        { "id": "g29-materials-quality-control-tolerance", "code": "G29", "title": "Materials, quality control and tolerance", "spec": ["3.3.7", "3.3.8"], "section": "C", "pages": "130–132", "built": false },
+        { "id": "g30-templates-marking-out-material-management", "code": "G30", "title": "Templates, marking out and material management", "spec": ["3.3.9", "3.3.10"], "section": "C", "pages": "133–135", "built": false },
+        { "id": "g31-specialist-tools-equipment-processes", "code": "G31", "title": "Specialist tools, equipment and processes", "spec": ["3.3.11"], "section": "C", "pages": "136–138", "built": false }
+      ],
+      "reference": [
+        { "id": "gcse-maths-science-skills", "title": "Maths and science skills for D&T", "pages": "148–150", "built": false }
+      ]
+    },
+    "alevel": {
+      "name": "A-level Design and Technology: Product Design",
+      "short": "A-level",
+      "board": "AQA",
+      "spec": "7552",
+      "book": "My Revision Notes: AQA A Level Design and Technology: Product Design",
+      "sections": [
+        { "ref": "1", "name": "Technical principles" },
+        { "ref": "2", "name": "Designing and making principles" }
+      ],
+      "topics": [
+        { "id": "a01-materials-their-applications", "code": "A01", "title": "Materials and their applications", "spec": ["3.1.1"], "section": "1", "pages": "1–2", "built": false },
+        { "id": "a02-classification-of-materials", "code": "A02", "title": "Classification of materials", "spec": ["3.1.1"], "section": "1", "pages": "3–5", "built": false },
+        { "id": "a03-investigating-testing-materials", "code": "A03", "title": "Investigating and testing materials", "spec": ["3.1.1"], "section": "1", "pages": "6–9", "built": false },
+        { "id": "a04-papers-boards-polymer-sheet-film", "code": "A04", "title": "Papers, boards, polymer sheet and film", "spec": ["3.1.2"], "section": "1", "pages": "10–13", "built": false },
+        { "id": "a05-woods", "code": "A05", "title": "Woods", "spec": ["3.1.2"], "section": "1", "pages": "14–17", "built": false },
+        { "id": "a06-metals", "code": "A06", "title": "Metals", "spec": ["3.1.2"], "section": "1", "pages": "18–20", "built": false },
+        { "id": "a07-polymers", "code": "A07", "title": "Polymers", "spec": ["3.1.2"], "section": "1", "pages": "21–23", "built": false },
+        { "id": "a08-biodegradable-polymers-composites", "code": "A08", "title": "Biodegradable polymers and composites", "spec": ["3.1.2"], "section": "1", "pages": "24–27", "built": false },
+        { "id": "a09-smart-modern-materials", "code": "A09", "title": "Smart and modern materials", "spec": ["3.1.2"], "section": "1", "pages": "28–30", "built": false },
+        { "id": "a10-enhancement-of-materials", "code": "A10", "title": "Enhancement of materials", "spec": ["3.1.3"], "section": "1", "pages": "31–34", "built": false },
+        { "id": "a11-paper-board-forming-processes", "code": "A11", "title": "Paper and board forming processes", "spec": ["3.1.4"], "section": "1", "pages": "35–36", "built": false },
+        { "id": "a12-polymer-processes", "code": "A12", "title": "Polymer processes", "spec": ["3.1.4"], "section": "1", "pages": "37–39", "built": false },
+        { "id": "a13-metal-processes-1", "code": "A13", "title": "Metal processes 1", "spec": ["3.1.4"], "section": "1", "pages": "40–43", "built": false },
+        { "id": "a14-metal-processes-2-addition-fabrication", "code": "A14", "title": "Metal processes 2: addition and fabrication", "spec": ["3.1.4"], "section": "1", "pages": "44–45", "built": false },
+        { "id": "a15-metal-processes-3-fasteners-joining-wasting", "code": "A15", "title": "Metal processes 3: fasteners, joining and wasting", "spec": ["3.1.4"], "section": "1", "pages": "46–48", "built": false },
+        { "id": "a16-wood-processes", "code": "A16", "title": "Wood processes", "spec": ["3.1.4"], "section": "1", "pages": "49–51", "built": false },
+        { "id": "a17-adhesives-fixings-jigs-fixtures", "code": "A17", "title": "Adhesives, fixings, jigs and fixtures", "spec": ["3.1.4"], "section": "1", "pages": "52–53", "built": false },
+        { "id": "a18-finishes-1-paper-board-polymers", "code": "A18", "title": "Finishes 1: paper, board and polymers", "spec": ["3.1.5"], "section": "1", "pages": "54–56", "built": false },
+        { "id": "a19-finishes-2-metals", "code": "A19", "title": "Finishes 2: metals", "spec": ["3.1.5"], "section": "1", "pages": "57–60", "built": false },
+        { "id": "a20-finishes-3-wood", "code": "A20", "title": "Finishes 3: wood", "spec": ["3.1.5"], "section": "1", "pages": "61–62", "built": false },
+        { "id": "a21-scales-of-production", "code": "A21", "title": "Scales of production", "spec": ["3.1.6"], "section": "1", "pages": "63–64", "built": false },
+        { "id": "a22-efficient-use-of-materials", "code": "A22", "title": "Efficient use of materials", "spec": ["3.1.6"], "section": "1", "pages": "65–67", "built": false },
+        { "id": "a23-computer-systems-sub-assembly", "code": "A23", "title": "Computer systems and sub-assembly", "spec": ["3.1.6"], "section": "1", "pages": "68–72", "built": false },
+        { "id": "a24-cad-cam-virtual-modelling", "code": "A24", "title": "CAD, CAM and virtual modelling", "spec": ["3.1.7"], "section": "1", "pages": "73–75", "built": false },
+        { "id": "a25-rapid-prototyping-edi-ppc", "code": "A25", "title": "Rapid prototyping, EDI and PPC", "spec": ["3.1.7"], "section": "1", "pages": "76–78", "built": false },
+        { "id": "a26-product-development-improvement", "code": "A26", "title": "Product development and improvement", "spec": ["3.1.8"], "section": "1", "pages": "79–82", "built": false },
+        { "id": "a27-product-development-inclusive-design", "code": "A27", "title": "Product development and inclusive design", "spec": ["3.1.8"], "section": "1", "pages": "83–85", "built": false },
+        { "id": "a28-safe-working-practices", "code": "A28", "title": "Safe working practices", "spec": ["3.1.9"], "section": "1", "pages": "86–87", "built": false },
+        { "id": "a29-safety-in-products-services", "code": "A29", "title": "Safety in products and services", "spec": ["3.1.9"], "section": "1", "pages": "88–90", "built": false },
+        { "id": "a30-intellectual-property", "code": "A30", "title": "Intellectual property", "spec": ["3.1.10"], "section": "1", "pages": "91–92", "built": false },
+        { "id": "a31-registered-designs-trademarks-open-design", "code": "A31", "title": "Registered designs, trademarks and open design", "spec": ["3.1.10"], "section": "1", "pages": "92–95", "built": false },
+        { "id": "a32-design-for-manufacturing-maintenance-repair-disposal", "code": "A32", "title": "Design for manufacturing, maintenance, repair and disposal", "spec": ["3.1.11"], "section": "1", "pages": "96–99", "built": false },
+        { "id": "a33-feasibility-studies", "code": "A33", "title": "Feasibility studies", "spec": ["3.1.12"], "section": "1", "pages": "100–101", "built": false },
+        { "id": "a34-enterprise-marketing", "code": "A34", "title": "Enterprise and marketing", "spec": ["3.1.13"], "section": "1", "pages": "102–105", "built": false },
+        { "id": "a35-design-communication", "code": "A35", "title": "Design communication", "spec": ["3.1.14"], "section": "1", "pages": "106–109", "built": false },
+        { "id": "a36-modern-manufacturing-systems", "code": "A36", "title": "Modern manufacturing systems", "spec": ["3.1.6"], "section": "1", "pages": "110", "built": false },
+        { "id": "b01-design-methods-processes", "code": "B01", "title": "Design methods and processes", "spec": ["3.2.1"], "section": "2", "pages": "111–114", "built": false },
+        { "id": "b02-design-influences-styles-movements", "code": "B02", "title": "Design influences, styles and movements", "spec": ["3.2.2"], "section": "2", "pages": "115–117", "built": false },
+        { "id": "b03-designers-their-work", "code": "B03", "title": "Designers and their work", "spec": ["3.2.2"], "section": "2", "pages": "118–121", "built": false },
+        { "id": "b04-socio-economic-influences", "code": "B04", "title": "Socio-economic influences", "spec": ["3.2.3"], "section": "2", "pages": "122–123", "built": false },
+        { "id": "b05-major-developments-in-technology", "code": "B05", "title": "Major developments in technology", "spec": ["3.2.3"], "section": "2", "pages": "124–127", "built": false },
+        { "id": "b06-social-moral-ethical-issues", "code": "B06", "title": "Social, moral and ethical issues", "spec": ["3.2.3"], "section": "2", "pages": "128–131", "built": false },
+        { "id": "b07-product-life-cycle", "code": "B07", "title": "Product life cycle", "spec": ["3.2.3.4"], "section": "2", "pages": "132–133", "built": false },
+        { "id": "b08-design-processes", "code": "B08", "title": "Design processes", "spec": ["3.2.4"], "section": "2", "pages": "134–138", "built": false },
+        { "id": "b09-critical-analysis-evaluation", "code": "B09", "title": "Critical analysis and evaluation", "spec": ["3.2.5"], "section": "2", "pages": "139–141", "built": false },
+        { "id": "b10-tools-equipment-processes", "code": "B10", "title": "Tools, equipment and processes", "spec": ["3.2.6"], "section": "2", "pages": "142–144", "built": false },
+        { "id": "b11-accuracy-in-design-manufacture", "code": "B11", "title": "Accuracy in design and manufacture", "spec": ["3.2.7"], "section": "2", "pages": "145–146", "built": false },
+        { "id": "b12-responsible-design", "code": "B12", "title": "Responsible design", "spec": ["3.2.8"], "section": "2", "pages": "147–149", "built": false },
+        { "id": "b13-planning-for-accuracy-efficiency", "code": "B13", "title": "Planning for accuracy and efficiency", "spec": ["3.2.9"], "section": "2", "pages": "150–151", "built": false },
+        { "id": "b14-quality-assurance-quality-control", "code": "B14", "title": "Quality assurance and quality control", "spec": ["3.2.9"], "section": "2", "pages": "152–155", "built": false },
+        { "id": "b15-national-international-standards", "code": "B15", "title": "National and international standards", "spec": ["3.2.10"], "section": "2", "pages": "156–159", "built": false }
+      ],
+      "reference": []
+    }
+  },
+  "years": {
+    "y10": {
+      "name": "Year 10",
+      "level": "gcse",
+      "taught": [],
+      "comingUp": { "topic": "g01-new-technologies-industry-enterprise", "day": null }
+    },
+    "y11": {
+      "name": "Year 11",
+      "level": "gcse",
+      "taught": ["g01-new-technologies-industry-enterprise", "g02-sustainability-environment-people", "g03-culture-society-production-systems", "g04-energy-generation-storage", "g05-modern-smart-materials", "g06-composites-technical-textiles", "g07-systems-approach-to-designing", "g08-mechanical-devices", "g09-properties-papers-boards-timbers", "g10-metals-alloys-polymers", "g11-textiles", "g12-selection-of-materials-or-components", "g13-forces-stresses-enhancing-materials", "g14-ecological-social-footprint", "g15-timbers-sources-properties", "g16-timbers-stock-forms-finishes", "g17-polymers-sources-properties-stock-forms", "g18-polymers-processes-finishes"],
+      "comingUp": { "topic": "g19-shaping-timbers-polymers", "day": null }
+    },
+    "y12": {
+      "name": "Year 12",
+      "level": "alevel",
+      "taught": [],
+      "comingUp": { "topic": "a01-materials-their-applications", "day": null }
+    },
+    "y13": {
+      "name": "Year 13",
+      "level": "alevel",
+      "taught": ["a01-materials-their-applications", "a02-classification-of-materials", "a03-investigating-testing-materials", "a04-papers-boards-polymer-sheet-film", "a05-woods", "a06-metals", "a07-polymers", "a08-biodegradable-polymers-composites", "a09-smart-modern-materials", "a10-enhancement-of-materials", "a11-paper-board-forming-processes", "a12-polymer-processes", "a13-metal-processes-1", "a14-metal-processes-2-addition-fabrication", "a15-metal-processes-3-fasteners-joining-wasting", "a16-wood-processes", "a17-adhesives-fixings-jigs-fixtures", "a18-finishes-1-paper-board-polymers", "a19-finishes-2-metals", "a20-finishes-3-wood", "a21-scales-of-production", "a22-efficient-use-of-materials", "a23-computer-systems-sub-assembly", "a24-cad-cam-virtual-modelling", "a25-rapid-prototyping-edi-ppc", "a26-product-development-improvement", "a27-product-development-inclusive-design", "a28-safe-working-practices", "a29-safety-in-products-services", "a30-intellectual-property", "a31-registered-designs-trademarks-open-design", "a32-design-for-manufacturing-maintenance-repair-disposal", "a33-feasibility-studies", "a34-enterprise-marketing", "a35-design-communication", "a36-modern-manufacturing-systems", "b01-design-methods-processes", "b02-design-influences-styles-movements", "b03-designers-their-work", "b04-socio-economic-influences", "b05-major-developments-in-technology"],
+      "comingUp": { "topic": "b06-social-moral-ethical-issues", "day": null }
+    }
+  }
+}
