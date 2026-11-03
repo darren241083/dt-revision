@@ -1,22 +1,22 @@
 // Teacher edit mode. Only loaded when the teacher opens it (?edit or Ctrl+Shift+E).
-// Saves go to the private workshop repository through the GitHub API, into site/, and the
-// publish workflow then copies site/ to the public site. Nothing works without a token, and
-// the token is kept only in this browser.
+// Saves go to the teacher's repository through the GitHub API, into site/, and the publish
+// workflow then copies site/ to the public site. The repository, the image-notes path and the
+// token are typed in once and kept only in this browser; none of them is in this code.
 
 import { h, icon, fill } from "./dom.js";
 import * as store from "./store.js";
 import { editState } from "./editslot.js";
 import { stripAudio, cleanWebp } from "./audiostrip.js";
 
-const REPO = "darren241083/dt-revision-workshop";
 const BRANCH = "main";
 const API = "https://api.github.com";
-const TOKEN_KEY = "editToken";
-// Private per-topic notes in the repository (read only), for image search phrases.
-const notesPath = (id) => ["docs", "topics", id, "images.md"].join("/");
+const KEYS = { token: "editToken", repo: "editRepo", notes: "editNotes" };
 
 let ctx = null, bar = null, phrases = null;
-const token = () => store.get(TOKEN_KEY, "");
+const token = () => store.get(KEYS.token, "");
+const repo = () => store.get(KEYS.repo, "");
+// Image search phrases: a path template in the repository with {id} for the topic id.
+const notesPath = (id) => (store.get(KEYS.notes, "") || "").replace(/\{id\}/g, id);
 
 /* ---------- GitHub ---------- */
 
@@ -25,7 +25,7 @@ class GhError extends Error {
 }
 
 async function gh(path, { method = "GET", body, raw } = {}) {
-  const res = await fetch(`${API}/repos/${REPO}${path}`, {
+  const res = await fetch(`${API}/repos/${repo()}${path}`, {
     method,
     headers: {
       Accept: raw ? "application/vnd.github.raw+json" : "application/vnd.github+json",
@@ -62,8 +62,8 @@ async function commit(files, message) {
 function problem(err) {
   const s = err && err.status;
   if (s === 401) return "GitHub refused the token. Check it, or make a new one.";
-  if (s === 403) return "This token can't write here. It needs Contents: Read and write on the workshop repository.";
-  if (s === 404) return "This token can't see the workshop repository.";
+  if (s === 403) return "This token can't write here. It needs Contents: Read and write on the repository.";
+  if (s === 404) return "This token can't see that repository. Check the name and the token's repository access.";
   if (s === 409 || s === 422) return "Something else was saved at the same moment. Try again.";
   if (err instanceof GhError) return `GitHub said no (${s}). Try again in a minute.`;
   return err?.message || "Something went wrong. Check your connection and try again.";
@@ -112,7 +112,7 @@ function say(el, text, tone) {
 const field = (label, input, note) => h("label", { class: "dlg-field" }, h("span", {}, label), input, note && h("small", {}, note));
 
 function needToken() {
-  if (token()) return false;
+  if (token() && repo()) return false;
   tokenDialog();
   return true;
 }
@@ -120,17 +120,28 @@ function needToken() {
 /* ---------- Token ---------- */
 
 function tokenDialog() {
-  const input = h("input", { type: "password", autocomplete: "off", spellcheck: "false", placeholder: "github_pat_…" });
+  const repoIn = h("input", { type: "text", autocomplete: "off", spellcheck: "false", placeholder: "owner/repository", value: repo() });
+  const notesIn = h("input", { type: "text", autocomplete: "off", spellcheck: "false", placeholder: "folder/{id}/file.md", value: store.get(KEYS.notes, "") });
+  const tokenIn = h("input", { type: "password", autocomplete: "off", spellcheck: "false", placeholder: "github_pat_…" });
   const msg = status();
-  const save = h("button", { type: "button", class: "btn-dark" }, "Save token");
-  const dlg = dialog("Edit mode token",
-    field("GitHub fine-grained token", input, `Repository access: ${REPO} only. Permission: Contents, Read and write. Kept in this browser only.`),
+  const save = h("button", { type: "button", class: "btn-dark" }, "Save");
+  const dlg = dialog("Edit mode settings",
+    field("Repository", repoIn, "The repository edit mode saves to, as owner/name."),
+    field("Image notes path (optional)", notesIn, "Where each topic's image search phrases are, with {id} for the topic id."),
+    field("GitHub fine-grained token", tokenIn, "Access to that repository only, with Contents: Read and write."),
+    h("p", { class: "dlg-note" }, "All three are kept in this browser only. Forget token clears them."),
     h("div", { class: "btn-row" }, save), msg);
   save.addEventListener("click", async () => {
-    const value = input.value.trim();
-    if (!value) return say(msg, "Paste the token first.", "bad");
-    const old = token();
-    store.set(TOKEN_KEY, value);
+    const r = repoIn.value.trim().replace(/^https?:\/\/github\.com\//, "").replace(/\.git$|\/$/g, "");
+    const n = notesIn.value.trim();
+    const t = tokenIn.value.trim() || token();
+    if (!/^[\w.-]+\/[\w.-]+$/.test(r)) return say(msg, "Type the repository as owner/name.", "bad");
+    if (n && !n.includes("{id}")) return say(msg, "Put {id} in the notes path where the topic id goes.", "bad");
+    if (!t) return say(msg, "Paste the token.", "bad");
+    const old = { token: token(), repo: repo(), notes: store.get(KEYS.notes, "") };
+    store.set(KEYS.repo, r);
+    store.set(KEYS.notes, n);
+    store.set(KEYS.token, t);
     say(msg, "Checking…");
     try {
       await gh("");
@@ -139,22 +150,22 @@ function tokenDialog() {
       drawBar();
       setTimeout(() => dlg.close(), 700);
     } catch (e) {
-      store.set(TOKEN_KEY, old);
+      Object.entries(old).forEach(([k, v]) => (v ? store.set(KEYS[k], v) : store.remove(KEYS[k])));
       say(msg, problem(e), "bad");
     }
   });
-  input.focus();
+  (repo() ? tokenIn : repoIn).focus();
 }
 
 function forgetToken() {
-  store.remove(TOKEN_KEY);
+  Object.values(KEYS).forEach((k) => store.remove(k));
   phrases = null;
   drawBar();
 }
 
 /* ---------- Image search phrases ---------- */
 
-// images.md lines: "- Term: search phrase" or "| Term | search phrase |"
+// Notes lines: "- Term: search phrase" or "| Term | search phrase |"
 export function parsePhrases(md) {
   const out = new Map();
   for (const line of md.split(/\r?\n/)) {
@@ -166,7 +177,8 @@ export function parsePhrases(md) {
 
 async function phraseFor(name, fallback) {
   if (phrases === null) {
-    try { phrases = parsePhrases(await readText(notesPath(ctx.topic().id))); } catch { phrases = new Map(); }
+    const path = notesPath(ctx.topic().id);
+    try { phrases = path ? parsePhrases(await readText(path)) : new Map(); } catch { phrases = new Map(); }
   }
   return phrases.get(name.toLowerCase()) || fallback;
 }
@@ -431,7 +443,7 @@ async function yearsDialog() {
 
 function drawBar() {
   if (!bar) return;
-  const has = !!token();
+  const has = !!(token() && repo());
   fill(bar,
     h("span", { class: "edit-label" }, icon("pen"), "Edit mode"),
     h("span", { class: "edit-state" + (has ? " on" : "") }, has ? "Token saved in this browser" : "No token: nothing can be saved"),
