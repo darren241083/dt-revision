@@ -68,32 +68,32 @@
         {
           "term": "Using science",
           "tags": [],
-          "text": "Designers use new scientific discoveries to develop new materials and products."
+          "text": "New scientific discoveries lead to new materials and products."
         },
         {
           "term": "Skills and knowledge",
           "tags": [],
-          "text": "Technology brings together communication, design, innovation, modelling and manufacturing, plus problem solving and organised methods."
+          "text": "Communication, design, innovation, modelling and manufacturing, plus problem solving."
         },
         {
           "term": "People, tools and machines",
           "tags": [],
-          "text": "Manufacturers combine skilled people, tools, robots and machines for efficient, effective output."
+          "text": "Skilled people, tools, robots and machines combined for efficient output."
         },
         {
           "term": "Consumer demand",
           "tags": [],
-          "text": "Consumers keep looking for new and improved products, so manufacturers keep making more."
+          "text": "Consumers want new and improved products, so more are made."
         },
         {
           "term": "Impact on the planet",
           "tags": [],
-          "text": "Collecting raw materials and turning them into products can use vast amounts of energy, which harms the planet."
+          "text": "Getting raw materials and making products uses vast amounts of energy."
         },
         {
           "term": "Continuous improvement",
           "tags": [],
-          "text": "Small, regular improvements to how products are made increase efficiency and cut energy use and harm to the environment."
+          "text": "Small, regular process improvements: more efficient, less energy and harm."
         }
       ],
       "check": [
@@ -117,27 +117,27 @@
         {
           "term": "Automation",
           "tags": [],
-          "text": "Mechanised assembly lines do repetitive tasks instead of people. Helps meet increased demand."
+          "text": "Assembly lines do repetitive tasks instead of people, to meet demand."
         },
         {
           "term": "Software and industrial automation",
           "tags": [],
-          "text": "Software automation does computer-based tasks. Industrial automation does physical tasks."
+          "text": "Software: computer-based tasks. Industrial: physical tasks."
         },
         {
           "term": "Robots",
           "tags": [],
-          "text": "Programmed to perform a series of complex movements. Used where it's hazardous, very hot or full of harmful vapours: vehicle assembly lines, packing plants, laboratories, aerospace."
+          "text": "Repeat complex movements in hazardous, hot or fume-filled places: vehicle assembly, packing plants, labs, aerospace."
         },
         {
           "term": "Advantages",
           "tags": [],
-          "text": "Faster, more efficient production. Accurate, consistent output. Lower labour costs. Works 24/7 and in many environments."
+          "text": "Faster, accurate, consistent output. Lower labour costs. Works 24/7."
         },
         {
           "term": "Disadvantages",
           "tags": [],
-          "text": "Job losses. No human judgement or decisions. Workers need new skills to maintain the robots. Expensive to set up."
+          "text": "Job losses. No human judgement. New skills needed to maintain. Costly to set up."
         }
       ],
       "check": [
@@ -161,7 +161,7 @@
         {
           "term": "Planned layout",
           "tags": [],
-          "text": "Companies plan the layout of their buildings from the start, so every stage of design, manufacture and delivery is as efficient as possible."
+          "text": "Planned from the start so design, manufacture and delivery are as efficient as possible."
         },
         {
           "term": "Workflow",
@@ -196,22 +196,22 @@
         {
           "term": "Enterprise",
           "tags": [],
-          "text": "The ability to identify a business opportunity, develop it and make it commercially successful."
+          "text": "Spotting a business opportunity and making it a commercial success."
         },
         {
           "term": "Start-up",
           "tags": [],
-          "text": "A new company with an idea that could grow into a profit-making business."
+          "text": "A new company whose idea could become a profit-making business."
         },
         {
           "term": "Intellectual property (IP)",
           "tags": [],
-          "text": "Original ideas, discoveries and inventions belong to the person who created them."
+          "text": "Ideas and inventions belong to the person who created them."
         },
         {
           "term": "Patent",
           "tags": [],
-          "text": "Legally registering an invention to prove you were the first, so others can't make money from your idea."
+          "text": "Legal registration proving you were first, so others can't profit from your idea."
         }
       ],
       "check": [
@@ -235,27 +235,27 @@
         {
           "term": "Crowd funding",
           "tags": [],
-          "text": "Many people each put in a small amount of money to fund a new business venture, often through websites and social media."
+          "text": "Many people each give a small amount, often online, to fund a new venture."
         },
         {
           "term": "Investors",
           "tags": [],
-          "text": "From individuals to venture capitalists, usually in return for shares if the venture succeeds. An alternative to a bank loan."
+          "text": "From individuals to venture capitalists, usually for shares. An alternative to a bank loan."
         },
         {
           "term": "Missing the target",
           "tags": [],
-          "text": "If the funding target isn't reached, the money pledged is usually returned. A failed project can damage the company's reputation."
+          "text": "Pledged money is usually returned. Failure can harm the company's reputation."
         },
         {
           "term": "Virtual marketing",
           "tags": [],
-          "text": "Promoting a product, service or idea through websites, social media, email and paid adverts in search results. Hits, clicks and likes make it easier to measure than print adverts."
+          "text": "Promoting through websites, social media, email and search adverts. Hits, clicks and likes are easy to measure."
         },
         {
           "term": "Virtual retail",
           "tags": [],
-          "text": "Selling online through websites and social media to reach a wider audience of customers."
+          "text": "Selling online to reach a wider audience."
         }
       ],
       "check": [
@@ -279,22 +279,22 @@
         {
           "term": "Cooperative",
           "tags": [],
-          "text": "An enterprise owned and run by its members, who may be its workers or its customers."
+          "text": "Owned and run by its members: its workers or its customers."
         },
         {
           "term": "Why a cooperative?",
           "tags": [],
-          "text": "People with the same business interests get more protection and a stronger, democratic voice."
+          "text": "Shared interests give members more protection and a democratic voice."
         },
         {
           "term": "Fair trade",
           "tags": [],
-          "text": "Better prices, decent working conditions and fair terms of trade for farmers and workers in less economically developed countries."
+          "text": "Fair prices, decent conditions and fair terms for producers in less economically developed countries."
         },
         {
           "term": "Fairtrade Foundation",
           "tags": [],
-          "text": "Requires companies to pay a fair, sustainable price, so farmers can improve their quality of life. Covers exports such as coffee, cotton, chocolate and fruit."
+          "text": "Sets a fair, sustainable price so farmers' lives improve. E.g. coffee, cotton, chocolate, fruit."
         }
       ],
       "check": [
@@ -312,7 +312,7 @@
   "keywords": [
     {
       "term": "Continuous improvement",
-      "def": "Small, regular changes to processes that increase efficiency and reduce harm to the environment."
+      "def": "Small, regular changes that make processes more efficient."
     },
     {
       "term": "Automation",
@@ -320,39 +320,39 @@
     },
     {
       "term": "Robot",
-      "def": "A machine programmed to perform a series of complex movements automatically."
+      "def": "A machine programmed to make complex movements automatically."
     },
     {
       "term": "Workflow",
-      "def": "The logical order in which work moves through a building, from delivery (goods-in) to distribution (despatch)."
+      "def": "The logical order work moves through a building, goods-in to despatch."
     },
     {
       "term": "Enterprise",
-      "def": "Identifying a business opportunity, developing it and making it commercially successful."
+      "def": "Turning a business opportunity into a commercial success."
     },
     {
       "term": "Start-up",
-      "def": "A new company with an idea that could grow into a profit-making business."
+      "def": "A new company that could become a profit-making business."
     },
     {
       "term": "Intellectual property",
-      "def": "Original ideas and inventions that belong to the person who created them."
+      "def": "Ideas and inventions owned by the person who created them."
     },
     {
       "term": "Patent",
-      "def": "A legal registration proving the creator was first to register an idea or invention."
+      "def": "Legal proof the creator registered an invention first."
     },
     {
       "term": "Crowd funding",
-      "def": "Raising small amounts of money from many people to fund a new venture."
+      "def": "Small amounts from many people to fund a new venture."
     },
     {
       "term": "Virtual marketing",
-      "def": "Promoting products through websites, social media, email and online adverts."
+      "def": "Promoting products online: websites, social media, email, adverts."
     },
     {
       "term": "Virtual retail",
-      "def": "Selling products online to reach a wider audience."
+      "def": "Selling products online to a wider audience."
     },
     {
       "term": "Cooperative",
@@ -360,7 +360,7 @@
     },
     {
       "term": "Fair trade",
-      "def": "Fair prices, decent working conditions and fair terms of trade for producers in less economically developed countries."
+      "def": "Fair prices, conditions and terms for producers in less economically developed countries."
     }
   ],
   "apply": [
