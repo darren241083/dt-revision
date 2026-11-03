@@ -339,6 +339,7 @@ a.btn-line, a.btn-dark { text-decoration: none; }
 .w-model { padding: 14px 16px; border-radius: 12px; background: var(--teal-soft); color: var(--teal-dark); }
 .w-model[hidden] { display: none; }
 .written .btn-row button[hidden] { display: none; }
+.written-set { display: contents; }
 
 @media (max-width: 1199px) {
   .recall-pair { grid-template-columns: minmax(0, 1fr); }

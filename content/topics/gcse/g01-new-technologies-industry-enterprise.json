@@ -168,10 +168,10 @@
           "tags": [],
           "text": "Work moves through the building in a logical order:",
           "steps": [
-            "Delivery depot: raw materials and components arrive.",
+            "Delivery depot (goods-in): raw materials and components arrive.",
             "Production line: materials are processed and components assembled to make the product.",
-            "Packaging: the product is wrapped and boxed.",
-            "Distribution: the product is shipped to customers."
+            "Packaging (packing): the product is wrapped and boxed.",
+            "Distribution (despatch): the product is shipped to customers."
           ]
         }
       ],
@@ -324,7 +324,7 @@
     },
     {
       "term": "Workflow",
-      "def": "The logical order in which work moves through a building, from delivery to distribution."
+      "def": "The logical order in which work moves through a building, from delivery (goods-in) to distribution (despatch)."
     },
     {
       "term": "Enterprise",
@@ -440,10 +440,10 @@
   "order": {
     "q": "Put the stages of the workflow in order.",
     "steps": [
-      "Delivery depot",
+      "Delivery depot (goods-in)",
       "Production line",
-      "Packaging",
-      "Distribution to customers"
+      "Packaging (packing)",
+      "Distribution (despatch)"
     ]
   },
   "quiz": [
@@ -654,7 +654,8 @@
   ],
   "written": [
     {
-      "q": "Give two advantages and two disadvantages for a manufacturer of using automation.",
+      "type": "describe",
+      "q": "Describe two advantages and two disadvantages for a manufacturer of using automation.",
       "marks": 4,
       "points": [
         "Faster, more efficient production.",
@@ -670,6 +671,7 @@
       "note": "1 mark per advantage (up to 2) and 1 per disadvantage (up to 2)."
     },
     {
+      "type": "explain",
       "q": "A start-up plans to use crowd funding to launch a new skateboard. Explain one benefit and one risk of this for the company.",
       "marks": 4,
       "points": [
@@ -684,6 +686,7 @@
       "note": "1 mark for the benefit and 1 for explaining it; 1 mark for the risk and 1 for explaining it."
     },
     {
+      "type": "explain",
       "q": "Explain why a chocolate manufacturer might choose to use Fairtrade cocoa.",
       "marks": 3,
       "points": [
@@ -694,6 +697,48 @@
       ],
       "model": "With Fairtrade cocoa, the farmers are paid a fair, sustainable price and work in decent conditions. This means farmers in less economically developed countries can improve their quality of life.",
       "note": "1 mark per point, up to 3."
+    },
+    {
+      "type": "compare",
+      "q": "Compare using robots with using workers on a vehicle assembly line.",
+      "marks": 4,
+      "points": [
+        "Robots can work where it's hazardous, very hot or full of harmful vapours; workers can't do so safely.",
+        "Robots give accurate, consistent output.",
+        "Robots can work 24/7, so production is faster and more efficient.",
+        "Workers can use judgement and make decisions; robots have no human input or decision making.",
+        "Robots are expensive to set up and need workers with new skills to maintain them.",
+        "Robots lower labour costs but can lead to job losses."
+      ],
+      "model": "Robots can work in hazardous or very hot places, or around harmful vapours, where workers can't safely, and they can work 24/7 with accurate, consistent output. Workers, however, can use judgement and make decisions, which robots can't. Robots are expensive to set up and need skilled workers to maintain them, and although they lower labour costs they can lead to job losses.",
+      "note": "1 mark per valid comparison point, up to 4."
+    },
+    {
+      "type": "evaluate",
+      "q": "A food company is deciding whether to automate its packing plant. Evaluate this decision.",
+      "marks": 6,
+      "points": [
+        "Faster, more efficient packing, helping meet increased demand.",
+        "Accurate, consistent output.",
+        "Lower labour costs, and the line can work 24/7.",
+        "Expensive to set up.",
+        "Job losses in the workforce, and workers need new skills to maintain the machines.",
+        "No human input or decision making on the line.",
+        "Justified conclusion, e.g. worth it if demand is high enough to cover the set-up cost."
+      ],
+      "model": "Automating the packing plant would make packing faster and more efficient, helping the company meet increased demand, with accurate, consistent output. It would lower labour costs and the line could run 24/7. However, it is expensive to set up, it can lead to job losses, workers would need new skills to maintain the machines, and there is no human decision making on the line. It is worth doing if demand is high enough to cover the set-up cost.",
+      "note": "1 mark per point for or against (up to 5), plus 1 for a justified conclusion. Up to 6."
+    },
+    {
+      "type": "explain",
+      "q": "Explain why an inventor would apply for a patent.",
+      "marks": 2,
+      "points": [
+        "A patent is a legal process that proves they were the first to register the invention…",
+        "…so their intellectual property is protected and others can't make money from it."
+      ],
+      "model": "A patent legally proves the inventor was the first to register the invention, so their intellectual property is protected and others can't make money from it.",
+      "note": "1 mark for the point, 1 for explaining it."
     }
   ],
   "related": [

@@ -762,6 +762,7 @@
   ],
   "written": [
     {
+      "type": "describe",
       "q": "Describe how to make an accurate straight cut across a length of pine using a tenon saw.",
       "marks": 4,
       "points": [
@@ -776,6 +777,7 @@
       "note": "1 mark per step, up to 4."
     },
     {
+      "type": "explain",
       "q": "A batch of beech toy parts each needs a hole drilled to the same depth. Explain why a pillar drill is a good choice.",
       "marks": 2,
       "points": [
@@ -787,6 +789,7 @@
       "note": "1 mark for a feature, 1 for why it helps. Up to 2."
     },
     {
+      "type": "explain",
       "q": "A manufacturer makes 500 identical oak table legs. Explain one reason for using CNC turning rather than turning each leg by hand.",
       "marks": 2,
       "points": [
@@ -795,6 +798,48 @@
       ],
       "model": "CNC turning makes each leg accurately sized and identical, so all the legs fit and match in the finished tables.",
       "note": "1 mark for the reason, 1 for developing it."
+    },
+    {
+      "type": "compare",
+      "q": "Compare a coping saw and a band saw for cutting curved shapes in timber.",
+      "marks": 4,
+      "points": [
+        "Coping saw: a hand saw that cuts curves…",
+        "…but only through thin material.",
+        "Band saw: a machine with a long continuous blade running between two wheels.",
+        "A band saw cuts curves and shapes when it is fitted with a finer blade.",
+        "A band saw can also make very large cuts."
+      ],
+      "model": "A coping saw is a hand saw that cuts curves, but only through thin material. A band saw is a machine with a long continuous blade running between two wheels. Fitted with a finer blade it cuts curves and shapes, and it can also make very large cuts.",
+      "note": "1 mark per point, up to 4. Full marks need a point about each saw."
+    },
+    {
+      "type": "evaluate",
+      "q": "A pupil needs to shape and smooth a curved edge on a pine shelf bracket. Evaluate using a rasp, a file and abrasive paper for this job.",
+      "marks": 6,
+      "points": [
+        "A rasp is coarse, with separate teeth, so it shapes the wood.",
+        "But a rasp leaves a rough surface that needs sanding.",
+        "A file removes only small amounts of material, so it suits fine shaping.",
+        "Files come in many shapes and grades of coarseness, so a suitable one can be chosen.",
+        "Abrasive paper comes from coarse to fine, so it can shape and then smooth the surface.",
+        "Justified conclusion, e.g. shape with the rasp, then smooth with abrasive paper from coarse to fine."
+      ],
+      "model": "A rasp is coarse and has separate teeth, so it shapes the curve in the pine well, but it leaves a rough surface that needs sanding. A file removes only small amounts of material, so it is better for fine shaping, and its many shapes and grades mean a suitable one can be chosen. Abrasive paper goes from coarse to fine, so it can finish the shaping and then smooth the surface. The best approach is to shape the curve with the rasp, then smooth it with abrasive paper, working from coarse to fine.",
+      "note": "1 mark per point for or against a tool (up to 5), plus 1 for a justified conclusion. Up to 6."
+    },
+    {
+      "type": "describe",
+      "q": "Describe how to make a hole in a pine board so a screw head sits flush with the surface.",
+      "marks": 3,
+      "points": [
+        "Mark and start the hole accurately with a bradawl.",
+        "Drill the hole with a twist bit.",
+        "Use a countersink bit to cut a wider recess at the top of the hole.",
+        "So the screw head sits flush with, or just below, the surface."
+      ],
+      "model": "Mark and start the hole accurately with a bradawl, then drill it with a twist bit. Finish with a countersink bit, which cuts a wider recess at the top so the screw head sits flush with, or just below, the surface.",
+      "note": "1 mark per point, up to 3."
     }
   ],
   "related": [

@@ -20,7 +20,7 @@ import { learnChunk } from "./components/learn.js";
 import { whichTool, oddOneOut } from "./components/apply.js";
 import { matchPairs, putInOrder } from "./components/recall.js";
 import { quiz, fixList, fixRows } from "./components/quiz.js";
-import { writtenQuestion } from "./components/written.js";
+import { lessonPair, revisePair } from "./components/written.js";
 import { audioPlayer } from "./components/audio.js";
 
 const MATERIAL = { timber: "Timber", polymer: "Polymer" };
@@ -65,7 +65,7 @@ const MODES = {
 };
 
 // Results from this visit only (quiz progress and answers). Never saved.
-const session = { quiz: null };
+const session = { quiz: null, written: null };
 
 const S = {
   topic: null, level: null, course: null, entry: null, section: null, year: null,
@@ -277,7 +277,8 @@ function stageBody(st) {
       return [mindMap(T, { recall: true, chunkHref: (c) => hashFor("lesson", learnIndex(), T.chunks.indexOf(c)) }),
         h("div", { class: "recall-pair" }, T.keywords?.length > 1 && matchPairs(T.keywords), T.order && putInOrder(T.order))];
     case "test":
-      return [quiz(T, session, { chunkLink }), (T.written || []).map(writtenQuestion)];
+      return [quiz(T, session, { chunkLink }),
+        S.mode === "lesson" ? lessonPair(T.written || []) : revisePair(T.written || [], session)];
     case "fix":
       return fixStage();
     case "do-now":
