@@ -1,0 +1,709 @@
+{
+  "id": "g01-new-technologies-industry-enterprise",
+  "level": "gcse",
+  "title": "New technologies, industry and enterprise",
+  "titleMark": "industry and enterprise",
+  "short": "New technologies",
+  "spec": [
+    "3.1.1"
+  ],
+  "section": "A",
+  "materials": [],
+  "book": {
+    "title": "ClearRevise AQA GCSE D&T 8552",
+    "pages": "2–4"
+  },
+  "audio": null,
+  "needs": [
+    "Explain what automation is, with its advantages and disadvantages.",
+    "Say where and why robots are used in industry.",
+    "Describe how a planned workplace layout keeps work flowing.",
+    "Define enterprise, start-up, intellectual property and patent.",
+    "Explain crowd funding, virtual marketing and retail, cooperatives and fair trade."
+  ],
+  "doNow": [
+    {
+      "q": "What does automation replace on an assembly line?",
+      "a": "People doing repetitive tasks.",
+      "from": "Pre-read p3"
+    },
+    {
+      "q": "Give one place where robots are used.",
+      "a": "Vehicle assembly lines, packing plants, laboratories or aerospace.",
+      "from": "Pre-read p3"
+    },
+    {
+      "q": "What is a patent?",
+      "a": "A legal way of proving you were the first to register an idea or invention.",
+      "from": "Pre-read p4"
+    },
+    {
+      "q": "Who owns and runs a cooperative?",
+      "a": "Its members: its workers or its customers.",
+      "from": "Pre-read p4"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I can be programmed to perform a series of complex movements.",
+      "I can work where it's too hot or hazardous for people.",
+      "You'll find lots of me on vehicle assembly lines."
+    ],
+    "answer": "Robot",
+    "options": [
+      "Robot",
+      "Production line",
+      "Cooperative",
+      "Patent"
+    ]
+  },
+  "chunks": [
+    {
+      "id": "tech",
+      "label": "New and emerging technologies",
+      "icon": "bulb",
+      "pages": "2",
+      "summary": "Technology keeps developing to meet people's needs and improve how we live and work.",
+      "items": [
+        {
+          "term": "Using science",
+          "tags": [],
+          "text": "Designers use new scientific discoveries to develop new materials and products."
+        },
+        {
+          "term": "Skills and knowledge",
+          "tags": [],
+          "text": "Technology brings together communication, design, innovation, modelling and manufacturing, plus problem solving and organised methods."
+        },
+        {
+          "term": "People, tools and machines",
+          "tags": [],
+          "text": "Manufacturers combine skilled people, tools, robots and machines for efficient, effective output."
+        },
+        {
+          "term": "Consumer demand",
+          "tags": [],
+          "text": "Consumers keep looking for new and improved products, so manufacturers keep making more."
+        },
+        {
+          "term": "Impact on the planet",
+          "tags": [],
+          "text": "Collecting raw materials and turning them into products can use vast amounts of energy, which harms the planet."
+        },
+        {
+          "term": "Continuous improvement",
+          "tags": [],
+          "text": "Small, regular improvements to how products are made increase efficiency and cut energy use and harm to the environment."
+        }
+      ],
+      "check": [
+        {
+          "q": "Why do manufacturers keep developing new products?",
+          "a": "Consumers keep looking for new and improved products."
+        },
+        {
+          "q": "What is continuous improvement?",
+          "a": "Making small, regular changes to processes so they are more efficient and do less harm to the environment."
+        }
+      ]
+    },
+    {
+      "id": "auto",
+      "label": "Automation and the use of robotics",
+      "icon": "robot",
+      "pages": "3",
+      "summary": "Machines and robots take over repetitive or dangerous tasks.",
+      "items": [
+        {
+          "term": "Automation",
+          "tags": [],
+          "text": "Mechanised assembly lines do repetitive tasks instead of people. Helps meet increased demand."
+        },
+        {
+          "term": "Software and industrial automation",
+          "tags": [],
+          "text": "Software automation does computer-based tasks. Industrial automation does physical tasks."
+        },
+        {
+          "term": "Robots",
+          "tags": [],
+          "text": "Programmed to perform a series of complex movements. Used where it's hazardous, very hot or full of harmful vapours: vehicle assembly lines, packing plants, laboratories, aerospace."
+        },
+        {
+          "term": "Advantages",
+          "tags": [],
+          "text": "Faster, more efficient production. Accurate, consistent output. Lower labour costs. Works 24/7 and in many environments."
+        },
+        {
+          "term": "Disadvantages",
+          "tags": [],
+          "text": "Job losses. No human judgement or decisions. Workers need new skills to maintain the robots. Expensive to set up."
+        }
+      ],
+      "check": [
+        {
+          "q": "Give two kinds of place where robots work instead of people.",
+          "a": "Hazardous places, very hot places, or where there are harmful vapours."
+        },
+        {
+          "q": "Give one disadvantage of automation.",
+          "a": "Job losses, high set-up cost, no human decision making, or workers need new skills to maintain the robots."
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "Buildings and the place of work",
+      "icon": "factory",
+      "pages": "3",
+      "summary": "The workplace is laid out so work flows efficiently from delivery to the customer.",
+      "items": [
+        {
+          "term": "Planned layout",
+          "tags": [],
+          "text": "Companies plan the layout of their buildings from the start, so every stage of design, manufacture and delivery is as efficient as possible."
+        },
+        {
+          "term": "Workflow",
+          "tags": [],
+          "text": "Work moves through the building in a logical order:",
+          "steps": [
+            "Delivery depot: raw materials and components arrive.",
+            "Production line: materials are processed and components assembled to make the product.",
+            "Packaging: the product is wrapped and boxed.",
+            "Distribution: the product is shipped to customers."
+          ]
+        }
+      ],
+      "check": [
+        {
+          "q": "Why do companies plan the layout of their buildings?",
+          "a": "So each stage of design, manufacture and delivery is as efficient as possible."
+        },
+        {
+          "q": "What happens on the production line?",
+          "a": "Raw materials are processed and components assembled to make the product."
+        }
+      ]
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise",
+      "icon": "idea",
+      "pages": "4",
+      "summary": "Spotting a business opportunity, developing it and making it a commercial success.",
+      "items": [
+        {
+          "term": "Enterprise",
+          "tags": [],
+          "text": "The ability to identify a business opportunity, develop it and make it commercially successful."
+        },
+        {
+          "term": "Start-up",
+          "tags": [],
+          "text": "A new company with an idea that could grow into a profit-making business."
+        },
+        {
+          "term": "Intellectual property (IP)",
+          "tags": [],
+          "text": "Original ideas, discoveries and inventions belong to the person who created them."
+        },
+        {
+          "term": "Patent",
+          "tags": [],
+          "text": "Legally registering an invention to prove you were the first, so others can't make money from your idea."
+        }
+      ],
+      "check": [
+        {
+          "q": "What is a start-up?",
+          "a": "A new company with an idea that could grow into a profit-making business."
+        },
+        {
+          "q": "Why would an inventor apply for a patent?",
+          "a": "To protect their intellectual property by proving they were the first to register the invention."
+        }
+      ]
+    },
+    {
+      "id": "funding",
+      "label": "Crowd funding and virtual marketing",
+      "icon": "funding",
+      "pages": "4",
+      "summary": "Raising money and reaching customers online.",
+      "items": [
+        {
+          "term": "Crowd funding",
+          "tags": [],
+          "text": "Many people each put in a small amount of money to fund a new business venture, often through websites and social media."
+        },
+        {
+          "term": "Investors",
+          "tags": [],
+          "text": "From individuals to venture capitalists, usually in return for shares if the venture succeeds. An alternative to a bank loan."
+        },
+        {
+          "term": "Missing the target",
+          "tags": [],
+          "text": "If the funding target isn't reached, the money pledged is usually returned. A failed project can damage the company's reputation."
+        },
+        {
+          "term": "Virtual marketing",
+          "tags": [],
+          "text": "Promoting a product, service or idea through websites, social media, email and paid adverts in search results. Hits, clicks and likes make it easier to measure than print adverts."
+        },
+        {
+          "term": "Virtual retail",
+          "tags": [],
+          "text": "Selling online through websites and social media to reach a wider audience of customers."
+        }
+      ],
+      "check": [
+        {
+          "q": "What is crowd funding?",
+          "a": "Raising small amounts of money from many people to fund a new venture."
+        },
+        {
+          "q": "Why is virtual marketing easier to measure than print advertising?",
+          "a": "It relies on hits, clicks or likes, which can be counted."
+        }
+      ]
+    },
+    {
+      "id": "fair",
+      "label": "Cooperatives and fair trade",
+      "icon": "trade",
+      "pages": "4",
+      "summary": "Businesses that share ownership, or that pay producers fairly.",
+      "items": [
+        {
+          "term": "Cooperative",
+          "tags": [],
+          "text": "An enterprise owned and run by its members, who may be its workers or its customers."
+        },
+        {
+          "term": "Why a cooperative?",
+          "tags": [],
+          "text": "People with the same business interests get more protection and a stronger, democratic voice."
+        },
+        {
+          "term": "Fair trade",
+          "tags": [],
+          "text": "Better prices, decent working conditions and fair terms of trade for farmers and workers in less economically developed countries."
+        },
+        {
+          "term": "Fairtrade Foundation",
+          "tags": [],
+          "text": "Requires companies to pay a fair, sustainable price, so farmers can improve their quality of life. Covers exports such as coffee, cotton, chocolate and fruit."
+        }
+      ],
+      "check": [
+        {
+          "q": "Who owns a cooperative?",
+          "a": "Its members: its workers or its customers."
+        },
+        {
+          "q": "What does fair trade give farmers and workers?",
+          "a": "Better prices, decent working conditions and fair terms of trade."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Continuous improvement",
+      "def": "Small, regular changes to processes that increase efficiency and reduce harm to the environment."
+    },
+    {
+      "term": "Automation",
+      "def": "Machines doing repetitive tasks instead of people."
+    },
+    {
+      "term": "Robot",
+      "def": "A machine programmed to perform a series of complex movements automatically."
+    },
+    {
+      "term": "Workflow",
+      "def": "The logical order in which work moves through a building, from delivery to distribution."
+    },
+    {
+      "term": "Enterprise",
+      "def": "Identifying a business opportunity, developing it and making it commercially successful."
+    },
+    {
+      "term": "Start-up",
+      "def": "A new company with an idea that could grow into a profit-making business."
+    },
+    {
+      "term": "Intellectual property",
+      "def": "Original ideas and inventions that belong to the person who created them."
+    },
+    {
+      "term": "Patent",
+      "def": "A legal registration proving the creator was first to register an idea or invention."
+    },
+    {
+      "term": "Crowd funding",
+      "def": "Raising small amounts of money from many people to fund a new venture."
+    },
+    {
+      "term": "Virtual marketing",
+      "def": "Promoting products through websites, social media, email and online adverts."
+    },
+    {
+      "term": "Virtual retail",
+      "def": "Selling products online to reach a wider audience."
+    },
+    {
+      "term": "Cooperative",
+      "def": "An enterprise owned and run by its members."
+    },
+    {
+      "term": "Fair trade",
+      "def": "Fair prices, decent working conditions and fair terms of trade for producers in less economically developed countries."
+    }
+  ],
+  "apply": [
+    {
+      "q": "A car factory spray-paints car bodies in a booth full of harmful vapours.",
+      "tools": [
+        "Industrial robots",
+        "Workers painting by hand",
+        "Software automation",
+        "A cooperative"
+      ],
+      "tool": 0,
+      "reasons": [
+        "They can work where there are harmful vapours and repeat the same movements accurately",
+        "People can make decisions as they go",
+        "It carries out computer-based tasks",
+        "Its members share the ownership of the business"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "Two friends have designed a reusable water bottle but can't get a bank loan to start making it.",
+      "tools": [
+        "Crowd funding",
+        "A patent",
+        "Virtual retail",
+        "Fair trade"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Many people each invest a small amount, as an alternative to a bank loan",
+        "It proves they were the first to register the invention",
+        "It sells products online to a wider audience",
+        "It gives producers a fair price for their crops"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A chocolate company wants shoppers to know the farmers who grew its cocoa were treated fairly.",
+      "tools": [
+        "Fair trade",
+        "Crowd funding",
+        "Automation",
+        "Virtual marketing"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Farmers are paid a fair, sustainable price and have decent working conditions",
+        "It raises money from many small investors",
+        "It speeds up production on the assembly line",
+        "Hits, clicks and likes can be counted"
+      ],
+      "reason": 0
+    }
+  ],
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      {
+        "n": "Crowd funding",
+        "why": "The only one about raising money."
+      },
+      {
+        "n": "Virtual marketing",
+        "why": "The only one about promoting a product."
+      },
+      {
+        "n": "Cooperative",
+        "why": "The only one about who owns and runs the business."
+      },
+      {
+        "n": "Patent",
+        "why": "The only one that is a legal process protecting an invention."
+      }
+    ]
+  },
+  "order": {
+    "q": "Put the stages of the workflow in order.",
+    "steps": [
+      "Delivery depot",
+      "Production line",
+      "Packaging",
+      "Distribution to customers"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Manufacturers keep developing new products because consumers keep looking for new and improved ones.",
+      "tf": true,
+      "why": "Demand for new and improved products drives manufacturers to make more.",
+      "chunk": "tech"
+    },
+    {
+      "q": "Turning raw materials into products uses very little energy.",
+      "tf": false,
+      "why": "It can use vast amounts of energy, which harms the planet.",
+      "chunk": "tech"
+    },
+    {
+      "q": "What is continuous improvement?",
+      "options": [
+        "Small, regular changes to processes that increase efficiency",
+        "Replacing every machine each year",
+        "Designing products to break quickly",
+        "Raising money from many investors"
+      ],
+      "answer": 0,
+      "why": "Regular small improvements make processes more efficient and reduce harm to the environment.",
+      "chunk": "tech"
+    },
+    {
+      "q": "What does automation do?",
+      "options": [
+        "Uses mechanised assembly lines for repetitive tasks instead of people",
+        "Registers an invention",
+        "Shares ownership among workers",
+        "Promotes products online"
+      ],
+      "answer": 0,
+      "why": "Automation lets machines do repetitive tasks that people used to do.",
+      "chunk": "auto"
+    },
+    {
+      "q": "Which type of automation performs computer-based tasks?",
+      "options": [
+        "Software automation",
+        "Industrial automation",
+        "Virtual retail",
+        "A production line"
+      ],
+      "answer": 0,
+      "why": "Industrial automation performs physical tasks; software automation performs computer-based tasks.",
+      "chunk": "auto"
+    },
+    {
+      "q": "Robots are often used where conditions are hazardous, very hot or full of harmful vapours.",
+      "tf": true,
+      "why": "Robots can replace people in places that are unsafe for them.",
+      "chunk": "auto"
+    },
+    {
+      "q": "Which is an advantage of automation?",
+      "options": [
+        "It can work 24/7",
+        "It costs nothing to set up",
+        "It creates more manual jobs",
+        "It makes its own decisions"
+      ],
+      "answer": 0,
+      "why": "Machines can keep working around the clock, which increases output.",
+      "chunk": "auto"
+    },
+    {
+      "q": "Which is a disadvantage of using robots?",
+      "options": [
+        "They are expensive to set up",
+        "Their output is less consistent",
+        "They can't work at night",
+        "They are slower than people"
+      ],
+      "answer": 0,
+      "why": "Set-up costs are high, though output is faster and more consistent.",
+      "chunk": "auto"
+    },
+    {
+      "q": "Using robots means a factory no longer needs any skilled workers.",
+      "tf": false,
+      "why": "Workers need new skills to maintain the robots.",
+      "chunk": "auto"
+    },
+    {
+      "q": "Where do raw materials and components arrive?",
+      "options": [
+        "Delivery depot",
+        "Production line",
+        "Packaging",
+        "Distribution"
+      ],
+      "answer": 0,
+      "why": "The delivery depot is the first stage of the workflow.",
+      "chunk": "layout"
+    },
+    {
+      "q": "What happens on the production line?",
+      "options": [
+        "Materials are processed and components assembled into the product",
+        "The product is boxed and shipped",
+        "Raw materials are delivered",
+        "Customers order online"
+      ],
+      "answer": 0,
+      "why": "The production line turns raw materials and components into the product.",
+      "chunk": "layout"
+    },
+    {
+      "q": "A company only thinks about the layout of its buildings once production has started.",
+      "tf": false,
+      "why": "Layout is planned from the start, so every stage is as efficient as possible.",
+      "chunk": "layout"
+    },
+    {
+      "q": "What is enterprise?",
+      "options": [
+        "Identifying a business opportunity, developing it and making it commercially successful",
+        "Owning a large factory",
+        "Using robots on a production line",
+        "Selling only in physical shops"
+      ],
+      "answer": 0,
+      "why": "Enterprise is about turning an opportunity into a successful business.",
+      "chunk": "enterprise"
+    },
+    {
+      "q": "What does a patent prove?",
+      "options": [
+        "That the creator was the first to register the idea or invention",
+        "That a product is safe to use",
+        "That farmers were paid fairly",
+        "That a product can be recycled"
+      ],
+      "answer": 0,
+      "why": "A patent is a legal process that protects the inventor's intellectual property.",
+      "chunk": "enterprise"
+    },
+    {
+      "q": "A start-up is a large, long-established company.",
+      "tf": false,
+      "why": "A start-up is a new company with an idea that could grow into a profit-making business.",
+      "chunk": "enterprise"
+    },
+    {
+      "q": "What is crowd funding?",
+      "options": [
+        "Small amounts of money from many people to fund a new venture",
+        "One large bank loan",
+        "Profits from products already sold",
+        "Money paid by the Fairtrade Foundation"
+      ],
+      "answer": 0,
+      "why": "Crowd funding spreads the cost of a new venture across many small investors.",
+      "chunk": "funding"
+    },
+    {
+      "q": "If a crowd funding target isn't reached, the money pledged is usually returned to investors.",
+      "tf": true,
+      "why": "Backers usually get their money back if the target is missed.",
+      "chunk": "funding"
+    },
+    {
+      "q": "How can the effect of virtual marketing be measured?",
+      "options": [
+        "By hits, clicks or likes",
+        "By the number of leaflets printed",
+        "By the weight of products sold",
+        "By the number of robots used"
+      ],
+      "answer": 0,
+      "why": "Online activity can be counted, so it's easier to measure than print advertising.",
+      "chunk": "funding"
+    },
+    {
+      "q": "Who owns and runs a cooperative?",
+      "options": [
+        "Its members, such as its workers or customers",
+        "A single venture capitalist",
+        "The Fairtrade Foundation",
+        "Whoever holds the patent"
+      ],
+      "answer": 0,
+      "why": "A cooperative is commonly owned and run by its members.",
+      "chunk": "fair"
+    },
+    {
+      "q": "What does fair trade aim to give farmers and workers in less economically developed countries?",
+      "options": [
+        "Better prices, decent working conditions and fair terms of trade",
+        "Free machinery",
+        "Patents on their crops",
+        "Lower prices for their produce"
+      ],
+      "answer": 0,
+      "why": "Fair trade makes sure producers are paid and treated fairly.",
+      "chunk": "fair"
+    },
+    {
+      "q": "Coffee and cotton are examples of fair trade products.",
+      "tf": true,
+      "why": "Fairtrade covers exports such as coffee, cotton, chocolate and fruit.",
+      "chunk": "fair"
+    }
+  ],
+  "written": [
+    {
+      "q": "Give two advantages and two disadvantages for a manufacturer of using automation.",
+      "marks": 4,
+      "points": [
+        "Faster, more efficient production.",
+        "Accurate, consistent output.",
+        "Lower labour costs.",
+        "Can work 24/7 or in a variety of environments.",
+        "Job losses in the workforce.",
+        "No human input or decision making.",
+        "Workers need new skills to maintain the machines.",
+        "Expensive to set up."
+      ],
+      "model": "Automation makes production faster and more efficient, and its output is accurate and consistent. However, it is expensive to set up, and it can lead to job losses in the workforce.",
+      "note": "1 mark per advantage (up to 2) and 1 per disadvantage (up to 2)."
+    },
+    {
+      "q": "A start-up plans to use crowd funding to launch a new skateboard. Explain one benefit and one risk of this for the company.",
+      "marks": 4,
+      "points": [
+        "Benefit: many people can each invest a small amount…",
+        "…so it gives an alternative to a bank loan.",
+        "Benefit: websites and social media reach a large audience of funders…",
+        "…so a broad range of investors can back the idea.",
+        "Risk: if the funding target isn't reached, the money pledged is usually returned…",
+        "…and a failed project can damage the company's reputation."
+      ],
+      "model": "Crowd funding lets many people each invest a small amount, so the company doesn't have to rely on a bank loan. The risk is that if the funding target isn't reached, the money pledged is usually returned, and a failed project can damage the company's reputation.",
+      "note": "1 mark for the benefit and 1 for explaining it; 1 mark for the risk and 1 for explaining it."
+    },
+    {
+      "q": "Explain why a chocolate manufacturer might choose to use Fairtrade cocoa.",
+      "marks": 3,
+      "points": [
+        "Cocoa farmers are paid a fair, sustainable price.",
+        "Farmers and workers have decent working conditions.",
+        "Farmers can improve their quality of life.",
+        "Producers in less economically developed countries get fair terms of trade."
+      ],
+      "model": "With Fairtrade cocoa, the farmers are paid a fair, sustainable price and work in decent conditions. This means farmers in less economically developed countries can improve their quality of life.",
+      "note": "1 mark per point, up to 3."
+    }
+  ],
+  "related": [
+    {
+      "id": "g02-sustainability-environment-people",
+      "spec": "3.1.1"
+    },
+    {
+      "id": "g03-culture-society-production-systems",
+      "spec": "3.1.1"
+    }
+  ]
+}

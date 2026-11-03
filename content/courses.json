@@ -12,7 +12,7 @@
         { "ref": "C", "name": "Designing and making principles" }
       ],
       "topics": [
-        { "id": "g01-new-technologies-industry-enterprise", "code": "G01", "title": "New technologies, industry and enterprise", "spec": ["3.1.1"], "section": "A", "pages": "2–4", "built": false },
+        { "id": "g01-new-technologies-industry-enterprise", "code": "G01", "title": "New technologies, industry and enterprise", "spec": ["3.1.1"], "section": "A", "pages": "2–4", "built": true },
         { "id": "g02-sustainability-environment-people", "code": "G02", "title": "Sustainability, environment and people", "spec": ["3.1.1"], "section": "A", "pages": "5–7", "built": false },
         { "id": "g03-culture-society-production-systems", "code": "G03", "title": "Culture, society and production systems", "spec": ["3.1.1"], "section": "A", "pages": "8–11", "built": false },
         { "id": "g04-energy-generation-storage", "code": "G04", "title": "Energy generation and storage", "spec": ["3.1.2"], "section": "A", "pages": "13–16", "built": false },
