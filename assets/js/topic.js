@@ -15,6 +15,10 @@ import { revealGroup } from "./components/reveal.js";
 import { whatAmI } from "./components/whatami.js";
 import { mindMap } from "./components/mindmap.js";
 import { learnChunk } from "./components/learn.js";
+import { whichTool, oddOneOut } from "./components/apply.js";
+import { matchPairs, putInOrder } from "./components/recall.js";
+import { quiz, fixList, fixRows } from "./components/quiz.js";
+import { writtenQuestion } from "./components/written.js";
 
 const MATERIAL = { timber: "Timber", polymer: "Polymer" };
 
@@ -24,7 +28,7 @@ const RECALL = {
 };
 const TEST = {
   id: "test", label: "Test", sub: "Quiz and exam questions", title: "Prove it",
-  hints: [["tap", "Answer, then say how sure"]], tip: "Sure, Unsure or Guess shows who is guessing."
+  tip: "Sure, Unsure or Guess shows who is guessing."
 };
 
 const MODES = {
@@ -39,7 +43,7 @@ const MODES = {
       { id: "learn", label: "Learn", sub: (t) => `${t.chunks.length} short chunks`,
         tip: "One chunk at a time. Use the check before moving on." },
       { id: "apply", label: "Apply", sub: "Which tool, and why?", title: "Which tool, and why?",
-        hints: [["tap", "Pick a tool, then a reason"]], tip: "Pupils say the reason aloud before you show the answer." },
+        tip: "Pupils say the reason aloud before you show the answer." },
       { ...RECALL, sub: "From memory" },
       TEST
     ]
@@ -56,6 +60,9 @@ const MODES = {
     ]
   }
 };
+
+// Results from this visit only (quiz progress and answers). Never saved.
+const session = { quiz: null };
 
 const S = {
   topic: null, level: null, course: null, entry: null, section: null,
@@ -251,18 +258,52 @@ function stageView() {
       stageFoot()));
 }
 
+const learnIndex = () => MODES.lesson.stages.findIndex((s) => s.id === "learn");
+
+// Where a quiz question's chunk is taught, for "Fix these first".
+function chunkLink(chunkId) {
+  const T = S.topic;
+  const i = T.chunks.findIndex((c) => c.id === chunkId);
+  if (i < 0) return { href: "#", label: `Book p${T.book.pages}` };
+  return { href: hashFor("lesson", learnIndex(), i), label: `${T.chunks[i].label} p${T.chunks[i].pages}` };
+}
+
 function stageBody(st) {
   const T = S.topic;
   switch (st.id) {
+    case "apply":
+      return [T.apply?.length > 0 && whichTool(T.apply), T.oddOne && oddOneOut(T.oddOne)];
+    case "recall":
+      return [mindMap(T, { recall: true, chunkHref: (c) => hashFor("lesson", learnIndex(), T.chunks.indexOf(c)) }),
+        h("div", { class: "recall-pair" }, T.keywords?.length > 1 && matchPairs(T.keywords), T.order && putInOrder(T.order))];
+    case "test":
+      return [quiz(T, session, { chunkLink }), (T.written || []).map(writtenQuestion)];
+    case "fix":
+      return fixStage();
     case "do-now":
       return [revealGroup(T.doNow), T.starter && whatAmI(T.starter)];
     case "big-picture":
-      return mindMap(T, { chunkHref: (c) => hashFor("lesson", MODES.lesson.stages.findIndex((s) => s.id === "learn"), T.chunks.indexOf(c)) });
+      return mindMap(T, { chunkHref: (c) => hashFor("lesson", learnIndex(), T.chunks.indexOf(c)) });
     case "learn":
       return learnChunk(T.chunks[S.chunk]);
     default:
       return h("div", { class: "card placeholder" }, "Coming soon");
   }
+}
+
+function fixStage() {
+  const test = hashFor(S.mode, MODES[S.mode].stages.findIndex((s) => s.id === "test"));
+  if (!session.quiz?.done) {
+    return h("section", { class: "card fix-empty" },
+      h("h2", {}, "Do the test first"),
+      h("a", { class: "btn-dark", href: test }, "Go to the test →"));
+  }
+  const fixes = fixList(session.quiz);
+  return h("section", { class: "card results" },
+    fixes.length
+      ? [h("h2", {}, "From your last test"), fixRows(session.quiz, chunkLink)]
+      : h("p", { class: "feedback good" }, icon("check"), "Nothing to fix: all right, and no guesses."),
+    h("div", { class: "btn-row" }, h("a", { class: "btn-line", href: test }, "Retest →")));
 }
 
 function rail() {

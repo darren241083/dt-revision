@@ -1,11 +1,8 @@
 // Learn: one chunk at a time. Hotspot diagram (if any), item rows with material tags,
 // a step-through for each process item, then a "Before you move on" check.
 
-import { h, icon, hint, materialTag, shuffle } from "../dom.js";
+import { h, fill, icon, hint, materialTag, shuffle } from "../dom.js";
 import { revealCard } from "./reveal.js";
-
-// replaceChildren that skips empty parts (false / null from conditional pieces).
-const fill = (el, ...kids) => el.replaceChildren(...kids.flat().filter((k) => k != null && k !== false));
 
 export function learnChunk(chunk) {
   const plain = chunk.items.filter((it) => !it.steps);
@@ -43,7 +40,7 @@ function stepThrough(it) {
   const next = h("button", { type: "button", class: "btn-dark", onclick: () => { i = i < n - 1 ? i + 1 : 0; draw(); } });
 
   function draw() {
-    pips.replaceChildren(...it.steps.map((_, j) => h("span", { class: j <= i ? "on" : "" })));
+    fill(pips, ...it.steps.map((_, j) => h("span", { class: j <= i ? "on" : "" })));
     num.textContent = String(i + 1);
     text.textContent = it.steps[i];
     status.textContent = `Step ${i + 1} of ${n}: ${it.steps[i]}`;

@@ -68,3 +68,6 @@ export function shuffle(list) {
   }
   return a;
 }
+
+// replaceChildren that skips empty parts (false / null / undefined from conditional pieces).
+export const fill = (el, ...kids) => el.replaceChildren(...kids.flat(Infinity).filter((k) => k != null && k !== false));
