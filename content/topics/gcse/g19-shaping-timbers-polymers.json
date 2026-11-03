@@ -351,14 +351,6 @@
             "text": "Grips the drill bit."
           },
           {
-            "x": 42.9,
-            "y": 40.4,
-            "lx": 10,
-            "ly": 49,
-            "name": "Drill bit",
-            "text": "Cuts a circular hole in the work."
-          },
-          {
             "x": 75.8,
             "y": 34.7,
             "lx": 90,
