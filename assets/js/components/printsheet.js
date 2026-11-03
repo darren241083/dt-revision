@@ -32,34 +32,75 @@ function draw(list, n, rnd) {
   return a.slice(0, n);
 }
 
-const lines = (n) => h("span", { class: "ps-lines", "aria-hidden": "true" }, Array.from({ length: n }, () => h("i")));
+// Writing lines. `max` marks lines that fitSheet may add to, up to that many.
+const lines = (n, max) => h("span", { class: "ps-lines", "aria-hidden": "true", "data-max": max || null },
+  Array.from({ length: n }, () => h("i")));
 const MATERIAL = { timber: "T", polymer: "P" };
 
-// Measures the sheet at A4 width and tightens it until it fits on two sides. The page
-// breaks are simulated box by box: a box that doesn't fit moves to the next page, except
+// Page breaks are simulated box by box: a box that doesn't fit moves to the next page, except
 // the items box, which may split (about 20mm is lost to that break). 4mm a page is kept spare.
-function pagesNeeded(sheet, mm) {
-  const page = (297 - 2 * MARGIN - 4) * mm, gap = 2.5 * mm;
+// Returns the number of pages and the space left on the last one.
+function simulate(sheet, mm) {
+  const page = (297 - 2 * MARGIN - 4) * mm;
+  const side2 = sheet.querySelector(".ps-side2");
   let pages = 1, used = 0;
   for (const b of sheet.querySelectorAll(".ps-side > *")) {
-    let rest = b.getBoundingClientRect().height + gap;
+    let top = parseFloat(getComputedStyle(b).marginTop);
+    if (b === side2.firstElementChild) {
+      if (side2.classList.contains("new-page")) { if (used) pages++; used = 0; }
+      else top += parseFloat(getComputedStyle(side2).marginTop);
+    }
+    if (!used) top = 0;
+    let rest = b.getBoundingClientRect().height + top;
     if (b.classList.contains("ps-items")) {
       while (used + rest > page) { rest -= page - used - 20 * mm; pages++; used = 0; }
-    } else if (used + rest > page) { pages++; used = 0; }
+    } else if (used + rest > page) { pages++; used = 0; rest -= top; }
     used += rest;
   }
-  return pages;
+  return { pages, free: page - used };
 }
 
+// Fits the sheet on two sides, measured off-screen at A4 width:
+// 1. side 2 starts on a fresh page when side 1 fits on one; a tighter layout only if needed;
+// 2. writing lines are added a line at a time (exam question, topic-map branches, self-test
+//    answers in turn) up to their targets while it still fits;
+// 3. any space left on the last page is shared evenly between the side 2 boxes.
 export function fitSheet(sheet) {
   const probe = h("div", { style: "position:absolute;visibility:hidden;height:100mm" });
   document.body.append(probe);
   const mm = probe.offsetHeight / 100;
   probe.remove();
   sheet.classList.add("measure");
-  for (const level of ["tight", "tighter"]) {
-    if (pagesNeeded(sheet, mm) <= 2) break;
-    sheet.classList.add(level);
+  const side1 = sheet.querySelector(".ps-side"), side2 = sheet.querySelector(".ps-side2");
+  const fits = () => simulate(sheet, mm).pages <= 2;
+  for (const level of [null, "tight", "tighter"]) {
+    if (level) sheet.classList.add(level);
+    side2.classList.toggle("new-page", side1.getBoundingClientRect().height <= (297 - 2 * MARGIN - 4) * mm);
+    if (fits()) break;
+    side2.classList.remove("new-page");
+    if (fits()) break;
+  }
+
+  const groups = [".ps-exam .ps-lines", ".ps-branch .ps-lines", ".ps-selflist .ps-lines"]
+    .map((sel) => [...sheet.querySelectorAll(`${sel}[data-max]`)]).filter((g) => g.length);
+  let active = groups;
+  while (active.length) {
+    active = active.filter((g) => {
+      const open = g.filter((l) => l.children.length < +l.dataset.max);
+      if (!open.length) return false;
+      open.forEach((l) => l.append(h("i")));
+      if (fits()) return true;
+      open.forEach((l) => l.lastElementChild.remove());
+      return false;
+    });
+  }
+
+  const { free } = simulate(sheet, mm);
+  const boxes = [...side2.children].slice(side2.classList.contains("new-page") ? 1 : 0);
+  if (free > mm && boxes.length) {
+    const extra = (free - mm) / boxes.length;
+    boxes.forEach((b) => { b.style.marginTop = `${parseFloat(getComputedStyle(b).marginTop) + extra}px`; });
+    if (!fits()) boxes.forEach((b) => { b.style.marginTop = ""; });
   }
   sheet.classList.remove("measure");
 }
@@ -111,13 +152,13 @@ export function printSheet(T, course, { variant, version }) {
         h("div", { class: "ps-centre", style: `grid-row: 1 / span ${Math.ceil(T.chunks.length / 2)}` }, T.short || T.title),
         T.chunks.map((c, i) => h("div", { class: `ps-branch ${i % 2 ? "right" : "left"}` },
           h("b", {}, c.label),
-          teacher ? h("span", {}, c.items.map((it) => it.term).join(" · ")) : lines(2))))),
+          teacher ? h("span", {}, c.items.map((it) => it.term).join(" · ")) : lines(2, 4))))),
     sec("ps-self", "Self-test",
       h("ol", { class: "ps-selflist" }, self.map((q) => h("li", {},
         h("span", { class: "ps-q" }, q.tf != null ? `True or false: ${q.q}` : q.q),
         q.tf != null
           ? h("span", { class: "ps-tf" }, [true, false].map((v) => h("span", {}, h("i", {}, teacher && v === q.tf ? "✓" : ""), v ? "True" : "False")))
-          : teacher ? h("b", { class: "ps-ans" }, answerOf(q)) : lines(1))))),
+          : teacher ? h("b", { class: "ps-ans" }, answerOf(q)) : lines(1, 2))))),
     exam && sec("ps-exam", "Exam question",
       h("div", { class: "ps-examq" }, h("p", {}, exam.q), h("span", { class: "ps-marks" }, `${exam.marks} marks`)),
       teacher
@@ -127,10 +168,9 @@ export function printSheet(T, course, { variant, version }) {
           h("p", {}, h("b", {}, "Model answer: "), exam.model),
           exam.levels?.length > 0 && h("ul", { class: "ps-levels" },
             exam.levels.map((l) => h("li", {}, h("b", {}, `Level ${l.level} (${l.marks}) `), l.text))))
-        : [lines(Math.min(9, exam.marks + 2)),
+        : [lines(4, Math.max(4, 2 * exam.marks)),
           h("div", { class: "ps-marking" }, h("b", {}, "Marks"),
-            h("span", { class: "ps-markboxes" }, Array.from({ length: exam.marks }, () => h("i"))),
-            h("span", {}, `/ ${exam.marks}`))]));
+            h("span", { class: "ps-markbox" }, h("i"), `/ ${exam.marks}`))]));
 
   return h("div", { class: `print-sheet ${variant}`, "aria-hidden": "true" }, side1, side2);
 }

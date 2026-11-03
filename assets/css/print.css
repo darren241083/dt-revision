@@ -46,7 +46,7 @@
 .ps-needs li { display: flex; justify-content: space-between; align-items: center; gap: 4mm; padding: .5mm 0; border-bottom: .2mm solid #BBBBBB; }
 .ps-needs li:last-child { border-bottom: 0; }
 .ps-rag { display: flex; flex: none; gap: 1.5mm; }
-.ps-rag i, .ps-tf i, .ps-markboxes i { display: grid; place-items: center; width: 5mm; height: 5mm; border: .3mm solid #000000; font-size: 7pt; font-style: normal; font-weight: 700; }
+.ps-rag i, .ps-tf i { display: grid; place-items: center; width: 5mm; height: 5mm; border: .3mm solid #000000; font-size: 7pt; font-style: normal; font-weight: 700; }
 
 .ps-pairs { display: grid; grid-template-columns: 1fr 1fr; column-gap: 5mm; }
 .ps-pairs.one { grid-template-columns: 1fr; }
@@ -81,9 +81,9 @@
 .ps-examq { display: flex; justify-content: space-between; align-items: flex-start; gap: 4mm; margin-bottom: 1.5mm; }
 .ps-examq p { margin: 0; font-size: 9pt; font-weight: 700; }
 .ps-marks { flex: none; padding: .3mm 2mm; border: .3mm solid #000000; border-radius: 1.5mm; font-family: var(--f-mono); font-size: 7.5pt; }
-.ps-exam .ps-lines i { height: 7mm; }
 .ps-marking { display: flex; justify-content: flex-end; align-items: center; gap: 2mm; margin-top: 2mm; }
-.ps-markboxes { display: flex; gap: 1.2mm; }
+.ps-markbox { display: inline-flex; align-items: flex-end; gap: 1.5mm; padding: 1mm 2.5mm; border: .3mm solid #000000; border-radius: 1.5mm; font-weight: 700; }
+.ps-markbox i { display: block; width: 9mm; height: 5mm; border-bottom: .3mm solid #000000; }
 .ps-scheme { display: flex; flex-direction: column; gap: 1.5mm; }
 .ps-scheme p { margin: 0; }
 .ps-scheme ul { padding-left: 5mm; }
@@ -94,9 +94,12 @@
 .print-sheet.tight { font-size: 8pt; }
 .print-sheet.tight .ps-pairs > div { font-size: 7.5pt; padding: .3mm 0; }
 .print-sheet.tight .ps-lines i { height: 4.8mm; }
-.print-sheet.tight .ps-exam .ps-lines i { height: 6mm; }
-.print-sheet.tight .ps-branch .ps-lines i:nth-child(n + 2) { display: none; }
 .print-sheet.tight .ps-head h1 { font-size: 16pt; }
 .print-sheet.tighter .ps-pairs > div { font-size: 7pt; line-height: 1.2; }
-.print-sheet.tighter .ps-selflist li:nth-child(n + 5) { display: none; }
-.print-sheet.tighter .ps-exam .ps-lines i:nth-child(n + 6) { display: none; }
+/* The teacher copy always keeps all 6 answers, so it covers any pupil sheet of its version. */
+.print-sheet.tighter:not(.teacher) .ps-selflist li:nth-child(n + 5) { display: none; }
+
+/* Side 2: writing lines 8mm apart (side 1 keeps its own). It starts on a fresh page when
+   side 1 fits on one; fitSheet adds lines and shares out the space left. */
+.print-sheet .ps-side2 .ps-lines i { height: 8mm; }
+.ps-side2.new-page { margin-top: 0; break-before: page; }
