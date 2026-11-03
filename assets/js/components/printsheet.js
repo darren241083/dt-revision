@@ -9,6 +9,7 @@ import { h } from "../dom.js";
 import { answerOf, stepItems, plainItems } from "./organiser.js";
 
 const SELF = 6;
+const MARGIN = 12; // mm, the same as @page in print.css
 export const VARIANTS = { pupil: "Pupil sheet", cover: "Cover version", teacher: "Teacher copy" };
 export const newVersion = () => 1000 + Math.floor(Math.random() * 9000);
 
@@ -36,14 +37,14 @@ const MATERIAL = { timber: "T", polymer: "P" };
 
 // Measures the sheet at A4 width and tightens it until it fits on two sides. The page
 // breaks are simulated box by box: a box that doesn't fit moves to the next page, except
-// the items box, which may split (with a little lost to the break).
+// the items box, which may split (about 20mm is lost to that break). 4mm a page is kept spare.
 function pagesNeeded(sheet, mm) {
-  const page = 277 * mm, gap = 2.5 * mm;
+  const page = (297 - 2 * MARGIN - 4) * mm, gap = 2.5 * mm;
   let pages = 1, used = 0;
   for (const b of sheet.querySelectorAll(".ps-side > *")) {
     let rest = b.getBoundingClientRect().height + gap;
     if (b.classList.contains("ps-items")) {
-      while (used + rest > page) { rest -= page - used - 10 * mm; pages++; used = 0; }
+      while (used + rest > page) { rest -= page - used - 20 * mm; pages++; used = 0; }
     } else if (used + rest > page) { pages++; used = 0; }
     used += rest;
   }

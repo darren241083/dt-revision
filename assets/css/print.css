@@ -3,9 +3,11 @@
    tightened ("tight", then "tighter") until it fits on two sides.
    Alignment rule: boxes in a row are the same height and their answer lines sit at the bottom. */
 
-@page { size: A4; margin: 10mm; }
+/* 12mm all round: school printers clip the outer 4–5mm. The measuring width below and
+   MARGIN in printsheet.js must match it. */
+@page { size: A4; margin: 12mm; }
 
-.print-sheet.measure { display: block; position: absolute; top: 0; left: -10000px; width: 190mm; visibility: hidden; }
+.print-sheet.measure { display: block; position: absolute; top: 0; left: -10000px; width: 186mm; visibility: hidden; }
 
 @media print {
   html.has-sheet body > *:not(.print-sheet) { display: none !important; }
