@@ -1,0 +1,82 @@
+/* Whole topic (Revise): knowledge organiser and print bar.
+   Alignment rule: boxes in a row stretch to the same height; the exam question's
+   Mark it row is pushed to the bottom. */
+
+/* The A4 sheet is built on this stage but only shown in print (print.css). */
+.print-sheet { display: none; }
+
+.print-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px 20px; padding: 18px 22px; }
+.pb-text { display: flex; flex-direction: column; gap: 2px; }
+.pb-text h2 { font-size: 1.25rem; font-weight: 800; letter-spacing: -.01em; }
+.pb-meta { color: var(--muted); font-family: var(--f-mono); font-size: .8125rem; }
+.print-bar .btn-dark .ico { width: 20px; height: 20px; margin-right: 8px; }
+.print-link { display: inline-flex; align-items: center; align-self: flex-start; gap: 8px; min-height: var(--tap); color: var(--teal-dark); font-weight: 700; text-decoration: none; }
+.print-link .ico { width: 20px; height: 20px; }
+.print-link:hover { text-decoration: underline; }
+
+.org { display: flex; flex-direction: column; gap: 16px; }
+.org-top { display: flex; justify-content: flex-end; }
+.org-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: stretch; gap: 20px; }
+.org-box { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1.5px solid var(--ink); border-radius: 14px; background: var(--card); }
+.org-kw, .org-exam { grid-column: span 5; }
+.org-items, .org-self { grid-column: span 7; }
+.org-steps, .org-map, .org-needs { grid-column: span 4; }
+.org.no-steps .org-map, .org.no-steps .org-needs { grid-column: span 6; }
+
+.org-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 12px; padding: 12px 16px; background: var(--panel-dark); color: #FFFFFF; }
+.org-head h2 { color: #FFFFFF; font-size: 1.0625rem; font-weight: 700; letter-spacing: 0; line-height: 1.3; }
+.org-head .hint { padding: 4px 10px; border-color: #3A5560; background: transparent; color: #FFFFFF; font-size: .8125rem; }
+.org-head .hint .ico { color: var(--teal-light); }
+.org-self .org-head { background: #FDE047; }
+.org-self .org-head h2 { color: var(--ink); font-weight: 800; }
+.org-count { color: #713F12; font-family: var(--f-mono); font-size: .8125rem; }
+.org-legend { display: flex; align-items: center; gap: 6px; font-family: var(--f-mono); font-size: .8125rem; }
+.org-legend i { width: 10px; height: 10px; margin-left: 6px; border-radius: 50%; }
+.org-legend i.timber { background: #E7B98A; }
+.org-legend i.polymer { background: #7DD3FC; }
+
+.org-rows { margin: 0; padding: 0; list-style: none; }
+.org-row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); align-items: center; gap: 12px; min-height: 60px; padding: 8px 16px; border-bottom: 1px solid var(--rule); }
+.org-row:last-child { border-bottom: 0; }
+.org-items .org-row { grid-template-columns: minmax(0, 2fr) minmax(0, 4fr); }
+.org-self .org-row { grid-template-columns: minmax(0, 1fr) 210px; font-size: 1rem; }
+.org-row dt { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: var(--ink); font-size: 1rem; font-weight: 700; line-height: 1.3; }
+.org-row dd { margin: 0; color: var(--body); font-size: .9375rem; line-height: 1.4; }
+
+/* Covered answers: a tappable block until revealed. */
+.cov { display: block; }
+.cov-btn { display: none; }
+.org.covered .cov:not(.shown) .cov-btn { display: flex; align-items: center; justify-content: center; width: 100%; min-height: var(--tap); padding: 0 10px; border: 0; border-radius: 8px; background: #FDE047; color: #713F12; font-family: var(--f-mono); font-size: .8125rem; }
+.org.covered .org-self .cov:not(.shown) .cov-btn { border: 1.5px dashed #CA8A04; background: #FEF9C3; }
+.org.covered .cov:not(.shown) .cov-text { display: none; }
+.org-self .cov-text { color: var(--correct); font-size: .9375rem; font-weight: 700; }
+.org-self .cov-text::before { content: "\2713  "; }
+
+.org-steps h3 { margin: 14px 16px 0; font-size: 1rem; letter-spacing: 0; }
+.org-steplist { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 14px 16px 16px; list-style: none; }
+.org-steplist li { display: flex; align-items: flex-start; gap: 12px; font-size: .9375rem; line-height: 1.4; }
+.org-steplist .cov { flex: 1; min-width: 0; padding-top: 5px; }
+.org-n { display: grid; place-items: center; flex: none; width: 32px; height: 32px; border-radius: 10px; background: var(--panel-dark); color: #FDE047; font-weight: 800; }
+.org-maplist { margin: 14px 16px 16px 24px; padding: 0; border-left: 2px solid var(--ink); list-style: none; }
+.org-maplist li { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; }
+.org-maplist li::before { content: ""; flex: none; align-self: center; width: 14px; height: 2px; background: var(--ink); }
+.org-maplist b { flex: 0 1 auto; min-width: 0; color: var(--ink); font-size: 1rem; line-height: 1.3; }
+.org-maplist span { flex: none; color: var(--muted); font-family: var(--f-mono); font-size: .75rem; white-space: nowrap; }
+.org-needlist { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 14px 16px 16px 34px; font-size: .9375rem; line-height: 1.4; }
+.org-exam .written { flex: 1; padding: 16px; border: 0; border-radius: 0; }
+.org-exam .written > .btn-row { margin-top: auto; }
+.org-exam .w-head { flex-direction: column; gap: 8px; }
+
+@media (max-width: 1023px) {
+  .org-grid > * { grid-column: 1 / -1; }
+  .org-map, .org-needs, .org.no-steps .org-map, .org.no-steps .org-needs { grid-column: span 6; }
+}
+@media (max-width: 767px) {
+  .org-grid { gap: 16px; }
+  .org-map, .org-needs, .org.no-steps .org-map, .org.no-steps .org-needs { grid-column: 1 / -1; }
+  .org-top { justify-content: flex-start; }
+  .print-bar { padding: 18px; }
+}
+@media (max-width: 620px) {
+  .org-self .org-row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+}

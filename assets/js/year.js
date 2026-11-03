@@ -25,7 +25,8 @@ function actions(t, status) {
   const T = loaded.get(t.id);
   if (status === "taught") {
     return [h("a", { class: "act dark", href: topicHref(t.id, y, "#revise/recall") }, "Revise"),
-      T?.audio && h("a", { class: "act line", href: topicHref(t.id, y, "#listen") }, "Listen")];
+      T?.audio && h("a", { class: "act line", href: topicHref(t.id, y, "#listen") }, "Listen"),
+      h("a", { class: "act line", href: topicHref(t.id, y, "#revise/whole") }, "Print")];
   }
   if (status === "coming" && t.built) {
     return [h("a", { class: "act soft", href: topicHref(t.id, y) }, "Read"),

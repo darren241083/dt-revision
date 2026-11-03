@@ -5,6 +5,7 @@
 //   #lesson/<stage>         a Lesson-mode stage
 //   #lesson/learn/<chunk>   one Learn chunk
 //   #revise/<stage>         a Revise-mode stage
+//   #revise/whole/4821-cover  Whole topic, with the print sheet's version (and which copy)
 //   #listen                 topic overview with the Listen tab open
 // ?y=y11 is the year group the pupil came from (breadcrumb); default is the remembered year.
 // Which stages have been visited lives in memory only and clears when the page is left.
@@ -22,6 +23,8 @@ import { matchPairs, putInOrder } from "./components/recall.js";
 import { quiz, fixList, fixRows } from "./components/quiz.js";
 import { lessonPair, revisePair } from "./components/written.js";
 import { audioPlayer } from "./components/audio.js";
+import { organiser } from "./components/organiser.js";
+import { printSheet, fitSheet, newVersion } from "./components/printsheet.js";
 
 const MATERIAL = { timber: "Timber", polymer: "Polymer" };
 
@@ -65,7 +68,7 @@ const MODES = {
 };
 
 // Results from this visit only (quiz progress and answers). Never saved.
-const session = { quiz: null, written: null };
+const session = { quiz: null, written: null, organiser: null, print: null };
 
 const S = {
   topic: null, level: null, course: null, entry: null, section: null, year: null,
@@ -185,7 +188,8 @@ function overview() {
           h("span", { class: "start-sub" }, "Do now, big picture, learn, apply, recall, test")),
         h("a", { class: "start revise", href: hashFor("revise", 0) },
           h("span", { class: "start-title" }, "Revise →"),
-          h("span", { class: "start-sub" }, "Recall, test, fix, whole topic")))),
+          h("span", { class: "start-sub" }, "Recall, test, fix, whole topic"))),
+      h("a", { class: "print-link", href: hashFor("revise", wholeIndex()) }, icon("print"), "Print a revision sheet")),
     preRead());
 }
 
@@ -259,6 +263,54 @@ function stageView() {
 }
 
 const learnIndex = () => MODES.lesson.stages.findIndex((s) => s.id === "learn");
+const wholeIndex = () => MODES.revise.stages.findIndex((s) => s.id === "whole");
+
+/* ---------- Print sheet (Whole topic) ---------- */
+
+// The version (and last copy printed) can come from the hash, so a teacher can print the
+// answer key for the same version later.
+function syncPrint() {
+  session.print ||= { version: newVersion(), variant: "pupil" };
+  const m = /^(\d{4})(?:-(pupil|cover|teacher))?$/.exec(decodeURIComponent(location.hash).split("/")[2] || "");
+  if (m) Object.assign(session.print, { version: +m[1] }, m[2] ? { variant: m[2] } : {});
+}
+const printHash = () => `${hashFor("revise", wholeIndex())}/${session.print.version}-${session.print.variant}`;
+
+async function mountSheet() {
+  const sheet = printSheet(S.topic, S.course, session.print);
+  document.querySelector(".print-sheet")?.remove();
+  document.body.append(sheet);
+  document.documentElement.classList.add("has-sheet");
+  await document.fonts?.ready;
+  fitSheet(sheet);
+}
+function unmountSheet() {
+  document.querySelector(".print-sheet")?.remove();
+  document.documentElement.classList.remove("has-sheet");
+}
+
+function printBar() {
+  const p = session.print;
+  const meta = h("span", { class: "pb-meta", "aria-live": "polite" }, `A4, two sides · Version ${p.version}`);
+  const print = async (variant) => {
+    p.variant = variant;
+    history.replaceState(null, "", printHash());
+    await mountSheet();
+    window.print();
+  };
+  return h("section", { class: "card print-bar", "aria-labelledby": "pb-title" },
+    h("div", { class: "pb-text" }, h("h2", { id: "pb-title" }, "Print the sheet"), meta),
+    h("div", { class: "btn-row" },
+      h("button", { type: "button", class: "btn-dark", onclick: () => print("pupil") }, icon("print"), "Print sheet"),
+      h("button", { type: "button", class: "btn-line", onclick: () => print("cover") }, "Cover version"),
+      h("button", { type: "button", class: "btn-line", onclick: () => print("teacher") }, "Teacher copy"),
+      h("button", { type: "button", class: "btn-line", onclick: () => {
+        p.version = newVersion();
+        history.replaceState(null, "", printHash());
+        meta.textContent = `A4, two sides · Version ${p.version}`;
+        mountSheet();
+      } }, "New version")));
+}
 
 // Where a quiz question's chunk is taught, for "Fix these first".
 function chunkLink(chunkId) {
@@ -281,6 +333,8 @@ function stageBody(st) {
         S.mode === "lesson" ? lessonPair(T.written || []) : revisePair(T.written || [], session)];
     case "fix":
       return fixStage();
+    case "whole":
+      return [printBar(), organiser(T, session)];
     case "do-now":
       return [revealGroup(T.doNow), T.starter && whatAmI(T.starter)];
     case "big-picture":
@@ -393,8 +447,11 @@ function render(moved) {
     S.visited[S.mode].add(visitKey(S.mode, S.stage, S.chunk));
   }
   document.documentElement.classList.toggle("in-stage", S.view === "stage");
+  const whole = S.view === "stage" && MODES[S.mode].stages[S.stage].id === "whole";
+  if (whole) syncPrint();
   topbar();
   app.replaceChildren(S.view === "overview" ? overview() : stageView());
+  whole ? mountSheet() : unmountSheet();
 
   const { prev, next } = S.view === "stage" ? neighbours() : {};
   present.children[0].disabled = !prev;

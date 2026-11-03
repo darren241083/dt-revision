@@ -1,0 +1,100 @@
+/* Printed A4 sheet (Whole topic). Only the sheet prints; the page itself is hidden.
+   Loaded on screen too, so the sheet can be measured off-screen at A4 width (fitSheet) and
+   tightened ("tight", then "tighter") until it fits on two sides.
+   Alignment rule: boxes in a row are the same height and their answer lines sit at the bottom. */
+
+@page { size: A4; margin: 10mm; }
+
+.print-sheet.measure { display: block; position: absolute; top: 0; left: -10000px; width: 190mm; visibility: hidden; }
+
+@media print {
+  html.has-sheet body > *:not(.print-sheet) { display: none !important; }
+  html.has-sheet .print-sheet { display: block; }
+  html, body { background: #FFFFFF !important; }
+}
+
+.print-sheet { color: #000000; font-family: var(--f-body); font-size: 8.5pt; line-height: 1.3; }
+.print-sheet h1, .print-sheet h2, .print-sheet h3 { color: #000000; letter-spacing: 0; }
+/* The sheet flows over two sides: the items box may continue onto side 2; every other box stays whole. */
+.ps-side > * + * { margin-top: 2.5mm; }
+.ps-side2 { margin-top: 2.5mm; }
+
+.ps-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 6mm; padding-bottom: 2mm; border-bottom: .6mm solid #000000; }
+.ps-titles { display: flex; flex-direction: column; gap: 1mm; }
+.ps-kicker { font-family: var(--f-mono); font-size: 7pt; }
+.ps-head h1 { font-size: 19pt; font-weight: 800; letter-spacing: -.02em; line-height: 1.05; }
+.ps-version { display: flex; flex-direction: column; align-items: flex-end; flex: none; font-size: 8pt; }
+.ps-version b { font-size: 9.5pt; }
+.ps-who { display: grid; grid-template-columns: 3fr 1.2fr 1.2fr; gap: 5mm; }
+.ps-who span { display: flex; align-items: flex-end; gap: 2mm; }
+.ps-who i { flex: 1; height: 6mm; border-bottom: .3mm solid #000000; }
+.ps-key { display: inline-block; margin: 0; padding: 1mm 3mm; border: .4mm solid #000000; font-size: 10pt; font-weight: 800; }
+
+.ps-sec { padding: 1.8mm 3mm 2mm; border: .35mm solid #000000; border-radius: 2.5mm; break-inside: avoid; }
+.ps-sec.ps-items { break-inside: auto; box-decoration-break: clone; }
+.ps-sec h2 { margin: 0 0 1.5mm; font-size: 9.5pt; font-weight: 800; }
+.ps-sec h3 { margin: 0 0 .5mm; font-size: 8.5pt; font-weight: 800; }
+.ps-sec h3 span { font-family: var(--f-mono); font-size: 7pt; font-weight: 400; }
+.ps-sec ul, .ps-sec ol, .ps-sec dl { margin: 0; }
+
+.ps-lines { display: flex; flex-direction: column; }
+.ps-lines i { display: block; height: 5.5mm; border-bottom: .25mm solid #777777; }
+
+.ps-needs ul { padding: 0; list-style: none; }
+.ps-needs li { display: flex; justify-content: space-between; align-items: center; gap: 4mm; padding: .5mm 0; border-bottom: .2mm solid #BBBBBB; }
+.ps-needs li:last-child { border-bottom: 0; }
+.ps-rag { display: flex; flex: none; gap: 1.5mm; }
+.ps-rag i, .ps-tf i, .ps-markboxes i { display: grid; place-items: center; width: 5mm; height: 5mm; border: .3mm solid #000000; font-size: 7pt; font-style: normal; font-weight: 700; }
+
+.ps-pairs { display: grid; grid-template-columns: 1fr 1fr; column-gap: 5mm; }
+.ps-pairs.one { grid-template-columns: 1fr; }
+.ps-pairs > div { display: grid; grid-template-columns: 27mm minmax(0, 1fr); align-items: start; gap: 2mm; padding: .5mm 0; font-size: 8pt; line-height: 1.25; border-bottom: .2mm solid #CCCCCC; break-inside: avoid; }
+.ps-pairs.one > div { grid-template-columns: 24mm minmax(0, 1fr); }
+.ps-pairs dt { font-weight: 700; }
+.ps-pairs dd .ps-lines i { height: 4.5mm; }
+.ps-pairs dd { margin: 0; }
+.ps-tags { font-family: var(--f-mono); font-size: 7pt; font-weight: 400; }
+/* Items flow down two columns (no row of boxes here), so side 1 fits on one page. */
+.ps-groups { column-count: 2; column-gap: 5mm; }
+.ps-group { margin-bottom: 2mm; }
+.ps-group h3 { break-after: avoid; }
+
+.ps-steps ol { padding-left: 5mm; }
+.ps-steps li { padding: .6mm 0; }
+
+.ps-mapgrid { display: grid; grid-template-columns: 1fr 30mm 1fr; grid-auto-flow: row dense; align-items: stretch; gap: 2.5mm 4mm; }
+.ps-centre { display: grid; grid-column: 2; grid-row: 1 / span 3; place-items: center; align-self: center; min-height: 18mm; padding: 2mm; border: .5mm solid #000000; border-radius: 4mm; font-size: 9.5pt; font-weight: 800; text-align: center; }
+.ps-branch { display: flex; flex-direction: column; gap: 1mm; padding: 1.5mm 2.5mm 2mm; border: .3mm solid #000000; border-radius: 2mm; }
+.ps-branch.left { grid-column: 1; }
+.ps-branch.right { grid-column: 3; }
+.ps-branch .ps-lines { margin-top: auto; }
+
+.ps-selflist { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; gap: 2.5mm 4mm; padding: 0; list-style: none; counter-reset: q; }
+.ps-selflist li { display: flex; flex-direction: column; gap: 1.5mm; padding: 1.5mm 2.5mm 2mm; border: .3mm solid #000000; border-radius: 2mm; counter-increment: q; }
+.ps-q::before { content: counter(q) ". "; font-weight: 800; }
+.ps-selflist .ps-lines, .ps-tf, .ps-ans { margin-top: auto; }
+.ps-tf { display: flex; gap: 6mm; }
+.ps-tf > span { display: inline-flex; align-items: center; gap: 1.5mm; }
+
+.ps-examq { display: flex; justify-content: space-between; align-items: flex-start; gap: 4mm; margin-bottom: 1.5mm; }
+.ps-examq p { margin: 0; font-size: 9pt; font-weight: 700; }
+.ps-marks { flex: none; padding: .3mm 2mm; border: .3mm solid #000000; border-radius: 1.5mm; font-family: var(--f-mono); font-size: 7.5pt; }
+.ps-exam .ps-lines i { height: 7mm; }
+.ps-marking { display: flex; justify-content: flex-end; align-items: center; gap: 2mm; margin-top: 2mm; }
+.ps-markboxes { display: flex; gap: 1.2mm; }
+.ps-scheme { display: flex; flex-direction: column; gap: 1.5mm; }
+.ps-scheme p { margin: 0; }
+.ps-scheme ul { padding-left: 5mm; }
+.ps-note { font-style: italic; }
+.print-sheet .ps-levels { padding-left: 0; list-style: none; }
+
+/* Tighter layouts for long topics, chosen by fitSheet. */
+.print-sheet.tight { font-size: 8pt; }
+.print-sheet.tight .ps-pairs > div { font-size: 7.5pt; padding: .3mm 0; }
+.print-sheet.tight .ps-lines i { height: 4.8mm; }
+.print-sheet.tight .ps-exam .ps-lines i { height: 6mm; }
+.print-sheet.tight .ps-branch .ps-lines i:nth-child(n + 2) { display: none; }
+.print-sheet.tight .ps-head h1 { font-size: 16pt; }
+.print-sheet.tighter .ps-pairs > div { font-size: 7pt; line-height: 1.2; }
+.print-sheet.tighter .ps-selflist li:nth-child(n + 5) { display: none; }
+.print-sheet.tighter .ps-exam .ps-lines i:nth-child(n + 6) { display: none; }
