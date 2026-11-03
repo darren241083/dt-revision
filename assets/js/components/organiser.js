@@ -7,9 +7,10 @@
 
 import { h, fill, materialDots, shuffle } from "../dom.js";
 import { writtenQuestion } from "./written.js";
+import { concrete } from "../questions.js";
 
 const SELF = 5;
-export const answerOf = (q) => (q.tf != null ? (q.tf ? "True" : "False") : q.options[q.answer]);
+export const answerOf = (q) => (q.calc ? q.calc.text : q.tf != null ? (q.tf ? "True" : "False") : q.options[q.answer]);
 
 // Items with steps are shown as processes; the rest go in the items table.
 export const stepItems = (T) => T.chunks.flatMap((c) => c.items.filter((it) => it.steps?.length));
@@ -25,7 +26,7 @@ function termWithDots(term, tags) {
 const hasTags = (T) => T.chunks.some((c) => c.items.some((it) => it.tags?.length));
 
 export function organiser(T, session) {
-  const st = session.organiser ||= { cover: true, self: shuffle(T.quiz).slice(0, SELF) };
+  const st = session.organiser ||= { cover: true, self: shuffle(T.quiz).slice(0, SELF).map((q) => concrete(q)) };
   const count = h("span", { class: "org-count", "aria-live": "polite" });
   const root = h("div", { class: "org" + (st.cover ? " covered" : "") });
 

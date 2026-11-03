@@ -14,7 +14,7 @@
 .print-link .ico { width: 20px; height: 20px; }
 .print-link:hover { text-decoration: underline; }
 
-.org { display: flex; flex-direction: column; gap: 20px; }
+.org { display: flex; flex-direction: column; gap: 20px; container-type: inline-size; }
 .org-top { display: flex; justify-content: flex-end; }
 .org-cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; gap: 20px; }
 .org-col { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
@@ -64,7 +64,9 @@
 /* Only the stage's own hint chip shows on this page. */
 .org-exam .hint { display: none; }
 
-@media (max-width: 1023px) {
+/* Stacks by the organiser's own width, not the window's: the rail takes part of the
+   window on laptops and tablets. */
+@container (max-width: 819px) {
   .org-cols, .org-pair { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 767px) {
@@ -72,6 +74,6 @@
   .org-top { justify-content: flex-start; }
   .print-bar { padding: 18px; }
 }
-@media (max-width: 620px) {
+@container (max-width: 599px) {
   .org-self .org-row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
 }

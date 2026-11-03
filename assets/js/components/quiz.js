@@ -1,25 +1,30 @@
-// Quiz with confidence: ~10 questions drawn at random from the topic's bank (multiple choice
-// and true/false). Pick an answer, then Sure / Unsure / Guess, then see the answer and why.
+// Quiz with confidence: ~10 questions drawn at random from the topic's bank (multiple choice,
+// true/false and calc) plus about a third made from the chunk items. Pick or type an answer,
+// then Sure / Unsure / Guess, then see the answer and why (calc: the worked method).
 // Results: score, a 4-box grid and "Fix these first" linking to the chunk and book page.
 // State lives in a per-visit object (passed in), never saved, so it clears when the page is left.
 
 import { h, fill, icon, hint, shuffle } from "../dom.js";
+import { itemQuestions, drawQuiz, concrete, calcRight } from "../questions.js";
 
 const DRAW = 10;
 const KEYS = ["A", "B", "C", "D", "E", "F"];
 const CONF = [["sure", "Sure"], ["unsure", "Unsure"], ["guess", "Guess"]];
 
+// `topic.extra` (a function) gives the made-up questions when there are no chunks (the year
+// page's mixed quiz).
 function newRound(topic) {
+  const extra = topic.chunks ? itemQuestions(topic) : topic.extra?.() || [];
   return {
-    items: shuffle(topic.quiz).slice(0, DRAW).map((q) => ({
+    items: drawQuiz(topic.quiz, extra, DRAW).map((q) => concrete(q)).map((q) => ({
       q,
-      order: q.tf != null ? [true, false] : shuffle([...q.options.keys()])
+      order: q.calc ? null : q.tf != null ? [true, false] : shuffle([...q.options.keys()])
     })),
     i: 0, pick: null, answers: [], done: false
   };
 }
 
-const isRight = (it, pick) => (it.q.tf != null ? pick === it.q.tf : pick === it.q.answer);
+const isRight = (it, pick) => (it.q.calc ? calcRight(it.q, pick) : it.q.tf != null ? pick === it.q.tf : pick === it.q.answer);
 
 // Which box each answer falls in; also used for the Fix list.
 function box(a) {
@@ -60,7 +65,31 @@ export function quiz(topic, session, { chunkLink }) {
   const root = h("div", { class: "quiz" });
 
   function optLabel(it, o) {
-    return it.q.tf != null ? (o ? "True" : "False") : it.q.options[o];
+    return it.q.calc ? it.q.calc.text : it.q.tf != null ? (o ? "True" : "False") : it.q.options[o];
+  }
+
+  // Calc: the answer is typed. The Sure / Unsure / Guess buttons wake up once there is a number.
+  function calcField(it, a) {
+    const S = session.quiz;
+    const input = h("input", {
+      id: "calc-a", class: "calc-input", type: "text", inputmode: "decimal", autocomplete: "off",
+      value: a ? a.pick : S.pick ?? "", disabled: a ? true : null,
+      "aria-describedby": it.q.calc.unit || it.q.calc.dp ? "calc-unit" : null
+    });
+    input.addEventListener("input", () => {
+      S.pick = input.value.trim() || null;
+      root.querySelectorAll(".conf button").forEach((b) => { b.disabled = S.pick === null; });
+    });
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && S.pick !== null) { e.preventDefault(); root.querySelector(".conf button")?.focus(); }
+    });
+    const { prefix, unit, dp } = it.q.calc;
+    return h("div", { class: "calc-row" + (a ? (a.right ? " good" : " bad") : "") },
+      h("label", { class: "conf-label", for: "calc-a" }, "Your answer"),
+      prefix && h("span", { class: "calc-unit" }, prefix),
+      input,
+      (unit || dp > 0) && h("span", { class: "calc-unit", id: "calc-unit" }, unit,
+        dp > 0 && h("span", { class: "calc-dp" }, ` to ${dp} d.p.`)));
   }
 
   function answer(conf) {
@@ -87,7 +116,7 @@ export function quiz(topic, session, { chunkLink }) {
         hint("tap", "Answer, then say how sure")),
       h("span", { class: "bar", "aria-hidden": "true" }, h("span", { style: `width:${(100 * (S.i + (a ? 1 : 0))) / n}%` })),
       h("h2", { class: "quiz-q", id: "quiz-q", tabindex: "-1" }, it.q.q),
-      h("div", { class: "opt-grid two", role: "group", "aria-label": "Answers" }, it.order.map((o, k) => {
+      it.q.calc ? calcField(it, a) : h("div", { class: "opt-grid two", role: "group", "aria-label": "Answers" }, it.order.map((o, k) => {
         const state = a ? (o === correct ? "good" : o === a.pick ? "bad" : "dim") : S.pick === o ? "sel" : "";
         return h("button", {
           type: "button", class: `opt keyed ${state}`, "data-key": `o${k}`, "aria-pressed": a ? null : String(S.pick === o),
@@ -100,8 +129,10 @@ export function quiz(topic, session, { chunkLink }) {
         CONF.map(([c, label]) => h("button", { type: "button", class: "btn-line", "data-key": `c${c}`, disabled: S.pick === null || null, onclick: () => answer(c) }, label))),
       a && h("div", { class: "quiz-feedback", "aria-live": "polite" },
         h("p", { class: "feedback " + (a.right ? "good" : "bad") }, icon(a.right ? "check" : "cross"),
-          a.right ? "Correct." : `The answer is ${optLabel(it, correct)}.`),
-        h("p", { class: "quiz-why" }, it.q.why),
+          a.right ? "Correct." : `The answer is ${optLabel(it, correct).replace(/\.$/, "")}.`),
+        it.q.calc?.method.length > 0 && h("ol", { class: "calc-method", "aria-label": "Method" },
+          it.q.calc.method.map((m) => h("li", {}, m))),
+        it.q.why && h("p", { class: "quiz-why" }, it.q.why),
         h("div", { class: "btn-row" },
           h("button", { type: "button", class: "btn-dark", "data-key": "next", onclick: next }, S.i < n - 1 ? "Next question" : "See results"))));
   }

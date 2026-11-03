@@ -10,6 +10,7 @@ import { loadCourses, loadTopics, statusFor, STATUS_TEXT, formatDay, topicHref, 
 import { siteBar } from "./nav.js";
 import { comingUpCard } from "./components/comingup.js";
 import { quiz } from "./components/quiz.js";
+import { itemQuestions } from "./questions.js";
 
 const FILTERS = [["all", "All"], ["taught", "Taught"], ["coming", "Coming up"]];
 
@@ -101,6 +102,10 @@ function mixedBank() {
   return { topics, questions };
 }
 
+// Questions made from each taught topic's items, tagged by topic like the bank.
+const mixedExtra = (topics) => topics.flatMap((t) =>
+  itemQuestions(loaded.get(t.id)).map((q) => ({ ...q, chunk: `${t.id}/${q.chunk}`, item: `${t.id}/${q.item}` })));
+
 function mixedLink(key) {
   const [id, chunkId] = key.split("/");
   const t = course.topics.find((x) => x.id === id), T = loaded.get(id);
@@ -130,7 +135,7 @@ function mixedView() {
       h("div", { class: "stage-titles" },
         h("span", { class: "eyebrow" }, `${yearShort(y)} · ${topics.length} taught topic${topics.length > 1 ? "s" : ""}`),
         h("h1", { id: "page-title", tabindex: "-1" }, "Revise all taught topics"))),
-    quiz({ quiz: questions }, session, { chunkLink: mixedLink }),
+    quiz({ quiz: questions, extra: () => mixedExtra(topics) }, session, { chunkLink: mixedLink }),
     h("nav", { class: "stage-foot", "aria-label": "Back" },
       h("a", { class: "back", href: "#" }, `← ${year.name}`)));
 }

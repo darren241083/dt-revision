@@ -87,6 +87,12 @@ a.tile:hover b { text-decoration: underline; }
 .yc-ref { grid-area: ref; color: var(--muted); font-family: var(--f-mono); font-size: .875rem; }
 .yc-name { grid-area: name; color: var(--ink); font-size: 1.0625rem; font-weight: 600; line-height: 1.3; }
 .yc-count { grid-area: count; color: var(--muted); font-size: .875rem; text-align: right; }
+/* Narrow cards: the count goes under the section name, so long names never run into it. */
+.yc-sections { container-type: inline-size; }
+@container (max-width: 399px) {
+  .yc-sections li { grid-template-columns: 28px minmax(0, 1fr); grid-template-areas: "ref name" ". count" ". sq"; gap: 4px 12px; }
+  .yc-count { text-align: left; }
+}
 .squares { grid-area: sq; display: flex; flex-wrap: wrap; gap: 3px; }
 .squares i, .key-row i { flex: none; width: 12px; height: 12px; border-radius: 3px; background: var(--line-grey); }
 .squares i.taught, .squares i.taught-soon, .key-row i.taught { background: var(--teal); }

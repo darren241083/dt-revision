@@ -294,7 +294,8 @@
         {
           "term": "Fairtrade Foundation",
           "tags": [],
-          "text": "Sets a fair, sustainable price so farmers' lives improve. E.g. coffee, cotton, chocolate, fruit."
+          "text": "Sets a fair, sustainable price so farmers' lives improve. E.g. coffee, cotton, chocolate, fruit.",
+          "autoQuiz": false
         }
       ],
       "check": [

@@ -7,6 +7,7 @@
 
 import { h } from "../dom.js";
 import { answerOf, stepItems, plainItems } from "./organiser.js";
+import { concrete } from "../questions.js";
 
 const SELF = 6;
 const MARGIN = 12; // mm, the same as @page in print.css
@@ -108,8 +109,10 @@ export function fitSheet(sheet) {
 export function printSheet(T, course, { variant, version }) {
   const teacher = variant === "teacher", cover = variant === "cover";
   const rnd = seeded(version);
-  const self = draw(T.quiz, SELF, rnd);
+  const drawn = draw(T.quiz, SELF, rnd);
   const exam = draw(T.written || [], 1, rnd)[0];
+  // Calc numbers come from the same version, so the teacher copy matches.
+  const self = drawn.map((q) => concrete(q, rnd));
   const tagged = T.chunks.some((c) => c.items.some((it) => it.tags?.length));
   const fact = (text, n = 1) => (cover ? lines(n) : h("span", {}, text));
 

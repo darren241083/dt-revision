@@ -13,7 +13,7 @@
 .crumbs li + li::before { content: "›"; margin: 0 .55em; }
 .crumbs li.crumb-topic { flex: 0 1 auto; min-width: min(9em, 100%); }
 .crumbs .crumb-topic > * { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-.crumbs a { padding: 12px 0; color: var(--muted); text-decoration: none; }
+.crumbs a { display: inline-block; min-width: var(--tap); padding: 12px 0; color: var(--muted); text-align: center; text-decoration: none; }
 .crumbs a:hover { text-decoration: underline; }
 html.teach .crumbs .crumb-section { display: none; }
 .crumbs .crumb-topic a, .crumbs [aria-current] { color: var(--ink); font-weight: 700; }

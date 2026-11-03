@@ -10,9 +10,10 @@
 // ?y=y11 is the year group the pupil came from (breadcrumb); default is the remembered year.
 // Which stages have been visited lives in memory only and clears when the page is left.
 
-import { h, icon, hint } from "./dom.js";
+import { h, icon, hint, shuffle } from "./dom.js";
 import * as store from "./store.js";
-import { findTopic, loadCourses, loadTopic, YEAR_IDS, yearShort } from "./data.js";
+import { findTopic, loadCourses, loadTopic, loadTopics, YEAR_IDS, yearShort } from "./data.js";
+import { doNowTopUp } from "./questions.js";
 import { timer } from "./components/timer.js";
 import { revealGroup } from "./components/reveal.js";
 import { whatAmI } from "./components/whatami.js";
@@ -68,7 +69,7 @@ const MODES = {
 };
 
 // Results from this visit only (quiz progress and answers). Never saved.
-const session = { quiz: null, written: null, organiser: null, print: null };
+const session = { quiz: null, written: null, organiser: null, print: null, doNow: null };
 
 const S = {
   topic: null, level: null, course: null, entry: null, section: null, year: null,
@@ -336,7 +337,7 @@ function stageBody(st) {
     case "whole":
       return [printBar(), organiser(T, session)];
     case "do-now":
-      return [revealGroup(T.doNow), T.starter && whatAmI(T.starter)];
+      return [revealGroup(session.doNow || T.doNow), T.starter && whatAmI(T.starter)];
     case "big-picture":
       return mindMap(T, { chunkHref: (c) => hashFor("lesson", learnIndex(), T.chunks.indexOf(c)) });
     case "learn":
@@ -491,6 +492,19 @@ async function yearFor(level) {
   return [asked, store.get("year")].find((y) => YEAR_IDS.includes(y) && years[y].level === level) || null;
 }
 
+// Do now needs 2 questions from earlier topics. If the topic lists fewer, the rest are drawn
+// from the quiz banks of earlier built topics in this level (up to 5 of them are loaded).
+async function topUpDoNow() {
+  const T = S.topic;
+  if ((T.doNow || []).filter((d) => !/^pre-read/i.test(d.from || "")).length >= 2) return;
+  const list = S.course.topics, at = list.indexOf(S.entry);
+  const before = list.slice(0, Math.max(0, at)).filter((t) => t.built);
+  if (!before.length) return;
+  const picked = shuffle(before).slice(0, 5);
+  const loaded = await loadTopics(S.level, picked.map((t) => t.id));
+  session.doNow = doNowTopUp(T.doNow || [], picked.filter((t) => loaded.has(t.id)).map((entry) => ({ entry, topic: loaded.get(entry.id) })));
+}
+
 async function init() {
   topbar();
   const id = new URLSearchParams(location.search).get("id");
@@ -510,6 +524,7 @@ async function init() {
     level: found.level, course: found.course, entry: found.entry, year: await yearFor(found.level),
     section: found.course.sections.find((s) => s.ref === found.entry.section) || null
   });
+  await topUpDoNow();
   document.body.append(present);
   window.addEventListener("hashchange", () => render(true));
   render(false);
