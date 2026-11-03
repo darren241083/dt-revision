@@ -143,7 +143,7 @@
           "tags": [
             "timber"
           ],
-          "text": "Carves, chips, pares and cuts wood to shape. Struck with a mallet for cutting force. The bevelled blade comes in different shapes and widths."
+          "text": "Bevelled blade; carves, chips and pares wood. Struck with a mallet."
         },
         {
           "term": "Planer",
@@ -292,7 +292,7 @@
           "tags": [
             "timber"
           ],
-          "text": "A rotating length of abrasive paper. Press the work against it to sand, or to strip thick surfaces such as old paint."
+          "text": "Rotating abrasive paper. Sands, or strips surfaces such as old paint."
         },
         {
           "term": "Band saw",
@@ -308,7 +308,7 @@
             "timber",
             "polymer"
           ],
-          "text": "Floor or bench mounted. Adjustable table and a depth stop for holes of a set depth. Usually drills at 90°, quickly and accurately through thick pieces."
+          "text": "Depth stop and adjustable table: accurate holes of a set depth at 90°."
         }
       ],
       "diagram": {
@@ -415,14 +415,14 @@
           "tags": [
             "timber"
           ],
-          "text": "Spins the material at speed while a tool is held against it to cut, sand or shape it evenly all the way round."
+          "text": "Spins the work while a tool cuts, sands or shapes it all round."
         },
         {
           "term": "CNC wood turning",
           "tags": [
             "timber"
           ],
-          "text": "Used commercially for stair spindles, chair parts, table legs and columns. Every part is sized accurately and identical, so they fit and match."
+          "text": "Identical, accurate parts: stair spindles, chair parts, table legs."
         }
       ],
       "check": [
