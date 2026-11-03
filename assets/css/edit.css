@@ -1,0 +1,54 @@
+/* Teacher edit mode only (loaded by edit.js). */
+
+.edit-bar { position: sticky; top: 64px; z-index: 19; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 8px 40px; border-bottom: 1px solid var(--unsure); background: var(--unsure-bg); color: var(--ink); font-size: .9375rem; }
+.edit-label { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; }
+.edit-label .ico { width: 18px; height: 18px; }
+.edit-state { color: var(--unsure); font-weight: 600; }
+.edit-state.on { color: var(--correct); }
+.edit-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.edit-btns button { min-height: var(--tap); padding: 0 14px; font-size: .875rem; }
+
+.edit-dlg { width: min(640px, calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 1px solid var(--card-border); border-radius: var(--radius); background: var(--card); color: var(--body); box-shadow: 0 20px 60px -20px rgba(16, 33, 43, .45); }
+.edit-dlg::backdrop { background: rgba(16, 33, 43, .45); }
+.dlg-head { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 22px; border-bottom: 1px solid var(--rule); background: var(--card); }
+.dlg-head h2 { font-size: 1.375rem; font-weight: 800; letter-spacing: -.01em; }
+.dlg-close { display: grid; place-items: center; width: var(--tap); height: var(--tap); border: 0; border-radius: 10px; background: transparent; color: var(--ink); }
+.dlg-close .ico { width: 20px; height: 20px; }
+.dlg-body { display: flex; flex-direction: column; gap: 14px; padding: 18px 22px 22px; }
+.dlg-field { display: flex; flex-direction: column; gap: 6px; }
+.dlg-field > span { color: var(--ink); font-size: .9375rem; font-weight: 700; }
+.dlg-field small, .dlg-note { color: var(--muted); font-size: .875rem; }
+.dlg-field input[type="text"], .dlg-field input[type="password"], .dlg-field input[type="date"], .dlg-field select {
+  width: 100%; min-height: var(--tap); padding: 0 12px; border: 1.5px solid var(--card-border); border-radius: 10px; background: #F7F9F9; color: var(--ink); font: inherit; font-size: 1rem; }
+.dlg-field input:focus-visible, .dlg-field select:focus-visible { border-color: var(--teal); }
+.dlg-inline { display: flex; gap: 8px; }
+.dlg-inline input { flex: 1; min-width: 0; }
+.dlg-links { margin: -4px 0 0; font-size: .9375rem; }
+.dlg-links a { display: inline-flex; align-items: center; min-height: var(--tap); color: var(--teal-dark); font-weight: 700; }
+.dropzone { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; min-height: 120px; padding: 18px; border: 2px dashed var(--dot-grey); border-radius: 14px; background: #F7F9F9; color: var(--muted); font-weight: 600; text-align: center; }
+.dropzone.over { border-color: var(--teal); background: var(--teal-soft); color: var(--teal-dark); }
+.dropzone .ico { width: 26px; height: 26px; }
+.dropzone label { cursor: pointer; }
+.dlg-preview:empty { display: none; }
+.dlg-preview { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.dlg-preview img { max-width: 100%; max-height: 260px; border: 1px solid var(--card-border); border-radius: 10px; }
+.dlg-preview small { color: var(--muted); font-family: var(--f-mono); font-size: .8125rem; }
+.dlg-status { margin: 0; min-height: 1.5em; font-weight: 600; }
+.dlg-status:empty { display: none; }
+.dlg-status.good { color: var(--correct); }
+.dlg-status.bad { color: var(--wrong); }
+
+.years { display: flex; flex-direction: column; gap: 12px; }
+.year { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 14px 16px; border: 1px solid var(--card-border); border-radius: 14px; }
+.year legend { padding: 0 6px; color: var(--ink); font-weight: 800; }
+.year-row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: end; gap: 10px; }
+.year details summary { display: flex; align-items: center; gap: 6px; min-height: var(--tap); color: var(--teal-dark); font-weight: 700; cursor: pointer; }
+.year-topics { display: flex; flex-direction: column; max-height: 260px; overflow: auto; }
+.year-topic { display: flex; align-items: center; gap: 10px; min-height: var(--tap); font-size: .9375rem; cursor: pointer; }
+.year-topic input { width: 20px; height: 20px; accent-color: var(--teal); }
+
+@media (max-width: 767px) {
+  .edit-bar { top: 0; position: static; padding: 8px 16px; }
+  .edit-btns { margin-left: 0; }
+  .year-row { grid-template-columns: minmax(0, 1fr); }
+}

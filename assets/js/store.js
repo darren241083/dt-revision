@@ -19,3 +19,11 @@ export function set(key, value) {
     /* storage unavailable: the setting just isn't remembered */
   }
 }
+
+export function remove(key) {
+  try {
+    localStorage.removeItem(PREFIX + key);
+  } catch {
+    /* storage unavailable */
+  }
+}

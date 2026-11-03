@@ -110,7 +110,7 @@ html.teach .teach-only { display: block; }
 .mm-map.has-open .mm-branch:not(.open) { opacity: .9; }
 
 .mm-detail { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: stretch; padding: 24px 28px; }
-.mm-detail:has(.img-slot) { grid-template-columns: minmax(0, 1fr) 200px; }
+.mm-detail:has(.mm-detail-img) { grid-template-columns: minmax(0, 1fr) 200px; }
 .mm-detail-text { display: flex; flex-direction: column; gap: 10px; min-height: 100%; }
 .mm-detail h3 { font-size: 1.75rem; font-weight: 800; }
 .mm-detail p { font-size: 1.25rem; }
@@ -357,3 +357,12 @@ a.btn-line, a.btn-dark { text-decoration: none; }
   .w-head { flex-direction: column; gap: 8px; }
 }
 .w-scheme > .btn-line { align-self: flex-start; }
+
+/* Images: saved images with credits, and edit-mode slots. */
+.item-img { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px; grid-column: 1 / -1; }
+.item-img .img-slot { max-width: 320px; }
+.mm-detail-img { display: flex; flex-direction: column; gap: 8px; }
+.img-credit { margin: -6px 0 0; color: var(--muted); font-size: .75rem; }
+.img-edit { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); padding: 0 14px; border: 1.5px dashed var(--teal); border-radius: 10px; background: var(--teal-soft); color: var(--teal-dark); font-size: .9375rem; font-weight: 700; }
+.img-edit .ico { width: 18px; height: 18px; }
+.steps-card .img-slot { max-width: 320px; }

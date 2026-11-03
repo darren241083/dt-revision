@@ -19,6 +19,7 @@ import { whichTool, oddOneOut } from "./components/apply.js";
 import { matchPairs, putInOrder } from "./components/recall.js";
 import { quiz, fixList, fixRows } from "./components/quiz.js";
 import { writtenQuestion } from "./components/written.js";
+import { audioPlayer } from "./components/audio.js";
 
 const MATERIAL = { timber: "Timber", polymer: "Polymer" };
 
@@ -189,10 +190,26 @@ function overview() {
 function preRead() {
   const T = S.topic;
   const pages = `p${T.book.pages}`;
+  const read = () => h("div", { class: "book" }, icon("book"),
+    h("span", {}, h("b", {}, `Book ${pages}`), h("span", {}, T.book.title)));
+  const key = `read.${T.id}`;
+  const box = h("input", { type: "checkbox", id: "read-tick", onchange: (e) => store.set(key, e.target.checked) });
+  box.checked = !!store.get(key, false);
+  const tick = h("label", { class: "tick", for: "read-tick" }, box,
+    h("span", { class: "box", "aria-hidden": "true" }, icon("check")), T.audio ? "I've read or listened" : "I've read it");
+
+  // No audio: just the book, no tabs.
+  if (!T.audio) {
+    return h("section", { class: "preread", "aria-labelledby": "preread-title" },
+      h("div", { class: "preread-head" }, h("h2", { id: "preread-title" }, "Before the lesson")),
+      read(), tick);
+  }
+
+  // The player is made once, so switching tabs doesn't stop the audio.
+  const listen = audioPlayer(T.audio, T.title);
   const tabs = [
-    { id: "read", label: "Read", panel: () => h("div", { class: "book" }, icon("book"),
-        h("span", {}, h("b", {}, `Book ${pages}`), h("span", {}, T.book.title))) },
-    { id: "listen", label: "Listen", panel: player }
+    { id: "read", label: "Read", panel: read },
+    { id: "listen", label: "Listen", panel: () => listen }
   ];
   let current = "read";
   const panel = h("div", { class: "tabpanel", role: "tabpanel", id: "pre-panel", tabindex: "0" });
@@ -219,30 +236,11 @@ function preRead() {
   }, t.label)));
   show(current);
 
-  const key = `read.${T.id}`;
-  const box = h("input", { type: "checkbox", id: "read-tick", onchange: (e) => store.set(key, e.target.checked) });
-  box.checked = !!store.get(key, false);
-
   return h("section", { class: "preread", "aria-labelledby": "preread-title" },
     h("div", { class: "preread-head" },
       h("h2", { id: "preread-title" }, "Before the lesson"),
       h("span", { class: "pick" }, "Pick one")),
-    tablist, panel,
-    h("label", { class: "tick", for: "read-tick" }, box,
-      h("span", { class: "box", "aria-hidden": "true" }, icon("check")), "I've read or listened"));
-}
-
-// Audio player placeholder. The working player comes in a later step.
-const WAVE = [14, 22, 30, 18, 36, 40, 26, 20, 32, 44, 28, 16, 24, 38, 34, 22, 18, 30, 42, 36, 20, 14, 26, 34, 40, 30, 22, 16, 28, 38, 44, 32, 20, 24, 36, 30, 18, 22, 34, 40];
-function player() {
-  return h("div", { class: "player" },
-    h("div", { class: "player-top" },
-      h("button", { type: "button", class: "play", disabled: true, "aria-label": "Play" }, icon("play")),
-      h("span", { class: "player-title" }, h("b", {}, "Audio overview"), h("span", {}, "Coming soon"))),
-    h("div", { class: "wave", "aria-hidden": "true" }, WAVE.map((x) => h("span", { style: `height:${x}px` }))),
-    h("div", { class: "player-foot" },
-      h("span", {}, "0:00 / –:––"),
-      h("span", { class: "player-btns" }, ["−15s", "+15s", "1×"].map((t) => h("button", { type: "button", disabled: true }, t)))));
+    tablist, panel, tick);
 }
 
 /* ---------- Stage view ---------- */
@@ -446,6 +444,20 @@ async function init() {
   document.body.append(present);
   window.addEventListener("hashchange", () => render(true));
   render(false);
+  if (new URLSearchParams(location.search).has("edit")) toggleEdit();
 }
+
+/* ---------- Teacher edit mode (loaded only when asked for) ---------- */
+
+let edit = null;
+async function toggleEdit() {
+  if (!S.topic) return;
+  edit ||= await import("./edit.js");
+  if (edit.isOn()) edit.stop();
+  else edit.start({ topic: () => S.topic, level: S.level, rerender: () => render(false) });
+}
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.shiftKey && (e.key === "E" || e.key === "e")) { e.preventDefault(); toggleEdit(); }
+});
 
 init();

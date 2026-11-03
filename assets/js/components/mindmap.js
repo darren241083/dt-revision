@@ -6,6 +6,7 @@
 // Recall mode (blank map): items show "?" until tapped; "Reveal branch" and "Reset".
 
 import { h, fill, hint, materialDots } from "../dom.js";
+import { editState, imageSlot, figure as imgFigure } from "../editslot.js";
 
 const pct = (n) => `${n}%`;
 
@@ -131,9 +132,9 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
         h("p", {}, it.text),
         it.steps && h("ol", { class: "mm-steps" }, it.steps.map((s) => h("li", {}, s))),
         h("a", { class: "mm-read", href: chunkHref(c) }, "Read this chunk ↓")),
-      it.image && h("figure", { class: "img-slot" },
-        h("img", { src: it.image.file, alt: it.image.alt || it.term, loading: "lazy" }),
-        it.image.credit && h("figcaption", {}, it.image.credit))
+      (it.image || editState.on) && h("div", { class: "mm-detail-img" },
+        imgFigure(it.image, it.term),
+        imageSlot({ kind: "item", chunk: c.id, term: it.term }, !!it.image))
     ];
   }
 

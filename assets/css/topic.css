@@ -78,8 +78,15 @@ html.teach .crumbs .crumb-section { display: none; }
 .player-title { display: flex; flex-direction: column; gap: 4px; }
 .player-title b { font-size: 1.1875rem; }
 .player-title span { font-size: .9375rem; color: #A9C2C6; }
+.wave-wrap { position: relative; }
+.wave-wrap:focus-within { outline: 3px solid var(--teal-light); outline-offset: 4px; border-radius: 6px; }
 .wave { display: flex; align-items: flex-end; gap: 3px; height: 44px; }
 .wave span { flex: 1; border-radius: 2px; background: #3A5560; }
+.wave span.on { background: var(--teal-light); }
+.seek { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.player audio { display: none; }
+.play .ico.ico { fill: currentColor; stroke: none; }
+.player-btns .rate { min-width: 64px; border-color: var(--teal-light); color: var(--teal-light); }
 .player-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: .875rem; color: #A9C2C6; }
 .player-btns { display: flex; gap: 6px; }
 .player-btns button { min-height: var(--tap); padding: 0 10px; border: 1px solid #3A5560; border-radius: 8px; background: transparent; color: #A9C2C6; font-family: var(--f-mono); font-size: .875rem; }

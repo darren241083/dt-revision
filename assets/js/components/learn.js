@@ -3,33 +3,33 @@
 
 import { h, fill, icon, hint, materialTag, shuffle } from "../dom.js";
 import { revealCard } from "./reveal.js";
+import { imageSlot, figure as imgFigure } from "../editslot.js";
 
 export function learnChunk(chunk) {
   const plain = chunk.items.filter((it) => !it.steps);
   const processes = chunk.items.filter((it) => it.steps);
   return [
-    chunk.diagram && hotspot(chunk.diagram),
-    plain.length > 0 && h("div", { class: "card items" }, plain.map(itemRow)),
-    processes.map(stepThrough),
+    chunk.diagram && hotspot(chunk.diagram, chunk),
+    plain.length > 0 && h("div", { class: "card items" }, plain.map((it) => itemRow(it, chunk))),
+    processes.map((it) => stepThrough(it, chunk)),
     chunk.check?.length > 0 && h("section", { class: "check", "aria-labelledby": `check-${chunk.id}` },
       h("h2", { class: "label", id: `check-${chunk.id}` }, "Before you move on"),
       chunk.check.map((c) => revealCard(c, { size: "on-teal" })))
   ];
 }
 
-function itemRow(it) {
+function itemRow(it, chunk) {
+  const slot = imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, !!it.image);
   return h("div", { class: "item" },
     h("span", { class: "item-term" }, it.term),
     h("span", { class: "item-text" }, it.text),
     h("span", { class: "item-tag" }, materialTag(it.tags)),
-    it.image && h("figure", { class: "img-slot" },
-      h("img", { src: it.image.file, alt: it.image.alt || it.term, loading: "lazy" }),
-      it.image.credit && h("figcaption", {}, it.image.credit)));
+    (it.image || slot) && h("div", { class: "item-img" }, imgFigure(it.image, it.term), slot));
 }
 
 /* ---------- Step-through (processes) ---------- */
 
-function stepThrough(it) {
+function stepThrough(it, chunk) {
   let i = 0;
   const n = it.steps.length;
   const pips = h("span", { class: "pips", "aria-hidden": "true" });
@@ -54,6 +54,8 @@ function stepThrough(it) {
       h("h2", {}, it.term, materialTag(it.tags)),
       pips),
     it.text && h("p", { class: "steps-intro" }, it.text),
+    imgFigure(it.image, it.term),
+    imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, !!it.image),
     h("div", { class: "step-body" }, num, text),
     status,
     h("div", { class: "btn-row" }, back, next, hint("steps", "Step through in order")));
@@ -61,7 +63,7 @@ function stepThrough(it) {
 
 /* ---------- Hotspot diagram ---------- */
 
-function hotspot(d) {
+function hotspot(d, chunk) {
   const parts = d.parts;
   let mode = "explore", cur = 0;
   const seen = new Set([0]);
@@ -167,6 +169,8 @@ function hotspot(d) {
       h("h2", {}, d.title || "Diagram"),
       h("div", { class: "hs-tools" },
         hint("tap", "Tap a number"),
-        h("div", { class: "seg", role: "group", "aria-label": "Diagram mode" }, modeBtns))),
-    h("div", { class: "hs-body" }, figure, panel));
+        h("div", { class: "seg", role: "group", "aria-label": "Diagram mode" }, modeBtns),
+        imageSlot({ kind: "diagram", chunk: chunk.id }, !!d.image))),
+    h("div", { class: "hs-body" }, figure, panel),
+    d.credit && h("p", { class: "img-credit" }, d.credit));
 }
