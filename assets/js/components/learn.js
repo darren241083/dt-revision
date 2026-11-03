@@ -71,12 +71,33 @@ function hotspot(d) {
   const named = new Map(); // part index -> named correctly?
   let choices = [];
 
-  const figure = h("div", { class: "hs-figure" });
-  figure.innerHTML = d.svg;
+  // The drawing is either an image file ({ image, alt }) or inline SVG ({ svg }).
+  const figure = h("div", { class: "hs-figure" + (d.image ? " is-image" : "") });
+  if (d.image) figure.append(h("img", { src: d.image, alt: d.alt || d.title || "", width: d.width, height: d.height }));
+  else figure.innerHTML = d.svg;
+  // A part with a marker position (lx, ly) gets a small dot on the part and its number
+  // out in clear space, joined by a thin line; otherwise the number sits on the part.
+  const leaders = parts.some((p) => p.lx != null);
+  if (leaders) {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "hs-leaders");
+    svg.setAttribute("viewBox", "0 0 100 100");
+    svg.setAttribute("preserveAspectRatio", "none");
+    svg.setAttribute("aria-hidden", "true");
+    svg.innerHTML = parts.filter((p) => p.lx != null).map((p) =>
+      `<line x1="${p.x}" y1="${p.y}" x2="${p.lx}" y2="${p.ly}" vector-effect="non-scaling-stroke"/>`).join("");
+    figure.append(svg);
+    parts.filter((p) => p.lx != null).forEach((p) => {
+      const pt = h("span", { class: "hs-point", "aria-hidden": "true" });
+      pt.style.left = `${p.x}%`;
+      pt.style.top = `${p.y}%`;
+      figure.append(pt);
+    });
+  }
   const dots = parts.map((p, i) => {
     const b = h("button", { type: "button", class: "hs-dot", onclick: () => { cur = i; seen.add(i); draw(); } }, String(i + 1));
-    b.style.left = `${p.x}%`;
-    b.style.top = `${p.y}%`;
+    b.style.left = `${p.lx ?? p.x}%`;
+    b.style.top = `${p.ly ?? p.y}%`;
     figure.append(b);
     return b;
   });

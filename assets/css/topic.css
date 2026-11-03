@@ -51,7 +51,7 @@ html.teach .crumbs .crumb-section { display: none; }
 .needs li { display: flex; gap: 12px; font-size: 1.125rem; }
 .needs li::before { content: ""; flex: none; width: 8px; height: 8px; margin-top: .62em; border-radius: 50%; background: var(--teal); }
 
-.starts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.starts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 14px; }
 .start { display: flex; flex-direction: column; gap: 6px; padding: 22px; border-radius: var(--radius); text-decoration: none; }
 .start-title { font-size: 1.5rem; font-weight: 800; letter-spacing: -.01em; }
 .start-sub { font-size: 1rem; }
