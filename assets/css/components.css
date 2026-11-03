@@ -1,6 +1,6 @@
 /* Lesson components: timer, reveal cards, What am I?, mind map, Learn. */
 
-/* Alignment rule: in any grid of cards, every card in a row is the same height
+/* Alignment rule: in a grid of cards of the same kind, every card in a row is the same height
    (grid items stretch), each card is a flex column, and its interactive part
    (reveal area, buttons, options, link) is pushed to the bottom with
    margin-top: auto, so those parts line up across the row. */
@@ -259,7 +259,8 @@ a.btn-line, a.btn-dark { text-decoration: none; }
 @container (max-width: 619px) { .mm-map-only { display: none; } }
 
 /* Match pairs and put in order, side by side (equal-height cards). */
-.recall-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 16px; }
+/* Different kinds of panel side by side: top-aligned, not stretched. */
+.recall-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; }
 .match-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: stretch; gap: 8px; }
 .match-cell { height: 100%; min-height: var(--tap); font-size: 1rem; }
 .match-cell.term { font-weight: 700; }

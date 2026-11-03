@@ -1,5 +1,5 @@
 /* Home and year pages: site top bar, search, Coming up cards, year cards, topic lists.
-   Alignment rule: card grids stretch every card in a row to the same height; each card is a
+   Alignment rule: cards of the same kind in a row stretch to the same height; each is a
    flex column with its interactive part (tiles, buttons, link) pushed to the bottom. */
 
 :root { --coming: #8FCFC6; }
@@ -126,7 +126,8 @@ html[data-level="alevel"] .yearpage .eyebrow { color: var(--alevel); }
 .year-book { display: flex; align-items: center; gap: 8px; color: var(--body); font-size: 1rem; line-height: 1.35; }
 .year-book .ico { width: 20px; height: 20px; color: var(--teal); }
 
-.year-top { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: stretch; gap: 20px; }
+/* Coming up and the mixed quiz are different kinds of card: top-aligned, not stretched. */
+.year-top { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: start; gap: 20px; }
 .mixed { display: flex; flex-direction: column; gap: 12px; padding: 28px; border-radius: 22px; }
 .mixed h2 { font-size: 1.75rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
 .mixed .meta { color: var(--muted); font-size: 1rem; }
