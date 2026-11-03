@@ -5,11 +5,13 @@
 //   #lesson/<stage>         a Lesson-mode stage
 //   #lesson/learn/<chunk>   one Learn chunk
 //   #revise/<stage>         a Revise-mode stage
+//   #listen                 topic overview with the Listen tab open
+// ?y=y11 is the year group the pupil came from (breadcrumb); default is the remembered year.
 // Which stages have been visited lives in memory only and clears when the page is left.
 
 import { h, icon, hint } from "./dom.js";
 import * as store from "./store.js";
-import { findTopic, loadTopic } from "./data.js";
+import { findTopic, loadCourses, loadTopic, YEAR_IDS, yearShort } from "./data.js";
 import { timer } from "./components/timer.js";
 import { revealGroup } from "./components/reveal.js";
 import { whatAmI } from "./components/whatami.js";
@@ -66,7 +68,7 @@ const MODES = {
 const session = { quiz: null };
 
 const S = {
-  topic: null, level: null, course: null, entry: null, section: null,
+  topic: null, level: null, course: null, entry: null, section: null, year: null,
   view: "overview",
   mode: store.get("mode", "revise") === "lesson" ? "lesson" : "revise",
   stage: 0,
@@ -150,7 +152,7 @@ function topbar() {
       h("nav", { class: "crumbs", "aria-label": "Breadcrumb" },
         h("ol", {},
           h("li", {}, h("a", { href: "index.html" }, "Home")),
-          h("li", {}, S.course.short),
+          h("li", {}, S.year ? h("a", { href: `year.html?y=${S.year}` }, yearShort(S.year)) : S.course.short),
           S.section && h("li", { class: "crumb-section" }, S.section.name),
           h("li", { class: "crumb-topic" }, current))),
       h("div", { class: "modes", role: "group", "aria-label": "Mode" },
@@ -211,7 +213,7 @@ function preRead() {
     { id: "read", label: "Read", panel: read },
     { id: "listen", label: "Listen", panel: () => listen }
   ];
-  let current = "read";
+  let current = location.hash === "#listen" ? "listen" : "read";
   const panel = h("div", { class: "tabpanel", role: "tabpanel", id: "pre-panel", tabindex: "0" });
   const tablist = h("div", { class: "tabs", role: "tablist", "aria-label": "Before the lesson" });
   function show(id, focus) {
@@ -407,7 +409,9 @@ function render(moved) {
     if (strip.scrollWidth > strip.clientWidth) strip.scrollLeft = el.offsetLeft - (strip.clientWidth - el.offsetWidth) / 2;
   });
 
-  if (moved) {
+  if (S.view === "overview" && location.hash === "#listen") {
+    app.querySelector(".preread")?.scrollIntoView({ block: "start" });
+  } else if (moved) {
     window.scrollTo(0, 0);
     document.getElementById("page-title")?.focus({ preventScroll: true });
   }
@@ -420,6 +424,13 @@ function message(title, text, extra) {
     h("p", {}, text), extra,
     h("p", {}, h("a", { href: "index.html" }, "Go to the home page"))));
   document.title = `${title} · D&T Revision`;
+}
+
+// The year from the link if it is for this level, else the remembered year if it is.
+async function yearFor(level) {
+  const { years } = await loadCourses();
+  const asked = new URLSearchParams(location.search).get("y");
+  return [asked, store.get("year")].find((y) => YEAR_IDS.includes(y) && years[y].level === level) || null;
 }
 
 async function init() {
@@ -438,7 +449,7 @@ async function init() {
     return message("This page didn't load", "Check your connection and try again.");
   }
   Object.assign(S, {
-    level: found.level, course: found.course, entry: found.entry,
+    level: found.level, course: found.course, entry: found.entry, year: await yearFor(found.level),
     section: found.course.sections.find((s) => s.ref === found.entry.section) || null
   });
   document.body.append(present);

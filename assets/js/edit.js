@@ -434,6 +434,7 @@ async function yearsDialog() {
       forms.forEach((f) => Object.assign(fresh.years[f.y], f.read()));
       await commit([{ path: "site/content/courses.json", text: formatCourses(fresh) }], "Year groups update");
       say(msg, "Saved. Live in about a minute.", "good");
+      ctx?.savedCourses?.(fresh);
     } catch (e) { say(msg, problem(e), "bad"); }
     save.disabled = false;
   });
@@ -451,7 +452,7 @@ function drawBar() {
       has
         ? h("button", { type: "button", class: "btn-line", onclick: forgetToken }, "Forget token")
         : h("button", { type: "button", class: "btn-dark", onclick: tokenDialog }, "Add token"),
-      h("button", { type: "button", class: "btn-line", onclick: audioDialog }, "Audio"),
+      ctx?.topic && h("button", { type: "button", class: "btn-line", onclick: audioDialog }, "Audio"),
       h("button", { type: "button", class: "btn-line", onclick: yearsDialog }, "Year groups"),
       h("button", { type: "button", class: "btn-line", onclick: stop }, "Exit")));
 }
