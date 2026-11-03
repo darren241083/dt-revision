@@ -338,6 +338,9 @@ a.btn-line, a.btn-dark { text-decoration: none; }
 .w-note { color: var(--muted); font-size: .9375rem; }
 .w-model { padding: 14px 16px; border-radius: 12px; background: var(--teal-soft); color: var(--teal-dark); }
 .w-model[hidden] { display: none; }
+.w-levels { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(11, 85, 80, .2); }
+.w-levels ul { display: flex; flex-direction: column; gap: 6px; margin: 6px 0 0; padding: 0; list-style: none; font-size: 1rem; }
+.w-levels b { font-weight: 800; }
 .written .btn-row button[hidden] { display: none; }
 .written-set { display: contents; }
 

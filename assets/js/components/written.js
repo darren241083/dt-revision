@@ -11,9 +11,13 @@ export function writtenQuestion(w, i, { onNew } = {}) {
   const id = `w${i}`;
   const ticks = new Set();
   const mark = h("p", { class: "w-mark", "aria-live": "polite" });
+  // 6-mark evaluate questions also carry AQA-style levels, shown under the model answer.
   const model = h("div", { class: "w-model", hidden: true },
     h("h4", { class: "label" }, "Model answer"),
-    h("p", {}, w.model));
+    h("p", {}, w.model),
+    w.levels?.length > 0 && h("div", { class: "w-levels" },
+      h("h4", { class: "label" }, "Levels"),
+      h("ul", {}, w.levels.map((l) => h("li", {}, h("b", {}, `Level ${l.level} (${l.marks})`), ` ${l.text}`)))));
   const showModel = h("button", { type: "button", class: "btn-line", "aria-expanded": "false",
     onclick: () => {
       const on = model.hidden;

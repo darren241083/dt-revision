@@ -727,7 +727,24 @@
         "Justified conclusion, e.g. worth it if demand is high enough to cover the set-up cost."
       ],
       "model": "Automating the packing plant would make packing faster and more efficient, helping the company meet increased demand, with accurate, consistent output. It would lower labour costs and the line could run 24/7. However, it is expensive to set up, it can lead to job losses, workers would need new skills to maintain the machines, and there is no human decision making on the line. It is worth doing if demand is high enough to cover the set-up cost.",
-      "note": "1 mark per point for or against (up to 5), plus 1 for a justified conclusion. Up to 6."
+      "levels": [
+        {
+          "level": 3,
+          "marks": "5–6",
+          "text": "Detailed, balanced points on both sides, with a justified conclusion."
+        },
+        {
+          "level": 2,
+          "marks": "3–4",
+          "text": "Some points, mostly on one side, or a conclusion that isn't justified."
+        },
+        {
+          "level": 1,
+          "marks": "1–2",
+          "text": "Simple points, with no conclusion."
+        }
+      ],
+      "note": "Tick the points made, then use the levels under the model answer to decide the mark."
     },
     {
       "type": "explain",

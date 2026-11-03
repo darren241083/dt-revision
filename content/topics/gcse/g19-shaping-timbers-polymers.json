@@ -826,7 +826,24 @@
         "Justified conclusion, e.g. shape with the rasp, then smooth with abrasive paper from coarse to fine."
       ],
       "model": "A rasp is coarse and has separate teeth, so it shapes the curve in the pine well, but it leaves a rough surface that needs sanding. A file removes only small amounts of material, so it is better for fine shaping, and its many shapes and grades mean a suitable one can be chosen. Abrasive paper goes from coarse to fine, so it can finish the shaping and then smooth the surface. The best approach is to shape the curve with the rasp, then smooth it with abrasive paper, working from coarse to fine.",
-      "note": "1 mark per point for or against a tool (up to 5), plus 1 for a justified conclusion. Up to 6."
+      "levels": [
+        {
+          "level": 3,
+          "marks": "5–6",
+          "text": "Detailed, balanced points on both sides, with a justified conclusion."
+        },
+        {
+          "level": 2,
+          "marks": "3–4",
+          "text": "Some points, mostly on one side, or a conclusion that isn't justified."
+        },
+        {
+          "level": 1,
+          "marks": "1–2",
+          "text": "Simple points, with no conclusion."
+        }
+      ],
+      "note": "Tick the points made, then use the levels under the model answer to decide the mark."
     },
     {
       "type": "describe",
