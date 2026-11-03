@@ -125,7 +125,7 @@
       "name": "Year 11",
       "level": "gcse",
       "taught": ["g01-new-technologies-industry-enterprise", "g02-sustainability-environment-people", "g03-culture-society-production-systems", "g04-energy-generation-storage", "g05-modern-smart-materials", "g06-composites-technical-textiles", "g07-systems-approach-to-designing", "g08-mechanical-devices", "g09-properties-papers-boards-timbers", "g10-metals-alloys-polymers", "g11-textiles", "g12-selection-of-materials-or-components", "g13-forces-stresses-enhancing-materials", "g14-ecological-social-footprint", "g15-timbers-sources-properties", "g16-timbers-stock-forms-finishes", "g17-polymers-sources-properties-stock-forms", "g18-polymers-processes-finishes"],
-      "comingUp": { "topic": "g19-shaping-timbers-polymers", "day": null }
+      "comingUp": { "topic": "g19-shaping-timbers-polymers", "day": "2026-11-04" }
     },
     "y12": {
       "name": "Year 12",
