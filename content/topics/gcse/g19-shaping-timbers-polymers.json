@@ -142,7 +142,12 @@
             "timber",
             "polymer"
           ],
-          "text": "Handheld power tool with a narrow, reciprocating blade. Cuts straight lines or curves."
+          "text": "Handheld power tool with a narrow, reciprocating blade. Cuts straight lines or curves.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/jig-saw.webp",
+            "alt": "Jig saw",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
