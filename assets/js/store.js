@@ -1,4 +1,4 @@
-// Per-device conveniences only (teaching mode, read ticks, last mode, year).
+// Per-device conveniences only (teaching mode, last mode, year, and the teacher's edit-mode settings).
 // Nothing here is ever sent anywhere. Storage can be blocked, so every call is guarded.
 
 const PREFIX = "dtr.";

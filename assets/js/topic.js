@@ -26,6 +26,7 @@ import { lessonPair, revisePair } from "./components/written.js";
 import { audioPlayer } from "./components/audio.js";
 import { organiser } from "./components/organiser.js";
 import { printSheet, fitSheet, newVersion } from "./components/printsheet.js";
+import { editEntry } from "./editentry.js";
 
 const MATERIAL = { timber: "Timber", polymer: "Polymer" };
 
@@ -163,7 +164,8 @@ function topbar() {
         Object.entries(MODES).map(([m, def]) =>
           h("button", { type: "button", "aria-pressed": String(S.mode === m), onclick: () => switchMode(m) }, def.label))),
       h("button", { type: "button", class: "teach-btn", "aria-pressed": String(teach), onclick: toggleTeach },
-        icon("board"), h("span", { class: "teach-label" }, teach ? "Teaching mode on" : "Teaching mode")));
+        icon("board"), h("span", { class: "teach-label" }, teach ? "Teaching mode on" : "Teaching mode")),
+      edit.button());
   }
   topbarEl.replaceChildren(h("div", { class: "topbar-in" }, kids));
 }
@@ -523,20 +525,11 @@ async function init() {
   document.body.append(present);
   window.addEventListener("hashchange", () => render(true));
   render(false);
-  if (new URLSearchParams(location.search).has("edit")) toggleEdit();
+  edit.auto();
 }
 
 /* ---------- Teacher edit mode (loaded only when asked for) ---------- */
 
-let edit = null;
-async function toggleEdit() {
-  if (!S.topic) return;
-  edit ||= await import("./edit.js");
-  if (edit.isOn()) edit.stop();
-  else edit.start({ topic: () => S.topic, level: S.level, rerender: () => render(false) });
-}
-document.addEventListener("keydown", (e) => {
-  if (e.ctrlKey && e.shiftKey && (e.key === "E" || e.key === "e")) { e.preventDefault(); toggleEdit(); }
-});
+const edit = editEntry(() => ({ topic: () => S.topic, level: S.level, rerender: () => render(false) }), () => !!S.topic);
 
 init();

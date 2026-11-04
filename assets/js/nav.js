@@ -8,7 +8,8 @@ import { loadCourses, loadTopics, topicHref, YEAR_IDS, yearShort } from "./data.
 const MAX_RESULTS = 8;
 
 // current: "home" or a year id. y: the year to carry into topic links (or null).
-export function siteBar(el, { current, y = null, years }) {
+// extra: an optional button at the end (the teacher's Edit button on the home page).
+export function siteBar(el, { current, y = null, years, extra = null }) {
   const links = [["home", "index.html", "Home"], ...YEAR_IDS.map((id) => [id, `year.html?y=${id}`, yearShort(id)])];
   const nav = h("nav", { class: "site-nav", "aria-label": "Main" },
     h("ul", {}, links.map(([id, href, label]) =>
@@ -29,7 +30,7 @@ export function siteBar(el, { current, y = null, years }) {
 
   el.classList.add("site");
   fill(el, h("div", { class: "topbar-in sitebar" },
-    h("a", { class: "brand", href: "index.html" }, "D&T Revision"), nav, search, toggle));
+    h("a", { class: "brand", href: "index.html" }, "D&T Revision"), nav, search, toggle, extra));
 }
 
 /* ---------- Search ---------- */

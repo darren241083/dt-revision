@@ -6,6 +6,7 @@ import { h, fill } from "./dom.js";
 import * as store from "./store.js";
 import { loadCourses, loadTopics, setCourses, statusFor, STATUS_TEXT, topicHref, YEAR_IDS, yearShort } from "./data.js";
 import { siteBar } from "./nav.js";
+import { editEntry } from "./editentry.js";
 import { comingUpCard } from "./components/comingup.js";
 
 const RECENT = 3;
@@ -80,7 +81,7 @@ function render() {
   const me = mine();
   const order = me ? [me, ...YEAR_IDS.filter((y) => y !== me)] : YEAR_IDS;
   const mark = (y) => (me ? (y === me ? "mine" : "other") : "");
-  siteBar(topbarEl, { current: "home", y: me, years: C.years });
+  siteBar(topbarEl, { current: "home", y: me, years: C.years, extra: edit.button() });
   fill(main,
     h("h1", { class: "sr-only", id: "page-title" }, "D&T Revision"),
     yearPicker(),
@@ -121,23 +122,15 @@ async function init() {
     return;
   }
   render();
-  if (new URLSearchParams(location.search).has("edit")) toggleEdit();
+  edit.auto();
 }
 
 /* ---------- Teacher edit mode (Year groups only here) ---------- */
 
-let edit = null;
-async function toggleEdit() {
-  edit ||= await import("./edit.js");
-  if (edit.isOn()) return edit.stop();
-  edit.start({
-    topic: null, level: null,
-    rerender: () => {},
-    savedCourses: async (fresh) => { setCourses(fresh); await load(); render(); }
-  });
-}
-document.addEventListener("keydown", (e) => {
-  if (e.ctrlKey && e.shiftKey && (e.key === "E" || e.key === "e")) { e.preventDefault(); toggleEdit(); }
-});
+const edit = editEntry(() => ({
+  topic: null, level: null,
+  rerender: () => { if (C) render(); },
+  savedCourses: async (fresh) => { setCourses(fresh); await load(); render(); }
+}), () => !!C);
 
 init();

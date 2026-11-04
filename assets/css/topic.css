@@ -209,3 +209,12 @@ html.teach .stage { padding-bottom: 128px; }
   .brand { font-size: 1rem; }
   .modes button { padding: 0 10px; }
 }
+
+/* Teacher's Edit button (only in a browser that holds an edit-mode token). */
+.edit-btn .ico { display: block; width: 20px; height: 20px; }
+.edit-btn[aria-pressed="true"] { border-color: var(--unsure); background: var(--unsure-bg); color: var(--ink); }
+@media (max-width: 767px) {
+  /* Phone: the Edit button sits at the end of the breadcrumb line. */
+  .topbar-in:has(.edit-btn) .crumbs { flex: 1 1 calc(100% - var(--tap) - 10px); min-width: 0; }
+  .topbar-in .edit-btn { order: 4; }
+}

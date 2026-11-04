@@ -1,4 +1,4 @@
-// Teacher edit mode. Only loaded when the teacher opens it (?edit or Ctrl+Shift+E).
+// Teacher edit mode. Only loaded when the teacher opens it (the Edit button, ?edit or Ctrl+Shift+E).
 // Saves go to the teacher's repository through the GitHub API, into site/, and the publish
 // workflow then copies site/ to the public site. The repository, the image-notes path and the
 // token are typed in once and kept only in this browser; none of them is in this code.

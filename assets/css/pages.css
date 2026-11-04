@@ -197,6 +197,7 @@ html[data-level="alevel"] .yearpage .eyebrow { color: var(--alevel); }
   .sitebar { flex-wrap: wrap; gap: 12px; padding: 12px 16px; }
   .sitebar .brand { flex: 1; }
   .search-toggle { display: grid; }
+  .sitebar .edit-btn { order: 2; }
   .site-nav { order: 4; flex-basis: 100%; }
   .site-nav ul { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; padding: 4px; border-radius: 12px; background: var(--seg); }
   .site-nav a { display: flex; padding: 0; border-radius: 9px; font-size: .9375rem; font-weight: 700; }
