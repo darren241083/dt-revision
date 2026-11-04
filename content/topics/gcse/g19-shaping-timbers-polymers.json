@@ -159,10 +159,10 @@
         {
           "term": "Sander",
           "tags": [
-            "timber",
-            "polymer"
+            "timber"
           ],
-          "text": "A wheel or pad covered in abrasive paper that spins or vibrates fast to remove waste."
+          "text": "A wheel or pad covered in abrasive paper that spins or vibrates fast to remove waste.",
+          "only": "timber"
         },
         {
           "term": "Router",
@@ -296,10 +296,10 @@
         {
           "term": "Disc / belt sander",
           "tags": [
-            "timber",
-            "polymer"
+            "timber"
           ],
-          "text": "Rotating abrasive paper. Sands, or strips surfaces such as old paint."
+          "text": "Rotating abrasive paper. Sands, or strips surfaces such as old paint.",
+          "only": "timber"
         },
         {
           "term": "Band saw",
