@@ -199,17 +199,12 @@ function preRead() {
   const pages = `p${T.book.pages}`;
   const read = () => h("div", { class: "book" }, icon("book"),
     h("span", {}, h("b", {}, `Book ${pages}`), h("span", {}, T.book.title)));
-  const key = `read.${T.id}`;
-  const box = h("input", { type: "checkbox", id: "read-tick", onchange: (e) => store.set(key, e.target.checked) });
-  box.checked = !!store.get(key, false);
-  const tick = h("label", { class: "tick", for: "read-tick" }, box,
-    h("span", { class: "box", "aria-hidden": "true" }, icon("check")), T.audio ? "I've read or listened" : "I've read it");
 
   // No audio: just the book, no tabs.
   if (!T.audio) {
     return h("section", { class: "preread", "aria-labelledby": "preread-title" },
       h("div", { class: "preread-head" }, h("h2", { id: "preread-title" }, "Before the lesson")),
-      read(), tick);
+      read());
   }
 
   // The player is made once, so switching tabs doesn't stop the audio.
@@ -247,7 +242,7 @@ function preRead() {
     h("div", { class: "preread-head" },
       h("h2", { id: "preread-title" }, "Before the lesson"),
       h("span", { class: "pick" }, "Pick one")),
-    tablist, panel, tick);
+    tablist, panel);
 }
 
 /* ---------- Stage view ---------- */

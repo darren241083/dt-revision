@@ -91,14 +91,6 @@ html.teach .crumbs .crumb-section { display: none; }
 .player-btns { display: flex; gap: 6px; }
 .player-btns button { min-height: var(--tap); padding: 0 10px; border: 1px solid #3A5560; border-radius: 8px; background: transparent; color: #A9C2C6; font-family: var(--f-mono); font-size: .875rem; }
 
-.tick { display: flex; align-items: center; gap: 12px; min-height: var(--tap); padding-top: 16px; border-top: 1px solid var(--rule); color: var(--ink); font-size: 1.0625rem; font-weight: 600; cursor: pointer; }
-.tick input { position: absolute; width: 1px; height: 1px; opacity: 0; }
-.tick .box { display: grid; place-items: center; flex: none; width: 24px; height: 24px; border: 2px solid var(--teal); border-radius: 7px; background: var(--card); color: #FFFFFF; }
-.tick .box .ico { width: 16px; height: 16px; stroke-width: 3; opacity: 0; }
-.tick input:checked + .box { background: var(--teal); }
-.tick input:checked + .box .ico { opacity: 1; }
-.tick input:focus-visible + .box { outline: 3px solid var(--teal); outline-offset: 3px; }
-
 /* ---------- Path rail ---------- */
 .path-layout { display: flex; min-height: calc(100vh - 65px); }
 .rail { flex: none; width: 300px; padding: 36px 28px; border-right: 1px solid var(--card-border); background: var(--card); }
