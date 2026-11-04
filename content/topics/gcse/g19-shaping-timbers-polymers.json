@@ -99,7 +99,12 @@
             "timber"
           ],
           "text": "Shallow, accurate cuts in small pieces of wood, such as wood joints.",
-          "only": "timber"
+          "only": "timber",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/tenon-saw.webp",
+            "alt": "Tenon saw",
+            "credit": "Irwin"
+          }
         },
         {
           "term": "Coping saw",
