@@ -187,7 +187,12 @@
             "timber"
           ],
           "text": "Shapes and smooths wood by slicing thin shavings. Always plane with the grain.",
-          "only": "timber"
+          "only": "timber",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/planer.webp",
+            "alt": "Planer",
+            "credit": "DT"
+          }
         },
         {
           "term": "Sander",
