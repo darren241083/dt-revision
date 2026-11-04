@@ -343,7 +343,12 @@
         {
           "term": "File",
           "tags": [],
-          "text": "Removes small amounts of material. Comes in many shapes and grades of coarseness."
+          "text": "Removes small amounts of material. Comes in many shapes and grades of coarseness.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/file.webp",
+            "alt": "File",
+            "credit": "DT"
+          }
         },
         {
           "term": "Abrasive paper",
