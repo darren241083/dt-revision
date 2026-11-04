@@ -97,7 +97,7 @@ html.teach .teach-only { display: block; }
 /* ---------- Mind map ---------- */
 .mm { display: flex; flex-direction: column; gap: 16px; container-type: inline-size; }
 /* The map's height is set by mindmap.js from the measured nodes (the ratio is only the first paint). */
-.mm-map { position: relative; aspect-ratio: 864 / 520; overflow: hidden; }
+.mm-map { position: relative; width: 100%; min-width: 0; aspect-ratio: 864 / 520; overflow: hidden; }
 .mm-canvas, .mm-lines { position: absolute; inset: 0; }
 .mm-line { position: absolute; height: 2px; border-radius: 2px; background: var(--dot-grey); transform-origin: 0 50%; }
 .mm-line.kid { background: #8FCFC6; }
@@ -111,7 +111,9 @@ html.teach .teach-only { display: block; }
 .mm-leaf { z-index: 1; max-width: var(--mm-lw, 260px); min-height: var(--tap); padding: 8px 14px; border: 1.5px solid var(--card-border); border-radius: 12px; background: var(--card); color: var(--ink); font-size: clamp(.875rem, 1.7cqw, 1rem); font-weight: 600; line-height: 1.25; text-align: left; }
 .mm-leaf:hover { border-color: var(--teal); }
 .mm-leaf.sel { border-color: var(--teal); box-shadow: 0 0 0 4px var(--teal-soft); }
-.mm-map.has-open .mm-branch:not(.open) { opacity: .9; }
+/* With a branch open, the other branches drop their item count (they are only context). */
+.mm-map.has-open .mm-branch:not(.open) { padding: 8px 12px; opacity: .9; }
+.mm-map.has-open .mm-branch:not(.open) .mm-count { display: none; }
 
 .mm-detail { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: stretch; padding: 24px 28px; }
 .mm-detail:has(.mm-detail-img) { grid-template-columns: minmax(0, 1fr) 200px; }
@@ -122,6 +124,30 @@ html.teach .teach-only { display: block; }
 .mm-steps li + li { margin-top: 4px; }
 .mm-read { align-self: flex-start; margin-top: auto; display: inline-flex; align-items: center; min-height: var(--tap); color: var(--teal); font-size: 1rem; font-weight: 700; text-decoration: none; }
 .mm-read:hover { text-decoration: underline; }
+.mm-detail-tags { display: flex; gap: 8px; }
+.mm-detail .hint { align-self: flex-start; }
+
+/* Description panel. Narrow: the card under the map, only once a branch is open (no empty
+   state; recall has no panel). Wide (map area 800px+): map about two-thirds on the left, the
+   panel one-third on the right, the same height, top-aligned; long content scrolls inside the
+   panel, so the title, map and explanation stay in view together. */
+.mm-body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.mm-detail.is-empty, .mm.recall .mm-side { display: none; }
+@container (min-width: 800px) {
+  .mm-body { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); grid-template-rows: auto 1fr; align-items: stretch; }
+  .mm-map { grid-column: 1; grid-row: 1 / span 2; }
+  .mm-side { grid-column: 2; grid-row: 1 / span 2; }
+  .mm.recall .mm-tools { grid-column: 2; grid-row: 1; flex-direction: column; align-items: stretch; gap: 8px; }
+  .mm.recall .mm-side { grid-row: 2; }
+  .mm-side, .mm.recall .mm-side { position: relative; display: block; min-height: 0; }
+  .mm-detail, .mm-detail.is-empty, .mm-detail:has(.mm-detail-img) { position: absolute; inset: 0; display: flex; flex-direction: column; gap: 16px; padding: 22px 22px 18px; overflow-y: auto; overscroll-behavior: contain; }
+  .mm-detail-text { flex: 1 0 auto; min-height: 0; }
+  .mm-detail h3 { font-size: 1.5rem; line-height: 1.2; }
+  .mm-detail p { font-size: 1.125rem; line-height: 1.5; }
+  .mm-detail-img { max-width: 260px; }
+  /* Teaching mode: room at the foot of the panel for the presenter Back / Next buttons. */
+  html.teach .mm-detail { padding-bottom: 78px; }
+}
 
 .mm-list { display: none; flex-direction: column; gap: 10px; }
 .mm-acc { border: 1px solid var(--card-border); border-radius: 14px; background: var(--card); overflow: hidden; }
@@ -266,7 +292,9 @@ a.btn-line, a.btn-dark { text-decoration: none; }
 .odd-row .ico { width: 20px; height: 20px; color: var(--teal); stroke-width: 2.6; }
 
 /* Blank map */
-.mm-tools { display: flex; flex-direction: column; gap: 10px; }
+/* One row (heading, hint, status, buttons) so the map starts high enough to fit the window. */
+.mm-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.mm-tools .comp-head { flex: 1 1 auto; justify-content: flex-start; }
 .mm-status { margin-right: auto; color: var(--teal-dark); font-family: var(--f-mono); font-size: .875rem; }
 .mm-leaf.hid, .mm-acc-item.hid { border-style: dashed; border-color: #A9B9BE; background: var(--seg); color: var(--muted); font-weight: 700; }
 .mm-acc-item.hid { justify-content: flex-start; margin: 6px 0; padding: 8px 14px; border-width: 1.5px; border-radius: 10px; }

@@ -11,7 +11,7 @@
 //
 // Recall mode (blank map): items show "?" until tapped; "Reveal branch" and "Reset".
 
-import { h, fill, hint, materialDots } from "../dom.js";
+import { h, fill, hint, materialDots, materialTag } from "../dom.js";
 import { editState, imageSlot, figure as imgFigure } from "../editslot.js";
 
 const px = (n) => `${Math.round(n)}px`;
@@ -43,10 +43,10 @@ function spills(el) {
 }
 
 // Centres for a stack of heights, kept compact (gaps up to `most`) and centred on `mid`.
-function stack(heights, mid, room, most) {
+function stack(heights, mid, room, most, least = GAP) {
   const sum = heights.reduce((s, v) => s + v, 0);
   const n = heights.length;
-  const gap = n > 1 ? clamp((room - sum) / (n - 1), GAP, most) : 0;
+  const gap = n > 1 ? clamp((room - sum) / (n - 1), least, most) : 0;
   let y = mid - (sum + gap * (n - 1)) / 2;
   return heights.map((hh) => { const c = y + hh / 2; y += hh + gap; return c; });
 }
@@ -83,7 +83,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
   function measure(W, sl = 1, sb = 1) {
     map.style.setProperty("--mm-cw", px(clamp(W * .19, 120, 230)));
     map.style.setProperty("--mm-bw", px(clamp(W * .21 * sb, 112, 250)));
-    map.style.setProperty("--mm-lw", px(clamp(W * .25 * sl, 120, 300)));
+    map.style.setProperty("--mm-lw", px(clamp(W * .25 * sl, 120, 320)));
     const els = [...canvas.children];
     els.forEach((el) => { el.style.width = el.style.maxWidth = ""; el.style.left = "0px"; el.style.top = "0px"; });
     return new Map(els.map((el) => {
@@ -135,16 +135,18 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
 
   // Open: [items] [open branch] [centre] [other branches], mirrored when the branch is on the
   // right. Compact (tight maps): the centre sits above the open branch instead of beside it.
+  // Rows (last resort, compact === 2): as compact, with the other branches in rows under the
+  // centre and open branch (clear of the items, so no line crosses them).
   // Returns { H, ok }: the height it needs, and whether it fits the width.
-  function fan(W, H, pad, centre, bs, ls, compact) {
+  function fan(W, H, pad, centre, bs, ls, compact, g = GAP) {
     const ob = bs[open], others = bs.filter((_, i) => i !== open);
     const lw = Math.max(...ls.map((l) => l.w), 0), ow = Math.max(...others.map((b) => b.w), 0);
     const gapL = Math.max(36, W * .045), gapC = Math.max(28, W * .035);
-    const tall = (list) => list.reduce((s, b) => s + b.h, 0) + GAP * Math.max(0, list.length - 1) + 2 * pad;
+    const tall = (list) => list.reduce((s, b) => s + b.h, 0) + g * Math.max(0, list.length - 1) + 2 * pad;
     H = Math.max(H, tall(ls), tall(others), (compact ? centre.h + GAP * 2 + ob.h : Math.max(centre.h, ob.h)) + 2 * pad);
     const mid = H / 2;
     ls.forEach((l) => { l.x = pad + lw - l.w / 2; });          // right-aligned, so the fan lines are even
-    stack(ls.map((l) => l.h), mid, H - 2 * pad, 22).forEach((y, j) => { ls[j].y = y; });
+    stack(ls.map((l) => l.h), mid, H - 2 * pad, 22, g).forEach((y, j) => { ls[j].y = y; });
     if (compact) {
       const col = Math.max(ob.w, centre.w);
       ob.x = centre.x = pad + lw + gapL + col / 2;
@@ -155,9 +157,21 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
       centre.x = ob.x + ob.w / 2 + gapC + centre.w / 2; centre.y = mid;
     }
     others.forEach((b) => { b.x = W - pad - b.w / 2; });
-    stack(others.map((b) => b.h), mid, H - 2 * pad, 40).forEach((y, k) => { others[k].y = y; });
+    stack(others.map((b) => b.h), mid, H - 2 * pad, 40, g).forEach((y, k) => { others[k].y = y; });
     const right = Math.max(centre.x + centre.w / 2, ob.x + ob.w / 2);
-    const ok = others.every((b) => b.x - b.w / 2 >= right + gapC) && right <= W - pad;
+    let ok = others.every((b) => b.x - b.w / 2 >= right + gapC) && right <= W - pad;
+    if (compact === 2) {
+      const x0 = pad + lw + gapL;                       // the column beside the items
+      ob.y = centre.y + centre.h / 2 + GAP * 2 + ob.h / 2;
+      let x = x0, y = ob.y + ob.h / 2 + GAP * 3, rowH = 0;
+      others.forEach((b) => {
+        if (x > x0 && x + b.w > W - pad) { x = x0; y += rowH + g; rowH = 0; }
+        b.x = x + b.w / 2; b.y = y + b.h / 2; x += b.w + GAP; rowH = Math.max(rowH, b.h);
+      });
+      H = Math.max(H, tall(ls), y + rowH + pad);
+      stack(ls.map((l) => l.h), H / 2, H - 2 * pad, 22, g).forEach((yy, j) => { ls[j].y = yy; });
+      ok = right <= W - pad && others.every((b) => b.x + b.w / 2 <= W - pad);
+    }
     if (Math.cos(angle(open)) > 1e-6) [...ls, ...bs, centre].forEach((b) => { b.x = W - b.x; });
     return { H, ok };
   }
@@ -167,23 +181,39 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     if (!W || getComputedStyle(map).display === "none") return;
     laidW = W;
     const pad = Math.max(12, W * .02);
-    const base = Math.max(360, W * 520 / 864);
+    // Beside the panel (wide screens), the map keeps to the window's height below its top, so the
+    // stage title, map and panel are seen together without scrolling; stacks may close up to 8px.
+    const beside = map.offsetWidth < root.clientWidth - 40;
+    const room = window.innerHeight - (map.getBoundingClientRect().top + window.scrollY) - 16;
+    const g = beside ? 8 : GAP;
+    const base = beside && room >= 320 ? Math.min(Math.max(360, W * 520 / 864), room) : Math.max(360, W * 520 / 864);
     let boxes, H = base;
-    // Shrink the item column first, so branch labels keep to two lines where possible.
-    const tries = open === null ? [[1, 1]]
-      : [[1, 1], [.85, 1], [.72, 1], [.6, 1], [.85, 1, 1], [.6, 1, 1], [.6, .88, 1], [.6, .76, 1]];
-    for (const [sl, sb, compact] of tries) {
-      boxes = measure(W, sl, sb);
+    if (open === null) {
+      boxes = measure(W);
       const centre = boxes.get(canvas.querySelector(".mm-centre"));
       const bs = [...canvas.querySelectorAll(".mm-branch")].map((el) => boxes.get(el));
-      if (open === null) {
-        for (H = Math.max(base, centre.h + 2 * pad); H < base * 3; H *= 1.08) if (ring(W, H, pad, centre, bs)) break;
-        break;
+      for (H = Math.max(base, centre.h + 2 * pad); H < base * 3; H *= 1.08) if (ring(W, H, pad, centre, bs)) break;
+    } else {
+      // Open: try item-column widths (sl), branch widths (sb), side by side or compact, and keep
+      // the shortest layout that fits the width. Branch labels are only narrowed as a last resort.
+      const tries = [[1.3, 1], [1, 1], [.85, 1], [.72, 1], [.6, 1],
+        [1.3, 1, 1], [1, 1, 1], [.85, 1, 1], [.6, 1, 1], [.6, .88, 1], [.6, .76, 1],
+        [1, 1, 2], [.72, 1, 2], [.6, .88, 2]];
+      let best = null;
+      for (const [sl, sb, compact] of tries) {
+        const bx = measure(W, sl, sb);
+        const centre = bx.get(canvas.querySelector(".mm-centre"));
+        const bs = [...canvas.querySelectorAll(".mm-branch")].map((el) => bx.get(el));
+        const ls = [...canvas.querySelectorAll(".mm-leaf")].map((el) => bx.get(el));
+        const f = fan(W, base, pad, centre, bs, ls, compact, g);
+        const plan = { ok: f.ok, H: f.H, sl, sb, compact, pos: [...bx.values()].map((b) => [b.el, b.x, b.y, b.w]) };
+        if (!best || (plan.ok && (!best.ok || plan.H < best.H - 1))) best = plan;
+        if (plan.ok && plan.H <= base) break;            // fits the room already: no need to look further
       }
-      const ls = [...canvas.querySelectorAll(".mm-leaf")].map((el) => boxes.get(el));
-      const f = fan(W, base, pad, centre, bs, ls, compact);
-      H = f.H;
-      if (f.ok) break;
+      // Re-measure at the chosen sizes so every node has the width it was planned with.
+      boxes = measure(W, best.sl, best.sb);
+      best.pos.forEach(([el, x, y, w]) => { const b = boxes.get(el); b.x = x; b.y = y; el.style.width = px(w); el.style.maxWidth = "none"; });
+      H = best.H;
     }
     map.style.height = px(H);
     boxes.forEach((b) => { b.el.style.left = px(b.x); b.el.style.top = px(b.y); });
@@ -196,7 +226,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     const it = chunks[i].items[j];
     const hid = recall && !shown.has(key(i, j));
     return h("button", {
-      type: "button", class: cls + (hid ? " hid" : "") + (!recall && sel === j && open === i ? " sel" : ""),
+      type: "button", class: cls + (hid ? " hid" : "") + (!hid && sel === j && open === i ? " sel" : ""),
       "data-key": `l${i}-${j}`,
       "aria-pressed": recall ? null : String(sel === j && open === i),
       "aria-label": hid ? `Hidden item ${j + 1} of ${chunks[i].items.length}. Tap to reveal.` : null,
@@ -221,7 +251,8 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
       if (!isOpen) return;
       c.items.forEach((_, j) => {
         const leaf = leafButton(i, j, "mm-node mm-leaf", () => {
-          if (recall) shown.add(key(i, j));
+          // Recall: the first tap reveals the item, and the panel shows it.
+          if (recall && !shown.has(key(i, j))) { shown.add(key(i, j)); sel = j; }
           else sel = sel === j ? null : j;
           draw();
         });
@@ -233,7 +264,8 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     if (recall) {
       status.textContent = open === null ? "" : `${chunks[open].label} · ${found(open)} of ${chunks[open].items.length} found`;
       revealBtn.disabled = open === null || found(open) === chunks[open].items.length;
-    } else showDetail();
+    }
+    showDetail();
     drawList();
     layout();
     if (focused) root.querySelector(`[data-key="${focused}"]`)?.focus();
@@ -270,7 +302,8 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
   function itemDetail(it, c) {
     return [
       h("div", { class: "mm-detail-text" },
-        h("h3", {}, it.term, materialDots(it.tags)),
+        h("h3", {}, it.term),
+        materialTag(it.tags) && h("div", { class: "mm-detail-tags" }, materialTag(it.tags)),
         h("p", {}, it.text),
         it.steps && h("ol", { class: "mm-steps" }, it.steps.map((s) => h("li", {}, s))),
         h("a", { class: "mm-read", href: chunkHref(c) }, "Read this chunk ↓")),
@@ -280,17 +313,20 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     ];
   }
 
+  // The description panel: beside the map on wide screens, under it on narrower ones (the
+  // empty state and the recall panel only show beside the map; see components.css).
   function showDetail() {
-    detail.hidden = open === null;
-    if (open === null) return fill(detail, );
-    const c = chunks[open];
-    detail.className = "mm-detail card" + (sel !== null ? " is-item" : "");
-    fill(detail, ...(sel === null
-      ? [h("div", { class: "mm-detail-text" },
-          h("h3", {}, c.label),
-          h("p", {}, c.summary),
-          h("a", { class: "mm-read", href: chunkHref(c) }, "Read this chunk ↓"))]
-      : itemDetail(c.items[sel], c)).filter(Boolean));
+    const c = open === null ? null : chunks[open];
+    const it = c && sel !== null ? c.items[sel] : null;
+    detail.className = "mm-detail card" + (it ? " is-item" : c ? " is-branch" : " is-empty");
+    if (!c) return fill(detail, h("div", { class: "mm-detail-text" },
+      hint("tap", recall ? "Open a branch, then tap ?" : "Tap a branch, then an item")));
+    if (!it) return fill(detail, h("div", { class: "mm-detail-text" },
+      h("h3", {}, c.label),
+      !recall && h("p", {}, c.summary),
+      hint(recall ? "brain" : "tap", recall ? "Say it, then tap ?" : "Tap an item"),
+      !recall && h("a", { class: "mm-read", href: chunkHref(c) }, "Read this chunk ↓")));
+    fill(detail, ...itemDetail(it, c).filter(Boolean));
   }
 
   // Narrow screens: accordion of branches; in teach mode each item opens in place,
@@ -321,11 +357,14 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     }));
   }
 
+  // Recall tools sit above the map on narrow screens, and at the top of the panel column beside it.
   const root = h("div", { class: "mm" + (recall ? " recall" : "") },
-    recall && h("div", { class: "mm-tools" },
-      h("div", { class: "comp-head" }, h("h2", {}, "Rebuild the map"), hint("brain", "Say it, then tap ?")),
-      h("div", { class: "btn-row" }, status, h("span", { class: "mm-map-only" }, revealBtn), resetBtn)),
-    map, !recall && detail, list);
+    h("div", { class: "mm-body" },
+      recall && h("div", { class: "mm-tools" },
+        h("div", { class: "comp-head" }, h("h2", {}, "Rebuild the map"), hint("brain", "Say it, then tap ?")),
+        h("div", { class: "btn-row" }, status, h("span", { class: "mm-map-only" }, revealBtn), resetBtn)),
+      map, h("div", { class: "mm-side" }, detail)),
+    list);
   // Lay out again only when the width changes (the height is ours to set).
   new ResizeObserver(() => { if (canvas.clientWidth !== laidW) layout(); else drawLines(); }).observe(canvas);
 
@@ -336,6 +375,8 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
   const relayout = () => { laidW = 0; layout(); };
   const onFonts = () => { if (gone()) document.fonts.removeEventListener("loadingdone", onFonts); else relayout(); };
   const teachWatch = new MutationObserver(() => { if (gone()) teachWatch.disconnect(); else relayout(); });
+  const onResize = () => { if (gone()) window.removeEventListener("resize", onResize); else relayout(); };
+  window.addEventListener("resize", onResize);           // the window's height sets the map's room
   document.fonts?.ready.then(relayout);
   document.fonts?.addEventListener("loadingdone", onFonts);
   teachWatch.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
