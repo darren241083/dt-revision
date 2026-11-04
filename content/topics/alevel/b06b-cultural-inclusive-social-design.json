@@ -1,0 +1,882 @@
+{
+  "id": "b06b-cultural-inclusive-social-design",
+  "level": "alevel",
+  "title": "Cultural, inclusive and social design",
+  "titleMark": "social design",
+  "short": "Cultural, inclusive and social",
+  "spec": ["3.2.3"],
+  "section": "2",
+  "materials": [],
+  "book": {
+    "title": "My Revision Notes: AQA A Level Design and Technology: Product Design",
+    "pages": "129–131"
+  },
+  "audio": null,
+  "needs": [
+    "Explain why products must be culturally acceptable, and what designers research.",
+    "Define inclusive design and give examples of it.",
+    "Give products that address social problems, poverty, health and wellbeing.",
+    "Describe how designers and organisations meet the needs of migrants, including housing.",
+    "Explain what Fairtrade is and what the Fairtrade mark shows."
+  ],
+  "doNow": [
+    {
+      "q": "Name two things designers research so a product is culturally acceptable.",
+      "a": "How different genders see it; what its colour means in different countries; religious beliefs, traditions and customs.",
+      "from": "Pre-read p129"
+    },
+    {
+      "q": "What does the Fairtrade mark on a product show?",
+      "a": "The product qualifies as Fairtrade: it is certified as fairly traded.",
+      "from": "Pre-read p131"
+    },
+    {
+      "q": "Give one thing Lego is doing as part of its corporate social responsibility.",
+      "a": "Aiming for 100% renewable energy, only sustainable raw materials by 2030, or working with WWF to cut emissions.",
+      "from": "3.2.3"
+    },
+    {
+      "q": "What does the FSC scheme make sure of?",
+      "a": "That timber is used sustainably: it comes from responsibly managed sources.",
+      "from": "3.2.3"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I arrive flat-packed.",
+      "You can put me up without any tools.",
+      "I sleep five people and have solar-powered electrics."
+    ],
+    "answer": "Better Shelter",
+    "options": [
+      "Better Shelter",
+      "Hospitainer",
+      "Adiff clothing",
+      "Solar cooker"
+    ]
+  },
+  "chunks": [
+    {
+      "id": "culture",
+      "label": "Cultural acceptability",
+      "icon": "globe",
+      "pages": "129",
+      "summary": "Products must not offend customers at home or abroad.",
+      "items": [
+        {
+          "term": "Avoiding offence",
+          "tags": [],
+          "text": "Products must not offend people in domestic or global markets."
+        },
+        {
+          "term": "Cost of offence",
+          "tags": [],
+          "text": "Offended, alienated customers bring a financial cost and wider harm."
+        },
+        {
+          "term": "Genders",
+          "tags": [],
+          "text": "Research how different genders perceive the product."
+        },
+        {
+          "term": "Colour",
+          "tags": [],
+          "text": "A colour can mean different things in different countries."
+        },
+        {
+          "term": "Beliefs and customs",
+          "tags": [],
+          "text": "Religious beliefs, traditions and customs may be outside the designer's experience."
+        },
+        {
+          "term": "User research",
+          "tags": [],
+          "text": "Involve the communities concerned and avoid stereotypes or disrespectful symbols."
+        }
+      ],
+      "check": [
+        {
+          "q": "Why does offending customers matter to a business?",
+          "a": "Offended, alienated customers bring a financial cost and other wider disadvantages."
+        },
+        {
+          "q": "Why must designers research the colour of a product before selling it abroad?",
+          "a": "A colour can have a different cultural meaning in different countries."
+        }
+      ]
+    },
+    {
+      "id": "inclusive",
+      "label": "Inclusive design",
+      "icon": "access",
+      "pages": "129–130",
+      "summary": "Mainstream products that as many people as possible can use.",
+      "items": [
+        {
+          "term": "Inclusive design",
+          "tags": [],
+          "text": "Mainstream products usable by as many people as possible without special adaptation (BSI)."
+        },
+        {
+          "term": "Disability Discrimination Act (1995)",
+          "tags": [],
+          "text": "The DDA changed public transport, access and many other areas."
+        },
+        {
+          "term": "Without stigma",
+          "tags": [],
+          "text": "Suit a diverse range of people without singling anyone out."
+        },
+        {
+          "term": "In the home",
+          "tags": [],
+          "text": "Wider doors for wheelchairs in new houses and OXO Good Grips easy-to-use utensils."
+        },
+        {
+          "term": "Getting about",
+          "tags": [],
+          "text": "Low-floor buses, bright-yellow handrails, crossings with bumps, ramps and sensory feedback."
+        },
+        {
+          "term": "Hearing induction loops",
+          "tags": [],
+          "text": "In theatres, for audience members with a hearing impairment."
+        },
+        {
+          "term": "Specialist products",
+          "tags": [],
+          "text": "Kettle pourers and door handle adapters, sold by specialist shops."
+        }
+      ],
+      "check": [
+        {
+          "q": "What is inclusive design?",
+          "a": "Designing mainstream products that as many people as reasonably possible can use, without special adaptation."
+        },
+        {
+          "q": "Give two examples of inclusive design on public transport or in the street.",
+          "a": "Low-floor buses for wheelchairs, bright-yellow handrails, or crossings with raised bumps, ramps and sensory feedback."
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Social problems",
+      "icon": "people",
+      "pages": "130",
+      "summary": "Products whose design and manufacture tackle social issues.",
+      "items": [
+        {
+          "term": "Social issues",
+          "tags": [],
+          "text": "Issues affecting people: environment, health, poverty, discrimination, unemployment."
+        },
+        {
+          "term": "Child-friendly litter bins",
+          "tags": [],
+          "text": "Innovative bin designs encourage children to adopt good habits."
+        },
+        {
+          "term": "Black box devices",
+          "tags": [],
+          "text": "Car insurance companies use them to monitor young drivers."
+        },
+        {
+          "term": "Police scanning devices",
+          "tags": [],
+          "text": "Detect illegal drugs and explosives."
+        },
+        {
+          "term": "Local context",
+          "tags": [],
+          "text": "Solutions must not rely on resources or maintenance that aren't available locally."
+        }
+      ],
+      "check": [
+        {
+          "q": "What are social issues?",
+          "a": "Issues affecting people, such as the environment, health, poverty, discrimination and unemployment."
+        },
+        {
+          "q": "Give one product designed to address a social issue.",
+          "a": "Child-friendly litter bins, black box devices for young drivers, or police scanners for drugs and explosives."
+        }
+      ]
+    },
+    {
+      "id": "poverty",
+      "label": "Poverty, health and wellbeing",
+      "icon": "health",
+      "pages": "130",
+      "summary": "Designers responding to the right to an adequate standard of living.",
+      "items": [
+        {
+          "term": "UN Article 25 (1948)",
+          "tags": [],
+          "text": "Everyone's right to food, clothing, housing and medical care for health and well-being."
+        },
+        {
+          "term": "Wind-up radio",
+          "tags": [],
+          "text": "A radio needing no batteries, by Trevor Bayliss, for parts of Africa short of them."
+        },
+        {
+          "term": "GravityLight",
+          "tags": [],
+          "text": "LED lighting replacing dangerous, costly kerosene lamps in Kenya."
+        },
+        {
+          "term": "Practical Action",
+          "tags": [],
+          "text": "An NGO giving appropriate, technological 'open design' answers to poverty."
+        },
+        {
+          "term": "da Vinci system",
+          "tags": [],
+          "text": "A robotic surgery system by Intuitive Surgical, for advanced, safe surgery."
+        },
+        {
+          "term": "Touch Bionics",
+          "tags": [],
+          "text": "Improved prostheses using advanced composites, motors and control systems."
+        },
+        {
+          "term": "3D printed implants",
+          "tags": [],
+          "text": "The NHS uses 3D printed polymer implants to repair skull injuries."
+        }
+      ],
+      "check": [
+        {
+          "q": "What problem did the wind-up radio solve?",
+          "a": "A lack of radio batteries in parts of Africa: it needs no batteries."
+        },
+        {
+          "q": "How does the NHS use 3D printing to improve health?",
+          "a": "It makes 3D printed polymer implants to repair skull injuries."
+        }
+      ]
+    },
+    {
+      "id": "migration",
+      "label": "Migration",
+      "icon": "migration",
+      "pages": "130–131",
+      "summary": "Meeting the basic needs of destitute migrants.",
+      "items": [
+        {
+          "term": "Temporary communities",
+          "tags": [],
+          "text": "Conflict, poverty and victimisation leave huge communities of destitute migrants."
+        },
+        {
+          "term": "Humanitarian organisations and NGOs",
+          "tags": [],
+          "text": "Provide basic infrastructure for these temporary communities."
+        },
+        {
+          "term": "Solar cookers",
+          "tags": [],
+          "text": "From the UNHCR, for preparing food."
+        },
+        {
+          "term": "Water distillation",
+          "tags": [],
+          "text": "Technology from SunDwater, for clean water."
+        },
+        {
+          "term": "Adiff clothing",
+          "tags": [],
+          "text": "Multi-purpose clothing by Angela Luna that becomes a shelter."
+        },
+        {
+          "term": "Hospitainers and maternitainers",
+          "tags": [],
+          "text": "Adapted shipping containers for medical care, from the UNFPA."
+        }
+      ],
+      "check": [
+        {
+          "q": "Why do humanitarian organisations need to provide basic infrastructure?",
+          "a": "Conflict, poverty and victimisation create huge temporary communities of destitute migrants."
+        },
+        {
+          "q": "What are hospitainers?",
+          "a": "Shipping containers adapted to give medical care, from the UNFPA."
+        }
+      ]
+    },
+    {
+      "id": "housing",
+      "label": "Housing",
+      "icon": "home",
+      "pages": "131",
+      "summary": "Temporary homes for refugee crises.",
+      "items": [
+        {
+          "term": "Temporary accommodation",
+          "tags": [],
+          "text": "One of the key needs in a refugee crisis."
+        },
+        {
+          "term": "Better Shelter",
+          "tags": [],
+          "text": "The Ikea Foundation's flat-pack shelter, made to meet that need."
+        },
+        {
+          "term": "No tools",
+          "tags": [],
+          "text": "It can be put up without any tools."
+        },
+        {
+          "term": "Sleeps five",
+          "tags": [],
+          "text": "Each shelter sleeps five people."
+        },
+        {
+          "term": "Well insulated",
+          "tags": [],
+          "text": "The shelter is well insulated."
+        },
+        {
+          "term": "Solar power",
+          "tags": [],
+          "text": "A solar-powered electrical system."
+        }
+      ],
+      "check": [
+        {
+          "q": "Who made the flat-pack Better Shelter?",
+          "a": "The Ikea Foundation."
+        },
+        {
+          "q": "Give three features of the Better Shelter.",
+          "a": "Put up without tools, sleeps five, well insulated, solar-powered electrical system."
+        }
+      ]
+    },
+    {
+      "id": "fairtrade",
+      "label": "Fairtrade",
+      "icon": "trade",
+      "pages": "131",
+      "summary": "Ethical treatment of farmers and workers in developing countries.",
+      "items": [
+        {
+          "term": "Fairtrade",
+          "tags": [],
+          "text": "A movement for the ethical treatment of farmers and workers in developing countries."
+        },
+        {
+          "term": "Fair prices",
+          "tags": [],
+          "text": "The Fairtrade organisation negotiates fair prices with buyers."
+        },
+        {
+          "term": "Fairtrade mark",
+          "tags": [],
+          "text": "A certification label shown on qualifying products."
+        },
+        {
+          "term": "Traidcraft",
+          "tags": [],
+          "text": "A Fairtrade organisation selling ethically sourced products."
+        },
+        {
+          "term": "Fairtrade status",
+          "tags": [],
+          "text": "Schools and councils seek it to promote sustainable development, producer benefits, active citizenship and demand."
+        },
+        {
+          "term": "Pushpanjali",
+          "tags": [],
+          "text": "A Fairtrade organisation in India giving craftspeople sustainable work and social benefits."
+        },
+        {
+          "term": "Effect on design",
+          "tags": [],
+          "text": "Shoppers recognise the scheme, so it affects material choice, branding and demand."
+        }
+      ],
+      "check": [
+        {
+          "q": "What does the Fairtrade organisation do for producers?",
+          "a": "Negotiates fair prices for their products with buyers."
+        },
+        {
+          "q": "Why might a school seek Fairtrade status?",
+          "a": "To promote sustainable development, benefits for producers, active citizenship and demand for Fairtrade food and craft."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Cultural acceptability",
+      "def": "A product that doesn't offend people's culture, beliefs or customs."
+    },
+    {
+      "term": "Inclusive design",
+      "def": "Mainstream products usable by as many people as reasonably possible, with no special adaptation."
+    },
+    {
+      "term": "Disability Discrimination Act",
+      "def": "1995 law that changed public transport and access."
+    },
+    {
+      "term": "Hearing induction loop",
+      "def": "Helps people with a hearing impairment hear in places such as theatres."
+    },
+    {
+      "term": "Social issues",
+      "def": "Issues affecting people, such as health, poverty and unemployment."
+    },
+    {
+      "term": "NGO",
+      "def": "Non-governmental organisation, such as Practical Action."
+    },
+    {
+      "term": "Open design",
+      "def": "Practical Action's appropriate, technological solutions to poverty."
+    },
+    {
+      "term": "Hospitainer",
+      "def": "A shipping container adapted to give medical care."
+    },
+    {
+      "term": "Better Shelter",
+      "def": "The Ikea Foundation's flat-pack shelter for refugees."
+    },
+    {
+      "term": "Fairtrade",
+      "def": "A movement for the ethical treatment of farmers and workers in developing countries."
+    },
+    {
+      "term": "Fairtrade mark",
+      "def": "The certification label on qualifying Fairtrade products."
+    }
+  ],
+  "apply": [
+    {
+      "q": "A company plans to sell its new range of kitchenware in several countries and is choosing the colours.",
+      "tools": [
+        "Research what each colour means in every market",
+        "Use the home market's colours everywhere",
+        "Apply for the Fairtrade mark",
+        "Fit hearing induction loops in its shops"
+      ],
+      "tool": 0,
+      "reasons": [
+        "A colour can mean different things in different countries, and offended customers cost the business money",
+        "It keeps the product the same in every country",
+        "It shows farmers and workers were treated ethically",
+        "It helps customers with a hearing impairment"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A city is ordering new trams that wheelchair users and people with poor eyesight must be able to use.",
+      "tools": [
+        "Low floors and bright-yellow handrails",
+        "Kettle pourers from a specialist shop",
+        "Black box devices",
+        "Flat-pack shelters"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Low floors suit wheelchairs and the handrails are highly visible, so one mainstream tram suits more people",
+        "They help people pour a kettle safely",
+        "They let insurers monitor young drivers",
+        "They can be put up without tools"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "An aid agency needs to set up medical care quickly at a new refugee camp.",
+      "tools": [
+        "Hospitainers",
+        "Wind-up radios",
+        "Child-friendly litter bins",
+        "Solar cookers"
+      ],
+      "tool": 0,
+      "reasons": [
+        "They are shipping containers adapted to give medical care where it's needed",
+        "They need no batteries",
+        "They help children adopt good habits",
+        "They are used for preparing food"
+      ],
+      "reason": 0
+    }
+  ],
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      {
+        "n": "Wind-up radio",
+        "why": "The only one not designed for refugees and migrants."
+      },
+      {
+        "n": "Solar cooker",
+        "why": "The only one for preparing food."
+      },
+      {
+        "n": "Hospitainer",
+        "why": "The only one made from an adapted shipping container."
+      },
+      {
+        "n": "Better Shelter",
+        "why": "The only one that comes flat-packed."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Why must companies avoid creating offensive products?",
+      "options": [
+        "Offended customers bring a financial cost and other disadvantages",
+        "Offensive products are always illegal",
+        "They cost more to manufacture",
+        "They can't carry the Fairtrade mark"
+      ],
+      "answer": 0,
+      "why": "Alienating customers costs the business money and causes wider problems.",
+      "chunk": "culture"
+    },
+    {
+      "q": "The colour of a product can have a different cultural meaning in different countries.",
+      "tf": true,
+      "why": "Designers research what colours mean in each country they sell to.",
+      "chunk": "culture"
+    },
+    {
+      "q": "Designers only need to think about the culture of their home market.",
+      "tf": false,
+      "why": "Products must be acceptable in global markets as well as domestic ones.",
+      "chunk": "culture"
+    },
+    {
+      "q": "Which organisation's definition of inclusive design is used?",
+      "options": [
+        "The BSI",
+        "The UNHCR",
+        "The NHS",
+        "The WWF"
+      ],
+      "answer": 0,
+      "why": "The British Standards Institution (BSI) defines inclusive design.",
+      "chunk": "inclusive"
+    },
+    {
+      "q": "Inclusive design means making a special adapted version of a product for each user.",
+      "tf": false,
+      "why": "It means mainstream products usable by as many people as possible without special adaptation.",
+      "chunk": "inclusive"
+    },
+    {
+      "q": "Which law, from 1995, has affected public transport and accessibility?",
+      "options": [
+        "The Disability Discrimination Act",
+        "The Consumer Protection Act",
+        "The Sale of Goods Act",
+        "The Copyright, Designs and Patents Act"
+      ],
+      "answer": 0,
+      "why": "The DDA (1995) has made an impact on many areas, such as public transport and access.",
+      "chunk": "inclusive"
+    },
+    {
+      "q": "Who do hearing induction loops in theatres help?",
+      "options": [
+        "Audience members with a hearing impairment",
+        "Wheelchair users",
+        "Young drivers",
+        "Refugees"
+      ],
+      "answer": 0,
+      "why": "Induction loops are for audience members with a hearing impairment.",
+      "chunk": "inclusive"
+    },
+    {
+      "q": "OXO's Good Grips range is an example of inclusive design.",
+      "tf": true,
+      "why": "The award-winning range of kitchen utensils is designed to be easy to use.",
+      "chunk": "inclusive"
+    },
+    {
+      "q": "Which is a social issue?",
+      "options": [
+        "Unemployment",
+        "Tensile strength",
+        "Batch production",
+        "Anthropometrics"
+      ],
+      "answer": 0,
+      "why": "Social issues affect people: environment, health, poverty, discrimination and unemployment.",
+      "chunk": "social"
+    },
+    {
+      "q": "Why do car insurance companies use 'black box' devices?",
+      "options": [
+        "To monitor young drivers",
+        "To detect explosives",
+        "To power the car's lights",
+        "To find the car's colour"
+      ],
+      "answer": 0,
+      "why": "The device monitors how young drivers drive.",
+      "chunk": "social"
+    },
+    {
+      "q": "A solution to a social problem should rely on maintenance that isn't available locally.",
+      "tf": false,
+      "why": "Designers must understand the local context and avoid solutions that depend on unavailable resources or maintenance.",
+      "chunk": "social"
+    },
+    {
+      "q": "Which right does Article 25 of the UN Declaration of Human Rights (1948) give everyone?",
+      "options": [
+        "A standard of living adequate for health and well-being",
+        "Free access to the internet",
+        "A job in manufacturing",
+        "A patent on their designs"
+      ],
+      "answer": 0,
+      "why": "It includes food, clothing, housing and medical care.",
+      "chunk": "poverty"
+    },
+    {
+      "q": "Which design replaces dangerous, expensive kerosene lamps in Kenya?",
+      "options": [
+        "GravityLight",
+        "The wind-up radio",
+        "The da Vinci system",
+        "The Better Shelter"
+      ],
+      "answer": 0,
+      "why": "The GravityLight Foundation's LED lighting tackles the danger and cost of kerosene lamps.",
+      "chunk": "poverty"
+    },
+    {
+      "q": "Touch Bionics makes improved prostheses using advanced composites, motors and control systems.",
+      "tf": true,
+      "why": "Its prosthetic limbs are a design response to a health challenge.",
+      "chunk": "poverty"
+    },
+    {
+      "q": "What does the NHS use to repair skull injuries?",
+      "options": [
+        "3D printed polymer implants",
+        "Robotic surgery only",
+        "Adapted shipping containers",
+        "Wind-up devices"
+      ],
+      "answer": 0,
+      "why": "The NHS repairs skull injuries with 3D printed polymer implants.",
+      "chunk": "poverty"
+    },
+    {
+      "q": "Which design need does SunDwater's technology meet?",
+      "options": [
+        "Clean water",
+        "Food preparation",
+        "Clothing",
+        "Medical care"
+      ],
+      "answer": 0,
+      "why": "SunDwater uses water distillation technology for clean water.",
+      "chunk": "migration"
+    },
+    {
+      "q": "Angela Luna's Adiff range is multi-purpose clothing that can also be a shelter.",
+      "tf": true,
+      "why": "It is multi-purpose: clothing that also works as a shelter.",
+      "chunk": "migration"
+    },
+    {
+      "q": "Who supplies solar cookers for food preparation in refugee communities?",
+      "options": [
+        "The UNHCR",
+        "The UNFPA",
+        "Traidcraft",
+        "Touch Bionics"
+      ],
+      "answer": 0,
+      "why": "The United Nations High Commissioner for Refugees (UNHCR) responded with solar cookers.",
+      "chunk": "migration"
+    },
+    {
+      "q": "The Better Shelter needs special tools to put up.",
+      "tf": false,
+      "why": "It can be erected without tools.",
+      "chunk": "housing"
+    },
+    {
+      "q": "How many people does a Better Shelter sleep?",
+      "options": [
+        "Five",
+        "Two",
+        "Ten",
+        "Twenty"
+      ],
+      "answer": 0,
+      "why": "Each flat-pack shelter sleeps five people.",
+      "chunk": "housing"
+    },
+    {
+      "q": "What does the Fairtrade organisation negotiate with buyers?",
+      "options": [
+        "Fair prices for products",
+        "Lower prices for shoppers",
+        "Faster delivery times",
+        "Patents for farmers"
+      ],
+      "answer": 0,
+      "why": "It secures fair prices so farmers and workers are treated ethically.",
+      "chunk": "fairtrade"
+    },
+    {
+      "q": "Schools and local authorities can seek Fairtrade status.",
+      "tf": true,
+      "why": "They do it to promote sustainable development, producer benefits, active citizenship and demand.",
+      "chunk": "fairtrade"
+    },
+    {
+      "q": "Where is the Fairtrade organisation Pushpanjali?",
+      "options": [
+        "India",
+        "Kenya",
+        "Brazil",
+        "China"
+      ],
+      "answer": 0,
+      "why": "Pushpanjali gives craftspeople in India sustainable work and social benefits.",
+      "chunk": "fairtrade"
+    }
+  ],
+  "written": [
+    {
+      "type": "explain",
+      "q": "A company is about to sell a new product in several countries. Explain why its designers must consider cultural acceptability.",
+      "marks": 4,
+      "points": [
+        "Offensive products offend and alienate potential customers…",
+        "…which brings a financial cost and wider disadvantages for the business.",
+        "A colour can have a different cultural meaning in different countries.",
+        "Different genders may see the product differently.",
+        "Religious beliefs, traditions and customs may be outside the designer's own experience…",
+        "…so they need research, involving people from those communities."
+      ],
+      "model": "If the product offends people, customers are alienated, which brings a financial cost and wider disadvantages for the business. The designers need to research what its colours mean in each country, because a colour can mean different things in different places. Religious beliefs, traditions and customs may be outside their own experience, so they should involve people from those communities in their research.",
+      "note": "1 mark per point or explanation, up to 4."
+    },
+    {
+      "type": "describe",
+      "q": "Describe two examples of inclusive design and who each one helps.",
+      "marks": 4,
+      "points": [
+        "Wider doors in new houses…",
+        "…so wheelchair users can get through.",
+        "Low-floor buses…",
+        "…so wheelchair users can get on.",
+        "Hearing induction loops in theatres…",
+        "…for audience members with a hearing impairment.",
+        "OXO Good Grips kitchen utensils…",
+        "…easy to use for as many people as possible."
+      ],
+      "model": "Hearing induction loops are fitted in theatres, so audience members with a hearing impairment can follow the performance. Low-floor buses let wheelchair users get on without needing a special vehicle.",
+      "note": "1 mark for each example and 1 for who it helps, up to 4."
+    },
+    {
+      "type": "explain",
+      "q": "Explain two ways designers and organisations have met the needs of migrants in temporary communities.",
+      "marks": 4,
+      "points": [
+        "The UNHCR's solar cookers…",
+        "…meet the need for food preparation.",
+        "SunDwater's water distillation technology…",
+        "…meets the need for clean water.",
+        "Angela Luna's Adiff multi-purpose clothing…",
+        "…meets the need for clothing and can become a shelter.",
+        "The Ikea Foundation's flat-pack Better Shelter…",
+        "…meets the need for temporary accommodation.",
+        "The UNFPA's hospitainers and maternitainers…",
+        "…adapted shipping containers that give medical care."
+      ],
+      "model": "The UNHCR provides solar cookers, which meet the need for food preparation in temporary communities. The Ikea Foundation designed the flat-pack Better Shelter to meet the need for temporary accommodation: it can be put up without tools and sleeps five people.",
+      "note": "1 mark for each example and 1 for explaining the need it meets, up to 4."
+    },
+    {
+      "type": "compare",
+      "q": "Compare the wind-up radio and the GravityLight as design responses to poverty.",
+      "marks": 4,
+      "points": [
+        "Both remove the need for supplies that are scarce or costly.",
+        "Both avoid relying on resources that aren't available locally.",
+        "The wind-up radio needs no batteries; the GravityLight replaces kerosene lamps.",
+        "The radio tackled a lack of batteries in parts of Africa; the light tackles the danger and expense of kerosene in Kenya.",
+        "The radio was by Trevor Bayliss; the light by the GravityLight Foundation."
+      ],
+      "model": "Both designs remove the need for supplies that are scarce or costly, so they don't rely on resources that aren't available locally. The wind-up radio needs no batteries, which tackled a lack of batteries in parts of Africa, while the GravityLight gives LED lighting to replace dangerous, expensive kerosene lamps in Kenya.",
+      "note": "1 mark per valid comparison point, up to 4."
+    },
+    {
+      "type": "evaluate",
+      "q": "Evaluate how far inclusive design can meet the needs of every user of an everyday product such as a kettle.",
+      "marks": 6,
+      "points": [
+        "Inclusive design aims for mainstream products usable by as many people as reasonably possible.",
+        "Users don't need special adaptation, so no one is stigmatised.",
+        "It considers differences in age, strength, dexterity, reach, vision, hearing, cognition and mobility.",
+        "Examples such as OXO Good Grips show everyday products can be easy to use for more people.",
+        "It doesn't mean every product suits every person: the designer defines the user group and reduces the main barriers.",
+        "Some people still need specialist products, such as kettle pourers from specialist shops.",
+        "Justified conclusion, e.g. it can meet most users' needs, but specialist products are still needed for some."
+      ],
+      "model": "Inclusive design aims to make mainstream products, such as a kettle, usable by as many people as reasonably possible, without special adaptation, so no one is stigmatised. It considers differences in age, strength, dexterity, reach, vision and mobility, and products like OXO Good Grips show that everyday items can be easy for more people to use. However, it doesn't mean every product can suit every person: the designer defines a user group and reduces the main barriers, so some people still need specialist products such as kettle pourers. Inclusive design can meet most users' needs, but not everyone's, so specialist products are still needed.",
+      "levels": [
+        {
+          "level": 3,
+          "marks": "5–6",
+          "text": "Detailed, balanced points on both sides, with a justified conclusion."
+        },
+        {
+          "level": 2,
+          "marks": "3–4",
+          "text": "Some points, mostly on one side, or a conclusion that isn't justified."
+        },
+        {
+          "level": 1,
+          "marks": "1–2",
+          "text": "Simple points, with no conclusion."
+        }
+      ],
+      "note": "Tick the points made, then use the levels under the model answer to decide the mark."
+    },
+    {
+      "type": "explain",
+      "q": "Explain what the Fairtrade mark on a product tells a shopper.",
+      "marks": 2,
+      "points": [
+        "The product is certified as qualifying for Fairtrade…",
+        "…so the farmers and workers in developing countries who made it were treated ethically and paid a fair price."
+      ],
+      "model": "The Fairtrade mark is a certification label showing the product qualifies as Fairtrade, so the farmers and workers in developing countries who produced it were treated ethically and paid a fair price.",
+      "note": "1 mark for the point, 1 for explaining it."
+    }
+  ],
+  "related": [
+    {
+      "id": "b06a-sustainable-materials-ethical-production",
+      "spec": "3.2.3"
+    },
+    {
+      "id": "a27-product-development-inclusive-design",
+      "spec": "3.1.8"
+    },
+    {
+      "id": "a32-design-for-manufacturing-maintenance-repair-disposal",
+      "spec": "3.1.11"
+    }
+  ]
+}
