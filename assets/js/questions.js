@@ -24,7 +24,7 @@ function mc(q, right, wrong, why, chunk, item) {
 }
 
 // Every question the items allow, each with fresh wrong options. Items with steps and items
-// marked "autoQuiz": false are left out; a question needs at least 2 wrong options.
+// marked "autoQuiz": false are left out.
 export function itemQuestions(T) {
   const out = [];
   for (const c of T.chunks || []) {
@@ -35,11 +35,12 @@ export function itemQuestions(T) {
       out.push(mc(`${c.label}: which describes “${it.term}”${it.term.endsWith("?") ? "" : "?"}`, it.text, others.map((o) => o.text), null, c.id, it.term));
       if (!giveaway(it)) out.push(mc(`${c.label}: which one is this? ${it.text}`, it.term, others.map((o) => o.term), null, c.id, it.term));
     }
-    // Material questions (GCSE): the right item has the tag, the wrong ones don't.
+    // Material questions (GCSE): the right item has the tag. Wrong options are only items the
+    // sources limit to the other material ("only"), and the chunk needs 3 of them.
     for (const [tag, name] of Object.entries(MATERIAL)) {
-      const yes = items.filter((it) => it.tags?.includes(tag));
-      const no = items.filter((it) => it.tags?.length && !it.tags.includes(tag));
-      if (!yes.length || no.length < 2) continue;
+      const yes = items.filter((it) => it.tags?.includes(tag) && (!it.only || it.only === tag));
+      const no = items.filter((it) => it.only && it.only !== tag);
+      if (!yes.length || no.length < 3) continue;
       const it = pick(yes);
       const q = mc(`${c.label}: which of these is used on ${name}?`, it.term, no.map((o) => o.term), "", c.id, it.term);
       const wrong = q.options.slice(1);

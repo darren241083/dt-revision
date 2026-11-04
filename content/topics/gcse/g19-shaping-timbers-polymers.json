@@ -87,14 +87,16 @@
           "tags": [
             "timber"
           ],
-          "text": "Cuts wood along the grain (rip) or across it (cross-cut)."
+          "text": "Cuts wood along the grain (rip) or across it (cross-cut).",
+          "only": "timber"
         },
         {
           "term": "Tenon saw",
           "tags": [
             "timber"
           ],
-          "text": "Shallow, accurate cuts in small pieces of wood, such as wood joints."
+          "text": "Shallow, accurate cuts in small pieces of wood, such as wood joints.",
+          "only": "timber"
         },
         {
           "term": "Coping saw",
@@ -143,14 +145,16 @@
           "tags": [
             "timber"
           ],
-          "text": "Bevelled blade; carves, chips and pares wood. Struck with a mallet."
+          "text": "Bevelled blade; carves, chips and pares wood. Struck with a mallet.",
+          "only": "timber"
         },
         {
           "term": "Planer",
           "tags": [
             "timber"
           ],
-          "text": "Shapes and smooths wood by slicing thin shavings. Always plane with the grain."
+          "text": "Shapes and smooths wood by slicing thin shavings. Always plane with the grain.",
+          "only": "timber"
         },
         {
           "term": "Sander",
@@ -250,7 +254,8 @@
           "tags": [
             "timber"
           ],
-          "text": "A coarse file with separate teeth for shaping wood. Leaves a rough surface that needs sanding."
+          "text": "A coarse file with separate teeth for shaping wood. Leaves a rough surface that needs sanding.",
+          "only": "timber"
         },
         {
           "term": "File",
@@ -424,7 +429,8 @@
           "tags": [
             "timber"
           ],
-          "text": "Identical, accurate parts: stair spindles, chair parts, table legs."
+          "text": "Identical, accurate parts: stair spindles, chair parts, table legs.",
+          "only": "timber"
         }
       ],
       "check": [
