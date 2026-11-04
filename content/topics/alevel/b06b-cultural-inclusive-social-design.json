@@ -117,7 +117,12 @@
         {
           "term": "User research",
           "tags": [],
-          "text": "Involve the communities concerned and avoid stereotypes or disrespectful symbols."
+          "text": "Involve the communities concerned and avoid stereotypes or disrespectful symbols.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/user-research.webp",
+            "alt": "User research",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
