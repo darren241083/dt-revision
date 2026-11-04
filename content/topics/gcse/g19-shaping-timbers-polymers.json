@@ -255,7 +255,12 @@
         {
           "term": "Countersink bit",
           "tags": [],
-          "text": "Cuts a wider recess so a screw head sits flush with, or just below, the surface."
+          "text": "Cuts a wider recess so a screw head sits flush with, or just below, the surface.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/countersink-bit.webp",
+            "alt": "Countersink bit",
+            "credit": "DT"
+          }
         },
         {
           "term": "Flat bit",
