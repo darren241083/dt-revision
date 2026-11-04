@@ -9,7 +9,7 @@ export const editState = { on: false, open: null };
 export function imageSlot(ref, hasImage) {
   if (!editState.on) return null;
   return h("button", { type: "button", class: "img-edit", onclick: () => editState.open(ref) },
-    icon("image"), hasImage ? "Replace image" : "Add image");
+    icon("image"), hasImage ? "Edit image" : "Add image");
 }
 
 // A saved image with its credit line underneath.

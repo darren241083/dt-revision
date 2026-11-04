@@ -230,12 +230,59 @@ function findTarget(t, ref) {
   return item ? { chunk, obj: item, name: item.term } : null;
 }
 
+// What an item or diagram shows on the site now: { file, alt, credit }, or null.
+function currentImage(obj, isDiagram) {
+  if (isDiagram) return obj.image ? { file: obj.image, alt: obj.alt, credit: obj.credit } : null;
+  return obj.image || null;
+}
+
+// A remove button that has to be pressed twice, so one slip can't delete anything.
+function removeButton(label, run) {
+  const b = h("button", { type: "button", class: "btn-line danger" }, label);
+  let armed = null;
+  b.addEventListener("click", () => {
+    if (!armed) {
+      b.textContent = "Press again to remove";
+      armed = setTimeout(() => { armed = null; b.textContent = label; }, 4000);
+      return;
+    }
+    clearTimeout(armed);
+    armed = null;
+    b.textContent = label;
+    run();
+  });
+  return b;
+}
+
+const nowShowing = (...body) => h("div", { class: "dlg-preview dlg-current" },
+  h("span", { class: "dlg-current-label" }, "On the site now"), body);
+
+// Reads the saved topic file, lets `change` edit it (it may return extra files, such as a
+// removal), and commits that with `files` as one save. Returns true when saved.
+async function saveTopic(msg, change, files, message, note = "Saving…") {
+  say(msg, note);
+  try {
+    const t = JSON.parse(await readText(topicPath()));
+    const extra = change(t) || [];
+    await commit([...files, ...extra, { path: topicPath(), text: stringifyTopic(t) }], message);
+    say(msg, "Saved. Live in about a minute.", "good");
+    return true;
+  } catch (e) {
+    say(msg, problem(e), "bad");
+    return false;
+  }
+}
+
+const gone = (what) => new Error(`There's no saved ${what} here any more. Reload the page.`);
+
 async function imageDialog(ref) {
   if (needToken()) return;
   const target = findTarget(ctx.topic(), ref);
   if (!target) return;
   const isDiagram = ref.kind === "diagram";
   const name = target.name;
+  const { id } = ctx.topic();
+  const now = currentImage(target.obj, isDiagram);
   const phraseInput = h("input", { type: "text", value: isDiagram ? `${name} line drawing white background` : `${name} on a white background` });
   phraseFor(name, phraseInput.value).then((p) => { phraseInput.value = p; drawLinks(); });
   const links = h("p", { class: "dlg-links" });
@@ -250,14 +297,18 @@ async function imageDialog(ref) {
 
   const fileInput = h("input", { type: "file", accept: "image/*", class: "sr-only", id: "img-file" });
   const drop = h("div", { class: "dropzone", tabindex: "0" },
-    icon("image"), h("span", {}, "Drop or paste an image here"),
+    icon("image"), h("span", {}, now ? "Drop or paste a new image here" : "Drop or paste an image here"),
     h("label", { class: "btn-line", for: "img-file" }, "Choose file"), fileInput);
   const preview = h("div", { class: "dlg-preview" });
-  const alt = h("input", { type: "text", value: target.obj.image?.alt || target.obj.alt || name });
-  const credit = h("input", { type: "text", value: (isDiagram ? target.obj.credit : target.obj.image?.credit) || "", placeholder: "e.g. Jane Smith · CC BY 4.0" });
+  const alt = h("input", { type: "text", value: now?.alt || target.obj.alt || name });
+  const credit = h("input", { type: "text", value: now?.credit || "", placeholder: "e.g. Jane Smith · CC BY 4.0" });
   const msg = status();
-  const save = h("button", { type: "button", class: "btn-dark", disabled: true }, "Save image");
   let ready = null;
+  const save = h("button", { type: "button", class: "btn-dark", disabled: true }, now ? "Save new image" : "Save image");
+  const saveDetails = now && h("button", { type: "button", class: "btn-line" }, "Save details");
+  const remove = now && !isDiagram && removeButton("Remove image", removeImage);
+  const buttons = [save, saveDetails, remove].filter(Boolean);
+  const busy = (on) => buttons.forEach((b) => { b.disabled = on || (b === save && !ready); });
 
   async function take(file) {
     if (!file || !file.type.startsWith("image/")) return say(msg, "That isn't an image file.", "bad");
@@ -280,52 +331,75 @@ async function imageDialog(ref) {
   };
 
   const dlg = dialog(isDiagram ? `Diagram: ${name}` : `Image: ${name}`,
+    now && nowShowing(h("img", { src: now.file, alt: "" }), h("small", {}, now.credit || "No credit")),
     field("Search phrase", h("span", { class: "dlg-inline" }, phraseInput, copy)),
     links, drop, preview,
     field("Alt text", alt),
     field("Credit (author · licence)", credit),
-    isDiagram && h("p", { class: "dlg-note" }, "The part positions stay as they are, so check them after a new drawing."),
-    h("div", { class: "btn-row" }, save), msg);
+    isDiagram && h("p", { class: "dlg-note" }, "The part positions stay as they are, so check them after a new drawing."
+      + (now ? " A diagram needs a drawing, so it can be replaced but not removed." : "")),
+    h("div", { class: "btn-row" }, buttons), msg);
   document.addEventListener("paste", onPaste);
   dlg.addEventListener("close", () => document.removeEventListener("paste", onPaste));
 
-  save.addEventListener("click", async () => {
-    if (!ready) return;
-    if (!credit.value.trim()) { say(msg, "Add a credit line: who made it, and the licence.", "bad"); credit.focus(); return; }
-    save.disabled = true;
-    say(msg, "Saving…");
-    const { id } = ctx.topic();
-    const file = `assets/img/${ctx.level}/${id}/${slug(name)}.webp`;
-    try {
-      const t = JSON.parse(await readText(topicPath()));
+  // Saves a change to this item or diagram, then shows it on this page and closes.
+  async function run(edit, files, message, local) {
+    busy(true);
+    const ok = await saveTopic(msg, (t) => {
       const tgt = findTarget(t, ref);
       if (!tgt) throw new Error("That item isn't in the saved topic file any more. Reload the page.");
-      if (isDiagram) {
-        Object.assign(tgt.obj, { image: file, alt: alt.value.trim(), width: ready.width, height: ready.height, credit: credit.value.trim() });
-        delete tgt.obj.svg;
-      } else {
-        tgt.obj.image = { file, alt: alt.value.trim(), credit: credit.value.trim() };
-      }
-      await commit([
-        { path: `site/${file}`, base64: toBase64(await ready.blob.arrayBuffer()) },
-        { path: topicPath(), text: stringifyTopic(t) }
-      ], `Image: ${name} (${id})`);
-      // Show it straight away on this page; the public copy follows after publishing.
-      const local = URL.createObjectURL(ready.blob);
-      if (isDiagram) Object.assign(target.obj, { image: local, alt: alt.value.trim(), width: ready.width, height: ready.height, credit: credit.value.trim() });
-      else target.obj.image = { file: local, alt: alt.value.trim(), credit: credit.value.trim() };
-      ctx.rerender();
-      say(msg, "Saved. Live in about a minute.", "good");
-    } catch (e) {
-      save.disabled = false;
-      say(msg, problem(e), "bad");
-    }
+      return edit(tgt.obj, t);
+    }, files, message);
+    busy(false);
+    if (!ok) return;
+    local(target.obj);
+    ctx.rerender();
+    setTimeout(() => dlg.close(), 1500);
+  }
+
+  const details = () => ({ alt: alt.value.trim(), credit: credit.value.trim() });
+  const needCredit = () => {
+    if (credit.value.trim()) return false;
+    say(msg, "Add a credit line: who made it, and the licence.", "bad");
+    credit.focus();
+    return true;
+  };
+
+  save.addEventListener("click", async () => {
+    if (!ready || needCredit()) return;
+    const file = `assets/img/${ctx.level}/${id}/${slug(name)}.webp`;
+    const put = (o, f) => {
+      if (isDiagram) { Object.assign(o, { image: f, ...details(), width: ready.width, height: ready.height }); delete o.svg; }
+      else o.image = { file: f, ...details() };
+    };
+    const base64 = toBase64(await ready.blob.arrayBuffer());
+    // This page shows the new image straight away; the public copy follows after publishing.
+    const local = URL.createObjectURL(ready.blob);
+    run((o) => { put(o, file); }, [{ path: `site/${file}`, base64 }], `Image: ${name} (${id})`, (o) => put(o, local));
   });
+
+  saveDetails?.addEventListener("click", () => {
+    if (needCredit()) return;
+    const set = (o) => Object.assign(isDiagram ? o : o.image, details());
+    run((o) => { if (!o.image) throw gone("image"); set(o); }, [], `Image details: ${name} (${id})`, set);
+  });
+
+  function removeImage() {
+    run((o, t) => {
+      const f = o.image?.file;
+      if (!f) throw gone("image");
+      delete o.image;
+      // The file stays if another item or diagram in the topic still uses it.
+      const used = t.chunks.some((c) => c.diagram?.image === f || c.items.some((it) => it.image?.file === f));
+      return used ? [] : [{ path: `site/${f}`, remove: true }];
+    }, [], `Remove image: ${name} (${id})`, (o) => { delete o.image; });
+  }
 }
 
 /* ---------- Audio ---------- */
 
 const mmss = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+const mb = (n) => Math.round(n / 1024 / 102.4) / 10;
 function parseLength(v) {
   const m = String(v).trim().match(/^(\d+):([0-5]?\d)$/);
   if (m) return +m[1] * 60 + +m[2];
@@ -335,12 +409,30 @@ function parseLength(v) {
 function audioDialog() {
   if (needToken()) return;
   const t = ctx.topic();
+  const now = t.audio;
   const fileInput = h("input", { type: "file", accept: ".mp3,.m4a,audio/mpeg,audio/mp4,audio/x-m4a" });
   const info = h("p", { class: "dlg-note" });
-  const length = h("input", { type: "text", inputmode: "numeric", placeholder: "m:ss", value: t.audio?.length ? mmss(t.audio.length) : "" });
+  const length = h("input", { type: "text", inputmode: "numeric", placeholder: "m:ss", value: now?.length ? mmss(now.length) : "" });
   const msg = status();
-  const save = h("button", { type: "button", class: "btn-dark", disabled: true }, "Save audio");
   let ready = null;
+  const save = h("button", { type: "button", class: "btn-dark", disabled: true }, now ? "Save new audio" : "Save audio");
+  const saveLength = now && h("button", { type: "button", class: "btn-line" }, "Save length");
+  const remove = now && removeButton("Remove audio", removeAudio);
+  const buttons = [save, saveLength, remove].filter(Boolean);
+  const busy = (on) => buttons.forEach((b) => { b.disabled = on || (b === save && !ready); });
+
+  // What is on the site now, with the file's size from the server.
+  let current = null;
+  if (now) {
+    const size = h("span", {});
+    const saved = !now.file.startsWith("blob:");
+    current = nowShowing(h("small", {}, saved ? now.file.split("/").pop() : "Saved just now", ` · ${mmss(now.length)}`, size));
+    if (saved) {
+      fetch(now.file, { method: "HEAD", cache: "no-store" })
+        .then((r) => { const n = +r.headers.get("content-length"); if (n) size.textContent = ` · ${mb(n)} MB`; })
+        .catch(() => { /* the size is only a convenience */ });
+    }
+  }
 
   fileInput.addEventListener("change", async () => {
     const f = fileInput.files[0];
@@ -358,7 +450,7 @@ function audioDialog() {
       await new Promise((r) => { probe.onloadedmetadata = r; probe.onerror = r; setTimeout(r, 5000); });
       if (isFinite(probe.duration) && probe.duration > 0) length.value = mmss(probe.duration);
       ready = { bytes: out.bytes, ext, url };
-      info.textContent = `${Math.round(out.bytes.length / 1024 / 102.4) / 10} MB ${ext.toUpperCase()} · saved as ${t.id}.${ext} · `
+      info.textContent = `${mb(out.bytes.length)} MB ${ext.toUpperCase()} · saved as ${t.id}.${ext} · `
         + (out.removed.length ? `removed: ${[...new Set(out.removed)].join(", ")}` : "no tags found");
       save.disabled = false;
       say(msg, "");
@@ -366,35 +458,57 @@ function audioDialog() {
   });
 
   const dlg = dialog("Audio overview",
-    field("MP3 or M4A file", fileInput),
+    current,
+    field(now ? "New MP3 or M4A file" : "MP3 or M4A file", fileInput),
     info,
     field("Length (m:ss)", length),
-    h("div", { class: "btn-row" }, save), msg);
+    h("div", { class: "btn-row" }, buttons), msg);
 
-  save.addEventListener("click", async () => {
-    const secs = parseLength(length.value);
-    if (!ready || !isFinite(secs) || secs <= 0) { say(msg, "Check the length, e.g. 6:30.", "bad"); return; }
-    save.disabled = true;
-    say(msg, "Saving… large files take a little while.");
+  // Saves a change to the topic's audio, then shows it on this page and closes.
+  async function run(edit, files, message, local, note) {
+    busy(true);
+    const ok = await saveTopic(msg, edit, files, message, note);
+    busy(false);
+    if (!ok) return;
+    local();
+    ctx.rerender();
+    setTimeout(() => dlg.close(), 1500);
+  }
+  const secs = () => {
+    const n = parseLength(length.value);
+    if (isFinite(n) && n > 0) return n;
+    say(msg, "Check the length, e.g. 6:30.", "bad");
+    return null;
+  };
+
+  save.addEventListener("click", () => {
+    const n = secs();
+    if (!ready || !n) return;
     const file = `assets/audio/${ctx.level}/${t.id}.${ready.ext}`;
-    try {
-      const saved = JSON.parse(await readText(topicPath()));
+    run((saved) => {
       const old = saved.audio?.file;
-      saved.audio = { file, length: secs };
-      await commit([
-        { path: `site/${file}`, base64: toBase64(ready.bytes) },
-        old && old !== file && !old.startsWith("blob:") && { path: `site/${old}`, remove: true },
-        { path: topicPath(), text: stringifyTopic(saved) }
-      ].filter(Boolean), `Audio: ${t.id}`);
-      t.audio = { file: ready.url, length: secs };
-      ctx.rerender();
-      say(msg, "Saved. Live in about a minute.", "good");
-      setTimeout(() => dlg.close(), 1500);
-    } catch (e) {
-      save.disabled = false;
-      say(msg, problem(e), "bad");
-    }
+      saved.audio = { file, length: n };
+      // A file with the other extension would be left behind.
+      return old && old !== file ? [{ path: `site/${old}`, remove: true }] : [];
+    }, [{ path: `site/${file}`, base64: toBase64(ready.bytes) }], `Audio: ${t.id}`,
+    () => { t.audio = { file: ready.url, length: n }; }, "Saving… large files take a little while.");
   });
+
+  saveLength?.addEventListener("click", () => {
+    const n = secs();
+    if (!n) return;
+    run((saved) => { if (!saved.audio) throw gone("audio"); saved.audio.length = n; }, [], `Audio length: ${t.id}`,
+      () => { t.audio.length = n; });
+  });
+
+  function removeAudio() {
+    run((saved) => {
+      const f = saved.audio?.file;
+      if (!f) throw gone("audio");
+      saved.audio = null;
+      return [{ path: `site/${f}`, remove: true }];
+    }, [], `Remove audio: ${t.id}`, () => { t.audio = null; });
+  }
 }
 
 /* ---------- Year groups ---------- */
