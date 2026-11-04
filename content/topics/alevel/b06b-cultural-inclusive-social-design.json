@@ -77,7 +77,12 @@
         {
           "term": "Cost of offence",
           "tags": [],
-          "text": "Offended, alienated customers bring a financial cost and wider harm."
+          "text": "Offended, alienated customers bring a financial cost and wider harm.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/cost-of-offence.webp",
+            "alt": "Cost of offence",
+            "credit": "DT"
+          }
         },
         {
           "term": "Genders",
