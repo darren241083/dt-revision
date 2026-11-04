@@ -397,7 +397,12 @@
             "timber"
           ],
           "text": "Rotating abrasive paper. Sands, or strips surfaces such as old paint.",
-          "only": "timber"
+          "only": "timber",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/disc-belt-sander.webp",
+            "alt": "Disc / belt sander",
+            "credit": "DT"
+          }
         },
         {
           "term": "Band saw",
