@@ -278,7 +278,12 @@
             "timber",
             "polymer"
           ],
-          "text": "A cylindrical blade that cuts bigger holes."
+          "text": "A cylindrical blade that cuts bigger holes.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/hole-saw.webp",
+            "alt": "Hole saw",
+            "credit": "DT"
+          }
         },
         {
           "term": "Bradawl",
