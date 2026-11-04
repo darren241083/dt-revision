@@ -129,7 +129,12 @@
           "tags": [
             "polymer"
           ],
-          "text": "Fine teeth for hard materials, such as plastic pipe."
+          "text": "Fine teeth for hard materials, such as plastic pipe.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/hacksaw-junior-hacksaw.webp",
+            "alt": "Hacksaw / junior hacksaw",
+            "credit": "DT"
+          }
         },
         {
           "term": "Jig saw",
