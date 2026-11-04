@@ -166,7 +166,12 @@
         {
           "term": "Without stigma",
           "tags": [],
-          "text": "Suit a diverse range of people without singling anyone out."
+          "text": "Suit a diverse range of people without singling anyone out.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/without-stigma.webp",
+            "alt": "Without stigma",
+            "credit": "DT"
+          }
         },
         {
           "term": "In the home",
