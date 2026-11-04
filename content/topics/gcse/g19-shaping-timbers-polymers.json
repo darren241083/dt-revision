@@ -410,7 +410,12 @@
             "timber",
             "polymer"
           ],
-          "text": "A long continuous blade running between two wheels. Very large cuts, or curves with a finer blade."
+          "text": "A long continuous blade running between two wheels. Very large cuts, or curves with a finer blade.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/band-saw.webp",
+            "alt": "Band saw",
+            "credit": "DT"
+          }
         },
         {
           "term": "Pillar drill",
