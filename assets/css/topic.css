@@ -63,6 +63,15 @@ html.teach .crumbs .crumb-section { display: none; }
 .preread { display: flex; flex-direction: column; gap: 18px; padding: 26px; border: 1px solid var(--card-border); border-radius: 22px; background: var(--card); scroll-margin-top: 80px; }
 .preread-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .preread-head h2 { font-size: 1.375rem; font-weight: 800; letter-spacing: -.01em; }
+/* Print row: the foot of the Before the lesson card (pinned to the bottom, alignment rule). */
+.pr-print { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--rule); }
+.pr-label { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+.pr-label > span { display: flex; flex-direction: column; }
+.pr-label b { font-weight: 800; line-height: 1.2; }
+.pr-label .ico { width: 20px; height: 20px; color: var(--teal); }
+.pr-sides { color: var(--muted); font-family: var(--f-mono); font-size: .75rem; white-space: nowrap; }
+.pr-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.pr-btns .btn-line { min-height: var(--tap); padding: 0 14px; font-size: .9375rem; }
 .pick { padding: 5px 12px; border-radius: 999px; background: var(--ground); color: var(--body); font-size: .875rem; font-weight: 700; }
 
 .tabs { display: inline-flex; align-self: flex-start; padding: 4px; border-radius: 12px; background: var(--seg); }
@@ -186,6 +195,8 @@ html.teach .stage { padding-bottom: 128px; }
   .overview { padding: 24px 16px 40px; }
   .starts { grid-template-columns: minmax(0, 1fr); }
   .preread { padding: 20px; }
+  .pr-btns { flex-basis: 100%; margin-left: 0; }
+  .pr-btns .btn-line { flex: 1 1 auto; white-space: nowrap; }
 
   .path-layout { flex-direction: column; min-height: 0; }
   .rail { width: auto; padding: 12px 0 8px; border-right: 0; border-bottom: 1px solid var(--card-border); }

@@ -5,7 +5,8 @@
 //   #lesson/<stage>         a Lesson-mode stage
 //   #lesson/learn/<chunk>   one Learn chunk
 //   #revise/<stage>         a Revise-mode stage
-//   #revise/whole/filled    Whole topic, with the filled-in Lesson notes sheet ready to print
+//   #print, #print/filled   topic overview, Before the lesson card in view, that Lesson notes
+//                           sheet ready to print (Ctrl+P prints it)
 //   #listen                 topic overview with the Listen tab open
 // ?y=y11 is the year group the pupil came from (breadcrumb); default is the remembered year.
 // Which stages have been visited lives in memory only and clears when the page is left.
@@ -70,7 +71,7 @@ const MODES = {
 };
 
 // Results from this visit only (quiz progress and answers). Never saved.
-const session = { quiz: null, written: null, organiser: null, print: null, doNow: null };
+const session = { quiz: null, written: null, organiser: null, doNow: null };
 
 const S = {
   topic: null, level: null, course: null, entry: null, section: null, year: null,
@@ -191,8 +192,7 @@ function overview() {
           h("span", { class: "start-sub" }, "Do now, big picture, learn, apply, recall, test")),
         h("a", { class: "start revise", href: hashFor("revise", 0) },
           h("span", { class: "start-title" }, "Revise →"),
-          h("span", { class: "start-sub" }, "Recall, test, fix, whole topic"))),
-      h("a", { class: "print-link", href: hashFor("revise", wholeIndex()) }, icon("print"), "Print the lesson notes sheet")),
+          h("span", { class: "start-sub" }, "Recall, test, fix, whole topic")))),
     preRead());
 }
 
@@ -204,9 +204,9 @@ function preRead() {
 
   // No audio: just the book, no tabs.
   if (!T.audio) {
-    return h("section", { class: "preread", "aria-labelledby": "preread-title" },
+    return h("section", { class: "preread", id: "preread", "aria-labelledby": "preread-title" },
       h("div", { class: "preread-head" }, h("h2", { id: "preread-title" }, "Before the lesson")),
-      read());
+      read(), printRow());
   }
 
   // The player is made once, so switching tabs doesn't stop the audio.
@@ -240,11 +240,11 @@ function preRead() {
   }, t.label)));
   show(current);
 
-  return h("section", { class: "preread", "aria-labelledby": "preread-title" },
+  return h("section", { class: "preread", id: "preread", "aria-labelledby": "preread-title" },
     h("div", { class: "preread-head" },
       h("h2", { id: "preread-title" }, "Before the lesson"),
       h("span", { class: "pick" }, "Pick one")),
-    tablist, panel);
+    tablist, panel, printRow());
 }
 
 /* ---------- Stage view ---------- */
@@ -261,21 +261,23 @@ function stageView() {
 }
 
 const learnIndex = () => MODES.lesson.stages.findIndex((s) => s.id === "learn");
-const wholeIndex = () => MODES.revise.stages.findIndex((s) => s.id === "whole");
 
-/* ---------- Lesson notes sheet (Whole topic) ---------- */
+/* ---------- Lesson notes sheet (topic overview) ---------- */
 
-// Which sheet was last printed can come from the hash (#revise/whole/filled).
-function syncPrint() {
-  session.print ||= { filled: false };
-  session.print.filled = decodeURIComponent(location.hash).split("/")[2] === "filled";
-}
-const printHash = () => `${hashFor("revise", wholeIndex())}${session.print.filled ? "/filled" : ""}`;
+// #print (or #print/filled) is the overview with the sheet ready: the Before the lesson card in
+// view, and Ctrl+P prints the sheet. The year and home Print links come here. On the plain
+// overview the sheet is still laid out (off-screen) so the card can show its real side count.
+const printArmed = () => /^#print(\/|$)/.test(decodeURIComponent(location.hash));
+const printFilled = () => decodeURIComponent(location.hash) === "#print/filled";
 
-// The blank sheet sets the layout (notes lines, columns); the filled sheet copies it.
-async function mountSheet() {
-  document.querySelector(".print-sheet")?.remove();
+// The blank sheet sets the layout (notes lines, columns, sides); the filled sheet copies it.
+// Only the latest call finishes, so quick re-renders never leave two sheets behind.
+let sheetJob = 0;
+async function mountSheet(filled) {
+  const job = ++sheetJob;
   await document.fonts?.ready;
+  if (job !== sheetJob) return null;
+  document.querySelectorAll(".print-sheet").forEach((s) => s.remove());
   const opts = { doNow: session.doNow || S.topic.doNow };
   let sheet = printSheet(S.topic, S.course, opts);
   document.body.append(sheet);
@@ -283,36 +285,37 @@ async function mountSheet() {
   sheet.classList.add("measure");
   void sheet.offsetHeight;
   await document.fonts?.ready;
+  if (job !== sheetJob) { sheet.remove(); return null; }
   const fit = fitSheet(sheet);
-  if (session.print.filled) {
+  if (filled) {
     sheet.remove();
     sheet = printSheet(S.topic, S.course, { ...opts, filled: true, plan: fit.plan });
     document.body.append(sheet);
-    fit.filled = fitFilled(sheet);
+    fitFilled(sheet);
   }
-  document.documentElement.classList.add("has-sheet");
   sheet.dataset.sides = fit.sides;
-  const meta = document.querySelector(".pb-meta");
-  if (meta) meta.textContent = `A4 · ${fit.sides} sides`;
+  document.querySelectorAll(".pr-sides").forEach((el) => { el.textContent = `A4 · ${fit.sides} sides`; });
+  return sheet;
 }
 function unmountSheet() {
-  document.querySelector(".print-sheet")?.remove();
+  sheetJob++;
+  document.querySelectorAll(".print-sheet").forEach((s) => s.remove());
   document.documentElement.classList.remove("has-sheet");
 }
-
-function printBar() {
-  const print = async (filled) => {
-    session.print.filled = filled;
-    history.replaceState(null, "", printHash());
-    await mountSheet();
-    window.print();
-  };
-  return h("section", { class: "card print-bar", "aria-labelledby": "pb-title" },
-    h("div", { class: "pb-text" }, h("h2", { id: "pb-title" }, "Print"), h("span", { class: "pb-meta", "aria-live": "polite" }, "A4")),
-    h("div", { class: "btn-row" },
-      h("button", { type: "button", class: "btn-dark", onclick: () => print(false) }, icon("print"), SHEETS.blank),
-      h("button", { type: "button", class: "btn-line", onclick: () => print(true) }, SHEETS.filled)));
+async function printNow(filled) {
+  history.replaceState(null, "", filled ? "#print/filled" : "#print");
+  if (!(await mountSheet(filled))) return;
+  document.documentElement.classList.add("has-sheet");
+  window.print();
 }
+
+// The Print row at the foot of the Before the lesson card.
+const printRow = () => h("div", { class: "pr-print", role: "group", "aria-labelledby": "pr-print-label" },
+  h("span", { class: "pr-label" }, icon("print"),
+    h("span", {}, h("b", { id: "pr-print-label" }, "Print"), h("span", { class: "pr-sides", "aria-live": "polite" }, "A4"))),
+  h("span", { class: "pr-btns" },
+    h("button", { type: "button", class: "btn-line", onclick: () => printNow(false) }, SHEETS.blank),
+    h("button", { type: "button", class: "btn-line", onclick: () => printNow(true) }, "Filled in")));
 
 // Where a quiz question's chunk is taught, for "Fix these first".
 function chunkLink(chunkId) {
@@ -336,7 +339,7 @@ function stageBody(st) {
     case "fix":
       return fixStage();
     case "whole":
-      return [printBar(), organiser(T, session)];
+      return organiser(T, session);
     case "do-now":
       return [revealGroup(session.doNow || T.doNow), T.starter && whatAmI(T.starter)];
     case "big-picture":
@@ -449,11 +452,15 @@ function render(moved) {
     S.visited[S.mode].add(visitKey(S.mode, S.stage, S.chunk));
   }
   document.documentElement.classList.toggle("in-stage", S.view === "stage");
-  const whole = S.view === "stage" && MODES[S.mode].stages[S.stage].id === "whole";
-  if (whole) syncPrint();
   topbar();
   app.replaceChildren(S.view === "overview" ? overview() : stageView());
-  whole ? mountSheet() : unmountSheet();
+  if (S.view === "overview") {
+    const armed = printArmed();
+    document.documentElement.classList.toggle("has-sheet", false);
+    mountSheet(armed && printFilled()).then((sheet) => {
+      if (sheet && armed && printArmed()) document.documentElement.classList.add("has-sheet");
+    });
+  } else unmountSheet();
 
   const { prev, next } = S.view === "stage" ? neighbours() : {};
   present.children[0].disabled = !prev;
@@ -469,7 +476,7 @@ function render(moved) {
     if (strip.scrollWidth > strip.clientWidth) strip.scrollLeft = el.offsetLeft - (strip.clientWidth - el.offsetWidth) / 2;
   });
 
-  if (S.view === "overview" && location.hash === "#listen") {
+  if (S.view === "overview" && (location.hash === "#listen" || printArmed())) {
     app.querySelector(".preread")?.scrollIntoView({ block: "start" });
   } else if (moved) {
     window.scrollTo(0, 0);

@@ -70,7 +70,7 @@ function recent(y) {
         h("div", { class: "btn-row" },
           h("a", { class: "btn-dark", href: topicHref(t.id, y, "#revise/recall") }, "Revise"),
           T?.audio && h("a", { class: "btn-line", href: topicHref(t.id, y, "#listen") }, "Listen"),
-          h("a", { class: "btn-line", href: topicHref(t.id, y, "#revise/whole") }, "Print sheet")));
+          h("a", { class: "btn-line", href: topicHref(t.id, y, "#print") }, "Print sheet")));
     })),
     h("a", { class: "more", href: `year.html?y=${y}` }, `All ${yearShort(y)} topics →`));
 }
