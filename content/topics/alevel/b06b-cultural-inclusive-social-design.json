@@ -186,7 +186,12 @@
         {
           "term": "Getting about",
           "tags": [],
-          "text": "Low-floor buses, bright-yellow handrails, crossings with bumps, ramps and sensory feedback."
+          "text": "Low-floor buses, bright-yellow handrails, crossings with bumps, ramps and sensory feedback.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/getting-about.webp",
+            "alt": "Getting about",
+            "credit": "DT"
+          }
         },
         {
           "term": "Hearing induction loops",
