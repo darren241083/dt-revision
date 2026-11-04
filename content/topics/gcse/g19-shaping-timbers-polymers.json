@@ -423,7 +423,12 @@
             "timber",
             "polymer"
           ],
-          "text": "Depth stop and adjustable table: accurate holes of a set depth at 90°."
+          "text": "Depth stop and adjustable table: accurate holes of a set depth at 90°.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/pillar-drill.webp",
+            "alt": "Pillar drill",
+            "credit": "DT"
+          }
         }
       ],
       "diagram": {
