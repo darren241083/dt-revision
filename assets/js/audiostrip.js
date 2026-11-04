@@ -1,7 +1,8 @@
 // Removes embedded metadata from MP3 and M4A audio before it is published (teacher edit mode).
 // MP3: ID3v2 tags at the start, APEv2 and ID3v1 / Enhanced tags at the end.
 // M4A: every udta, meta and uuid box is turned into a zero-filled "free" box of the same size,
-//      so the sound data and its offsets are untouched but no tag text is left.
+//      so the sound data and its offsets are untouched but no tag text is left; handler (hdlr)
+//      names are zeroed for the same reason.
 // Returns { bytes: Uint8Array, kind: "mp3" | "m4a", removed: [descriptions] }.
 
 const ascii = (b, i, n) => String.fromCharCode(...b.subarray(i, i + n));
@@ -70,7 +71,12 @@ function stripM4a(input) {
       else if (size === 0) size = to - i;
       if (size < head || i + size > to) break;
       if (BLANK.has(type) && size <= 0xffffffff) blank(i, size, type);
-      else if (PARENTS.has(type)) walk(i + head, i + size);
+      else if (type === "hdlr" && size > head + 24) {
+        // The handler's name (after version, pre_defined, handler type and reserved) can name
+        // the tool that made the file. An empty name is valid, so it is zeroed in place.
+        const name = i + head + 24;
+        if (b.subarray(name, i + size).some((x) => x)) { b.fill(0, name, i + size); removed.push("handler name"); }
+      } else if (PARENTS.has(type)) walk(i + head, i + size);
       i += size;
     }
   }

@@ -20,23 +20,33 @@ const notesPath = (id) => (store.get(KEYS.notes, "") || "").replace(/\{id\}/g, i
 
 /* ---------- GitHub ---------- */
 
+// `detail` is GitHub's own explanation, when it gives one.
 class GhError extends Error {
-  constructor(status) { super(`GitHub ${status}`); this.status = status; }
+  constructor(status, detail) { super(`GitHub ${status}`); this.status = status; this.detail = detail || ""; }
 }
 
 async function gh(path, { method = "GET", body, raw } = {}) {
-  const res = await fetch(`${API}/repos/${repo()}${path}`, {
-    method,
-    headers: {
-      Accept: raw ? "application/vnd.github.raw+json" : "application/vnd.github+json",
-      Authorization: `Bearer ${token()}`,
-      "X-GitHub-Api-Version": "2022-11-28",
-      ...(body ? { "Content-Type": "application/json" } : {})
-    },
-    body: body ? JSON.stringify(body) : undefined,
-    cache: "no-store"
-  });
-  if (!res.ok) throw new GhError(res.status);
+  let res;
+  try {
+    res = await fetch(`${API}/repos/${repo()}${path}`, {
+      method,
+      headers: {
+        Accept: raw ? "application/vnd.github.raw+json" : "application/vnd.github+json",
+        Authorization: `Bearer ${token()}`,
+        "X-GitHub-Api-Version": "2022-11-28",
+        ...(body ? { "Content-Type": "application/json" } : {})
+      },
+      body: body ? JSON.stringify(body) : undefined,
+      cache: "no-store"
+    });
+  } catch {
+    throw new Error("The save didn't reach GitHub: the connection dropped or was blocked. Try again on a faster or unfiltered connection.");
+  }
+  if (!res.ok) {
+    let detail = "";
+    try { detail = (await res.json()).message || ""; } catch { /* no explanation */ }
+    throw new GhError(res.status, detail);
+  }
   return raw ? res.text() : res.json();
 }
 
@@ -61,11 +71,12 @@ async function commit(files, message) {
 
 function problem(err) {
   const s = err && err.status;
-  if (s === 401) return "GitHub refused the token. Check it, or make a new one.";
-  if (s === 403) return "This token can't write here. It needs Contents: Read and write on the repository.";
-  if (s === 404) return "This token can't see that repository. Check the name and the token's repository access.";
-  if (s === 409 || s === 422) return "Something else was saved at the same moment. Try again.";
-  if (err instanceof GhError) return `GitHub said no (${s}). Try again in a minute.`;
+  const said = err?.detail ? ` GitHub said: "${err.detail}" (${s}).` : "";
+  if (s === 401) return "GitHub refused the token. Check it, or make a new one." + said;
+  if (s === 403) return "This token can't write here. It needs Contents: Read and write on the repository." + said;
+  if (s === 404) return "This token can't see that repository. Check the name and the token's repository access." + said;
+  if (s === 409 || (s === 422 && /fast.forward|reference/i.test(err.detail))) return "Something else was saved at the same moment. Try again.";
+  if (err instanceof GhError) return (said ? said.trim() : `GitHub said no (${s}).`) + " Try again in a minute.";
   return err?.message || "Something went wrong. Check your connection and try again.";
 }
 

@@ -17,7 +17,10 @@
     "title": "ClearRevise AQA GCSE D&T 8552",
     "pages": "83–86"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/gcse/g19-shaping-timbers-polymers.m4a",
+    "length": 1313
+  },
   "needs": [
     "Make an accurate saw cut in four steps.",
     "Choose the right saw, drill bit or abrasive for timber or polymer.",
