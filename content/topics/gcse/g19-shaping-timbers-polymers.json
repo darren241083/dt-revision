@@ -174,7 +174,12 @@
             "timber"
           ],
           "text": "Bevelled blade; carves, chips and pares wood. Struck with a mallet.",
-          "only": "timber"
+          "only": "timber",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/chisel.webp",
+            "alt": "Chisel",
+            "credit": "DT"
+          }
         },
         {
           "term": "Planer",
