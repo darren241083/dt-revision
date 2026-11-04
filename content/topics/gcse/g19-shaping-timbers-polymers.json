@@ -301,7 +301,12 @@
             "timber",
             "polymer"
           ],
-          "text": "General-purpose bit for drilling holes."
+          "text": "General-purpose bit for drilling holes.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/twist-bit.webp",
+            "alt": "Twist bit",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
