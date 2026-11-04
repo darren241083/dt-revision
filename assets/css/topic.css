@@ -138,7 +138,12 @@ html.teach .crumbs .crumb-section { display: none; }
 .chunk-strip a[aria-current] { border-color: var(--teal); background: var(--teal-soft); color: var(--teal-dark); font-weight: 700; }
 
 /* ---------- Stage ---------- */
-.stage { display: flex; flex-direction: column; gap: 24px; flex: 1; min-width: 0; max-width: 976px; padding: 48px 56px 64px; }
+/* Widths: text at reading width (--read, set in site.css); visual components (mind map, diagrams,
+   organiser, card and option grids) use the full width beside the rail, up to --wide. */
+.stage { display: flex; flex-direction: column; gap: 24px; flex: 1; min-width: 0; max-width: calc(var(--wide) + 112px); padding: 48px 56px 64px; }
+.stage > * { width: 100%; max-width: var(--read); }
+.stage > :is(.stage-head, .stage-foot, .chunk-strip, .mm, .org, .reveal-group, .wai, .recall-pair, .hotspot, .apply, .odd) { max-width: var(--wide); }
+.stage-titles { max-width: var(--read); }
 .stage-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 24px; }
 .stage-titles { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 .eyebrow { font-family: var(--f-mono); font-size: .875rem; color: var(--teal); }

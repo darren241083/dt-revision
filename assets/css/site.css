@@ -57,6 +57,10 @@
 
   /* Interaction */
   --tap: 44px;
+
+  /* Widths: text at reading width; visual components use the full width available. */
+  --read: 864px;
+  --wide: 1300px;
 }
 
 html.teach { --scale: 1.2; }

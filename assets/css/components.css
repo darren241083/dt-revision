@@ -62,9 +62,11 @@ html.teach .teach-only { display: block; }
 .timer-go { border: 0; border-radius: 10px; background: var(--ink); color: #FFFFFF; font-weight: 700; }
 
 /* ---------- Reveal cards ---------- */
-.reveal-group { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.reveal-group { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; container-type: inline-size; }
 .reveals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 14px; width: 100%; }
 .reveals.one { grid-template-columns: minmax(0, 1fr); }
+/* Wide screens: four Do now cards side by side. */
+@container (min-width: 1100px) { .reveals:not(.one):has(> :nth-child(4):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .reveal { display: flex; flex-direction: column; align-items: stretch; gap: 14px; width: 100%; padding: 22px; border: 1.5px solid var(--card-border); border-radius: var(--radius); background: var(--card); color: var(--ink); text-align: left; }
 .reveal:hover { border-color: var(--teal); }
 .reveal[aria-expanded="true"] { border-color: var(--teal); }
@@ -84,7 +86,7 @@ html.teach .teach-only { display: block; }
 .wai-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
 .wai-head h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -.01em; }
 .wai-score { margin-left: auto; color: var(--teal); font-size: 2.25rem; font-weight: 800; line-height: 1; }
-.wai-clues { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.wai-clues { max-width: var(--read); display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .wai-clues li { display: flex; align-items: center; gap: 14px; min-height: 52px; padding: 12px 16px; border: 1.5px solid var(--dot-grey); border-radius: 12px; background: var(--card); color: var(--ink); font-size: 1.1875rem; }
 .wai-clues li.off { border-style: dashed; background: #F7F9F9; color: var(--muted); }
 .wai-p { flex: none; min-width: 3.6em; white-space: nowrap; color: var(--teal); font-family: var(--f-mono); font-size: .8125rem; }
@@ -94,24 +96,26 @@ html.teach .teach-only { display: block; }
 
 /* ---------- Mind map ---------- */
 .mm { display: flex; flex-direction: column; gap: 16px; container-type: inline-size; }
+/* The map's height is set by mindmap.js from the measured nodes (the ratio is only the first paint). */
 .mm-map { position: relative; aspect-ratio: 864 / 520; overflow: hidden; }
 .mm-canvas, .mm-lines { position: absolute; inset: 0; }
 .mm-line { position: absolute; height: 2px; border-radius: 2px; background: var(--dot-grey); transform-origin: 0 50%; }
 .mm-line.kid { background: #8FCFC6; }
 .mm-node { position: absolute; transform: translate(-50%, -50%); font-family: inherit; text-align: center; }
-.mm-centre { padding: 14px 24px; border-radius: 14px; background: var(--ink); color: #FFFFFF; font-size: clamp(1.125rem, 2.8cqw, 1.5rem); font-weight: 800; white-space: nowrap; }
-.mm-branch { display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: var(--tap); padding: 10px 16px; border: 1.5px solid var(--card-border); border-radius: 14px; background: var(--card); color: var(--body); font-size: clamp(.9375rem, 2cqw, 1.0625rem); font-weight: 700; white-space: nowrap; }
+.mm-centre { z-index: 1; max-width: var(--mm-cw, 220px); padding: 14px 20px; border-radius: 14px; background: var(--ink); color: #FFFFFF; font-size: clamp(1.125rem, 2.4cqw, 1.5rem); font-weight: 800; line-height: 1.15; text-wrap: balance; }
+.mm-branch { z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; max-width: var(--mm-bw, 220px); min-height: var(--tap); padding: 10px 14px; border: 1.5px solid var(--card-border); border-radius: 14px; background: var(--card); color: var(--body); font-size: clamp(.9375rem, 1.8cqw, 1.0625rem); font-weight: 700; line-height: 1.2; }
+.mm-label { text-wrap: balance; }
 .mm-branch:hover { border-color: var(--teal); }
 .mm-branch.open { border-color: var(--teal); background: var(--teal); color: #FFFFFF; }
-.mm-count { font-family: var(--f-mono); font-size: .75rem; font-weight: 400; opacity: .85; }
-.mm-leaf { left: 2%; max-width: 27%; min-height: var(--tap); padding: 8px 14px; transform: translateY(-50%); border: 1.5px solid var(--card-border); border-radius: 12px; background: var(--card); color: var(--ink); font-size: clamp(.875rem, 1.9cqw, 1rem); font-weight: 600; text-align: left; }
+.mm-count { font-family: var(--f-mono); font-size: .75rem; font-weight: 400; opacity: .85; white-space: nowrap; }
+.mm-leaf { z-index: 1; max-width: var(--mm-lw, 260px); min-height: var(--tap); padding: 8px 14px; border: 1.5px solid var(--card-border); border-radius: 12px; background: var(--card); color: var(--ink); font-size: clamp(.875rem, 1.7cqw, 1rem); font-weight: 600; line-height: 1.25; text-align: left; }
 .mm-leaf:hover { border-color: var(--teal); }
 .mm-leaf.sel { border-color: var(--teal); box-shadow: 0 0 0 4px var(--teal-soft); }
 .mm-map.has-open .mm-branch:not(.open) { opacity: .9; }
 
 .mm-detail { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: stretch; padding: 24px 28px; }
 .mm-detail:has(.mm-detail-img) { grid-template-columns: minmax(0, 1fr) 200px; }
-.mm-detail-text { display: flex; flex-direction: column; gap: 10px; min-height: 100%; }
+.mm-detail-text { display: flex; flex-direction: column; gap: 10px; min-height: 100%; max-width: var(--read); }
 .mm-detail h3 { font-size: 1.75rem; font-weight: 800; }
 .mm-detail p { font-size: 1.25rem; }
 .mm-steps { margin: 0; padding-left: 1.3em; font-size: 1.0625rem; }
@@ -189,7 +193,7 @@ html.teach .teach-only { display: block; }
 .hs-dot.cur::before { background: var(--ink); box-shadow: 0 0 0 6px rgba(15, 118, 110, .3); }
 .hs-panel { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; flex: 1; min-width: 0; }
 .hs-panel h3 { font-size: 2.125rem; font-weight: 800; }
-.hs-panel p { font-size: 1.3125rem; line-height: 1.5; }
+.hs-panel p { max-width: var(--read); font-size: 1.3125rem; line-height: 1.5; }
 .hs-panel .pips span { width: 28px; }
 .hs-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 8px; width: 100%; }
 .hs-choices .opt { min-height: var(--tap); padding: 8px 12px; font-size: 1rem; }
@@ -244,7 +248,7 @@ a.btn-line, a.btn-dark { text-decoration: none; }
 
 /* Which tool, and why? */
 .apply, .odd, .match, .order, .quiz-card, .results, .written, .fix-empty { display: flex; flex-direction: column; gap: 16px; padding: 26px; }
-.apply-q { color: var(--ink); font-size: 1.5rem; font-weight: 700; line-height: 1.35; }
+.apply-q { max-width: var(--read); color: var(--ink); font-size: 1.5rem; font-weight: 700; line-height: 1.35; }
 .step-label { margin-top: 4px; color: var(--teal); }
 .step-label.off { color: var(--muted); }
 .apply-result { display: flex; align-items: baseline; gap: 14px; min-height: 1.5em; font-size: 1.125rem; }
@@ -272,6 +276,8 @@ a.btn-line, a.btn-dark { text-decoration: none; }
 /* Match pairs and put in order, side by side (equal-height cards). */
 /* Different kinds of panel side by side: top-aligned, not stretched. */
 .recall-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; }
+/* A topic with no Put in order: Match pairs takes the row, up to reading width. */
+.recall-pair > :only-child { grid-column: 1 / -1; max-width: var(--read); }
 .match-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: stretch; gap: 8px; }
 .match-cell { height: 100%; min-height: var(--tap); font-size: 1rem; }
 .match-cell.term { font-weight: 700; }
