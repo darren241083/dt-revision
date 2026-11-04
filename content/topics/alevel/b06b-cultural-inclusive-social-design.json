@@ -206,7 +206,12 @@
         {
           "term": "Specialist products",
           "tags": [],
-          "text": "Kettle pourers and door handle adapters, sold by specialist shops."
+          "text": "Kettle pourers and door handle adapters, sold by specialist shops.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/specialist-products.webp",
+            "alt": "Specialist products",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
