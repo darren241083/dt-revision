@@ -288,7 +288,12 @@
         {
           "term": "Bradawl",
           "tags": [],
-          "text": "Marks and starts a hole accurately before drilling or screwing."
+          "text": "Marks and starts a hole accurately before drilling or screwing.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/bradawl.webp",
+            "alt": "Bradawl",
+            "credit": "DT"
+          }
         },
         {
           "term": "Twist bit",
