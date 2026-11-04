@@ -91,7 +91,12 @@
             "timber"
           ],
           "text": "Cuts wood along the grain (rip) or across it (cross-cut).",
-          "only": "timber"
+          "only": "timber",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/rip-cross-cut-saw.webp",
+            "alt": "Rip / cross-cut saw",
+            "credit": "Winston Born"
+          }
         },
         {
           "term": "Tenon saw",
