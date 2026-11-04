@@ -97,7 +97,12 @@
         {
           "term": "Colour",
           "tags": [],
-          "text": "A colour can mean different things in different countries."
+          "text": "A colour can mean different things in different countries.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/colour.webp",
+            "alt": "Colour",
+            "credit": "DT"
+          }
         },
         {
           "term": "Beliefs and customs",
