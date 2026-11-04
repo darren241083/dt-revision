@@ -1,179 +1,322 @@
-// Printable A4 sheet (two sides) for a topic, in three versions:
-//   pupil    the organiser to revise from, with blank boxes to fill in
-//   cover    the same with every definition, item and step left blank
-//   teacher  everything filled in: the answer key
-// The self-test questions and the exam question are drawn from the topic's banks using a
-// version number, so a teacher copy printed with the same number matches the pupil sheets.
+// Lesson notes sheet, in two versions with the same layout:
+//   blank   pupils fill it in during the lesson
+//   filled  the same sheet written in (absent pupils, self-checking, teacher copy)
+// Sections in lesson order: Do now, Big picture, process steps, Apply, Test (side 1, with the
+// mind map filling what is left), then Notes and the lesson pair of exam questions (side 2).
+// It aims for one A4 sheet (2 sides) and continues onto sides 3–4 when it needs to: it never
+// goes below about one ruled line per item and 2 lines per exam mark to fit. A section that
+// doesn't fit starts the next side whole, under a small header (topic title · side 3).
+// fitSheet() sets the layout on the blank sheet and the filled sheet copies it (plan), so the
+// two match line for line.
 
 import { h } from "../dom.js";
-import { answerOf, stepItems, plainItems } from "./organiser.js";
-import { concrete } from "../questions.js";
 
-const SELF = 6;
-const MARGIN = 12; // mm, the same as @page in print.css
-export const VARIANTS = { pupil: "Pupil sheet", cover: "Cover version", teacher: "Teacher copy" };
-export const newVersion = () => 1000 + Math.floor(Math.random() * 9000);
+const PAGE = 272; // mm of writing height a side: A4 297 less 12mm margins, 1mm spare
+const QUIZ = 10;
+export const SHEETS = { blank: "Lesson notes sheet", filled: "Lesson notes sheet · filled in" };
 
-// Small seeded random number generator (mulberry32), so a version always draws the same set.
-function seeded(seed) {
-  let a = seed >>> 0;
-  return () => {
-    a = (a + 0x6D2B79F5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+const WORDS = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+const stepItems = (T) => T.chunks.flatMap((c) => c.items.filter((it) => it.steps?.length));
+const plain = (c) => c.items.filter((it) => !it.steps?.length);
+
+// Ruled lines, 8mm apart. A filled line carries its text.
+const line = (text, cls = "") => h("span", { class: `ln-line ${cls}`.trim() }, text ? h("span", { class: "ln-ink" }, text) : null);
+const lines = (n) => Array.from({ length: n }, () => line());
+
+// Item text as a short note line: "Tenon saw – shallow, accurate cuts in small pieces of wood".
+// The candidates run longest first: the first sentence, then cut back at safe points only (a
+// colon or semicolon, or before ", such as", ", e.g.", ", often", ", usually", ", plus",
+// ", which"), so a list is never cut in the middle.
+const CUT = /[;:](?= )|,(?= (such as|e\.g\.|often|usually|plus|which)\b)/g;
+function noteCandidates(it) {
+  let s = it.text.split(/(?<=\.)\s/)[0].replace(/[.:]\s*$/, "").trim();
+  if (/^[A-Z](?![A-Z])/.test(s)) s = s[0].toLowerCase() + s.slice(1); // not "CNC …"
+  const cuts = [...s.matchAll(CUT)].map((m) => m.index).reverse();
+  return [s, ...cuts.map((i) => s.slice(0, i))].map((x) => `${it.term} – ${x}`);
+}
+
+const sentence = (s) => s.replace(/\.$/, "");
+const minExam = (w) => Math.max(4, 2 * w.marks);
+
+// plan (from fitSheet on the blank sheet): { sides: side index per section, lines: notes lines
+// per chunk, exam: lines per exam question, split: chunks in the left column }.
+export function printSheet(T, course, { filled = false, doNow = T.doNow, plan = null } = {}) {
+  let n = 0;
+  const num = () => h("b", { class: "ln-num" }, String(++n));
+  const head = (title, extra) => h("h2", {}, num(), title, extra && h("span", { class: "ln-sub" }, extra));
+  const sections = [];
+  const add = (el) => { if (el) sections.push(el); return el; };
+
+  const header = h("header", { class: "ln-head" },
+    h("div", { class: "ln-titlerow" },
+      h("h1", {}, T.title),
+      h("span", { class: "ln-name" }, h("b", {}, "Name"), h("i"))),
+    h("p", { class: "ln-meta" }, [
+      filled ? "Lesson notes · filled in" : "Lesson notes",
+      course.short, `${course.board} ${course.spec}`, ...T.spec, T.book.title, `p${T.book.pages}`].join(" · ")));
+
+  add(h("section", { class: "ln-sec ln-donow" }, head("Do now"),
+    h("ol", {}, doNow.map((d) => h("li", {},
+      h("span", { class: "ln-from" }, d.from || ""),
+      h("span", { class: "ln-q" }, d.q),
+      line(filled ? sentence(d.a) : "", "ln-ans"))))));
+
+  const half = Math.ceil(T.chunks.length / 2);
+  const pill = (c, i) => h("div", { class: `ln-branch ${i < half ? "left" : "right"}`, style: `grid-row: ${(i % half) + 1}` },
+    h("span", { class: "ln-pill" }, h("b", {}, String(i + 1)), c.label),
+    h("span", { class: "ln-area" }, filled ? c.items.map((it) => it.term).join(" · ") : null));
+  add(h("section", { class: "ln-sec ln-map" }, head("Big picture", "add what's in each branch"),
+    h("div", { class: "ln-mapgrid", style: `grid-template-rows: repeat(${half}, minmax(0, 1fr))` },
+      h("div", { class: "ln-centre", style: `grid-row: 1 / span ${half}` }, h("span", {}, T.short || T.title)),
+      T.chunks.map(pill))));
+
+  const steps = stepItems(T);
+  const stepNum = new Map();
+  for (const it of steps) {
+    add(h("section", { class: "ln-sec ln-steps" },
+      head(it.term, `the ${WORDS[it.steps.length] || it.steps.length} steps, in order`),
+      h("ol", {}, it.steps.map((s, i) => h("li", {}, h("b", {}, `${i + 1}`), line(filled ? s : ""))))));
+    stepNum.set(it, n);
+  }
+
+  if (T.apply?.length) {
+    add(h("section", { class: "ln-sec ln-apply" }, head("Apply", "choose, and give a reason"),
+      h("ol", {}, T.apply.map((a, i) => h("li", { class: "ln-choice" },
+        h("p", { class: "ln-q" }, h("b", {}, `${String.fromCharCode(97 + i)} `), a.q),
+        h("span", { class: "ln-label" }, "Choice"), line(filled ? a.tools[a.tool] : ""),
+        h("span", { class: "ln-label" }, "Because"), line(filled ? a.reasons[a.reason] : ""))))));
+  }
+
+  add(h("section", { class: "ln-sec ln-test" }, head("Test"),
+    h("div", { class: "ln-testrow" },
+      h("span", { class: "ln-score" }, h("span", { class: "ln-label" }, "Quiz score"), h("i"), `/ ${QUIZ}`),
+      h("span", { class: "ln-fix" }, h("span", { class: "ln-label" }, "Fix these first"), line()))));
+
+  // Notes: a process item points to its own section.
+  const where = (it) => stepNum.has(it) ? `${it.term} (see ${stepNum.get(it)})` : it.term;
+  const chunkBox = (c, i) => {
+    const items = plain(c);
+    const want = plan?.lines[i] ?? Math.max(2, items.length);
+    const note = (it) => {
+      const cands = noteCandidates(it);
+      return h("span", { class: "ln-line", "data-cands": JSON.stringify(cands) }, h("span", { class: "ln-ink" }, cands[0]));
+    };
+    return h("div", { class: "ln-chunk", "data-i": i },
+      h("h3", {}, h("b", {}, String(i + 1)), c.label, h("span", { class: "ln-pages" }, `p${c.pages}`)),
+      h("p", { class: "ln-prompts" }, c.items.map(where).join(" · ")),
+      h("div", { class: "ln-ruled" }, filled
+        ? Array.from({ length: want }, (_, k) => (items[k] ? note(items[k]) : line()))
+        : lines(want)));
   };
-}
-function draw(list, n, rnd) {
-  const a = list.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(rnd() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a.slice(0, n);
-}
+  const boxes = T.chunks.map(chunkBox);
+  const split = plan?.split ?? half;
+  add(h("section", { class: "ln-sec ln-notes" }, head("Notes"),
+    h("div", { class: "ln-cols" },
+      h("div", { class: "ln-col" }, boxes.slice(0, split)),
+      h("div", { class: "ln-col" }, boxes.slice(split)))));
 
-// Writing lines. `max` marks lines that fitSheet may add to, up to that many.
-const lines = (n, max) => h("span", { class: "ps-lines", "aria-hidden": "true", "data-max": max || null },
-  Array.from({ length: n }, () => h("i")));
-const MATERIAL = { timber: "T", polymer: "P" };
+  (T.written || []).slice(0, 2).forEach((w, i) => {
+    const rows = plan?.exam[i] ?? minExam(w);
+    const type = w.type ? w.type[0].toUpperCase() + w.type.slice(1) : "";
+    add(h("section", { class: "ln-sec ln-exam", "data-min": minExam(w) },
+      h("div", { class: "ln-examhead" },
+        h("h2", {}, num(), `Exam question ${i + 1}`, h("span", { class: "ln-sub" }, [type, `${w.marks} marks`].filter(Boolean).join(" · "))),
+        h("span", { class: "ln-mark" }, h("span", { class: "ln-label" }, "Mark"), h("i"), `/ ${w.marks}`)),
+      h("p", { class: "ln-examq" }, w.q),
+      filled
+        ? h("div", { class: "ln-answer", style: `height: ${rows * 8}mm` },
+          h("p", { class: "ln-model" }, w.model),
+          h("ul", { class: "ln-points" }, w.points.map((p) => h("li", {}, p))))
+        : h("div", { class: "ln-ruled" }, lines(rows))));
+  });
 
-// Page breaks are simulated box by box: a box that doesn't fit moves to the next page, except
-// the items box, which may split (about 20mm is lost to that break). 4mm a page is kept spare.
-// Returns the number of pages and the space left on the last one.
-function simulate(sheet, mm) {
-  const page = (297 - 2 * MARGIN - 4) * mm;
-  const side2 = sheet.querySelector(".ps-side2");
-  let pages = 1, used = 0;
-  for (const b of sheet.querySelectorAll(".ps-side > *")) {
-    let top = parseFloat(getComputedStyle(b).marginTop);
-    if (b === side2.firstElementChild) {
-      if (side2.classList.contains("new-page")) { if (used) pages++; used = 0; }
-      else top += parseFloat(getComputedStyle(side2).marginTop);
-    }
-    if (!used) top = 0;
-    let rest = b.getBoundingClientRect().height + top;
-    if (b.classList.contains("ps-items")) {
-      while (used + rest > page) { rest -= page - used - 20 * mm; pages++; used = 0; }
-    } else if (used + rest > page) { pages++; used = 0; rest -= top; }
-    used += rest;
-  }
-  return { pages, free: page - used };
+  const sheet = h("div", { class: `print-sheet ${filled ? "filled" : "blank"}`, "aria-hidden": "true" });
+  sheet._parts = { header, sections, title: T.title };
+  // Default placement: everything up to Notes on side 1, Notes onwards on side 2.
+  const notesAt = sections.findIndex((s) => s.classList.contains("ln-notes"));
+  place(sheet, plan?.sides ?? sections.map((_, i) => (i < notesAt ? 0 : 1)));
+  return sheet;
 }
 
-// Fits the sheet on two sides, measured off-screen at A4 width:
-// 1. side 2 starts on a fresh page when side 1 fits on one; a tighter layout only if needed;
-// 2. writing lines are added a line at a time (exam question, topic-map branches, self-test
-//    answers in turn) up to their targets while it still fits;
-// 3. any space left on the last page is shared evenly between the side 2 boxes.
-export function fitSheet(sheet) {
+const newSide = (sheet, i) => {
+  const side = h("div", { class: `ln-page${i === 0 ? " ln-side1" : ""}` });
+  if (i === 0) side.append(sheet._parts.header);
+  else if (i >= 2) side.append(h("p", { class: "ln-cont" }, h("b", {}, sheet._parts.title), ` · side ${i + 1}`));
+  sheet.append(side);
+  return side;
+};
+
+// Puts each section on its side (sides[i] for section i).
+function place(sheet, sides) {
+  sheet.replaceChildren();
+  const pages = [];
+  sheet._parts.sections.forEach((s, i) => {
+    while (pages.length <= sides[i]) pages.push(newSide(sheet, pages.length));
+    pages[sides[i]].append(s);
+  });
+  sheet._sides = sides.slice();
+}
+
+/* ---------- Fitting (measured off-screen at A4 width) ---------- */
+
+function mmPx() {
   const probe = h("div", { style: "position:absolute;visibility:hidden;height:100mm" });
   document.body.append(probe);
   const mm = probe.offsetHeight / 100;
   probe.remove();
-  sheet.classList.add("measure");
-  const side1 = sheet.querySelector(".ps-side"), side2 = sheet.querySelector(".ps-side2");
-  const fits = () => simulate(sheet, mm).pages <= 2;
-  for (const level of [null, "tight", "tighter"]) {
-    if (level) sheet.classList.add(level);
-    side2.classList.toggle("new-page", side1.getBoundingClientRect().height <= (297 - 2 * MARGIN - 4) * mm);
-    if (fits()) break;
-    side2.classList.remove("new-page");
-    if (fits()) break;
-  }
-
-  const groups = [".ps-exam .ps-lines", ".ps-branch .ps-lines", ".ps-selflist .ps-lines"]
-    .map((sel) => [...sheet.querySelectorAll(`${sel}[data-max]`)]).filter((g) => g.length);
-  let active = groups;
-  while (active.length) {
-    active = active.filter((g) => {
-      const open = g.filter((l) => l.children.length < +l.dataset.max);
-      if (!open.length) return false;
-      open.forEach((l) => l.append(h("i")));
-      if (fits()) return true;
-      open.forEach((l) => l.lastElementChild.remove());
-      return false;
-    });
-  }
-
-  const { free } = simulate(sheet, mm);
-  const boxes = [...side2.children].slice(side2.classList.contains("new-page") ? 1 : 0);
-  if (free > mm && boxes.length) {
-    const extra = (free - mm) / boxes.length;
-    boxes.forEach((b) => { b.style.marginTop = `${parseFloat(getComputedStyle(b).marginTop) + extra}px`; });
-    if (!fits()) boxes.forEach((b) => { b.style.marginTop = ""; });
-  }
-  sheet.classList.remove("measure");
+  return mm;
 }
 
-export function printSheet(T, course, { variant, version }) {
-  const teacher = variant === "teacher", cover = variant === "cover";
-  const rnd = seeded(version);
-  const drawn = draw(T.quiz, SELF, rnd);
-  const exam = draw(T.written || [], 1, rnd)[0];
-  // Calc numbers come from the same version, so the teacher copy matches.
-  const self = drawn.map((q) => concrete(q, rnd));
-  const tagged = T.chunks.some((c) => c.items.some((it) => it.tags?.length));
-  const fact = (text, n = 1) => (cover ? lines(n) : h("span", {}, text));
+// Natural height of a side: its content stacked with the minimum gaps (the map at its least).
+function natural(side) {
+  side.classList.add("natural");
+  const v = side.getBoundingClientRect().height;
+  side.classList.remove("natural");
+  return v;
+}
 
-  let n = 0;
-  const sec = (cls, title, ...body) => h("section", { class: `ps-sec ${cls}` }, h("h2", {}, `${++n} · ${title}`), body);
+// 1. Flows the sections onto sides in order: Do now to Test on side 1, Notes starting side 2,
+//    and any section that doesn't fit where it falls starting the next side, whole.
+// 2. Splits the notes between two columns (whole chunks, in order) so the columns balance.
+// 3. Fills sides 2 onwards (not a last continuation side): more notes lines, spread across the
+//    chunks and kept balanced; on a side with no notes, more exam lines. Side 1's map takes
+//    what is left.
+// Returns the plan the filled sheet copies, and the number of sides.
+export function fitSheet(sheet) {
+  const mm = mmPx(), cap = PAGE * mm;
+  sheet.classList.add("measure");
+  const { sections } = sheet._parts;
+  const notes = sections.find((s) => s.classList.contains("ln-notes"));
+  const [colL, colR] = notes.querySelectorAll(".ln-col");
+  const chunks = [...notes.querySelectorAll(".ln-chunk")];
+  const ruled = (el) => el.querySelector(".ln-ruled");
+  const heightOf = (els) => els.reduce((s, e) => s + e.getBoundingClientRect().height, 0);
+  const base = chunks.map((c) => ruled(c).children.length);
+  const counts = base.slice();
+  let split = 1;
+  const sync = (r, want) => {
+    while (r.children.length > want) r.lastElementChild.remove();
+    while (r.children.length < want) r.append(line());
+  };
+  function balance() {
+    chunks.forEach((c, i) => sync(ruled(c), counts[i]));
+    colL.replaceChildren(...chunks);
+    let diff = Infinity;
+    for (let k = 1; k < chunks.length; k++) {
+      const d = Math.abs(heightOf(chunks.slice(0, k)) - heightOf(chunks.slice(k)));
+      if (d < diff) { diff = d; split = k; }
+    }
+    colL.replaceChildren(...chunks.slice(0, split));
+    colR.replaceChildren(...chunks.slice(split));
+  }
+  balance();
 
-  // Items grouped by chunk, in book order.
-  const items = plainItems(T);
-  const groups = T.chunks.map((c) => ({ c, list: items.filter((it) => it.chunk === c) })).filter((g) => g.list.length);
+  // 1. Flow.
+  const sides = [];
+  let side = 0;
+  sheet.replaceChildren();
+  let page = newSide(sheet, 0);
+  sections.forEach((s, i) => {
+    if (s === notes && side === 0) page = newSide(sheet, ++side);
+    page.append(s);
+    if (natural(page) > cap && page.querySelectorAll(".ln-sec").length > 1) {
+      s.remove();
+      page = newSide(sheet, ++side);
+      page.append(s);
+    }
+    sides[i] = side;
+  });
 
-  const side1 = h("div", { class: "ps-side" },
-    h("header", { class: "ps-head" },
-      h("div", { class: "ps-titles" },
-        h("span", { class: "ps-kicker" },
-          `Knowledge organiser · ${course.short} · ${course.board} ${course.spec} · ${T.spec.join(" · ")} · ${T.book.title} p${T.book.pages}`),
-        h("h1", {}, T.title)),
-      h("div", { class: "ps-version" }, h("b", {}, VARIANTS[variant]), h("span", {}, `Version ${version}`))),
-    teacher
-      ? h("p", { class: "ps-key" }, "Answer key")
-      : h("div", { class: "ps-who" }, ["Name", "Class", "Date"].map((f) => h("span", {}, h("b", {}, f), h("i")))),
-    sec("ps-needs", "What you need to know · rate yourself",
-      h("ul", {}, T.needs.map((x) => h("li", {}, h("span", {}, x),
-        h("span", { class: "ps-rag" }, ["R", "A", "G"].map((l) => h("i", {}, l))))))),
-    sec("ps-kw", "Key words",
-      h("dl", { class: "ps-pairs" }, T.keywords.map((k) => h("div", {}, h("dt", {}, k.term), h("dd", {}, fact(k.def)))))),
-    sec("ps-items", "In this topic" + (tagged ? " · T timber, P polymer" : ""),
-      h("div", { class: "ps-groups" }, groups.map((g) => h("div", { class: "ps-group" },
-        h("h3", {}, g.c.label, h("span", {}, ` p${g.c.pages}`)),
-        h("dl", { class: "ps-pairs one" }, g.list.map((it) => h("div", {},
-          h("dt", {}, it.term, it.tags?.length ? h("span", { class: "ps-tags" }, ` ${it.tags.map((t) => MATERIAL[t]).join(" ")}`) : null),
-          h("dd", {}, fact(it.text, it.text.length > 70 ? 2 : 1))))))))));
+  // 3. Fill the sides after the first. A last side past side 2 (a continuation) keeps its
+  //    sections at their own size and leaves the rest of the side free.
+  const pages = [...sheet.querySelectorAll(".ln-page")];
+  for (const p of pages.slice(1, pages.length > 2 ? -1 : undefined)) {
+    if (p.contains(notes)) {
+      for (let open = chunks.map((_, i) => i); open.length;) {
+        open.sort((a, b) => (counts[a] - base[a]) - (counts[b] - base[b]) || a - b);
+        const i = open[0];
+        counts[i]++;
+        balance();
+        if (natural(p) > cap) { counts[i]--; balance(); open.shift(); }
+      }
+    } else {
+      const rs = [...p.querySelectorAll(".ln-exam .ln-ruled")];
+      for (let open = rs.slice(); open.length;) {
+        open.sort((a, b) => a.children.length - b.children.length);
+        const r = open[0];
+        r.append(line());
+        if (natural(p) > cap) { r.lastElementChild.remove(); open.shift(); }
+      }
+    }
+  }
 
-  const steps = stepItems(T);
-  const side2 = h("div", { class: "ps-side ps-side2" },
-    steps.length > 0 && sec("ps-steps", steps.length === 1 ? steps[0].term : "Processes",
-      steps.map((it) => [steps.length > 1 && h("h3", {}, it.term),
-        h("ol", {}, it.steps.map((s) => h("li", {}, fact(s))))])),
-    sec("ps-map", "Topic map · add what's in each branch",
-      h("div", { class: "ps-mapgrid" },
-        h("div", { class: "ps-centre", style: `grid-row: 1 / span ${Math.ceil(T.chunks.length / 2)}` }, T.short || T.title),
-        T.chunks.map((c, i) => h("div", { class: `ps-branch ${i % 2 ? "right" : "left"}` },
-          h("b", {}, c.label),
-          teacher ? h("span", {}, c.items.map((it) => it.term).join(" · ")) : lines(2, 4))))),
-    sec("ps-self", "Self-test",
-      h("ol", { class: "ps-selflist" }, self.map((q) => h("li", {},
-        h("span", { class: "ps-q" }, q.tf != null ? `True or false: ${q.q}` : q.q),
-        q.tf != null
-          ? h("span", { class: "ps-tf" }, [true, false].map((v) => h("span", {}, h("i", {}, teacher && v === q.tf ? "✓" : ""), v ? "True" : "False")))
-          : teacher ? h("b", { class: "ps-ans" }, answerOf(q)) : lines(1, 2))))),
-    exam && sec("ps-exam", "Exam question",
-      h("div", { class: "ps-examq" }, h("p", {}, exam.q), h("span", { class: "ps-marks" }, `${exam.marks} marks`)),
-      teacher
-        ? h("div", { class: "ps-scheme" },
-          h("ul", {}, exam.points.map((p) => h("li", {}, p))),
-          exam.note && h("p", { class: "ps-note" }, exam.note),
-          h("p", {}, h("b", {}, "Model answer: "), exam.model),
-          exam.levels?.length > 0 && h("ul", { class: "ps-levels" },
-            exam.levels.map((l) => h("li", {}, h("b", {}, `Level ${l.level} (${l.marks}) `), l.text))))
-        : [lines(4, Math.max(4, 2 * exam.marks)),
-          h("div", { class: "ps-marking" }, h("b", {}, "Marks"),
-            h("span", { class: "ps-markbox" }, h("i"), `/ ${exam.marks}`))]));
+  const exams = sections.filter((s) => s.classList.contains("ln-exam"));
+  const plan = { sides, split, lines: counts.slice(), exam: exams.map((s) => ruled(s).children.length) };
+  const report = { plan, sides: pages.length, fits: pages.every((p) => natural(p) <= cap + 0.5) };
+  drawMap(sheet);
+  sheet.classList.remove("measure");
+  return report;
+}
 
-  return h("div", { class: `print-sheet ${variant}`, "aria-hidden": "true" }, side1, side2);
+// The filled sheet: each note line gets the longest wording that fits on it; answer boxes shrink their text until it fits.
+export function fitFilled(sheet) {
+  sheet.classList.add("measure");
+  for (const l of sheet.querySelectorAll(".ln-line[data-cands]")) {
+    const ink = l.firstElementChild;
+    const cands = JSON.parse(l.dataset.cands);
+    const fits = () => l.scrollWidth <= l.clientWidth + 0.5;
+    // Each wording at normal then smaller size before cutting further; a cut never leaves
+    // fewer than 4 words after the dash. Last resort: the full wording on two small lines.
+    const words = (c) => c.split(" – ").slice(1).join(" – ").split(" ").length;
+    let ok = false;
+    for (const c of cands.filter((c, k) => k === 0 || words(c) >= 4)) {
+      ink.textContent = c;
+      for (const small of [false, true]) {
+        l.classList.toggle("small", small);
+        if (fits()) { ok = true; break; }
+      }
+      if (ok) break;
+    }
+    if (!ok) { ink.textContent = cands[0]; l.classList.remove("small"); }
+    if (!ok) l.classList.add("wrap");
+  }
+  for (const el of sheet.querySelectorAll(".ln-ans, .ln-choice .ln-line, .ln-steps .ln-line")) {
+    const ink = el.firstElementChild;
+    if (ink && el.scrollWidth > el.clientWidth + 0.5) el.classList.add("wrap");
+  }
+  for (const box of sheet.querySelectorAll(".ln-answer")) {
+    for (const size of ["", "small", "smaller"]) {
+      if (size) box.classList.add(size);
+      if (box.scrollHeight <= box.clientHeight + 0.5) break;
+    }
+  }
+  const mm = mmPx(), cap = PAGE * mm;
+  const ok = [...sheet.querySelectorAll(".ln-page")].every((s) => natural(s) <= cap);
+  drawMap(sheet);
+  sheet.classList.remove("measure");
+  return ok;
+}
+
+// Lines from the centre box to each branch pill, measured from the laid-out map.
+function drawMap(sheet) {
+  const grid = sheet.querySelector(".ln-mapgrid");
+  if (!grid) return;
+  grid.querySelector("svg")?.remove();
+  const g = grid.getBoundingClientRect();
+  const c = grid.querySelector(".ln-centre").getBoundingClientRect();
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${g.width} ${g.height}`);
+  svg.setAttribute("aria-hidden", "true");
+  svg.classList.add("ln-links");
+  for (const p of grid.querySelectorAll(".ln-pill")) {
+    const r = p.getBoundingClientRect();
+    const left = p.parentElement.classList.contains("left");
+    const l = document.createElementNS(ns, "line");
+    const x1 = (left ? c.left : c.right) - g.left, y1 = c.top + c.height / 2 - g.top;
+    const x2 = (left ? r.right : r.left) - g.left, y2 = r.top + r.height / 2 - g.top;
+    Object.entries({ x1, y1, x2, y2 }).forEach(([k, v]) => l.setAttribute(k, v.toFixed(1)));
+    svg.append(l);
+  }
+  grid.prepend(svg);
 }
