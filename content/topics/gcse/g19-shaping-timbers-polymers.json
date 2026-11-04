@@ -365,7 +365,12 @@
           "tags": [
             "polymer"
           ],
-          "text": "Waterproof abrasive paper, used with water. Gives acrylic edges a very smooth finish."
+          "text": "Waterproof abrasive paper, used with water. Gives acrylic edges a very smooth finish.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/wet-and-dry-paper.webp",
+            "alt": "Wet and dry paper",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
