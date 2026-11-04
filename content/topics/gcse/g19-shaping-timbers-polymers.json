@@ -353,7 +353,12 @@
         {
           "term": "Abrasive paper",
           "tags": [],
-          "text": "Sandpaper, from coarse to fine. Rubbed on a surface to shape and smooth it."
+          "text": "Sandpaper, from coarse to fine. Rubbed on a surface to shape and smooth it.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/abrasive-paper.webp",
+            "alt": "Abrasive paper",
+            "credit": "DT"
+          }
         },
         {
           "term": "Wet and dry paper",
