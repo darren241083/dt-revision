@@ -85,21 +85,31 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     map.style.setProperty("--mm-bw", px(clamp(W * .21 * sb, 112, 250)));
     map.style.setProperty("--mm-lw", px(clamp(W * .25 * sl, 120, 320)));
     const els = [...canvas.children];
-    els.forEach((el) => { el.style.width = el.style.maxWidth = ""; el.style.left = "0px"; el.style.top = "0px"; });
+    els.forEach((el) => { el.style.width = el.style.maxWidth = el.style.fontSize = ""; el.style.left = "0px"; el.style.top = "0px"; });
     return new Map(els.map((el) => {
       let w = Math.ceil(el.getBoundingClientRect().width) + 1;
       el.style.width = px(w);
-      // Words never break: a node whose longest word doesn't fit gets wider. A branch label
-      // longer than two lines, or a centre longer than three, also gets wider (up to a third).
-      const text = el.querySelector(".mm-label") || (el.classList.contains("mm-centre") ? el : null);
-      const most = el.classList.contains("mm-centre") ? 3 : 2;
-      const lh = text ? parseFloat(getComputedStyle(text).lineHeight) || 20 : 0;
-      const tooLong = () => (text && text.getBoundingClientRect().height - (text === el ? 28 : 0) > lh * (most + .5))
-        || spills(el);
-      while (tooLong() && w < W / 3) {
-        w += 8;
-        el.style.maxWidth = "none";
-        el.style.width = px(w);
+      // Words never break and are never cut: a node whose longest word doesn't fit gets wider.
+      // A branch label longer than two lines, or a centre longer than three, also gets wider (up
+      // to a third of the map). If the centre still doesn't fit, its text gets smaller.
+      const isCentre = el.classList.contains("mm-centre");
+      const text = el.querySelector(".mm-label") || (isCentre ? el : null);
+      const most = isCentre ? 3 : 2;
+      const lines = () => {
+        const lh = parseFloat(getComputedStyle(text).lineHeight) || 20;
+        return (text.getBoundingClientRect().height - (text === el ? 28 : 0)) / lh;
+      };
+      const tooLong = () => (text && lines() > most + .5) || spills(el);
+      const widen = () => {
+        while (tooLong() && w < W / 3) { w += 8; el.style.maxWidth = "none"; el.style.width = px(w); }
+      };
+      widen();
+      if (isCentre && tooLong()) {
+        const full = parseFloat(getComputedStyle(el).fontSize);
+        for (let f = full * .94; tooLong() && f >= Math.max(13, full * .6); f *= .94) {
+          el.style.fontSize = px(f);
+          widen();
+        }
       }
       return [el, { el, x: 0, y: 0, w, h: Math.ceil(el.getBoundingClientRect().height) }];
     }));
@@ -238,7 +248,8 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     const focused = document.activeElement?.dataset?.key;
     fill(canvas, );
     map.classList.toggle("has-open", open !== null);
-    canvas.append(h("span", { class: "mm-node mm-centre", "data-line": "c" }, topic.short || topic.title));
+    // The centre always shows the full topic title.
+    canvas.append(h("span", { class: "mm-node mm-centre", "data-line": "c" }, topic.title));
 
     chunks.forEach((c, i) => {
       const isOpen = open === i;

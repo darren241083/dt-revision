@@ -70,7 +70,7 @@ export function printSheet(T, course, { filled = false, doNow = T.doNow, plan = 
     h("span", { class: "ln-area" }, filled ? c.items.map((it) => it.term).join(" · ") : null));
   add(h("section", { class: "ln-sec ln-map" }, head("Big picture", "add what's in each branch"),
     h("div", { class: "ln-mapgrid", style: `grid-template-rows: repeat(${half}, minmax(0, 1fr))` },
-      h("div", { class: "ln-centre", style: `grid-row: 1 / span ${half}` }, h("span", {}, T.short || T.title)),
+      h("div", { class: "ln-centre", style: `grid-row: 1 / span ${half}` }, h("span", {}, T.title)),
       T.chunks.map(pill))));
 
   const steps = stepItems(T);
