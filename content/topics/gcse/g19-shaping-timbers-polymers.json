@@ -265,7 +265,12 @@
         {
           "term": "Flat bit",
           "tags": [],
-          "text": "Wide, flat blade for larger-diameter holes."
+          "text": "Wide, flat blade for larger-diameter holes.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/flat-bit.webp",
+            "alt": "Flat bit",
+            "credit": "DT"
+          }
         },
         {
           "term": "Hole saw",
