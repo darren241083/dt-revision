@@ -333,7 +333,12 @@
             "timber"
           ],
           "text": "A coarse file with separate teeth for shaping wood. Leaves a rough surface that needs sanding.",
-          "only": "timber"
+          "only": "timber",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/rasp.webp",
+            "alt": "Rasp",
+            "credit": "DT"
+          }
         },
         {
           "term": "File",
