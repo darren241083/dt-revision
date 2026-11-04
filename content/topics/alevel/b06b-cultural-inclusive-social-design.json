@@ -245,7 +245,12 @@
         {
           "term": "Child-friendly litter bins",
           "tags": [],
-          "text": "Innovative bin designs encourage children to adopt good habits."
+          "text": "Innovative bin designs encourage children to adopt good habits.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/child-friendly-litter-bins.webp",
+            "alt": "Child-friendly litter bins",
+            "credit": "DT"
+          }
         },
         {
           "term": "Black box devices",
