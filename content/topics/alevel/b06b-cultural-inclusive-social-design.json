@@ -235,7 +235,12 @@
         {
           "term": "Social issues",
           "tags": [],
-          "text": "Issues affecting people: environment, health, poverty, discrimination, unemployment."
+          "text": "Issues affecting people: environment, health, poverty, discrimination, unemployment.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/social-issues.webp",
+            "alt": "Social issues",
+            "credit": "DT"
+          }
         },
         {
           "term": "Child-friendly litter bins",
