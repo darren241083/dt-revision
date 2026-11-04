@@ -4,7 +4,9 @@
   "title": "Cultural, inclusive and social design",
   "titleMark": "social design",
   "short": "Cultural, inclusive and social",
-  "spec": ["3.2.3"],
+  "spec": [
+    "3.2.3"
+  ],
   "section": "2",
   "materials": [],
   "book": {
@@ -120,7 +122,7 @@
         {
           "term": "Disability Discrimination Act (1995)",
           "tags": [],
-          "text": "The DDA changed public transport, access and many other areas."
+          "text": "The DDA 1995, now replaced by the Equality Act 2010, changed public transport and access."
         },
         {
           "term": "Without stigma",
@@ -218,7 +220,7 @@
         {
           "term": "Wind-up radio",
           "tags": [],
-          "text": "A radio needing no batteries, by Trevor Bayliss, for parts of Africa short of them."
+          "text": "A radio needing no batteries, by Trevor Baylis, for parts of Africa short of them."
         },
         {
           "term": "GravityLight",
@@ -380,7 +382,7 @@
         {
           "term": "Traidcraft",
           "tags": [],
-          "text": "A Fairtrade organisation selling ethically sourced products."
+          "text": "A UK fair trade pioneer that sold ethically sourced products until administration in January 2023."
         },
         {
           "term": "Fairtrade status",
@@ -421,7 +423,7 @@
     },
     {
       "term": "Disability Discrimination Act",
-      "def": "1995 law that changed public transport and access."
+      "def": "The DDA 1995, now replaced by the Equality Act 2010, which protects disabled people from discrimination."
     },
     {
       "term": "Hearing induction loop",
@@ -574,7 +576,7 @@
       "chunk": "inclusive"
     },
     {
-      "q": "Which law, from 1995, has affected public transport and accessibility?",
+      "q": "Which 1995 law, now replaced by the Equality Act 2010, affected public transport and access?",
       "options": [
         "The Disability Discrimination Act",
         "The Consumer Protection Act",
@@ -582,7 +584,13 @@
         "The Copyright, Designs and Patents Act"
       ],
       "answer": 0,
-      "why": "The DDA (1995) has made an impact on many areas, such as public transport and access.",
+      "why": "The DDA 1995 made an impact on public transport and access. The Equality Act 2010 has now replaced it.",
+      "chunk": "inclusive"
+    },
+    {
+      "q": "In England, Scotland and Wales the Equality Act 2010 replaced the DDA 1995.",
+      "tf": true,
+      "why": "The Equality Act 2010 now protects disabled people from discrimination.",
       "chunk": "inclusive"
     },
     {
@@ -752,6 +760,12 @@
       "answer": 0,
       "why": "Pushpanjali gives craftspeople in India sustainable work and social benefits.",
       "chunk": "fairtrade"
+    },
+    {
+      "q": "Traidcraft is still trading as a UK fair trade organisation today.",
+      "tf": false,
+      "why": "Traidcraft plc, a UK fair trade pioneer, went into administration in January 2023.",
+      "chunk": "fairtrade"
     }
   ],
   "written": [
@@ -815,7 +829,7 @@
         "Both avoid relying on resources that aren't available locally.",
         "The wind-up radio needs no batteries; the GravityLight replaces kerosene lamps.",
         "The radio tackled a lack of batteries in parts of Africa; the light tackles the danger and expense of kerosene in Kenya.",
-        "The radio was by Trevor Bayliss; the light by the GravityLight Foundation."
+        "The radio was by Trevor Baylis; the light by the GravityLight Foundation."
       ],
       "model": "Both designs remove the need for supplies that are scarce or costly, so they don't rely on resources that aren't available locally. The wind-up radio needs no batteries, which tackled a lack of batteries in parts of Africa, while the GravityLight gives LED lighting to replace dangerous, expensive kerosene lamps in Kenya.",
       "note": "1 mark per valid comparison point, up to 4."
