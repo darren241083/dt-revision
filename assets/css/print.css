@@ -25,8 +25,7 @@
 .ln-page + .ln-page { break-before: page; }
 .ln-page.natural { height: auto; justify-content: flex-start; }
 .ln-page.natural .ln-map { flex: none; height: 80mm; }
-/* Sides 3 and 4: a small header, and the sections from the top. */
-.ln-page:has(> .ln-cont) { justify-content: flex-start; gap: 4mm; }
+/* Sides 3 and 4: a small header, then the sections. */
 .ln-cont { padding-bottom: 1.5mm; border-bottom: .3mm solid #000000; font-family: var(--f-mono); font-size: 7.5pt; }
 .ln-cont b { font-family: var(--f-body); font-size: 9pt; font-weight: 800; }
 
@@ -113,3 +112,14 @@
 
 /* The filled-in sheet: the same layout, the writing in plain text. */
 .print-sheet.filled .ln-ink, .print-sheet.filled .ln-area, .print-sheet.filled .ln-model { color: #1A1A1A; }
+
+/* Tight: a sheet within about 20mm of fitting 2 sides (fitSheet) closes up its spacing. */
+.print-sheet.tight .ln-page { gap: 1.2mm; }
+.print-sheet.tight .ln-page.natural .ln-map { height: 64mm; }
+.print-sheet.tight .ln-sec h2 { margin-bottom: .6mm; }
+.print-sheet.tight .ln-head { padding-bottom: 1.2mm; }
+.print-sheet.tight .ln-chunk { padding-bottom: 1mm; }
+.print-sheet.tight .ln-prompts { margin-top: 0 !important; line-height: 1.15; }
+.print-sheet.tight .ln-examq { margin-top: .4mm !important; }
+.print-sheet.tight .ln-score, .print-sheet.tight .ln-mark { padding: .5mm 2mm; }
+.print-sheet.tight .ln-score i, .print-sheet.tight .ln-mark i { height: 4.5mm; }

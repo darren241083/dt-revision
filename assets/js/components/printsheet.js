@@ -6,12 +6,15 @@
 // It aims for one A4 sheet (2 sides) and continues onto sides 3–4 when it needs to: it never
 // goes below about one ruled line per item and 2 lines per exam mark to fit. A section that
 // doesn't fit starts the next side whole, under a small header (topic title · side 3).
+// Within about 20mm of fitting 2 sides, tighter spacing keeps it on one sheet. When it does
+// continue, side 2 is the Notes alone and side 3 holds both exam questions.
 // fitSheet() sets the layout on the blank sheet and the filled sheet copies it (plan), so the
 // two match line for line.
 
 import { h } from "../dom.js";
 
 const PAGE = 272; // mm of writing height a side: A4 297 less 12mm margins, 1mm spare
+const NEAR = 20; // mm: a sheet this close to fitting 2 sides is tightened to fit
 const QUIZ = 10;
 export const SHEETS = { blank: "Lesson notes sheet", filled: "Lesson notes sheet · filled in" };
 
@@ -39,7 +42,7 @@ const sentence = (s) => s.replace(/\.$/, "");
 const minExam = (w) => Math.max(4, 2 * w.marks);
 
 // plan (from fitSheet on the blank sheet): { sides: side index per section, lines: notes lines
-// per chunk, exam: lines per exam question, split: chunks in the left column }.
+// per chunk, exam: lines per exam question, split: chunks in the left column, tight }.
 export function printSheet(T, course, { filled = false, doNow = T.doNow, plan = null } = {}) {
   let n = 0;
   const num = () => h("b", { class: "ln-num" }, String(++n));
@@ -118,7 +121,7 @@ export function printSheet(T, course, { filled = false, doNow = T.doNow, plan = 
   (T.written || []).slice(0, 2).forEach((w, i) => {
     const rows = plan?.exam[i] ?? minExam(w);
     const type = w.type ? w.type[0].toUpperCase() + w.type.slice(1) : "";
-    add(h("section", { class: "ln-sec ln-exam", "data-min": minExam(w) },
+    add(h("section", { class: "ln-sec ln-exam", "data-marks": w.marks },
       h("div", { class: "ln-examhead" },
         h("h2", {}, num(), `Exam question ${i + 1}`, h("span", { class: "ln-sub" }, [type, `${w.marks} marks`].filter(Boolean).join(" · "))),
         h("span", { class: "ln-mark" }, h("span", { class: "ln-label" }, "Mark"), h("i"), `/ ${w.marks}`)),
@@ -130,7 +133,7 @@ export function printSheet(T, course, { filled = false, doNow = T.doNow, plan = 
         : h("div", { class: "ln-ruled" }, lines(rows))));
   });
 
-  const sheet = h("div", { class: `print-sheet ${filled ? "filled" : "blank"}`, "aria-hidden": "true" });
+  const sheet = h("div", { class: `print-sheet ${filled ? "filled" : "blank"}${plan?.tight ? " tight" : ""}`, "aria-hidden": "true" });
   sheet._parts = { header, sections, title: T.title };
   // Default placement: everything up to Notes on side 1, Notes onwards on side 2.
   const notesAt = sections.findIndex((s) => s.classList.contains("ln-notes"));
@@ -178,9 +181,8 @@ function natural(side) {
 // 1. Flows the sections onto sides in order: Do now to Test on side 1, Notes starting side 2,
 //    and any section that doesn't fit where it falls starting the next side, whole.
 // 2. Splits the notes between two columns (whole chunks, in order) so the columns balance.
-// 3. Fills sides 2 onwards (not a last continuation side): more notes lines, spread across the
-//    chunks and kept balanced; on a side with no notes, more exam lines. Side 1's map takes
-//    what is left.
+// 3. Fills sides 2 onwards: more notes lines, spread across the chunks and kept balanced; on
+//    the exam side, lines shared in proportion to marks. Side 1's map takes what is left.
 // Returns the plan the filled sheet copies, and the number of sides.
 export function fitSheet(sheet) {
   const mm = mmPx(), cap = PAGE * mm;
@@ -211,26 +213,58 @@ export function fitSheet(sheet) {
   }
   balance();
 
-  // 1. Flow.
-  const sides = [];
-  let side = 0;
-  sheet.replaceChildren();
-  let page = newSide(sheet, 0);
-  sections.forEach((s, i) => {
-    if (s === notes && side === 0) page = newSide(sheet, ++side);
-    page.append(s);
-    if (natural(page) > cap && page.querySelectorAll(".ln-sec").length > 1) {
-      s.remove();
-      page = newSide(sheet, ++side);
-      page.append(s);
-    }
-    sides[i] = side;
-  });
+  const exams = sections.filter((s) => s.classList.contains("ln-exam"));
+  const notesAt = sections.indexOf(notes);
 
-  // 3. Fill the sides after the first. A last side past side 2 (a continuation) keeps its
-  //    sections at their own size and leaves the rest of the side free.
+  // 1. Flow. The exam questions stay together: if one has to move on from the Notes side,
+  //    both start the next side and the Notes keep their side to themselves.
+  function flow() {
+    const sides = [];
+    let side = 0;
+    sheet.replaceChildren();
+    let page = newSide(sheet, 0);
+    sections.forEach((s, i) => {
+      if (s === notes && side === 0) page = newSide(sheet, ++side);
+      page.append(s);
+      if (natural(page) > cap && page.querySelectorAll(".ln-sec").length > 1) {
+        s.remove();
+        page = newSide(sheet, ++side);
+        page.append(s);
+      }
+      sides[i] = side;
+    });
+    const ex = exams.map((s) => sections.indexOf(s));
+    if (ex.some((i) => sides[i] > sides[notesAt])) {
+      ex.forEach((i) => { sides[i] = sides[notesAt] + 1; });
+      place(sheet, sides);
+    }
+    return sides;
+  }
+  // How far the fullest side would run over with everything on 2 sides.
+  function overOnTwo() {
+    place(sheet, sections.map((_, i) => (i < notesAt ? 0 : 1)));
+    return Math.max(...[...sheet.querySelectorAll(".ln-page")].map((p) => natural(p) - cap));
+  }
+
+  let sides = flow();
+  let tight = false;
+  // Within about 20mm of fitting on 2 sides: tighter spacing keeps it on one sheet.
+  if (Math.max(...sides) > 1) {
+    const over = overOnTwo();
+    if (over <= NEAR * mm) {
+      sheet.classList.add("tight");
+      sides = flow();
+      tight = Math.max(...sides) <= 1;
+      if (!tight) sheet.classList.remove("tight");
+    }
+    if (!tight) sides = flow();
+  }
+
+  // 3. Fill every side after the first: notes lines spread across the chunks with the columns
+  //    kept balanced; on the exam side, lines shared between the questions in proportion to
+  //    their marks.
   const pages = [...sheet.querySelectorAll(".ln-page")];
-  for (const p of pages.slice(1, pages.length > 2 ? -1 : undefined)) {
+  for (const p of pages.slice(1)) {
     if (p.contains(notes)) {
       for (let open = chunks.map((_, i) => i); open.length;) {
         open.sort((a, b) => (counts[a] - base[a]) - (counts[b] - base[b]) || a - b);
@@ -240,18 +274,18 @@ export function fitSheet(sheet) {
         if (natural(p) > cap) { counts[i]--; balance(); open.shift(); }
       }
     } else {
-      const rs = [...p.querySelectorAll(".ln-exam .ln-ruled")];
-      for (let open = rs.slice(); open.length;) {
-        open.sort((a, b) => a.children.length - b.children.length);
-        const r = open[0];
+      const qs = [...p.querySelectorAll(".ln-exam")];
+      for (let open = qs.slice(); open.length;) {
+        const per = (q) => ruled(q).children.length / +q.dataset.marks;
+        open.sort((a, b) => per(a) - per(b));
+        const r = ruled(open[0]);
         r.append(line());
         if (natural(p) > cap) { r.lastElementChild.remove(); open.shift(); }
       }
     }
   }
 
-  const exams = sections.filter((s) => s.classList.contains("ln-exam"));
-  const plan = { sides, split, lines: counts.slice(), exam: exams.map((s) => ruled(s).children.length) };
+  const plan = { sides, split, tight, lines: counts.slice(), exam: exams.map((s) => ruled(s).children.length) };
   const report = { plan, sides: pages.length, fits: pages.every((p) => natural(p) <= cap + 0.5) };
   drawMap(sheet);
   sheet.classList.remove("measure");
