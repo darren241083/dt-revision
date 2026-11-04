@@ -67,7 +67,12 @@
         {
           "term": "Avoiding offence",
           "tags": [],
-          "text": "Products must not offend people in domestic or global markets."
+          "text": "Products must not offend people in domestic or global markets.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/avoiding-offence.webp",
+            "alt": "Avoiding offence",
+            "credit": "DT"
+          }
         },
         {
           "term": "Cost of offence",
