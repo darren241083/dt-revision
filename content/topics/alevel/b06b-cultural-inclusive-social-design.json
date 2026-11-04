@@ -176,7 +176,12 @@
         {
           "term": "In the home",
           "tags": [],
-          "text": "Wider doors for wheelchairs in new houses and OXO Good Grips easy-to-use utensils."
+          "text": "Wider doors for wheelchairs in new houses and OXO Good Grips easy-to-use utensils.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/in-the-home.webp",
+            "alt": "In the home",
+            "credit": "DT"
+          }
         },
         {
           "term": "Getting about",
