@@ -200,7 +200,12 @@
             "timber"
           ],
           "text": "A wheel or pad covered in abrasive paper that spins or vibrates fast to remove waste.",
-          "only": "timber"
+          "only": "timber",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/sander.webp",
+            "alt": "Sander",
+            "credit": "DT"
+          }
         },
         {
           "term": "Router",
