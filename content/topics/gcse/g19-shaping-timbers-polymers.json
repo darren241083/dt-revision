@@ -535,7 +535,12 @@
           "tags": [
             "timber"
           ],
-          "text": "Spins the work while a tool cuts, sands or shapes it all round."
+          "text": "Spins the work while a tool cuts, sands or shapes it all round.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/lathe.webp",
+            "alt": "Lathe",
+            "credit": "DT"
+          }
         },
         {
           "term": "CNC wood turning",
