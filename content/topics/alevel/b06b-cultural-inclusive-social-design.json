@@ -255,7 +255,12 @@
         {
           "term": "Black box devices",
           "tags": [],
-          "text": "Car insurance companies use them to monitor young drivers."
+          "text": "Car insurance companies use them to monitor young drivers.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/black-box-devices.webp",
+            "alt": "Black box devices",
+            "credit": "DT"
+          }
         },
         {
           "term": "Police scanning devices",
