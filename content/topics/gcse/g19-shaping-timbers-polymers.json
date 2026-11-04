@@ -548,7 +548,12 @@
             "timber"
           ],
           "text": "Identical, accurate parts: stair spindles, chair parts, table legs.",
-          "only": "timber"
+          "only": "timber",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/cnc-wood-turning.webp",
+            "alt": "CNC wood turning",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
