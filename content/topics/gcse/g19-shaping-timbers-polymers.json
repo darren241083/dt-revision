@@ -213,7 +213,12 @@
             "timber",
             "polymer"
           ],
-          "text": "Handheld. Cuts a shape or profile by moving through the material."
+          "text": "Handheld. Cuts a shape or profile by moving through the material.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/router.webp",
+            "alt": "Router",
+            "credit": "DT"
+          }
         },
         {
           "term": "CNC routing",
