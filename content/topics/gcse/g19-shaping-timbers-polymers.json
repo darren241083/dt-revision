@@ -226,7 +226,12 @@
             "timber",
             "polymer"
           ],
-          "text": "The router follows a programmed cutting path. The material is fixed to a bed and only the router moves."
+          "text": "The router follows a programmed cutting path. The material is fixed to a bed and only the router moves.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/cnc-routing.webp",
+            "alt": "CNC routing",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
