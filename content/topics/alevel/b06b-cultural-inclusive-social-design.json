@@ -196,7 +196,12 @@
         {
           "term": "Hearing induction loops",
           "tags": [],
-          "text": "In theatres, for audience members with a hearing impairment."
+          "text": "In theatres, for audience members with a hearing impairment.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/hearing-induction-loops.webp",
+            "alt": "Hearing induction loops",
+            "credit": "DT"
+          }
         },
         {
           "term": "Specialist products",
