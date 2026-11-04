@@ -107,7 +107,12 @@
         {
           "term": "Beliefs and customs",
           "tags": [],
-          "text": "Religious beliefs, traditions and customs may be outside the designer's experience."
+          "text": "Religious beliefs, traditions and customs may be outside the designer's experience.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/beliefs-and-customs.webp",
+            "alt": "Beliefs and customs",
+            "credit": "DT"
+          }
         },
         {
           "term": "User research",
