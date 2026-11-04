@@ -87,7 +87,12 @@
         {
           "term": "Genders",
           "tags": [],
-          "text": "Research how different genders perceive the product."
+          "text": "Research how different genders perceive the product.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/genders.webp",
+            "alt": "Genders",
+            "credit": "DT"
+          }
         },
         {
           "term": "Colour",
