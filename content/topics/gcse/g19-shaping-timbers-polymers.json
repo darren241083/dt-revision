@@ -117,7 +117,12 @@
             "timber",
             "polymer"
           ],
-          "text": "Curved cuts through thin material."
+          "text": "Curved cuts through thin material.",
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/coping-saw.webp",
+            "alt": "Coping saw",
+            "credit": "DT"
+          }
         },
         {
           "term": "Hacksaw / junior hacksaw",
