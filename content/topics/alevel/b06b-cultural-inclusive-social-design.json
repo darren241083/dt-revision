@@ -146,12 +146,22 @@
         {
           "term": "Inclusive design",
           "tags": [],
-          "text": "Mainstream products usable by as many people as possible without special adaptation (BSI)."
+          "text": "Mainstream products usable by as many people as possible without special adaptation (BSI).",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/inclusive-design.webp",
+            "alt": "Inclusive design",
+            "credit": "DT"
+          }
         },
         {
           "term": "Disability Discrimination Act (1995)",
           "tags": [],
-          "text": "The DDA 1995, now replaced by the Equality Act 2010, changed public transport and access."
+          "text": "The DDA 1995, now replaced by the Equality Act 2010, changed public transport and access.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/disability-discrimination-act-1995.webp",
+            "alt": "Disability Discrimination Act (1995)",
+            "credit": "DT"
+          }
         },
         {
           "term": "Without stigma",
