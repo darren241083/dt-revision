@@ -492,7 +492,12 @@
         {
           "term": "No tools",
           "tags": [],
-          "text": "It can be put up without any tools."
+          "text": "It can be put up without any tools.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/no-tools.webp",
+            "alt": "No tools",
+            "credit": "DT"
+          }
         },
         {
           "term": "Sleeps five",
