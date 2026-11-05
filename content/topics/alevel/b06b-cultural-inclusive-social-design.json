@@ -433,7 +433,12 @@
         {
           "term": "Adiff clothing",
           "tags": [],
-          "text": "Multi-purpose clothing by Angela Luna that becomes a shelter."
+          "text": "Multi-purpose clothing by Angela Luna that becomes a shelter.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/adiff-clothing.webp",
+            "alt": "Adiff clothing",
+            "credit": "DT"
+          }
         },
         {
           "term": "Hospitainers and maternitainers",
