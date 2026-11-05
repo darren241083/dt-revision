@@ -606,7 +606,12 @@
         {
           "term": "Effect on design",
           "tags": [],
-          "text": "Shoppers recognise the scheme, so it affects material choice, branding and demand."
+          "text": "Shoppers recognise the scheme, so it affects material choice, branding and demand.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/effect-on-design.webp",
+            "alt": "Effect on design",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
