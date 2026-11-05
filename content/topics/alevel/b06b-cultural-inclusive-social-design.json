@@ -472,7 +472,12 @@
         {
           "term": "Temporary accommodation",
           "tags": [],
-          "text": "One of the key needs in a refugee crisis."
+          "text": "One of the key needs in a refugee crisis.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/temporary-accommodation.webp",
+            "alt": "Temporary accommodation",
+            "credit": "DT"
+          }
         },
         {
           "term": "Better Shelter",
