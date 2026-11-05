@@ -586,7 +586,12 @@
         {
           "term": "Fairtrade status",
           "tags": [],
-          "text": "Schools and councils seek it to promote sustainable development, producer benefits, active citizenship and demand."
+          "text": "Schools and councils seek it to promote sustainable development, producer benefits, active citizenship and demand.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fairtrade-status.webp",
+            "alt": "Fairtrade status",
+            "credit": "DT"
+          }
         },
         {
           "term": "Pushpanjali",
