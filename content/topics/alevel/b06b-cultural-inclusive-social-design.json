@@ -265,7 +265,12 @@
         {
           "term": "Police scanning devices",
           "tags": [],
-          "text": "Detect illegal drugs and explosives."
+          "text": "Detect illegal drugs and explosives.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/police-scanning-devices.webp",
+            "alt": "Police scanning devices",
+            "credit": "DT"
+          }
         },
         {
           "term": "Local context",
