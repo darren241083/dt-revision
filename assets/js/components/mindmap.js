@@ -51,8 +51,8 @@ function stack(heights, mid, room, most, least = GAP) {
   return heights.map((hh) => { const c = y + hh / 2; y += hh + gap; return c; });
 }
 
-// Each branch keeps its own colour (components.css: [data-br]); up to 7 branches, then repeats.
-const BR = (i) => String(i % 7);
+// Each branch keeps its own colour (components.css: [data-br]); 10 colours, then they repeat.
+const BR = (i) => String(i % 10);
 
 export function mindMap(topic, { chunkHref, recall = false } = {}) {
   let open = null, sel = null;

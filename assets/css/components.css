@@ -119,6 +119,9 @@ html.teach .teach-only { display: block; }
 [data-br="4"] { --bc: var(--br5); --bc-soft: var(--br5-soft); }
 [data-br="5"] { --bc: var(--br6); --bc-soft: var(--br6-soft); }
 [data-br="6"] { --bc: var(--br7); --bc-soft: var(--br7-soft); }
+[data-br="7"] { --bc: var(--br8); --bc-soft: var(--br8-soft); }
+[data-br="8"] { --bc: var(--br9); --bc-soft: var(--br9-soft); }
+[data-br="9"] { --bc: var(--br10); --bc-soft: var(--br10-soft); }
 .mm-branch[data-br] { border-color: var(--bc); background: var(--bc-soft); color: var(--bc); }
 .mm-branch[data-br] .mm-count { opacity: 1; }
 .mm-branch[data-br]:hover { box-shadow: 0 0 0 3px var(--bc-soft); }
