@@ -413,7 +413,12 @@
         {
           "term": "Solar cookers",
           "tags": [],
-          "text": "From the UNHCR, for preparing food."
+          "text": "From the UNHCR, for preparing food.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/solar-cookers.webp",
+            "alt": "Solar cookers",
+            "credit": "DT"
+          }
         },
         {
           "term": "Water distillation",
