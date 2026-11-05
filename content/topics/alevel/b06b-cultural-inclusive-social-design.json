@@ -344,7 +344,12 @@
         {
           "term": "da Vinci system",
           "tags": [],
-          "text": "A robotic surgery system by Intuitive Surgical, for advanced, safe surgery."
+          "text": "A robotic surgery system by Intuitive Surgical, for advanced, safe surgery.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/da-vinci-system.webp",
+            "alt": "da Vinci system",
+            "credit": "DT"
+          }
         },
         {
           "term": "Touch Bionics",
