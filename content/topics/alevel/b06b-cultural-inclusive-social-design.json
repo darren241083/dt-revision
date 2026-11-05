@@ -393,7 +393,12 @@
         {
           "term": "Temporary communities",
           "tags": [],
-          "text": "Conflict, poverty and victimisation leave huge communities of destitute migrants."
+          "text": "Conflict, poverty and victimisation leave huge communities of destitute migrants.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/temporary-communities.webp",
+            "alt": "Temporary communities",
+            "credit": "DT"
+          }
         },
         {
           "term": "Humanitarian organisations and NGOs",
