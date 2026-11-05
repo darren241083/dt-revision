@@ -596,7 +596,12 @@
         {
           "term": "Pushpanjali",
           "tags": [],
-          "text": "A Fairtrade organisation in India giving craftspeople sustainable work and social benefits."
+          "text": "A Fairtrade organisation in India giving craftspeople sustainable work and social benefits.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/pushpanjali.webp",
+            "alt": "Pushpanjali",
+            "credit": "DT"
+          }
         },
         {
           "term": "Effect on design",
