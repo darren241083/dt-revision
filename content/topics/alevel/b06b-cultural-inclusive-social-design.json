@@ -443,7 +443,12 @@
         {
           "term": "Hospitainers and maternitainers",
           "tags": [],
-          "text": "Adapted shipping containers for medical care, from the UNFPA."
+          "text": "Adapted shipping containers for medical care, from the UNFPA.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/hospitainers-and-maternitainers.webp",
+            "alt": "Hospitainers and maternitainers",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
