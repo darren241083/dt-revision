@@ -324,7 +324,12 @@
         {
           "term": "GravityLight",
           "tags": [],
-          "text": "LED lighting replacing dangerous, costly kerosene lamps in Kenya."
+          "text": "LED lighting replacing dangerous, costly kerosene lamps in Kenya.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/gravitylight.webp",
+            "alt": "GravityLight",
+            "credit": "DT"
+          }
         },
         {
           "term": "Practical Action",
