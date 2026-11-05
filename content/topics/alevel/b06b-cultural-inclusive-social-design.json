@@ -512,7 +512,12 @@
         {
           "term": "Well insulated",
           "tags": [],
-          "text": "The shelter is well insulated."
+          "text": "The shelter is well insulated.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/well-insulated.webp",
+            "alt": "Well insulated",
+            "credit": "DT"
+          }
         },
         {
           "term": "Solar power",
