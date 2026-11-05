@@ -12,7 +12,10 @@
     "title": "My Revision Notes: AQA A Level Design and Technology: Product Design",
     "pages": "129–131"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/alevel/b06b-cultural-inclusive-social-design.m4a",
+    "length": 288
+  },
   "needs": [
     "Explain why products must be culturally acceptable, and what designers research.",
     "Define inclusive design and give examples of it.",
