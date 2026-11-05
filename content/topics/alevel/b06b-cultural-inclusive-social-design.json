@@ -502,7 +502,12 @@
         {
           "term": "Sleeps five",
           "tags": [],
-          "text": "Each shelter sleeps five people."
+          "text": "Each shelter sleeps five people.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/sleeps-five.webp",
+            "alt": "Sleeps five",
+            "credit": "DT"
+          }
         },
         {
           "term": "Well insulated",
