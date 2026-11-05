@@ -354,7 +354,12 @@
         {
           "term": "Touch Bionics",
           "tags": [],
-          "text": "Improved prostheses using advanced composites, motors and control systems."
+          "text": "Improved prostheses using advanced composites, motors and control systems.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/touch-bionics.webp",
+            "alt": "Touch Bionics",
+            "credit": "DT"
+          }
         },
         {
           "term": "3D printed implants",
