@@ -423,7 +423,12 @@
         {
           "term": "Water distillation",
           "tags": [],
-          "text": "Technology from SunDwater, for clean water."
+          "text": "Technology from SunDwater, for clean water.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/water-distillation.webp",
+            "alt": "Water distillation",
+            "credit": "DT"
+          }
         },
         {
           "term": "Adiff clothing",
