@@ -12,10 +12,13 @@ export function imageSlot(ref, hasImage) {
     icon("image"), hasImage ? "Edit image" : "Add image");
 }
 
-// A saved image with its credit line underneath.
-export function figure(img, fallbackAlt) {
+// A saved image with the item's caption (if any) and the credit line underneath. The caption
+// only ever shows here, under an image that exists.
+export function figure(img, fallbackAlt, caption) {
   if (!img) return null;
   return h("figure", { class: "img-slot" },
     h("img", { src: img.file, alt: img.alt || fallbackAlt || "", loading: "lazy" }),
-    img.credit && h("figcaption", {}, img.credit));
+    (caption || img.credit) && h("figcaption", {},
+      caption && h("span", { class: "img-caption" }, caption),
+      img.credit && h("span", { class: "img-credit-line" }, img.credit)));
 }

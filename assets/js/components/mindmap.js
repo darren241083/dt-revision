@@ -319,7 +319,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
         it.steps && h("ol", { class: "mm-steps" }, it.steps.map((s) => h("li", {}, s))),
         h("a", { class: "mm-read", href: chunkHref(c) }, "Read this chunk ↓")),
       (it.image || editState.on) && h("div", { class: "mm-detail-img" },
-        imgFigure(it.image, it.term),
+        imgFigure(it.image, it.term, !recall && it.caption),
         imageSlot({ kind: "item", chunk: c.id, term: it.term }, !!it.image))
     ];
   }

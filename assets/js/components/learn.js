@@ -24,7 +24,7 @@ function itemRow(it, chunk) {
     h("span", { class: "item-term" }, it.term),
     h("span", { class: "item-text" }, it.text),
     h("span", { class: "item-tag" }, materialTag(it.tags)),
-    (it.image || slot) && h("div", { class: "item-img" }, imgFigure(it.image, it.term), slot));
+    (it.image || slot) && h("div", { class: "item-img" }, imgFigure(it.image, it.term, it.caption), slot));
 }
 
 /* ---------- Step-through (processes) ---------- */
@@ -54,7 +54,7 @@ function stepThrough(it, chunk) {
       h("h2", {}, it.term, materialTag(it.tags)),
       pips),
     it.text && h("p", { class: "steps-intro" }, it.text),
-    imgFigure(it.image, it.term),
+    imgFigure(it.image, it.term, it.caption),
     imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, !!it.image),
     h("div", { class: "step-body" }, num, text),
     status,

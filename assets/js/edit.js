@@ -302,6 +302,9 @@ async function imageDialog(ref) {
   const preview = h("div", { class: "dlg-preview" });
   const alt = h("input", { type: "text", value: now?.alt || target.obj.alt || name });
   const credit = h("input", { type: "text", value: now?.credit || "", placeholder: "e.g. Jane Smith · CC BY 4.0" });
+  // Items only: a short teacher-written caption shown under the image (never used for questions,
+  // prints or audio). Saved with the image; an empty box removes it.
+  const caption = !isDiagram && h("textarea", { rows: 3 }, target.obj.caption || "");
   const msg = status();
   let ready = null;
   const save = h("button", { type: "button", class: "btn-dark", disabled: true }, now ? "Save new image" : "Save image");
@@ -336,6 +339,7 @@ async function imageDialog(ref) {
     links, drop, preview,
     field("Alt text", alt),
     field("Credit (author · licence)", credit),
+    caption && field("Caption (optional)", caption),
     isDiagram && h("p", { class: "dlg-note" }, "The part positions stay as they are, so check them after a new drawing."
       + (now ? " A diagram needs a drawing, so it can be replaced but not removed." : "")),
     h("div", { class: "btn-row" }, buttons), msg);
@@ -358,6 +362,11 @@ async function imageDialog(ref) {
   }
 
   const details = () => ({ alt: alt.value.trim(), credit: credit.value.trim() });
+  const setCaption = (o) => {
+    if (isDiagram) return;
+    const c = caption.value.replace(/\s+/g, " ").trim();
+    if (c) o.caption = c; else delete o.caption;
+  };
   const needCredit = () => {
     if (credit.value.trim()) return false;
     say(msg, "Add a credit line: who made it, and the licence.", "bad");
@@ -370,7 +379,7 @@ async function imageDialog(ref) {
     const file = `assets/img/${ctx.level}/${id}/${slug(name)}.webp`;
     const put = (o, f) => {
       if (isDiagram) { Object.assign(o, { image: f, ...details(), width: ready.width, height: ready.height }); delete o.svg; }
-      else o.image = { file: f, ...details() };
+      else { o.image = { file: f, ...details() }; setCaption(o); }
     };
     const base64 = toBase64(await ready.blob.arrayBuffer());
     // This page shows the new image straight away; the public copy follows after publishing.
@@ -380,7 +389,7 @@ async function imageDialog(ref) {
 
   saveDetails?.addEventListener("click", () => {
     if (needCredit()) return;
-    const set = (o) => Object.assign(isDiagram ? o : o.image, details());
+    const set = (o) => { Object.assign(isDiagram ? o : o.image, details()); setCaption(o); };
     run((o) => { if (!o.image) throw gone("image"); set(o); }, [], `Image details: ${name} (${id})`, set);
   });
 
@@ -389,10 +398,11 @@ async function imageDialog(ref) {
       const f = o.image?.file;
       if (!f) throw gone("image");
       delete o.image;
+      delete o.caption;   // the caption belongs to the image
       // The file stays if another item or diagram in the topic still uses it.
       const used = t.chunks.some((c) => c.diagram?.image === f || c.items.some((it) => it.image?.file === f));
       return used ? [] : [{ path: `site/${f}`, remove: true }];
-    }, [], `Remove image: ${name} (${id})`, (o) => { delete o.image; });
+    }, [], `Remove image: ${name} (${id})`, (o) => { delete o.image; delete o.caption; });
   }
 }
 

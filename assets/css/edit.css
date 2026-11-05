@@ -20,7 +20,9 @@
 .dlg-field small, .dlg-note { color: var(--muted); font-size: .875rem; }
 .dlg-field input[type="text"], .dlg-field input[type="password"], .dlg-field input[type="date"], .dlg-field select {
   width: 100%; min-height: var(--tap); padding: 0 12px; border: 1.5px solid var(--card-border); border-radius: 10px; background: #F7F9F9; color: var(--ink); font: inherit; font-size: 1rem; }
-.dlg-field input:focus-visible, .dlg-field select:focus-visible { border-color: var(--teal); }
+.dlg-field textarea {
+  width: 100%; min-height: calc(var(--tap) * 2); padding: 10px 12px; border: 1.5px solid var(--card-border); border-radius: 10px; background: #F7F9F9; color: var(--ink); font: inherit; font-size: 1rem; line-height: 1.4; resize: vertical; }
+.dlg-field input:focus-visible, .dlg-field select:focus-visible, .dlg-field textarea:focus-visible { border-color: var(--teal); }
 .dlg-inline { display: flex; gap: 8px; }
 .dlg-inline input { flex: 1; min-width: 0; }
 .dlg-links { margin: -4px 0 0; font-size: .9375rem; }

@@ -151,7 +151,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/inclusive-design.webp",
             "alt": "Inclusive design",
             "credit": "DT"
-          }
+          },
+          "caption": "A diverse focus group helps designers understand different abilities, experiences and needs. Involving users early reduces assumptions and leads to more accessible products."
         },
         {
           "term": "Disability Discrimination Act (1995)",
@@ -161,7 +162,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/disability-discrimination-act-1995.webp",
             "alt": "Disability Discrimination Act (1995)",
             "credit": "DT"
-          }
+          },
+          "caption": "Accessible transport demonstrates how design can remove physical barriers. Features such as low-floor buses and wheelchair ramps enable greater independence and equal access (now replaced by the Equality Act 2010)."
         },
         {
           "term": "Without stigma",
@@ -171,7 +173,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/without-stigma.webp",
             "alt": "Without stigma",
             "credit": "DT"
-          }
+          },
+          "caption": "OXO Good Grips uses ergonomic, easy-to-hold handles that benefit people with reduced grip strength. The products remain attractive and practical for everyone, avoiding stigma."
         },
         {
           "term": "In the home",
@@ -181,7 +184,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/in-the-home.webp",
             "alt": "In the home",
             "credit": "DT"
-          }
+          },
+          "caption": "Wider doorways and level thresholds accommodate wheelchair users, pushchairs and people with limited mobility. Designing accessibility into homes benefits a wide range of users."
         },
         {
           "term": "Getting about",
@@ -191,7 +195,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/getting-about.webp",
             "alt": "Getting about",
             "credit": "DT"
-          }
+          },
+          "caption": "Low-floor buses, tactile paving and accessible crossings help people with different abilities navigate public spaces safely and independently."
         },
         {
           "term": "Hearing induction loops",
@@ -201,7 +206,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/hearing-induction-loops.webp",
             "alt": "Hearing induction loops",
             "credit": "DT"
-          }
+          },
+          "caption": "Induction loops transmit sound directly to compatible hearing aids, reducing background noise. This improves accessibility in public places such as theatres and reception areas."
         },
         {
           "term": "Specialist products",
@@ -211,7 +217,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/specialist-products.webp",
             "alt": "Specialist products",
             "credit": "DT"
-          }
+          },
+          "caption": "Kettle tippers reduce the strength and movement needed to pour hot water safely. Unlike universal products, specialist adaptations address particular user needs."
         }
       ],
       "check": [
@@ -240,7 +247,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/social-issues.webp",
             "alt": "Social issues",
             "credit": "DT"
-          }
+          },
+          "caption": "Designers can address problems such as pollution, poverty and poor health through innovative products and systems that improve behaviour, accessibility or living conditions."
         },
         {
           "term": "Child-friendly litter bins",
@@ -250,7 +258,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/child-friendly-litter-bins.webp",
             "alt": "Child-friendly litter bins",
             "credit": "DT"
-          }
+          },
+          "caption": "Bright colours and playful animal shapes make disposing of litter more appealing to children. This shows how aesthetics can influence behaviour and encourage positive habits."
         },
         {
           "term": "Black box devices",
@@ -260,7 +269,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/black-box-devices.webp",
             "alt": "Black box devices",
             "credit": "DT"
-          }
+          },
+          "caption": "Telematics devices monitor driving behaviour, including speed and braking. Feedback and insurance incentives can encourage safer driving, particularly among young or inexperienced drivers."
         },
         {
           "term": "Police scanning devices",
@@ -270,7 +280,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/police-scanning-devices.webp",
             "alt": "Police scanning devices",
             "credit": "DT"
-          }
+          },
+          "caption": "Portable scanners help police identify potentially dangerous substances in the field. Their design prioritises accuracy, portability, durability and ease of use."
         },
         {
           "term": "Local context",
@@ -280,7 +291,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/local-context.webp",
             "alt": "Local context",
             "credit": "DT"
-          }
+          },
+          "caption": "Manual water pumps demonstrate appropriate technology designed around local infrastructure and resources. Long-term success also depends on affordable maintenance, spare parts and available skills."
         }
       ],
       "check": [
@@ -309,7 +321,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/un-article-25-1948.webp",
             "alt": "UN Article 25 (1948)",
             "credit": "DT"
-          }
+          },
+          "caption": "The UN recognises access to food, shelter and healthcare as basic human rights. Designers can contribute by developing affordable solutions that improve living standards."
         },
         {
           "term": "Wind-up radio",
@@ -319,7 +332,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/wind-up-radio.webp",
             "alt": "Wind-up radio",
             "credit": "DT"
-          }
+          },
+          "caption": "Trevor Baylis's radio converts stored mechanical energy into electricity. It provides access to information without relying on disposable batteries or mains electricity."
         },
         {
           "term": "GravityLight",
@@ -329,7 +343,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/gravitylight.webp",
             "alt": "GravityLight",
             "credit": "DT"
-          }
+          },
+          "caption": "GravityLight generates electricity as a raised weight slowly descends. This innovative approach provides LED lighting without disposable batteries or fuel-burning kerosene lamps."
         },
         {
           "term": "Practical Action",
@@ -339,7 +354,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/practical-action.webp",
             "alt": "Practical Action",
             "credit": "DT"
-          }
+          },
+          "caption": "Practical Action promotes appropriate technology designed around local needs. Successful solutions must be affordable, easy to use and maintainable using available resources."
         },
         {
           "term": "da Vinci system",
@@ -349,7 +365,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/da-vinci-system.webp",
             "alt": "da Vinci system",
             "credit": "DT"
-          }
+          },
+          "caption": "The da Vinci system translates a surgeon's movements into precise robotic actions. Advanced control systems and articulated instruments enhance dexterity during minimally invasive surgery."
         },
         {
           "term": "Touch Bionics",
@@ -359,7 +376,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/touch-bionics.webp",
             "alt": "Touch Bionics",
             "credit": "DT"
-          }
+          },
+          "caption": "The i-limb combines sensors, electronic controls and independently powered fingers. These technologies enable different gripping functions, improving independence for people with limb differences."
         },
         {
           "term": "3D printed implants",
@@ -369,7 +387,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/3d-printed-implants.webp",
             "alt": "3D printed implants",
             "credit": "DT"
-          }
+          },
+          "caption": "Medical imaging and CAD enable patient-specific implants to match individual anatomy. Additive manufacturing can produce complex shapes that are difficult to manufacture conventionally."
         }
       ],
       "check": [
@@ -398,7 +417,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/temporary-communities.webp",
             "alt": "Temporary communities",
             "credit": "DT"
-          }
+          },
+          "caption": "Conflict and displacement create urgent demand for shelter, clean water and sanitation. Designers must develop affordable, portable solutions that can be deployed rapidly."
         },
         {
           "term": "Humanitarian organisations and NGOs",
@@ -408,7 +428,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/humanitarian-organisations-and-ngos.webp",
             "alt": "Humanitarian organisations and NGOs",
             "credit": "DT"
-          }
+          },
+          "caption": "Organisations such as Oxfam and UNHCR provide essential infrastructure during humanitarian emergencies. Product solutions must be reliable, practical and suitable for challenging conditions."
         },
         {
           "term": "Solar cookers",
@@ -418,7 +439,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/solar-cookers.webp",
             "alt": "Solar cookers",
             "credit": "DT"
-          }
+          },
+          "caption": "Solar cookers concentrate or capture sunlight to heat food without conventional fuels. They can reduce fuel costs and firewood collection where sunlight is sufficient."
         },
         {
           "term": "Water distillation",
@@ -428,7 +450,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/water-distillation.webp",
             "alt": "Water distillation",
             "credit": "DT"
-          }
+          },
+          "caption": "Solar distillation uses heat to evaporate water before condensing the vapour into freshwater. It demonstrates how renewable energy can support access to clean water."
         },
         {
           "term": "Adiff clothing",
@@ -438,7 +461,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/adiff-clothing.webp",
             "alt": "Adiff clothing",
             "credit": "DT"
-          }
+          },
+          "caption": "Angela Luna's ADIFF designs transform clothing into temporary shelters. This multifunctional approach combines portability, protection and adaptability to address the needs of displaced people."
         },
         {
           "term": "Hospitainers and maternitainers",
@@ -448,7 +472,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/hospitainers-and-maternitainers.webp",
             "alt": "Hospitainers and maternitainers",
             "credit": "DT"
-          }
+          },
+          "caption": "Modified shipping containers provide transportable medical facilities. Their modular construction enables healthcare services to be deployed in areas lacking permanent infrastructure."
         }
       ],
       "check": [
@@ -477,7 +502,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/temporary-accommodation.webp",
             "alt": "Temporary accommodation",
             "credit": "DT"
-          }
+          },
+          "caption": "Emergency shelters must balance safety, comfort, privacy and affordability. Lightweight, transportable designs help humanitarian organisations respond quickly to housing shortages."
         },
         {
           "term": "Better Shelter",
@@ -487,7 +513,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/better-shelter.webp",
             "alt": "Better Shelter",
             "credit": "DT"
-          }
+          },
+          "caption": "Supported by the IKEA Foundation, Better Shelter applies flat-pack and modular design principles to emergency accommodation. Prefabricated components make transportation and assembly more efficient."
         },
         {
           "term": "No tools",
@@ -497,7 +524,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/no-tools.webp",
             "alt": "No tools",
             "credit": "DT"
-          }
+          },
+          "caption": "The shelter's modular construction reduces the need for specialist tools and building skills. This makes assembly more practical where resources and trained workers are limited."
         },
         {
           "term": "Sleeps five",
@@ -507,7 +535,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/sleeps-five.webp",
             "alt": "Sleeps five",
             "credit": "DT"
-          }
+          },
+          "caption": "Better Shelter provides approximately 17.5 m² of internal space for five people. Its design balances essential living space with material efficiency and transportability."
         },
         {
           "term": "Well insulated",
@@ -517,12 +546,14 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/well-insulated.webp",
             "alt": "Well insulated",
             "credit": "DT"
-          }
+          },
+          "caption": "Lightweight wall and roof panels provide greater protection from the elements than basic emergency tents. Material choice and ventilation influence comfort, durability and thermal performance."
         },
         {
           "term": "Solar power",
           "tags": [],
-          "text": "A solar-powered electrical system."
+          "text": "A solar-powered electrical system.",
+          "caption": "An integrated solar-powered lighting system provides illumination without relying on mains electricity. This improves usability and independence in locations with limited infrastructure."
         }
       ],
       "check": [
@@ -551,7 +582,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fairtrade.webp",
             "alt": "Fairtrade",
             "credit": "DT"
-          }
+          },
+          "caption": "Fairtrade promotes better trading conditions for farmers and workers. Ethical design considers working conditions, fair treatment and the social impact of manufacturing decisions."
         },
         {
           "term": "Fair prices",
@@ -561,7 +593,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fair-prices.webp",
             "alt": "Fair prices",
             "credit": "DT"
-          }
+          },
+          "caption": "Fairtrade Minimum Prices provide a safety net for eligible producers when market prices fall. An additional Fairtrade Premium supports investment in businesses and communities."
         },
         {
           "term": "Fairtrade mark",
@@ -571,7 +604,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fairtrade-mark.webp",
             "alt": "Fairtrade mark",
             "credit": "DT"
-          }
+          },
+          "caption": "The FAIRTRADE Mark identifies products meeting recognised certification standards. It allows consumers to make informed choices and helps brands communicate ethical sourcing."
         },
         {
           "term": "Traidcraft",
@@ -581,7 +615,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/traidcraft.webp",
             "alt": "Traidcraft",
             "credit": "DT"
-          }
+          },
+          "caption": "Traidcraft pioneered fair trade in the UK by creating markets for ethically sourced products. It demonstrated how responsible purchasing can support producers and communities."
         },
         {
           "term": "Fairtrade status",
@@ -591,7 +626,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fairtrade-status.webp",
             "alt": "Fairtrade status",
             "credit": "DT"
-          }
+          },
+          "caption": "Schools and councils can promote Fairtrade through purchasing policies and awareness campaigns. These initiatives encourage ethical consumption and help increase demand for responsibly sourced products."
         },
         {
           "term": "Pushpanjali",
@@ -601,7 +637,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/pushpanjali.webp",
             "alt": "Pushpanjali",
             "credit": "DT"
-          }
+          },
+          "caption": "Pushpanjali supports Indian craftspeople through the production and sale of handmade goods. Fair trading relationships help preserve traditional skills while supporting employment and livelihoods."
         },
         {
           "term": "Effect on design",
@@ -611,7 +648,8 @@
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/effect-on-design.webp",
             "alt": "Effect on design",
             "credit": "DT"
-          }
+          },
+          "caption": "Ethical considerations influence material selection, manufacturing, supply chains and packaging. Fairtrade certification can also strengthen a product's branding and appeal to socially conscious consumers."
         }
       ],
       "check": [
