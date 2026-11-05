@@ -553,7 +553,12 @@
           "term": "Solar power",
           "tags": [],
           "text": "A solar-powered electrical system.",
-          "caption": "An integrated solar-powered lighting system provides illumination without relying on mains electricity. This improves usability and independence in locations with limited infrastructure."
+          "caption": "An integrated solar-powered lighting system provides illumination without relying on mains electricity. This improves usability and independence in locations with limited infrastructure.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/solar-power.webp",
+            "alt": "Solar power",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
