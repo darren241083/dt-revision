@@ -556,7 +556,12 @@
         {
           "term": "Fair prices",
           "tags": [],
-          "text": "The Fairtrade organisation negotiates fair prices with buyers."
+          "text": "The Fairtrade organisation negotiates fair prices with buyers.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fair-prices.webp",
+            "alt": "Fair prices",
+            "credit": "DT"
+          }
         },
         {
           "term": "Fairtrade mark",
