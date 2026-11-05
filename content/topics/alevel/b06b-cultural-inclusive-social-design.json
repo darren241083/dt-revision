@@ -482,7 +482,12 @@
         {
           "term": "Better Shelter",
           "tags": [],
-          "text": "The Ikea Foundation's flat-pack shelter, made to meet that need."
+          "text": "The Ikea Foundation's flat-pack shelter, made to meet that need.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/better-shelter.webp",
+            "alt": "Better Shelter",
+            "credit": "DT"
+          }
         },
         {
           "term": "No tools",
