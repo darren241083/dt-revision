@@ -24,7 +24,9 @@ function itemRow(it, chunk) {
     h("span", { class: "item-term" }, it.term),
     h("span", { class: "item-text" }, it.text),
     h("span", { class: "item-tag" }, materialTag(it.tags)),
-    (it.image || slot) && h("div", { class: "item-img" }, imgFigure(it.image, it.term, it.caption), slot));
+    // The caption is a sibling of the figure here, so wide cards can put it under the description.
+    (it.image || slot) && h("div", { class: "item-img" }, imgFigure(it.image, it.term),
+      it.image && it.caption && h("p", { class: "img-caption" }, it.caption), slot));
 }
 
 /* ---------- Step-through (processes) ---------- */

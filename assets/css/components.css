@@ -44,7 +44,7 @@
 .img-slot { margin: 0; }
 .img-slot img { display: block; width: 100%; border-radius: 14px; }
 .img-slot figcaption { margin-top: 4px; color: var(--muted); font-size: .75rem; }
-.img-caption { display: block; margin: 4px 0 2px; font-size: .875rem; line-height: 1.4; }
+.img-caption { display: block; margin: 4px 0 2px; font-size: 1rem; line-height: 1.45; }
 .img-credit-line { display: block; }
 
 .teach-only { display: none; }
@@ -187,16 +187,32 @@ html.teach .teach-only { display: block; }
   .item-text { grid-column: 1 / -1; font-size: 1.0625rem; }
   .item-tag { grid-row: 1; grid-column: 2; }
 }
-/* An image with a caption, when the card is 600px or wider: the image (credit under it) on the
-   left, the caption to its right, top-aligned, ending where the description ends. Narrower,
-   the caption stays under the image. */
+/* An item image with a caption (Learn rows; the caption is a sibling of the figure here).
+   Narrow cards: image, caption, then credit, stacked, 320px at most, as under any image.
+   Cards 600px or wider: term on top; under it the image (credit under it) on the left and, to
+   its right from the image's top edge, the description with the caption directly under it,
+   left-aligned. In a list with captions every row's term column is the image's width, so all
+   descriptions line up, and an empty tag column (A-level) is dropped so they keep their width. */
+.item-img:has(> .img-caption) { flex-direction: column; align-items: flex-start; flex-wrap: nowrap; gap: 4px; }
+.item-img:has(> .img-caption) .img-slot, .item-img:has(> .img-caption) figcaption { display: contents; }
+.item-img:has(> .img-caption) img { order: 0; width: 100%; max-width: 320px; }
+.item-img > .img-caption { order: 1; max-width: 320px; margin: 4px 0 0; color: var(--muted); }
+.item-img:has(> .img-caption) .img-credit-line { order: 2; color: var(--muted); font-size: .75rem; }
+.item-img:has(> .img-caption) .img-edit { order: 3; margin-top: 6px; }
 @container (min-width: 600px) {
-  .item-img:has(.img-caption) { grid-column: 1 / 3; }
-  .item-img .img-slot:has(.img-caption) { flex: 1 1 100%; max-width: none; display: grid; grid-template-columns: 320px minmax(0, 1fr); column-gap: 20px; align-items: start; }
-  .item-img .img-slot:has(.img-caption) img { grid-column: 1; grid-row: 1; }
-  .item-img .img-slot:has(.img-caption) figcaption { display: contents; }
-  .item-img .img-caption { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
-  .item-img .img-credit-line { grid-column: 1; grid-row: 2; margin-top: 4px; }
+  .items:has(.img-caption) .item { grid-template-columns: 320px minmax(0, 1fr) 110px; }
+  .items:has(.img-caption) .item:has(.item-tag:empty) { grid-template-columns: 320px minmax(0, 1fr); }
+  .items:has(.img-caption) .item-tag:empty { display: none; }
+  .item:has(> .item-img > .img-caption) { grid-template-rows: auto auto 1fr; gap: 12px 20px; align-items: start; }
+  .item:has(> .item-img > .img-caption) .item-term { grid-column: 1; grid-row: 1; }
+  .item:has(> .item-img > .img-caption) .item-tag { grid-column: 3; grid-row: 1; }
+  .item:has(> .item-img > .img-caption) .item-text { grid-column: 2; grid-row: 2; }
+  .item:has(> .item-img > .img-caption) .item-img { display: contents; }
+  .item:has(> .item-img > .img-caption) .img-slot { display: block; grid-column: 1; grid-row: 2 / 4; max-width: none; }
+  .item:has(> .item-img > .img-caption) figcaption { display: block; }
+  .item:has(> .item-img > .img-caption) img { max-width: none; }
+  .item-img > .img-caption { grid-column: 2; grid-row: 3; max-width: none; margin: 0; }
+  .item:has(> .item-img > .img-caption) .img-edit { grid-column: 1; grid-row: 4; justify-self: start; margin: 0; }
 }
 
 .steps-card { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
