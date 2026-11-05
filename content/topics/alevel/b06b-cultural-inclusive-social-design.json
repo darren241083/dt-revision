@@ -304,7 +304,12 @@
         {
           "term": "UN Article 25 (1948)",
           "tags": [],
-          "text": "Everyone's right to food, clothing, housing and medical care for health and well-being."
+          "text": "Everyone's right to food, clothing, housing and medical care for health and well-being.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/un-article-25-1948.webp",
+            "alt": "UN Article 25 (1948)",
+            "credit": "DT"
+          }
         },
         {
           "term": "Wind-up radio",
