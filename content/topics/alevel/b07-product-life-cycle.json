@@ -1,0 +1,796 @@
+{
+  "id": "b07-product-life-cycle",
+  "level": "alevel",
+  "title": "Product life cycle",
+  "titleMark": "life cycle",
+  "spec": [
+    "3.2.3.4"
+  ],
+  "section": "2",
+  "materials": [],
+  "book": {
+    "title": "My Revision Notes: AQA A Level Design and Technology: Product Design",
+    "pages": "132–133"
+  },
+  "audio": null,
+  "needs": [
+    "Name the stages of the product life cycle and say what happens to sales in each.",
+    "Explain how extension strategies keep a product selling.",
+    "Explain demand pull and technology push, with an example of each.",
+    "Define planned obsolescence and give a more sustainable alternative.",
+    "Explain how products evolve through research and development (R&D)."
+  ],
+  "doNow": [
+    {
+      "q": "What does the product life cycle chart?",
+      "a": "A product's sales over time, from its introduction to its withdrawal.",
+      "from": "Pre-read p132"
+    },
+    {
+      "q": "What is planned obsolescence?",
+      "a": "Designing and making products that need replacing on a regular basis.",
+      "from": "Pre-read p133"
+    },
+    {
+      "q": "What is inclusive design?",
+      "a": "Mainstream products usable by as many people as reasonably possible, with no special adaptation.",
+      "from": "3.2.3"
+    },
+    {
+      "q": "What does the FSC scheme make sure of?",
+      "a": "That timber is used sustainably: it comes from responsibly managed sources.",
+      "from": "3.2.3"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I was worn on the head.",
+      "I was a computer you could wear.",
+      "Shoppers weren't convinced I was worth the price, and people worried about safety and privacy."
+    ],
+    "answer": "Google Glass",
+    "options": [
+      "Google Glass",
+      "Fairphone",
+      "Toyota Corolla",
+      "Apple iPhone"
+    ]
+  },
+  "chunks": [
+    {
+      "id": "plc",
+      "label": "Stages of the PLC",
+      "icon": "cycle",
+      "pages": "132",
+      "summary": "A product's sales charted over time, from launch to withdrawal.",
+      "items": [
+        {
+          "term": "Product life cycle (PLC)",
+          "tags": [],
+          "text": "Charts a product's sales from introduction to withdrawal; plan its decline and replacement carefully."
+        },
+        {
+          "term": "Introduction",
+          "tags": [],
+          "text": "Sales start low, then take off; launched with publicity after market research."
+        },
+        {
+          "term": "Evolution and growth",
+          "tags": [],
+          "text": "Advertising grows sales as consumers move to it from older products."
+        },
+        {
+          "term": "Maturity",
+          "tags": [],
+          "text": "Sales peak; the aim is to keep the product here as long as possible."
+        },
+        {
+          "term": "Decline",
+          "tags": [],
+          "text": "Sales fall, as most people who want one have bought it; then it's withdrawn."
+        },
+        {
+          "term": "Replacement",
+          "tags": [],
+          "text": "An updated, improved version is released to keep sales going."
+        },
+        {
+          "term": "Life-cycle assessment",
+          "tags": [],
+          "text": "Not the PLC: it follows a product's environmental impact, not its sales."
+        }
+      ],
+      "diagram": {
+        "title": "Product life cycle sales graph",
+        "svg": "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Graph of sales against time. The sales curve starts low, climbs steeply, levels off at a peak, then falls. A dashed line rises from the peak, showing an updated version that keeps sales going.\"><path class=\"d\" d=\"M80 30V182M132 30V182M200 30V182\" style=\"stroke-dasharray:2 6;opacity:.45\"/><path class=\"d\" d=\"M24 12V182H292\"/><path class=\"d\" d=\"M18 20L24 12L30 20M284 176L292 182L284 188\"/><path class=\"d\" d=\"M24 176C55 176 70 166 82 146C96 120 112 68 142 60C168 54 186 64 200 86C216 110 236 150 262 168\" style=\"stroke-width:3\"/><path class=\"d\" d=\"M186 66C210 60 232 52 266 40\" style=\"stroke-dasharray:6 5\"/><path class=\"d\" d=\"M255 38.6L266 40L258.3 48\"/><text x=\"12\" y=\"100\" transform=\"rotate(-90 12 100)\" text-anchor=\"middle\" font-size=\"12\" fill=\"#33464F\">Sales</text><text x=\"158\" y=\"198\" text-anchor=\"middle\" font-size=\"12\" fill=\"#33464F\">Time</text></svg>",
+        "parts": [
+          {
+            "x": 20,
+            "y": 84,
+            "name": "Introduction",
+            "text": "Launched with publicity; sales start to take off."
+          },
+          {
+            "x": 35.3,
+            "y": 48,
+            "name": "Evolution and growth",
+            "text": "Advertising helps sales grow."
+          },
+          {
+            "x": 50,
+            "y": 29,
+            "name": "Maturity",
+            "text": "Peak sales, kept for as long as possible."
+          },
+          {
+            "x": 75.7,
+            "y": 64.5,
+            "name": "Decline",
+            "text": "Sales fall; the product is eventually withdrawn."
+          },
+          {
+            "x": 78,
+            "y": 25.5,
+            "name": "Replacement",
+            "text": "An updated, improved version keeps sales going."
+          }
+        ]
+      },
+      "check": [
+        {
+          "q": "What happens to sales in the maturity stage?",
+          "a": "They peak; the company tries to keep the product there as long as possible."
+        },
+        {
+          "q": "Why is an updated version released at the end of the life cycle?",
+          "a": "To maintain sales as the original product declines."
+        }
+      ]
+    },
+    {
+      "id": "extend",
+      "label": "Extension strategies",
+      "icon": "refresh",
+      "pages": "132",
+      "summary": "Updating or redesigning a product to keep it selling.",
+      "items": [
+        {
+          "term": "Extension strategy",
+          "tags": [],
+          "text": "Updating or redesigning a product to maintain its sales."
+        },
+        {
+          "term": "Smartphones",
+          "tags": [],
+          "text": "The Apple iPhone and Samsung Galaxy use extension strategies to keep selling."
+        },
+        {
+          "term": "Toyota Corolla",
+          "tags": [],
+          "text": "Redesigned 11 times in 50 years to keep it selling."
+        },
+        {
+          "term": "Ways to refresh",
+          "tags": [],
+          "text": "New materials, updated electronics, new styling, better sustainability or user experience."
+        }
+      ],
+      "check": [
+        {
+          "q": "Give an example of a product that uses an extension strategy.",
+          "a": "The Toyota Corolla (redesigned 11 times in 50 years), the Apple iPhone or the Samsung Galaxy."
+        },
+        {
+          "q": "Name two ways a product can be refreshed.",
+          "a": "Any two: new materials, updated electronics, new styling, improved sustainability, a redesigned user experience."
+        }
+      ]
+    },
+    {
+      "id": "pull",
+      "label": "Demand pull",
+      "icon": "people",
+      "pages": "132",
+      "summary": "Consumers want features, and designers respond.",
+      "items": [
+        {
+          "term": "Demand pull",
+          "tags": [],
+          "text": "Consumers' demand for desirable features, which product designers often respond to."
+        },
+        {
+          "term": "Battery life",
+          "tags": [],
+          "text": "Smartphone users want batteries that last longer, so designers improve them."
+        },
+        {
+          "term": "Larger memory",
+          "tags": [],
+          "text": "Users want phones that store more, so memory gets larger."
+        }
+      ],
+      "check": [
+        {
+          "q": "What is demand pull?",
+          "a": "Demand by consumers for desirable features."
+        },
+        {
+          "q": "Give an example of demand pull in a smartphone.",
+          "a": "Improved battery life or larger memory."
+        }
+      ]
+    },
+    {
+      "id": "push",
+      "label": "Technology push",
+      "icon": "bulb",
+      "pages": "133",
+      "summary": "Companies develop new ideas, then have to sell them to consumers.",
+      "items": [
+        {
+          "term": "Technology push",
+          "tags": [],
+          "text": "Companies market new developments that aren't always popular."
+        },
+        {
+          "term": "R&D costs",
+          "tags": [],
+          "text": "The cost of research and development drives companies to push new ideas."
+        },
+        {
+          "term": "Selling the idea",
+          "tags": [],
+          "text": "Consumers have to be convinced of the merits of new ideas and features."
+        },
+        {
+          "term": "Google Glass",
+          "tags": [],
+          "text": "A head-mounted computer that failed: not worth the cost, with safety and privacy worries."
+        }
+      ],
+      "check": [
+        {
+          "q": "Why isn't technology push always successful?",
+          "a": "Consumers may not be convinced the new idea is worth it, as with Google Glass."
+        },
+        {
+          "q": "Why did Google Glass fail?",
+          "a": "Consumers weren't convinced it was worth the expense, and there were concerns over safety and privacy."
+        }
+      ]
+    },
+    {
+      "id": "obsol",
+      "label": "Planned obsolescence",
+      "icon": "clock",
+      "pages": "133",
+      "summary": "Products designed to need replacing regularly.",
+      "items": [
+        {
+          "term": "Planned obsolescence",
+          "tags": [],
+          "text": "Designing and making products that need replacing on a regular basis."
+        },
+        {
+          "term": "Spare parts",
+          "tags": [],
+          "text": "Parts stop being available, so the product can't be repaired."
+        },
+        {
+          "term": "Software incompatibility",
+          "tags": [],
+          "text": "New software won't work with the product, so it has to be replaced."
+        },
+        {
+          "term": "Fairphone",
+          "tags": [],
+          "text": "Modular and upgradeable: a more customer-friendly, sustainable approach."
+        }
+      ],
+      "check": [
+        {
+          "q": "Give two factors that can make a product obsolete.",
+          "a": "Spare parts are no longer available; software incompatibility."
+        },
+        {
+          "q": "Why is the Fairphone an alternative to planned obsolescence?",
+          "a": "It is modular and upgradeable, a more customer-friendly and sustainable approach."
+        }
+      ]
+    },
+    {
+      "id": "evolve",
+      "label": "Evolution of products",
+      "icon": "steps",
+      "pages": "133",
+      "summary": "Gradual change driven by new technology, methods and materials.",
+      "items": [
+        {
+          "term": "Evolution",
+          "tags": [],
+          "text": "Gradual change in products due to new technologies, manufacturing methods and materials."
+        },
+        {
+          "term": "R&D departments",
+          "tags": [],
+          "text": "Explore and develop new ideas for products."
+        },
+        {
+          "term": "Cost of R&D",
+          "tags": [],
+          "text": "Research and development is very expensive: Apple spent $2.5 billion in 2016."
+        },
+        {
+          "term": "Television",
+          "tags": [],
+          "text": "R&D brought LED, OLED, HDR, 4K (UHD), curved screens and smart features."
+        },
+        {
+          "term": "SLR camera",
+          "tags": [],
+          "text": "R&D brought more pixels, faster firing, Wi-Fi, water resistance and an articulated screen."
+        }
+      ],
+      "check": [
+        {
+          "q": "What causes products to evolve?",
+          "a": "New technologies, manufacturing methods and materials, explored by R&D departments."
+        },
+        {
+          "q": "Give two features R&D has added to televisions.",
+          "a": "Any two: LED, OLED, HDR, 4K (UHD), a curved screen, smart capability."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Product life cycle",
+      "def": "The introduction, growth, maturity, decline and replacement of a product's sales."
+    },
+    {
+      "term": "Introduction",
+      "def": "The launch stage, when sales start to take off."
+    },
+    {
+      "term": "Maturity",
+      "def": "The stage when sales are at their peak."
+    },
+    {
+      "term": "Decline",
+      "def": "The stage when sales fall until the product is withdrawn."
+    },
+    {
+      "term": "Extension strategy",
+      "def": "Updating or redesigning a product to maintain its sales."
+    },
+    {
+      "term": "Demand pull",
+      "def": "Demand by consumers for desirable features."
+    },
+    {
+      "term": "Technology push",
+      "def": "Companies marketing new developments that aren't always popular."
+    },
+    {
+      "term": "Planned obsolescence",
+      "def": "Designing products that need replacing on a regular basis."
+    },
+    {
+      "term": "Research and development",
+      "def": "Exploring and developing new ideas for products."
+    },
+    {
+      "term": "Evolution of products",
+      "def": "Gradual change due to new technologies, manufacturing methods and materials."
+    }
+  ],
+  "apply": [
+    {
+      "q": "Sales of a popular electric scooter have reached their peak and are starting to level off.",
+      "tools": [
+        "Release an updated, improved version",
+        "Withdraw it from sale straight away",
+        "Stop all advertising",
+        "Stop supplying spare parts"
+      ],
+      "tool": 0,
+      "reasons": [
+        "An extension strategy keeps sales going before the product declines",
+        "Sales have peaked, so there's no point carrying on",
+        "Customers already know the product",
+        "Customers will have to buy a new one sooner"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "Customer reviews say a company's smartphone runs out of charge too quickly.",
+      "tools": [
+        "Improve the battery life in the next model",
+        "Add a curved screen",
+        "Make the battery impossible to replace",
+        "Advertise the phone more, unchanged"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Designers respond to demand pull: consumers' demand for desirable features",
+        "Any new feature from R&D will sell",
+        "It makes the phone need replacing more often",
+        "Consumers just need to be sold its merits"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A company wants its new phone to be more customer-friendly and sustainable than phones that are replaced when one part fails.",
+      "tools": [
+        "A modular, upgradeable design",
+        "Stop supplying spare parts after two years",
+        "Make it incompatible with older software",
+        "A new colour for each model"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Parts can be upgraded instead of replacing the whole phone, as with the Fairphone",
+        "Customers will need to replace it regularly",
+        "It pushes customers to buy the latest model",
+        "It keeps the product looking new"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A company's R&D department has developed a head-mounted display that no customer has asked for.",
+      "tools": [
+        "Convince consumers of its merits before launch",
+        "Assume it will sell because it's new",
+        "Release it with no marketing",
+        "Wait for consumers to ask for it"
+      ],
+      "tool": 0,
+      "reasons": [
+        "With technology push, consumers need to be sold the merits of new ideas",
+        "New technology is always popular",
+        "R&D is cheap, so there's little risk",
+        "Demand pull means customers already want it"
+      ],
+      "reason": 0
+    }
+  ],
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      {
+        "n": "Google Glass",
+        "why": "The only one that failed to convince consumers."
+      },
+      {
+        "n": "Toyota Corolla",
+        "why": "The only one that isn't an electronic product."
+      },
+      {
+        "n": "Fairphone",
+        "why": "The only one designed to be modular and upgradeable."
+      },
+      {
+        "n": "SLR camera",
+        "why": "The only one made for taking photos."
+      }
+    ]
+  },
+  "order": {
+    "q": "Put the stages of the product life cycle in order.",
+    "steps": [
+      "Introduction",
+      "Evolution and growth",
+      "Maturity",
+      "Decline",
+      "Replacement"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Which is the correct order of the product life cycle?",
+      "options": [
+        "Introduction, growth, maturity, decline, replacement",
+        "Growth, introduction, decline, maturity, replacement",
+        "Introduction, maturity, growth, replacement, decline",
+        "Maturity, introduction, growth, decline, replacement"
+      ],
+      "answer": 0,
+      "why": "Sales take off after launch, grow, peak, then fall, and an updated version replaces the product.",
+      "chunk": "plc"
+    },
+    {
+      "q": "In which stage are a product's sales at their peak?",
+      "options": [
+        "Maturity",
+        "Introduction",
+        "Evolution and growth",
+        "Decline"
+      ],
+      "answer": 0,
+      "why": "Companies try to keep the product in maturity for as long as possible.",
+      "chunk": "plc"
+    },
+    {
+      "q": "In the decline stage, most consumers who wanted the product have already bought it.",
+      "tf": true,
+      "why": "Sales fall and the product is eventually withdrawn.",
+      "chunk": "plc"
+    },
+    {
+      "q": "What helps sales grow in the evolution and growth stage?",
+      "options": [
+        "Advertising",
+        "Withdrawing the product",
+        "Removing features",
+        "Stopping market research"
+      ],
+      "answer": 0,
+      "why": "Advertising helps sales grow as consumers move to the product from older ones.",
+      "chunk": "plc"
+    },
+    {
+      "q": "The product life cycle is the same as a life-cycle assessment of a product's environmental impact.",
+      "tf": false,
+      "why": "The PLC tracks sales; a life-cycle assessment follows environmental impacts.",
+      "chunk": "plc"
+    },
+    {
+      "q": "Why is an updated, improved version released at the end of a product's life cycle?",
+      "options": [
+        "To maintain sales",
+        "To use up old stock",
+        "To make the old version easier to repair",
+        "To lower research costs"
+      ],
+      "answer": 0,
+      "why": "The replacement keeps sales going as the original declines.",
+      "chunk": "plc"
+    },
+    {
+      "q": "The Toyota Corolla has been redesigned 11 times in 50 years.",
+      "tf": true,
+      "why": "It's an example of an extension strategy.",
+      "chunk": "extend"
+    },
+    {
+      "q": "What is an extension strategy?",
+      "options": [
+        "Updating or redesigning a product to maintain its sales",
+        "Making a product need replacing regularly",
+        "Stopping sales of a product",
+        "Marketing a new invention nobody asked for"
+      ],
+      "answer": 0,
+      "why": "Extension strategies keep a product selling, as with smartphones and the Toyota Corolla.",
+      "chunk": "extend"
+    },
+    {
+      "q": "Which of these is an example of a product kept selling by extension strategies?",
+      "options": [
+        "Apple iPhone",
+        "Google Glass",
+        "Fairphone",
+        "A hearing induction loop"
+      ],
+      "answer": 0,
+      "why": "New iPhone and Samsung Galaxy models keep these smartphones selling.",
+      "chunk": "extend"
+    },
+    {
+      "q": "What is demand pull?",
+      "options": [
+        "Demand by consumers for desirable features",
+        "Companies marketing new developments",
+        "Designing products to need replacing",
+        "Advertising during the growth stage"
+      ],
+      "answer": 0,
+      "why": "Product designers often respond to it.",
+      "chunk": "pull"
+    },
+    {
+      "q": "Improved battery life in a smartphone is an example of demand pull.",
+      "tf": true,
+      "why": "Consumers want it, and designers respond. Larger memory is another example.",
+      "chunk": "pull"
+    },
+    {
+      "q": "What is technology push?",
+      "options": [
+        "Companies marketing new developments that aren't always popular",
+        "Consumers asking for desirable features",
+        "Redesigning a product to maintain sales",
+        "Withdrawing a product in decline"
+      ],
+      "answer": 0,
+      "why": "R&D costs lead companies to push new ideas.",
+      "chunk": "push"
+    },
+    {
+      "q": "Technology push products always sell well because they are new.",
+      "tf": false,
+      "why": "Consumers have to be sold their merits, and Google Glass failed.",
+      "chunk": "push"
+    },
+    {
+      "q": "Why did Google Glass fail?",
+      "options": [
+        "Consumers weren't convinced it was worth the expense, and there were safety and privacy concerns",
+        "Its spare parts stopped being available",
+        "It was redesigned too often",
+        "Its battery life was improved too late"
+      ],
+      "answer": 0,
+      "why": "It shows that technology push isn't always successful.",
+      "chunk": "push"
+    },
+    {
+      "q": "What is planned obsolescence?",
+      "options": [
+        "Designing and making products that need replacing regularly",
+        "Redesigning a product to maintain its sales",
+        "Responding to consumers' demand for features",
+        "Testing products before launch"
+      ],
+      "answer": 0,
+      "why": "Products are designed to need replacing on a regular basis.",
+      "chunk": "obsol"
+    },
+    {
+      "q": "Which of these could make a product obsolete?",
+      "options": [
+        "Spare parts are no longer available",
+        "A modular design",
+        "An upgradeable design",
+        "Better battery life"
+      ],
+      "answer": 0,
+      "why": "Unavailable spare parts and software incompatibility are both factors.",
+      "chunk": "obsol"
+    },
+    {
+      "q": "The Fairphone is modular and upgradeable.",
+      "tf": true,
+      "why": "It's a more customer-friendly, sustainable approach than planned obsolescence.",
+      "chunk": "obsol"
+    },
+    {
+      "q": "What causes the gradual evolution of products?",
+      "options": [
+        "New technologies, manufacturing methods and materials",
+        "Planned obsolescence only",
+        "Advertising",
+        "Withdrawing products from sale"
+      ],
+      "answer": 0,
+      "why": "R&D departments explore and develop these new ideas.",
+      "chunk": "evolve"
+    },
+    {
+      "q": "Research and development is cheap for large companies.",
+      "tf": false,
+      "why": "R&D is very expensive, even for companies such as Apple.",
+      "chunk": "evolve"
+    },
+    {
+      "q": "R&D departments explore and develop new ideas, such as OLED screens and HDR for televisions.",
+      "tf": true,
+      "why": "Evolutionary features like these are introduced by R&D.",
+      "chunk": "evolve"
+    }
+  ],
+  "written": [
+    {
+      "type": "describe",
+      "q": "A company launches a new electric toothbrush. Describe what happens to its sales through the stages of its product life cycle.",
+      "marks": 4,
+      "points": [
+        "Introduction: it is launched with publicity after market research, and sales start to take off.",
+        "Evolution and growth: advertising helps sales grow as consumers move to it from older products.",
+        "Maturity: sales peak, and the company tries to keep it there as long as possible.",
+        "Decline: most people who want one have bought it, so sales fall and it is eventually withdrawn.",
+        "Replacement: an updated, improved version is released to maintain sales."
+      ],
+      "model": "In the introduction stage the toothbrush is launched with publicity, following market research, and sales start to take off. During evolution and growth, advertising helps sales grow as consumers move to it from older toothbrushes. In maturity sales are at their peak, and the company tries to keep them there for as long as possible. In decline, most people who want one have already bought it, so sales fall and it is eventually withdrawn. To maintain sales, an updated, improved version is released as its replacement.",
+      "note": "1 mark per stage named with what happens to sales, up to 4."
+    },
+    {
+      "type": "explain",
+      "q": "Explain the difference between demand pull and technology push.",
+      "marks": 2,
+      "points": [
+        "Demand pull comes from consumers demanding desirable features, such as longer battery life in a smartphone.",
+        "Technology push comes from companies marketing new developments from R&D, which aren't always popular, such as Google Glass."
+      ],
+      "model": "Demand pull comes from consumers: designers respond to their demand for desirable features, such as longer battery life in a smartphone. Technology push comes from the company: it markets new developments from its R&D, which aren't always popular, as Google Glass showed.",
+      "note": "1 mark per point, up to 2."
+    },
+    {
+      "type": "compare",
+      "q": "Compare planned obsolescence with the modular, upgradeable approach of the Fairphone.",
+      "marks": 4,
+      "points": [
+        "Planned obsolescence designs and makes products that need replacing on a regular basis…",
+        "…for example because spare parts stop being available or software becomes incompatible.",
+        "The Fairphone is modular and upgradeable…",
+        "…so it is a more customer-friendly and sustainable approach.",
+        "With planned obsolescence the whole product has to be replaced; the Fairphone is designed to be upgraded instead."
+      ],
+      "model": "Planned obsolescence means designing and making products that need replacing on a regular basis, for example because spare parts stop being available or the product becomes incompatible with new software. The Fairphone takes the opposite approach: it is modular and upgradeable, so it is designed to be upgraded rather than replaced, which is more customer-friendly and sustainable.",
+      "note": "1 mark per point, with at least one point on each, up to 4."
+    },
+    {
+      "type": "explain",
+      "q": "Explain how extension strategies can keep a product selling. Use an example.",
+      "marks": 4,
+      "points": [
+        "An extension strategy updates or redesigns a product to maintain its sales…",
+        "…so an updated, improved version replaces it before it declines.",
+        "It can be refreshed with new materials, updated electronics, new styling, better sustainability or a redesigned user experience.",
+        "Example: smartphones such as the Apple iPhone and Samsung Galaxy.",
+        "Example: the Toyota Corolla, redesigned 11 times in 50 years."
+      ],
+      "model": "An extension strategy updates or redesigns a product to maintain its sales, so an updated, improved version takes over before the original declines. The product can be refreshed with new materials, updated electronics or new styling. For example, the Toyota Corolla has been redesigned 11 times in 50 years to keep it selling.",
+      "note": "1 mark per point or explanation, up to 4; the example is needed for full marks."
+    },
+    {
+      "type": "evaluate",
+      "q": "Evaluate the benefits and drawbacks for a company of developing new products through technology push.",
+      "marks": 6,
+      "points": [
+        "R&D departments explore and develop new ideas for products.",
+        "New technologies drive the gradual evolution of products, such as OLED, HDR and 4K in televisions.",
+        "R&D is very expensive, and that cost leads companies to push new ideas.",
+        "Consumers have to be sold the merits of new ideas and features.",
+        "New developments aren't always popular: Google Glass failed over its cost and concerns about safety and privacy.",
+        "Demand pull, by contrast, responds to features consumers already want, such as longer battery life.",
+        "Justified conclusion, e.g. technology push can lead product evolution, but only if consumers can be convinced the new feature is worth it."
+      ],
+      "model": "Technology push lets a company lead change: its R&D department explores and develops new ideas, and new technologies drive the evolution of products, as with OLED, HDR and 4K in televisions. However, R&D is very expensive, and consumers have to be sold the merits of each new idea. New developments aren't always popular: Google Glass failed because consumers weren't convinced it was worth the expense, and there were concerns over safety and privacy. Demand pull, by contrast, responds to features consumers already want. Technology push can lead the evolution of products, but it only pays off if the company can convince consumers the new feature is worth it.",
+      "note": "Tick the points made, then use the levels under the model answer to decide the mark.",
+      "levels": [
+        {
+          "level": 3,
+          "marks": "5–6",
+          "text": "Detailed, balanced points on both sides, with a justified conclusion."
+        },
+        {
+          "level": 2,
+          "marks": "3–4",
+          "text": "Some points, mostly on one side, or a conclusion that isn't justified."
+        },
+        {
+          "level": 1,
+          "marks": "1–2",
+          "text": "Simple points, with no conclusion."
+        }
+      ]
+    },
+    {
+      "type": "explain",
+      "q": "Explain why a product's sales fall in the decline stage of its life cycle.",
+      "marks": 2,
+      "points": [
+        "Most consumers who wanted the product have already bought it.",
+        "Changing technology, fashion or regulation, or replacement products, reduce demand."
+      ],
+      "model": "Sales fall because most consumers who wanted the product have already bought it. Demand also drops as technology, fashion or regulations change, or as replacement products arrive.",
+      "note": "1 mark per point, up to 2."
+    }
+  ],
+  "related": [
+    {
+      "id": "b06b-cultural-inclusive-social-design",
+      "spec": "3.2.3"
+    },
+    {
+      "id": "a31-registered-designs-trademarks-open-design",
+      "spec": "3.1.10"
+    },
+    {
+      "id": "b08-design-processes",
+      "spec": "3.2.4"
+    }
+  ]
+}
