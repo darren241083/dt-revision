@@ -275,7 +275,12 @@
         {
           "term": "Local context",
           "tags": [],
-          "text": "Solutions must not rely on resources or maintenance that aren't available locally."
+          "text": "Solutions must not rely on resources or maintenance that aren't available locally.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/local-context.webp",
+            "alt": "Local context",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
