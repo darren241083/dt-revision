@@ -364,7 +364,12 @@
         {
           "term": "3D printed implants",
           "tags": [],
-          "text": "The NHS uses 3D printed polymer implants to repair skull injuries."
+          "text": "The NHS uses 3D printed polymer implants to repair skull injuries.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/3d-printed-implants.webp",
+            "alt": "3D printed implants",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
