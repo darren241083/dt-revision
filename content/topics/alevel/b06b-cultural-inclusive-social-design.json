@@ -334,7 +334,12 @@
         {
           "term": "Practical Action",
           "tags": [],
-          "text": "An NGO giving appropriate, technological 'open design' answers to poverty."
+          "text": "An NGO giving appropriate, technological 'open design' answers to poverty.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/practical-action.webp",
+            "alt": "Practical Action",
+            "credit": "DT"
+          }
         },
         {
           "term": "da Vinci system",
