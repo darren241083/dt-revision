@@ -225,12 +225,12 @@
       "label": "Technology push",
       "icon": "bulb",
       "pages": "133",
-      "summary": "Companies develop new ideas, then have to sell them to consumers.",
+      "summary": "New technology or materials come first; designers then find products to use them in.",
       "items": [
         {
           "term": "Technology push",
           "tags": [],
-          "text": "Companies market new developments that aren't always popular."
+          "text": "New technology or materials are developed, and designers find ways to use them in new or improved products."
         },
         {
           "term": "R&D costs",
@@ -238,9 +238,9 @@
           "text": "The cost of research and development drives companies to push new ideas."
         },
         {
-          "term": "Selling the idea",
+          "term": "May not sell",
           "tags": [],
-          "text": "Consumers have to be convinced of the merits of new ideas and features."
+          "text": "Not driven by consumer demand, so it may not sell: consumers have to be sold its merits."
         },
         {
           "term": "Google Glass",
@@ -251,7 +251,7 @@
       "check": [
         {
           "q": "Why isn't technology push always successful?",
-          "a": "Consumers may not be convinced the new idea is worth it, as with Google Glass."
+          "a": "It isn't driven by consumer demand, so consumers may not be convinced it's worth buying, as with Google Glass."
         },
         {
           "q": "Why did Google Glass fail?",
@@ -370,7 +370,7 @@
     },
     {
       "term": "Technology push",
-      "def": "Companies marketing new developments that aren't always popular."
+      "def": "New technology or materials are developed, then designers use them in new or improved products."
     },
     {
       "term": "Planned obsolescence",
@@ -581,7 +581,7 @@
       "q": "What is demand pull?",
       "options": [
         "Demand by consumers for desirable features",
-        "Companies marketing new developments",
+        "Designers using newly developed technology or materials",
         "Designing products to need replacing",
         "Advertising during the growth stage"
       ],
@@ -598,19 +598,19 @@
     {
       "q": "What is technology push?",
       "options": [
-        "Companies marketing new developments that aren't always popular",
+        "New technology or materials are developed, and designers find ways to use them in new or improved products.",
         "Consumers asking for desirable features",
         "Redesigning a product to maintain sales",
         "Withdrawing a product in decline"
       ],
       "answer": 0,
-      "why": "R&D costs lead companies to push new ideas.",
+      "why": "It isn't driven by consumer demand, so the products may not sell.",
       "chunk": "push"
     },
     {
       "q": "Technology push products always sell well because they are new.",
       "tf": false,
-      "why": "Consumers have to be sold their merits, and Google Glass failed.",
+      "why": "It isn't driven by consumer demand, so consumers have to be sold the merits; Google Glass failed.",
       "chunk": "push"
     },
     {
@@ -701,9 +701,9 @@
       "marks": 2,
       "points": [
         "Demand pull comes from consumers demanding desirable features, such as longer battery life in a smartphone.",
-        "Technology push comes from companies marketing new developments from R&D, which aren't always popular, such as Google Glass."
+        "Technology push starts with new technology or materials, which designers find ways to use in new or improved products; it isn't driven by consumer demand, so it may not sell, such as Google Glass."
       ],
-      "model": "Demand pull comes from consumers: designers respond to their demand for desirable features, such as longer battery life in a smartphone. Technology push comes from the company: it markets new developments from its R&D, which aren't always popular, as Google Glass showed.",
+      "model": "Demand pull starts with consumers: designers respond to their demand for desirable features, such as longer battery life in a smartphone. Technology push starts with new technology or materials, which designers find ways to use in new or improved products. It isn't driven by consumer demand, so it may not sell, as Google Glass showed.",
       "note": "1 mark per point, up to 2."
     },
     {
@@ -742,12 +742,12 @@
         "R&D departments explore and develop new ideas for products.",
         "New technologies drive the gradual evolution of products, such as OLED, HDR and 4K in televisions.",
         "R&D is very expensive, and that cost leads companies to push new ideas.",
-        "Consumers have to be sold the merits of new ideas and features.",
+        "It isn't driven by consumer demand, so consumers have to be sold the merits of new ideas and features.",
         "New developments aren't always popular: Google Glass failed over its cost and concerns about safety and privacy.",
         "Demand pull, by contrast, responds to features consumers already want, such as longer battery life.",
         "Justified conclusion, e.g. technology push can lead product evolution, but only if consumers can be convinced the new feature is worth it."
       ],
-      "model": "Technology push lets a company lead change: its R&D department explores and develops new ideas, and new technologies drive the evolution of products, as with OLED, HDR and 4K in televisions. However, R&D is very expensive, and consumers have to be sold the merits of each new idea. New developments aren't always popular: Google Glass failed because consumers weren't convinced it was worth the expense, and there were concerns over safety and privacy. Demand pull, by contrast, responds to features consumers already want. Technology push can lead the evolution of products, but it only pays off if the company can convince consumers the new feature is worth it.",
+      "model": "With technology push, new technology or materials are developed and designers find ways to use them in new or improved products: R&D departments explore new ideas, and new technologies drive the evolution of products, as with OLED, HDR and 4K in televisions. However, R&D is very expensive, and because technology push isn't driven by consumer demand, consumers have to be sold the merits of each new idea. New developments aren't always popular: Google Glass failed because consumers weren't convinced it was worth the expense, and there were concerns over safety and privacy. Demand pull, by contrast, responds to features consumers already want. Technology push can lead the evolution of products, but it only pays off if the company can convince consumers the new feature is worth it.",
       "note": "Tick the points made, then use the levels under the model answer to decide the mark.",
       "levels": [
         {
