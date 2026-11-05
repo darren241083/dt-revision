@@ -566,7 +566,12 @@
         {
           "term": "Fairtrade mark",
           "tags": [],
-          "text": "A certification label shown on qualifying products."
+          "text": "A certification label shown on qualifying products.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fairtrade-mark.webp",
+            "alt": "Fairtrade mark",
+            "credit": "DT"
+          }
         },
         {
           "term": "Traidcraft",
