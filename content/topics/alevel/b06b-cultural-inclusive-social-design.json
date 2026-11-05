@@ -403,7 +403,12 @@
         {
           "term": "Humanitarian organisations and NGOs",
           "tags": [],
-          "text": "Provide basic infrastructure for these temporary communities."
+          "text": "Provide basic infrastructure for these temporary communities.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/humanitarian-organisations-and-ngos.webp",
+            "alt": "Humanitarian organisations and NGOs",
+            "credit": "DT"
+          }
         },
         {
           "term": "Solar cookers",
