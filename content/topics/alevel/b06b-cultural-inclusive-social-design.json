@@ -314,7 +314,12 @@
         {
           "term": "Wind-up radio",
           "tags": [],
-          "text": "A radio needing no batteries, by Trevor Baylis, for parts of Africa short of them."
+          "text": "A radio needing no batteries, by Trevor Baylis, for parts of Africa short of them.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/wind-up-radio.webp",
+            "alt": "Wind-up radio",
+            "credit": "DT"
+          }
         },
         {
           "term": "GravityLight",
