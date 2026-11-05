@@ -110,11 +110,28 @@ html.teach .teach-only { display: block; }
 .mm-branch:hover { border-color: var(--teal); }
 .mm-branch.open { border-color: var(--teal); background: var(--teal); color: #FFFFFF; }
 .mm-count { font-family: var(--f-mono); font-size: .75rem; font-weight: 400; opacity: .85; white-space: nowrap; }
+/* Branch colours: every branch keeps its colour (soft tint, coloured border and text); the open
+   branch is filled with it, and its lines, item outlines and selection use it too. */
+[data-br="0"] { --bc: var(--br1); --bc-soft: var(--br1-soft); }
+[data-br="1"] { --bc: var(--br2); --bc-soft: var(--br2-soft); }
+[data-br="2"] { --bc: var(--br3); --bc-soft: var(--br3-soft); }
+[data-br="3"] { --bc: var(--br4); --bc-soft: var(--br4-soft); }
+[data-br="4"] { --bc: var(--br5); --bc-soft: var(--br5-soft); }
+[data-br="5"] { --bc: var(--br6); --bc-soft: var(--br6-soft); }
+[data-br="6"] { --bc: var(--br7); --bc-soft: var(--br7-soft); }
+.mm-branch[data-br] { border-color: var(--bc); background: var(--bc-soft); color: var(--bc); }
+.mm-branch[data-br] .mm-count { opacity: 1; }
+.mm-branch[data-br]:hover { box-shadow: 0 0 0 3px var(--bc-soft); }
+.mm-branch.open[data-br] { background: var(--bc); color: #FFFFFF; }
+.mm-line[data-br] { background: var(--bc); opacity: .4; }
+.mm-line.kid[data-br] { opacity: .55; }
+.mm-leaf[data-br]:hover { border-color: var(--bc); }
+.mm-leaf.sel[data-br] { border-color: var(--bc); box-shadow: 0 0 0 4px var(--bc-soft); }
 .mm-leaf { z-index: 1; max-width: var(--mm-lw, 260px); min-height: var(--tap); padding: 8px 14px; border: 1.5px solid var(--card-border); border-radius: 12px; background: var(--card); color: var(--ink); font-size: clamp(.875rem, 1.7cqw, 1rem); font-weight: 600; line-height: 1.25; text-align: left; }
 .mm-leaf:hover { border-color: var(--teal); }
 .mm-leaf.sel { border-color: var(--teal); box-shadow: 0 0 0 4px var(--teal-soft); }
 /* With a branch open, the other branches drop their item count (they are only context). */
-.mm-map.has-open .mm-branch:not(.open) { padding: 8px 12px; opacity: .9; }
+.mm-map.has-open .mm-branch:not(.open) { padding: 8px 12px; }
 .mm-map.has-open .mm-branch:not(.open) .mm-count { display: none; }
 
 .mm-detail { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: stretch; padding: 24px 28px; }
@@ -157,6 +174,12 @@ html.teach .teach-only { display: block; }
 .mm-acc-head::after { content: "+"; color: var(--teal); font-size: 1.5rem; font-weight: 400; }
 .mm-acc-head[aria-expanded="true"] { background: var(--teal); color: #FFFFFF; }
 .mm-acc-head[aria-expanded="true"]::after { content: "–"; color: #FFFFFF; }
+.mm-acc[data-br] { border-left: 6px solid var(--bc); }
+.mm-acc[data-br] .mm-acc-head { color: var(--bc); }
+.mm-acc[data-br] .mm-acc-head::after { color: var(--bc); }
+.mm-acc[data-br] .mm-acc-head[aria-expanded="true"] { background: var(--bc); color: #FFFFFF; }
+.mm-acc[data-br] .mm-acc-head[aria-expanded="true"]::after { color: #FFFFFF; }
+.mm-acc[data-br] .mm-acc-item[aria-expanded="true"] { color: var(--bc); }
 .mm-acc-label { display: flex; flex-direction: column; }
 .mm-acc-panel { display: flex; flex-direction: column; gap: 6px; padding: 12px 16px 8px; }
 .mm-acc-panel[hidden] { display: none; }

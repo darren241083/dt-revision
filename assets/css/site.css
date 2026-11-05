@@ -51,6 +51,16 @@
   --alevel-bg: #E8E5F4;
 
   /* Controls */
+  /* Mind map branches: each branch keeps its own colour (text on the soft tint and white on
+     the colour both at least 4.5:1). */
+  --br1: #0F766E; --br1-soft: #E2F2EF;
+  --br2: #1D5FA8; --br2-soft: #E4EDF9;
+  --br3: #5B3FA0; --br3-soft: #ECE7F7;
+  --br4: #9B2C6C; --br4-soft: #F8E5F0;
+  --br5: #A3441A; --br5-soft: #FBE9E0;
+  --br6: #5C6B0E; --br6-soft: #EEF2DC;
+  --br7: #7E5A06; --br7-soft: #F7EED9;
+
   --seg: #EDF1F2;
   --dot-grey: #C9D4D8;
   --line-grey: #DCE3E6;

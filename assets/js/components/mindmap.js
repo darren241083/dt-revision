@@ -51,6 +51,9 @@ function stack(heights, mid, room, most, least = GAP) {
   return heights.map((hh) => { const c = y + hh / 2; y += hh + gap; return c; });
 }
 
+// Each branch keeps its own colour (components.css: [data-br]); up to 7 branches, then repeats.
+const BR = (i) => String(i % 7);
+
 export function mindMap(topic, { chunkHref, recall = false } = {}) {
   let open = null, sel = null;
   const chunks = topic.chunks;
@@ -254,7 +257,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     chunks.forEach((c, i) => {
       const isOpen = open === i;
       canvas.append(h("button", {
-        type: "button", class: "mm-node mm-branch" + (isOpen ? " open" : ""), "data-key": `b${i}`, "data-line": `b${i}`,
+        type: "button", class: "mm-node mm-branch" + (isOpen ? " open" : ""), "data-key": `b${i}`, "data-line": `b${i}`, "data-br": BR(i),
         "aria-expanded": String(isOpen),
         onclick: () => { open = isOpen ? null : i; sel = null; draw(); }
       }, h("span", { class: "mm-label" }, c.label), h("span", { class: "mm-count" }, countText(i))));
@@ -268,6 +271,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
           draw();
         });
         leaf.dataset.line = `l${j}`;
+        leaf.dataset.br = BR(i);
         canvas.append(leaf);
       });
     });
@@ -287,8 +291,8 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     if (!box.width) return;
     const mid = (el) => { const r = el.getBoundingClientRect(); return [r.left + r.width / 2 - box.left, r.top + r.height / 2 - box.top]; };
     const node = (k) => canvas.querySelector(`[data-line="${k}"]`);
-    const seg = ([x1, y1], [x2, y2], cls) => {
-      const s = h("span", { class: cls });
+    const seg = ([x1, y1], [x2, y2], cls, i) => {
+      const s = h("span", { class: cls, "data-br": BR(i) });
       s.style.left = `${x1}px`;
       s.style.top = `${y1}px`;
       s.style.width = `${Math.hypot(x2 - x1, y2 - y1)}px`;
@@ -296,7 +300,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
       return s;
     };
     const c = mid(node("c"));
-    const out = chunks.map((_, i) => seg(c, mid(node(`b${i}`)), "mm-line"));
+    const out = chunks.map((_, i) => seg(c, mid(node(`b${i}`)), "mm-line", i));
     if (open !== null) {
       // Item lines end at the item's near edge, so they never run behind other items.
       const b = mid(node(`b${open}`));
@@ -305,7 +309,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
         const x = r.left + r.width / 2 - box.left < b[0] ? r.right - box.left - 2 : r.left - box.left + 2;
         return [x, r.top + r.height / 2 - box.top];
       };
-      chunks[open].items.forEach((_, j) => out.push(seg(b, edge(node(`l${j}`)), "mm-line kid")));
+      chunks[open].items.forEach((_, j) => out.push(seg(b, edge(node(`l${j}`)), "mm-line kid", open)));
     }
     fill(lines, ...out);
   }
@@ -364,7 +368,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
         recall
           ? found(i) < c.items.length && h("button", { type: "button", class: "btn-line", onclick: () => { c.items.forEach((_, j) => shown.add(key(i, j))); draw(); } }, "Reveal branch")
           : h("a", { class: "mm-read", href: chunkHref(c) }, "Read this chunk ↓"));
-      return h("div", { class: "mm-acc" }, head, panel);
+      return h("div", { class: "mm-acc", "data-br": BR(i) }, head, panel);
     }));
   }
 
