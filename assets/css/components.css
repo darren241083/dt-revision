@@ -187,6 +187,17 @@ html.teach .teach-only { display: block; }
   .item-text { grid-column: 1 / -1; font-size: 1.0625rem; }
   .item-tag { grid-row: 1; grid-column: 2; }
 }
+/* An image with a caption, when the card is 600px or wider: the image (credit under it) on the
+   left, the caption to its right, top-aligned, ending where the description ends. Narrower,
+   the caption stays under the image. */
+@container (min-width: 600px) {
+  .item-img:has(.img-caption) { grid-column: 1 / 3; }
+  .item-img .img-slot:has(.img-caption) { flex: 1 1 100%; max-width: none; display: grid; grid-template-columns: 320px minmax(0, 1fr); column-gap: 20px; align-items: start; }
+  .item-img .img-slot:has(.img-caption) img { grid-column: 1; grid-row: 1; }
+  .item-img .img-slot:has(.img-caption) figcaption { display: contents; }
+  .item-img .img-caption { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+  .item-img .img-credit-line { grid-column: 1; grid-row: 2; margin-top: 4px; }
+}
 
 .steps-card { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
 .steps-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; }
