@@ -546,7 +546,12 @@
         {
           "term": "Fairtrade",
           "tags": [],
-          "text": "A movement for the ethical treatment of farmers and workers in developing countries."
+          "text": "A movement for the ethical treatment of farmers and workers in developing countries.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fairtrade.webp",
+            "alt": "Fairtrade",
+            "credit": "DT"
+          }
         },
         {
           "term": "Fair prices",
