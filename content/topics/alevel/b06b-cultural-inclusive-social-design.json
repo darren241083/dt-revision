@@ -576,7 +576,12 @@
         {
           "term": "Traidcraft",
           "tags": [],
-          "text": "A UK fair trade pioneer that sold ethically sourced products until administration in January 2023."
+          "text": "A UK fair trade pioneer that sold ethically sourced products until administration in January 2023.",
+          "image": {
+            "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/traidcraft.webp",
+            "alt": "Traidcraft",
+            "credit": "DT"
+          }
         },
         {
           "term": "Fairtrade status",
