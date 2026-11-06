@@ -97,7 +97,12 @@
         {
           "term": "Maturity",
           "tags": [],
-          "text": "Sales peak; the aim is to keep the product here as long as possible."
+          "text": "Sales peak; the aim is to keep the product here as long as possible.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/maturity.webp",
+            "alt": "Maturity",
+            "credit": "DT"
+          }
         },
         {
           "term": "Decline",
