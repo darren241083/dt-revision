@@ -222,7 +222,12 @@
         {
           "term": "Ways to refresh",
           "tags": [],
-          "text": "New materials, updated electronics, new styling, better sustainability or user experience."
+          "text": "New materials, updated electronics, new styling, better sustainability or user experience.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/ways-to-refresh.webp",
+            "alt": "Ways to refresh",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
