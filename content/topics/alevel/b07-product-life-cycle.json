@@ -251,7 +251,12 @@
         {
           "term": "Demand pull",
           "tags": [],
-          "text": "Consumers' demand for desirable features, which product designers often respond to."
+          "text": "Consumers' demand for desirable features, which product designers often respond to.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/demand-pull.webp",
+            "alt": "Demand pull",
+            "credit": "DT"
+          }
         },
         {
           "term": "Battery life",
