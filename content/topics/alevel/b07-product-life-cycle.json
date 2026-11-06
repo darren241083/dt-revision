@@ -192,7 +192,12 @@
         {
           "term": "Extension strategy",
           "tags": [],
-          "text": "Updating or redesigning a product to maintain its sales."
+          "text": "Updating or redesigning a product to maintain its sales.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/extension-strategy.webp",
+            "alt": "Extension strategy",
+            "credit": "DT"
+          }
         },
         {
           "term": "Smartphones",
