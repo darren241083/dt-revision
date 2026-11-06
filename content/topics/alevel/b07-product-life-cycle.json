@@ -359,7 +359,12 @@
         {
           "term": "Planned obsolescence",
           "tags": [],
-          "text": "Designing and making products that need replacing on a regular basis."
+          "text": "Designing and making products that need replacing on a regular basis.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/planned-obsolescence.webp",
+            "alt": "Planned obsolescence",
+            "credit": "--"
+          }
         },
         {
           "term": "Spare parts",
