@@ -202,7 +202,12 @@
         {
           "term": "Smartphones",
           "tags": [],
-          "text": "The Apple iPhone and Samsung Galaxy use extension strategies to keep selling."
+          "text": "The Apple iPhone and Samsung Galaxy use extension strategies to keep selling.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/smartphones.webp",
+            "alt": "Smartphones",
+            "credit": "DT"
+          }
         },
         {
           "term": "Toyota Corolla",
