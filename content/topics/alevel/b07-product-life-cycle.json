@@ -107,7 +107,12 @@
         {
           "term": "Decline",
           "tags": [],
-          "text": "Sales fall, as most people who want one have bought it; then it's withdrawn."
+          "text": "Sales fall, as most people who want one have bought it; then it's withdrawn.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/decline.webp",
+            "alt": "Decline",
+            "credit": "DT"
+          }
         },
         {
           "term": "Replacement",
