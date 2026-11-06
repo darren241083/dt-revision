@@ -67,7 +67,12 @@
         {
           "term": "Product life cycle (PLC)",
           "tags": [],
-          "text": "Charts a product's sales from introduction to withdrawal; plan its decline and replacement carefully."
+          "text": "Charts a product's sales from introduction to withdrawal; plan its decline and replacement carefully.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/product-life-cycle-plc.webp",
+            "alt": "Product life cycle (PLC)",
+            "credit": "DT"
+          }
         },
         {
           "term": "Introduction",
