@@ -87,7 +87,12 @@
         {
           "term": "Evolution and growth",
           "tags": [],
-          "text": "Advertising grows sales as consumers move to it from older products."
+          "text": "Advertising grows sales as consumers move to it from older products.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/evolution-and-growth.webp",
+            "alt": "Evolution and growth",
+            "credit": "DT"
+          }
         },
         {
           "term": "Maturity",
