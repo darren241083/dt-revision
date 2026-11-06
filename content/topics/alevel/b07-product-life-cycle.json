@@ -212,7 +212,12 @@
         {
           "term": "Toyota Corolla",
           "tags": [],
-          "text": "Redesigned 11 times in 50 years to keep it selling."
+          "text": "Redesigned 11 times in 50 years to keep it selling.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/toyota-corolla.webp",
+            "alt": "Toyota Corolla",
+            "credit": "DT"
+          }
         },
         {
           "term": "Ways to refresh",
