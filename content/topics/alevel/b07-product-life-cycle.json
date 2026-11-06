@@ -310,7 +310,12 @@
         {
           "term": "R&D costs",
           "tags": [],
-          "text": "The cost of research and development drives companies to push new ideas."
+          "text": "The cost of research and development drives companies to push new ideas.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/r-d-costs.webp",
+            "alt": "R&D costs",
+            "credit": "--"
+          }
         },
         {
           "term": "May not sell",
