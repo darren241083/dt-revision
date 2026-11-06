@@ -127,7 +127,12 @@
         {
           "term": "Life-cycle assessment",
           "tags": [],
-          "text": "Not the PLC: it follows a product's environmental impact, not its sales."
+          "text": "Not the PLC: it follows a product's environmental impact, not its sales.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/life-cycle-assessment.webp",
+            "alt": "Life-cycle assessment",
+            "credit": "DT"
+          }
         }
       ],
       "diagram": {
