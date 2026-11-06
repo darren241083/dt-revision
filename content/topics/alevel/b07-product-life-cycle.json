@@ -330,7 +330,12 @@
         {
           "term": "Google Glass",
           "tags": [],
-          "text": "A head-mounted computer that failed: not worth the cost, with safety and privacy worries."
+          "text": "A head-mounted computer that failed: not worth the cost, with safety and privacy worries.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/google-glass.webp",
+            "alt": "Google Glass",
+            "credit": "--"
+          }
         }
       ],
       "check": [
