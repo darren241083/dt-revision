@@ -117,7 +117,12 @@
         {
           "term": "Replacement",
           "tags": [],
-          "text": "An updated, improved version is released to keep sales going."
+          "text": "An updated, improved version is released to keep sales going.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/replacement.webp",
+            "alt": "Replacement",
+            "credit": "DT"
+          }
         },
         {
           "term": "Life-cycle assessment",
