@@ -261,7 +261,12 @@
         {
           "term": "Battery life",
           "tags": [],
-          "text": "Smartphone users want batteries that last longer, so designers improve them."
+          "text": "Smartphone users want batteries that last longer, so designers improve them.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/battery-life.webp",
+            "alt": "Battery life",
+            "credit": "DT"
+          }
         },
         {
           "term": "Larger memory",
