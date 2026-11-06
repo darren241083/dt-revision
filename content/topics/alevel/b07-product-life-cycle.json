@@ -271,7 +271,12 @@
         {
           "term": "Larger memory",
           "tags": [],
-          "text": "Users want phones that store more, so memory gets larger."
+          "text": "Users want phones that store more, so memory gets larger.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/larger-memory.webp",
+            "alt": "Larger memory",
+            "credit": "DT"
+          }
         }
       ],
       "check": [
