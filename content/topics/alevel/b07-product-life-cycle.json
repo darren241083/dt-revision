@@ -320,7 +320,12 @@
         {
           "term": "May not sell",
           "tags": [],
-          "text": "Not driven by consumer demand, so it may not sell: consumers have to be sold its merits."
+          "text": "Not driven by consumer demand, so it may not sell: consumers have to be sold its merits.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/may-not-sell.webp",
+            "alt": "May not sell",
+            "credit": "--"
+          }
         },
         {
           "term": "Google Glass",
