@@ -77,7 +77,12 @@
         {
           "term": "Introduction",
           "tags": [],
-          "text": "Sales start low, then take off; launched with publicity after market research."
+          "text": "Sales start low, then take off; launched with publicity after market research.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/introduction.webp",
+            "alt": "Introduction",
+            "credit": "DT"
+          }
         },
         {
           "term": "Evolution and growth",
