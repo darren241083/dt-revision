@@ -300,7 +300,12 @@
         {
           "term": "Technology push",
           "tags": [],
-          "text": "New technology or materials are developed, and designers find ways to use them in new or improved products."
+          "text": "New technology or materials are developed, and designers find ways to use them in new or improved products.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/technology-push.webp",
+            "alt": "Technology push",
+            "credit": "DT"
+          }
         },
         {
           "term": "R&D costs",
