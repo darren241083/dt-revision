@@ -389,7 +389,12 @@
         {
           "term": "Fairphone",
           "tags": [],
-          "text": "Modular and upgradeable: a more customer-friendly, sustainable approach."
+          "text": "Modular and upgradeable: a more customer-friendly, sustainable approach.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/fairphone.webp",
+            "alt": "Fairphone",
+            "credit": "--"
+          }
         }
       ],
       "check": [
