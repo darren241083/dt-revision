@@ -458,7 +458,12 @@
         {
           "term": "SLR camera",
           "tags": [],
-          "text": "R&D brought more pixels, faster firing, Wi-Fi, water resistance and an articulated screen."
+          "text": "R&D brought more pixels, faster firing, Wi-Fi, water resistance and an articulated screen.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/slr-camera.webp",
+            "alt": "SLR camera",
+            "credit": "--"
+          }
         }
       ],
       "check": [
