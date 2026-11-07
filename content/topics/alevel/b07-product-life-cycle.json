@@ -379,7 +379,12 @@
         {
           "term": "Software incompatibility",
           "tags": [],
-          "text": "New software won't work with the product, so it has to be replaced."
+          "text": "New software won't work with the product, so it has to be replaced.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/software-incompatibility.webp",
+            "alt": "Software incompatibility",
+            "credit": "--"
+          }
         },
         {
           "term": "Fairphone",
