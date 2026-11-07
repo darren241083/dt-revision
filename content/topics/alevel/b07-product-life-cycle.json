@@ -448,7 +448,12 @@
         {
           "term": "Television",
           "tags": [],
-          "text": "R&D brought LED, OLED, HDR, 4K (UHD), curved screens and smart features."
+          "text": "R&D brought LED, OLED, HDR, 4K (UHD), curved screens and smart features.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/television.webp",
+            "alt": "Television",
+            "credit": "--"
+          }
         },
         {
           "term": "SLR camera",
