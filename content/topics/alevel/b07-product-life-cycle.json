@@ -418,7 +418,12 @@
         {
           "term": "Evolution",
           "tags": [],
-          "text": "Gradual change in products due to new technologies, manufacturing methods and materials."
+          "text": "Gradual change in products due to new technologies, manufacturing methods and materials.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/evolution.webp",
+            "alt": "Evolution",
+            "credit": "--"
+          }
         },
         {
           "term": "R&D departments",
