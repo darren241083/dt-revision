@@ -438,7 +438,12 @@
         {
           "term": "Cost of R&D",
           "tags": [],
-          "text": "Research and development is very expensive: Apple spent $2.5 billion in 2016."
+          "text": "Research and development is very expensive: Apple spent $2.5 billion in 2016.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/cost-of-r-d.webp",
+            "alt": "Cost of R&D",
+            "credit": "--"
+          }
         },
         {
           "term": "Television",
