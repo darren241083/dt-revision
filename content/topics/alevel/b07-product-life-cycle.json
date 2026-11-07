@@ -428,7 +428,12 @@
         {
           "term": "R&D departments",
           "tags": [],
-          "text": "Explore and develop new ideas for products."
+          "text": "Explore and develop new ideas for products.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/r-d-departments.webp",
+            "alt": "R&D departments",
+            "credit": "--"
+          }
         },
         {
           "term": "Cost of R&D",
