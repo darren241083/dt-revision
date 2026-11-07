@@ -369,7 +369,12 @@
         {
           "term": "Spare parts",
           "tags": [],
-          "text": "Parts stop being available, so the product can't be repaired."
+          "text": "Parts stop being available, so the product can't be repaired.",
+          "image": {
+            "file": "assets/img/alevel/b07-product-life-cycle/spare-parts.webp",
+            "alt": "Spare parts",
+            "credit": "--"
+          }
         },
         {
           "term": "Software incompatibility",
