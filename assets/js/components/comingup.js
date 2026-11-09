@@ -1,17 +1,15 @@
-// "Coming up" card for one year group (home page and year page): topic, lesson day,
-// and Read (book pages) / Listen (audio) for before the lesson.
+// "This lesson" card for one year group (year page): topic, and Read (book pages) /
+// Listen (audio) for before the lesson.
 
 import { h, icon } from "../dom.js";
-import { formatDay, topicHref, mmss, yearShort } from "../data.js";
+import { topicHref, mmss, yearShort } from "../data.js";
 
 // y: year id. year: courses.years[y]. course: courses.levels[year.level].
 // topic: the loaded topic JSON when the page is built, else null.
 export function comingUpCard({ y, year, course, topic, headingLevel = "h2" }) {
   const entry = year.comingUp && course.topics.find((t) => t.id === year.comingUp.topic);
-  const day = formatDay(year.comingUp?.day);
   const head = h("div", { class: "coming-head" },
-    h("span", { class: "label coming-kicker" }, `Coming up · ${yearShort(y)}`),
-    day && h("span", { class: "day" }, day));
+    h("span", { class: "label coming-kicker" }, `This lesson · ${yearShort(y)}`));
 
   if (!entry) {
     return h("section", { class: `card coming-card ${year.level}` }, head,

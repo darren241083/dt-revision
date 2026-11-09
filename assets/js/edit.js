@@ -539,7 +539,6 @@ async function yearsDialog() {
     const pick = h("select", {}, h("option", { value: "" }, "— none —"),
       course.topics.map((tp) => h("option", { value: tp.id }, `${tp.code} ${tp.title}`)));
     pick.value = yr.comingUp?.topic || "";
-    const day = h("input", { type: "date", value: yr.comingUp?.day || "" });
     const taught = new Set(yr.taught);
     const count = h("span", {});
     const boxes = course.topics.map((tp) => {
@@ -551,11 +550,11 @@ async function yearsDialog() {
     count.textContent = `(${taught.size})`;
     const el = h("fieldset", { class: "year" },
       h("legend", {}, `${yr.name} · ${course.short}`),
-      h("div", { class: "year-row" }, field("Coming up", pick), field("Lesson day", day)),
+      h("div", { class: "year-row" }, field("This lesson", pick)),
       h("details", {}, h("summary", {}, "Taught ", count), h("div", { class: "year-topics" }, boxes)));
     return { y, el, read: () => ({
       taught: course.topics.map((tp) => tp.id).filter((tid) => taught.has(tid)),
-      comingUp: pick.value ? { topic: pick.value, day: day.value || null } : null
+      comingUp: pick.value ? { topic: pick.value } : null
     }) };
   });
   fill(body, forms.map((f) => f.el));

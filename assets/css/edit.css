@@ -48,7 +48,7 @@
 .years { display: flex; flex-direction: column; gap: 12px; }
 .year { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 14px 16px; border: 1px solid var(--card-border); border-radius: 14px; }
 .year legend { padding: 0 6px; color: var(--ink); font-weight: 800; }
-.year-row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: end; gap: 10px; }
+.year-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
 .year details summary { display: flex; align-items: center; gap: 6px; min-height: var(--tap); color: var(--teal-dark); font-weight: 700; cursor: pointer; }
 .year-topics { display: flex; flex-direction: column; max-height: 260px; overflow: auto; }
 .year-topic { display: flex; align-items: center; gap: 10px; min-height: var(--tap); font-size: .9375rem; cursor: pointer; }
@@ -57,5 +57,4 @@
 @media (max-width: 767px) {
   .edit-bar { top: 0; position: static; padding: 8px 16px; }
   .edit-btns { margin-left: 0; }
-  .year-row { grid-template-columns: minmax(0, 1fr); }
 }

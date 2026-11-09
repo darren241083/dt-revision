@@ -6,13 +6,13 @@
 
 import { h, icon, fill } from "./dom.js";
 import * as store from "./store.js";
-import { loadCourses, loadTopics, statusFor, STATUS_TEXT, formatDay, topicHref, YEAR_IDS, yearShort } from "./data.js";
+import { loadCourses, loadTopics, statusFor, STATUS_TEXT, topicHref, YEAR_IDS, yearShort } from "./data.js";
 import { siteBar } from "./nav.js";
 import { comingUpCard } from "./components/comingup.js";
 import { quiz } from "./components/quiz.js";
 import { itemQuestions } from "./questions.js";
 
-const FILTERS = [["all", "All"], ["taught", "Taught"], ["coming", "Coming up"]];
+const FILTERS = [["all", "All"], ["taught", "Taught"], ["coming", "This lesson"]];
 
 const topbarEl = document.getElementById("topbar");
 const main = document.getElementById("main");
@@ -36,12 +36,6 @@ function actions(t, status) {
   return [];
 }
 
-function statusLine(status) {
-  if (status !== "coming") return STATUS_TEXT[status];
-  const day = formatDay(year.comingUp?.day);
-  return day ? `Coming up · ${day}` : STATUS_TEXT.coming;
-}
-
 function row(t) {
   const status = statusFor(year, t);
   const open = t.built && status !== "not";
@@ -50,7 +44,7 @@ function row(t) {
     h("span", { class: "code" }, t.code),
     h("span", { class: "ttl" },
       open ? h("a", { href: topicHref(t.id, y) }, t.title) : h("b", {}, t.title),
-      h("span", { class: "status" }, statusLine(status))),
+      h("span", { class: "status" }, STATUS_TEXT[status])),
     h("span", { class: "spec" }, t.spec.join(" · ")),
     h("span", { class: "pages" }, `p${t.pages}`),
     h("span", { class: "acts" }, actions(t, status)));
@@ -78,7 +72,7 @@ function sectionIndex() {
     })),
     h("div", { class: "key" },
       h("span", { class: "label" }, "Key"),
-      [["taught", "Taught: revise any time"], ["coming", "Coming up: read or listen first"], ["not", "Not yet"]]
+      [["taught", "Taught: revise any time"], ["coming", "This lesson: read or listen first"], ["not", "Not yet"]]
         .map(([k, t]) => h("span", { class: "key-row" }, h("i", { class: k, "aria-hidden": "true" }), t))));
 }
 

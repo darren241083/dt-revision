@@ -1,4 +1,4 @@
-/* Home and year pages: site top bar, search, Coming up cards, year cards, topic lists.
+/* Home and year pages: site top bar, search, year cards, This lesson card, topic lists.
    Alignment rule: cards of the same kind in a row stretch to the same height; each is a
    flex column with its interactive part (tiles, buttons, link) pushed to the bottom. */
 
@@ -33,12 +33,11 @@
 .search-toggle .ico { width: 20px; height: 20px; stroke-width: 2; }
 .search-toggle[aria-expanded="true"] { border-color: var(--teal); color: var(--teal); }
 
-/* ---------- Coming up card (home and year pages) ---------- */
+/* ---------- This lesson card (year page) ---------- */
 .coming-card { display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 22px; }
 .coming-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px; }
 .coming-kicker { color: var(--teal); font-size: .875rem; }
 .coming-card.alevel .coming-kicker { color: var(--alevel); }
-.day { padding: 5px 12px; border-radius: 999px; background: var(--ground); color: var(--body); font-size: .9375rem; font-weight: 700; }
 .coming-title { font-size: 2.125rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
 .coming-title a { color: inherit; text-decoration: none; }
 .coming-title a:hover { text-decoration: underline; }
@@ -60,53 +59,37 @@
 a.tile:hover b { text-decoration: underline; }
 .nowrap { white-space: nowrap; }
 
-/* ---------- Home ---------- */
+/* ---------- Home: year cards ---------- */
 .home { display: flex; flex-direction: column; gap: 28px; max-width: 1280px; margin: 0 auto; padding: 36px 48px 64px; }
-.your-year { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
-.your-year .label { font-size: .875rem; }
-.years-seg button { min-width: 60px; font-size: 1rem; }
-.years-seg button.gcse[aria-pressed="true"] { color: var(--teal-dark); font-weight: 800; }
-.years-seg button.alevel[aria-pressed="true"] { color: var(--alevel); font-weight: 800; }
-
-.coming-grid, .year-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 20px; }
-
-.yearcard { position: relative; display: flex; flex-direction: column; gap: 18px; padding: 28px; border-radius: 22px; }
-.yearcard:focus-within { outline: 3px solid var(--teal); outline-offset: 3px; }
-.yc-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-.yc-titles { display: flex; flex-direction: column; gap: 6px; }
-.yc-titles h2 { font-size: 2.75rem; font-weight: 800; line-height: 1; }
-.yearcard.gcse h2 { color: var(--teal); }
-.yearcard.alevel h2 { color: var(--alevel); }
-.yc-titles span { color: var(--muted); font-size: 1rem; }
-.yc-link { display: inline-flex; align-items: center; min-height: var(--tap); color: var(--teal); font-size: 1rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
-.yc-link:focus-visible { outline: none; }
-.yc-link::after { content: ""; position: absolute; inset: 0; border-radius: 22px; }
-.yearcard:hover .yc-link { text-decoration: underline; }
-.yc-sections { display: flex; flex-direction: column; margin: auto 0 0; padding: 0; list-style: none; }
-.yc-sections li { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; grid-template-areas: "ref name count" ". sq sq"; gap: 8px 12px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--rule); }
-.yc-ref { grid-area: ref; color: var(--muted); font-family: var(--f-mono); font-size: .875rem; }
-.yc-name { grid-area: name; color: var(--ink); font-size: 1.0625rem; font-weight: 600; line-height: 1.3; }
-.yc-count { grid-area: count; color: var(--muted); font-size: .875rem; text-align: right; }
-/* Narrow cards: the count goes under the section name, so long names never run into it. */
-.yc-sections { container-type: inline-size; }
-@container (max-width: 399px) {
-  .yc-sections li { grid-template-columns: 28px minmax(0, 1fr); grid-template-areas: "ref name" ". count" ". sq"; gap: 4px 12px; }
-  .yc-count { text-align: left; }
-}
-.squares { grid-area: sq; display: flex; flex-wrap: wrap; gap: 3px; }
-.squares i, .key-row i { flex: none; width: 12px; height: 12px; border-radius: 3px; background: var(--line-grey); }
-.squares i.taught, .squares i.taught-soon, .key-row i.taught { background: var(--teal); }
-.squares i.coming, .key-row i.coming { background: var(--coming); }
-
-.recent { display: flex; flex-direction: column; gap: 14px; }
-.recent h2 { font-size: 1.625rem; font-weight: 800; letter-spacing: -.01em; }
-.recent-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 14px; }
-.recent-card { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
-.recent-card .tags { align-items: center; }
-.recent-card .spec { color: var(--muted); font-family: var(--f-mono); font-size: .8125rem; }
-.recent-card h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.01em; line-height: 1.25; }
-.more { display: inline-flex; align-items: center; align-self: flex-start; min-height: var(--tap); color: var(--teal); font-weight: 700; text-decoration: none; }
-.more:hover { text-decoration: underline; }
+.ycard-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 20px; }
+.ycard { display: flex; flex-direction: column; gap: 18px; padding: 28px; border-radius: 22px; }
+.ycard-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px; }
+.ycard-year { font-size: 2.5rem; font-weight: 800; letter-spacing: -.02em; line-height: 1; }
+.ycard.gcse .ycard-year { color: var(--teal); }
+.ycard.alevel .ycard-year { color: var(--alevel); }
+.ycard-status { color: var(--muted); font-family: var(--f-mono); font-size: .8125rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; }
+.ycard.gcse .ycard-status.lesson { color: var(--teal-dark); font-weight: 700; }
+.ycard.alevel .ycard-status.lesson { color: var(--alevel); font-weight: 700; }
+.ycard-pick { display: flex; flex-direction: column; gap: 6px; }
+.ycard-pick label { color: var(--ink); font-size: .9375rem; font-weight: 700; }
+.ycard-select { width: 100%; min-height: 48px; padding: 0 12px; border: 1.5px solid var(--card-border); border-radius: 12px; background: var(--card); color: var(--ink); font: inherit; font-size: 1rem; }
+.ycard-select:hover { border-color: var(--muted); }
+.ycard-topic { display: flex; flex-direction: column; gap: 6px; }
+.ycard-title { font-size: 1.625rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; }
+.ycard-spec { color: var(--muted); font-family: var(--f-mono); font-size: .8125rem; }
+.ycard-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: auto; }
+.ycard-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: var(--tap); padding: 0 18px; border: 1.5px solid transparent; border-radius: 10px; font-size: 1rem; font-weight: 700; text-decoration: none; }
+.ycard-btn:hover { text-decoration: underline; }
+.ycard-btn .ico { width: 20px; height: 20px; stroke-width: 2; }
+.ycard-btn .ico-fill { width: 16px; height: 16px; fill: currentColor; stroke: none; }
+.ycard-btn.revise { background: var(--ink); color: #FFFFFF; }
+.ycard-btn.read { background: var(--teal-soft); color: var(--teal-dark); }
+.ycard.alevel .ycard-btn.read { background: var(--alevel-bg); color: var(--alevel); }
+.ycard-btn.listen { border-color: var(--ink); background: var(--card); color: var(--ink); }
+.ycard-soon { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.4; }
+.ycard-back { min-height: var(--tap); margin-left: auto; padding: 0 4px; border: 0; background: transparent; color: var(--teal-dark); font: inherit; font-size: .9375rem; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.ycard.alevel .ycard-back { color: var(--alevel); }
+.ycard-back:hover { text-decoration-thickness: 2px; }
 
 /* ---------- Year page ---------- */
 .year-layout { display: flex; min-height: calc(100vh - 65px); }
@@ -123,6 +106,9 @@ html[data-level="alevel"] .sec-index .ref { color: var(--alevel); }
 .sec-index .count { color: var(--muted); font-size: .875rem; }
 .key { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--card-border); }
 .key-row { display: flex; align-items: center; gap: 10px; font-size: .9375rem; line-height: 1.35; }
+.key-row i { flex: none; width: 12px; height: 12px; border-radius: 3px; background: var(--line-grey); }
+.key-row i.taught { background: var(--teal); }
+.key-row i.coming { background: var(--coming); }
 
 .year-main { display: flex; flex-direction: column; gap: 28px; flex: 1; min-width: 0; max-width: 1040px; padding: 44px 52px 64px; }
 .year-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 24px; }
@@ -132,7 +118,7 @@ html[data-level="alevel"] .yearpage .eyebrow { color: var(--alevel); }
 .year-book { display: flex; align-items: center; gap: 8px; color: var(--body); font-size: 1rem; line-height: 1.35; }
 .year-book .ico { width: 20px; height: 20px; color: var(--teal); }
 
-/* Coming up and the mixed quiz are different kinds of card: top-aligned, not stretched. */
+/* This lesson and the mixed quiz are different kinds of card: top-aligned, not stretched. */
 .year-top { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: start; gap: 20px; }
 .mixed { display: flex; flex-direction: column; gap: 12px; padding: 28px; border-radius: 22px; }
 .mixed h2 { font-size: 1.75rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
@@ -175,7 +161,6 @@ html[data-level="alevel"] .yearpage .eyebrow { color: var(--alevel); }
   .sitebar { gap: 16px; padding: 8px 24px; }
   .search { width: 240px; }
   .home { padding: 28px 24px 56px; }
-  .recent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .year-top { grid-template-columns: minmax(0, 1fr); }
 }
 
@@ -207,15 +192,9 @@ html[data-level="alevel"] .yearpage .eyebrow { color: var(--alevel); }
   .search-results { position: static; width: auto; margin-top: 8px; box-shadow: none; }
 
   .home { gap: 16px; padding: 16px 16px 40px; }
-  .coming-grid, .year-grid, .recent-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
-  .coming-grid .other, .year-grid .other { display: none; }
-  .coming-card, .yearcard, .mixed { padding: 20px; border-radius: 20px; }
-  .coming-title { font-size: 1.625rem; }
-  .yc-titles h2 { font-size: 2.25rem; }
-  .yc-link::after { border-radius: 20px; }
-  .recent h2 { font-size: 1.375rem; margin-top: 6px; }
-  .recent-card { padding: 16px; }
-  .recent-card .btn-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); }
+  .ycard-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .ycard, .coming-card, .mixed { padding: 20px; border-radius: 20px; }
+  .ycard-title, .coming-title { font-size: 1.5rem; }
 
   .year-layout { display: block; min-height: 0; }
   .year-main { gap: 22px; padding: 20px 16px 40px; }

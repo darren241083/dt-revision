@@ -61,16 +61,9 @@ export function statusFor(year, entry) {
 export const STATUS_TEXT = {
   taught: "Taught",
   "taught-soon": "Taught · page coming soon",
-  coming: "Coming up",
+  coming: "This lesson",
   not: "Not yet"
 };
-
-// "2026-11-04" → "Wednesday 4 Nov"
-export function formatDay(iso) {
-  if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return "";
-  const d = new Date(`${iso}T12:00:00`);
-  return d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "short" });
-}
 
 // Link to a topic page, carrying the year the pupil came from.
 export function topicHref(id, y, hash = "") {
