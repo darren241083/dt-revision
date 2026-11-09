@@ -92,7 +92,7 @@
         {
           "term": "Continuous improvement",
           "tags": [],
-          "text": "Small, regular process improvements: more efficient, less energy and harm."
+          "text": "Small, regular process changes that raise efficiency and cut energy use and harm."
         }
       ],
       "check": [
@@ -121,22 +121,22 @@
         {
           "term": "Software and industrial automation",
           "tags": [],
-          "text": "Software: computer-based tasks. Industrial: physical tasks."
+          "text": "Software automation does computer-based tasks and industrial automation physical ones."
         },
         {
           "term": "Robots",
           "tags": [],
-          "text": "Repeat complex movements in hazardous, hot or fume-filled places: vehicle assembly, packing plants, labs, aerospace."
+          "text": "Repeat complex movements in hazardous, hot or fume-filled places, such as vehicle assembly, packing, labs and aerospace."
         },
         {
           "term": "Advantages",
           "tags": [],
-          "text": "Faster, accurate, consistent output. Lower labour costs. Works 24/7."
+          "text": "Faster, accurate and consistent output, lower labour costs and working 24/7."
         },
         {
           "term": "Disadvantages",
           "tags": [],
-          "text": "Job losses. No human judgement. New skills needed to maintain. Costly to set up."
+          "text": "Job losses, no human judgement, costly set-up and new skills needed to maintain."
         }
       ],
       "check": [
@@ -234,7 +234,7 @@
         {
           "term": "Crowd funding",
           "tags": [],
-          "text": "Many people each give a small amount, often online, to fund a new venture."
+          "text": "Many people each give a small amount to fund a new venture, often online."
         },
         {
           "term": "Investors",
@@ -244,12 +244,12 @@
         {
           "term": "Missing the target",
           "tags": [],
-          "text": "Pledged money is usually returned. Failure can harm the company's reputation."
+          "text": "Pledged money is usually returned, and failure can harm the company's reputation."
         },
         {
           "term": "Virtual marketing",
           "tags": [],
-          "text": "Promoting through websites, social media, email and search adverts. Hits, clicks and likes are easy to measure."
+          "text": "Promotion through websites, social media, email and search adverts, measured in hits, clicks and likes."
         },
         {
           "term": "Virtual retail",

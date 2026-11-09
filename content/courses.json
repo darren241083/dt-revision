@@ -59,7 +59,7 @@
         { "ref": "2", "name": "Designing and making principles" }
       ],
       "topics": [
-        { "id": "a01-materials-their-applications", "code": "A01", "title": "Materials and their applications", "spec": ["3.1.1"], "section": "1", "pages": "1–2", "built": false },
+        { "id": "a01-materials-their-applications", "code": "A01", "title": "Materials and their applications", "spec": ["3.1.1"], "section": "1", "pages": "1–2", "built": true },
         { "id": "a02-classification-of-materials", "code": "A02", "title": "Classification of materials", "spec": ["3.1.1"], "section": "1", "pages": "3–5", "built": false },
         { "id": "a03-investigating-testing-materials", "code": "A03", "title": "Investigating and testing materials", "spec": ["3.1.1"], "section": "1", "pages": "6–9", "built": false },
         { "id": "a04-papers-boards-polymer-sheet-film", "code": "A04", "title": "Papers, boards, polymer sheet and film", "spec": ["3.1.2"], "section": "1", "pages": "10–13", "built": false },

@@ -5,7 +5,7 @@
 
 import { h, hint, shuffle } from "../dom.js";
 
-const TYPES = { describe: "Describe", explain: "Explain", compare: "Compare", evaluate: "Evaluate" };
+const TYPES = { define: "Define", describe: "Describe", explain: "Explain", compare: "Compare", evaluate: "Evaluate" };
 
 export function writtenQuestion(w, i, { onNew } = {}) {
   const id = `w${i}`;

@@ -1,0 +1,690 @@
+{
+  "id": "a01-materials-their-applications",
+  "level": "alevel",
+  "title": "Materials and their applications",
+  "titleMark": "their applications",
+  "spec": [
+    "3.1.1"
+  ],
+  "section": "1",
+  "materials": [],
+  "book": {
+    "title": "My Revision Notes: AQA A Level Design and Technology: Product Design",
+    "pages": "1–2"
+  },
+  "audio": null,
+  "needs": [
+    "Define mechanical properties and physical properties.",
+    "Name and define the five kinds of strength.",
+    "Define hardness, toughness, plasticity, ductility, malleability and elasticity.",
+    "Define the physical, electrical, thermal and optical properties.",
+    "Justify a material choice by linking a property to what the product does."
+  ],
+  "doNow": [
+    {
+      "q": "Which property lets a material be drawn out into a wire?",
+      "a": "Ductility.",
+      "from": "Pre-read p1"
+    },
+    {
+      "q": "Besides its properties, name two things that affect material choice.",
+      "a": "Any two: aesthetics, cost, manufacturing method, disposal and reuse.",
+      "from": "Pre-read p1"
+    },
+    {
+      "q": "What does a thermal insulator do?",
+      "a": "It stops heat passing through the material.",
+      "from": "Pre-read p2"
+    },
+    {
+      "q": "How is a translucent material different from a transparent one?",
+      "a": "Translucent diffuses the light so things look blurred; transparent lets you see clearly through.",
+      "from": "Pre-read p2"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I'm a mechanical property.",
+      "I let a material be drawn out under tension without cracking.",
+      "Without me, you couldn't stretch metal into a wire."
+    ],
+    "answer": "Ductility",
+    "options": [
+      "Ductility",
+      "Malleability",
+      "Elasticity",
+      "Hardness"
+    ]
+  },
+  "chunks": [
+    {
+      "id": "choose",
+      "label": "Choosing materials",
+      "icon": "choose",
+      "pages": "1–2",
+      "summary": "Pick a material for the properties the product needs, then justify it.",
+      "items": [
+        {
+          "term": "A compromise",
+          "tags": [],
+          "text": "Choice balances aesthetics, cost, manufacturing method, disposal and reuse."
+        },
+        {
+          "term": "Function first",
+          "tags": [],
+          "text": "The final choice rests mostly on product function and material properties."
+        },
+        {
+          "term": "Justify it",
+          "tags": [],
+          "text": "Name the exact property and link it to the product, never just 'strong'."
+        }
+      ],
+      "check": [
+        {
+          "q": "What mostly decides the final choice of material?",
+          "a": "What the product has to do (its function) and the material's properties."
+        },
+        {
+          "q": "Why is 'it's strong' a weak reason for choosing a material?",
+          "a": "It's too general: name the exact property and say why the product needs it."
+        }
+      ]
+    },
+    {
+      "id": "strength",
+      "label": "Mechanical: strength",
+      "icon": "force",
+      "pages": "1",
+      "summary": "Resisting the different kinds of force that act on a material.",
+      "items": [
+        {
+          "term": "Mechanical properties",
+          "tags": [],
+          "text": "How a material reacts when an external force acts on it."
+        },
+        {
+          "term": "Compressive strength",
+          "tags": [],
+          "text": "Withstands being crushed or shortened by pushing forces (compression)."
+        },
+        {
+          "term": "Tensile strength",
+          "tags": [],
+          "text": "Resists being stretched by pulling forces (tension)."
+        },
+        {
+          "term": "Bending strength",
+          "tags": [],
+          "text": "Resists forces that would bend the material."
+        },
+        {
+          "term": "Shear strength",
+          "tags": [],
+          "text": "Resists sliding forces acting along a parallel plane."
+        },
+        {
+          "term": "Torsional strength",
+          "tags": [],
+          "text": "Withstands twisting forces from applied torque (torsion)."
+        }
+      ],
+      "check": [
+        {
+          "q": "Which strength resists pulling forces?",
+          "a": "Tensile strength (tension)."
+        },
+        {
+          "q": "What does torsional strength resist?",
+          "a": "Twisting forces from applied torque."
+        }
+      ]
+    },
+    {
+      "id": "behaviour",
+      "label": "Other mechanical properties",
+      "icon": "hammer",
+      "pages": "1",
+      "summary": "How a material copes with wear, impact and being reshaped.",
+      "items": [
+        {
+          "term": "Hardness",
+          "tags": [],
+          "text": "Resists abrasive wear such as scratching, indentation or cutting."
+        },
+        {
+          "term": "Toughness",
+          "tags": [],
+          "text": "Absorbs an impact force without fracturing."
+        },
+        {
+          "term": "Plasticity",
+          "tags": [],
+          "text": "Can be permanently deformed and keeps its new shape."
+        },
+        {
+          "term": "Ductility",
+          "tags": [],
+          "text": "Can be drawn out thinner under tension without cracking, as in wire."
+        },
+        {
+          "term": "Malleability",
+          "tags": [],
+          "text": "Can be deformed by compression without cracking; easier when hotter."
+        },
+        {
+          "term": "Elasticity",
+          "tags": [],
+          "text": "Can be deformed, then returns to its original shape when the force goes."
+        }
+      ],
+      "check": [
+        {
+          "q": "What is toughness?",
+          "a": "The ability to absorb an impact force without fracturing."
+        },
+        {
+          "q": "How is elasticity different from plasticity?",
+          "a": "An elastic material returns to its original shape; a plastic one keeps its new shape."
+        }
+      ]
+    },
+    {
+      "id": "physical",
+      "label": "Physical properties",
+      "icon": "atom",
+      "pages": "1",
+      "summary": "Properties that come from what the material is made of.",
+      "items": [
+        {
+          "term": "Physical properties",
+          "tags": [],
+          "text": "Linked to the material's actual make-up or structure."
+        },
+        {
+          "term": "Density",
+          "tags": [],
+          "text": "The mass of the material in a standard volume."
+        },
+        {
+          "term": "Fusibility",
+          "tags": [],
+          "text": "Can be melted from solid to liquid by heat, vital for casting metal."
+        },
+        {
+          "term": "Magnetism",
+          "tags": [],
+          "text": "A natural force that makes the material attract iron or steels."
+        },
+        {
+          "term": "Corrosion or degradation resistance",
+          "tags": [],
+          "text": "Withstands attack and decay from the environment."
+        }
+      ],
+      "check": [
+        {
+          "q": "Why does a metal for casting need good fusibility?",
+          "a": "It has to be turned from a solid into a liquid by heat so it can be cast."
+        },
+        {
+          "q": "What is density?",
+          "a": "The mass of the material in a standard volume."
+        }
+      ]
+    },
+    {
+      "id": "elecheat",
+      "label": "Electrical and thermal",
+      "icon": "bolt",
+      "pages": "2",
+      "summary": "How electricity and heat pass through a material.",
+      "items": [
+        {
+          "term": "Electrical conductor",
+          "tags": [],
+          "text": "Lets electric current flow through with very little resistance."
+        },
+        {
+          "term": "Electrical insulator",
+          "tags": [],
+          "text": "Stops electricity flowing through the material."
+        },
+        {
+          "term": "Thermal conductor",
+          "tags": [],
+          "text": "Lets heat pass through it, quickly if its conductivity is high."
+        },
+        {
+          "term": "Thermal insulator",
+          "tags": [],
+          "text": "Stops heat passing through the material."
+        },
+        {
+          "term": "Thermal expansion",
+          "tags": [],
+          "text": "The material's volume increases when it is heated."
+        }
+      ],
+      "check": [
+        {
+          "q": "What does a good electrical conductor give to the flow of charge?",
+          "a": "Very little resistance."
+        },
+        {
+          "q": "What is thermal expansion?",
+          "a": "The material's volume increasing in response to heat."
+        }
+      ]
+    },
+    {
+      "id": "optical",
+      "label": "Optical properties",
+      "icon": "eye",
+      "pages": "2",
+      "summary": "How much light a material lets through.",
+      "items": [
+        {
+          "term": "Opaque",
+          "tags": [],
+          "text": "Lets no light travel through."
+        },
+        {
+          "term": "Translucent",
+          "tags": [],
+          "text": "Lets light through but diffuses it so objects look blurred; frosted glass is one."
+        },
+        {
+          "term": "Transparent",
+          "tags": [],
+          "text": "Lets light pass easily, so you can see clearly through it."
+        }
+      ],
+      "check": [
+        {
+          "q": "Is frosted glass opaque, translucent or transparent?",
+          "a": "Translucent."
+        },
+        {
+          "q": "What can you do through a transparent material?",
+          "a": "See clearly through it."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Mechanical properties",
+      "def": "How a material reacts to an external force."
+    },
+    {
+      "term": "Physical properties",
+      "def": "Properties linked to a material's make-up or structure."
+    },
+    {
+      "term": "Compressive strength",
+      "def": "Withstanding crushing or shortening by pushing forces."
+    },
+    {
+      "term": "Tensile strength",
+      "def": "Resisting stretching by pulling forces."
+    },
+    {
+      "term": "Shear strength",
+      "def": "Resisting sliding forces along a parallel plane."
+    },
+    {
+      "term": "Torsional strength",
+      "def": "Withstanding twisting forces from torque."
+    },
+    {
+      "term": "Hardness",
+      "def": "Resisting scratching, indentation or cutting."
+    },
+    {
+      "term": "Toughness",
+      "def": "Absorbing an impact force without fracturing."
+    },
+    {
+      "term": "Plasticity",
+      "def": "Being permanently deformed and keeping the new shape."
+    },
+    {
+      "term": "Ductility",
+      "def": "Being drawn out under tension without cracking."
+    },
+    {
+      "term": "Malleability",
+      "def": "Being deformed by compression without cracking."
+    },
+    {
+      "term": "Elasticity",
+      "def": "Returning to the original shape when the force is removed."
+    },
+    {
+      "term": "Fusibility",
+      "def": "Being turned from solid to liquid by heat."
+    },
+    {
+      "term": "Thermal expansion",
+      "def": "Volume increasing when a material is heated."
+    },
+    {
+      "term": "Translucent",
+      "def": "Lets light through but diffuses it, so things look blurred."
+    }
+  ],
+  "apply": [
+    {
+      "q": "A plastic toy for toddlers will often be dropped on hard floors and must not crack.",
+      "tools": [
+        "Toughness",
+        "Ductility",
+        "Malleability",
+        "Plasticity"
+      ],
+      "tool": 0,
+      "reasons": [
+        "It absorbs an impact force without fracturing",
+        "It can be drawn out into a wire",
+        "It can be shaped by compression without cracking",
+        "It keeps a new shape after being deformed"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A bathroom window must let daylight in but stop people seeing in clearly.",
+      "tools": [
+        "Translucent",
+        "Transparent",
+        "Opaque",
+        "Thermal conductor"
+      ],
+      "tool": 0,
+      "reasons": [
+        "It lets light through but diffuses it, so objects look blurred",
+        "It lets you see clearly through it",
+        "It stops all light travelling through",
+        "It lets heat pass through quickly"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "The outer covering of a mains cable must stop current reaching the user's hand.",
+      "tools": [
+        "Electrical insulator",
+        "Electrical conductor",
+        "Thermal expansion",
+        "Magnetism"
+      ],
+      "tool": 0,
+      "reasons": [
+        "It does not allow electricity to flow through it",
+        "It gives very little resistance to the flow of charge",
+        "Its volume increases when it is heated",
+        "It attracts iron and steels"
+      ],
+      "reason": 0
+    }
+  ],
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      {
+        "n": "Hardness",
+        "why": "The only mechanical property: the rest are physical properties."
+      },
+      {
+        "n": "Density",
+        "why": "The only one that is a measure (mass in a standard volume)."
+      },
+      {
+        "n": "Fusibility",
+        "why": "The only one about changing state, from solid to liquid."
+      },
+      {
+        "n": "Magnetism",
+        "why": "The only one that is a force attracting iron or steels."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "q": "What are mechanical properties about?",
+      "options": [
+        "How a material reacts to an external force",
+        "The material's make-up or structure",
+        "How much light passes through",
+        "How easily it melts"
+      ],
+      "answer": 0,
+      "why": "Mechanical properties describe how a material reacts when a force acts on it.",
+      "chunk": "strength"
+    },
+    {
+      "q": "The final choice of material depends mostly on its cost.",
+      "tf": false,
+      "why": "Cost is part of the compromise, but function and the material's properties matter most.",
+      "chunk": "choose"
+    },
+    {
+      "q": "'It's strong' fully justifies the choice of a material.",
+      "tf": false,
+      "why": "Name the exact property, such as tensile strength, and link it to what the product does.",
+      "chunk": "choose"
+    },
+    {
+      "q": "Which property resists pulling forces?",
+      "options": [
+        "Tensile strength",
+        "Compressive strength",
+        "Shear strength",
+        "Torsional strength"
+      ],
+      "answer": 0,
+      "why": "Pulling forces put a material in tension, which tensile strength resists.",
+      "chunk": "strength"
+    },
+    {
+      "q": "A screwdriver shaft is twisted hard as a screw is driven in. Which strength does it need?",
+      "options": [
+        "Torsional strength",
+        "Tensile strength",
+        "Compressive strength",
+        "Bending strength"
+      ],
+      "answer": 0,
+      "why": "Twisting forces from torque are resisted by torsional strength.",
+      "chunk": "strength"
+    },
+    {
+      "q": "Shear strength is the ability to resist sliding forces along a parallel plane.",
+      "tf": true,
+      "why": "Shear forces slide one part of the material past another.",
+      "chunk": "strength"
+    },
+    {
+      "q": "Which property lets a material absorb an impact without fracturing?",
+      "options": [
+        "Toughness",
+        "Hardness",
+        "Elasticity",
+        "Plasticity"
+      ],
+      "answer": 0,
+      "why": "Toughness is about absorbing impact force; hardness is about resisting wear.",
+      "chunk": "behaviour"
+    },
+    {
+      "q": "Malleability increases as the temperature rises.",
+      "tf": true,
+      "why": "A hotter material can be deformed by compression more easily without cracking.",
+      "chunk": "behaviour"
+    },
+    {
+      "q": "What is the difference between plasticity and elasticity?",
+      "options": [
+        "Plastic deformation is permanent; elastic deformation recovers",
+        "Elastic deformation is permanent; plastic deformation recovers",
+        "Both are permanent changes of shape",
+        "Neither involves a change of shape"
+      ],
+      "answer": 0,
+      "why": "A plastic material keeps its new shape; an elastic one returns to its original shape.",
+      "chunk": "behaviour"
+    },
+    {
+      "q": "Which property is essential for a metal that is going to be cast?",
+      "options": [
+        "Fusibility",
+        "Magnetism",
+        "Density",
+        "Hardness"
+      ],
+      "answer": 0,
+      "why": "Casting needs a metal that heat can turn into a liquid.",
+      "chunk": "physical"
+    },
+    {
+      "q": "Density is the mass of a material in a standard volume.",
+      "tf": true,
+      "why": "Density compares mass with a fixed volume of the material.",
+      "chunk": "physical"
+    },
+    {
+      "q": "Magnetism makes a material attract…",
+      "options": [
+        "iron or steels",
+        "copper",
+        "polymers",
+        "glass"
+      ],
+      "answer": 0,
+      "why": "Magnetism is the natural force that attracts iron or steels.",
+      "chunk": "physical"
+    },
+    {
+      "q": "A good electrical conductor gives…",
+      "options": [
+        "very little resistance to the flow of charge",
+        "a lot of resistance to the flow of charge",
+        "no path for current",
+        "no path for heat"
+      ],
+      "answer": 0,
+      "why": "Current flows easily through a good conductor.",
+      "chunk": "elecheat"
+    },
+    {
+      "q": "Thermal expansion means a material's volume gets smaller when it is heated.",
+      "tf": false,
+      "why": "Heating makes the volume increase.",
+      "chunk": "elecheat"
+    },
+    {
+      "q": "Frosted glass is an example of which kind of material?",
+      "options": [
+        "Translucent",
+        "Transparent",
+        "Opaque",
+        "Magnetic"
+      ],
+      "answer": 0,
+      "why": "It lets light through but diffuses it, so objects look blurred.",
+      "chunk": "optical"
+    },
+    {
+      "q": "An opaque material lets light travel through it.",
+      "tf": false,
+      "why": "Opaque materials stop light travelling through.",
+      "chunk": "optical"
+    }
+  ],
+  "written": [
+    {
+      "type": "explain",
+      "q": "A designer is choosing a material for a kitchen worktop. Explain why the material needs hardness and toughness.",
+      "marks": 4,
+      "points": [
+        "Hardness: it resists abrasive wear such as scratching, indentation or cutting…",
+        "…so knives and pans don't scratch or dent the worktop.",
+        "Toughness: it absorbs an impact force without fracturing…",
+        "…so a heavy pan dropped on it won't crack it."
+      ],
+      "model": "Hardness means the worktop resists abrasive wear such as scratching, indentation or cutting, so knives and pans don't scratch or dent it. Toughness means it absorbs an impact force without fracturing, so a heavy pan dropped on it won't crack it.",
+      "note": "For each property: 1 mark for what it is, 1 for linking it to the worktop."
+    },
+    {
+      "type": "define",
+      "q": "Define the term 'ductility'.",
+      "marks": 2,
+      "points": [
+        "The ability to be drawn out (stretched) under tension…",
+        "…reducing the cross-sectional area without cracking, for example into a wire."
+      ],
+      "model": "Ductility is the ability of a material to be drawn out under tension, reducing its cross-sectional area without cracking, for example into a wire.",
+      "note": "1 mark per point."
+    },
+    {
+      "type": "compare",
+      "q": "Compare plasticity and elasticity.",
+      "marks": 4,
+      "points": [
+        "Both describe how a material behaves when a force deforms it.",
+        "Plasticity: the deformation is permanent.",
+        "A plastic material keeps (retains) its deformed shape.",
+        "Elasticity: the material returns to its original shape when the force is removed.",
+        "An elastic material only returns if its elastic limit has not been exceeded."
+      ],
+      "model": "Both describe how a material behaves when a force deforms it. With plasticity the deformation is permanent and the material keeps its deformed shape, but with elasticity the material returns to its original shape when the force is removed, as long as its elastic limit has not been exceeded.",
+      "note": "1 mark per valid point, up to 4. At least one point on each property."
+    },
+    {
+      "type": "explain",
+      "q": "Explain why a saucepan uses a thermal conductor for its base and a thermal insulator for its handle.",
+      "marks": 3,
+      "points": [
+        "The base is a thermal conductor, so it lets heat energy transfer through it…",
+        "…quickly, to heat the food (high thermal conductivity).",
+        "The handle is a thermal insulator, so it stops heat transferring through it…",
+        "…so the handle stays safe to hold."
+      ],
+      "model": "The base is a thermal conductor, so heat energy transfers through it quickly to heat the food. The handle is a thermal insulator, which stops heat transferring through it, so it stays safe to hold.",
+      "note": "1 mark per point, up to 3. At least one point on each part."
+    },
+    {
+      "type": "describe",
+      "q": "Apart from its properties, describe the factors a designer weighs up when selecting a material.",
+      "marks": 4,
+      "points": [
+        "Aesthetics: how it looks and feels, such as colour, texture and surface finish.",
+        "Cost: such as the raw material price, waste, tooling and finishing.",
+        "Manufacturing method: such as the stock forms available and how it can be formed and joined.",
+        "Disposal and reuse: such as how easily it can be reused or recycled at the end of its life."
+      ],
+      "model": "The designer weighs up aesthetics, such as the colour, texture and surface finish; cost, such as the raw material price, waste, tooling and finishing; the manufacturing method, such as the stock forms available and how it can be formed and joined; and disposal and reuse, such as how easily it can be reused or recycled at the end of its life.",
+      "note": "1 mark per factor described, up to 4."
+    },
+    {
+      "type": "explain",
+      "q": "Explain why good fusibility is essential for a metal that is going to be cast.",
+      "marks": 2,
+      "points": [
+        "Fusibility is the ability to be turned from a solid into a liquid (molten) state by heat…",
+        "…and casting needs the metal molten so it can be cast into shape."
+      ],
+      "model": "Fusibility is the ability to be turned from a solid into a molten state by heat, and the metal must be molten so it can be cast into shape.",
+      "note": "1 mark for the point, 1 for explaining it."
+    }
+  ],
+  "related": [
+    {
+      "id": "a02-classification-of-materials",
+      "spec": "3.1.1"
+    },
+    {
+      "id": "a03-investigating-testing-materials",
+      "spec": "3.1.1"
+    }
+  ]
+}
