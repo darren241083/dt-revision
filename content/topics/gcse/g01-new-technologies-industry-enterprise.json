@@ -672,6 +672,17 @@
     },
     {
       "type": "explain",
+      "q": "Explain why an inventor would apply for a patent.",
+      "marks": 2,
+      "points": [
+        "A patent is a legal process that proves they were the first to register the invention…",
+        "…so their intellectual property is protected and others can't make money from it."
+      ],
+      "model": "A patent legally proves the inventor was the first to register the invention, so their intellectual property is protected and others can't make money from it.",
+      "note": "1 mark for the point, 1 for explaining it."
+    },
+    {
+      "type": "explain",
       "q": "A start-up plans to use crowd funding to launch a new skateboard. Explain one benefit and one risk of this for the company.",
       "marks": 4,
       "points": [
@@ -745,17 +756,6 @@
         }
       ],
       "note": "Tick the points made, then use the levels under the model answer to decide the mark."
-    },
-    {
-      "type": "explain",
-      "q": "Explain why an inventor would apply for a patent.",
-      "marks": 2,
-      "points": [
-        "A patent is a legal process that proves they were the first to register the invention…",
-        "…so their intellectual property is protected and others can't make money from it."
-      ],
-      "model": "A patent legally proves the inventor was the first to register the invention, so their intellectual property is protected and others can't make money from it.",
-      "note": "1 mark for the point, 1 for explaining it."
     }
   ],
   "related": [
