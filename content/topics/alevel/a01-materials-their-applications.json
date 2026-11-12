@@ -314,7 +314,12 @@
         {
           "term": "Corrosion or degradation resistance",
           "tags": [],
-          "text": "Withstands attack and decay from the environment."
+          "text": "Withstands attack and decay from the environment.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/corrosion-or-degradation-resistance.webp",
+            "alt": "Corrosion or degradation resistance",
+            "credit": "--"
+          }
         }
       ],
       "check": [
