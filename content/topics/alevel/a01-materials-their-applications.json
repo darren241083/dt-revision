@@ -294,7 +294,12 @@
         {
           "term": "Fusibility",
           "tags": [],
-          "text": "Can be melted from solid to liquid by heat, vital for casting metal."
+          "text": "Can be melted from solid to liquid by heat, vital for casting metal.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/fusibility.webp",
+            "alt": "Fusibility",
+            "credit": "--"
+          }
         },
         {
           "term": "Magnetism",
