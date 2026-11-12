@@ -146,7 +146,12 @@
         {
           "term": "Bending strength",
           "tags": [],
-          "text": "Resists forces that would bend the material."
+          "text": "Resists forces that would bend the material.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/bending-strength.webp",
+            "alt": "Bending strength",
+            "credit": "--"
+          }
         },
         {
           "term": "Shear strength",
