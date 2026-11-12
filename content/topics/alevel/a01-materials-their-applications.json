@@ -136,7 +136,12 @@
         {
           "term": "Tensile strength",
           "tags": [],
-          "text": "Resists being stretched by pulling forces (tension)."
+          "text": "Resists being stretched by pulling forces (tension).",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/tensile-strength.webp",
+            "alt": "Tensile strength",
+            "credit": "--"
+          }
         },
         {
           "term": "Bending strength",
