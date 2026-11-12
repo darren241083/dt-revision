@@ -77,7 +77,12 @@
         {
           "term": "Function first",
           "tags": [],
-          "text": "The final choice rests mostly on product function and material properties."
+          "text": "The final choice rests mostly on product function and material properties.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/function-first.webp",
+            "alt": "Function first",
+            "credit": "--"
+          }
         },
         {
           "term": "Justify it",
