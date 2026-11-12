@@ -363,7 +363,12 @@
         {
           "term": "Thermal conductor",
           "tags": [],
-          "text": "Lets heat pass through it, quickly if its conductivity is high."
+          "text": "Lets heat pass through it, quickly if its conductivity is high.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/thermal-conductor.webp",
+            "alt": "Thermal conductor",
+            "credit": "--"
+          }
         },
         {
           "term": "Thermal insulator",
