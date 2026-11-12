@@ -422,7 +422,12 @@
         {
           "term": "Translucent",
           "tags": [],
-          "text": "Lets light through but diffuses it so objects look blurred; frosted glass is one."
+          "text": "Lets light through but diffuses it so objects look blurred; frosted glass is one.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/translucent.webp",
+            "alt": "Translucent",
+            "credit": "--"
+          }
         },
         {
           "term": "Transparent",
