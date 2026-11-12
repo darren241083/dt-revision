@@ -245,7 +245,12 @@
         {
           "term": "Elasticity",
           "tags": [],
-          "text": "Can be deformed, then returns to its original shape when the force goes."
+          "text": "Can be deformed, then returns to its original shape when the force goes.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/elasticity.webp",
+            "alt": "Elasticity",
+            "credit": "--"
+          }
         }
       ],
       "check": [
