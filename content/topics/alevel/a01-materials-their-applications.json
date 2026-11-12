@@ -116,7 +116,12 @@
         {
           "term": "Mechanical properties",
           "tags": [],
-          "text": "How a material reacts when an external force acts on it."
+          "text": "How a material reacts when an external force acts on it.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/mechanical-properties.webp",
+            "alt": "Mechanical properties",
+            "credit": "--"
+          }
         },
         {
           "term": "Compressive strength",
