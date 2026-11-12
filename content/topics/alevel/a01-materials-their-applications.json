@@ -225,7 +225,12 @@
         {
           "term": "Ductility",
           "tags": [],
-          "text": "Can be drawn out thinner under tension without cracking, as in wire."
+          "text": "Can be drawn out thinner under tension without cracking, as in wire.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/ductility.webp",
+            "alt": "Ductility",
+            "credit": "--"
+          }
         },
         {
           "term": "Malleability",
