@@ -87,7 +87,12 @@
         {
           "term": "Justify it",
           "tags": [],
-          "text": "Name the exact property and link it to the product, never just 'strong'."
+          "text": "Name the exact property and link it to the product, never just 'strong'.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/justify-it.webp",
+            "alt": "Justify it",
+            "credit": "--"
+          }
         }
       ],
       "check": [
