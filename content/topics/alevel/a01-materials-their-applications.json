@@ -427,7 +427,12 @@
         {
           "term": "Transparent",
           "tags": [],
-          "text": "Lets light pass easily, so you can see clearly through it."
+          "text": "Lets light pass easily, so you can see clearly through it.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/transparent.webp",
+            "alt": "Transparent",
+            "credit": "--"
+          }
         }
       ],
       "check": [
