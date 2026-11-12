@@ -195,7 +195,12 @@
         {
           "term": "Hardness",
           "tags": [],
-          "text": "Resists abrasive wear such as scratching, indentation or cutting."
+          "text": "Resists abrasive wear such as scratching, indentation or cutting.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/hardness.webp",
+            "alt": "Hardness",
+            "credit": "--"
+          }
         },
         {
           "term": "Toughness",
