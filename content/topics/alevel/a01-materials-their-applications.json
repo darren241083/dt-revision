@@ -235,7 +235,12 @@
         {
           "term": "Malleability",
           "tags": [],
-          "text": "Can be deformed by compression without cracking; easier when hotter."
+          "text": "Can be deformed by compression without cracking; easier when hotter.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/malleability.webp",
+            "alt": "Malleability",
+            "credit": "--"
+          }
         },
         {
           "term": "Elasticity",
