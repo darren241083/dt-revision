@@ -412,7 +412,12 @@
         {
           "term": "Opaque",
           "tags": [],
-          "text": "Lets no light travel through."
+          "text": "Lets no light travel through.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/opaque.webp",
+            "alt": "Opaque",
+            "credit": "--"
+          }
         },
         {
           "term": "Translucent",
