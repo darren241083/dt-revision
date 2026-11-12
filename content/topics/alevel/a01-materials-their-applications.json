@@ -205,7 +205,12 @@
         {
           "term": "Toughness",
           "tags": [],
-          "text": "Absorbs an impact force without fracturing."
+          "text": "Absorbs an impact force without fracturing.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/toughness.webp",
+            "alt": "Toughness",
+            "credit": "--"
+          }
         },
         {
           "term": "Plasticity",
