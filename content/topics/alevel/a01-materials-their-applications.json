@@ -343,7 +343,12 @@
         {
           "term": "Electrical conductor",
           "tags": [],
-          "text": "Lets electric current flow through with very little resistance."
+          "text": "Lets electric current flow through with very little resistance.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/electrical-conductor.webp",
+            "alt": "Electrical conductor",
+            "credit": "--"
+          }
         },
         {
           "term": "Electrical insulator",
