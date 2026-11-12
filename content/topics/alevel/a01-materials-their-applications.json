@@ -383,7 +383,12 @@
         {
           "term": "Thermal expansion",
           "tags": [],
-          "text": "The material's volume increases when it is heated."
+          "text": "The material's volume increases when it is heated.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/thermal-expansion.webp",
+            "alt": "Thermal expansion",
+            "credit": "--"
+          }
         }
       ],
       "check": [
