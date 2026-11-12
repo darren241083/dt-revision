@@ -67,7 +67,12 @@
         {
           "term": "A compromise",
           "tags": [],
-          "text": "Choice balances aesthetics, cost, manufacturing method, disposal and reuse."
+          "text": "Choice balances aesthetics, cost, manufacturing method, disposal and reuse.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/a-compromise.webp",
+            "alt": "A compromise",
+            "credit": "--"
+          }
         },
         {
           "term": "Function first",
