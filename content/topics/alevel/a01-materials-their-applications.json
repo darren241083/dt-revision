@@ -284,7 +284,12 @@
         {
           "term": "Density",
           "tags": [],
-          "text": "The mass of the material in a standard volume."
+          "text": "The mass of the material in a standard volume.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/density.webp",
+            "alt": "Density",
+            "credit": "--"
+          }
         },
         {
           "term": "Fusibility",
