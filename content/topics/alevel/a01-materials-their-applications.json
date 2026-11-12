@@ -373,7 +373,12 @@
         {
           "term": "Thermal insulator",
           "tags": [],
-          "text": "Stops heat passing through the material."
+          "text": "Stops heat passing through the material.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/thermal-insulator.webp",
+            "alt": "Thermal insulator",
+            "credit": "--"
+          }
         },
         {
           "term": "Thermal expansion",
