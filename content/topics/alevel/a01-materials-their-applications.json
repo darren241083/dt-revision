@@ -215,7 +215,12 @@
         {
           "term": "Plasticity",
           "tags": [],
-          "text": "Can be permanently deformed and keeps its new shape."
+          "text": "Can be permanently deformed and keeps its new shape.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/plasticity.webp",
+            "alt": "Plasticity",
+            "credit": "--"
+          }
         },
         {
           "term": "Ductility",
