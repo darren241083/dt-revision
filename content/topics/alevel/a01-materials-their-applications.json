@@ -156,7 +156,12 @@
         {
           "term": "Shear strength",
           "tags": [],
-          "text": "Resists sliding forces acting along a parallel plane."
+          "text": "Resists sliding forces acting along a parallel plane.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/shear-strength.webp",
+            "alt": "Shear strength",
+            "credit": "--"
+          }
         },
         {
           "term": "Torsional strength",
