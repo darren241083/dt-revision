@@ -353,7 +353,12 @@
         {
           "term": "Electrical insulator",
           "tags": [],
-          "text": "Stops electricity flowing through the material."
+          "text": "Stops electricity flowing through the material.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/electrical-insulator.webp",
+            "alt": "Electrical insulator",
+            "credit": "--"
+          }
         },
         {
           "term": "Thermal conductor",
