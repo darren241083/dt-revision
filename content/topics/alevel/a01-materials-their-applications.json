@@ -304,7 +304,12 @@
         {
           "term": "Magnetism",
           "tags": [],
-          "text": "A natural force that makes the material attract iron or steels."
+          "text": "A natural force that makes the material attract iron or steels.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/magnetism.webp",
+            "alt": "Magnetism",
+            "credit": "--"
+          }
         },
         {
           "term": "Corrosion or degradation resistance",
