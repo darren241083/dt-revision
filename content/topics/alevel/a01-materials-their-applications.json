@@ -166,7 +166,12 @@
         {
           "term": "Torsional strength",
           "tags": [],
-          "text": "Withstands twisting forces from applied torque (torsion)."
+          "text": "Withstands twisting forces from applied torque (torsion).",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/torsional-strength.webp",
+            "alt": "Torsional strength",
+            "credit": "--"
+          }
         }
       ],
       "check": [
