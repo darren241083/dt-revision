@@ -274,7 +274,12 @@
         {
           "term": "Physical properties",
           "tags": [],
-          "text": "Linked to the material's actual make-up or structure."
+          "text": "Linked to the material's actual make-up or structure.",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/physical-properties.webp",
+            "alt": "Physical properties",
+            "credit": "--"
+          }
         },
         {
           "term": "Density",
