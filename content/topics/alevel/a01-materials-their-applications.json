@@ -126,7 +126,12 @@
         {
           "term": "Compressive strength",
           "tags": [],
-          "text": "Withstands being crushed or shortened by pushing forces (compression)."
+          "text": "Withstands being crushed or shortened by pushing forces (compression).",
+          "image": {
+            "file": "assets/img/alevel/a01-materials-their-applications/compressive-strength.webp",
+            "alt": "Compressive strength",
+            "credit": "--"
+          }
         },
         {
           "term": "Tensile strength",
