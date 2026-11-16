@@ -12,7 +12,10 @@
     "title": "My Revision Notes: AQA A Level Design and Technology: Product Design",
     "pages": "132–133"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/alevel/b07-product-life-cycle.m4a",
+    "length": 288
+  },
   "needs": [
     "Name the stages of the product life cycle and say what happens to sales in each.",
     "Explain how extension strategies keep a product selling.",
