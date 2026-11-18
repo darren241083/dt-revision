@@ -367,7 +367,12 @@
         {
           "term": "Very expensive",
           "tags": [],
-          "text": "Very expensive to set up, to run and to stop."
+          "text": "Very expensive to set up, to run and to stop.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/very-expensive.webp",
+            "alt": "Very expensive",
+            "credit": "--"
+          }
         },
         {
           "term": "Small workforce",
