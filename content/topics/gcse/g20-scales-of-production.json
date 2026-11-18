@@ -199,7 +199,12 @@
         {
           "term": "Bespoke",
           "tags": [],
-          "text": "Made specifically to a client's own brief."
+          "text": "Made specifically to a client's own brief.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/bespoke.webp",
+            "alt": "Bespoke",
+            "credit": "--"
+          }
         },
         {
           "term": "One-off products",
