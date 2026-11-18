@@ -56,6 +56,35 @@
       "Patent"
     ]
   },
+  "bigPicture": {
+    "question": "What is changing the way products are made and sold?",
+    "lenses": [
+      {
+        "icon": "idea",
+        "text": "What drives new technology"
+      },
+      {
+        "icon": "cog",
+        "text": "Robots: pros and cons"
+      },
+      {
+        "icon": "flow",
+        "text": "Workplace layout"
+      },
+      {
+        "icon": "shield",
+        "text": "Protecting ideas"
+      },
+      {
+        "icon": "coin",
+        "text": "Funding and selling online"
+      },
+      {
+        "icon": "people",
+        "text": "Cooperatives and fair trade"
+      }
+    ]
+  },
   "chunks": [
     {
       "id": "tech",
@@ -66,31 +95,37 @@
       "items": [
         {
           "term": "Using science",
+          "ask": "Where do brand-new materials and products often start?",
           "tags": [],
           "text": "New scientific discoveries lead to new materials and products."
         },
         {
           "term": "Skills and knowledge",
+          "ask": "What skills do you think people need to develop new technology?",
           "tags": [],
           "text": "Communication, design, innovation, modelling and manufacturing, plus problem solving."
         },
         {
           "term": "People, tools and machines",
+          "ask": "What has to come together for a factory to work efficiently?",
           "tags": [],
           "text": "Skilled people, tools, robots and machines combined for efficient output."
         },
         {
           "term": "Consumer demand",
+          "ask": "Why do companies keep making new and improved products?",
           "tags": [],
           "text": "Consumers want new and improved products, so more are made."
         },
         {
           "term": "Impact on the planet",
+          "ask": "What is the hidden cost to the planet of making all these new products?",
           "tags": [],
           "text": "Getting raw materials and making products uses vast amounts of energy."
         },
         {
           "term": "Continuous improvement",
+          "ask": "How could a factory get a little more efficient every year without one big change?",
           "tags": [],
           "text": "Small, regular process changes that raise efficiency and cut energy use and harm."
         }
@@ -115,26 +150,31 @@
       "items": [
         {
           "term": "Automation",
+          "ask": "Why would a factory hand its repetitive jobs over to machines?",
           "tags": [],
           "text": "Assembly lines do repetitive tasks instead of people, to meet demand."
         },
         {
           "term": "Software and industrial automation",
+          "ask": "Automation isn't only about machines on a factory floor. What other kinds of task can be automated?",
           "tags": [],
           "text": "Software automation does computer-based tasks and industrial automation physical ones."
         },
         {
           "term": "Robots",
+          "ask": "Where would a robot be safer or better than a person at work?",
           "tags": [],
           "text": "Repeat complex movements in hazardous, hot or fume-filled places, such as vehicle assembly, packing, labs and aerospace."
         },
         {
           "term": "Advantages",
+          "ask": "What does a factory gain by using robots?",
           "tags": [],
           "text": "Faster, accurate and consistent output, lower labour costs and working 24/7."
         },
         {
           "term": "Disadvantages",
+          "ask": "What could go wrong, or cost more, when a factory brings in robots?",
           "tags": [],
           "text": "Job losses, no human judgement, costly set-up and new skills needed to maintain."
         }
@@ -159,6 +199,7 @@
       "items": [
         {
           "term": "Planned layout",
+          "ask": "Why should a factory's layout be planned before it's built?",
           "tags": [],
           "text": "Planned from the start so design, manufacture and delivery are as efficient as possible."
         },
@@ -194,21 +235,25 @@
       "items": [
         {
           "term": "Enterprise",
+          "ask": "What does it take to turn a good idea into a successful business?",
           "tags": [],
           "text": "Spotting a business opportunity and making it a commercial success."
         },
         {
           "term": "Start-up",
+          "ask": "What do we call a brand-new company built around one idea?",
           "tags": [],
           "text": "A new company whose idea could become a profit-making business."
         },
         {
           "term": "Intellectual property (IP)",
+          "ask": "Who should own a new idea or invention?",
           "tags": [],
           "text": "Ideas and inventions belong to the person who created them."
         },
         {
           "term": "Patent",
+          "ask": "How could an inventor stop other people making money from their idea?",
           "tags": [],
           "text": "Legal registration proving you were first, so others can't profit from your idea."
         }
@@ -233,26 +278,31 @@
       "items": [
         {
           "term": "Crowd funding",
+          "ask": "How could a small new business raise money online?",
           "tags": [],
           "text": "Many people each give a small amount to fund a new venture, often online."
         },
         {
           "term": "Investors",
+          "ask": "Who else might put money into a new business, and what would they want back?",
           "tags": [],
           "text": "From individuals to venture capitalists, usually for shares. An alternative to a bank loan."
         },
         {
           "term": "Missing the target",
+          "ask": "What happens if a crowd-funding campaign doesn't raise enough?",
           "tags": [],
           "text": "Pledged money is usually returned, and failure can harm the company's reputation."
         },
         {
           "term": "Virtual marketing",
+          "ask": "How could a business advertise online, and how would it know people are noticing?",
           "tags": [],
           "text": "Promotion through websites, social media, email and search adverts, measured in hits, clicks and likes."
         },
         {
           "term": "Virtual retail",
+          "ask": "Why sell online rather than only in a shop?",
           "tags": [],
           "text": "Selling online to reach a wider audience."
         }
@@ -277,21 +327,25 @@
       "items": [
         {
           "term": "Cooperative",
+          "ask": "Who do you think owns and runs a cooperative?",
           "tags": [],
           "text": "Owned and run by its members: its workers or its customers."
         },
         {
           "term": "Why a cooperative?",
+          "ask": "Why might people choose to join together and run a business as a group?",
           "tags": [],
           "text": "Shared interests give members more protection and a democratic voice."
         },
         {
           "term": "Fair trade",
+          "ask": "What would make trade 'fair' for producers in poorer countries?",
           "tags": [],
           "text": "Fair prices, decent conditions and fair terms for producers in less economically developed countries."
         },
         {
           "term": "Fairtrade Foundation",
+          "ask": "What could an organisation do to make sure the farmers who grow our food are paid enough?",
           "tags": [],
           "text": "Sets a fair, sustainable price so farmers' lives improve. E.g. coffee, cotton, chocolate, fruit.",
           "autoQuiz": false

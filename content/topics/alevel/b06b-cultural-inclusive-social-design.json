@@ -59,6 +59,31 @@
       "Solar cooker"
     ]
   },
+  "bigPicture": {
+    "question": "How can design include, respect and help people everywhere?",
+    "lenses": [
+      {
+        "icon": "globe",
+        "text": "Other cultures"
+      },
+      {
+        "icon": "people",
+        "text": "Designing for everyone"
+      },
+      {
+        "icon": "heart",
+        "text": "Social problems and health"
+      },
+      {
+        "icon": "home",
+        "text": "Needs in a crisis"
+      },
+      {
+        "icon": "coin",
+        "text": "Fair pay for producers"
+      }
+    ]
+  },
   "chunks": [
     {
       "id": "culture",
@@ -69,6 +94,7 @@
       "items": [
         {
           "term": "Avoiding offence",
+          "ask": "Why should a company check what a product's name means in other countries?",
           "tags": [],
           "text": "Products must not offend people in domestic or global markets.",
           "image": {
@@ -80,6 +106,7 @@
         },
         {
           "term": "Cost of offence",
+          "ask": "What could it cost a company if its product offends people?",
           "tags": [],
           "text": "Offended, alienated customers bring a financial cost and wider harm.",
           "image": {
@@ -91,6 +118,7 @@
         },
         {
           "term": "Genders",
+          "ask": "What should a designer find out before aiming a product at men or at women?",
           "tags": [],
           "text": "Research how different genders perceive the product.",
           "image": {
@@ -102,6 +130,7 @@
         },
         {
           "term": "Colour",
+          "ask": "Why might a product's colour go down well in one country but badly in another?",
           "tags": [],
           "text": "A colour can mean different things in different countries.",
           "image": {
@@ -113,6 +142,7 @@
         },
         {
           "term": "Beliefs and customs",
+          "ask": "What might a designer not know about the people they're designing for in another culture?",
           "tags": [],
           "text": "Religious beliefs, traditions and customs may be outside the designer's experience.",
           "image": {
@@ -124,6 +154,7 @@
         },
         {
           "term": "User research",
+          "ask": "How can a designer make sure a product respects a community they're not part of?",
           "tags": [],
           "text": "Involve the communities concerned and avoid stereotypes or disrespectful symbols.",
           "image": {
@@ -154,6 +185,7 @@
       "items": [
         {
           "term": "Inclusive design",
+          "ask": "What does inclusive design aim to do?",
           "tags": [],
           "text": "Mainstream products usable by as many people as possible without special adaptation (BSI).",
           "image": {
@@ -165,6 +197,7 @@
         },
         {
           "term": "Disability Discrimination Act (1995)",
+          "ask": "Which 1995 law changed public transport and access for disabled people?",
           "tags": [],
           "text": "The DDA 1995, now replaced by the Equality Act 2010, changed public transport and access.",
           "image": {
@@ -176,6 +209,7 @@
         },
         {
           "term": "Without stigma",
+          "ask": "Why might someone avoid using a product that's obviously 'for disabled people'?",
           "tags": [],
           "text": "Suit a diverse range of people without singling anyone out.",
           "image": {
@@ -187,6 +221,7 @@
         },
         {
           "term": "In the home",
+          "ask": "What could make a new house, or a kitchen tool, easier for more people to use?",
           "tags": [],
           "text": "Wider doors for wheelchairs in new houses and OXO Good Grips easy-to-use utensils.",
           "image": {
@@ -194,10 +229,12 @@
             "alt": "In the home",
             "credit": "DT"
           },
-          "caption": "Wider doorways and level thresholds accommodate wheelchair users, pushchairs and people with limited mobility. Designing accessibility into homes benefits a wide range of users."
+          "caption": "Wider doorways and level thresholds accommodate wheelchair users, pushchairs and people with limited mobility. Designing accessibility into homes benefits a wide range of users.",
+          "imageOnReveal": true
         },
         {
           "term": "Getting about",
+          "ask": "What changes help people with different needs get around town?",
           "tags": [],
           "text": "Low-floor buses, bright-yellow handrails, crossings with bumps, ramps and sensory feedback.",
           "image": {
@@ -205,10 +242,12 @@
             "alt": "Getting about",
             "credit": "DT"
           },
-          "caption": "Low-floor buses, tactile paving and accessible crossings help people with different abilities navigate public spaces safely and independently."
+          "caption": "Low-floor buses, tactile paving and accessible crossings help people with different abilities navigate public spaces safely and independently.",
+          "imageOnReveal": true
         },
         {
           "term": "Hearing induction loops",
+          "ask": "How could a theatre help audience members with a hearing impairment?",
           "tags": [],
           "text": "In theatres, for audience members with a hearing impairment.",
           "image": {
@@ -216,10 +255,12 @@
             "alt": "Hearing induction loops",
             "credit": "DT"
           },
-          "caption": "Induction loops transmit sound directly to compatible hearing aids, reducing background noise. This improves accessibility in public places such as theatres and reception areas."
+          "caption": "Induction loops transmit sound directly to compatible hearing aids, reducing background noise. This improves accessibility in public places such as theatres and reception areas.",
+          "imageOnReveal": true
         },
         {
           "term": "Specialist products",
+          "ask": "Where would someone who needs extra help with everyday tasks find products made for them?",
           "tags": [],
           "text": "Kettle pourers and door handle adapters, sold by specialist shops.",
           "image": {
@@ -227,7 +268,8 @@
             "alt": "Specialist products",
             "credit": "DT"
           },
-          "caption": "Kettle tippers reduce the strength and movement needed to pour hot water safely. Unlike universal products, specialist adaptations address particular user needs."
+          "caption": "Kettle tippers reduce the strength and movement needed to pour hot water safely. Unlike universal products, specialist adaptations address particular user needs.",
+          "imageOnReveal": true
         }
       ],
       "check": [
@@ -250,6 +292,7 @@
       "items": [
         {
           "term": "Social issues",
+          "ask": "What problems in society do you think design could help with?",
           "tags": [],
           "text": "Issues affecting people: environment, health, poverty, discrimination, unemployment.",
           "image": {
@@ -257,10 +300,12 @@
             "alt": "Social issues",
             "credit": "DT"
           },
-          "caption": "Designers can address problems such as pollution, poverty and poor health through innovative products and systems that improve behaviour, accessibility or living conditions."
+          "caption": "Designers can address problems such as pollution, poverty and poor health through innovative products and systems that improve behaviour, accessibility or living conditions.",
+          "imageOnReveal": true
         },
         {
           "term": "Child-friendly litter bins",
+          "ask": "How could a litter bin get children into good habits?",
           "tags": [],
           "text": "Innovative bin designs encourage children to adopt good habits.",
           "image": {
@@ -268,10 +313,12 @@
             "alt": "Child-friendly litter bins",
             "credit": "DT"
           },
-          "caption": "Bright colours and playful animal shapes make disposing of litter more appealing to children. This shows how aesthetics can influence behaviour and encourage positive habits."
+          "caption": "Bright colours and playful animal shapes make disposing of litter more appealing to children. This shows how aesthetics can influence behaviour and encourage positive habits.",
+          "imageOnReveal": true
         },
         {
           "term": "Black box devices",
+          "ask": "How could a car insurer find out how a young driver really drives?",
           "tags": [],
           "text": "Car insurance companies use them to monitor young drivers.",
           "image": {
@@ -279,10 +326,12 @@
             "alt": "Black box devices",
             "credit": "DT"
           },
-          "caption": "Telematics devices monitor driving behaviour, including speed and braking. Feedback and insurance incentives can encourage safer driving, particularly among young or inexperienced drivers."
+          "caption": "Telematics devices monitor driving behaviour, including speed and braking. Feedback and insurance incentives can encourage safer driving, particularly among young or inexperienced drivers.",
+          "imageOnReveal": true
         },
         {
           "term": "Police scanning devices",
+          "ask": "What could a handheld scanner help the police to find?",
           "tags": [],
           "text": "Detect illegal drugs and explosives.",
           "image": {
@@ -294,6 +343,7 @@
         },
         {
           "term": "Local context",
+          "ask": "Why might a clever solution fail in a remote village?",
           "tags": [],
           "text": "Solutions must not rely on resources or maintenance that aren't available locally.",
           "image": {
@@ -324,6 +374,7 @@
       "items": [
         {
           "term": "UN Article 25 (1948)",
+          "ask": "What did the UN declare in 1948 that everyone has a right to?",
           "tags": [],
           "text": "Everyone's right to food, clothing, housing and medical care for health and well-being.",
           "image": {
@@ -335,6 +386,7 @@
         },
         {
           "term": "Wind-up radio",
+          "ask": "How could people listen to the radio where batteries are hard to get?",
           "tags": [],
           "text": "A radio needing no batteries, by Trevor Baylis, for parts of Africa short of them.",
           "image": {
@@ -346,6 +398,7 @@
         },
         {
           "term": "GravityLight",
+          "ask": "What could replace dangerous, costly kerosene lamps in people's homes?",
           "tags": [],
           "text": "LED lighting replacing dangerous, costly kerosene lamps in Kenya.",
           "image": {
@@ -357,6 +410,7 @@
         },
         {
           "term": "Practical Action",
+          "ask": "How could a charity use technology to help people out of poverty?",
           "tags": [],
           "text": "An NGO giving appropriate, technological 'open design' answers to poverty.",
           "image": {
@@ -368,6 +422,7 @@
         },
         {
           "term": "da Vinci system",
+          "ask": "How could robots help in an operating theatre?",
           "tags": [],
           "text": "A robotic surgery system by Intuitive Surgical, for advanced, safe surgery.",
           "image": {
@@ -379,6 +434,7 @@
         },
         {
           "term": "Touch Bionics",
+          "ask": "How could technology make a better artificial hand or limb?",
           "tags": [],
           "text": "Improved prostheses using advanced composites, motors and control systems.",
           "image": {
@@ -390,6 +446,7 @@
         },
         {
           "term": "3D printed implants",
+          "ask": "How could a hospital repair a damaged skull?",
           "tags": [],
           "text": "The NHS uses 3D printed polymer implants to repair skull injuries.",
           "image": {
@@ -397,7 +454,8 @@
             "alt": "3D printed implants",
             "credit": "DT"
           },
-          "caption": "Medical imaging and CAD enable patient-specific implants to match individual anatomy. Additive manufacturing can produce complex shapes that are difficult to manufacture conventionally."
+          "caption": "Medical imaging and CAD enable patient-specific implants to match individual anatomy. Additive manufacturing can produce complex shapes that are difficult to manufacture conventionally.",
+          "imageOnReveal": true
         }
       ],
       "check": [
@@ -420,6 +478,7 @@
       "items": [
         {
           "term": "Temporary communities",
+          "ask": "What forces huge numbers of people to leave their homes?",
           "tags": [],
           "text": "Conflict, poverty and victimisation leave huge communities of destitute migrants.",
           "image": {
@@ -431,6 +490,7 @@
         },
         {
           "term": "Humanitarian organisations and NGOs",
+          "ask": "Who provides the basics, like water, for people in a temporary camp?",
           "tags": [],
           "text": "Provide basic infrastructure for these temporary communities.",
           "image": {
@@ -442,6 +502,7 @@
         },
         {
           "term": "Solar cookers",
+          "ask": "How could families in a camp cook food without fuel?",
           "tags": [],
           "text": "From the UNHCR, for preparing food.",
           "image": {
@@ -449,10 +510,12 @@
             "alt": "Solar cookers",
             "credit": "DT"
           },
-          "caption": "Solar cookers concentrate or capture sunlight to heat food without conventional fuels. They can reduce fuel costs and firewood collection where sunlight is sufficient."
+          "caption": "Solar cookers concentrate or capture sunlight to heat food without conventional fuels. They can reduce fuel costs and firewood collection where sunlight is sufficient.",
+          "imageOnReveal": true
         },
         {
           "term": "Water distillation",
+          "ask": "How could people in a camp get clean water?",
           "tags": [],
           "text": "Technology from SunDwater, for clean water.",
           "image": {
@@ -460,10 +523,12 @@
             "alt": "Water distillation",
             "credit": "DT"
           },
-          "caption": "Solar distillation uses heat to evaporate water before condensing the vapour into freshwater. It demonstrates how renewable energy can support access to clean water."
+          "caption": "Solar distillation uses heat to evaporate water before condensing the vapour into freshwater. It demonstrates how renewable energy can support access to clean water.",
+          "imageOnReveal": true
         },
         {
           "term": "Adiff clothing",
+          "ask": "How could a piece of clothing help someone with nowhere to sleep?",
           "tags": [],
           "text": "Multi-purpose clothing by Angela Luna that becomes a shelter.",
           "image": {
@@ -471,10 +536,12 @@
             "alt": "Adiff clothing",
             "credit": "DT"
           },
-          "caption": "Angela Luna's ADIFF designs transform clothing into temporary shelters. This multifunctional approach combines portability, protection and adaptability to address the needs of displaced people."
+          "caption": "Angela Luna's ADIFF designs transform clothing into temporary shelters. This multifunctional approach combines portability, protection and adaptability to address the needs of displaced people.",
+          "imageOnReveal": true
         },
         {
           "term": "Hospitainers and maternitainers",
+          "ask": "Where could people in a camp get medical care, such as help having a baby?",
           "tags": [],
           "text": "Adapted shipping containers for medical care, from the UNFPA.",
           "image": {
@@ -482,7 +549,8 @@
             "alt": "Hospitainers and maternitainers",
             "credit": "DT"
           },
-          "caption": "Modified shipping containers provide transportable medical facilities. Their modular construction enables healthcare services to be deployed in areas lacking permanent infrastructure."
+          "caption": "Modified shipping containers provide transportable medical facilities. Their modular construction enables healthcare services to be deployed in areas lacking permanent infrastructure.",
+          "imageOnReveal": true
         }
       ],
       "check": [
@@ -505,6 +573,7 @@
       "items": [
         {
           "term": "Temporary accommodation",
+          "ask": "What is one of the first things people need in a refugee crisis?",
           "tags": [],
           "text": "One of the key needs in a refugee crisis.",
           "image": {
@@ -512,10 +581,12 @@
             "alt": "Temporary accommodation",
             "credit": "DT"
           },
-          "caption": "Emergency shelters must balance safety, comfort, privacy and affordability. Lightweight, transportable designs help humanitarian organisations respond quickly to housing shortages."
+          "caption": "Emergency shelters must balance safety, comfort, privacy and affordability. Lightweight, transportable designs help humanitarian organisations respond quickly to housing shortages.",
+          "imageOnReveal": true
         },
         {
           "term": "Better Shelter",
+          "ask": "What could a well-known furniture company design for families who have lost their homes?",
           "tags": [],
           "text": "The Ikea Foundation's flat-pack shelter, made to meet that need.",
           "image": {
@@ -523,10 +594,12 @@
             "alt": "Better Shelter",
             "credit": "DT"
           },
-          "caption": "Supported by the IKEA Foundation, Better Shelter applies flat-pack and modular design principles to emergency accommodation. Prefabricated components make transportation and assembly more efficient."
+          "caption": "Supported by the IKEA Foundation, Better Shelter applies flat-pack and modular design principles to emergency accommodation. Prefabricated components make transportation and assembly more efficient.",
+          "imageOnReveal": true
         },
         {
           "term": "No tools",
+          "ask": "What tools do you think you'd need to put up an emergency shelter?",
           "tags": [],
           "text": "It can be put up without any tools.",
           "image": {
@@ -538,6 +611,7 @@
         },
         {
           "term": "Sleeps five",
+          "ask": "How many people do you think one emergency shelter should sleep?",
           "tags": [],
           "text": "Each shelter sleeps five people.",
           "image": {
@@ -545,10 +619,12 @@
             "alt": "Sleeps five",
             "credit": "DT"
           },
-          "caption": "Better Shelter provides approximately 17.5 m² of internal space for five people. Its design balances essential living space with material efficiency and transportability."
+          "caption": "Better Shelter provides approximately 17.5 m² of internal space for five people. Its design balances essential living space with material efficiency and transportability.",
+          "imageOnReveal": true
         },
         {
           "term": "Well insulated",
+          "ask": "How would a shelter keep a family warm when it's cold outside?",
           "tags": [],
           "text": "The shelter is well insulated.",
           "image": {
@@ -560,9 +636,11 @@
         },
         {
           "term": "Solar power",
+          "ask": "Where could a shelter get electricity in a camp with no mains supply?",
           "tags": [],
           "text": "A solar-powered electrical system.",
           "caption": "An integrated solar-powered lighting system provides illumination without relying on mains electricity. This improves usability and independence in locations with limited infrastructure.",
+          "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/solar-power.webp",
             "alt": "Solar power",
@@ -590,6 +668,7 @@
       "items": [
         {
           "term": "Fairtrade",
+          "ask": "What do you think the Fairtrade movement is for?",
           "tags": [],
           "text": "A movement for the ethical treatment of farmers and workers in developing countries.",
           "image": {
@@ -601,6 +680,7 @@
         },
         {
           "term": "Fair prices",
+          "ask": "How does Fairtrade help make sure farmers are paid properly?",
           "tags": [],
           "text": "The Fairtrade organisation negotiates fair prices with buyers.",
           "image": {
@@ -612,6 +692,7 @@
         },
         {
           "term": "Fairtrade mark",
+          "ask": "How can a shopper tell that a product meets Fairtrade standards?",
           "tags": [],
           "text": "A certification label shown on qualifying products.",
           "image": {
@@ -619,10 +700,12 @@
             "alt": "Fairtrade mark",
             "credit": "DT"
           },
-          "caption": "The FAIRTRADE Mark identifies products meeting recognised certification standards. It allows consumers to make informed choices and helps brands communicate ethical sourcing."
+          "caption": "The FAIRTRADE Mark identifies products meeting recognised certification standards. It allows consumers to make informed choices and helps brands communicate ethical sourcing.",
+          "imageOnReveal": true
         },
         {
           "term": "Traidcraft",
+          "ask": "Which UK company was one of the first to sell fair trade products?",
           "tags": [],
           "text": "A UK fair trade pioneer that sold ethically sourced products until administration in January 2023.",
           "image": {
@@ -630,10 +713,12 @@
             "alt": "Traidcraft",
             "credit": "DT"
           },
-          "caption": "Traidcraft pioneered fair trade in the UK by creating markets for ethically sourced products. It demonstrated how responsible purchasing can support producers and communities."
+          "caption": "Traidcraft pioneered fair trade in the UK by creating markets for ethically sourced products. It demonstrated how responsible purchasing can support producers and communities.",
+          "imageOnReveal": true
         },
         {
           "term": "Fairtrade status",
+          "ask": "Why would a school or council want to be known for supporting Fairtrade?",
           "tags": [],
           "text": "Schools and councils seek it to promote sustainable development, producer benefits, active citizenship and demand.",
           "image": {
@@ -645,6 +730,7 @@
         },
         {
           "term": "Pushpanjali",
+          "ask": "How can a Fairtrade organisation help craftspeople in India?",
           "tags": [],
           "text": "A Fairtrade organisation in India giving craftspeople sustainable work and social benefits.",
           "image": {
@@ -656,6 +742,7 @@
         },
         {
           "term": "Effect on design",
+          "ask": "Why might a designer care that shoppers recognise the Fairtrade scheme?",
           "tags": [],
           "text": "Shoppers recognise the scheme, so it affects material choice, branding and demand.",
           "image": {

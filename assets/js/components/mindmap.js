@@ -10,9 +10,12 @@
 //   (away from the centre), and the other branches move to the far side.
 //
 // Recall mode (blank map): items show "?" until tapped; "Reveal branch" and "Reset".
+// Overview mode (Lesson Big picture): a plain diagram of the centre and branches (label + item
+// count). Nothing is a button and nothing opens; `side` (the "What we'll look at" panel) sits
+// where the description panel would be.
 
 import { h, fill, hint, materialDots, materialTag } from "../dom.js";
-import { editState, imageSlot, figure as imgFigure } from "../editslot.js";
+import { editState, imageSlot, figure as imgFigure, realText } from "../editslot.js";
 
 const px = (n) => `${Math.round(n)}px`;
 const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
@@ -54,7 +57,7 @@ function stack(heights, mid, room, most, least = GAP) {
 // Each branch keeps its own colour (components.css: [data-br]); 10 colours, then they repeat.
 const BR = (i) => String(i % 10);
 
-export function mindMap(topic, { chunkHref, recall = false } = {}) {
+export function mindMap(topic, { chunkHref, recall = false, overview = false, side = null } = {}) {
   let open = null, sel = null;
   const chunks = topic.chunks;
   const shown = new Set();             // recall: "branch-item" keys revealed
@@ -66,7 +69,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
   const lines = h("div", { class: "mm-lines", "aria-hidden": "true" });
   const canvas = h("div", { class: "mm-canvas" });
   const map = h("div", { class: "mm-map card", role: "group", "aria-label": `${recall ? "Blank mind map" : "Mind map"}: ${topic.title}` }, lines, canvas);
-  const detail = h("div", { class: "mm-detail", "aria-live": "polite" });
+  const detail = side || h("div", { class: "mm-detail", "aria-live": "polite" });
   const list = h("div", { class: "mm-list" });
   const status = h("span", { class: "mm-status", "aria-live": "polite" });
   const revealBtn = h("button", { type: "button", class: "btn-line", onclick: () => {
@@ -116,6 +119,15 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
       }
       return [el, { el, x: 0, y: 0, w, h: Math.ceil(el.getBoundingClientRect().height) }];
     }));
+  }
+
+  // The height a panel's content needs (not the panel's own box, which follows the map).
+  function contentHeight(el) {
+    const kids = [...el.children];
+    if (!kids.length) return 0;
+    const cs = getComputedStyle(el);
+    return kids[kids.length - 1].getBoundingClientRect().bottom - kids[0].getBoundingClientRect().top +
+      parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom) + parseFloat(cs.borderTopWidth) + parseFloat(cs.borderBottomWidth);
   }
 
   // Closed: branches on an ellipse round the centre, pushed apart where they touch, kept inside.
@@ -206,6 +218,10 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
       const centre = boxes.get(canvas.querySelector(".mm-centre"));
       const bs = [...canvas.querySelectorAll(".mm-branch")].map((el) => boxes.get(el));
       for (H = Math.max(base, centre.h + 2 * pad); H < base * 3; H *= 1.08) if (ring(W, H, pad, centre, bs)) break;
+      // Big picture: the card grows (within the room) so the "What we'll look at" panel beside it
+      // shows all of its content without scrolling; the map stays centred in it.
+      const need = overview && beside ? Math.min(room, contentHeight(detail)) : 0;
+      if (need > H) { boxes.forEach((b) => { b.y += (need - H) / 2; }); H = need; }
     } else {
       // Open: try item-column widths (sl), branch widths (sb), side by side or compact, and keep
       // the shortest layout that fits the width. Branch labels are only narrowed as a last resort.
@@ -255,6 +271,11 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
     canvas.append(h("span", { class: "mm-node mm-centre", "data-line": "c" }, topic.title));
 
     chunks.forEach((c, i) => {
+      if (overview) {
+        canvas.append(h("span", { class: "mm-node mm-branch", "data-line": `b${i}`, "data-br": BR(i) },
+          h("span", { class: "mm-label" }, c.label), h("span", { class: "mm-count" }, countText(i))));
+        return;
+      }
       const isOpen = open === i;
       canvas.append(h("button", {
         type: "button", class: "mm-node mm-branch" + (isOpen ? " open" : ""), "data-key": `b${i}`, "data-line": `b${i}`, "data-br": BR(i),
@@ -323,7 +344,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
         it.steps && h("ol", { class: "mm-steps" }, it.steps.map((s) => h("li", {}, s))),
         h("a", { class: "mm-read", href: chunkHref(c) }, "Read this chunk ↓")),
       (it.image || editState.on) && h("div", { class: "mm-detail-img" },
-        imgFigure(it.image, it.term, !recall && it.caption),
+        imgFigure(it.image, it.term, !recall && realText(it.caption)),
         imageSlot({ kind: "item", chunk: c.id, term: it.term }, !!it.image))
     ];
   }
@@ -331,6 +352,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
   // The description panel: beside the map on wide screens, under it on narrower ones (the
   // empty state and the recall panel only show beside the map; see components.css).
   function showDetail() {
+    if (overview) return;
     const c = open === null ? null : chunks[open];
     const it = c && sel !== null ? c.items[sel] : null;
     detail.className = "mm-detail card" + (it ? " is-item" : c ? " is-branch" : " is-empty");
@@ -347,6 +369,11 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
   // Narrow screens: accordion of branches; in teach mode each item opens in place,
   // in recall mode each item is a "?" until tapped.
   function drawList() {
+    if (overview) {
+      return fill(list, h("ul", { class: "mm-static-list" }, chunks.map((c, i) =>
+        h("li", { class: "mm-acc", "data-br": BR(i) },
+          h("span", { class: "mm-acc-label" }, c.label, h("span", { class: "mm-count" }, countText(i)))))));
+    }
     fill(list, ...chunks.map((c, i) => {
       const on = accOpen.has(i);
       const head = h("button", { type: "button", class: "mm-acc-head", "data-key": `a${i}`, "aria-expanded": String(on),
@@ -373,7 +400,7 @@ export function mindMap(topic, { chunkHref, recall = false } = {}) {
   }
 
   // Recall tools sit above the map on narrow screens, and at the top of the panel column beside it.
-  const root = h("div", { class: "mm" + (recall ? " recall" : "") },
+  const root = h("div", { class: "mm" + (recall ? " recall" : "") + (overview ? " mm-overview" : "") },
     h("div", { class: "mm-body" },
       recall && h("div", { class: "mm-tools" },
         h("div", { class: "comp-head" }, h("h2", {}, "Rebuild the map"), hint("brain", "Say it, then tap ?")),

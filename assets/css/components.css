@@ -196,7 +196,29 @@ html.teach .teach-only { display: block; }
 @container (max-width: 619px) {
   .mm-map, .mm-detail { display: none !important; }
   .mm-list { display: flex; }
+  /* Big picture on phones: the branch list, then the "What we'll look at" card under it. */
+  .mm.mm-overview .mm-frame { display: flex !important; }
+  .mm.mm-overview .mm-list { order: -1; }
 }
+
+/* Big picture (Lesson): a static overview. Branches are plain labels (no hover, focus or
+   click); the panel beside the map is "What we'll look at": the big question and the lenses. */
+.mm.mm-overview .mm-branch:hover { box-shadow: none; }
+.mm-frame { display: flex; flex-direction: column; gap: 14px; }
+.mm-frame .label { color: var(--teal-dark); }
+.frame-q { color: var(--ink); font-size: 1.375rem; font-weight: 800; line-height: 1.25; letter-spacing: -.01em; }
+.frame-lenses { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.frame-lenses li { display: flex; align-items: center; gap: 12px; color: var(--ink); font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
+.frame-lenses .ico { flex: none; box-sizing: content-box; width: 20px; height: 20px; padding: 7px; border-radius: 50%; background: var(--teal-soft); color: var(--teal-dark); }
+/* Teaching mode: the panel keeps its normal text size so it fits beside the map at 1366x768. */
+html.teach .mm-frame { gap: 12px; }
+html.teach .frame-q { font-size: 22px; }
+html.teach .frame-lenses { gap: 4px; }
+html.teach .frame-lenses li { font-size: 18px; }
+html.teach .frame-lenses .ico { width: 16px; height: 16px; padding: 5px; }
+@container (min-width: 800px) { html.teach .mm-frame { padding-bottom: 72px; } }
+.mm-static-list { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.mm-static-list .mm-acc { padding: 10px 16px; color: var(--bc); font-size: 1.0625rem; font-weight: 700; }
 
 /* ---------- Learn ---------- */
 .items { overflow: hidden; container-type: inline-size; }
@@ -249,6 +271,34 @@ html.teach .teach-only { display: block; }
 .step-body { display: flex; align-items: center; gap: 24px; min-height: 110px; }
 .step-num { flex: none; min-width: .7em; color: var(--teal); font-size: 5.5rem; font-weight: 800; line-height: .8; letter-spacing: -.04em; }
 .step-text-big { max-width: 560px; color: var(--ink); font-size: 1.5rem; font-weight: 600; line-height: 1.4; }
+
+/* Learn item cards: question first (the item's ask), then the image and a "Tap to reveal" area
+   that turns into the term, text and tag. Reveal-card style; the reveal area sits at the foot.
+   Card 600px+ with an image: the question across the top, the image (320px) on the left and the
+   reveal area beside it, filling the image's height. */
+.litems { display: flex; flex-direction: column; gap: 14px; container-type: inline-size; }
+.litem { cursor: pointer; }
+.litem.is-open { cursor: default; border-color: var(--teal); }
+.litem:hover:not(.is-open) { border-color: var(--teal); }
+.litem-media { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.litem-media:empty { display: none; }
+.litem-media .img-slot { width: 100%; max-width: 320px; }
+.litem-reveal { display: flex; flex-direction: column; margin-top: auto; }
+.litem-btn { width: 100%; min-height: var(--tap); background: transparent; font-family: inherit; cursor: pointer; }
+.litem-btn:hover { border-color: var(--teal); color: var(--teal-dark); }
+.litem-answer { display: flex; flex-direction: column; gap: 6px; margin-top: 0; }
+.litem-answer:focus { outline: none; }
+.litem-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+.litem-term { color: var(--ink); font-size: 1.1875rem; font-weight: 800; }
+.litem-caption { margin: 4px 0 0; color: var(--muted); }
+@container (min-width: 600px) {
+  .litem.has-media { display: grid; grid-template-columns: 320px minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 14px 20px; align-items: stretch; }
+  .litem.has-media .litem-ask { grid-column: 1 / -1; }
+  .litem.has-media .litem-media { grid-column: 1; grid-row: 2; }
+  .litem.has-media .litem-reveal { grid-column: 2; grid-row: 2; margin-top: 0; }
+  .litem.has-media .litem-btn, .litem.has-media .litem-answer { flex: 1 0 auto; }
+  .litem.has-media .litem-btn { display: flex; align-items: center; justify-content: center; }
+}
 
 .check { display: flex; flex-direction: column; gap: 16px; padding: 22px 24px; border-radius: var(--radius); background: var(--teal-soft); }
 .check .label { color: var(--teal-dark); font-size: .875rem; }

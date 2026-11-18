@@ -12,13 +12,18 @@ export function imageSlot(ref, hasImage) {
     icon("image"), hasImage ? "Edit image" : "Add image");
 }
 
+// Text that says something: a placeholder with no letters or numbers (such as "--" typed into a
+// required box) counts as empty and is never shown.
+export const realText = (t) => (typeof t === "string" && /[\p{L}\p{N}]/u.test(t) ? t : "");
+
 // A saved image with the item's caption (if any) and the credit line underneath. The caption
-// only ever shows here, under an image that exists.
+// only ever shows here, under an image that exists. Nothing shows under it without real text.
 export function figure(img, fallbackAlt, caption) {
   if (!img) return null;
+  const cap = realText(caption), credit = realText(img.credit);
   return h("figure", { class: "img-slot" },
     h("img", { src: img.file, alt: img.alt || fallbackAlt || "", loading: "lazy" }),
-    (caption || img.credit) && h("figcaption", {},
-      caption && h("span", { class: "img-caption" }, caption),
-      img.credit && h("span", { class: "img-credit-line" }, img.credit)));
+    (cap || credit) && h("figcaption", {},
+      cap && h("span", { class: "img-caption" }, cap),
+      credit && h("span", { class: "img-credit-line" }, credit)));
 }

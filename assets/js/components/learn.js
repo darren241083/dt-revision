@@ -1,32 +1,91 @@
-// Learn: one chunk at a time. Hotspot diagram (if any), item rows with material tags,
-// a step-through for each process item, then a "Before you move on" check.
+// Learn: one chunk at a time. The previous chunk's quick check (if any), the hotspot diagram (if
+// any), one question-first card per item, and a step-through for each process item.
+//
+// Item cards: the item's `ask` is the heading, then its image (unless `imageOnReveal`) and a
+// "Tap to reveal" area. Revealing shows the term in bold, the text and the material tag (and the
+// image and caption when they were held back). Reveals stay open for the rest of the visit (memory
+// only); teaching mode's presenter Next / Back reveal and hide them in order (learnStep).
 
 import { h, fill, icon, hint, materialTag, shuffle } from "../dom.js";
 import { revealCard } from "./reveal.js";
-import { imageSlot, figure as imgFigure } from "../editslot.js";
+import { imageSlot, figure as imgFigure, realText } from "../editslot.js";
 
-export function learnChunk(chunk) {
-  const plain = chunk.items.filter((it) => !it.steps);
+const shown = new Set();                 // "<chunk id>/<item index>" revealed this visit
+let mounted = [];                        // the item cards on screen, in order
+
+export function learnChunk(chunk, prevChunk) {
+  const plain = chunk.items.map((it, i) => ({ it, i })).filter(({ it }) => !it.steps);
   const processes = chunk.items.filter((it) => it.steps);
+  mounted = plain.map(({ it, i }) => itemCard(it, chunk, `${chunk.id}/${i}`));
   return [
+    quickCheck(prevChunk),
     chunk.diagram && hotspot(chunk.diagram, chunk),
-    plain.length > 0 && h("div", { class: "card items" }, plain.map((it) => itemRow(it, chunk))),
-    processes.map((it) => stepThrough(it, chunk)),
-    chunk.check?.length > 0 && h("section", { class: "check", "aria-labelledby": `check-${chunk.id}` },
-      h("h2", { class: "label", id: `check-${chunk.id}` }, "Before you move on"),
-      chunk.check.map((c) => revealCard(c, { size: "on-teal" })))
+    mounted.length > 0 && h("div", { class: "litems" }, mounted.map((m) => m.el)),
+    processes.map((it) => stepThrough(it, chunk))
   ];
 }
 
-function itemRow(it, chunk) {
-  const slot = imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, !!it.image);
-  return h("div", { class: "item" },
-    h("span", { class: "item-term" }, it.term),
-    h("span", { class: "item-text" }, it.text),
-    h("span", { class: "item-tag" }, materialTag(it.tags)),
-    // The caption is a sibling of the figure here, so wide cards can put it under the description.
-    (it.image || slot) && h("div", { class: "item-img" }, imgFigure(it.image, it.term),
-      it.image && it.caption && h("p", { class: "img-caption" }, it.caption), slot));
+// A chunk's two checks, shown at the start of the next chunk (or of Apply, after the last one),
+// so the answers aren't on screen beside them.
+export function quickCheck(chunk) {
+  if (!chunk?.check?.length) return null;
+  const id = `check-${chunk.id}`;
+  return h("section", { class: "check", "aria-labelledby": id },
+    h("h2", { class: "label", id }, `Quick check · ${chunk.label}`),
+    chunk.check.map((c) => revealCard(c, { size: "on-teal" })));
+}
+
+// Presenter step in the current chunk: dir 1 reveals the next hidden item, -1 hides the last one
+// shown. Returns false when there is nothing to do (then the presenter moves on). `dry` only asks.
+export function learnStep(dir, dry = false) {
+  const live = mounted.filter((m) => m.el.isConnected);
+  const target = dir > 0 ? live.find((m) => !m.isOpen()) : [...live].reverse().find((m) => m.isOpen());
+  if (!target) return false;
+  if (!dry) {
+    target.set(dir > 0);
+    target.el.scrollIntoView({ block: "nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }
+  return true;
+}
+
+function itemCard(it, chunk, key) {
+  const ansId = `ans-${key.replace(/\W/g, "-")}`;
+  const slot = () => imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, !!it.image);
+  const caption = realText(it.caption);
+  const media = h("div", { class: "litem-media" });
+  const btn = h("button", { type: "button", class: "reveal-ph litem-btn", "aria-expanded": "false", "aria-controls": ansId,
+    onclick: () => set(true) }, "Tap to reveal");
+  const answer = h("div", { class: "reveal-answer litem-answer", id: ansId, tabindex: "-1", hidden: true });
+  const el = h("div", { class: "reveal litem" },
+    h("h2", { class: "reveal-q litem-ask" }, it.ask || it.term),
+    media, h("div", { class: "litem-reveal" }, btn, answer));
+  // The whole card is tappable (except the teacher's image button).
+  el.addEventListener("click", (e) => { if (!e.target.closest("button, a")) set(true); });
+
+  const isOpen = () => shown.has(key);
+  function draw() {
+    const open = isOpen();
+    const showImg = it.image && (!it.imageOnReveal || open);
+    fill(media, showImg && imgFigure(it.image, it.term), slot());
+    el.classList.toggle("has-media", media.childElementCount > 0);
+    el.classList.toggle("is-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.hidden = open;
+    answer.hidden = !open;
+    fill(answer, open && [
+      h("span", { class: "litem-head" }, h("b", { class: "litem-term" }, it.term), materialTag(it.tags)),
+      h("span", { class: "litem-text" }, it.text),
+      it.image && caption && h("span", { class: "img-caption litem-caption" }, caption)]);
+  }
+  function set(open) {
+    if (open === isOpen()) return;
+    const hadFocus = el.contains(document.activeElement);
+    if (open) shown.add(key); else shown.delete(key);
+    draw();
+    if (hadFocus) (open ? answer : btn).focus({ preventScroll: true });
+  }
+  draw();
+  return { el, isOpen, set };
 }
 
 /* ---------- Step-through (processes) ---------- */
@@ -56,7 +115,7 @@ function stepThrough(it, chunk) {
       h("h2", {}, it.term, materialTag(it.tags)),
       pips),
     it.text && h("p", { class: "steps-intro" }, it.text),
-    imgFigure(it.image, it.term, it.caption),
+    imgFigure(it.image, it.term, realText(it.caption)),
     imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, !!it.image),
     h("div", { class: "step-body" }, num, text),
     status,
@@ -174,5 +233,5 @@ function hotspot(d, chunk) {
         h("div", { class: "seg", role: "group", "aria-label": "Diagram mode" }, modeBtns),
         imageSlot({ kind: "diagram", chunk: chunk.id }, !!d.image))),
     h("div", { class: "hs-body" }, figure, panel),
-    d.credit && h("p", { class: "img-credit" }, d.credit));
+    realText(d.credit) && h("p", { class: "img-credit" }, d.credit));
 }

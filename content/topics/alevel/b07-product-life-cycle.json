@@ -59,6 +59,35 @@
       "Apple iPhone"
     ]
   },
+  "bigPicture": {
+    "question": "Why do products come and go, and what keeps them selling?",
+    "lenses": [
+      {
+        "icon": "chart",
+        "text": "Sales over time"
+      },
+      {
+        "icon": "refresh",
+        "text": "Keeping it selling"
+      },
+      {
+        "icon": "people",
+        "text": "What customers want"
+      },
+      {
+        "icon": "idea",
+        "text": "What new technology allows"
+      },
+      {
+        "icon": "clock",
+        "text": "Built not to last"
+      },
+      {
+        "icon": "search",
+        "text": "Research and change"
+      }
+    ]
+  },
   "chunks": [
     {
       "id": "plc",
@@ -69,16 +98,19 @@
       "items": [
         {
           "term": "Product life cycle (PLC)",
+          "ask": "How could you track a product's life from launch to the end?",
           "tags": [],
           "text": "Charts a product's sales from introduction to withdrawal; plan its decline and replacement carefully.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/product-life-cycle-plc.webp",
             "alt": "Product life cycle (PLC)",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Introduction",
+          "ask": "What happens to sales when a product is first launched?",
           "tags": [],
           "text": "Sales start low, then take off; launched with publicity after market research.",
           "image": {
@@ -89,16 +121,19 @@
         },
         {
           "term": "Evolution and growth",
+          "ask": "What makes sales grow, and where do the new customers come from?",
           "tags": [],
           "text": "Advertising grows sales as consumers move to it from older products.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/evolution-and-growth.webp",
             "alt": "Evolution and growth",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Maturity",
+          "ask": "What happens to sales once a product is well known?",
           "tags": [],
           "text": "Sales peak; the aim is to keep the product here as long as possible.",
           "image": {
@@ -109,33 +144,39 @@
         },
         {
           "term": "Decline",
+          "ask": "Why do sales of a product eventually fall?",
           "tags": [],
           "text": "Sales fall, as most people who want one have bought it; then it's withdrawn.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/decline.webp",
             "alt": "Decline",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Replacement",
+          "ask": "What can a company do when an old product stops selling well?",
           "tags": [],
           "text": "An updated, improved version is released to keep sales going.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/replacement.webp",
             "alt": "Replacement",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Life-cycle assessment",
+          "ask": "How is a life-cycle assessment different from the product life cycle?",
           "tags": [],
           "text": "Not the PLC: it follows a product's environmental impact, not its sales.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/life-cycle-assessment.webp",
             "alt": "Life-cycle assessment",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         }
       ],
       "diagram": {
@@ -194,36 +235,43 @@
       "items": [
         {
           "term": "Extension strategy",
+          "ask": "How can a company keep an older product selling?",
           "tags": [],
           "text": "Updating or redesigning a product to maintain its sales.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/extension-strategy.webp",
             "alt": "Extension strategy",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Smartphones",
+          "ask": "Which phone ranges keep selling year after year, and how?",
           "tags": [],
           "text": "The Apple iPhone and Samsung Galaxy use extension strategies to keep selling.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/smartphones.webp",
             "alt": "Smartphones",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Toyota Corolla",
+          "ask": "How many times do you think the Toyota Corolla has been redesigned in 50 years?",
           "tags": [],
           "text": "Redesigned 11 times in 50 years to keep it selling.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/toyota-corolla.webp",
             "alt": "Toyota Corolla",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Ways to refresh",
+          "ask": "What could a company change to give an old product a new lease of life?",
           "tags": [],
           "text": "New materials, updated electronics, new styling, better sustainability or user experience.",
           "image": {
@@ -253,6 +301,7 @@
       "items": [
         {
           "term": "Demand pull",
+          "ask": "What happens when lots of customers want a feature?",
           "tags": [],
           "text": "Consumers' demand for desirable features, which product designers often respond to.",
           "image": {
@@ -263,23 +312,27 @@
         },
         {
           "term": "Battery life",
+          "ask": "What do smartphone users wish their phones could do for longer?",
           "tags": [],
           "text": "Smartphone users want batteries that last longer, so designers improve them.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/battery-life.webp",
             "alt": "Battery life",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Larger memory",
+          "ask": "What do people run out of on their phones, and how do designers respond?",
           "tags": [],
           "text": "Users want phones that store more, so memory gets larger.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/larger-memory.webp",
             "alt": "Larger memory",
             "credit": "DT"
-          }
+          },
+          "imageOnReveal": true
         }
       ],
       "check": [
@@ -302,6 +355,7 @@
       "items": [
         {
           "term": "Technology push",
+          "ask": "When a new material or technology is invented, what do designers then do?",
           "tags": [],
           "text": "New technology or materials are developed, and designers find ways to use them in new or improved products.",
           "image": {
@@ -312,6 +366,7 @@
         },
         {
           "term": "R&D costs",
+          "ask": "Why might a company be keen to turn its research into products?",
           "tags": [],
           "text": "The cost of research and development drives companies to push new ideas.",
           "image": {
@@ -322,6 +377,7 @@
         },
         {
           "term": "May not sell",
+          "ask": "What's the risk of launching a product nobody asked for?",
           "tags": [],
           "text": "Not driven by consumer demand, so it may not sell: consumers have to be sold its merits.",
           "image": {
@@ -332,6 +388,7 @@
         },
         {
           "term": "Google Glass",
+          "ask": "Why might a head-mounted computer fail to sell?",
           "tags": [],
           "text": "A head-mounted computer that failed: not worth the cost, with safety and privacy worries.",
           "image": {
@@ -361,6 +418,7 @@
       "items": [
         {
           "term": "Planned obsolescence",
+          "ask": "Why do some products seem to need replacing every few years?",
           "tags": [],
           "text": "Designing and making products that need replacing on a regular basis.",
           "image": {
@@ -371,6 +429,7 @@
         },
         {
           "term": "Spare parts",
+          "ask": "What happens when you can't get the part you need to fix a product?",
           "tags": [],
           "text": "Parts stop being available, so the product can't be repaired.",
           "image": {
@@ -381,23 +440,27 @@
         },
         {
           "term": "Software incompatibility",
+          "ask": "Why might a phone that still works need replacing anyway?",
           "tags": [],
           "text": "New software won't work with the product, so it has to be replaced.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/software-incompatibility.webp",
             "alt": "Software incompatibility",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Fairphone",
+          "ask": "How could a phone be designed to last longer?",
           "tags": [],
           "text": "Modular and upgradeable: a more customer-friendly, sustainable approach.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/fairphone.webp",
             "alt": "Fairphone",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         }
       ],
       "check": [
@@ -420,6 +483,7 @@
       "items": [
         {
           "term": "Evolution",
+          "ask": "Why do products like TVs keep changing over the years?",
           "tags": [],
           "text": "Gradual change in products due to new technologies, manufacturing methods and materials.",
           "image": {
@@ -430,6 +494,7 @@
         },
         {
           "term": "R&D departments",
+          "ask": "Whose job is it in a company to come up with new product ideas?",
           "tags": [],
           "text": "Explore and develop new ideas for products.",
           "image": {
@@ -440,6 +505,7 @@
         },
         {
           "term": "Cost of R&D",
+          "ask": "How much do you think a big tech company spends on research in a year?",
           "tags": [],
           "text": "Research and development is very expensive: Apple spent $2.5 billion in 2016.",
           "image": {
@@ -450,6 +516,7 @@
         },
         {
           "term": "Television",
+          "ask": "What new features has research brought to TVs?",
           "tags": [],
           "text": "R&D brought LED, OLED, HDR, 4K (UHD), curved screens and smart features.",
           "image": {
@@ -460,6 +527,7 @@
         },
         {
           "term": "SLR camera",
+          "ask": "How have cameras improved through research?",
           "tags": [],
           "text": "R&D brought more pixels, faster firing, Wi-Fi, water resistance and an articulated screen.",
           "image": {

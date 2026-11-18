@@ -58,6 +58,31 @@
       "Mass production"
     ]
   },
+  "bigPicture": {
+    "question": "Why are some products made one at a time, and others by the million?",
+    "lenses": [
+      {
+        "icon": "search",
+        "text": "What it is"
+      },
+      {
+        "icon": "box",
+        "text": "Typical products"
+      },
+      {
+        "icon": "plus",
+        "text": "Advantages"
+      },
+      {
+        "icon": "minus",
+        "text": "Disadvantages"
+      },
+      {
+        "icon": "check",
+        "text": "When you'd choose it"
+      }
+    ]
+  },
   "chunks": [
     {
       "id": "batch",
@@ -68,6 +93,7 @@
       "items": [
         {
           "term": "Batch production",
+          "ask": "What does it mean to make products 'in batches'?",
           "tags": [],
           "text": "Making a set quantity of consistent products to a quality standard.",
           "image": {
@@ -78,26 +104,31 @@
         },
         {
           "term": "Batch products",
+          "ask": "What kinds of products do you think are made in batches?",
           "tags": [],
           "text": "Clothing, baked goods, newspapers and electrical goods.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/batch-products.webp",
             "alt": "Batch products",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Lower cost per item",
+          "ask": "Why would making 200 cupcakes at once be cheaper per cupcake than making one?",
           "tags": [],
           "text": "Making products in large batches cuts the overall cost of each one.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/lower-cost-per-item.webp",
             "alt": "Lower cost per item",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Templates and moulds",
+          "ask": "How can a factory make sure every product in a batch comes out the same?",
           "tags": [],
           "text": "Keep every product in the batch consistent.",
           "image": {
@@ -108,6 +139,7 @@
         },
         {
           "term": "Quality testing",
+          "ask": "How would a factory know a batch is good enough to sell?",
           "tags": [],
           "text": "Each batch is tested for quality and uniformity.",
           "image": {
@@ -118,6 +150,7 @@
         },
         {
           "term": "Downtime",
+          "ask": "What might hold up production between one batch and the next?",
           "tags": [],
           "text": "Machinery may need recalibrating or stopping between batches."
         }
@@ -142,6 +175,7 @@
       "items": [
         {
           "term": "Prototype",
+          "ask": "What is a prototype, and when is it made?",
           "tags": [],
           "text": "A representation of a product, made before it's produced in any quantity.",
           "image": {
@@ -152,6 +186,7 @@
         },
         {
           "term": "Evaluate and test",
+          "ask": "What can a designer find out from a prototype?",
           "tags": [],
           "text": "Lets the designer evaluate and test the design.",
           "image": {
@@ -162,13 +197,15 @@
         },
         {
           "term": "Confirm methods and costs",
+          "ask": "Apart from testing the design, what else does a prototype help a manufacturer check?",
           "tags": [],
           "text": "Confirms how the product will be made and what it will cost.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/confirm-methods-and-costs.webp",
             "alt": "Confirm methods and costs",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         }
       ],
       "check": [
@@ -191,6 +228,7 @@
       "items": [
         {
           "term": "One-off production",
+          "ask": "What does it mean if a product is 'one-off'?",
           "tags": [],
           "text": "Making a single item, often custom or bespoke.",
           "image": {
@@ -201,6 +239,7 @@
         },
         {
           "term": "Bespoke",
+          "ask": "What is special about a bespoke product?",
           "tags": [],
           "text": "Made specifically to a client's own brief.",
           "image": {
@@ -211,16 +250,19 @@
         },
         {
           "term": "One-off products",
+          "ask": "What products can you think of that are made only once?",
           "tags": [],
           "text": "A hand-made wedding dress, a cruise liner or a piece of jewellery.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/one-off-products.webp",
             "alt": "One-off products",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Quality and skill",
+          "ask": "What would you expect from the people who make a one-off product?",
           "tags": [],
           "text": "Build quality and the level of skilled craftsmanship are high.",
           "image": {
@@ -231,13 +273,15 @@
         },
         {
           "term": "High cost",
+          "ask": "How would making just one of something affect its cost?",
           "tags": [],
           "text": "The cost of making the item is high too.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/high-cost.webp",
             "alt": "High cost",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         }
       ],
       "check": [
@@ -260,6 +304,7 @@
       "items": [
         {
           "term": "Mass production",
+          "ask": "What makes production 'mass' production?",
           "tags": [],
           "text": "Making standardised products in large quantities.",
           "image": {
@@ -270,36 +315,43 @@
         },
         {
           "term": "Mass-produced products",
+          "ask": "What products can you think of that are made in huge numbers?",
           "tags": [],
           "text": "Vehicles, pharmaceuticals, popular soft drinks and mobile phones.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/mass-produced-products.webp",
             "alt": "Mass-produced products",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Automation",
+          "ask": "How can a factory make such huge numbers efficiently?",
           "tags": [],
           "text": "Automated processes and assembly lines make high volumes efficiently.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/automation.webp",
             "alt": "Automation",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Fewer workers",
+          "ask": "What happens to the number of jobs on an automated line?",
           "tags": [],
           "text": "Automated assembly lines need fewer workers.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/fewer-workers.webp",
             "alt": "Fewer workers",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "High set-up costs",
+          "ask": "What's the catch in buying robots and automated machinery?",
           "tags": [],
           "text": "Automated machinery or robots can be expensive to set up.",
           "image": {
@@ -310,6 +362,7 @@
         },
         {
           "term": "Lower cost per unit",
+          "ask": "Why can a mass-produced pen be so cheap?",
           "tags": [],
           "text": "Costs are spread over many products, so each one costs less.",
           "image": {
@@ -339,56 +392,67 @@
       "items": [
         {
           "term": "Continuous production",
+          "ask": "Why would a factory never switch its machines off?",
           "tags": [],
           "text": "A process that runs 24 hours a day, 7 days a week.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/continuous-production.webp",
             "alt": "Continuous production",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Continuously made products",
+          "ask": "What kinds of products are made non-stop, day and night?",
           "tags": [],
           "text": "Many household chemicals, petrochemicals, cement and steel.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/continuously-made-products.webp",
             "alt": "Continuously made products",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Industries",
+          "ask": "Which industries do you think keep their plants running all the time?",
           "tags": [],
           "text": "Oil refineries, blast furnaces, paper pulp, smelting and chemical manufacture.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/industries.webp",
             "alt": "Industries",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Very expensive",
+          "ask": "Why is a plant that never stops such a big investment?",
           "tags": [],
           "text": "Very expensive to set up, to run and to stop.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/very-expensive.webp",
             "alt": "Very expensive",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Small workforce",
+          "ask": "How many people do you think it takes to run a plant that never stops?",
           "tags": [],
           "text": "Highly automated, so only a small workforce is needed.",
           "image": {
             "file": "assets/img/gcse/g20-scales-of-production/small-workforce.webp",
             "alt": "Small workforce",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "One item, large volumes",
+          "ask": "How many different products does a continuous plant usually make?",
           "tags": [],
           "text": "Machinery is set up to make large volumes of a single item.",
           "image": {

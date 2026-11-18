@@ -62,6 +62,31 @@
       "Router"
     ]
   },
+  "bigPicture": {
+    "question": "How do you pick the right tool for timber or a polymer?",
+    "lenses": [
+      {
+        "icon": "tool",
+        "text": "What each tool does"
+      },
+      {
+        "icon": "layers",
+        "text": "Timber, polymer or both"
+      },
+      {
+        "icon": "cog",
+        "text": "Hand, power or machine"
+      },
+      {
+        "icon": "target",
+        "text": "Accurate results"
+      },
+      {
+        "icon": "copy",
+        "text": "Identical parts"
+      }
+    ]
+  },
   "chunks": [
     {
       "id": "saw",
@@ -86,6 +111,7 @@
         },
         {
           "term": "Rip / cross-cut saw",
+          "ask": "This big saw can cut wood in two directions. What do you think they are?",
           "tags": [
             "timber"
           ],
@@ -99,6 +125,7 @@
         },
         {
           "term": "Tenon saw",
+          "ask": "What sort of job is this small saw best for?",
           "tags": [
             "timber"
           ],
@@ -112,6 +139,7 @@
         },
         {
           "term": "Coping saw",
+          "ask": "What shape of cut is this saw made for?",
           "tags": [
             "timber",
             "polymer"
@@ -125,6 +153,7 @@
         },
         {
           "term": "Hacksaw / junior hacksaw",
+          "ask": "What kind of material would you cut with this saw?",
           "tags": [
             "polymer"
           ],
@@ -137,6 +166,7 @@
         },
         {
           "term": "Jig saw",
+          "ask": "What kinds of cut can this power saw make?",
           "tags": [
             "timber",
             "polymer"
@@ -169,6 +199,7 @@
       "items": [
         {
           "term": "Chisel",
+          "ask": "How would you use this tool to remove wood?",
           "tags": [
             "timber"
           ],
@@ -182,6 +213,7 @@
         },
         {
           "term": "Planer",
+          "ask": "How do you think this tool smooths a piece of wood?",
           "tags": [
             "timber"
           ],
@@ -195,6 +227,7 @@
         },
         {
           "term": "Sander",
+          "ask": "What makes this power tool remove waste so quickly?",
           "tags": [
             "timber"
           ],
@@ -208,6 +241,7 @@
         },
         {
           "term": "Router",
+          "ask": "What could you make by moving this tool through a piece of material?",
           "tags": [
             "timber",
             "polymer"
@@ -221,6 +255,7 @@
         },
         {
           "term": "CNC routing",
+          "ask": "How could a router cut a shape without anyone guiding it by hand?",
           "tags": [
             "timber",
             "polymer"
@@ -253,6 +288,7 @@
       "items": [
         {
           "term": "Countersink bit",
+          "ask": "What does this bit do to the top of a hole, and why?",
           "tags": [],
           "text": "Cuts a wider recess so a screw head sits flush with, or just below, the surface.",
           "image": {
@@ -263,6 +299,7 @@
         },
         {
           "term": "Flat bit",
+          "ask": "What size of hole is this bit for?",
           "tags": [],
           "text": "Wide, flat blade for larger-diameter holes.",
           "image": {
@@ -273,6 +310,7 @@
         },
         {
           "term": "Hole saw",
+          "ask": "What do you think this round blade is for?",
           "tags": [
             "timber",
             "polymer"
@@ -286,6 +324,7 @@
         },
         {
           "term": "Bradawl",
+          "ask": "What is this small pointed tool for?",
           "tags": [],
           "text": "Marks and starts a hole accurately before drilling or screwing.",
           "image": {
@@ -296,6 +335,7 @@
         },
         {
           "term": "Twist bit",
+          "ask": "What do you think these bits are used for?",
           "tags": [
             "timber",
             "polymer"
@@ -328,6 +368,7 @@
       "items": [
         {
           "term": "Rasp",
+          "ask": "What is this tool for, and what finish does it leave?",
           "tags": [
             "timber"
           ],
@@ -341,6 +382,7 @@
         },
         {
           "term": "File",
+          "ask": "How much material do you think this tool takes off at a time?",
           "tags": [],
           "text": "Removes small amounts of material. Comes in many shapes and grades of coarseness.",
           "image": {
@@ -351,6 +393,7 @@
         },
         {
           "term": "Abrasive paper",
+          "ask": "What is this paper for, and why does it come in different grades?",
           "tags": [],
           "text": "Sandpaper, from coarse to fine. Rubbed on a surface to shape and smooth it.",
           "image": {
@@ -361,6 +404,7 @@
         },
         {
           "term": "Wet and dry paper",
+          "ask": "What makes this abrasive paper different from ordinary sandpaper?",
           "tags": [
             "polymer"
           ],
@@ -392,6 +436,7 @@
       "items": [
         {
           "term": "Disc / belt sander",
+          "ask": "Apart from smoothing, what else could this machine do to a surface?",
           "tags": [
             "timber"
           ],
@@ -405,6 +450,7 @@
         },
         {
           "term": "Band saw",
+          "ask": "What can this machine cut that a hand saw would struggle with?",
           "tags": [
             "timber",
             "polymer"
@@ -418,6 +464,7 @@
         },
         {
           "term": "Pillar drill",
+          "ask": "How does this machine help you drill accurate holes?",
           "tags": [
             "timber",
             "polymer"
@@ -531,6 +578,7 @@
       "items": [
         {
           "term": "Lathe",
+          "ask": "What happens to the material while this machine shapes it?",
           "tags": [
             "timber"
           ],
@@ -543,6 +591,7 @@
         },
         {
           "term": "CNC wood turning",
+          "ask": "What sort of parts would a factory make on a computer-controlled lathe, and why?",
           "tags": [
             "timber"
           ],

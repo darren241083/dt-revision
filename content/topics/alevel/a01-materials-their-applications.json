@@ -56,6 +56,35 @@
       "Hardness"
     ]
   },
+  "bigPicture": {
+    "question": "What makes a material right for a product?",
+    "lenses": [
+      {
+        "icon": "force",
+        "text": "Forces it resists"
+      },
+      {
+        "icon": "shield",
+        "text": "Wear, impact and reshaping"
+      },
+      {
+        "icon": "layers",
+        "text": "What it's made of"
+      },
+      {
+        "icon": "bolt",
+        "text": "Electricity and heat"
+      },
+      {
+        "icon": "sun",
+        "text": "Light"
+      },
+      {
+        "icon": "check",
+        "text": "Justifying a choice"
+      }
+    ]
+  },
   "chunks": [
     {
       "id": "choose",
@@ -66,6 +95,7 @@
       "items": [
         {
           "term": "A compromise",
+          "ask": "What different things does a designer have to weigh up when choosing a material?",
           "tags": [],
           "text": "Choice balances aesthetics, cost, manufacturing method, disposal and reuse.",
           "image": {
@@ -76,6 +106,7 @@
         },
         {
           "term": "Function first",
+          "ask": "In the end, what matters most when choosing a material?",
           "tags": [],
           "text": "The final choice rests mostly on product function and material properties.",
           "image": {
@@ -86,6 +117,7 @@
         },
         {
           "term": "Justify it",
+          "ask": "Why isn't 'it's strong' a good enough reason for choosing a material?",
           "tags": [],
           "text": "Name the exact property and link it to the product, never just 'strong'.",
           "image": {
@@ -115,6 +147,7 @@
       "items": [
         {
           "term": "Mechanical properties",
+          "ask": "What do you think 'mechanical properties' describe?",
           "tags": [],
           "text": "How a material reacts when an external force acts on it.",
           "image": {
@@ -125,6 +158,7 @@
         },
         {
           "term": "Compressive strength",
+          "ask": "What must a column holding up a heavy roof be able to resist?",
           "tags": [],
           "text": "Withstands being crushed or shortened by pushing forces (compression).",
           "image": {
@@ -135,6 +169,7 @@
         },
         {
           "term": "Tensile strength",
+          "ask": "What must the cables of a suspension bridge resist?",
           "tags": [],
           "text": "Resists being stretched by pulling forces (tension).",
           "image": {
@@ -145,6 +180,7 @@
         },
         {
           "term": "Bending strength",
+          "ask": "What force is a loaded bookshelf fighting against?",
           "tags": [],
           "text": "Resists forces that would bend the material.",
           "image": {
@@ -155,6 +191,7 @@
         },
         {
           "term": "Shear strength",
+          "ask": "What kind of force acts on a material when a guillotine cuts it?",
           "tags": [],
           "text": "Resists sliding forces acting along a parallel plane.",
           "image": {
@@ -165,6 +202,7 @@
         },
         {
           "term": "Torsional strength",
+          "ask": "What must a drive shaft resist as it turns?",
           "tags": [],
           "text": "Withstands twisting forces from applied torque (torsion).",
           "image": {
@@ -194,6 +232,7 @@
       "items": [
         {
           "term": "Hardness",
+          "ask": "What property does a drill bit need to cut other materials without wearing away?",
           "tags": [],
           "text": "Resists abrasive wear such as scratching, indentation or cutting.",
           "image": {
@@ -204,6 +243,7 @@
         },
         {
           "term": "Toughness",
+          "ask": "What lets a hammer head take a hard hit without breaking?",
           "tags": [],
           "text": "Absorbs an impact force without fracturing.",
           "image": {
@@ -214,6 +254,7 @@
         },
         {
           "term": "Plasticity",
+          "ask": "What property lets modelling clay keep its new shape after you squash it?",
           "tags": [],
           "text": "Can be permanently deformed and keeps its new shape.",
           "image": {
@@ -224,6 +265,7 @@
         },
         {
           "term": "Ductility",
+          "ask": "What property lets a metal be pulled out into thin wire?",
           "tags": [],
           "text": "Can be drawn out thinner under tension without cracking, as in wire.",
           "image": {
@@ -234,6 +276,7 @@
         },
         {
           "term": "Malleability",
+          "ask": "What lets a blacksmith hammer hot metal into shape without it cracking?",
           "tags": [],
           "text": "Can be deformed by compression without cracking; easier when hotter.",
           "image": {
@@ -244,6 +287,7 @@
         },
         {
           "term": "Elasticity",
+          "ask": "What lets a rubber band spring back after you stretch it?",
           "tags": [],
           "text": "Can be deformed, then returns to its original shape when the force goes.",
           "image": {
@@ -273,6 +317,7 @@
       "items": [
         {
           "term": "Physical properties",
+          "ask": "How are physical properties different from mechanical ones?",
           "tags": [],
           "text": "Linked to the material's actual make-up or structure.",
           "image": {
@@ -283,6 +328,7 @@
         },
         {
           "term": "Density",
+          "ask": "Two blocks are the same size. Why might one be much heavier?",
           "tags": [],
           "text": "The mass of the material in a standard volume.",
           "image": {
@@ -293,6 +339,7 @@
         },
         {
           "term": "Fusibility",
+          "ask": "What property must a metal have to be cast in a mould?",
           "tags": [],
           "text": "Can be melted from solid to liquid by heat, vital for casting metal.",
           "image": {
@@ -303,6 +350,7 @@
         },
         {
           "term": "Magnetism",
+          "ask": "Why will some materials stick to a magnet?",
           "tags": [],
           "text": "A natural force that makes the material attract iron or steels.",
           "image": {
@@ -313,6 +361,7 @@
         },
         {
           "term": "Corrosion or degradation resistance",
+          "ask": "Why do some materials last for years outdoors while others rust or rot?",
           "tags": [],
           "text": "Withstands attack and decay from the environment.",
           "image": {
@@ -342,6 +391,7 @@
       "items": [
         {
           "term": "Electrical conductor",
+          "ask": "What does the metal inside a cable need to let through easily?",
           "tags": [],
           "text": "Lets electric current flow through with very little resistance.",
           "image": {
@@ -352,6 +402,7 @@
         },
         {
           "term": "Electrical insulator",
+          "ask": "Why is a cable wrapped in a coating?",
           "tags": [],
           "text": "Stops electricity flowing through the material.",
           "image": {
@@ -362,6 +413,7 @@
         },
         {
           "term": "Thermal conductor",
+          "ask": "Why does the base of a pan heat up so quickly?",
           "tags": [],
           "text": "Lets heat pass through it, quickly if its conductivity is high.",
           "image": {
@@ -372,6 +424,7 @@
         },
         {
           "term": "Thermal insulator",
+          "ask": "Why can you hold a pan's handle while it cooks?",
           "tags": [],
           "text": "Stops heat passing through the material.",
           "image": {
@@ -382,6 +435,7 @@
         },
         {
           "term": "Thermal expansion",
+          "ask": "What happens to the size of a material when it gets hot?",
           "tags": [],
           "text": "The material's volume increases when it is heated.",
           "image": {
@@ -411,33 +465,39 @@
       "items": [
         {
           "term": "Opaque",
+          "ask": "What word describes a material that lets no light through?",
           "tags": [],
           "text": "Lets no light travel through.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/opaque.webp",
             "alt": "Opaque",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Translucent",
+          "ask": "Frosted glass lets light in, but you can't see clearly through it. What word describes it?",
           "tags": [],
           "text": "Lets light through but diffuses it so objects look blurred; frosted glass is one.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/translucent.webp",
             "alt": "Translucent",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Transparent",
+          "ask": "What word describes a material you can see clearly through?",
           "tags": [],
           "text": "Lets light pass easily, so you can see clearly through it.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/transparent.webp",
             "alt": "Transparent",
             "credit": "--"
-          }
+          },
+          "imageOnReveal": true
         }
       ],
       "check": [

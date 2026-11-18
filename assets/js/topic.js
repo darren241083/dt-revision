@@ -19,7 +19,7 @@ import { timer } from "./components/timer.js";
 import { revealGroup } from "./components/reveal.js";
 import { whatAmI } from "./components/whatami.js";
 import { mindMap } from "./components/mindmap.js";
-import { learnChunk } from "./components/learn.js";
+import { learnChunk, learnStep, quickCheck } from "./components/learn.js";
 import { whichTool, oddOneOut } from "./components/apply.js";
 import { matchPairs, putInOrder } from "./components/recall.js";
 import { quiz, fixList, fixRows } from "./components/quiz.js";
@@ -47,10 +47,10 @@ const MODES = {
       { id: "do-now", label: "Do now", sub: "Starter", title: "Do now",
         hints: [["tap", "Tap a card to reveal"]], tip: "Answers on whiteboards first. Reveal one card at a time." },
       { id: "big-picture", label: "Big picture", sub: "Topic map",
-        title: "The whole topic", hints: [["tap", "Tap a branch, then an item"]],
-        tip: "Open each branch. Ask what pupils already know before reading it." },
+        title: "The whole topic",
+        tip: "Read the big question. Ask what pupils already know about each lens." },
       { id: "learn", label: "Learn", sub: (t) => `${t.chunks.length} short chunks`,
-        tip: "One chunk at a time. Use the check before moving on." },
+        tip: "Ask the question, take ideas, then reveal. Next reveals the next item." },
       { id: "apply", label: "Apply", sub: "Which tool, and why?", title: "Which tool, and why?",
         tip: "Pupils say the reason aloud before you show the answer." },
       { ...RECALL, sub: "From memory" },
@@ -329,7 +329,9 @@ function stageBody(st) {
   const T = S.topic;
   switch (st.id) {
     case "apply":
-      return [T.apply?.length > 0 && whichTool(T.apply), T.oddOne && oddOneOut(T.oddOne)];
+      // The last chunk's quick check opens Apply (each chunk's check opens the chunk after it).
+      return [quickCheck(T.chunks[T.chunks.length - 1]),
+        T.apply?.length > 0 && whichTool(T.apply), T.oddOne && oddOneOut(T.oddOne)];
     case "recall":
       return [mindMap(T, { recall: true, chunkHref: (c) => hashFor("lesson", learnIndex(), T.chunks.indexOf(c)) }),
         h("div", { class: "recall-pair" }, T.keywords?.length > 1 && matchPairs(T.keywords), T.order && putInOrder(T.order))];
@@ -343,12 +345,23 @@ function stageBody(st) {
     case "do-now":
       return [revealGroup(session.doNow || T.doNow), T.starter && whatAmI(T.starter)];
     case "big-picture":
-      return mindMap(T, { chunkHref: (c) => hashFor("lesson", learnIndex(), T.chunks.indexOf(c)) });
+      return mindMap(T, { overview: true, side: framePanel(T) });
     case "learn":
-      return learnChunk(T.chunks[S.chunk]);
+      return learnChunk(T.chunks[S.chunk], T.chunks[S.chunk - 1]);
     default:
       return h("div", { class: "card placeholder" }, "Coming soon");
   }
+}
+
+// Big picture: "What we'll look at" beside the static map. It frames the lesson (the big question
+// and the lenses the Learn items cover) and holds no answers.
+function framePanel(T) {
+  const bp = T.bigPicture;
+  return h("section", { class: "mm-detail mm-frame card", "aria-labelledby": "frame-title" },
+    h("h2", { class: "label", id: "frame-title" }, "What we'll look at"),
+    bp?.question && h("p", { class: "frame-q" }, bp.question),
+    bp?.lenses?.length > 0 && h("ul", { class: "frame-lenses" }, bp.lenses.map((l) =>
+      h("li", {}, icon(l.icon || "search"), h("span", {}, l.text)))));
 }
 
 function fixStage() {
@@ -428,17 +441,22 @@ function stageFoot() {
 
 /* ---------- Presenter controls (teaching mode) ---------- */
 
+// In a Learn chunk, Next first reveals the chunk's next hidden item and Back hides the last one
+// shown; only then do they move between chunks and stages.
+const inLearn = () => S.view === "stage" && isLearn(S.mode, S.stage);
+const presentNext = () => { if (!(inLearn() && learnStep(1))) go(neighbours().next); };
+const presentBack = () => { if (!(inLearn() && learnStep(-1))) go(neighbours().prev); };
 const present = h("div", { class: "present", role: "group", "aria-label": "Presenter controls" },
-  h("button", { type: "button", onclick: () => go(neighbours().prev) }, "‹ Back"),
-  h("button", { type: "button", onclick: () => go(neighbours().next) }, "Next ›"));
+  h("button", { type: "button", onclick: presentBack }, "‹ Back"),
+  h("button", { type: "button", onclick: presentNext }, "Next ›"));
 
 // Presentation clickers send Page Up / Page Down.
 document.addEventListener("keydown", (e) => {
   if (!teach || S.view !== "stage" || e.altKey || e.ctrlKey || e.metaKey) return;
   const t = e.target;
   if (t.closest && t.closest("input, textarea, select, [contenteditable], [role=tablist]")) return;
-  if (e.key === "PageDown") { e.preventDefault(); go(neighbours().next); }
-  if (e.key === "PageUp") { e.preventDefault(); go(neighbours().prev); }
+  if (e.key === "PageDown") { e.preventDefault(); presentNext(); }
+  if (e.key === "PageUp") { e.preventDefault(); presentBack(); }
 });
 
 /* ---------- Render ---------- */
@@ -463,8 +481,8 @@ function render(moved) {
   } else unmountSheet();
 
   const { prev, next } = S.view === "stage" ? neighbours() : {};
-  present.children[0].disabled = !prev;
-  present.children[1].disabled = !next;
+  present.children[0].disabled = !prev && !(inLearn() && learnStep(-1, true));
+  present.children[1].disabled = !next && !(inLearn() && learnStep(1, true));
 
   const st = S.view === "stage" ? MODES[S.mode].stages[S.stage] : null;
   const where = st ? (st.id === "learn" ? S.topic.chunks[S.chunk].label : st.label) + " · " : "";
