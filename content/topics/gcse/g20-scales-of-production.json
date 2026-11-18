@@ -258,7 +258,12 @@
         {
           "term": "Mass production",
           "tags": [],
-          "text": "Making standardised products in large quantities."
+          "text": "Making standardised products in large quantities.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/mass-production.webp",
+            "alt": "Mass production",
+            "credit": "--"
+          }
         },
         {
           "term": "Mass-produced products",
