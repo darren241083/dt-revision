@@ -140,7 +140,12 @@
         {
           "term": "Prototype",
           "tags": [],
-          "text": "A representation of a product, made before it's produced in any quantity."
+          "text": "A representation of a product, made before it's produced in any quantity.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/prototype.webp",
+            "alt": "Prototype",
+            "credit": "--"
+          }
         },
         {
           "term": "Evaluate and test",
