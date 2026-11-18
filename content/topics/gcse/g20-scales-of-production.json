@@ -337,7 +337,12 @@
         {
           "term": "Continuous production",
           "tags": [],
-          "text": "A process that runs 24 hours a day, 7 days a week."
+          "text": "A process that runs 24 hours a day, 7 days a week.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/continuous-production.webp",
+            "alt": "Continuous production",
+            "credit": "--"
+          }
         },
         {
           "term": "Continuously made products",
