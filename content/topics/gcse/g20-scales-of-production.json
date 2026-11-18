@@ -347,7 +347,12 @@
         {
           "term": "Continuously made products",
           "tags": [],
-          "text": "Many household chemicals, petrochemicals, cement and steel."
+          "text": "Many household chemicals, petrochemicals, cement and steel.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/continuously-made-products.webp",
+            "alt": "Continuously made products",
+            "credit": "--"
+          }
         },
         {
           "term": "Industries",
