@@ -357,7 +357,12 @@
         {
           "term": "Industries",
           "tags": [],
-          "text": "Oil refineries, blast furnaces, paper pulp, smelting and chemical manufacture."
+          "text": "Oil refineries, blast furnaces, paper pulp, smelting and chemical manufacture.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/industries.webp",
+            "alt": "Industries",
+            "credit": "--"
+          }
         },
         {
           "term": "Very expensive",
