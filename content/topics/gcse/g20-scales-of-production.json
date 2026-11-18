@@ -76,7 +76,12 @@
         {
           "term": "Batch products",
           "tags": [],
-          "text": "Clothing, baked goods, newspapers and electrical goods."
+          "text": "Clothing, baked goods, newspapers and electrical goods.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/batch-products.webp",
+            "alt": "Batch products",
+            "credit": "--"
+          }
         },
         {
           "term": "Lower cost per item",
