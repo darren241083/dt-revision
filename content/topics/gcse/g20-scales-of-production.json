@@ -12,7 +12,10 @@
     "title": "ClearRevise AQA GCSE D&T 8552",
     "pages": "104–105"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/gcse/g20-scales-of-production.m4a",
+    "length": 354
+  },
   "needs": [
     "Say how the type of product, quality and quantity decide the method of production.",
     "Describe batch, one-off, mass and continuous production, with examples.",
