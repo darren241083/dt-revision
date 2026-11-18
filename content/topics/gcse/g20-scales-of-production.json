@@ -288,7 +288,12 @@
         {
           "term": "Fewer workers",
           "tags": [],
-          "text": "Automated assembly lines need fewer workers."
+          "text": "Automated assembly lines need fewer workers.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/fewer-workers.webp",
+            "alt": "Fewer workers",
+            "credit": "--"
+          }
         },
         {
           "term": "High set-up costs",
