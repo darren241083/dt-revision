@@ -66,7 +66,12 @@
         {
           "term": "Batch production",
           "tags": [],
-          "text": "Making a set quantity of consistent products to a quality standard."
+          "text": "Making a set quantity of consistent products to a quality standard.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/batch-production.webp",
+            "alt": "Batch production",
+            "credit": "--"
+          }
         },
         {
           "term": "Batch products",
