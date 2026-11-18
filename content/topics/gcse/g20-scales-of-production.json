@@ -298,7 +298,12 @@
         {
           "term": "High set-up costs",
           "tags": [],
-          "text": "Automated machinery or robots can be expensive to set up."
+          "text": "Automated machinery or robots can be expensive to set up.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/high-set-up-costs.webp",
+            "alt": "High set-up costs",
+            "credit": "--"
+          }
         },
         {
           "term": "Lower cost per unit",
