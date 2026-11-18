@@ -86,7 +86,12 @@
         {
           "term": "Lower cost per item",
           "tags": [],
-          "text": "Making products in large batches cuts the overall cost of each one."
+          "text": "Making products in large batches cuts the overall cost of each one.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/lower-cost-per-item.webp",
+            "alt": "Lower cost per item",
+            "credit": "--"
+          }
         },
         {
           "term": "Templates and moulds",
