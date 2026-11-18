@@ -7,7 +7,7 @@ import * as store from "./store.js";
 import { loadCourses, loadTopics, setCourses, YEAR_IDS } from "./data.js";
 import { siteBar } from "./nav.js";
 import { editEntry } from "./editentry.js";
-import { yearCard } from "./components/yearcard.js";
+import { yearCard, stopCardAudio } from "./components/yearcard.js";
 
 const topbarEl = document.getElementById("topbar");
 const main = document.getElementById("main");
@@ -16,6 +16,7 @@ let C = null, loaded = new Map();
 const mine = () => (YEAR_IDS.includes(store.get("year")) ? store.get("year") : null);
 
 function render() {
+  stopCardAudio();
   siteBar(topbarEl, { current: "home", y: mine(), years: C.years, extra: edit.button() });
   fill(main,
     h("h1", { class: "sr-only", id: "page-title" }, "D&T Revision"),

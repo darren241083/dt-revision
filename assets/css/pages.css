@@ -71,21 +71,56 @@ a.tile:hover b { text-decoration: underline; }
 .ycard.gcse .ycard-status.lesson { color: var(--teal-dark); font-weight: 700; }
 .ycard.alevel .ycard-status.lesson { color: var(--alevel); font-weight: 700; }
 .ycard-pick { display: flex; flex-direction: column; gap: 6px; }
+.ycard-pick-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; }
 .ycard-pick label { color: var(--ink); font-size: .9375rem; font-weight: 700; }
+.ycard-key { color: var(--muted); font-size: .875rem; }
 .ycard-select { width: 100%; min-height: 48px; padding: 0 12px; border: 1.5px solid var(--card-border); border-radius: 12px; background: var(--card); color: var(--ink); font: inherit; font-size: 1rem; }
 .ycard-select:hover { border-color: var(--muted); }
 .ycard-topic { display: flex; flex-direction: column; gap: 6px; }
 .ycard-title { font-size: 1.625rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; }
 .ycard-spec { color: var(--muted); font-family: var(--f-mono); font-size: .8125rem; }
-.ycard-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: auto; }
+/* The pre-read panel and the buttons sit at the card's foot, so they line up across a row. */
+.ycard-bottom { display: flex; flex-direction: column; gap: 14px; margin-top: auto; }
+.ycard-foot { display: flex; flex-direction: column; gap: 10px; }
+/* Pre-read panel: information only (book pages as text), plus the in-card Listen player. */
+.ycard-pre { container-type: inline-size; padding: 18px; border-radius: 14px; background: var(--teal-soft); }
+.ycard-pre[hidden] { display: none; }
+.ycard-pre-in { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: center; gap: 12px 14px; }
+.ycard-pre-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px; background: var(--card); color: var(--teal); }
+.ycard-pre-icon .ico { width: 26px; height: 26px; stroke-width: 2; }
+.ycard-pre-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.ycard-pre-label { color: var(--teal-dark); font-family: var(--f-mono); font-size: 13px; letter-spacing: .08em; line-height: 1.35; text-transform: uppercase; }
+.ycard-pre-pages { color: var(--ink); font-size: 24px; font-weight: 800; letter-spacing: -.01em; line-height: 1.2; }
+.ycard-listen { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 18px; border: 1.5px solid var(--ink); border-radius: 10px; background: var(--card); color: var(--ink); font: inherit; font-size: 1rem; font-weight: 700; white-space: nowrap; cursor: pointer; }
+.ycard-listen:hover { text-decoration: underline; }
+.ycard-listen[hidden] { display: none; }
+.ycard-listen .ico-fill, .ycard-pp .ico-fill { width: 16px; height: 16px; fill: currentColor; stroke: none; }
+.ycard-player-slot { grid-column: 1 / -1; }
+.ycard-player-slot:empty { display: none; }
+.ycard-player { display: flex; align-items: center; gap: 12px; padding: 6px 14px 6px 6px; border-radius: 12px; background: var(--card); }
+.ycard-pp { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--teal); color: #FFFFFF; cursor: pointer; }
+.ycard-pp:hover { background: var(--teal-dark); }
+.ycard-scrub { --pct: 0%; flex: 1; min-width: 0; height: 44px; margin: 0; background: transparent; cursor: pointer; -webkit-appearance: none; appearance: none; }
+.ycard-scrub::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: linear-gradient(to right, var(--teal) var(--pct), #B9DDD6 var(--pct)); }
+.ycard-scrub::-webkit-slider-thumb { width: 18px; height: 18px; margin-top: -6px; border: 3px solid var(--card); border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 1.5px var(--teal); -webkit-appearance: none; appearance: none; }
+.ycard-scrub::-moz-range-track { height: 6px; border-radius: 3px; background: #B9DDD6; }
+.ycard-scrub::-moz-range-progress { height: 6px; border-radius: 3px; background: var(--teal); }
+.ycard-scrub::-moz-range-thumb { width: 12px; height: 12px; border: 3px solid var(--card); border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 1.5px var(--teal); }
+.ycard-time { flex: none; color: var(--muted); font-family: var(--f-mono); font-size: .8125rem; white-space: nowrap; }
+/* Narrow panels (phones): Listen wraps under the book pages. */
+@container (max-width: 420px) {
+  .ycard-listen { grid-column: 2 / -1; justify-self: start; }
+  .ycard-pre-pages { font-size: 22px; }
+  .ycard-player { gap: 8px; padding-right: 10px; }
+}
+.ycard-open { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 18px; border-radius: 12px; background: var(--teal); color: #FFFFFF; font-size: 1.0625rem; font-weight: 700; text-decoration: none; }
+.ycard-open:hover { background: var(--teal-dark); text-decoration: underline; }
+.ycard-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .ycard-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: var(--tap); padding: 0 18px; border: 1.5px solid transparent; border-radius: 10px; font-size: 1rem; font-weight: 700; text-decoration: none; }
 .ycard-btn:hover { text-decoration: underline; }
 .ycard-btn .ico { width: 20px; height: 20px; stroke-width: 2; }
 .ycard-btn .ico-fill { width: 16px; height: 16px; fill: currentColor; stroke: none; }
 .ycard-btn.revise { background: var(--ink); color: #FFFFFF; }
-.ycard-btn.read { background: var(--teal-soft); color: var(--teal-dark); }
-.ycard.alevel .ycard-btn.read { background: var(--alevel-bg); color: var(--alevel); }
-.ycard-btn.listen { border-color: var(--ink); background: var(--card); color: var(--ink); }
 .ycard-soon { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.4; }
 .ycard-back { min-height: var(--tap); margin-left: auto; padding: 0 4px; border: 0; background: transparent; color: var(--teal-dark); font: inherit; font-size: .9375rem; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .ycard.alevel .ycard-back { color: var(--alevel); }
