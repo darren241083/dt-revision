@@ -106,7 +106,12 @@
         {
           "term": "Quality testing",
           "tags": [],
-          "text": "Each batch is tested for quality and uniformity."
+          "text": "Each batch is tested for quality and uniformity.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/quality-testing.webp",
+            "alt": "Quality testing",
+            "credit": "--"
+          }
         },
         {
           "term": "Downtime",
