@@ -308,7 +308,12 @@
         {
           "term": "Lower cost per unit",
           "tags": [],
-          "text": "Costs are spread over many products, so each one costs less."
+          "text": "Costs are spread over many products, so each one costs less.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/lower-cost-per-unit.webp",
+            "alt": "Lower cost per unit",
+            "credit": "--"
+          }
         }
       ],
       "check": [
