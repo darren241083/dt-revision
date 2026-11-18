@@ -268,7 +268,12 @@
         {
           "term": "Mass-produced products",
           "tags": [],
-          "text": "Vehicles, pharmaceuticals, popular soft drinks and mobile phones."
+          "text": "Vehicles, pharmaceuticals, popular soft drinks and mobile phones.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/mass-produced-products.webp",
+            "alt": "Mass-produced products",
+            "credit": "--"
+          }
         },
         {
           "term": "Automation",
