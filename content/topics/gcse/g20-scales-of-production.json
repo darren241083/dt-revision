@@ -209,7 +209,12 @@
         {
           "term": "One-off products",
           "tags": [],
-          "text": "A hand-made wedding dress, a cruise liner or a piece of jewellery."
+          "text": "A hand-made wedding dress, a cruise liner or a piece of jewellery.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/one-off-products.webp",
+            "alt": "One-off products",
+            "credit": "--"
+          }
         },
         {
           "term": "Quality and skill",
