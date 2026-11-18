@@ -278,7 +278,12 @@
         {
           "term": "Automation",
           "tags": [],
-          "text": "Automated processes and assembly lines make high volumes efficiently."
+          "text": "Automated processes and assembly lines make high volumes efficiently.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/automation.webp",
+            "alt": "Automation",
+            "credit": "--"
+          }
         },
         {
           "term": "Fewer workers",
