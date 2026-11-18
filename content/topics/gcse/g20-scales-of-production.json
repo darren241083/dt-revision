@@ -160,7 +160,12 @@
         {
           "term": "Confirm methods and costs",
           "tags": [],
-          "text": "Confirms how the product will be made and what it will cost."
+          "text": "Confirms how the product will be made and what it will cost.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/confirm-methods-and-costs.webp",
+            "alt": "Confirm methods and costs",
+            "credit": "--"
+          }
         }
       ],
       "check": [
