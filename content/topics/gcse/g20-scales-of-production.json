@@ -1,0 +1,699 @@
+{
+  "id": "g20-scales-of-production",
+  "level": "gcse",
+  "title": "Scales of production",
+  "titleMark": "production",
+  "spec": [
+    "3.2.7"
+  ],
+  "section": "B",
+  "materials": [],
+  "book": {
+    "title": "ClearRevise AQA GCSE D&T 8552",
+    "pages": "104–105"
+  },
+  "audio": null,
+  "needs": [
+    "Say how the type of product, quality and quantity decide the method of production.",
+    "Describe batch, one-off, mass and continuous production, with examples.",
+    "Give the benefits and drawbacks of each scale of production.",
+    "Explain what a prototype is and why one is made."
+  ],
+  "doNow": [
+    {
+      "q": "Give two products that are made by batch production.",
+      "a": "Any two of: clothing, baked goods, newspapers, electrical goods.",
+      "from": "Pre-read p104"
+    },
+    {
+      "q": "How long does continuous production run for?",
+      "a": "24 hours a day, 7 days a week.",
+      "from": "Pre-read p105"
+    },
+    {
+      "q": "Why would a factory use CNC wood turning to make 30 chair legs?",
+      "a": "Every leg is accurately sized and identical, so they fit and match.",
+      "from": "3.2.5"
+    },
+    {
+      "q": "Give one disadvantage of automation.",
+      "a": "Job losses, high set-up cost, no human decision making, or workers need new skills to maintain it.",
+      "from": "3.1.1"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I run 24 hours a day, 7 days a week.",
+      "I'm highly automated, so I only need a small workforce.",
+      "Oil refineries and blast furnaces use me."
+    ],
+    "answer": "Continuous production",
+    "options": [
+      "Continuous production",
+      "Batch production",
+      "One-off production",
+      "Mass production"
+    ]
+  },
+  "chunks": [
+    {
+      "id": "batch",
+      "label": "Batch production",
+      "icon": "layers",
+      "pages": "104",
+      "summary": "A set quantity of consistent products, made to a quality standard.",
+      "items": [
+        {
+          "term": "Batch production",
+          "tags": [],
+          "text": "Making a set quantity of consistent products to a quality standard."
+        },
+        {
+          "term": "Batch products",
+          "tags": [],
+          "text": "Clothing, baked goods, newspapers and electrical goods."
+        },
+        {
+          "term": "Lower cost per item",
+          "tags": [],
+          "text": "Making products in large batches cuts the overall cost of each one."
+        },
+        {
+          "term": "Templates and moulds",
+          "tags": [],
+          "text": "Keep every product in the batch consistent."
+        },
+        {
+          "term": "Quality testing",
+          "tags": [],
+          "text": "Each batch is tested for quality and uniformity."
+        },
+        {
+          "term": "Downtime",
+          "tags": [],
+          "text": "Machinery may need recalibrating or stopping between batches."
+        }
+      ],
+      "check": [
+        {
+          "q": "Why are templates or moulds used in batch production?",
+          "a": "To make sure every product in the batch is consistent."
+        },
+        {
+          "q": "What causes downtime in batch production?",
+          "a": "Machinery may need to be recalibrated or stopped between batches."
+        }
+      ]
+    },
+    {
+      "id": "proto",
+      "label": "Prototype",
+      "icon": "model",
+      "pages": "104",
+      "summary": "A product made before it goes into production in any quantity.",
+      "items": [
+        {
+          "term": "Prototype",
+          "tags": [],
+          "text": "A representation of a product, made before it's produced in any quantity."
+        },
+        {
+          "term": "Evaluate and test",
+          "tags": [],
+          "text": "Lets the designer evaluate and test the design."
+        },
+        {
+          "term": "Confirm methods and costs",
+          "tags": [],
+          "text": "Confirms how the product will be made and what it will cost."
+        }
+      ],
+      "check": [
+        {
+          "q": "When is a prototype made?",
+          "a": "Before the product is produced in any quantity."
+        },
+        {
+          "q": "Give two reasons for making a prototype.",
+          "a": "To evaluate and test the design, and to confirm the making methods and costs."
+        }
+      ]
+    },
+    {
+      "id": "oneoff",
+      "label": "One-off production",
+      "icon": "hand",
+      "pages": "104",
+      "summary": "A single item, often custom or bespoke, made by skilled craftspeople.",
+      "items": [
+        {
+          "term": "One-off production",
+          "tags": [],
+          "text": "Making a single item, often custom or bespoke."
+        },
+        {
+          "term": "Bespoke",
+          "tags": [],
+          "text": "Made specifically to a client's own brief."
+        },
+        {
+          "term": "One-off products",
+          "tags": [],
+          "text": "A hand-made wedding dress, a cruise liner or a piece of jewellery."
+        },
+        {
+          "term": "Quality and skill",
+          "tags": [],
+          "text": "Build quality and the level of skilled craftsmanship are high."
+        },
+        {
+          "term": "High cost",
+          "tags": [],
+          "text": "The cost of making the item is high too."
+        }
+      ],
+      "check": [
+        {
+          "q": "What does bespoke mean?",
+          "a": "Made specifically to a client's own brief."
+        },
+        {
+          "q": "Give one benefit and one drawback of one-off production.",
+          "a": "Benefit: high build quality and skilled craftsmanship. Drawback: high cost of production."
+        }
+      ]
+    },
+    {
+      "id": "mass",
+      "label": "Mass production",
+      "icon": "factory",
+      "pages": "105",
+      "summary": "Standardised products made in large quantities on automated lines.",
+      "items": [
+        {
+          "term": "Mass production",
+          "tags": [],
+          "text": "Making standardised products in large quantities."
+        },
+        {
+          "term": "Mass-produced products",
+          "tags": [],
+          "text": "Vehicles, pharmaceuticals, popular soft drinks and mobile phones."
+        },
+        {
+          "term": "Automation",
+          "tags": [],
+          "text": "Automated processes and assembly lines make high volumes efficiently."
+        },
+        {
+          "term": "Fewer workers",
+          "tags": [],
+          "text": "Automated assembly lines need fewer workers."
+        },
+        {
+          "term": "High set-up costs",
+          "tags": [],
+          "text": "Automated machinery or robots can be expensive to set up."
+        },
+        {
+          "term": "Lower cost per unit",
+          "tags": [],
+          "text": "Costs are spread over many products, so each one costs less."
+        }
+      ],
+      "check": [
+        {
+          "q": "Give two products that are mass produced.",
+          "a": "Any two of: vehicles, pharmaceuticals, popular soft drinks, mobile phones."
+        },
+        {
+          "q": "Why does mass production lower the cost per unit?",
+          "a": "The costs, including high set-up costs, are spread over a large number of products."
+        }
+      ]
+    },
+    {
+      "id": "cont",
+      "label": "Continuous production",
+      "icon": "refresh",
+      "pages": "105",
+      "summary": "A highly automated process that never stops, making one item in large volumes.",
+      "items": [
+        {
+          "term": "Continuous production",
+          "tags": [],
+          "text": "A process that runs 24 hours a day, 7 days a week."
+        },
+        {
+          "term": "Continuously made products",
+          "tags": [],
+          "text": "Many household chemicals, petrochemicals, cement and steel."
+        },
+        {
+          "term": "Industries",
+          "tags": [],
+          "text": "Oil refineries, blast furnaces, paper pulp, smelting and chemical manufacture."
+        },
+        {
+          "term": "Very expensive",
+          "tags": [],
+          "text": "Very expensive to set up, to run and to stop."
+        },
+        {
+          "term": "Small workforce",
+          "tags": [],
+          "text": "Highly automated, so only a small workforce is needed."
+        },
+        {
+          "term": "One item, large volumes",
+          "tags": [],
+          "text": "Machinery is set up to make large volumes of a single item."
+        }
+      ],
+      "check": [
+        {
+          "q": "Why does continuous production only need a small workforce?",
+          "a": "The processes are highly automated."
+        },
+        {
+          "q": "Give two industries that use continuous production.",
+          "a": "Any two of: oil refineries, blast furnaces, paper pulp production, smelting, chemical manufacture."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Scale of production",
+      "def": "The method of production, chosen by product type, quality and quantity."
+    },
+    {
+      "term": "Batch production",
+      "def": "Making a set quantity of consistent products to a quality standard."
+    },
+    {
+      "term": "Downtime",
+      "def": "Time machinery is stopped or recalibrated between batches."
+    },
+    {
+      "term": "Prototype",
+      "def": "A representation of a product made before production, to test the design."
+    },
+    {
+      "term": "One-off production",
+      "def": "Making a single item, often custom or bespoke."
+    },
+    {
+      "term": "Bespoke",
+      "def": "Made specifically to a client's own brief."
+    },
+    {
+      "term": "Mass production",
+      "def": "Making standardised products in large quantities."
+    },
+    {
+      "term": "Assembly line",
+      "def": "An automated line that makes high volumes of products efficiently."
+    },
+    {
+      "term": "Cost per unit",
+      "def": "What each product costs to make; falls as costs spread over more products."
+    },
+    {
+      "term": "Continuous production",
+      "def": "A highly automated process running 24 hours a day, 7 days a week."
+    }
+  ],
+  "apply": [
+    {
+      "q": "A client wants a single oak dining table designed and made to fit an unusual room.",
+      "tools": [
+        "One-off production",
+        "Batch production",
+        "Mass production",
+        "Continuous production"
+      ],
+      "tool": 0,
+      "reasons": [
+        "A single bespoke item is made to the client's brief, with high skill and build quality",
+        "Templates keep a set quantity of products consistent",
+        "Set-up costs are spread over a very large number of standardised products",
+        "Machinery runs 24/7 making large volumes of one item"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A furniture maker makes 200 pine stools for one school, then resets its machines to make 150 bookcases for another.",
+      "tools": [
+        "Batch production",
+        "One-off production",
+        "Continuous production",
+        "A prototype"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Each set quantity is made consistently using templates, then machinery is reset between runs",
+        "Every item is made specifically to one client's brief",
+        "The process never stops, so it can't change products",
+        "It's a single model made to test a design before production"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A company needs millions of identical polymer cases for a popular mobile phone.",
+      "tools": [
+        "Mass production",
+        "One-off production",
+        "Batch production",
+        "A prototype"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Automated assembly lines spread high set-up costs over huge numbers, so each case costs less",
+        "Skilled craftspeople make each case by hand to a client's brief",
+        "Machinery is stopped and recalibrated after every small run",
+        "It confirms the making methods and costs before production"
+      ],
+      "reason": 0
+    }
+  ],
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      {
+        "n": "Prototype",
+        "why": "The only one made before production, to test a design."
+      },
+      {
+        "n": "One-off production",
+        "why": "The only one that makes a single bespoke item to a client's brief."
+      },
+      {
+        "n": "Batch production",
+        "why": "The only one where machinery may stop between runs (downtime)."
+      },
+      {
+        "n": "Continuous production",
+        "why": "The only one that runs 24 hours a day, 7 days a week."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Which of these is made by batch production?",
+      "options": [
+        "Baked goods",
+        "A cruise liner",
+        "Steel",
+        "Petrochemicals"
+      ],
+      "answer": 0,
+      "why": "Clothing, baked goods, newspapers and electrical goods are made in batches.",
+      "chunk": "batch"
+    },
+    {
+      "q": "Why are templates or moulds used in batch production?",
+      "options": [
+        "To keep every product consistent",
+        "To make each product bespoke",
+        "To keep the process running 24/7",
+        "So the batch doesn't need testing"
+      ],
+      "answer": 0,
+      "why": "Templates and moulds make sure each product in the batch is the same.",
+      "chunk": "batch"
+    },
+    {
+      "q": "Machinery may need recalibrating or stopping between batches.",
+      "tf": true,
+      "why": "This downtime is a drawback of batch production.",
+      "chunk": "batch"
+    },
+    {
+      "q": "Making products in large batches increases the cost of each item.",
+      "tf": false,
+      "why": "Large batches reduce the overall cost per item.",
+      "chunk": "batch"
+    },
+    {
+      "q": "In batch production, each batch is tested for quality and uniformity.",
+      "tf": true,
+      "why": "Testing each batch keeps to the quality standard.",
+      "chunk": "batch"
+    },
+    {
+      "q": "What is a prototype?",
+      "options": [
+        "A representation of a product made before it's produced in any quantity",
+        "The last product made on an assembly line",
+        "A template used to keep a batch consistent",
+        "A machine that runs 24 hours a day"
+      ],
+      "answer": 0,
+      "why": "A prototype comes before production, so the design can be tested.",
+      "chunk": "proto"
+    },
+    {
+      "q": "A prototype helps confirm how a product will be made and what it will cost.",
+      "tf": true,
+      "why": "It confirms the methods and costs as well as testing the design.",
+      "chunk": "proto"
+    },
+    {
+      "q": "A prototype is made after the product has gone into mass production.",
+      "tf": false,
+      "why": "It is made before the product is produced in any quantity.",
+      "chunk": "proto"
+    },
+    {
+      "q": "Which of these is made by one-off production?",
+      "options": [
+        "A cruise liner",
+        "Mobile phones",
+        "Newspapers",
+        "Cement"
+      ],
+      "answer": 0,
+      "why": "A cruise liner is a single item, built to order.",
+      "chunk": "oneoff"
+    },
+    {
+      "q": "What does bespoke mean?",
+      "options": [
+        "Made specifically to a client's brief",
+        "Made in a set quantity",
+        "Made by robots on an assembly line",
+        "Made 24 hours a day"
+      ],
+      "answer": 0,
+      "why": "A bespoke item is custom-made for one client.",
+      "chunk": "oneoff"
+    },
+    {
+      "q": "One-off products have high build quality but cost a lot to make.",
+      "tf": true,
+      "why": "Skilled craftsmanship gives high quality, but the cost of production is high too.",
+      "chunk": "oneoff"
+    },
+    {
+      "q": "Which of these is mass produced?",
+      "options": [
+        "Popular soft drinks",
+        "A hand-made wedding dress",
+        "A cruise liner",
+        "A prototype"
+      ],
+      "answer": 0,
+      "why": "Vehicles, pharmaceuticals, popular soft drinks and mobile phones are mass produced.",
+      "chunk": "mass"
+    },
+    {
+      "q": "Why does mass production lower the cost per unit?",
+      "options": [
+        "Costs are spread over a large number of products",
+        "Each product is made by a skilled craftsperson",
+        "The machinery is cheap to set up",
+        "Each product is made to a client's brief"
+      ],
+      "answer": 0,
+      "why": "High volumes spread the costs, including set-up, over many products.",
+      "chunk": "mass"
+    },
+    {
+      "q": "Automated assembly lines need more workers than other methods.",
+      "tf": false,
+      "why": "Automated assembly lines need fewer workers.",
+      "chunk": "mass"
+    },
+    {
+      "q": "Setting up automated machinery or robots can be expensive.",
+      "tf": true,
+      "why": "Set-up costs are high, but they are spread over a large number of products.",
+      "chunk": "mass"
+    },
+    {
+      "q": "How long does continuous production run?",
+      "options": [
+        "24 hours a day, 7 days a week",
+        "Only during the working day",
+        "One batch at a time",
+        "Until a single item is finished"
+      ],
+      "answer": 0,
+      "why": "It never stops, so large volumes of one item are made.",
+      "chunk": "cont"
+    },
+    {
+      "q": "Which of these uses continuous production?",
+      "options": [
+        "An oil refinery",
+        "A wedding dress maker",
+        "A newspaper printer",
+        "A prototype workshop"
+      ],
+      "answer": 0,
+      "why": "Oil refineries, blast furnaces, paper pulp, smelting and chemical manufacture run continuously.",
+      "chunk": "cont"
+    },
+    {
+      "q": "Continuous production needs a large workforce.",
+      "tf": false,
+      "why": "It is highly automated, so it needs only a small workforce.",
+      "chunk": "cont"
+    },
+    {
+      "q": "In continuous production, machinery is set up to make large volumes of one item.",
+      "tf": true,
+      "why": "It makes a single item, such as steel or cement, in large volumes.",
+      "chunk": "cont"
+    },
+    {
+      "q": "Steel and cement are made by continuous production.",
+      "tf": true,
+      "why": "Household chemicals, petrochemicals, cement and steel are made continuously.",
+      "chunk": "cont"
+    },
+    {
+      "q": "The method of production is chosen by the type of product, its quality and its quantity.",
+      "tf": true,
+      "why": "Different products, quality standards and quantities suit different scales of production."
+    }
+  ],
+  "written": [
+    {
+      "type": "describe",
+      "q": "Describe the main features of batch production.",
+      "marks": 4,
+      "points": [
+        "A set quantity of consistent products is made to a quality standard.",
+        "Products are made in large batches, which reduces the cost per item.",
+        "Templates or moulds are used to keep products consistent.",
+        "Each batch is tested for quality and uniformity.",
+        "Machinery may need recalibrating or stopping between batches, causing downtime."
+      ],
+      "model": "Batch production makes a set quantity of consistent products to a quality standard. Making them in large batches reduces the cost of each item, and templates or moulds keep every product the same. Each batch is tested for quality and uniformity, but machinery may need recalibrating or stopping between batches, which causes downtime.",
+      "note": "1 mark per feature, up to 4."
+    },
+    {
+      "type": "explain",
+      "q": "Explain why a designer makes a prototype before a product goes into production.",
+      "marks": 2,
+      "points": [
+        "To evaluate and test the design.",
+        "To confirm how the product will be made (the methods).",
+        "To confirm what the product will cost to make."
+      ],
+      "model": "A prototype lets the designer evaluate and test the design before it is made in any quantity. It also confirms the methods that will be used to make it and what it will cost.",
+      "note": "1 mark per reason, up to 2."
+    },
+    {
+      "type": "explain",
+      "q": "Explain why mass production lowers the cost of making each mobile phone.",
+      "marks": 4,
+      "points": [
+        "Phones are standardised and made in large quantities.",
+        "Automated processes and assembly lines make high volumes efficiently.",
+        "Automated assembly lines need fewer workers.",
+        "Set-up costs for machinery or robots are high, but they are spread over a large number of phones.",
+        "So the cost per unit is reduced."
+      ],
+      "model": "Mobile phones are standardised, so they can be made in very large quantities on automated assembly lines, which make high volumes efficiently and need fewer workers. The automated machinery and robots are expensive to set up, but those costs are spread over a large number of phones, so the cost of making each one is reduced.",
+      "note": "1 mark per linked point, up to 4."
+    },
+    {
+      "type": "compare",
+      "q": "Compare one-off production with mass production.",
+      "marks": 4,
+      "points": [
+        "One-off makes a single item; mass production makes large quantities.",
+        "One-off items are often bespoke, made to a client's brief; mass-produced items are standardised.",
+        "One-off relies on a high level of skilled craftsmanship; mass production is automated and needs fewer workers.",
+        "One-off has a high cost of production; mass production spreads costs over many products, so the cost per unit is low.",
+        "One-off has high build quality; mass production makes high volumes efficiently."
+      ],
+      "model": "One-off production makes a single item, often bespoke to a client's brief, while mass production makes large quantities of standardised products. One-off items rely on a high level of skilled craftsmanship, but mass production uses automated assembly lines and needs fewer workers. One-off items are costly to make, whereas mass production spreads its costs over many products, so each one costs less.",
+      "note": "1 mark per valid comparison point, up to 4."
+    },
+    {
+      "type": "evaluate",
+      "q": "A furniture company makes one-off, bespoke oak tables. It plans to batch produce a range of standard tables instead. Evaluate this decision.",
+      "marks": 6,
+      "points": [
+        "Making tables in large batches would reduce the cost of each table.",
+        "Templates or moulds would keep every table in the batch consistent.",
+        "Each batch would be tested for quality and uniformity.",
+        "But machinery may need recalibrating or stopping between batches, causing downtime.",
+        "Tables would no longer be bespoke, made to each client's brief.",
+        "One-off tables have high build quality and skilled craftsmanship, but are costly to make.",
+        "Justified conclusion, e.g. batch production suits a lower-cost standard range; one-off suits clients who want a bespoke table and will pay more."
+      ],
+      "model": "Batch producing the tables would reduce the cost of each one, and using templates would keep every table in a batch consistent, with each batch tested for quality and uniformity. However, machinery may need recalibrating or stopping between batches, causing downtime. The company would also lose the bespoke service: one-off tables are made to each client's brief with a high level of skilled craftsmanship and build quality, although they cost more to make. Batch production is the better choice if the company wants to sell a standard range at a lower cost, but it should keep one-off production for clients who want a bespoke table and will pay more for it.",
+      "levels": [
+        {
+          "level": 3,
+          "marks": "5–6",
+          "text": "Detailed, balanced points on both sides, with a justified conclusion."
+        },
+        {
+          "level": 2,
+          "marks": "3–4",
+          "text": "Some points, mostly on one side, or a conclusion that isn't justified."
+        },
+        {
+          "level": 1,
+          "marks": "1–2",
+          "text": "Simple points, with no conclusion."
+        }
+      ],
+      "note": "Tick the points made, then use the levels under the model answer to decide the mark."
+    },
+    {
+      "type": "describe",
+      "q": "Describe the main features of continuous production.",
+      "marks": 3,
+      "points": [
+        "The process runs 24 hours a day, 7 days a week.",
+        "Machinery is set up to make large volumes of a single item.",
+        "Processes are highly automated, with a small workforce.",
+        "It is very expensive to set up, run and stop.",
+        "Used for products such as steel, cement, petrochemicals and household chemicals."
+      ],
+      "model": "Continuous production runs 24 hours a day, 7 days a week, with machinery set up to make large volumes of a single item, such as steel or cement. The processes are highly automated, so only a small workforce is needed, but the industries that use it are very expensive to run.",
+      "note": "1 mark per feature, up to 3."
+    }
+  ],
+  "related": [
+    {
+      "id": "g03-culture-society-production-systems",
+      "spec": "3.1.1"
+    },
+    {
+      "id": "g28-prototype-development",
+      "spec": "3.3.6"
+    },
+    {
+      "id": "g30-templates-marking-out-material-management",
+      "spec": "3.3.9"
+    }
+  ]
+}
