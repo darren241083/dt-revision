@@ -387,7 +387,12 @@
         {
           "term": "One item, large volumes",
           "tags": [],
-          "text": "Machinery is set up to make large volumes of a single item."
+          "text": "Machinery is set up to make large volumes of a single item.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/one-item-large-volumes.webp",
+            "alt": "One item, large volumes",
+            "credit": "--"
+          }
         }
       ],
       "check": [
