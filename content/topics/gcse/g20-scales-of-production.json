@@ -96,7 +96,12 @@
         {
           "term": "Templates and moulds",
           "tags": [],
-          "text": "Keep every product in the batch consistent."
+          "text": "Keep every product in the batch consistent.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/templates-and-moulds.webp",
+            "alt": "Templates and moulds",
+            "credit": "--"
+          }
         },
         {
           "term": "Quality testing",
