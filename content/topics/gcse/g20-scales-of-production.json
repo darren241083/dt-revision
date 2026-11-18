@@ -219,7 +219,12 @@
         {
           "term": "Quality and skill",
           "tags": [],
-          "text": "Build quality and the level of skilled craftsmanship are high."
+          "text": "Build quality and the level of skilled craftsmanship are high.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/quality-and-skill.webp",
+            "alt": "Quality and skill",
+            "credit": "--"
+          }
         },
         {
           "term": "High cost",
