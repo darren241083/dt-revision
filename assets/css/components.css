@@ -274,8 +274,9 @@ html.teach .frame-lenses .ico { width: 16px; height: 16px; padding: 5px; }
 
 /* Learn item cards: question first (the item's ask), then the image and a "Tap to reveal" area
    that turns into the term, text and tag. Reveal-card style; the reveal area sits at the foot.
-   Card 600px+ with an image: the question across the top, the image (320px) on the left and the
-   reveal area beside it, filling the image's height. */
+   Card 600px+ with an image: the image (320px) on the left from the card's top; the question and,
+   under it, the reveal area on the right, so the question lines up with the answer box. The
+   reveal area fills down to the image's foot. */
 .litems { display: flex; flex-direction: column; gap: 14px; container-type: inline-size; }
 .litem { cursor: pointer; }
 .litem.is-open { cursor: default; border-color: var(--teal); }
@@ -293,8 +294,8 @@ html.teach .frame-lenses .ico { width: 16px; height: 16px; padding: 5px; }
 .litem-caption { margin: 4px 0 0; color: var(--muted); }
 @container (min-width: 600px) {
   .litem.has-media { display: grid; grid-template-columns: 320px minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 14px 20px; align-items: stretch; }
-  .litem.has-media .litem-ask { grid-column: 1 / -1; }
-  .litem.has-media .litem-media { grid-column: 1; grid-row: 2; }
+  .litem.has-media .litem-ask { grid-column: 2; grid-row: 1; }
+  .litem.has-media .litem-media { grid-column: 1; grid-row: 1 / span 2; }
   .litem.has-media .litem-reveal { grid-column: 2; grid-row: 2; margin-top: 0; }
   .litem.has-media .litem-btn, .litem.has-media .litem-answer { flex: 1 0 auto; }
   .litem.has-media .litem-btn { display: flex; align-items: center; justify-content: center; }
