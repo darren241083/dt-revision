@@ -229,7 +229,12 @@
         {
           "term": "High cost",
           "tags": [],
-          "text": "The cost of making the item is high too."
+          "text": "The cost of making the item is high too.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/high-cost.webp",
+            "alt": "High cost",
+            "credit": "--"
+          }
         }
       ],
       "check": [
