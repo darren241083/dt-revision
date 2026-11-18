@@ -377,7 +377,12 @@
         {
           "term": "Small workforce",
           "tags": [],
-          "text": "Highly automated, so only a small workforce is needed."
+          "text": "Highly automated, so only a small workforce is needed.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/small-workforce.webp",
+            "alt": "Small workforce",
+            "credit": "--"
+          }
         },
         {
           "term": "One item, large volumes",
