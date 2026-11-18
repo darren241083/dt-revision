@@ -189,7 +189,12 @@
         {
           "term": "One-off production",
           "tags": [],
-          "text": "Making a single item, often custom or bespoke."
+          "text": "Making a single item, often custom or bespoke.",
+          "image": {
+            "file": "assets/img/gcse/g20-scales-of-production/one-off-production.webp",
+            "alt": "One-off production",
+            "credit": "--"
+          }
         },
         {
           "term": "Bespoke",
