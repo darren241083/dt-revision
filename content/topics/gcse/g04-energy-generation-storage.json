@@ -1,0 +1,1010 @@
+{
+  "id": "g04-energy-generation-storage",
+  "level": "gcse",
+  "title": "Energy generation and storage",
+  "titleMark": "storage",
+  "spec": [
+    "3.1.2"
+  ],
+  "section": "A",
+  "materials": [],
+  "book": {
+    "title": "ClearRevise AQA GCSE D&T 8552",
+    "pages": "13–16"
+  },
+  "audio": null,
+  "needs": [
+    "Describe how turbines and generators produce electricity.",
+    "Give advantages and disadvantages of fossil fuels, nuclear power and renewables.",
+    "Explain how wind, tidal, solar, biomass and hydroelectric power work.",
+    "Explain kinetic pumped storage.",
+    "Compare alkaline and rechargeable batteries and work out how many cells are needed."
+  ],
+  "doNow": [
+    {
+      "q": "In a power station, what does the turbine turn?",
+      "a": "A generator, which produces electricity.",
+      "from": "Pre-read p13"
+    },
+    {
+      "q": "What does a nuclear power plant split to release energy?",
+      "a": "Uranium atoms (fission).",
+      "from": "Pre-read p14"
+    },
+    {
+      "q": "Give one example of a finite resource.",
+      "a": "Fossil fuels, some minerals or metal ores.",
+      "from": "3.1.1"
+    },
+    {
+      "q": "What do the WEEE regulations make businesses do?",
+      "a": "Minimise electrical waste, promote reuse and recycle it correctly.",
+      "from": "3.1.1"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I'm a natural gas.",
+      "I'm trapped in rock in the earth's crust.",
+      "Water, sand and chemicals are pumped into the ground at high pressure to release me."
+    ],
+    "answer": "Shale gas",
+    "options": [
+      "Shale gas",
+      "Biogas",
+      "Coal",
+      "Uranium"
+    ]
+  },
+  "bigPicture": {
+    "question": "Where does our electricity come from, and how can we store it?",
+    "lenses": [
+      {
+        "icon": "cog",
+        "text": "How electricity is made"
+      },
+      {
+        "icon": "minus",
+        "text": "Fuels that run out"
+      },
+      {
+        "icon": "bolt",
+        "text": "Nuclear power"
+      },
+      {
+        "icon": "sun",
+        "text": "Renewable sources"
+      },
+      {
+        "icon": "scale",
+        "text": "Pros and cons"
+      },
+      {
+        "icon": "layers",
+        "text": "Storing energy"
+      }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "gen",
+      "label": "Turbines and generators",
+      "icon": "cog",
+      "pages": "13",
+      "summary": "Most electricity is made by spinning a turbine that turns a generator.",
+      "items": [
+        {
+          "term": "Energy generation",
+          "ask": "Where do you think most of the UK's electricity comes from?",
+          "tags": [],
+          "text": "We depend on electricity, much of it from burning fossil fuels, though renewable sources are increasing.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "How a power station works",
+          "tags": [],
+          "text": "From fuel to electricity:",
+          "steps": [
+            "Fuel is burned to release heat.",
+            "The heat superheats water into steam.",
+            "The steam spins a turbine.",
+            "The turbine turns a generator.",
+            "The generator converts the movement into electricity for the National Grid."
+          ]
+        }
+      ],
+      "diagram": {
+        "title": "Power station",
+        "svg": "<svg viewBox=\"0 0 300 250\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Simple power station: flames under a boiler, a steam pipe to a turbine, a shaft from the turbine to a generator, and a wire from the generator to an electricity pylon.\"><g transform=\"translate(0 30)\"><rect class=\"f\" x=\"20\" y=\"92\" width=\"64\" height=\"68\" rx=\"6\"/><path class=\"d\" d=\"M28 132q8-6 16 0t16 0t16 0\"/><path class=\"f\" d=\"M30 186l8-16l8 16zM56 186l8-16l8 16z\"/><path class=\"d\" d=\"M52 92V60H122\" style=\"stroke-width:6\"/><circle class=\"f\" cx=\"146\" cy=\"60\" r=\"24\"/><path class=\"d\" d=\"M146 40v40M126 60h40M132 46l28 28M160 46l-28 28\"/><path class=\"d\" d=\"M170 60h20\" style=\"stroke-width:5\"/><rect class=\"f\" x=\"190\" y=\"40\" width=\"50\" height=\"40\" rx=\"6\"/><path class=\"d\" d=\"M198 60h6l3-8l6 16l6-16l6 16l3-8h6\"/><path class=\"d\" d=\"M240 60Q254 62 262 84\"/><path class=\"d\" d=\"M262 186L274 74L286 186M266 152h16M269 118h10M262 84h24M274 74v-12\"/></g></svg>",
+        "parts": [
+          {
+            "x": 17,
+            "y": 83,
+            "lx": 17,
+            "ly": 94,
+            "name": "Fuel",
+            "text": "Fuel is burned to release heat."
+          },
+          {
+            "x": 17.3,
+            "y": 62,
+            "name": "Boiler",
+            "text": "The heat superheats water into steam."
+          },
+          {
+            "x": 28.3,
+            "y": 36,
+            "lx": 26,
+            "ly": 11,
+            "name": "Steam",
+            "text": "The steam is carried to the turbine."
+          },
+          {
+            "x": 48.7,
+            "y": 36,
+            "lx": 48.7,
+            "ly": 11,
+            "name": "Turbine",
+            "text": "The steam spins the turbine."
+          },
+          {
+            "x": 71.7,
+            "y": 36,
+            "lx": 71.7,
+            "ly": 11,
+            "name": "Generator",
+            "text": "Turned by the turbine, it produces electricity."
+          },
+          {
+            "x": 91.3,
+            "y": 52,
+            "name": "National Grid",
+            "text": "The electricity is supplied through the National Grid."
+          }
+        ]
+      },
+      "check": [
+        {
+          "q": "What does the steam do in a power station?",
+          "a": "It spins a turbine, which turns a generator."
+        },
+        {
+          "q": "What does a generator do?",
+          "a": "It converts the turbine's movement into electricity."
+        }
+      ]
+    },
+    {
+      "id": "fossil",
+      "label": "Fossil fuels",
+      "icon": "minus",
+      "pages": "13",
+      "summary": "Gas, coal and oil: finite fuels burned to create heat.",
+      "items": [
+        {
+          "term": "Fossil fuels",
+          "ask": "Which fuels do many power stations burn to make heat?",
+          "tags": [],
+          "text": "Finite resources burned to create heat: natural gas, coal and oil."
+        },
+        {
+          "term": "Gas, coal and oil",
+          "ask": "What is each fossil fuel mainly used for?",
+          "tags": [],
+          "text": "Gas powers much UK electricity, heating and cooking; coal is burned for energy; oil makes plastics and fuel."
+        },
+        {
+          "term": "Fossil fuel pros",
+          "ask": "Why have we relied on fossil fuels for so long?",
+          "tags": [],
+          "text": "A cheap, reliable energy source with well-developed systems to use it."
+        },
+        {
+          "term": "Fossil fuel cons",
+          "ask": "What harm does burning and extracting fossil fuels do?",
+          "tags": [],
+          "text": "Release carbon dioxide, adding to global warming; non-renewable; spills cause pollution."
+        },
+        {
+          "term": "Shale gas",
+          "ask": "Where else can natural gas be found, apart from in ordinary gas fields?",
+          "tags": [],
+          "text": "Natural gas trapped in shale rock in the earth's crust."
+        },
+        {
+          "term": "Fracking",
+          "ask": "How could gas that's locked inside rock be got out?",
+          "tags": [],
+          "text": "Hydraulic fracturing: water, sand and chemicals are forced into the rock at high pressure to release the gas.",
+          "imageOnReveal": true
+        }
+      ],
+      "check": [
+        {
+          "q": "Name the three fossil fuels.",
+          "a": "Natural gas, coal and oil."
+        },
+        {
+          "q": "What is fracking?",
+          "a": "Hydraulic fracturing: pumping water, sand and chemicals into shale rock at high pressure to release gas."
+        }
+      ]
+    },
+    {
+      "id": "nuclear",
+      "label": "Nuclear power",
+      "icon": "bolt",
+      "pages": "14",
+      "summary": "Splitting uranium atoms releases heat to make steam.",
+      "items": [
+        {
+          "term": "Fission",
+          "ask": "What happens inside a nuclear reactor to release energy?",
+          "tags": [],
+          "text": "Splitting uranium atoms in a nuclear reactor, which releases a large amount of heat."
+        },
+        {
+          "term": "Making electricity",
+          "ask": "Once a reactor makes heat, how is that turned into electricity?",
+          "tags": [],
+          "text": "The heat makes steam, which drives turbines to produce electricity."
+        },
+        {
+          "term": "Nuclear pros",
+          "ask": "Why might a country choose nuclear power?",
+          "tags": [],
+          "text": "Clean and efficient: burns no fossil fuel, runs continuously and generates power on a large scale."
+        },
+        {
+          "term": "Nuclear cons",
+          "ask": "What problem does nuclear power leave behind?",
+          "tags": [],
+          "text": "Radioactive waste that is dangerous to life, needing specialist handling, decommissioning and lots of storage.",
+          "imageOnReveal": true
+        }
+      ],
+      "check": [
+        {
+          "q": "What is nuclear fission?",
+          "a": "Splitting uranium atoms in a nuclear reactor, which releases heat."
+        },
+        {
+          "q": "Give one disadvantage of nuclear power.",
+          "a": "Its radioactive waste is dangerous and needs specialist handling, decommissioning and storage."
+        }
+      ]
+    },
+    {
+      "id": "windtidal",
+      "label": "Wind and tidal power",
+      "icon": "sun",
+      "pages": "14",
+      "summary": "Renewable sources that use moving air and water.",
+      "items": [
+        {
+          "term": "Renewable energy",
+          "ask": "Which sources of energy will never run out?",
+          "tags": [],
+          "text": "Natural, non-finite sources that are quickly replenished: wind, wave, tidal, hydroelectric, geothermal, biomass and solar.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "Wind turbines",
+          "ask": "How can moving air be turned into electricity?",
+          "tags": [],
+          "text": "Wind turns the blades on a rotor connected to a generator, converting kinetic energy into electricity.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "Wind pros",
+          "ask": "What makes wind power attractive?",
+          "tags": [],
+          "text": "Very cost effective to produce, clean, sustainable and renewable."
+        },
+        {
+          "term": "Wind cons",
+          "ask": "Why can't we rely on wind for all our electricity?",
+          "tags": [],
+          "text": "Unpredictable, wind farms spoil the landscape, and connecting remote sites to the grid can be costly."
+        },
+        {
+          "term": "Tidal power",
+          "ask": "How could the sea be used to make electricity?",
+          "tags": [],
+          "text": "Moving water turns underwater turbines, which drive generators.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "Barrage and stream",
+          "ask": "What two things about the sea could tidal systems make use of?",
+          "tags": [],
+          "text": "A tidal barrage uses the difference between high and low tide; tidal stream uses fast currents around coasts."
+        },
+        {
+          "term": "Tidal pros and cons",
+          "ask": "What's good and bad about tidal power?",
+          "tags": [],
+          "text": "Constant, predictable, renewable and clean, but expensive to set up and maintain."
+        }
+      ],
+      "check": [
+        {
+          "q": "Give one disadvantage of wind power.",
+          "a": "Unpredictable, affects the look of the landscape, or costly grid connections from remote sites."
+        },
+        {
+          "q": "Give one advantage of tidal power over wind power.",
+          "a": "It is constant and predictable."
+        }
+      ]
+    },
+    {
+      "id": "solarbio",
+      "label": "Solar, biomass and HEP",
+      "icon": "sun",
+      "pages": "15",
+      "summary": "Energy from sunlight, organic matter and falling water.",
+      "items": [
+        {
+          "term": "Solar panels",
+          "ask": "How can sunlight be turned straight into electricity?",
+          "tags": [],
+          "text": "Photovoltaic (PV) cells absorb light and convert it into electricity.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "Solar pros and cons",
+          "ask": "Do solar panels work all year round?",
+          "tags": [],
+          "text": "Clean, no greenhouse gases, works on sunny or cloudy days, but produces less in winter's shorter days."
+        },
+        {
+          "term": "Biomass energy",
+          "ask": "How could plants, wood chips or animal waste give us energy?",
+          "tags": [],
+          "text": "Energy from organic matter, released by burning or by anaerobic digestion, which makes biogas and biofertiliser."
+        },
+        {
+          "term": "Biomass pros and cons",
+          "ask": "When could using biomass harm the planet?",
+          "tags": [],
+          "text": "Renewable, plentiful and carbon neutral, but risks deforestation and more CO2 if trees aren't replanted."
+        },
+        {
+          "term": "Hydroelectric power",
+          "ask": "How can falling water be used to make electricity?",
+          "tags": [],
+          "text": "HEP: falling water's kinetic energy turns a turbine, which drives a generator; dams are the usual structure.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "HEP pros and cons",
+          "ask": "What does building a dam cost, apart from money?",
+          "tags": [],
+          "text": "Renewable, reliable, no pollution and matches demand, but dams are costly and flooding valleys harms ecosystems."
+        }
+      ],
+      "check": [
+        {
+          "q": "What do solar panels use to convert light into electricity?",
+          "a": "Photovoltaic (PV) cells."
+        },
+        {
+          "q": "Give one disadvantage of hydroelectric power.",
+          "a": "Dams are costly, and flooding a valley affects water flow, irrigation and ecosystems."
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "label": "Energy storage",
+      "icon": "layers",
+      "pages": "16",
+      "summary": "Storing energy so it can be used on demand or later.",
+      "items": [
+        {
+          "term": "Energy storage",
+          "ask": "Why would we need to store energy rather than use it straight away?",
+          "tags": [],
+          "text": "Lets energy be used on demand or later, using pumped storage, batteries, flywheels or capacitors."
+        },
+        {
+          "term": "Kinetic energy",
+          "ask": "What sort of energy does falling water have?",
+          "tags": [],
+          "text": "The energy an object has because it is moving."
+        },
+        {
+          "term": "Kinetic pumped storage",
+          "tags": [],
+          "text": "Two reservoirs and a dam top up the National Grid:",
+          "steps": [
+            "When demand is low, such as at night, electricity pumps water up to the upper reservoir.",
+            "The water is held there until it's needed.",
+            "At peak times, the dam opens and water falls to the lower reservoir.",
+            "The falling water drives turbines, quickly topping up the National Grid.",
+            "The water is pumped back up, ready for the cycle to start again."
+          ]
+        }
+      ],
+      "check": [
+        {
+          "q": "What is kinetic energy?",
+          "a": "The energy an object has because it is moving."
+        },
+        {
+          "q": "When is water pumped up in a pumped storage system?",
+          "a": "When electricity demand is low, such as at night."
+        }
+      ]
+    },
+    {
+      "id": "batteries",
+      "label": "Batteries",
+      "icon": "bolt",
+      "pages": "16",
+      "summary": "Chemicals that react to produce a voltage.",
+      "items": [
+        {
+          "term": "Batteries",
+          "ask": "What's happening inside a battery to make it work?",
+          "tags": [],
+          "text": "Chemicals react with each other to produce an electric voltage."
+        },
+        {
+          "term": "Alkaline battery",
+          "ask": "What happens to a single-use battery as you use it?",
+          "tags": [],
+          "text": "High capacity and long shelf life, but power gradually drops and it's useless once flat; 1.5 V per cell."
+        },
+        {
+          "term": "Rechargeable battery",
+          "ask": "What's different about a battery you can plug in to charge?",
+          "tags": [],
+          "text": "Charged many times from mains electricity; power stays constant until flat; 1.2 V per cell."
+        },
+        {
+          "term": "Battery disposal",
+          "ask": "Why shouldn't old batteries go in the bin?",
+          "tags": [],
+          "text": "Toxic chemicals can pollute soil and water in landfill, so take batteries to a recycling centre."
+        },
+        {
+          "term": "Cells in series",
+          "ask": "How do you work out how many batteries a product needs?",
+          "tags": [],
+          "text": "Voltages add up: cells needed = voltage required ÷ volts per cell."
+        }
+      ],
+      "check": [
+        {
+          "q": "What voltage is a typical alkaline cell, and a typical rechargeable cell?",
+          "a": "1.5 V alkaline; 1.2 V rechargeable."
+        },
+        {
+          "q": "Why should batteries be recycled, not put in landfill?",
+          "a": "Their toxic chemicals can contaminate the ground, causing soil or water pollution."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Turbine",
+      "def": "Spun by steam, wind or water; it turns the generator."
+    },
+    {
+      "term": "Generator",
+      "def": "Converts the turbine's movement into electricity."
+    },
+    {
+      "term": "Fossil fuels",
+      "def": "Finite fuels burned for heat: natural gas, coal and oil."
+    },
+    {
+      "term": "Fracking",
+      "def": "Hydraulic fracturing to release shale gas from rock."
+    },
+    {
+      "term": "Fission",
+      "def": "Splitting uranium atoms in a reactor to release heat."
+    },
+    {
+      "term": "Renewable energy",
+      "def": "Natural, non-finite sources that are quickly replenished."
+    },
+    {
+      "term": "Photovoltaic cells",
+      "def": "Cells in solar panels that convert light into electricity."
+    },
+    {
+      "term": "Biomass",
+      "def": "Organic matter such as plants, wood chips and animal waste used for energy."
+    },
+    {
+      "term": "Anaerobic digestion",
+      "def": "Breaking down biomass to make biogas and biofertiliser."
+    },
+    {
+      "term": "Hydroelectric power (HEP)",
+      "def": "Electricity from falling water turning a turbine."
+    },
+    {
+      "term": "Kinetic energy",
+      "def": "The energy an object has because it is moving."
+    },
+    {
+      "term": "Kinetic pumped storage",
+      "def": "Water pumped uphill when demand is low and released at peak times."
+    },
+    {
+      "term": "Alkaline battery",
+      "def": "Single-use battery, 1.5 V per cell."
+    },
+    {
+      "term": "Rechargeable battery",
+      "def": "Battery that can be charged many times, 1.2 V per cell."
+    }
+  ],
+  "apply": [
+    {
+      "q": "An island community with fast-flowing currents around its coast wants a predictable supply of electricity.",
+      "tools": [
+        "Tidal stream power",
+        "Wind turbines",
+        "Solar panels",
+        "A coal power station"
+      ],
+      "tool": 0,
+      "reasons": [
+        "It uses the fast currents around coasts and islands, and is constant and predictable",
+        "It is cost effective, but the wind is unpredictable",
+        "It is clean, but produces less in winter",
+        "It is reliable, but burns a finite fuel and releases carbon dioxide"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A wireless games controller is used for several hours every day.",
+      "tools": [
+        "Rechargeable batteries",
+        "Alkaline batteries",
+        "A flywheel",
+        "Kinetic pumped storage"
+      ],
+      "tool": 0,
+      "reasons": [
+        "They can be charged many times from the mains, and the power stays constant until they are flat",
+        "They have a long shelf life but can't be reused once flat",
+        "It stores energy by spinning",
+        "It tops up the National Grid at peak times"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "At half-time in a big match, millions of people switch on their kettles and the National Grid needs extra power fast.",
+      "tools": [
+        "Kinetic pumped storage",
+        "Nuclear power",
+        "Solar panels",
+        "Alkaline batteries"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Water held in the upper reservoir is released through turbines to top up the grid rapidly at peak times",
+        "It runs continuously on a large scale",
+        "It converts light into electricity",
+        "Each cell holds 1.5 volts"
+      ],
+      "reason": 0
+    }
+  ],
+  "order": {
+    "q": "Put the stages of a fossil fuel power station in order.",
+    "steps": [
+      "Fuel is burned to release heat",
+      "Water is superheated into steam",
+      "Steam spins the turbine",
+      "The turbine turns the generator",
+      "Electricity goes to the National Grid"
+    ]
+  },
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      {
+        "n": "Coal",
+        "why": "The only fossil fuel: finite and non-renewable."
+      },
+      {
+        "n": "Solar",
+        "why": "The only one that converts light straight into electricity, with no turbine."
+      },
+      {
+        "n": "Tidal",
+        "why": "The only one driven by the movement of the sea."
+      },
+      {
+        "n": "Biomass",
+        "why": "The only one made from organic matter."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "q": "In a power station, what does the turbine turn?",
+      "options": [
+        "A generator",
+        "A boiler",
+        "A reservoir",
+        "A battery"
+      ],
+      "answer": 0,
+      "why": "The generator converts the turbine's movement into electricity.",
+      "chunk": "gen"
+    },
+    {
+      "q": "Put these in order: fuel burned, steam made, turbine spins, generator turns. Which comes second?",
+      "options": [
+        "Steam made",
+        "Fuel burned",
+        "Turbine spins",
+        "Generator turns"
+      ],
+      "answer": 0,
+      "why": "Burning fuel superheats water into steam, which then spins the turbine.",
+      "chunk": "gen"
+    },
+    {
+      "q": "Natural gas, coal and oil are all finite resources.",
+      "tf": true,
+      "why": "They are fossil fuels and will run out.",
+      "chunk": "fossil"
+    },
+    {
+      "q": "Which fossil fuel is mainly used to make plastics as well as fuel?",
+      "options": [
+        "Oil",
+        "Coal",
+        "Natural gas",
+        "Uranium"
+      ],
+      "answer": 0,
+      "why": "Oil is mainly used to produce plastics or for fuel.",
+      "chunk": "fossil"
+    },
+    {
+      "q": "Which is an advantage of fossil fuels?",
+      "options": [
+        "Cheap and reliable",
+        "They never run out",
+        "They release no carbon dioxide",
+        "They cause no pollution"
+      ],
+      "answer": 0,
+      "why": "They are cheap and reliable, with well-developed systems.",
+      "chunk": "fossil"
+    },
+    {
+      "q": "Fracking pumps water, sand and chemicals into rock at high pressure to release shale gas.",
+      "tf": true,
+      "why": "Hydraulic fracturing breaks the rock to free the trapped gas.",
+      "chunk": "fossil"
+    },
+    {
+      "q": "What is split in nuclear fission?",
+      "options": [
+        "Uranium atoms",
+        "Water molecules",
+        "Carbon atoms",
+        "Coal"
+      ],
+      "answer": 0,
+      "why": "Splitting uranium atoms in a reactor releases heat.",
+      "chunk": "nuclear"
+    },
+    {
+      "q": "Nuclear power stations burn fossil fuels to make steam.",
+      "tf": false,
+      "why": "The heat comes from nuclear fission, not burning fuel.",
+      "chunk": "nuclear"
+    },
+    {
+      "q": "What is the main disadvantage of nuclear power?",
+      "options": [
+        "Radioactive waste that is dangerous and hard to store",
+        "It only works in daylight",
+        "It is unpredictable",
+        "It floods valleys"
+      ],
+      "answer": 0,
+      "why": "The waste needs specialist handling, decommissioning and lots of storage.",
+      "chunk": "nuclear"
+    },
+    {
+      "q": "Renewable energy sources are non-finite and quickly replenished.",
+      "tf": true,
+      "why": "Wind, tidal, solar, biomass and hydroelectric energy won't run out.",
+      "chunk": "windtidal"
+    },
+    {
+      "q": "Which is a disadvantage of wind power?",
+      "options": [
+        "It is unpredictable",
+        "It burns fossil fuels",
+        "It produces radioactive waste",
+        "It only works at night"
+      ],
+      "answer": 0,
+      "why": "Wind farms also affect the landscape and remote grid connections can be costly.",
+      "chunk": "windtidal"
+    },
+    {
+      "q": "Tidal power is constant and predictable.",
+      "tf": true,
+      "why": "The tides are regular, though tidal systems are expensive to set up and maintain.",
+      "chunk": "windtidal"
+    },
+    {
+      "q": "What does a tidal barrage use?",
+      "options": [
+        "The difference between high and low tide",
+        "Wind blowing across the sea",
+        "Sunlight on the water",
+        "Burning seaweed"
+      ],
+      "answer": 0,
+      "why": "Tidal stream systems use fast currents instead.",
+      "chunk": "windtidal"
+    },
+    {
+      "q": "What do solar panels use to turn light into electricity?",
+      "options": [
+        "Photovoltaic cells",
+        "Turbines",
+        "Uranium",
+        "Biogas"
+      ],
+      "answer": 0,
+      "why": "PV cells convert light directly into electricity.",
+      "chunk": "solarbio"
+    },
+    {
+      "q": "Solar panels only produce electricity on sunny days.",
+      "tf": false,
+      "why": "They work on sunny or cloudy days, but produce less in winter.",
+      "chunk": "solarbio"
+    },
+    {
+      "q": "Anaerobic digestion of biomass produces:",
+      "options": [
+        "Biogas and biofertiliser",
+        "Uranium and steam",
+        "Shale gas",
+        "Photovoltaic cells"
+      ],
+      "answer": 0,
+      "why": "Biomass energy can be released by burning or by anaerobic digestion.",
+      "chunk": "solarbio"
+    },
+    {
+      "q": "Which renewable source can be regulated to match demand?",
+      "options": [
+        "Hydroelectric power",
+        "Wind power",
+        "Solar power",
+        "Tidal stream power"
+      ],
+      "answer": 0,
+      "why": "Water held behind a dam can be released when it is needed.",
+      "chunk": "solarbio"
+    },
+    {
+      "q": "What is kinetic energy?",
+      "options": [
+        "The energy an object has because it is moving",
+        "Energy stored in chemicals",
+        "Energy from the sun",
+        "Heat from splitting atoms"
+      ],
+      "answer": 0,
+      "why": "Falling water has kinetic energy that drives turbines.",
+      "chunk": "storage"
+    },
+    {
+      "q": "In kinetic pumped storage, water is pumped up to the upper reservoir when demand is high.",
+      "tf": false,
+      "why": "It is pumped up when demand is low, such as at night, and released at peak times.",
+      "chunk": "storage"
+    },
+    {
+      "q": "What voltage does a typical alkaline cell hold?",
+      "options": [
+        "1.5 V",
+        "1.2 V",
+        "9 V",
+        "12 V"
+      ],
+      "answer": 0,
+      "why": "A typical rechargeable cell holds 1.2 V.",
+      "chunk": "batteries"
+    },
+    {
+      "q": "A rechargeable battery's power output stays constant until it runs flat.",
+      "tf": true,
+      "why": "An alkaline battery's output gradually decreases instead.",
+      "chunk": "batteries"
+    },
+    {
+      "q": "Why should used batteries go to a recycling centre?",
+      "options": [
+        "Their toxic chemicals can pollute soil and water",
+        "They can be recharged there for free",
+        "They are worth a lot of money",
+        "They explode in daylight"
+      ],
+      "answer": 0,
+      "why": "In landfill the chemicals can contaminate the ground.",
+      "chunk": "batteries"
+    },
+    {
+      "type": "calc",
+      "chunk": "batteries",
+      "q": "A torch needs {v} V. How many 1.5 V alkaline cells, connected in series, does it need?",
+      "vars": {
+        "v": {
+          "pick": [
+            3,
+            4.5,
+            6,
+            9,
+            12
+          ]
+        }
+      },
+      "answer": "v / 1.5",
+      "dp": 0,
+      "unit": "cells",
+      "method": [
+        "Cells needed = voltage required ÷ volts per cell",
+        "= {v} ÷ 1.5",
+        "= {answer} cells"
+      ]
+    },
+    {
+      "type": "calc",
+      "chunk": "batteries",
+      "q": "A wall clock needs {v} V. How many 1.2 V rechargeable cells, connected in series, does it need?",
+      "vars": {
+        "v": {
+          "pick": [
+            2.4,
+            3.6,
+            4.8,
+            6,
+            12
+          ]
+        }
+      },
+      "answer": "v / 1.2",
+      "dp": 0,
+      "unit": "cells",
+      "method": [
+        "Cells needed = voltage required ÷ volts per cell",
+        "= {v} ÷ 1.2",
+        "= {answer} cells"
+      ]
+    }
+  ],
+  "written": [
+    {
+      "type": "describe",
+      "q": "Describe how electricity is generated in a fossil fuel power station.",
+      "marks": 4,
+      "points": [
+        "The fossil fuel is burned to release heat.",
+        "The heat superheats water, turning it into steam.",
+        "The steam spins a turbine.",
+        "The turbine turns a generator.",
+        "The generator produces electricity, supplied through the National Grid."
+      ],
+      "model": "The fossil fuel is burned to release heat, which superheats water into steam. The steam spins a turbine, and the turbine turns a generator, which produces electricity for the National Grid.",
+      "note": "1 mark per step, up to 4."
+    },
+    {
+      "type": "explain",
+      "q": "Explain one advantage of using rechargeable batteries instead of alkaline batteries.",
+      "marks": 2,
+      "points": [
+        "They can be charged many times (1), so fewer batteries are thrown away or bought (1).",
+        "Their power output stays constant (1) until they run flat, unlike alkaline batteries whose output gradually falls (1)."
+      ],
+      "model": "Rechargeable batteries can be charged many times from the mains, so fewer batteries need to be bought and thrown away.",
+      "note": "1 mark for the advantage, 1 for explaining it. One advantage only."
+    },
+    {
+      "type": "compare",
+      "q": "Compare tidal power and wind power as ways of generating electricity.",
+      "marks": 4,
+      "points": [
+        "Both are renewable and clean.",
+        "Both turn turbines that drive generators.",
+        "Tidal power is constant and predictable; wind is unpredictable.",
+        "Tidal power is expensive to set up and maintain; wind is very cost effective to produce.",
+        "Wind farms affect the look of the landscape, and remote sites can be costly to connect to the grid."
+      ],
+      "model": "Both are renewable, clean sources that turn turbines connected to generators. Tidal power is constant and predictable, whereas wind is unpredictable. However, tidal power is expensive to set up and maintain, while wind energy is very cost effective, although wind farms affect the landscape and remote sites can be costly to connect to the grid.",
+      "note": "1 mark per comparison point, up to 4. Full marks need both sources compared."
+    },
+    {
+      "type": "explain",
+      "q": "Explain how a kinetic pumped storage system helps the National Grid meet peak demand.",
+      "marks": 4,
+      "points": [
+        "When demand is low, such as at night, electricity is used to pump water up to an upper reservoir.",
+        "The water stores energy until it is needed.",
+        "At peak times, the dam is opened and water falls to a lower reservoir.",
+        "The falling water's kinetic energy drives turbines to produce electricity.",
+        "This rapidly tops up the National Grid supply."
+      ],
+      "model": "When demand is low, such as at night, electricity pumps water up to an upper reservoir, where it is stored. At peak times the dam is opened and the water falls to a lower reservoir, its kinetic energy driving turbines. This produces electricity quickly, rapidly topping up the National Grid.",
+      "note": "1 mark per point, up to 4."
+    },
+    {
+      "type": "evaluate",
+      "q": "Evaluate nuclear power as a way of generating electricity.",
+      "marks": 6,
+      "points": [
+        "It burns no fossil fuels, so it is clean.",
+        "It is efficient and generates power on a large scale.",
+        "It runs continuously, so supply is reliable.",
+        "Its waste is radioactive and dangerous to life.",
+        "The waste needs specialist handling and lots of storage space.",
+        "Power stations need decommissioning at the end of their life.",
+        "Justified conclusion, e.g. a good source of large-scale, continuous power only if the waste can be stored safely."
+      ],
+      "model": "Nuclear power burns no fossil fuels, so it is clean, and it is efficient, generating power on a large scale and running continuously. However, its waste is radioactive and dangerous to life, needing specialist handling and lots of storage space, and power stations must be decommissioned. Overall it is a good source of reliable, large-scale power, but only if the waste can be handled and stored safely for a long time.",
+      "levels": [
+        {
+          "level": 3,
+          "marks": "5–6",
+          "text": "Detailed, balanced points on both sides, with a justified conclusion."
+        },
+        {
+          "level": 2,
+          "marks": "3–4",
+          "text": "Some points, mostly on one side, or a conclusion that isn't justified."
+        },
+        {
+          "level": 1,
+          "marks": "1–2",
+          "text": "Simple points, with no conclusion."
+        }
+      ],
+      "note": "Tick the points made, then use the levels under the model answer to decide the mark."
+    },
+    {
+      "type": "explain",
+      "q": "Explain why used batteries should be taken to a recycling centre rather than put in a bin.",
+      "marks": 3,
+      "points": [
+        "Batteries contain toxic chemicals.",
+        "In landfill, the chemicals can contaminate the ground.",
+        "This causes soil or water pollution, harming the environment.",
+        "At a recycling centre they are disposed of correctly."
+      ],
+      "model": "Batteries contain toxic chemicals. If they end up in landfill, these chemicals can contaminate the ground and cause soil or water pollution, harming the environment, so they should be disposed of correctly at a recycling centre.",
+      "note": "1 mark per point, up to 3."
+    }
+  ],
+  "related": [
+    {
+      "id": "g02-sustainability-environment-people",
+      "spec": "3.1.1"
+    },
+    {
+      "id": "g05-modern-smart-materials",
+      "spec": "3.1.3"
+    }
+  ]
+}
