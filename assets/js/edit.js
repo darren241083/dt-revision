@@ -10,13 +10,19 @@ import { stripAudio, cleanWebp } from "./audiostrip.js";
 
 const BRANCH = "main";
 const API = "https://api.github.com";
-const KEYS = { token: "editToken", repo: "editRepo", notes: "editNotes" };
+const KEYS = { token: "editToken", repo: "editRepo", notes: "editNotes", cands: "editCandidates" };
 
 let ctx = null, bar = null, phrases = null;
 const token = () => store.get(KEYS.token, "");
 const repo = () => store.get(KEYS.repo, "");
 // Image search phrases: a path template in the repository with {id} for the topic id.
 const notesPath = (id) => (store.get(KEYS.notes, "") || "").replace(/\{id\}/g, id);
+// Candidate images waiting to be picked: "branch:folder/{level}/{id}", typed into the settings.
+function candidatesAt() {
+  const m = (store.get(KEYS.cands, "") || "").match(/^([^:\s]+):(.+)$/);
+  if (!m || !ctx?.topic) return null;
+  return { branch: m[1], folder: m[2].replace(/\{level\}/g, ctx.level).replace(/\{id\}/g, ctx.topic().id).replace(/\/+$/, "") };
+}
 
 /* ---------- GitHub ---------- */
 
@@ -25,13 +31,13 @@ class GhError extends Error {
   constructor(status, detail) { super(`GitHub ${status}`); this.status = status; this.detail = detail || ""; }
 }
 
-async function gh(path, { method = "GET", body, raw } = {}) {
+async function gh(path, { method = "GET", body, raw, blob } = {}) {
   let res;
   try {
     res = await fetch(`${API}/repos/${repo()}${path}`, {
       method,
       headers: {
-        Accept: raw ? "application/vnd.github.raw+json" : "application/vnd.github+json",
+        Accept: raw || blob ? "application/vnd.github.raw+json" : "application/vnd.github+json",
         Authorization: `Bearer ${token()}`,
         "X-GitHub-Api-Version": "2022-11-28",
         ...(body ? { "Content-Type": "application/json" } : {})
@@ -47,14 +53,16 @@ async function gh(path, { method = "GET", body, raw } = {}) {
     try { detail = (await res.json()).message || ""; } catch { /* no explanation */ }
     throw new GhError(res.status, detail);
   }
-  return raw ? res.text() : res.json();
+  return blob ? res.blob() : raw ? res.text() : res.json();
 }
 
-const readText = (path) => gh(`/contents/${path.split("/").map(encodeURIComponent).join("/")}?ref=${BRANCH}`, { raw: true });
+const contentsUrl = (path, ref) => `/contents/${path.split("/").map(encodeURIComponent).join("/")}?ref=${encodeURIComponent(ref)}`;
+const readText = (path, ref = BRANCH) => gh(contentsUrl(path, ref), { raw: true });
+const readBlob = (path, ref = BRANCH) => gh(contentsUrl(path, ref), { blob: true });
 
 // One commit for several files: [{ path, text } | { path, base64 } | { path, remove: true }]
-async function commit(files, message) {
-  const ref = await gh(`/git/ref/heads/${BRANCH}`);
+async function commit(files, message, branch = BRANCH) {
+  const ref = await gh(`/git/ref/heads/${branch}`);
   const parent = ref.object.sha;
   const base = await gh(`/git/commits/${parent}`);
   const tree = [];
@@ -66,7 +74,7 @@ async function commit(files, message) {
   }
   const newTree = await gh("/git/trees", { method: "POST", body: { base_tree: base.tree.sha, tree } });
   const c = await gh("/git/commits", { method: "POST", body: { message, tree: newTree.sha, parents: [parent] } });
-  await gh(`/git/refs/heads/${BRANCH}`, { method: "PATCH", body: { sha: c.sha } });
+  await gh(`/git/refs/heads/${branch}`, { method: "PATCH", body: { sha: c.sha } });
 }
 
 function problem(err) {
@@ -133,25 +141,30 @@ function needToken() {
 function tokenDialog() {
   const repoIn = h("input", { type: "text", autocomplete: "off", spellcheck: "false", placeholder: "owner/repository", value: repo() });
   const notesIn = h("input", { type: "text", autocomplete: "off", spellcheck: "false", placeholder: "folder/{id}/file.md", value: store.get(KEYS.notes, "") });
+  const candsIn = h("input", { type: "text", autocomplete: "off", spellcheck: "false", placeholder: "branch:folder/{level}/{id}", value: store.get(KEYS.cands, "") });
   const tokenIn = h("input", { type: "password", autocomplete: "off", spellcheck: "false", placeholder: "github_pat_…" });
   const msg = status();
   const save = h("button", { type: "button", class: "btn-dark" }, "Save");
   const dlg = dialog("Edit mode settings",
     field("Repository", repoIn, "The repository edit mode saves to, as owner/name."),
     field("Image notes path (optional)", notesIn, "Where each topic's image search phrases are, with {id} for the topic id."),
+    field("Image candidates (optional)", candsIn, "The branch and folder of each topic's candidate images, as branch:folder with {level} and {id}."),
     field("GitHub fine-grained token", tokenIn, "Access to that repository only, with Contents: Read and write."),
-    h("p", { class: "dlg-note" }, "All three are kept in this browser only. Forget token clears them."),
+    h("p", { class: "dlg-note" }, "All of these are kept in this browser only. Forget token clears them."),
     h("div", { class: "btn-row" }, save), msg);
   save.addEventListener("click", async () => {
     const r = repoIn.value.trim().replace(/^https?:\/\/github\.com\//, "").replace(/\.git$|\/$/g, "");
     const n = notesIn.value.trim();
+    const cnd = candsIn.value.trim();
     const t = tokenIn.value.trim() || token();
     if (!/^[\w.-]+\/[\w.-]+$/.test(r)) return say(msg, "Type the repository as owner/name.", "bad");
     if (n && !n.includes("{id}")) return say(msg, "Put {id} in the notes path where the topic id goes.", "bad");
+    if (cnd && !/^[^:\s]+:.*\{id\}/.test(cnd)) return say(msg, "Type the candidates as branch:folder, with {id} where the topic id goes.", "bad");
     if (!t) return say(msg, "Paste the token.", "bad");
-    const old = { token: token(), repo: repo(), notes: store.get(KEYS.notes, "") };
+    const old = { token: token(), repo: repo(), notes: store.get(KEYS.notes, ""), cands: store.get(KEYS.cands, "") };
     store.set(KEYS.repo, r);
     store.set(KEYS.notes, n);
+    store.set(KEYS.cands, cnd);
     store.set(KEYS.token, t);
     say(msg, "Checking…");
     try {
@@ -202,6 +215,70 @@ const SEARCHES = [
 ];
 
 export const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+/* ---------- Candidate images ---------- */
+
+// Candidates are made ahead of time, 2–4 per empty slot, and wait on their own branch with a
+// manifest per topic ({ candidates: [{ item, chunk, kind, key, route, file, credit, alt, … }],
+// rejected: [{ item, key, sourceUrl }] }). Picking one saves it like any other image and deletes
+// the slot's candidates; None of these deletes them too and marks the slot to be tried again.
+
+const ROUTE_LABEL = { photo: "Photo", scene: "AI", diagram: "Diagram" };
+export const slotKey = (name, isDiagram) => slug(name) + (isDiagram ? "--diagram" : "");
+
+async function readManifest(at) {
+  try { return JSON.parse(await readText(`${at.folder}/manifest.json`, at.branch)); } catch (e) {
+    if (e?.status === 404) return null;
+    throw e;
+  }
+}
+
+// Deletes a slot's candidates. With `reject`, their sources are remembered so they aren't offered again.
+async function clearCandidates(at, key, reject) {
+  const m = await readManifest(at);
+  const mine = (m?.candidates || []).filter((c) => c.key === key);
+  if (!mine.length) return;
+  m.candidates = m.candidates.filter((c) => c.key !== key);
+  if (reject) {
+    m.rejected ||= [];
+    mine.filter((c) => c.sourceUrl).forEach((c) => m.rejected.push({ item: c.item, key, sourceUrl: c.sourceUrl }));
+  }
+  await commit([
+    ...mine.map((c) => ({ path: `${at.folder}/${c.file}`, remove: true })),
+    { path: `${at.folder}/manifest.json`, text: JSON.stringify(m, null, 2) + "\n" }
+  ], `Candidates ${reject ? "turned down" : "picked"}: ${mine[0].item} (${ctx.topic().id})`, at.branch);
+}
+
+// Sets the slot's Status cell in the image notes table to "redo" or "redo: <note>". A name used by
+// both a diagram and an item has the diagram's row first.
+export function markRedo(md, name, isDiagram, note) {
+  const lines = md.split(/\r?\n/);
+  const cellsOf = (l) => l.trim().replace(/^\||\|$/g, "").split("|").map((x) => x.trim());
+  const head = lines.findIndex((l) => /^\s*\|\s*item\s*\|/i.test(l));
+  if (head < 0) throw new Error("The image notes have no table to mark.");
+  const col = cellsOf(lines[head]).map((c) => c.toLowerCase()).indexOf("status");
+  if (col < 0) throw new Error("The image notes table has no Status column.");
+  const rows = [];
+  for (let i = head + 1; i < lines.length && /^\s*\|/.test(lines[i]); i++) {
+    const c = cellsOf(lines[i]);
+    if (c[0].toLowerCase() === name.toLowerCase()) rows.push({ i, c });
+  }
+  if (!rows.length) throw new Error(`"${name}" isn't in the image notes.`);
+  const row = isDiagram ? rows[0] : rows[rows.length - 1];
+  while (row.c.length <= col) row.c.push("");
+  const why = String(note || "").replace(/[|\r\n]+/g, " ").replace(/\s+/g, " ").trim();
+  row.c[col] = why ? `redo: ${why}` : "redo";
+  lines[row.i] = `| ${row.c.join(" | ")} |`;
+  return lines.join("\n");
+}
+
+// A drawn SVG candidate, kept as it is (no conversion); its size comes from the viewBox.
+async function svgReady(blob) {
+  const svg = await blob.text();
+  if (!/^\s*(<\?xml[^>]*>\s*)?<svg\b/i.test(svg)) throw new Error("That drawing isn't a valid SVG file.");
+  const vb = svg.match(/viewBox\s*=\s*["']\s*[-\d.]+[\s,]+[-\d.]+[\s,]+([\d.]+)[\s,]+([\d.]+)/i);
+  return { svg, blob: new Blob([svg], { type: "image/svg+xml" }), width: vb ? Math.round(+vb[1]) : 800, height: vb ? Math.round(+vb[2]) : 600 };
+}
 
 /* ---------- Images ---------- */
 
@@ -283,6 +360,10 @@ async function imageDialog(ref) {
   const name = target.name;
   const { id } = ctx.topic();
   const now = currentImage(target.obj, isDiagram);
+  const cands = candidatesAt();
+  const key = slotKey(name, isDiagram);
+  const candBox = cands && h("section", { class: "dlg-cands", "aria-label": "Candidate images" },
+    h("p", { class: "dlg-note" }, "Looking for candidates…"));
   const phraseInput = h("input", { type: "text", value: isDiagram ? `${name} line drawing white background` : `${name} on a white background` });
   phraseFor(name, phraseInput.value).then((p) => { phraseInput.value = p; drawLinks(); });
   const links = h("p", { class: "dlg-links" });
@@ -335,6 +416,7 @@ async function imageDialog(ref) {
 
   const dlg = dialog(isDiagram ? `Diagram: ${name}` : `Image: ${name}`,
     now && nowShowing(h("img", { src: now.file, alt: "" }), h("small", {}, now.credit || "No credit")),
+    candBox,
     field("Search phrase", h("span", { class: "dlg-inline" }, phraseInput, copy)),
     links, drop, preview,
     field("Alt text", alt),
@@ -346,14 +428,18 @@ async function imageDialog(ref) {
   document.addEventListener("paste", onPaste);
   dlg.addEventListener("close", () => document.removeEventListener("paste", onPaste));
 
-  // Saves a change to this item or diagram, then shows it on this page and closes.
-  async function run(edit, files, message, local) {
+  // Saves a change to this item or diagram, then shows it on this page and closes. `after` runs
+  // once the save is in (tidying the candidates).
+  async function run(edit, files, message, local, after) {
     busy(true);
     const ok = await saveTopic(msg, (t) => {
       const tgt = findTarget(t, ref);
       if (!tgt) throw new Error("That item isn't in the saved topic file any more. Reload the page.");
       return edit(tgt.obj, t);
     }, files, message);
+    if (ok && after) {
+      try { await after(); } catch (e) { say(msg, `Saved, but the candidates weren't cleared: ${problem(e)}`, "bad"); }
+    }
     busy(false);
     if (!ok) return;
     local(target.obj);
@@ -374,18 +460,98 @@ async function imageDialog(ref) {
     return true;
   };
 
-  save.addEventListener("click", async () => {
+  // Saves `ready` (a WebP, or a drawn SVG kept as it is) as this slot's image.
+  async function saveReady(after) {
     if (!ready || needCredit()) return;
-    const file = `assets/img/${ctx.level}/${id}/${slug(name)}.webp`;
+    const file = `assets/img/${ctx.level}/${id}/${slug(name)}.${ready.svg ? "svg" : "webp"}`;
     const put = (o, f) => {
       if (isDiagram) { Object.assign(o, { image: f, ...details(), width: ready.width, height: ready.height }); delete o.svg; }
       else { o.image = { file: f, ...details() }; setCaption(o); }
     };
-    const base64 = toBase64(await ready.blob.arrayBuffer());
+    const files = ready.svg
+      ? [{ path: `site/${file}`, text: ready.svg }]
+      : [{ path: `site/${file}`, base64: toBase64(await ready.blob.arrayBuffer()) }];
     // This page shows the new image straight away; the public copy follows after publishing.
     const local = URL.createObjectURL(ready.blob);
-    run((o) => { put(o, file); }, [{ path: `site/${file}`, base64 }], `Image: ${name} (${id})`, (o) => put(o, local));
-  });
+    run((o, t) => {
+      const old = isDiagram ? o.image : o.image?.file;
+      put(o, file);
+      // A replaced image with the other extension (.webp ↔ .svg) would be left behind.
+      const used = t.chunks.some((c) => c.diagram?.image === old || c.items.some((it) => it.image?.file === old));
+      return old && old !== file && !old.startsWith("blob:") && !used ? [{ path: `site/${old}`, remove: true }] : [];
+    }, files, `Image: ${name} (${id})`, (o) => put(o, local), after);
+  }
+  save.addEventListener("click", () => saveReady());
+
+  // Candidates for this slot, when there are any: tap one, then Use this; or None of these.
+  async function loadCandidates() {
+    let m;
+    try { m = await readManifest(cands); } catch (e) { fill(candBox, h("p", { class: "dlg-status bad" }, problem(e))); return; }
+    const list = (m?.candidates || []).filter((c) => c.key === key && (!c.chunk || c.chunk === ref.chunk));
+    if (!list.length) { candBox.remove(); return; }
+    let chosen = null;
+    const use = h("button", { type: "button", class: "btn-dark", disabled: true }, "Use this");
+    const none = h("button", { type: "button", class: "btn-line", "aria-expanded": "false" }, "None of these");
+    const note = h("input", { type: "text", placeholder: "e.g. show it from the side" });
+    const redo = h("button", { type: "button", class: "btn-line" }, "Try again next run");
+    const noneForm = h("div", { class: "cand-none", hidden: true }, field("Note for the next try (optional)", note), h("div", { class: "btn-row" }, redo));
+    const cards = list.map((c) => {
+      const img = h("img", { alt: c.alt || "" });
+      const card = h("button", { type: "button", class: "cand", "aria-pressed": "false" },
+        h("span", { class: "cand-img" }, img),
+        h("span", { class: `cand-badge r-${c.route}` }, ROUTE_LABEL[c.route] || c.route),
+        h("small", { class: "cand-credit" }, c.credit || ""));
+      readBlob(`${cands.folder}/${c.file}`, cands.branch).then((b) => {
+        // Drawings come back untyped; type them so the browser draws them.
+        c.blob = c.file.endsWith(".svg") ? new Blob([b], { type: "image/svg+xml" }) : b;
+        img.src = URL.createObjectURL(c.blob);
+      }).catch(() => { img.alt = "Couldn't load this one"; });
+      card.addEventListener("click", () => {
+        chosen = c;
+        cards.forEach((x) => x.setAttribute("aria-pressed", String(x === card)));
+        credit.value = c.credit || "";
+        alt.value = c.alt || name;
+        use.disabled = false;
+      });
+      return card;
+    });
+    use.addEventListener("click", async () => {
+      if (!chosen) return;
+      say(msg, "Preparing…");
+      try {
+        const b = chosen.blob || await readBlob(`${cands.folder}/${chosen.file}`, cands.branch);
+        ready = chosen.file.endsWith(".svg") ? await svgReady(b) : await toWebp(b);
+      } catch (e) { ready = null; say(msg, problem(e), "bad"); return; }
+      saveReady(() => clearCandidates(cands, key, false));
+    });
+    none.addEventListener("click", () => {
+      noneForm.hidden = !noneForm.hidden;
+      none.setAttribute("aria-expanded", String(!noneForm.hidden));
+      if (!noneForm.hidden) note.focus();
+    });
+    redo.addEventListener("click", async () => {
+      const path = notesPath(id);
+      if (!path) return say(msg, "Add the image notes path in the edit mode settings first.", "bad");
+      [use, none, redo].forEach((b) => { b.disabled = true; });
+      say(msg, "Saving…");
+      try {
+        const md = await readText(path);
+        await commit([{ path, text: markRedo(md, name, isDiagram, note.value) }], `Image redo: ${name} (${id})`);
+        await clearCandidates(cands, key, true);
+        candBox.remove();
+        say(msg, "Marked to try again on the next run. The search and drop zone below still work.", "good");
+      } catch (e) {
+        [use, none, redo].forEach((b) => { b.disabled = false; });
+        use.disabled = !chosen;
+        say(msg, problem(e), "bad");
+      }
+    });
+    fill(candBox,
+      h("span", { class: "dlg-current-label" }, `Candidates · ${list.length}`),
+      h("div", { class: "cand-grid" }, cards),
+      h("div", { class: "btn-row" }, use, none), noneForm);
+  }
+  if (candBox) loadCandidates();
 
   saveDetails?.addEventListener("click", () => {
     if (needCredit()) return;
