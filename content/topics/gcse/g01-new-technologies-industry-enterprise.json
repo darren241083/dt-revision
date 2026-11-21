@@ -97,7 +97,12 @@
           "term": "Using science",
           "ask": "Where do brand-new materials and products often start?",
           "tags": [],
-          "text": "New scientific discoveries lead to new materials and products."
+          "text": "New scientific discoveries lead to new materials and products.",
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/using-science.webp",
+            "alt": "Using science",
+            "credit": "--"
+          }
         },
         {
           "term": "Skills and knowledge",
