@@ -93,7 +93,7 @@
         { "term": "Planned waste disposal", "ask": "Why should a large factory plan what happens to its waste?", "tags": [], "text": "Careful planning has many benefits, especially in large plants, and cuts landfill." },
         { "term": "Reusing waste", "ask": "What could a factory do with its leftover offcuts?", "tags": [], "text": "Waste material is reused inside the factory for other parts and products." },
         { "term": "Selling recyclable waste", "ask": "How could a factory win back some of the money it spent on materials?", "tags": [], "text": "Selling waste that can be recycled recoups some of the cost of materials." },
-        { "term": "Energy from waste", "ask": "How could waste help keep a factory warm and powered?", "tags": [], "text": "Waste such as biomass can generate heat and power for the business." }
+        { "term": "Energy from waste", "ask": "What else could a factory get out of waste it can't reuse or sell?", "tags": [], "text": "Waste such as biomass can generate heat and power for the business." }
       ],
       "check": [
         { "q": "Give two ways a factory can make use of its waste.", "a": "Any two of: reuse it for other parts and products, sell recyclable waste, use it to generate heat and power." },

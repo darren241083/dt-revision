@@ -14,7 +14,7 @@
       "topics": [
         { "id": "g01-new-technologies-industry-enterprise", "code": "G01", "title": "New technologies, industry and enterprise", "spec": ["3.1.1"], "section": "A", "pages": "2–4", "built": true },
         { "id": "g02-sustainability-environment-people", "code": "G02", "title": "Sustainability, environment and people", "spec": ["3.1.1"], "section": "A", "pages": "5–7", "built": true },
-        { "id": "g03-culture-society-production-systems", "code": "G03", "title": "Culture, society and production systems", "spec": ["3.1.1"], "section": "A", "pages": "8–11", "built": false },
+        { "id": "g03-culture-society-production-systems", "code": "G03", "title": "Culture, society and production systems", "spec": ["3.1.1"], "section": "A", "pages": "8–11", "built": true },
         { "id": "g04-energy-generation-storage", "code": "G04", "title": "Energy generation and storage", "spec": ["3.1.2"], "section": "A", "pages": "13–16", "built": false },
         { "id": "g05-modern-smart-materials", "code": "G05", "title": "Modern and smart materials", "spec": ["3.1.3"], "section": "A", "pages": "17–18", "built": false },
         { "id": "g06-composites-technical-textiles", "code": "G06", "title": "Composites and technical textiles", "spec": ["3.1.3"], "section": "A", "pages": "19–21", "built": false },
