@@ -108,7 +108,12 @@
           "term": "Skills and knowledge",
           "ask": "What skills do you think people need to develop new technology?",
           "tags": [],
-          "text": "Communication, design, innovation, modelling and manufacturing, plus problem solving."
+          "text": "Communication, design, innovation, modelling and manufacturing, plus problem solving.",
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/skills-and-knowledge.webp",
+            "alt": "Skills and knowledge",
+            "credit": "--"
+          }
         },
         {
           "term": "People, tools and machines",
