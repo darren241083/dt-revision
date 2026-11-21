@@ -1,0 +1,347 @@
+{
+  "id": "g02-sustainability-environment-people",
+  "level": "gcse",
+  "title": "Sustainability, environment and people",
+  "titleMark": "environment and people",
+  "spec": ["3.1.1"],
+  "section": "A",
+  "materials": [],
+  "book": { "title": "ClearRevise AQA GCSE D&T 8552", "pages": "5–7" },
+  "audio": null,
+  "needs": [
+    "Explain sustainability, finite and non-finite resources, with examples.",
+    "Describe the five stages of a Life Cycle Assessment.",
+    "Explain how planned waste disposal, continuous improvement and efficient working help.",
+    "Explain how manufacturing causes global warming and pollution.",
+    "Compare technology push and market pull, and explain changing job roles."
+  ],
+  "doNow": [
+    { "q": "Give one example of a finite resource.", "a": "Fossil fuels, some minerals or metal ores.", "from": "Pre-read p5" },
+    { "q": "What is market pull?", "a": "Designers making a product because the market needs it.", "from": "Pre-read p7" },
+    { "q": "Give one advantage of using robots in a factory.", "a": "Faster, accurate, consistent output, lower labour costs or working 24/7.", "from": "3.1.1" },
+    { "q": "How do automated assembly lines affect the number of workers?", "a": "They need fewer workers.", "from": "3.2.7" }
+  ],
+  "starter": {
+    "clues": [
+      "I'm in plentiful supply.",
+      "I can be grown or replaced as fast as I'm used.",
+      "Solar and wind energy, timber and cotton are examples of me."
+    ],
+    "answer": "Non-finite resource",
+    "options": ["Non-finite resource", "Finite resource", "Fossil fuel", "Waste material"]
+  },
+  "bigPicture": {
+    "question": "How can we make products without using up the planet?",
+    "lenses": [
+      { "icon": "globe", "text": "Resources that run out" },
+      { "icon": "refresh", "text": "A product's whole life" },
+      { "icon": "box", "text": "What happens to waste" },
+      { "icon": "sun", "text": "Harm to the environment" },
+      { "icon": "chart", "text": "Working more efficiently" },
+      { "icon": "people", "text": "Markets and jobs" }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "resources",
+      "label": "Finite and non-finite resources",
+      "icon": "globe",
+      "pages": "5",
+      "summary": "Some resources will run out; others can be grown or replaced.",
+      "items": [
+        { "term": "Sustainability", "ask": "What would it take to keep making products for hundreds of years to come?", "tags": [], "text": "Meeting today's needs without harming future generations' ability to meet theirs." },
+        { "term": "Overharvesting and overconsumption", "ask": "What happens to the planet when we take and use more than it can supply?", "tags": [], "text": "Taking and using too much harms the planet, so designers now check which materials are sustainable." },
+        { "term": "Finite resources", "ask": "Which resources could one day run out?", "tags": [], "text": "Limited in supply and used faster than replaced, such as fossil fuels, some minerals and metal ores.", "imageOnReveal": true },
+        { "term": "Using finite resources", "ask": "When is it acceptable to use something that will run out?", "tags": [], "text": "Avoid them, or use small amounts for essential reasons when there is no alternative." },
+        { "term": "Non-finite resources", "ask": "Which resources could we keep using without running out?", "tags": [], "text": "Plentiful and grown or replaced as fast as used, such as solar and wind energy, timber and cotton.", "imageOnReveal": true }
+      ],
+      "check": [
+        { "q": "What is a finite resource? Give one example.", "a": "A resource in limited supply that is used faster than it can be replaced, such as fossil fuels, some minerals or metal ores." },
+        { "q": "Give two examples of non-finite resources.", "a": "Any two of: solar energy, wind energy, timber, cotton." }
+      ]
+    },
+    {
+      "id": "lca",
+      "label": "Life Cycle Assessment",
+      "icon": "refresh",
+      "pages": "5",
+      "summary": "Assessing a product's impact on the environment at every stage of its life.",
+      "items": [
+        { "term": "Life Cycle Assessment (LCA)", "ask": "How could a company find out how much harm its product does to the environment, from start to finish?", "tags": [], "text": "Assesses a product's environmental impact at each stage of its life." },
+        { "term": "Energy at every stage", "ask": "What does every stage of making, moving and using a product use up?", "tags": [], "text": "Each stage uses energy, from getting the raw material to transporting the product." },
+        { "term": "Stages of an LCA", "tags": [], "text": "The five stages of a product's life:",
+          "steps": [
+            "Extraction and processing: energy to take raw material from the earth or farm it, and prepare it for manufacture.",
+            "Manufacturing and production: energy to turn raw and refined materials into a product ready to sell.",
+            "Distribution: packaging the product and transporting it to the user.",
+            "Use: the product is used by the end user.",
+            "End of life: the product is disposed of."
+          ] }
+      ],
+      "check": [
+        { "q": "What does a Life Cycle Assessment assess?", "a": "The environmental impact of a product at each stage of its life." },
+        { "q": "Name the five stages of an LCA in order.", "a": "Extraction and processing, manufacturing and production, distribution, use, end of life." }
+      ]
+    },
+    {
+      "id": "waste",
+      "label": "Waste disposal",
+      "icon": "box",
+      "pages": "5",
+      "summary": "Planning what happens to waste saves money, energy and landfill.",
+      "items": [
+        { "term": "Planned waste disposal", "ask": "Why should a large factory plan what happens to its waste?", "tags": [], "text": "Careful planning has many benefits, especially in large plants, and cuts landfill." },
+        { "term": "Reusing waste", "ask": "What could a factory do with its leftover offcuts?", "tags": [], "text": "Waste material is reused inside the factory for other parts and products." },
+        { "term": "Selling recyclable waste", "ask": "How could a factory win back some of the money it spent on materials?", "tags": [], "text": "Selling waste that can be recycled recoups some of the cost of materials." },
+        { "term": "Energy from waste", "ask": "How could waste help keep a factory warm and powered?", "tags": [], "text": "Waste such as biomass can generate heat and power for the business." }
+      ],
+      "check": [
+        { "q": "Give two ways a factory can make use of its waste.", "a": "Any two of: reuse it for other parts and products, sell recyclable waste, use it to generate heat and power." },
+        { "q": "How can selling recyclable waste help a business?", "a": "It recoups some of the cost of materials." }
+      ]
+    },
+    {
+      "id": "pollution",
+      "label": "Global warming and pollution",
+      "icon": "sun",
+      "pages": "6",
+      "summary": "Manufacturing uses up resources and harms air, water and land.",
+      "items": [
+        { "term": "Unsustainable rate", "ask": "What happens when modern lifestyles use up the earth's resources faster and faster?", "tags": [], "text": "Natural resources are used up too fast, so new technologies and designs aim to reduce the harm." },
+        { "term": "Global warming", "ask": "Why is the earth's average temperature rising?", "tags": [], "text": "CO2 from manufacturing and burning fossil fuels builds up, raising global temperature and causing extreme weather." },
+        { "term": "Pollution", "ask": "How does making and moving products harm the environment?", "tags": [], "text": "Harmful materials put into the environment, such as from burning fossil fuels for energy and transport." },
+        { "term": "Types of pollution", "ask": "Apart from dirty air, what else can a factory pollute?", "tags": [], "text": "Air, water and land, plus noise and light pollution.", "imageOnReveal": true },
+        { "term": "Reducing pollution", "ask": "Once a company knows how much pollution its product causes, what can it do next?", "tags": [], "text": "An LCA shows how much pollution is made, so a reduction strategy can be planned." }
+      ],
+      "check": [
+        { "q": "Which gas, released by burning fossil fuels, contributes to global warming?", "a": "Carbon dioxide (CO2)." },
+        { "q": "Name three types of pollution manufacturing can cause.", "a": "Any three of: air, water, land, noise, light." }
+      ]
+    },
+    {
+      "id": "efficiency",
+      "label": "Improving efficiency",
+      "icon": "chart",
+      "pages": "6–7",
+      "summary": "Small, regular changes and better ways of working cut cost, energy and harm.",
+      "items": [
+        { "term": "Continuous improvement", "ask": "How can lots of tiny changes add up for a manufacturer?", "tags": [], "text": "Small, regular changes to processes and workflow that make a company more efficient and effective." },
+        { "term": "Efficient working", "ask": "Why does a business want to get more done with less?", "tags": [], "text": "Improving efficiency and productivity cuts costs, energy use and impact on the environment." },
+        { "term": "Staff training", "ask": "How can a company help its workers work more efficiently?", "tags": [], "text": "Investing in staff training and improved working practices.", "imageOnReveal": true },
+        { "term": "New technology", "ask": "Apart from training people, what else helps a company work more efficiently?", "tags": [], "text": "New technologies, automation and less wastage all add to efficiency.", "imageOnReveal": true }
+      ],
+      "check": [
+        { "q": "What is continuous improvement?", "a": "Making small, regular changes to processes and workflow so the company becomes more efficient and effective." },
+        { "q": "Give two ways a company can improve its efficiency.", "a": "Any two of: staff training, improved working practices, new technologies, automation, less wastage." }
+      ]
+    },
+    {
+      "id": "people",
+      "label": "People and markets",
+      "icon": "people",
+      "pages": "7",
+      "summary": "What people need, what new technology makes possible, and how jobs change.",
+      "items": [
+        { "term": "Needs and tastes", "ask": "Why might a product that sells well in one country flop in another?", "tags": [], "text": "Needs and tastes differ around the world, so a hit in one country can fail in another." },
+        { "term": "Global marketplace", "ask": "How has the internet changed what shoppers can choose and pay?", "tags": [], "text": "The internet created worldwide competition, giving consumers more choice and lower prices." },
+        { "term": "Technology push", "ask": "What do designers do when a brand-new technology becomes available?", "tags": [], "text": "Designers and R&D teams use new technology before the market knows of it, often making products smaller, cheaper or more efficient." },
+        { "term": "Market pull", "ask": "What happens when lots of customers need a product that doesn't exist yet?", "tags": [], "text": "Designers make a product to meet demand, such as recyclable carrier bags, low energy lamps, gluten free foods.", "imageOnReveal": true },
+        { "term": "Changing job roles", "ask": "How do machines taking over tasks change people's work?", "tags": [], "text": "Automation reduces manual labour or changes job roles and working conditions." },
+        { "term": "Retraining", "ask": "What can workers do when new technology changes their job?", "tags": [], "text": "Workers retrain for new roles using new technology, gaining higher value skills." }
+      ],
+      "check": [
+        { "q": "What is the difference between technology push and market pull?", "a": "Technology push starts with a new technology; market pull starts with a demand or need from the market." },
+        { "q": "How can workers respond when automation changes their jobs?", "a": "They can retrain for new roles using new technology, gaining higher value skills." }
+      ]
+    }
+  ],
+  "keywords": [
+    { "term": "Sustainability", "def": "Meeting today's needs without harming future generations' ability to meet theirs." },
+    { "term": "Finite resource", "def": "Limited in supply and used faster than it can be replaced." },
+    { "term": "Non-finite resource", "def": "Plentiful and grown or replaced as fast as it is used." },
+    { "term": "Life Cycle Assessment (LCA)", "def": "Assessing a product's environmental impact at each stage of its life." },
+    { "term": "Waste disposal", "def": "Planning what happens to waste: reuse, recycling or energy." },
+    { "term": "Biomass", "def": "Waste material used to generate heat and power." },
+    { "term": "Global warming", "def": "Rising average global temperature from CO2 building up in the atmosphere." },
+    { "term": "Pollution", "def": "Harmful materials put into the air, water or land, or noise and light." },
+    { "term": "Continuous improvement", "def": "Small, regular changes that make processes more efficient." },
+    { "term": "Technology push", "def": "New technology leads to a product before the market knows about it." },
+    { "term": "Market pull", "def": "A product made in response to demand and customer needs." },
+    { "term": "Global marketplace", "def": "Worldwide competition through the internet, giving more choice and lower prices." }
+  ],
+  "apply": [
+    {
+      "q": "A company making cotton tote bags wants to find out which stage of each bag's life does most harm to the environment.",
+      "tools": ["A Life Cycle Assessment", "Market pull", "Technology push", "Selling recyclable waste"],
+      "tool": 0,
+      "reasons": [
+        "It assesses the bag's environmental impact at every stage, from extraction to end of life",
+        "It starts from what customers are asking for",
+        "It starts from a new technology",
+        "It recoups some of the cost of materials"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A furniture factory fills several bins with timber offcuts every week.",
+      "tools": ["Reuse the offcuts for smaller parts and products", "Send all the offcuts to landfill", "Buy extra timber for every job", "Run the machines for longer"],
+      "tool": 0,
+      "reasons": [
+        "Waste reused inside the factory means less new material has to be bought",
+        "It needs no planning at all",
+        "More material means more choice of parts",
+        "Longer runs always use less energy"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "Shoppers keep asking a lighting company for lamps that use less electricity.",
+      "tools": ["Market pull", "Technology push", "Continuous improvement", "Global warming"],
+      "tool": 0,
+      "reasons": [
+        "The product is made in response to demand and customer needs",
+        "A new technology is used before the market knows about it",
+        "Small changes are made to the factory's processes",
+        "CO2 builds up in the atmosphere"
+      ],
+      "reason": 0
+    }
+  ],
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      { "n": "Technology push", "why": "The only one that starts with a new technology." },
+      { "n": "Market pull", "why": "The only one that starts with what customers need." },
+      { "n": "Continuous improvement", "why": "The only one about changing a company's own processes." },
+      { "n": "Global warming", "why": "The only one that is harm to the environment." }
+    ]
+  },
+  "order": {
+    "q": "Put the stages of a Life Cycle Assessment in order.",
+    "steps": ["Extraction and processing", "Manufacturing and production", "Distribution", "Use", "End of life"]
+  },
+  "quiz": [
+    { "q": "What does sustainability aim to do?", "options": ["Meet today's needs without harming future generations' ability to meet theirs", "Use up resources as quickly as possible", "Make products cheaper to buy", "Sell products in more countries"], "answer": 0, "why": "Sustainability protects the needs of the present without compromising the future.", "chunk": "resources" },
+    { "q": "Fossil fuels are a finite resource.", "tf": true, "why": "They are in limited supply and used faster than they can be replaced.", "chunk": "resources" },
+    { "q": "Which of these is a non-finite resource?", "options": ["Timber", "Metal ore", "Fossil fuels", "Some minerals"], "answer": 0, "why": "Timber can be grown again at the rate it is used.", "chunk": "resources" },
+    { "q": "Finite resources should be used freely because there are plenty of them.", "tf": false, "why": "They are in limited supply, so they should be avoided or used in small amounts for essential reasons.", "chunk": "resources" },
+    { "q": "Solar and wind energy are non-finite resources.", "tf": true, "why": "They are in plentiful supply and unlikely ever to run out.", "chunk": "resources" },
+    { "q": "What does a Life Cycle Assessment (LCA) assess?", "options": ["A product's environmental impact at each stage of its life", "How much a product will sell for", "How long a product takes to make", "Which country to sell a product in"], "answer": 0, "why": "An LCA looks at the impact from extraction to end of life.", "chunk": "lca" },
+    { "q": "Which is the first stage of an LCA?", "options": ["Extraction and processing", "Distribution", "Use", "End of life"], "answer": 0, "why": "The raw material has to be extracted or farmed and processed first.", "chunk": "lca" },
+    { "q": "In an LCA, the distribution stage covers packaging and transporting the product to the user.", "tf": true, "why": "Distribution is getting the packaged product to the end user.", "chunk": "lca" },
+    { "q": "Which LCA stage comes straight after manufacturing and production?", "options": ["Distribution", "Use", "Extraction and processing", "End of life"], "answer": 0, "why": "The order is extraction, manufacturing, distribution, use, end of life.", "chunk": "lca" },
+    { "q": "Carefully planned waste disposal only benefits small workshops.", "tf": false, "why": "It has many benefits, particularly in large manufacturing plants.", "chunk": "waste" },
+    { "q": "How can a factory recoup some of the cost of its materials?", "options": ["By selling its recyclable waste", "By sending waste to landfill", "By buying more materials", "By using finite resources"], "answer": 0, "why": "Recyclable waste can be sold, which wins back some of the cost.", "chunk": "waste" },
+    { "q": "Waste material such as biomass can be used to generate heat and power.", "tf": true, "why": "A business can make some of its own energy from waste.", "chunk": "waste" },
+    { "q": "Which gas from burning fossil fuels contributes to global warming?", "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Helium"], "answer": 0, "why": "CO2 and other air pollutants collect in the atmosphere.", "chunk": "pollution" },
+    { "q": "Global warming is causing extreme weather events.", "tf": true, "why": "Rising average global temperature leads to extreme weather.", "chunk": "pollution" },
+    { "q": "Pollution from manufacturing only affects the air.", "tf": false, "why": "It can also contaminate water and land, and cause noise and light pollution.", "chunk": "pollution" },
+    { "q": "How can a company find out how much pollution its product creates?", "options": ["Carry out a Life Cycle Assessment", "Use technology push", "Sell recyclable waste", "Retrain its workforce"], "answer": 0, "why": "An LCA shows how much pollution is made, so a reduction strategy can be planned.", "chunk": "pollution" },
+    { "q": "What is continuous improvement?", "options": ["Small, regular changes to processes and workflow", "One big change every ten years", "Replacing all the staff", "Making products that break quickly"], "answer": 0, "why": "Lots of small, incremental changes make a company more efficient and effective.", "chunk": "efficiency" },
+    { "q": "Improving efficiency can reduce a company's costs, energy use and impact on the environment.", "tf": true, "why": "Doing more with less saves money, energy and harm.", "chunk": "efficiency" },
+    { "q": "Which of these adds to a company's efficiency?", "options": ["Staff training", "More wastage", "Older working practices", "Using more energy"], "answer": 0, "why": "Training, new technology, automation and less wastage all improve efficiency.", "chunk": "efficiency" },
+    { "q": "A product designed because a new technology has become available is an example of:", "options": ["Technology push", "Market pull", "Continuous improvement", "Fair trade"], "answer": 0, "why": "Technology push uses new technology before the market is aware of it.", "chunk": "people" },
+    { "q": "Low energy lamps and gluten free foods are examples of market pull.", "tf": true, "why": "They were made in response to customer needs and demand.", "chunk": "people" },
+    { "q": "A product that sells well in one country will always sell well in another.", "tf": false, "why": "People around the world have different needs and tastes.", "chunk": "people" },
+    { "q": "How has the internet affected consumers?", "options": ["More choice and lower prices", "Less choice and higher prices", "No effect on choice", "Products only sold locally"], "answer": 0, "why": "It created a global marketplace with more competition.", "chunk": "people" },
+    { "q": "Automation often leads to a reduction in manual labour.", "tf": true, "why": "Machines take over manual tasks, so job roles and working conditions change.", "chunk": "people" }
+  ],
+  "written": [
+    {
+      "type": "describe",
+      "q": "Describe how a manufacturer could use a Life Cycle Assessment to reduce the environmental impact of a new kettle.",
+      "marks": 3,
+      "points": [
+        "It assesses the kettle's environmental impact at each stage of its life.",
+        "Stages: extraction and processing, manufacturing and production, distribution, use, end of life.",
+        "It shows how much energy each stage uses.",
+        "It shows how much pollution is being created.",
+        "The manufacturer can then plan a reduction strategy for the worst stages."
+      ],
+      "model": "The manufacturer would assess the kettle's environmental impact at each stage of its life: extraction and processing, manufacturing and production, distribution, use and end of life. This shows how much pollution is created, so the manufacturer can plan a strategy to reduce it at the worst stages.",
+      "note": "1 mark per point, up to 3."
+    },
+    {
+      "type": "explain",
+      "q": "Explain one benefit to a furniture factory of carefully planning its waste disposal.",
+      "marks": 2,
+      "points": [
+        "Offcuts can be reused for other parts and products (1), so less new material has to be bought (1).",
+        "Recyclable waste can be sold (1), recouping some of the cost of materials (1).",
+        "Waste such as biomass can be used (1) to generate heat and power for the factory (1).",
+        "Less waste goes to landfill (1), reducing harm to the environment (1)."
+      ],
+      "model": "Timber offcuts can be reused inside the factory to make smaller parts, so the factory has to buy less new material.",
+      "note": "1 mark for the benefit, 1 for explaining it. One benefit only."
+    },
+    {
+      "type": "compare",
+      "q": "Compare technology push and market pull.",
+      "marks": 4,
+      "points": [
+        "Technology push starts with a new technology becoming available.",
+        "Market pull starts with a demand or need from the market.",
+        "In technology push, the product is made before the market is aware of it.",
+        "In market pull, the product responds to market forces and customer needs.",
+        "Technology push often makes products smaller, cheaper or more efficient, through R&D.",
+        "Market pull examples: recyclable carrier bags, low energy lamps, gluten free foods."
+      ],
+      "model": "Technology push starts with a new technology: designers and R&D teams use it to make a product before the market is aware of it, often making products smaller, cheaper or more efficient. Market pull starts with the market: designers make a product in response to demand and customer needs, such as low energy lamps or gluten free foods.",
+      "note": "Up to 2 marks for each side. Full marks need both sides compared."
+    },
+    {
+      "type": "explain",
+      "q": "Explain how manufacturing contributes to global warming and pollution.",
+      "marks": 4,
+      "points": [
+        "Manufacturing burns fossil fuels for energy and transport.",
+        "This releases CO2 and other air pollutants, which collect in the atmosphere.",
+        "This raises the average global temperature (global warming) and causes extreme weather.",
+        "Manufacturing can also contaminate water and land.",
+        "It can create noise and light pollution."
+      ],
+      "model": "Manufacturing burns fossil fuels for energy and transport, releasing CO2 and other air pollutants that collect in the atmosphere. This contributes to global warming, raising the average global temperature and causing extreme weather. Manufacturing can also contaminate water and land and create noise and light pollution.",
+      "note": "1 mark per point, up to 4."
+    },
+    {
+      "type": "evaluate",
+      "q": "A furniture company is bringing new automated machines into its factory. Evaluate the impact of this decision on the company and its workforce.",
+      "marks": 6,
+      "points": [
+        "New technology and automation improve efficiency and productivity.",
+        "This can reduce costs and energy use.",
+        "It can reduce the factory's impact on the environment, especially with less wastage.",
+        "Automation reduces manual labour, so some jobs may be lost.",
+        "Job roles and working conditions change.",
+        "Workers can retrain for new roles, gaining new, higher value skills, but the company must invest in training.",
+        "Justified conclusion, e.g. worth it if the company retrains its staff so the savings don't cost jobs."
+      ],
+      "model": "Automated machines would make the factory more efficient and productive, which can reduce costs, energy use and wastage, lowering its impact on the environment. However, automation reduces manual labour, so some jobs may be lost, and other job roles and working conditions will change. The company would need to invest in staff training, but workers who retrain gain new, higher value skills. Overall it is worth it if the company retrains its workforce, because it keeps the efficiency gains without simply losing staff.",
+      "levels": [
+        { "level": 3, "marks": "5–6", "text": "Detailed, balanced points on both sides, with a justified conclusion." },
+        { "level": 2, "marks": "3–4", "text": "Some points, mostly on one side, or a conclusion that isn't justified." },
+        { "level": 1, "marks": "1–2", "text": "Simple points, with no conclusion." }
+      ],
+      "note": "Tick the points made, then use the levels under the model answer to decide the mark."
+    },
+    {
+      "type": "explain",
+      "q": "Explain why designers should avoid using finite resources where possible.",
+      "marks": 3,
+      "points": [
+        "Finite resources are in limited supply.",
+        "They are being used more quickly than they can be replaced.",
+        "Using them up affects future generations' ability to meet their needs (not sustainable).",
+        "They should only be used in small amounts for essential reasons where there is no alternative.",
+        "Non-finite alternatives, such as timber, can be grown or replaced as fast as they are used."
+      ],
+      "model": "Finite resources such as fossil fuels and metal ores are in limited supply and are being used more quickly than they can be replaced. Using them up is not sustainable, because future generations will not be able to meet their needs, so they should only be used in small amounts for essential reasons where there is no alternative.",
+      "note": "1 mark per point, up to 3."
+    }
+  ],
+  "related": [
+    { "id": "g01-new-technologies-industry-enterprise", "spec": "3.1.1" },
+    { "id": "g03-culture-society-production-systems", "spec": "3.1.1" },
+    { "id": "g14-ecological-social-footprint", "spec": "3.2.3" }
+  ]
+}
