@@ -777,27 +777,77 @@ const refresh = () => { ctx.rerender(); drawBar(); };
 const flash = (text, tone) => { if (!barMsg) return; say(barMsg, text, tone); barMsg.classList.add("edit-msg"); };
 
 // Looks good: clears the mark, then deletes the slot's other candidates (no longer needed).
-async function markChecked(ref) {
-  if (needToken()) return;
+// `report` shows progress (the edit bar, or a card in Review unchecked). True once saved.
+async function markChecked(ref, report = flash) {
+  if (needToken()) return false;
   const target = findTarget(ctx.topic(), ref);
-  if (!target?.obj.image?.unchecked) return;
+  if (!target?.obj.image?.unchecked) return false;
   const { name } = target;
-  flash(`Saving: ${name}…`);
+  report(`Saving: ${name}…`);
   try {
     const t = JSON.parse(await readText(topicPath()));
     const tgt = findTarget(t, ref);
     if (!tgt?.obj.image) throw gone("image");
     delete tgt.obj.image.unchecked;
     await commit([{ path: topicPath(), text: stringifyTopic(t) }], `Image checked: ${name} (${ctx.topic().id})`);
-  } catch (e) { flash(problem(e), "bad"); return; }
+  } catch (e) { report(problem(e), "bad"); return false; }
   delete target.obj.image.unchecked;
   refresh();
-  flash(`Checked: ${name}. Live in about a minute.`, "good");
+  report(`Checked: ${name}. Live in about a minute.`, "good");
   const at = candidatesAt();
-  if (!at) return;
+  if (!at) return true;
   try { await clearCandidates(at, slotKey(name, false), false); } catch (e) {
-    flash(`Checked, but the other candidates weren't cleared: ${problem(e)}`, "bad");
+    report(`Checked, but the other candidates weren't cleared: ${problem(e)}`, "bad");
   }
+  return true;
+}
+
+// Every unchecked image on the topic on one screen: image, item, chunk, Looks good and Change.
+// Change opens the image panel; closing it comes back here while any are left.
+function reviewDialog() {
+  if (needToken()) return;
+  const list = [];
+  for (const c of ctx.topic().chunks) for (const it of c.items) if (it.image?.unchecked) list.push({ chunk: c, it });
+  const count = h("p", { class: "rev-count", "aria-live": "polite" });
+  const setCount = () => {
+    const n = list.filter((x) => x.it.image?.unchecked).length;
+    count.textContent = n ? `${n} of ${list.length} left to check` : "All checked.";
+  };
+  const grid = h("div", { class: "rev-grid" });
+  const dlg = dialog("Review unchecked images", count, grid);
+  dlg.classList.add("edit-dlg-wide");
+  for (const { chunk, it } of list) {
+    const ref = { kind: "item", chunk: chunk.id, term: it.term };
+    const note = status();
+    const ok = h("button", { type: "button", class: "btn-dark", "aria-label": `Looks good: ${it.term}` }, icon("check"), "Looks good");
+    const change = h("button", { type: "button", class: "btn-line", "aria-label": `Change image: ${it.term}` }, icon("image"), "Change");
+    const btns = h("div", { class: "rev-btns" }, ok, change);
+    const card = h("article", { class: "rev-card" },
+      h("span", { class: "rev-img" }, h("img", { src: it.image.file, alt: it.image.alt || "" })),
+      h("h3", {}, it.term),
+      h("p", { class: "rev-chunk" }, chunk.label, it.imageOnReveal && h("span", { class: "rev-tag" }, "On reveal")),
+      it.image.alt && h("p", { class: "rev-alt" }, it.image.alt),
+      it.image.credit && h("small", { class: "rev-credit" }, it.image.credit),
+      btns, note);
+    ok.addEventListener("click", async () => {
+      ok.disabled = change.disabled = true;
+      if (await markChecked(ref, (text, tone) => say(note, text, tone))) {
+        card.classList.add("done");
+        fill(btns, h("span", { class: "rev-done" }, icon("check"), "Checked"));
+        setCount();
+      } else {
+        ok.disabled = change.disabled = false;
+      }
+    });
+    change.addEventListener("click", async () => {
+      dlg.close();
+      await imageDialog(ref);
+      const panel = [...document.querySelectorAll("dialog.edit-dlg[open]")].pop();
+      panel?.addEventListener("close", () => { if (uncheckedCount()) reviewDialog(); });
+    });
+    grid.append(card);
+  }
+  setCount();
 }
 
 /* ---------- Edit bar ---------- */
@@ -811,6 +861,7 @@ function drawBar() {
     h("span", { class: "edit-state" + (has ? " on" : "") }, has ? "Token saved in this browser" : "No token: nothing can be saved"),
     unchecked !== null && h("span", { class: "edit-count" + (unchecked ? " todo" : "") }, `Unchecked images: ${unchecked}`),
     h("span", { class: "edit-btns" },
+      unchecked ? h("button", { type: "button", class: "btn-dark", onclick: reviewDialog }, "Review unchecked") : null,
       has
         ? [h("button", { type: "button", class: "btn-line", onclick: tokenDialog }, "Settings"),
           h("button", { type: "button", class: "btn-line", onclick: forgetToken }, "Forget token")]
