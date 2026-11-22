@@ -246,8 +246,7 @@
           "image": {
             "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/workflow.svg",
             "alt": "A factory floor plan with goods in, production, packing and despatch in order.",
-            "credit": "DT",
-            "unchecked": true
+            "credit": "DT"
           }
         }
       ],
