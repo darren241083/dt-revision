@@ -17,9 +17,12 @@ const token = () => store.get(KEYS.token, "");
 const repo = () => store.get(KEYS.repo, "");
 // Image search phrases: a path template in the repository with {id} for the topic id.
 const notesPath = (id) => (store.get(KEYS.notes, "") || "").replace(/\{id\}/g, id);
-// Candidate images waiting to be picked: "branch:folder/{level}/{id}", typed into the settings.
+// Candidate images waiting to be picked: "branch:folder/{level}/{id}". Works with no typing;
+// the settings can change it.
+const DEFAULT_CANDS = "image-candidates:candidates/{level}/{id}";
+const candsSetting = () => store.get(KEYS.cands, "") || DEFAULT_CANDS;
 function candidatesAt() {
-  const m = (store.get(KEYS.cands, "") || "").match(/^([^:\s]+):(.+)$/);
+  const m = candsSetting().match(/^([^:\s]+):(.+)$/);
   if (!m || !ctx?.topic) return null;
   return { branch: m[1], folder: m[2].replace(/\{level\}/g, ctx.level).replace(/\{id\}/g, ctx.topic().id).replace(/\/+$/, "") };
 }
@@ -141,21 +144,23 @@ function needToken() {
 function tokenDialog() {
   const repoIn = h("input", { type: "text", autocomplete: "off", spellcheck: "false", placeholder: "owner/repository", value: repo() });
   const notesIn = h("input", { type: "text", autocomplete: "off", spellcheck: "false", placeholder: "folder/{id}/file.md", value: store.get(KEYS.notes, "") });
-  const candsIn = h("input", { type: "text", autocomplete: "off", spellcheck: "false", placeholder: "branch:folder/{level}/{id}", value: store.get(KEYS.cands, "") });
-  const tokenIn = h("input", { type: "password", autocomplete: "off", spellcheck: "false", placeholder: "github_pat_…" });
+  const candsIn = h("input", { type: "text", autocomplete: "off", spellcheck: "false", placeholder: DEFAULT_CANDS, value: candsSetting() });
+  const saved = !!token();
+  const tokenIn = h("input", { type: "password", autocomplete: "off", spellcheck: "false", placeholder: saved ? "Saved: leave blank to keep it" : "github_pat_…" });
   const msg = status();
   const save = h("button", { type: "button", class: "btn-dark" }, "Save");
   const dlg = dialog("Edit mode settings",
     field("Repository", repoIn, "The repository edit mode saves to, as owner/name."),
     field("Image notes path (optional)", notesIn, "Where each topic's image search phrases are, with {id} for the topic id."),
-    field("Image candidates (optional)", candsIn, "The branch and folder of each topic's candidate images, as branch:folder with {level} and {id}."),
-    field("GitHub fine-grained token", tokenIn, "Access to that repository only, with Contents: Read and write."),
+    field("Image candidates", candsIn, "The branch and folder of each topic's candidate images, as branch:folder with {level} and {id}. Leave it as it is unless they have moved."),
+    field("GitHub fine-grained token", tokenIn, saved ? "A token is saved. Paste a new one only to replace it." : "Access to that repository only, with Contents: Read and write."),
     h("p", { class: "dlg-note" }, "All of these are kept in this browser only. Forget token clears them."),
     h("div", { class: "btn-row" }, save), msg);
   save.addEventListener("click", async () => {
     const r = repoIn.value.trim().replace(/^https?:\/\/github\.com\//, "").replace(/\.git$|\/$/g, "");
     const n = notesIn.value.trim();
-    const cnd = candsIn.value.trim();
+    let cnd = candsIn.value.trim();
+    if (cnd === DEFAULT_CANDS) cnd = "";   // store only a change, so the default can follow updates
     const t = tokenIn.value.trim() || token();
     if (!/^[\w.-]+\/[\w.-]+$/.test(r)) return say(msg, "Type the repository as owner/name.", "bad");
     if (n && !n.includes("{id}")) return say(msg, "Put {id} in the notes path where the topic id goes.", "bad");
@@ -164,7 +169,7 @@ function tokenDialog() {
     const old = { token: token(), repo: repo(), notes: store.get(KEYS.notes, ""), cands: store.get(KEYS.cands, "") };
     store.set(KEYS.repo, r);
     store.set(KEYS.notes, n);
-    store.set(KEYS.cands, cnd);
+    if (cnd) store.set(KEYS.cands, cnd); else store.remove(KEYS.cands);
     store.set(KEYS.token, t);
     say(msg, "Checking…");
     try {
@@ -485,10 +490,26 @@ async function imageDialog(ref) {
 
   // Candidates for this slot, when there are any: tap one, then Use this; or None of these.
   async function loadCandidates() {
+    const where = `${cands.branch}:${cands.folder}`;
+    const bad = (text) => fill(candBox, h("p", { class: "dlg-status bad" }, text));
+    const quiet = (text) => fill(candBox, h("p", { class: "dlg-note" }, text));
     let m;
-    try { m = await readManifest(cands); } catch (e) { fill(candBox, h("p", { class: "dlg-status bad" }, problem(e))); return; }
-    const list = (m?.candidates || []).filter((c) => c.key === key && (!c.chunk || c.chunk === ref.chunk));
-    if (!list.length) { candBox.remove(); return; }
+    try { m = await readManifest(cands); } catch (e) {
+      return bad(e?.status === 403 || e?.status === 401
+        ? `Couldn't load candidates: this token can't read the ${cands.branch} branch. It needs Contents: Read on the repository.`
+        : `Couldn't load candidates. ${problem(e)}`);
+    }
+    if (!m) {
+      // No manifest: either the branch is missing (a wrong setting) or this topic has none yet.
+      try { await gh(`/branches/${encodeURIComponent(cands.branch)}`); } catch (e) {
+        return bad(e?.status === 404
+          ? `Couldn't load candidates: there's no branch called "${cands.branch}" in ${repo()}. Check the Image candidates setting under Settings.`
+          : `Couldn't load candidates. ${problem(e)}`);
+      }
+      return quiet(`No candidates for this topic (looked in ${where}).`);
+    }
+    const list = (m.candidates || []).filter((c) => c.key === key && (!c.chunk || c.chunk === ref.chunk));
+    if (!list.length) return quiet("No candidates waiting for this image.");
     let chosen = null;
     const use = h("button", { type: "button", class: "btn-dark", disabled: true }, "Use this");
     const none = h("button", { type: "button", class: "btn-line", "aria-expanded": "false" }, "None of these");
@@ -505,7 +526,7 @@ async function imageDialog(ref) {
         // Drawings come back untyped; type them so the browser draws them.
         c.blob = c.file.endsWith(".svg") ? new Blob([b], { type: "image/svg+xml" }) : b;
         img.src = URL.createObjectURL(c.blob);
-      }).catch(() => { img.alt = "Couldn't load this one"; });
+      }).catch(() => { img.replaceWith(h("span", { class: "cand-fail" }, "Couldn't load this one")); });
       card.addEventListener("click", () => {
         chosen = c;
         cards.forEach((x) => x.setAttribute("aria-pressed", String(x === card)));
@@ -750,7 +771,8 @@ function drawBar() {
     h("span", { class: "edit-state" + (has ? " on" : "") }, has ? "Token saved in this browser" : "No token: nothing can be saved"),
     h("span", { class: "edit-btns" },
       has
-        ? h("button", { type: "button", class: "btn-line", onclick: forgetToken }, "Forget token")
+        ? [h("button", { type: "button", class: "btn-line", onclick: tokenDialog }, "Settings"),
+          h("button", { type: "button", class: "btn-line", onclick: forgetToken }, "Forget token")]
         : h("button", { type: "button", class: "btn-dark", onclick: tokenDialog }, "Add token"),
       ctx?.topic && h("button", { type: "button", class: "btn-line", onclick: audioDialog }, "Audio"),
       h("button", { type: "button", class: "btn-line", onclick: yearsDialog }, "Year groups"),
