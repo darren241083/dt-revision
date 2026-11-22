@@ -107,7 +107,13 @@
             "Clamp the material or hold it in a vice so it can't move.",
             "Draw the saw backwards to make a nick at the start point, then use the whole blade without pressing hard.",
             "Support the end piece as you finish so the cut stays clean. Remove rough edges."
-          ]
+          ],
+          "image": {
+            "file": "assets/img/gcse/g19-shaping-timbers-polymers/accurate-sawing.svg",
+            "alt": "Timber clamped in a vice and sawn on the waste side of the marked line.",
+            "credit": "DT",
+            "unchecked": true
+          }
         },
         {
           "term": "Rip / cross-cut saw",

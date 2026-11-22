@@ -12,7 +12,7 @@ const BRANCH = "main";
 const API = "https://api.github.com";
 const KEYS = { token: "editToken", repo: "editRepo", notes: "editNotes", cands: "editCandidates" };
 
-let ctx = null, bar = null, phrases = null;
+let ctx = null, bar = null, barMsg = null, phrases = null;
 const token = () => store.get(KEYS.token, "");
 const repo = () => store.get(KEYS.repo, "");
 // Image search phrases: a path template in the repository with {id} for the topic id.
@@ -420,7 +420,8 @@ async function imageDialog(ref) {
   };
 
   const dlg = dialog(isDiagram ? `Diagram: ${name}` : `Image: ${name}`,
-    now && nowShowing(h("img", { src: now.file, alt: "" }), h("small", {}, now.credit || "No credit")),
+    now && nowShowing(h("img", { src: now.file, alt: "" }), h("small", {}, now.credit || "No credit"),
+      now.unchecked && h("small", { class: "dlg-unchecked" }, "Unchecked: filled in automatically. Pick another below, or close this and press Looks good.")),
     candBox,
     field("Search phrase", h("span", { class: "dlg-inline" }, phraseInput, copy)),
     links, drop, preview,
@@ -448,7 +449,7 @@ async function imageDialog(ref) {
     busy(false);
     if (!ok) return;
     local(target.obj);
-    ctx.rerender();
+    refresh();
     setTimeout(() => dlg.close(), 1500);
   }
 
@@ -668,7 +669,7 @@ function audioDialog() {
     busy(false);
     if (!ok) return;
     local();
-    ctx.rerender();
+    refresh();
     setTimeout(() => dlg.close(), 1500);
   }
   const secs = () => {
@@ -761,14 +762,54 @@ async function yearsDialog() {
   });
 }
 
+/* ---------- Unchecked images ---------- */
+
+// Images the pipeline filled in automatically carry `unchecked` until the teacher has looked.
+function uncheckedCount() {
+  const t = ctx?.topic?.();
+  if (!t) return null;
+  let n = 0;
+  for (const c of t.chunks) for (const it of c.items) if (it.image?.unchecked) n++;
+  return n;
+}
+
+const refresh = () => { ctx.rerender(); drawBar(); };
+const flash = (text, tone) => { if (!barMsg) return; say(barMsg, text, tone); barMsg.classList.add("edit-msg"); };
+
+// Looks good: clears the mark, then deletes the slot's other candidates (no longer needed).
+async function markChecked(ref) {
+  if (needToken()) return;
+  const target = findTarget(ctx.topic(), ref);
+  if (!target?.obj.image?.unchecked) return;
+  const { name } = target;
+  flash(`Saving: ${name}…`);
+  try {
+    const t = JSON.parse(await readText(topicPath()));
+    const tgt = findTarget(t, ref);
+    if (!tgt?.obj.image) throw gone("image");
+    delete tgt.obj.image.unchecked;
+    await commit([{ path: topicPath(), text: stringifyTopic(t) }], `Image checked: ${name} (${ctx.topic().id})`);
+  } catch (e) { flash(problem(e), "bad"); return; }
+  delete target.obj.image.unchecked;
+  refresh();
+  flash(`Checked: ${name}. Live in about a minute.`, "good");
+  const at = candidatesAt();
+  if (!at) return;
+  try { await clearCandidates(at, slotKey(name, false), false); } catch (e) {
+    flash(`Checked, but the other candidates weren't cleared: ${problem(e)}`, "bad");
+  }
+}
+
 /* ---------- Edit bar ---------- */
 
 function drawBar() {
   if (!bar) return;
   const has = !!(token() && repo());
+  const unchecked = uncheckedCount();
   fill(bar,
     h("span", { class: "edit-label" }, icon("pen"), "Edit mode"),
     h("span", { class: "edit-state" + (has ? " on" : "") }, has ? "Token saved in this browser" : "No token: nothing can be saved"),
+    unchecked !== null && h("span", { class: "edit-count" + (unchecked ? " todo" : "") }, `Unchecked images: ${unchecked}`),
     h("span", { class: "edit-btns" },
       has
         ? [h("button", { type: "button", class: "btn-line", onclick: tokenDialog }, "Settings"),
@@ -776,7 +817,8 @@ function drawBar() {
         : h("button", { type: "button", class: "btn-dark", onclick: tokenDialog }, "Add token"),
       ctx?.topic && h("button", { type: "button", class: "btn-line", onclick: audioDialog }, "Audio"),
       h("button", { type: "button", class: "btn-line", onclick: yearsDialog }, "Year groups"),
-      h("button", { type: "button", class: "btn-line", onclick: stop }, "Exit")));
+      h("button", { type: "button", class: "btn-line", onclick: stop }, "Exit")),
+    barMsg);
 }
 
 export function start(context) {
@@ -786,7 +828,9 @@ export function start(context) {
   }
   editState.on = true;
   editState.open = imageDialog;
+  editState.check = markChecked;
   bar = h("div", { class: "edit-bar", role: "region", "aria-label": "Edit mode" });
+  barMsg = h("p", { class: "dlg-status edit-msg", "aria-live": "polite" });
   document.getElementById("topbar").after(bar);
   drawBar();
   ctx.rerender();

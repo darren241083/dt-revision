@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Four inclusive features: clear signage, step-free access, easy-grip handles, accessible controls">
+  <style>.l{font:700 26px Arial,Helvetica,sans-serif;fill:#10212B}</style>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <g fill="#FFFFFF" stroke="#DCE3E6" stroke-width="2">
+    <rect x="20" y="20" width="370" height="270" rx="18"/><rect x="410" y="20" width="370" height="270" rx="18"/>
+    <rect x="20" y="310" width="370" height="270" rx="18"/><rect x="410" y="310" width="370" height="270" rx="18"/>
+  </g>
+  <path d="M205 90 V230" stroke="#10212B" stroke-width="6"/>
+  <path d="M110 70 H270 L300 105 L270 140 H110 z" fill="#0F766E" stroke="#10212B" stroke-width="2"/>
+  <path d="M140 105 H230 M210 88 L232 105 L210 122" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M165 230 H245" stroke="#10212B" stroke-width="4"/>
+  <text class="l" x="205" y="268" text-anchor="middle">clear signage</text>
+  <path d="M450 230 H570 V190 H610 V150 H650 V110 H740 V230 z" fill="#E8ECF1" stroke="#10212B" stroke-width="2"/>
+  <path d="M450 230 L740 110 V230 z" fill="#E2F2EF" stroke="#0F766E" stroke-width="3"/>
+  <path d="M470 196 L720 92" stroke="#10212B" stroke-width="3"/>
+  <path d="M500 184 V210 M600 142 V168 M700 100 V126" stroke="#10212B" stroke-width="3"/>
+  <text class="l" x="595" y="268" text-anchor="middle">step-free access</text>
+  <path d="M90 420 L250 420" stroke="#48596B" stroke-width="10" stroke-linecap="round"/>
+  <rect x="190" y="395" width="130" height="50" rx="25" fill="#E2F2EF" stroke="#0F766E" stroke-width="3"/>
+  <path d="M205 395 V445 M230 395 V445 M255 395 V445 M280 395 V445 M305 395 V445" stroke="#0F766E" stroke-width="2"/>
+  <ellipse cx="80" cy="420" rx="26" ry="18" fill="#E8ECF1" stroke="#48596B" stroke-width="3"/>
+  <text class="l" x="205" y="558" text-anchor="middle">easy-grip handles</text>
+  <rect x="490" y="350" width="210" height="150" rx="14" fill="#E8ECF1" stroke="#10212B" stroke-width="2"/>
+  <g fill="#FFFFFF" stroke="#0F766E" stroke-width="4">
+    <circle cx="545" cy="400" r="26"/><circle cx="645" cy="400" r="26"/><rect x="519" y="440" width="152" height="40" rx="12"/>
+  </g>
+  <path d="M533 400 H557 M545 388 V412 M633 400 H657" stroke="#10212B" stroke-width="4"/>
+  <text class="l" x="595" y="558" text-anchor="middle">accessible controls</text>
+</svg>

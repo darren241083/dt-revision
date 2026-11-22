@@ -74,3 +74,13 @@
   .edit-bar { top: 0; position: static; padding: 8px 16px; }
   .edit-btns { margin-left: 0; }
 }
+
+/* Unchecked images (filled in automatically): badge, Looks good and Change. Edit mode only. */
+.edit-count { font-weight: 700; color: var(--correct); }
+.edit-count.todo { color: var(--unsure); }
+.edit-msg { flex-basis: 100%; margin: 0; }
+.edit-msg:empty { display: none; }
+.img-check { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.img-unchecked { display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px; border: 1.5px solid var(--unsure); border-radius: 999px; background: var(--unsure-bg); color: var(--unsure); font-family: var(--f-mono); font-size: .8125rem; font-weight: 700; letter-spacing: .02em; }
+.img-edit.img-ok { border-style: solid; }
+.dlg-unchecked { display: block; margin-top: 4px; color: var(--unsure); font-weight: 600; }

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A product with its cover unscrewed: the worn part comes out and a new part goes in">
+  <style>.l{font:700 26px Arial,Helvetica,sans-serif;fill:#10212B}.t{fill:#0B5550}</style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#10212B"/></marker>
+    <g id="sc"><circle r="9" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/><path d="M-6 0 H6 M0 -6 V6" stroke="#10212B" stroke-width="2"/></g>
+  </defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="230" y="200" width="340" height="300" rx="30" fill="#E2F2EF" stroke="#10212B" stroke-width="2"/>
+  <rect x="270" y="240" width="260" height="220" rx="10" fill="#FFFFFF" stroke="#10212B" stroke-width="2" stroke-dasharray="8 6"/>
+  <rect x="300" y="300" width="80" height="100" rx="6" fill="#FFFFFF" stroke="#10212B" stroke-width="2" stroke-dasharray="6 5"/>
+  <rect x="420" y="300" width="80" height="100" rx="6" fill="#E8ECF1" stroke="#10212B" stroke-width="2"/>
+  <path d="M440 330 h40 M440 350 h40 M440 370 h40" stroke="#48596B" stroke-width="3"/>
+  <g transform="translate(40 40) rotate(-8)">
+    <rect x="0" y="0" width="260" height="120" rx="12" fill="#E2F2EF" stroke="#10212B" stroke-width="2"/>
+    <use href="#sc" x="22" y="22"/><use href="#sc" x="238" y="22"/><use href="#sc" x="22" y="98"/><use href="#sc" x="238" y="98"/>
+  </g>
+  <text class="l" x="330" y="96">cover unscrews</text>
+  <path d="M300 220 L250 170" stroke="#10212B" stroke-width="3" marker-end="url(#ag)"/>
+  <g transform="translate(70 380)">
+    <rect x="0" y="0" width="80" height="100" rx="6" fill="#E8ECF1" stroke="#B4301D" stroke-width="3"/>
+    <path d="M18 20 L40 46 L28 58 L52 86" fill="none" stroke="#B4301D" stroke-width="3"/>
+  </g>
+  <path d="M296 380 L162 420" stroke="#10212B" stroke-width="3" marker-end="url(#ag)"/>
+  <text class="l" x="110" y="520" text-anchor="middle">worn part out</text>
+  <g transform="translate(650 380)">
+    <rect x="0" y="0" width="80" height="100" rx="6" fill="#E2F2EF" stroke="#0F766E" stroke-width="3"/>
+    <path d="M20 30 h40 M20 50 h40 M20 70 h40" stroke="#0F766E" stroke-width="3"/>
+  </g>
+  <path d="M640 420 L392 360" stroke="#0F766E" stroke-width="4" marker-end="url(#ah)"/>
+  <text class="l t" x="690" y="520" text-anchor="middle">new part in</text>
+</svg>

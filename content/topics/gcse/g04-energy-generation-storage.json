@@ -98,7 +98,13 @@
           "ask": "Where do you think most of the UK's electricity comes from?",
           "tags": [],
           "text": "We depend on electricity, much of it from burning fossil fuels, though renewable sources are increasing.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/energy-generation.webp",
+            "alt": "A power station with tall chimneys beside a river.",
+            "credit": "David Dixon · CC BY-SA 2.0",
+            "unchecked": true
+          }
         },
         {
           "term": "How a power station works",
@@ -191,7 +197,14 @@
           "term": "Gas, coal and oil",
           "ask": "What is each fossil fuel mainly used for?",
           "tags": [],
-          "text": "Gas powers much UK electricity, heating and cooking; coal is burned for energy; oil makes plastics and fuel."
+          "text": "Gas powers much UK electricity, heating and cooking; coal is burned for energy; oil makes plastics and fuel.",
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/gas-coal-and-oil.webp",
+            "alt": "A coal heap beside a power station with pylons behind.",
+            "credit": "Ian Calderwood · CC BY-SA 2.0",
+            "unchecked": true
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Fossil fuel pros",
@@ -203,20 +216,39 @@
           "term": "Fossil fuel cons",
           "ask": "What harm does burning and extracting fossil fuels do?",
           "tags": [],
-          "text": "Release carbon dioxide, adding to global warming; non-renewable; spills cause pollution."
+          "text": "Release carbon dioxide, adding to global warming; non-renewable; spills cause pollution.",
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/fossil-fuel-cons.webp",
+            "alt": "Workers in protective suits cleaning oil off a beach.",
+            "credit": "PO3 Patrick Kelley · Public Domain",
+            "unchecked": true
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Shale gas",
           "ask": "Where else can natural gas be found, apart from in ordinary gas fields?",
           "tags": [],
-          "text": "Natural gas trapped in shale rock in the earth's crust."
+          "text": "Natural gas trapped in shale rock in the earth's crust.",
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/shale-gas.webp",
+            "alt": "A gas drilling rig on a wooded hillside beyond a road.",
+            "credit": "Ruhrfisch ( talk ) · CC BY-SA 4.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Fracking",
           "ask": "How could gas that's locked inside rock be got out?",
           "tags": [],
           "text": "Hydraulic fracturing: water, sand and chemicals are forced into the rock at high pressure to release the gas.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/fracking.svg",
+            "alt": "A fracking well pumping water, sand and chemicals into dark shale, with gas coming back up.",
+            "credit": "DT",
+            "unchecked": true
+          }
         }
       ],
       "check": [
@@ -241,7 +273,13 @@
           "term": "Fission",
           "ask": "What happens inside a nuclear reactor to release energy?",
           "tags": [],
-          "text": "Splitting uranium atoms in a nuclear reactor, which releases a large amount of heat."
+          "text": "Splitting uranium atoms in a nuclear reactor, which releases a large amount of heat.",
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/fission.webp",
+            "alt": "A large nuclear power station beside the sea.",
+            "credit": "Jim Linwood · CC BY 2.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Making electricity",
@@ -293,7 +331,13 @@
           "ask": "How can moving air be turned into electricity?",
           "tags": [],
           "text": "Wind turns the blades on a rotor connected to a generator, converting kinetic energy into electricity.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/wind-turbines.webp",
+            "alt": "A row of offshore wind turbines in a calm sea.",
+            "credit": "Photo by Kim Hansen . Postprocessing (crop, rotation, color adjustment, dust spot removal and noise reduction) by Richard Bartz and Kim Hansen . · CC BY-SA 3.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Wind pros",
@@ -305,20 +349,40 @@
           "term": "Wind cons",
           "ask": "Why can't we rely on wind for all our electricity?",
           "tags": [],
-          "text": "Unpredictable, wind farms spoil the landscape, and connecting remote sites to the grid can be costly."
+          "text": "Unpredictable, wind farms spoil the landscape, and connecting remote sites to the grid can be costly.",
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/wind-cons.webp",
+            "alt": "Wind turbines spread across dry, rolling hills.",
+            "credit": "ENERGY.GOV · Public Domain",
+            "unchecked": true
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Tidal power",
           "ask": "How could the sea be used to make electricity?",
           "tags": [],
           "text": "Moving water turns underwater turbines, which drive generators.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/tidal-power.webp",
+            "alt": "A tidal power station built at the edge of a rocky inlet.",
+            "credit": "Press-service of RusHydro · CC BY-SA 3.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Barrage and stream",
           "ask": "What two things about the sea could tidal systems make use of?",
           "tags": [],
-          "text": "A tidal barrage uses the difference between high and low tide; tidal stream uses fast currents around coasts."
+          "text": "A tidal barrage uses the difference between high and low tide; tidal stream uses fast currents around coasts.",
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/barrage-and-stream.svg",
+            "alt": "A tidal barrage with water flowing through a turbine, beside a tidal stream turbine in a fast current.",
+            "credit": "DT",
+            "unchecked": true
+          },
+          "imageOnReveal": true
         },
         {
           "term": "Tidal pros and cons",
@@ -350,7 +414,13 @@
           "ask": "How can sunlight be turned straight into electricity?",
           "tags": [],
           "text": "Photovoltaic (PV) cells absorb light and convert it into electricity.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/solar-panels.webp",
+            "alt": "Solar panels on a tiled house roof.",
+            "credit": "Kolforn ( Kolforn ) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true · CC BY-SA 4.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Solar pros and cons",
@@ -362,7 +432,13 @@
           "term": "Biomass energy",
           "ask": "How could plants, wood chips or animal waste give us energy?",
           "tags": [],
-          "text": "Energy from organic matter, released by burning or by anaerobic digestion, which makes biogas and biofertiliser."
+          "text": "Energy from organic matter, released by burning or by anaerobic digestion, which makes biogas and biofertiliser.",
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/biomass-energy.webp",
+            "alt": "A modern biomass power station with a tall chimney.",
+            "credit": "peter robinson · CC BY-SA 2.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Biomass pros and cons",
@@ -375,13 +451,26 @@
           "ask": "How can falling water be used to make electricity?",
           "tags": [],
           "text": "HEP: falling water's kinetic energy turns a turbine, which drives a generator; dams are the usual structure.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/hydroelectric-power.webp",
+            "alt": "A large concrete dam with a power station at its foot.",
+            "credit": "You may re-use this image under the terms of the license using the following reference: Image: Wikipedia / Tobias Klenze / CC-BY-SA 4.0 . The license must be a link! · CC BY 3.0",
+            "unchecked": true
+          }
         },
         {
           "term": "HEP pros and cons",
           "ask": "What does building a dam cost, apart from money?",
           "tags": [],
-          "text": "Renewable, reliable, no pollution and matches demand, but dams are costly and flooding valleys harms ecosystems."
+          "text": "Renewable, reliable, no pollution and matches demand, but dams are costly and flooding valleys harms ecosystems.",
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/hep-pros-and-cons.webp",
+            "alt": "A hydroelectric dam holding back a large reservoir in the hills.",
+            "credit": "JonMallard10 · CC BY 4.0",
+            "unchecked": true
+          },
+          "imageOnReveal": true
         }
       ],
       "check": [
@@ -424,7 +513,13 @@
             "At peak times, the dam opens and water falls to the lower reservoir.",
             "The falling water drives turbines, quickly topping up the National Grid.",
             "The water is pumped back up, ready for the cycle to start again."
-          ]
+          ],
+          "image": {
+            "file": "assets/img/gcse/g04-energy-generation-storage/kinetic-pumped-storage.svg",
+            "alt": "Water pumped up to an upper reservoir at night, then falling through a turbine at peak times.",
+            "credit": "DT",
+            "unchecked": true
+          }
         }
       ],
       "check": [

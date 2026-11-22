@@ -50,7 +50,7 @@ export function learnStep(dir, dry = false) {
 
 function itemCard(it, chunk, key) {
   const ansId = `ans-${key.replace(/\W/g, "-")}`;
-  const slot = () => imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, !!it.image);
+  const slot = () => imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, it.image);
   const caption = realText(it.caption);
   const media = h("div", { class: "litem-media" });
   const btn = h("button", { type: "button", class: "reveal-ph litem-btn", "aria-expanded": "false", "aria-controls": ansId,
@@ -116,7 +116,7 @@ function stepThrough(it, chunk) {
       pips),
     it.text && h("p", { class: "steps-intro" }, it.text),
     imgFigure(it.image, it.term, realText(it.caption)),
-    imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, !!it.image),
+    imageSlot({ kind: "item", chunk: chunk.id, term: it.term }, it.image),
     h("div", { class: "step-body" }, num, text),
     status,
     h("div", { class: "btn-row" }, back, next, hint("steps", "Step through in order")));

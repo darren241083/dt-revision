@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="The crossed-out wheelie bin symbol for electrical waste">
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <g fill="none" stroke="#10212B" stroke-width="14" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M330 170 H470"/>
+    <path d="M385 170 V150 H415 V170"/>
+    <path d="M310 200 H490"/>
+    <path d="M325 200 L345 420 H455 L475 200"/>
+    
+  </g>
+  <circle cx="365" cy="440" r="18" fill="#FFFFFF" stroke="#10212B" stroke-width="12"/>
+  <path d="M260 120 L540 470 M540 120 L260 470" stroke="#10212B" stroke-width="16" stroke-linecap="round"/>
+  <rect x="300" y="500" width="200" height="34" fill="#10212B"/>
+</svg>

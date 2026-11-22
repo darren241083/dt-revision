@@ -3,10 +3,15 @@
   "level": "gcse",
   "title": "Culture, society and production systems",
   "titleMark": "production systems",
-  "spec": ["3.1.1"],
+  "spec": [
+    "3.1.1"
+  ],
   "section": "A",
   "materials": [],
-  "book": { "title": "ClearRevise AQA GCSE D&T 8552", "pages": "8–11" },
+  "book": {
+    "title": "ClearRevise AQA GCSE D&T 8552",
+    "pages": "8–11"
+  },
   "audio": null,
   "needs": [
     "Explain how culture, fashion, faiths and beliefs affect design.",
@@ -16,10 +21,26 @@
     "Explain ethics, WEEE, planned obsolescence, and design for maintenance and disassembly."
   ],
   "doNow": [
-    { "q": "What is inclusive design?", "a": "Designing so as many people as possible can use a product, whatever their age, gender or disability.", "from": "Pre-read p8" },
-    { "q": "Give one disadvantage of CAD.", "a": "Costly software and computers, work can be lost, corrupted or hacked, or it takes time to learn.", "from": "Pre-read p10" },
-    { "q": "What does a Life Cycle Assessment (LCA) assess?", "a": "A product's environmental impact at each stage of its life.", "from": "3.1.1" },
-    { "q": "Why does mass production lower the cost of each product?", "a": "Costs are spread over many products.", "from": "3.2.7" }
+    {
+      "q": "What is inclusive design?",
+      "a": "Designing so as many people as possible can use a product, whatever their age, gender or disability.",
+      "from": "Pre-read p8"
+    },
+    {
+      "q": "Give one disadvantage of CAD.",
+      "a": "Costly software and computers, work can be lost, corrupted or hacked, or it takes time to learn.",
+      "from": "Pre-read p10"
+    },
+    {
+      "q": "What does a Life Cycle Assessment (LCA) assess?",
+      "a": "A product's environmental impact at each stage of its life.",
+      "from": "3.1.1"
+    },
+    {
+      "q": "Why does mass production lower the cost of each product?",
+      "a": "Costs are spread over many products.",
+      "from": "3.2.7"
+    }
   ],
   "starter": {
     "clues": [
@@ -28,17 +49,40 @@
       "I help a manufacturer keep its sales regular."
     ],
     "answer": "Planned obsolescence",
-    "options": ["Planned obsolescence", "Design for maintenance", "Design for disassembly", "Just in Time"]
+    "options": [
+      "Planned obsolescence",
+      "Design for maintenance",
+      "Design for disassembly",
+      "Just in Time"
+    ]
   },
   "bigPicture": {
     "question": "How do people, systems and computers shape the products we buy?",
     "lenses": [
-      { "icon": "globe", "text": "Culture and beliefs" },
-      { "icon": "people", "text": "Designing for everyone" },
-      { "icon": "cog", "text": "Production systems" },
-      { "icon": "tool", "text": "Designing by computer" },
-      { "icon": "shield", "text": "Ethics and waste laws" },
-      { "icon": "clock", "text": "A product's lifespan" }
+      {
+        "icon": "globe",
+        "text": "Culture and beliefs"
+      },
+      {
+        "icon": "people",
+        "text": "Designing for everyone"
+      },
+      {
+        "icon": "cog",
+        "text": "Production systems"
+      },
+      {
+        "icon": "tool",
+        "text": "Designing by computer"
+      },
+      {
+        "icon": "shield",
+        "text": "Ethics and waste laws"
+      },
+      {
+        "icon": "clock",
+        "text": "A product's lifespan"
+      }
     ]
   },
   "chunks": [
@@ -49,14 +93,52 @@
       "pages": "8",
       "summary": "The ideas, beliefs and customs that shape what people want.",
       "items": [
-        { "term": "Culture", "ask": "What makes one group of people's way of life different from another's?", "tags": [], "text": "The ideas, beliefs, customs and social behaviours of a group, shown through ritual, art and fashion." },
-        { "term": "Fashion and trends", "ask": "Why do lots of people suddenly want the same trainers?", "tags": [], "text": "Tastes change fast as people buy into the latest thing, showcased on social media, blogs and the internet." },
-        { "term": "Colours and styles", "ask": "Why might a product's colour sell well in one country but not in another?", "tags": [], "text": "Colours and styles can mean very different things in different cultures, so research before selling abroad." },
-        { "term": "Faiths and beliefs", "ask": "Why might a product that suits one community be unsuitable for another?", "tags": [], "text": "Designers must consider how a product fits different faiths and communities, such as modest clothing." }
+        {
+          "term": "Culture",
+          "ask": "What makes one group of people's way of life different from another's?",
+          "tags": [],
+          "text": "The ideas, beliefs, customs and social behaviours of a group, shown through ritual, art and fashion.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/culture.webp",
+            "alt": "Dancers in colourful traditional costumes and hats at a festival.",
+            "credit": "mckaysavage · CC BY 2.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Fashion and trends",
+          "ask": "Why do lots of people suddenly want the same trainers?",
+          "tags": [],
+          "text": "Tastes change fast as people buy into the latest thing, showcased on social media, blogs and the internet.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/fashion-and-trends.webp",
+            "alt": "A shop window with clothes on mannequins and price signs.",
+            "credit": "Jonathan Billinger · CC BY-SA 2.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Colours and styles",
+          "ask": "Why might a product's colour sell well in one country but not in another?",
+          "tags": [],
+          "text": "Colours and styles can mean very different things in different cultures, so research before selling abroad."
+        },
+        {
+          "term": "Faiths and beliefs",
+          "ask": "Why might a product that suits one community be unsuitable for another?",
+          "tags": [],
+          "text": "Designers must consider how a product fits different faiths and communities, such as modest clothing."
+        }
       ],
       "check": [
-        { "q": "What is culture?", "a": "The ideas, beliefs, customs and social behaviours of a society or group of people." },
-        { "q": "Why should designers research colours before selling a product in another country?", "a": "Colours can mean very different things in different cultures." }
+        {
+          "q": "What is culture?",
+          "a": "The ideas, beliefs, customs and social behaviours of a society or group of people."
+        },
+        {
+          "q": "Why should designers research colours before selling a product in another country?",
+          "a": "Colours can mean very different things in different cultures."
+        }
       ]
     },
     {
@@ -66,14 +148,53 @@
       "pages": "8",
       "summary": "Designing products and places that almost anyone can use.",
       "items": [
-        { "term": "Average user", "ask": "Who might struggle with a product designed for a 'typical' person?", "tags": [], "text": "Products are often designed for the average user, which can leave others out." },
-        { "term": "Inclusive design", "ask": "Who should a new product be designed for?", "tags": [], "text": "Designing so as many people as possible can use it safely, easily and with dignity, whatever their age, gender or disability." },
-        { "term": "Modern materials", "ask": "How have newer materials helped people who find products hard to hold or move?", "tags": [], "text": "Make products lighter, tougher and more adaptable, helping people with weaker grip and reduced mobility." },
-        { "term": "Inclusive features", "ask": "What could you add to a building or product so disabled and elderly people can use it?", "tags": [], "text": "Features such as clear signage, step-free access to buildings and transport, easy-grip handles and accessible controls.", "imageOnReveal": true }
+        {
+          "term": "Average user",
+          "ask": "Who might struggle with a product designed for a 'typical' person?",
+          "tags": [],
+          "text": "Products are often designed for the average user, which can leave others out."
+        },
+        {
+          "term": "Inclusive design",
+          "ask": "Who should a new product be designed for?",
+          "tags": [],
+          "text": "Designing so as many people as possible can use it safely, easily and with dignity, whatever their age, gender or disability."
+        },
+        {
+          "term": "Modern materials",
+          "ask": "How have newer materials helped people who find products hard to hold or move?",
+          "tags": [],
+          "text": "Make products lighter, tougher and more adaptable, helping people with weaker grip and reduced mobility.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/modern-materials.webp",
+            "alt": "A lightweight wheelchair with a blue metal frame.",
+            "credit": "Arnold C ( User:Buchanan-Hermit ) · CC BY 2.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Inclusive features",
+          "ask": "What could you add to a building or product so disabled and elderly people can use it?",
+          "tags": [],
+          "text": "Features such as clear signage, step-free access to buildings and transport, easy-grip handles and accessible controls.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/inclusive-features.svg",
+            "alt": "Four inclusive features: clear signage, step-free access, easy-grip handles and accessible controls.",
+            "credit": "DT",
+            "unchecked": true
+          }
+        }
       ],
       "check": [
-        { "q": "What is inclusive design?", "a": "Designing so as many people as possible can use a product safely, easily and with dignity, whatever their age, gender or disability." },
-        { "q": "Give two features that make a product or building more inclusive.", "a": "Any two of: clear signage, step-free access, easy-grip handles, accessible controls." }
+        {
+          "q": "What is inclusive design?",
+          "a": "Designing so as many people as possible can use a product safely, easily and with dignity, whatever their age, gender or disability."
+        },
+        {
+          "q": "Give two features that make a product or building more inclusive.",
+          "a": "Any two of: clear signage, step-free access, easy-grip handles, accessible controls."
+        }
       ]
     },
     {
@@ -83,15 +204,53 @@
       "pages": "9",
       "summary": "Systems that adapt to changing orders and cut out waste.",
       "items": [
-        { "term": "Flexible manufacturing system (FMS)", "ask": "What would a factory need if its orders kept changing in size and type?", "tags": [], "text": "Production that adapts easily to changes in the quantity or type of product being made." },
-        { "term": "Reprogrammable machines", "ask": "How can the same machines switch to making something different?", "tags": [], "text": "Automated machines are reprogrammed or reconfigured quickly for a new product or quantity." },
-        { "term": "Stock and planning", "ask": "How does a factory keep track of every part and every job?", "tags": [], "text": "Tracks every part in the warehouse, and a production plan sets times for accessing parts, machining, assembly and packing." },
-        { "term": "Lean manufacturing", "ask": "How could a factory cut its costs without making less?", "tags": [], "text": "Minimising waste and improving efficiency, which saves cost and reduces the use of resources." },
-        { "term": "Eliminating waste", "ask": "What kinds of waste could a factory get rid of?", "tags": [], "text": "Removing wasted materials, time and effort is core to lean practice." }
+        {
+          "term": "Flexible manufacturing system (FMS)",
+          "ask": "What would a factory need if its orders kept changing in size and type?",
+          "tags": [],
+          "text": "Production that adapts easily to changes in the quantity or type of product being made.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/flexible-manufacturing-system-fms.svg",
+            "alt": "A robot loading several CNC machines that make different products.",
+            "credit": "DT",
+            "unchecked": true
+          },
+          "imageOnReveal": true
+        },
+        {
+          "term": "Reprogrammable machines",
+          "ask": "How can the same machines switch to making something different?",
+          "tags": [],
+          "text": "Automated machines are reprogrammed or reconfigured quickly for a new product or quantity."
+        },
+        {
+          "term": "Stock and planning",
+          "ask": "How does a factory keep track of every part and every job?",
+          "tags": [],
+          "text": "Tracks every part in the warehouse, and a production plan sets times for accessing parts, machining, assembly and packing."
+        },
+        {
+          "term": "Lean manufacturing",
+          "ask": "How could a factory cut its costs without making less?",
+          "tags": [],
+          "text": "Minimising waste and improving efficiency, which saves cost and reduces the use of resources."
+        },
+        {
+          "term": "Eliminating waste",
+          "ask": "What kinds of waste could a factory get rid of?",
+          "tags": [],
+          "text": "Removing wasted materials, time and effort is core to lean practice."
+        }
       ],
       "check": [
-        { "q": "What is a flexible manufacturing system (FMS)?", "a": "Production that adapts easily to changes in the quantity or type of product being made." },
-        { "q": "What does lean manufacturing focus on?", "a": "Minimising waste and improving efficiency, which saves cost." }
+        {
+          "q": "What is a flexible manufacturing system (FMS)?",
+          "a": "Production that adapts easily to changes in the quantity or type of product being made."
+        },
+        {
+          "q": "What does lean manufacturing focus on?",
+          "a": "Minimising waste and improving efficiency, which saves cost."
+        }
       ]
     },
     {
@@ -101,13 +260,41 @@
       "pages": "9",
       "summary": "Ordering materials only when they are needed.",
       "items": [
-        { "term": "Just in Time (JIT)", "ask": "How could a factory avoid keeping piles of stock waiting around?", "tags": [], "text": "Materials are ordered only as needed by closely monitoring stock, so products are made to order." },
-        { "term": "JIT advantages", "ask": "What does a factory gain by not storing lots of stock?", "tags": [], "text": "Saves storage space, frees factory space, stock doesn't go out of date and cash flow stays in control." },
-        { "term": "JIT disadvantages", "ask": "What could go wrong if parts arrive just before they're needed?", "tags": [], "text": "Needs a fast, reliable supply chain; any delay hits sales, and small orders lose bulk discounts." }
+        {
+          "term": "Just in Time (JIT)",
+          "ask": "How could a factory avoid keeping piles of stock waiting around?",
+          "tags": [],
+          "text": "Materials are ordered only as needed by closely monitoring stock, so products are made to order.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/just-in-time-jit.svg",
+            "alt": "A store full of stock beside a small amount, with a delivery arriving only as needed.",
+            "credit": "DT",
+            "unchecked": true
+          },
+          "imageOnReveal": true
+        },
+        {
+          "term": "JIT advantages",
+          "ask": "What does a factory gain by not storing lots of stock?",
+          "tags": [],
+          "text": "Saves storage space, frees factory space, stock doesn't go out of date and cash flow stays in control."
+        },
+        {
+          "term": "JIT disadvantages",
+          "ask": "What could go wrong if parts arrive just before they're needed?",
+          "tags": [],
+          "text": "Needs a fast, reliable supply chain; any delay hits sales, and small orders lose bulk discounts."
+        }
       ],
       "check": [
-        { "q": "What is Just in Time (JIT)?", "a": "Ordering materials and components only as they are needed, so products are made to order." },
-        { "q": "Give one disadvantage of JIT.", "a": "It needs a fast, reliable supply chain, delays affect sales, or costs are higher because small orders lose bulk discounts." }
+        {
+          "q": "What is Just in Time (JIT)?",
+          "a": "Ordering materials and components only as they are needed, so products are made to order."
+        },
+        {
+          "q": "Give one disadvantage of JIT.",
+          "a": "It needs a fast, reliable supply chain, delays affect sales, or costs are higher because small orders lose bulk discounts."
+        }
       ]
     },
     {
@@ -117,15 +304,60 @@
       "pages": "10",
       "summary": "Computers used to design products and to control the machines that make them.",
       "items": [
-        { "term": "Computer aided design (CAD)", "ask": "How can designers draw a product precisely without pencil and paper?", "tags": [], "text": "Using a computer to produce precise 2D drawings or 3D models, easy to edit and visualise before manufacture." },
-        { "term": "CAD advantages", "ask": "Why would a designer choose a computer over drawing by hand?", "tags": [], "text": "Accurate, easily changed, shared at once, rendered to show the finish, and turned into 3D models." },
-        { "term": "CAD disadvantages", "ask": "What are the downsides of designing on a computer?", "tags": [], "text": "Costly software, computers and printers; work can be lost, corrupted or hacked; it takes time to learn." },
-        { "term": "Computer aided manufacture (CAM)", "ask": "How can a design on a screen be turned straight into a real part?", "tags": [], "text": "Software turns CAD data into instructions that control machines such as laser cutters, CNC mills and 3D printers.", "imageOnReveal": true },
-        { "term": "CAM benefits", "ask": "Why do factories let computers control their machines?", "tags": [], "text": "Increases productivity and is highly accurate and consistent, which reduces waste." }
+        {
+          "term": "Computer aided design (CAD)",
+          "ask": "How can designers draw a product precisely without pencil and paper?",
+          "tags": [],
+          "text": "Using a computer to produce precise 2D drawings or 3D models, easy to edit and visualise before manufacture.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/computer-aided-design-cad.webp",
+            "alt": "CAD software on screen showing a 3D model of tanks and a platform.",
+            "credit": "User id 5544332 · CC BY-SA 4.0",
+            "unchecked": true
+          },
+          "imageOnReveal": true
+        },
+        {
+          "term": "CAD advantages",
+          "ask": "Why would a designer choose a computer over drawing by hand?",
+          "tags": [],
+          "text": "Accurate, easily changed, shared at once, rendered to show the finish, and turned into 3D models."
+        },
+        {
+          "term": "CAD disadvantages",
+          "ask": "What are the downsides of designing on a computer?",
+          "tags": [],
+          "text": "Costly software, computers and printers; work can be lost, corrupted or hacked; it takes time to learn."
+        },
+        {
+          "term": "Computer aided manufacture (CAM)",
+          "ask": "How can a design on a screen be turned straight into a real part?",
+          "tags": [],
+          "text": "Software turns CAD data into instructions that control machines such as laser cutters, CNC mills and 3D printers.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/computer-aided-manufacture-cam.webp",
+            "alt": "A 3D model of a block with tool paths drawn around its slot and holes.",
+            "credit": "Toolpathsubmanu · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "CAM benefits",
+          "ask": "Why do factories let computers control their machines?",
+          "tags": [],
+          "text": "Increases productivity and is highly accurate and consistent, which reduces waste."
+        }
       ],
       "check": [
-        { "q": "Give two advantages of CAD.", "a": "Any two of: accurate, easy to change, can be shared at once, can be rendered to show the finish, 3D models can be made." },
-        { "q": "What does CAM do?", "a": "Uses software to turn CAD data into instructions that control machines such as laser cutters and CNC mills." }
+        {
+          "q": "Give two advantages of CAD.",
+          "a": "Any two of: accurate, easy to change, can be shared at once, can be rendered to show the finish, 3D models can be made."
+        },
+        {
+          "q": "What does CAM do?",
+          "a": "Uses software to turn CAD data into instructions that control machines such as laser cutters and CNC mills."
+        }
       ]
     },
     {
@@ -135,15 +367,52 @@
       "pages": "10",
       "summary": "Thinking about the harm to people and the planet, and the laws on electrical waste.",
       "items": [
-        { "term": "Researching new materials", "ask": "How could a designer check a new material won't harm the environment?", "tags": [], "text": "Carry out a life cycle assessment (LCA) to see how the material is likely to affect the environment." },
-        { "term": "Credentials", "ask": "Why are companies keen to show they care about people and the planet?", "tags": [], "text": "Consumers demand it, so companies build environmental and social credentials and consider their ecological footprint." },
-        { "term": "Unethical cost-cutting", "ask": "What wrong ways could a company use to cut its production costs?", "tags": [], "text": "Low or underpaid labour, compromising safety, or disposing of waste illegally." },
-        { "term": "WEEE regulations", "ask": "What could the law make businesses do about old electrical goods?", "tags": [], "text": "UK rules that make businesses minimise electrical waste, promote reuse and recycle correctly to meet recovery targets." },
-        { "term": "Designing for WEEE", "ask": "How could an electrical product be designed so less of it is wasted?", "tags": [], "text": "Use less material and make products more reusable and recyclable." }
+        {
+          "term": "Researching new materials",
+          "ask": "How could a designer check a new material won't harm the environment?",
+          "tags": [],
+          "text": "Carry out a life cycle assessment (LCA) to see how the material is likely to affect the environment."
+        },
+        {
+          "term": "Credentials",
+          "ask": "Why are companies keen to show they care about people and the planet?",
+          "tags": [],
+          "text": "Consumers demand it, so companies build environmental and social credentials and consider their ecological footprint."
+        },
+        {
+          "term": "Unethical cost-cutting",
+          "ask": "What wrong ways could a company use to cut its production costs?",
+          "tags": [],
+          "text": "Low or underpaid labour, compromising safety, or disposing of waste illegally."
+        },
+        {
+          "term": "WEEE regulations",
+          "ask": "What could the law make businesses do about old electrical goods?",
+          "tags": [],
+          "text": "UK rules that make businesses minimise electrical waste, promote reuse and recycle correctly to meet recovery targets.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/weee-regulations.svg",
+            "alt": "The crossed-out wheelie bin symbol for electrical waste.",
+            "credit": "DT",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Designing for WEEE",
+          "ask": "How could an electrical product be designed so less of it is wasted?",
+          "tags": [],
+          "text": "Use less material and make products more reusable and recyclable."
+        }
       ],
       "check": [
-        { "q": "Give one unethical way a company might cut its production costs.", "a": "Low or underpaid labour, compromising safety, or disposing of waste illegally." },
-        { "q": "What does WEEE stand for?", "a": "Waste Electrical and Electronic Equipment." }
+        {
+          "q": "Give one unethical way a company might cut its production costs.",
+          "a": "Low or underpaid labour, compromising safety, or disposing of waste illegally."
+        },
+        {
+          "q": "What does WEEE stand for?",
+          "a": "Waste Electrical and Electronic Equipment."
+        }
       ]
     },
     {
@@ -153,38 +422,146 @@
       "pages": "11",
       "summary": "Deciding how long a product should last and what happens at the end of its life.",
       "items": [
-        { "term": "Planned obsolescence", "ask": "Why do people end up replacing some products every couple of years?", "tags": [], "text": "Deliberately designing a product to go out of date or wear out within a set time, to keep sales regular." },
-        { "term": "Out-of-date technology", "ask": "What can make an old phone or laptop stop being useful?", "tags": [], "text": "Software becomes incompatible, processor power is too low or parts wear out; trends and demand matter too." },
-        { "term": "End-of-life planning", "ask": "What should happen to a product when nobody wants it any more?", "tags": [], "text": "Planning takeback, recovery and recycling, so disposal is efficient and cuts carbon emissions and landfill." },
-        { "term": "Design for maintenance", "ask": "What could make a product worth fixing rather than binning?", "tags": [], "text": "Designing so worn out or broken parts can be replaced." },
-        { "term": "Benefits of repair", "ask": "Who gains when products are repaired instead of replaced?", "tags": [], "text": "Saves the whole product being thrown away and creates jobs for engineers and a spare parts supply chain." },
-        { "term": "Design for disassembly", "ask": "What would make it easier to recycle a product's parts at the end of its life?", "tags": [], "text": "Choosing materials so the product can be taken apart at end of life and its parts recycled or reused." },
-        { "term": "Key considerations", "ask": "What should a designer weigh up before using a new technology?", "tags": [], "text": "Cost, reliability, longevity, sustainability and recyclability." }
+        {
+          "term": "Planned obsolescence",
+          "ask": "Why do people end up replacing some products every couple of years?",
+          "tags": [],
+          "text": "Deliberately designing a product to go out of date or wear out within a set time, to keep sales regular.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/planned-obsolescence.webp",
+            "alt": "A small electrical appliance taken apart, with its screws beside it.",
+            "credit": "LukaszKatlewa · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Out-of-date technology",
+          "ask": "What can make an old phone or laptop stop being useful?",
+          "tags": [],
+          "text": "Software becomes incompatible, processor power is too low or parts wear out; trends and demand matter too."
+        },
+        {
+          "term": "End-of-life planning",
+          "ask": "What should happen to a product when nobody wants it any more?",
+          "tags": [],
+          "text": "Planning takeback, recovery and recycling, so disposal is efficient and cuts carbon emissions and landfill.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/end-of-life-planning.webp",
+            "alt": "Old computer monitors piled in a trailer for recycling.",
+            "credit": "milwaukeeva · Public Domain",
+            "unchecked": true
+          },
+          "imageOnReveal": true
+        },
+        {
+          "term": "Design for maintenance",
+          "ask": "What could make a product worth fixing rather than binning?",
+          "tags": [],
+          "text": "Designing so worn out or broken parts can be replaced.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/design-for-maintenance.svg",
+            "alt": "A product with its cover unscrewed, a worn part coming out and a new part going in.",
+            "credit": "DT",
+            "unchecked": true
+          },
+          "imageOnReveal": true
+        },
+        {
+          "term": "Benefits of repair",
+          "ask": "Who gains when products are repaired instead of replaced?",
+          "tags": [],
+          "text": "Saves the whole product being thrown away and creates jobs for engineers and a spare parts supply chain."
+        },
+        {
+          "term": "Design for disassembly",
+          "ask": "What would make it easier to recycle a product's parts at the end of its life?",
+          "tags": [],
+          "text": "Choosing materials so the product can be taken apart at end of life and its parts recycled or reused.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/design-for-disassembly.webp",
+            "alt": "A computer case made from cardboard, with its ports showing.",
+            "credit": "TVZ Design · CC BY 2.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Key considerations",
+          "ask": "What should a designer weigh up before using a new technology?",
+          "tags": [],
+          "text": "Cost, reliability, longevity, sustainability and recyclability."
+        }
       ],
       "check": [
-        { "q": "What is planned obsolescence?", "a": "Deliberately designing a product to go out of date or wear out within a set time." },
-        { "q": "Give one benefit of design for maintenance.", "a": "The whole product isn't thrown away, or it creates jobs for engineers and a spare parts supply chain." }
+        {
+          "q": "What is planned obsolescence?",
+          "a": "Deliberately designing a product to go out of date or wear out within a set time."
+        },
+        {
+          "q": "Give one benefit of design for maintenance.",
+          "a": "The whole product isn't thrown away, or it creates jobs for engineers and a spare parts supply chain."
+        }
       ]
     }
   ],
   "keywords": [
-    { "term": "Culture", "def": "The ideas, beliefs, customs and social behaviours of a group." },
-    { "term": "Fashion and trends", "def": "Tastes that come and go as people buy into the latest thing." },
-    { "term": "Inclusive design", "def": "Designing so as many people as possible can use a product." },
-    { "term": "Flexible manufacturing system (FMS)", "def": "Production that adapts easily to changes in quantity or type." },
-    { "term": "Lean manufacturing", "def": "Minimising waste to save cost and improve efficiency." },
-    { "term": "Just in Time (JIT)", "def": "Ordering materials only as they are needed." },
-    { "term": "CAD", "def": "Computer aided design: precise 2D drawings and 3D models on a computer." },
-    { "term": "CAM", "def": "Computer aided manufacture: software controlling machines from CAD data." },
-    { "term": "WEEE", "def": "Waste Electrical and Electronic Equipment regulations on electrical waste." },
-    { "term": "Planned obsolescence", "def": "Designing a product to go out of date or wear out within a set time." },
-    { "term": "Design for maintenance", "def": "Designing so worn or broken parts can be replaced." },
-    { "term": "Design for disassembly", "def": "Designing so a product can be taken apart at end of life." }
+    {
+      "term": "Culture",
+      "def": "The ideas, beliefs, customs and social behaviours of a group."
+    },
+    {
+      "term": "Fashion and trends",
+      "def": "Tastes that come and go as people buy into the latest thing."
+    },
+    {
+      "term": "Inclusive design",
+      "def": "Designing so as many people as possible can use a product."
+    },
+    {
+      "term": "Flexible manufacturing system (FMS)",
+      "def": "Production that adapts easily to changes in quantity or type."
+    },
+    {
+      "term": "Lean manufacturing",
+      "def": "Minimising waste to save cost and improve efficiency."
+    },
+    {
+      "term": "Just in Time (JIT)",
+      "def": "Ordering materials only as they are needed."
+    },
+    {
+      "term": "CAD",
+      "def": "Computer aided design: precise 2D drawings and 3D models on a computer."
+    },
+    {
+      "term": "CAM",
+      "def": "Computer aided manufacture: software controlling machines from CAD data."
+    },
+    {
+      "term": "WEEE",
+      "def": "Waste Electrical and Electronic Equipment regulations on electrical waste."
+    },
+    {
+      "term": "Planned obsolescence",
+      "def": "Designing a product to go out of date or wear out within a set time."
+    },
+    {
+      "term": "Design for maintenance",
+      "def": "Designing so worn or broken parts can be replaced."
+    },
+    {
+      "term": "Design for disassembly",
+      "def": "Designing so a product can be taken apart at end of life."
+    }
   ],
   "apply": [
     {
       "q": "A furniture maker makes several chair designs in small numbers each week, and the quantity of each changes all the time.",
-      "tools": ["A flexible manufacturing system", "Planned obsolescence", "Inclusive design", "Design for disassembly"],
+      "tools": [
+        "A flexible manufacturing system",
+        "Planned obsolescence",
+        "Inclusive design",
+        "Design for disassembly"
+      ],
       "tool": 0,
       "reasons": [
         "Its reprogrammable machines adapt quickly to changes in the type and quantity of product",
@@ -196,7 +573,12 @@
     },
     {
       "q": "A bicycle maker wants to stop paying for a large warehouse full of parts.",
-      "tools": ["Just in Time", "CAD", "Planned obsolescence", "Lean manufacturing on its own"],
+      "tools": [
+        "Just in Time",
+        "CAD",
+        "Planned obsolescence",
+        "Lean manufacturing on its own"
+      ],
       "tool": 0,
       "reasons": [
         "Parts are ordered only as they are needed, saving storage space and keeping cash flow in control",
@@ -208,7 +590,12 @@
     },
     {
       "q": "A kettle maker wants customers to be able to replace a worn-out switch instead of throwing the kettle away.",
-      "tools": ["Design for maintenance", "Planned obsolescence", "Just in Time", "CAM"],
+      "tools": [
+        "Design for maintenance",
+        "Planned obsolescence",
+        "Just in Time",
+        "CAM"
+      ],
       "tool": 0,
       "reasons": [
         "Worn or broken parts can be replaced, so the whole product isn't thrown away",
@@ -222,37 +609,247 @@
   "oddOne": {
     "q": "Which is the odd one out?",
     "items": [
-      { "n": "CAD", "why": "The only one used for designing rather than making or stocking." },
-      { "n": "Just in Time", "why": "The only one about when materials are ordered." },
-      { "n": "Lean manufacturing", "why": "The only one whose core aim is getting rid of waste." },
-      { "n": "Flexible manufacturing system", "why": "The only one that adapts quickly to changes in the type or quantity of product." }
+      {
+        "n": "CAD",
+        "why": "The only one used for designing rather than making or stocking."
+      },
+      {
+        "n": "Just in Time",
+        "why": "The only one about when materials are ordered."
+      },
+      {
+        "n": "Lean manufacturing",
+        "why": "The only one whose core aim is getting rid of waste."
+      },
+      {
+        "n": "Flexible manufacturing system",
+        "why": "The only one that adapts quickly to changes in the type or quantity of product."
+      }
     ]
   },
   "quiz": [
-    { "q": "What is culture?", "options": ["The ideas, beliefs, customs and social behaviours of a group", "The cost of making a product", "A way of ordering stock", "A type of computer software"], "answer": 0, "why": "Culture shows itself through ritual, art and fashion.", "chunk": "culture" },
-    { "q": "Social media, blogs and the internet let new fashions get a very rapid response from customers.", "tf": true, "why": "Products can be showcased and endorsed online, so tastes change fast.", "chunk": "culture" },
-    { "q": "A colour always means the same thing in every culture.", "tf": false, "why": "Colours and styles can carry very different meanings in different cultures.", "chunk": "culture" },
-    { "q": "Why must designers think about faiths and beliefs?", "options": ["Some products, such as clothing, must respect religious or cultural norms", "Faiths decide the price of a product", "Beliefs only matter for food", "It speeds up manufacture"], "answer": 0, "why": "A product must meet the needs of different faiths and communities.", "chunk": "culture" },
-    { "q": "Inclusive design aims to let as many people as possible use a product, whatever their age, gender or disability.", "tf": true, "why": "Everyone should be able to use it safely, easily and with dignity.", "chunk": "society" },
-    { "q": "Which is an inclusive design feature?", "options": ["Easy-grip handles", "Planned obsolescence", "Bulk discounts", "Item tracking"], "answer": 0, "why": "Easy-grip handles help people with weaker grip.", "chunk": "society" },
-    { "q": "How have modern materials helped inclusive design?", "options": ["Products are lighter, tougher and more adaptable", "Products are heavier and stronger", "Products are cheaper to throw away", "Products need no testing"], "answer": 0, "why": "This helps people with weaker grip and reduced mobility.", "chunk": "society" },
-    { "q": "What is a flexible manufacturing system (FMS)?", "options": ["Production that adapts easily to changes in quantity or type", "Making one product forever", "Ordering stock only when needed", "Designing products on a computer"], "answer": 0, "why": "Reprogrammable, automated machines can switch quickly.", "chunk": "methods" },
-    { "q": "In an FMS, every part in the warehouse can be traced with an item tracking system.", "tf": true, "why": "It helps manage stock and production planning.", "chunk": "methods" },
-    { "q": "What is the core aim of lean manufacturing?", "options": ["Eliminating waste", "Making products heavier", "Storing as much stock as possible", "Using more resources"], "answer": 0, "why": "Cutting waste saves cost and improves efficiency.", "chunk": "methods" },
-    { "q": "Lean manufacturing increases the use of resources.", "tf": false, "why": "It reduces the use of resources by minimising waste.", "chunk": "methods" },
-    { "q": "What does JIT stand for?", "options": ["Just in Time", "Joint Industrial Tooling", "Job Inspection Test", "Just in Transit"], "answer": 0, "why": "Materials arrive just in time to be used.", "chunk": "jit" },
-    { "q": "Which is an advantage of JIT?", "options": ["Less storage space is needed", "Bigger bulk discounts", "It never relies on suppliers", "Delays don't matter"], "answer": 0, "why": "Materials are ordered as needed, so little is stored.", "chunk": "jit" },
-    { "q": "JIT depends on a fast, reliable supply chain.", "tf": true, "why": "Any delay in deliveries affects production and sales.", "chunk": "jit" },
-    { "q": "With JIT, ordering in small quantities can mean higher costs.", "tf": true, "why": "Small orders miss out on bulk discounts.", "chunk": "jit" },
-    { "q": "Which is a disadvantage of CAD?", "options": ["Work can be lost, corrupted or hacked", "Designs are less accurate", "Changes are hard to make", "Designs can't be shared"], "answer": 0, "why": "Other disadvantages are cost and the time taken to learn the software.", "chunk": "cadcam" },
-    { "q": "CAD designs can be rendered to show what the final finish will look like.", "tf": true, "why": "This helps visualise the product before manufacture.", "chunk": "cadcam" },
-    { "q": "What does CAM do?", "options": ["Turns CAD data into instructions that control machines", "Draws designs by hand", "Orders stock just in time", "Tests products for safety"], "answer": 0, "why": "Software controls machines such as laser cutters and CNC mills.", "chunk": "cadcam" },
-    { "q": "Which of these is an unethical way to cut production costs?", "options": ["Using underpaid labour", "Using a life cycle assessment", "Designing for disassembly", "Recycling waste correctly"], "answer": 0, "why": "Low or underpaid labour, unsafe practices and illegal waste disposal are unethical.", "chunk": "ethics" },
-    { "q": "The WEEE regulations require UK businesses to recycle electrical waste correctly and promote reuse.", "tf": true, "why": "They must also minimise waste and meet material recovery targets.", "chunk": "ethics" },
-    { "q": "What is planned obsolescence?", "options": ["Designing a product to go out of date or wear out within a set time", "Designing a product so parts can be replaced", "Designing a product to be taken apart", "Designing a product for everyone"], "answer": 0, "why": "It is a deliberate strategy to keep sales regular.", "chunk": "eval" },
-    { "q": "Design for maintenance can create jobs.", "tf": true, "why": "Repairs need engineers and a spare parts supply chain.", "chunk": "eval" },
-    { "q": "Design for disassembly makes products harder to recycle.", "tf": false, "why": "Products can be taken apart so parts can be recycled or reused.", "chunk": "eval" },
-    { "q": "Which is one of the key things to consider when evaluating a new technology?", "options": ["Longevity", "Popularity on social media", "Colour", "Brand name"], "answer": 0, "why": "The key considerations are cost, reliability, longevity, sustainability and recyclability.", "chunk": "eval" }
+    {
+      "q": "What is culture?",
+      "options": [
+        "The ideas, beliefs, customs and social behaviours of a group",
+        "The cost of making a product",
+        "A way of ordering stock",
+        "A type of computer software"
+      ],
+      "answer": 0,
+      "why": "Culture shows itself through ritual, art and fashion.",
+      "chunk": "culture"
+    },
+    {
+      "q": "Social media, blogs and the internet let new fashions get a very rapid response from customers.",
+      "tf": true,
+      "why": "Products can be showcased and endorsed online, so tastes change fast.",
+      "chunk": "culture"
+    },
+    {
+      "q": "A colour always means the same thing in every culture.",
+      "tf": false,
+      "why": "Colours and styles can carry very different meanings in different cultures.",
+      "chunk": "culture"
+    },
+    {
+      "q": "Why must designers think about faiths and beliefs?",
+      "options": [
+        "Some products, such as clothing, must respect religious or cultural norms",
+        "Faiths decide the price of a product",
+        "Beliefs only matter for food",
+        "It speeds up manufacture"
+      ],
+      "answer": 0,
+      "why": "A product must meet the needs of different faiths and communities.",
+      "chunk": "culture"
+    },
+    {
+      "q": "Inclusive design aims to let as many people as possible use a product, whatever their age, gender or disability.",
+      "tf": true,
+      "why": "Everyone should be able to use it safely, easily and with dignity.",
+      "chunk": "society"
+    },
+    {
+      "q": "Which is an inclusive design feature?",
+      "options": [
+        "Easy-grip handles",
+        "Planned obsolescence",
+        "Bulk discounts",
+        "Item tracking"
+      ],
+      "answer": 0,
+      "why": "Easy-grip handles help people with weaker grip.",
+      "chunk": "society"
+    },
+    {
+      "q": "How have modern materials helped inclusive design?",
+      "options": [
+        "Products are lighter, tougher and more adaptable",
+        "Products are heavier and stronger",
+        "Products are cheaper to throw away",
+        "Products need no testing"
+      ],
+      "answer": 0,
+      "why": "This helps people with weaker grip and reduced mobility.",
+      "chunk": "society"
+    },
+    {
+      "q": "What is a flexible manufacturing system (FMS)?",
+      "options": [
+        "Production that adapts easily to changes in quantity or type",
+        "Making one product forever",
+        "Ordering stock only when needed",
+        "Designing products on a computer"
+      ],
+      "answer": 0,
+      "why": "Reprogrammable, automated machines can switch quickly.",
+      "chunk": "methods"
+    },
+    {
+      "q": "In an FMS, every part in the warehouse can be traced with an item tracking system.",
+      "tf": true,
+      "why": "It helps manage stock and production planning.",
+      "chunk": "methods"
+    },
+    {
+      "q": "What is the core aim of lean manufacturing?",
+      "options": [
+        "Eliminating waste",
+        "Making products heavier",
+        "Storing as much stock as possible",
+        "Using more resources"
+      ],
+      "answer": 0,
+      "why": "Cutting waste saves cost and improves efficiency.",
+      "chunk": "methods"
+    },
+    {
+      "q": "Lean manufacturing increases the use of resources.",
+      "tf": false,
+      "why": "It reduces the use of resources by minimising waste.",
+      "chunk": "methods"
+    },
+    {
+      "q": "What does JIT stand for?",
+      "options": [
+        "Just in Time",
+        "Joint Industrial Tooling",
+        "Job Inspection Test",
+        "Just in Transit"
+      ],
+      "answer": 0,
+      "why": "Materials arrive just in time to be used.",
+      "chunk": "jit"
+    },
+    {
+      "q": "Which is an advantage of JIT?",
+      "options": [
+        "Less storage space is needed",
+        "Bigger bulk discounts",
+        "It never relies on suppliers",
+        "Delays don't matter"
+      ],
+      "answer": 0,
+      "why": "Materials are ordered as needed, so little is stored.",
+      "chunk": "jit"
+    },
+    {
+      "q": "JIT depends on a fast, reliable supply chain.",
+      "tf": true,
+      "why": "Any delay in deliveries affects production and sales.",
+      "chunk": "jit"
+    },
+    {
+      "q": "With JIT, ordering in small quantities can mean higher costs.",
+      "tf": true,
+      "why": "Small orders miss out on bulk discounts.",
+      "chunk": "jit"
+    },
+    {
+      "q": "Which is a disadvantage of CAD?",
+      "options": [
+        "Work can be lost, corrupted or hacked",
+        "Designs are less accurate",
+        "Changes are hard to make",
+        "Designs can't be shared"
+      ],
+      "answer": 0,
+      "why": "Other disadvantages are cost and the time taken to learn the software.",
+      "chunk": "cadcam"
+    },
+    {
+      "q": "CAD designs can be rendered to show what the final finish will look like.",
+      "tf": true,
+      "why": "This helps visualise the product before manufacture.",
+      "chunk": "cadcam"
+    },
+    {
+      "q": "What does CAM do?",
+      "options": [
+        "Turns CAD data into instructions that control machines",
+        "Draws designs by hand",
+        "Orders stock just in time",
+        "Tests products for safety"
+      ],
+      "answer": 0,
+      "why": "Software controls machines such as laser cutters and CNC mills.",
+      "chunk": "cadcam"
+    },
+    {
+      "q": "Which of these is an unethical way to cut production costs?",
+      "options": [
+        "Using underpaid labour",
+        "Using a life cycle assessment",
+        "Designing for disassembly",
+        "Recycling waste correctly"
+      ],
+      "answer": 0,
+      "why": "Low or underpaid labour, unsafe practices and illegal waste disposal are unethical.",
+      "chunk": "ethics"
+    },
+    {
+      "q": "The WEEE regulations require UK businesses to recycle electrical waste correctly and promote reuse.",
+      "tf": true,
+      "why": "They must also minimise waste and meet material recovery targets.",
+      "chunk": "ethics"
+    },
+    {
+      "q": "What is planned obsolescence?",
+      "options": [
+        "Designing a product to go out of date or wear out within a set time",
+        "Designing a product so parts can be replaced",
+        "Designing a product to be taken apart",
+        "Designing a product for everyone"
+      ],
+      "answer": 0,
+      "why": "It is a deliberate strategy to keep sales regular.",
+      "chunk": "eval"
+    },
+    {
+      "q": "Design for maintenance can create jobs.",
+      "tf": true,
+      "why": "Repairs need engineers and a spare parts supply chain.",
+      "chunk": "eval"
+    },
+    {
+      "q": "Design for disassembly makes products harder to recycle.",
+      "tf": false,
+      "why": "Products can be taken apart so parts can be recycled or reused.",
+      "chunk": "eval"
+    },
+    {
+      "q": "Which is one of the key things to consider when evaluating a new technology?",
+      "options": [
+        "Longevity",
+        "Popularity on social media",
+        "Colour",
+        "Brand name"
+      ],
+      "answer": 0,
+      "why": "The key considerations are cost, reliability, longevity, sustainability and recyclability.",
+      "chunk": "eval"
+    }
   ],
   "written": [
     {
@@ -324,9 +921,21 @@
       ],
       "model": "Planned obsolescence would keep the company's sales regular, because customers would need to replace their tablets as software becomes incompatible, processor power falls behind or parts wear out, and new versions could follow trends and demand. However, more tablets would be thrown away, adding to landfill and carbon emissions. The WEEE regulations require the company to minimise electrical waste and design for reuse and recyclability, and consumers increasingly expect environmental credentials. Overall it is only acceptable if the company also runs takeback and recycling, otherwise designing for maintenance would be better.",
       "levels": [
-        { "level": 3, "marks": "5–6", "text": "Detailed, balanced points on both sides, with a justified conclusion." },
-        { "level": 2, "marks": "3–4", "text": "Some points, mostly on one side, or a conclusion that isn't justified." },
-        { "level": 1, "marks": "1–2", "text": "Simple points, with no conclusion." }
+        {
+          "level": 3,
+          "marks": "5–6",
+          "text": "Detailed, balanced points on both sides, with a justified conclusion."
+        },
+        {
+          "level": 2,
+          "marks": "3–4",
+          "text": "Some points, mostly on one side, or a conclusion that isn't justified."
+        },
+        {
+          "level": 1,
+          "marks": "1–2",
+          "text": "Simple points, with no conclusion."
+        }
       ],
       "note": "Tick the points made, then use the levels under the model answer to decide the mark."
     },
@@ -346,8 +955,17 @@
     }
   ],
   "related": [
-    { "id": "g02-sustainability-environment-people", "spec": "3.1.1" },
-    { "id": "g14-ecological-social-footprint", "spec": "3.2.3" },
-    { "id": "g20-scales-of-production", "spec": "3.2.7" }
+    {
+      "id": "g02-sustainability-environment-people",
+      "spec": "3.1.1"
+    },
+    {
+      "id": "g14-ecological-social-footprint",
+      "spec": "3.2.3"
+    },
+    {
+      "id": "g20-scales-of-production",
+      "spec": "3.2.7"
+    }
   ]
 }

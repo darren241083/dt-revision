@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Left: a store full of stock kept in advance. Right: a small amount of stock, with a delivery arriving only as it is needed">
+  <style>.l{font:700 26px Arial,Helvetica,sans-serif;fill:#10212B}.t{fill:#0B5550}</style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+    <g id="b"><rect x="0" y="0" width="34" height="30" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/><path d="M0 10 H34 M17 0 V10" stroke="#7A4D24" stroke-width="2"/></g>
+    <g id="shelf"><path d="M0 0 V330 M250 0 V330 M0 100 H250 M0 210 H250 M0 320 H250" fill="none" stroke="#48596B" stroke-width="6"/></g>
+  </defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="20" y="20" width="370" height="560" rx="18" fill="#F3F6F6" stroke="#DCE3E6" stroke-width="2"/>
+  <rect x="410" y="20" width="370" height="560" rx="18" fill="#FFFFFF" stroke="#0F766E" stroke-width="3"/>
+  <text class="l" x="205" y="72" text-anchor="middle">stock stored</text>
+  <text class="l" x="205" y="104" text-anchor="middle">in advance</text>
+  <use href="#shelf" x="80" y="140"/>
+  <g>
+    <use href="#b" x="92" y="207"/><use href="#b" x="130" y="207"/><use href="#b" x="168" y="207"/><use href="#b" x="206" y="207"/><use href="#b" x="244" y="207"/>
+    <use href="#b" x="111" y="175"/><use href="#b" x="149" y="175"/><use href="#b" x="187" y="175"/><use href="#b" x="225" y="175"/>
+    <use href="#b" x="92" y="317"/><use href="#b" x="130" y="317"/><use href="#b" x="168" y="317"/><use href="#b" x="206" y="317"/><use href="#b" x="244" y="317"/>
+    <use href="#b" x="111" y="285"/><use href="#b" x="149" y="285"/><use href="#b" x="187" y="285"/><use href="#b" x="225" y="285"/>
+    <use href="#b" x="92" y="427"/><use href="#b" x="130" y="427"/><use href="#b" x="168" y="427"/><use href="#b" x="206" y="427"/><use href="#b" x="244" y="427"/>
+    <use href="#b" x="111" y="395"/><use href="#b" x="149" y="395"/><use href="#b" x="187" y="395"/><use href="#b" x="225" y="395"/>
+  </g>
+  <text class="l" x="205" y="540" text-anchor="middle">lots of space</text>
+  <text class="l t" x="595" y="72" text-anchor="middle">delivered only</text>
+  <text class="l t" x="595" y="104" text-anchor="middle">as needed</text>
+  <path d="M470 250 V420 M720 250 V420 M470 320 H720 M470 410 H720" fill="none" stroke="#48596B" stroke-width="6"/>
+  <use href="#b" x="560" y="377"/><use href="#b" x="600" y="377"/>
+  <rect x="450" y="160" width="90" height="50" rx="4" fill="#E8ECF1" stroke="#10212B" stroke-width="2"/>
+  <path d="M540 174 H566 L582 190 V210 H540 z" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <circle cx="474" cy="214" r="9" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/><circle cx="562" cy="214" r="9" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <path d="M600 190 Q660 190 664 300" fill="none" stroke="#0F766E" stroke-width="4" marker-end="url(#ah)"/>
+  <text class="l" x="595" y="540" text-anchor="middle">little space</text>
+</svg>

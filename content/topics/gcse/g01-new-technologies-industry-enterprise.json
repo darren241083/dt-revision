@@ -131,7 +131,13 @@
           "term": "Impact on the planet",
           "ask": "What is the hidden cost to the planet of making all these new products?",
           "tags": [],
-          "text": "Getting raw materials and making products uses vast amounts of energy."
+          "text": "Getting raw materials and making products uses vast amounts of energy.",
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/impact-on-the-planet.webp",
+            "alt": "Plumes from cooling towers rising over fields at sunset.",
+            "credit": "kewl · CC BY 2.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Continuous improvement",
@@ -162,7 +168,13 @@
           "term": "Automation",
           "ask": "Why would a factory hand its repetitive jobs over to machines?",
           "tags": [],
-          "text": "Assembly lines do repetitive tasks instead of people, to meet demand."
+          "text": "Assembly lines do repetitive tasks instead of people, to meet demand.",
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/automation.webp",
+            "alt": "Rows of red robot arms working along an automated production line.",
+            "credit": "jurvetson · CC BY 2.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Software and industrial automation",
@@ -174,7 +186,13 @@
           "term": "Robots",
           "ask": "Where would a robot be safer or better than a person at work?",
           "tags": [],
-          "text": "Repeat complex movements in hazardous, hot or fume-filled places, such as vehicle assembly, packing, labs and aerospace."
+          "text": "Repeat complex movements in hazardous, hot or fume-filled places, such as vehicle assembly, packing, labs and aerospace.",
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/robots.webp",
+            "alt": "A model of a yellow industrial robot arm lifting a crate.",
+            "credit": "olofunot · CC BY 4.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Advantages",
@@ -211,7 +229,13 @@
           "term": "Planned layout",
           "ask": "Why should a factory's layout be planned before it's built?",
           "tags": [],
-          "text": "Planned from the start so design, manufacture and delivery are as efficient as possible."
+          "text": "Planned from the start so design, manufacture and delivery are as efficient as possible.",
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/planned-layout.webp",
+            "alt": "The outside of a factory unit with loading bays and a yard.",
+            "credit": "Richard Law · CC BY-SA 2.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Workflow",
@@ -222,7 +246,13 @@
             "Production line: materials are processed and components assembled to make the product.",
             "Packaging (packing): the product is wrapped and boxed.",
             "Distribution (despatch): the product is shipped to customers."
-          ]
+          ],
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/workflow.svg",
+            "alt": "A factory floor plan with goods in, production, packing and despatch in order.",
+            "credit": "DT",
+            "unchecked": true
+          }
         }
       ],
       "check": [
@@ -265,7 +295,13 @@
           "term": "Patent",
           "ask": "How could an inventor stop other people making money from their idea?",
           "tags": [],
-          "text": "Legal registration proving you were first, so others can't profit from your idea."
+          "text": "Legal registration proving you were first, so others can't profit from your idea.",
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/patent.webp",
+            "alt": "Patent drawings of a hand-held tool from two views.",
+            "credit": "Travis wilding · CC BY-SA 4.0",
+            "unchecked": true
+          }
         }
       ],
       "check": [
@@ -351,14 +387,27 @@
           "term": "Fair trade",
           "ask": "What would make trade 'fair' for producers in poorer countries?",
           "tags": [],
-          "text": "Fair prices, decent conditions and fair terms for producers in less economically developed countries."
+          "text": "Fair prices, decent conditions and fair terms for producers in less economically developed countries.",
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/fair-trade.webp",
+            "alt": "A farmer picking coffee cherries from a bush.",
+            "credit": "DFID - UK Department for International Development · CC BY 2.0",
+            "unchecked": true
+          }
         },
         {
           "term": "Fairtrade Foundation",
           "ask": "What could an organisation do to make sure the farmers who grow our food are paid enough?",
           "tags": [],
           "text": "Sets a fair, sustainable price so farmers' lives improve. E.g. coffee, cotton, chocolate, fruit.",
-          "autoQuiz": false
+          "autoQuiz": false,
+          "image": {
+            "file": "assets/img/gcse/g01-new-technologies-industry-enterprise/fairtrade-foundation.webp",
+            "alt": "Two people at a stall selling Fairtrade goods.",
+            "credit": "Kaihsu Tai · CC BY-SA 3.0",
+            "unchecked": true
+          },
+          "imageOnReveal": true
         }
       ],
       "check": [

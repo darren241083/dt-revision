@@ -3,13 +3,25 @@
 
 import { h, icon } from "./dom.js";
 
-export const editState = { on: false, open: null };
+export const editState = { on: false, open: null, check: null };
 
 // ref: { kind: "item", chunk: <chunk id>, term } or { kind: "diagram", chunk: <chunk id> }
-export function imageSlot(ref, hasImage) {
+// img: the slot's image ({ file, alt, credit, unchecked? }) or a true/false "has an image".
+// An image filled in automatically is `unchecked` until the teacher has looked at it: edit mode
+// shows an Unchecked badge with Looks good (clears it) and Change (opens the image panel).
+export function imageSlot(ref, img) {
   if (!editState.on) return null;
+  const what = ref.term ? `: ${ref.term}` : "";
+  if (img?.unchecked && editState.check) {
+    return h("span", { class: "img-check" },
+      h("span", { class: "img-unchecked" }, "Unchecked"),
+      h("button", { type: "button", class: "img-edit img-ok", "aria-label": `Image looks good${what}`, onclick: () => editState.check(ref) },
+        icon("check"), "Looks good"),
+      h("button", { type: "button", class: "img-edit", "aria-label": `Change image${what}`, onclick: () => editState.open(ref) },
+        icon("image"), "Change"));
+  }
   return h("button", { type: "button", class: "img-edit", onclick: () => editState.open(ref) },
-    icon("image"), hasImage ? "Edit image" : "Add image");
+    icon("image"), img ? "Edit image" : "Add image");
 }
 
 // Text that says something: a placeholder with no letters or numbers (such as "--" typed into a

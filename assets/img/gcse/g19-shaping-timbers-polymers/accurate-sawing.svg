@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Timber clamped in a vice, sawn on the waste side of the marked line">
+  <style>.l{font:700 26px Arial,Helvetica,sans-serif;fill:#10212B}.t{fill:#0B5550}.h{paint-order:stroke;stroke:#FFFFFF;stroke-width:7px;stroke-linejoin:round}</style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+    <pattern id="waste" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#F3E8DC"/><path d="M0 0 V12" stroke="#7A4D24" stroke-width="2"/></pattern>
+  </defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="40" y="430" width="720" height="40" fill="#E8ECF1" stroke="#10212B" stroke-width="2"/>
+  <rect x="300" y="300" width="60" height="130" fill="#48596B" stroke="#10212B" stroke-width="2"/>
+  <rect x="440" y="300" width="60" height="130" fill="#48596B" stroke="#10212B" stroke-width="2"/>
+  <path d="M500 380 H600" stroke="#10212B" stroke-width="10"/>
+  <path d="M600 350 V410" stroke="#10212B" stroke-width="8" stroke-linecap="round"/>
+  <rect x="120" y="240" width="300" height="60" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/>
+  <rect x="420" y="240" width="260" height="60" fill="url(#waste)" stroke="#7A4D24" stroke-width="2"/>
+  <rect x="360" y="300" width="80" height="130" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/>
+  <path d="M420 230 V310" stroke="#10212B" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M120 212 V232" stroke="#0F766E" stroke-width="2"/><path d="M124 222 H416" stroke="#0F766E" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+  
+  <g transform="translate(428 120) rotate(8)">
+    <rect x="-6" y="0" width="12" height="150" fill="#E8ECF1" stroke="#10212B" stroke-width="2"/>
+    <path d="M6 10 v8 l5 4 l-5 4 v8 l5 4 l-5 4 v8 l5 4 l-5 4 v8 l5 4 l-5 4 v8 l5 4 l-5 4 v8 l5 4 l-5 4 v8 l5 4 l-5 4 v8" fill="none" stroke="#10212B" stroke-width="1.5"/>
+    <rect x="-20" y="-60" width="34" height="62" rx="12" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/>
+  </g>
+  <path d="M470 110 Q500 150 470 190" fill="none" stroke="#0F766E" stroke-width="3" marker-end="url(#ah)" marker-start="url(#ah)"/>
+  <text class="l t h" x="270" y="206" text-anchor="middle">measure from datum</text>
+  <text class="l h" x="560" y="281" text-anchor="middle">waste</text>
+  <text class="l t h" x="508" y="158">whole blade</text>
+  <text class="l h" x="400" y="510" text-anchor="middle">clamped in a vice</text>
+</svg>

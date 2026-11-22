@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Factory floor plan: goods in, production line, packing, despatch">
+  <style>.l{font:700 26px Arial,Helvetica,sans-serif;fill:#10212B}.t{fill:#0B5550}.h{paint-order:stroke;stroke:#FFFFFF;stroke-width:7px;stroke-linejoin:round}</style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+    <g id="lorry">
+      <rect x="0" y="0" width="70" height="40" rx="4" fill="#E8ECF1" stroke="#10212B" stroke-width="2"/>
+      <path d="M70 12 H90 L102 26 V40 H70 z" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+      <circle cx="20" cy="44" r="8" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/><circle cx="86" cy="44" r="8" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+    </g>
+    <g id="box"><rect x="-14" y="-12" width="28" height="24" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/><path d="M-14 -4 H14 M0 -12 V-4" stroke="#7A4D24" stroke-width="2"/></g>
+  </defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="150" y="120" width="500" height="380" rx="10" fill="#F3F6F6" stroke="#10212B" stroke-width="2"/>
+  <path d="M275 120 V500 M400 120 V500 M525 120 V500" stroke="#10212B" stroke-width="2" stroke-dasharray="8 6"/>
+  <g transform="translate(212 230)"><use href="#box" x="-18"/><use href="#box" x="18"/><use href="#box" y="-26"/></g>
+  <rect x="295" y="180" width="85" height="240" rx="6" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <path d="M337 190 V410" stroke="#48596B" stroke-width="14"/>
+  <g fill="#FFFFFF" stroke="#10212B" stroke-width="2"><circle cx="337" cy="200" r="5"/><circle cx="337" cy="240" r="5"/><circle cx="337" cy="280" r="5"/><circle cx="337" cy="320" r="5"/><circle cx="337" cy="360" r="5"/><circle cx="337" cy="400" r="5"/></g>
+  <rect x="352" y="250" width="22" height="40" fill="#E2F2EF" stroke="#0F766E" stroke-width="2"/>
+  <rect x="300" y="320" width="22" height="40" fill="#E2F2EF" stroke="#0F766E" stroke-width="2"/>
+  <rect x="425" y="260" width="80" height="60" rx="4" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <use href="#box" x="465" y="290"/>
+  <path d="M440 245 L490 245" stroke="#0F766E" stroke-width="3"/>
+  <g transform="translate(587 300)"><use href="#box" x="-18"/><use href="#box" x="18"/><use href="#box" y="-26"/><use href="#box" y="26"/></g>
+  <use href="#lorry" x="25" y="270" transform="scale(1)"/>
+  <use href="#lorry" x="672" y="270"/>
+  <g stroke="#0F766E" stroke-width="4" fill="none">
+    <path d="M130 300 H180" marker-end="url(#ah)"/>
+    <path d="M250 300 H290" marker-end="url(#ah)"/>
+    <path d="M384 300 H418" marker-end="url(#ah)"/>
+    <path d="M510 300 H550" marker-end="url(#ah)"/>
+    <path d="M625 300 H668" marker-end="url(#ah)"/>
+  </g>
+  <text class="l" x="212" y="540" text-anchor="middle" style="font-size:22px">goods in</text>
+  <text class="l" x="337" y="540" text-anchor="middle" style="font-size:22px">production</text>
+  <text class="l" x="462" y="540" text-anchor="middle" style="font-size:22px">packing</text>
+  <text class="l" x="587" y="540" text-anchor="middle" style="font-size:22px">despatch</text>
+  <text class="l t" x="400" y="95" text-anchor="middle">in a logical order</text>
+</svg>

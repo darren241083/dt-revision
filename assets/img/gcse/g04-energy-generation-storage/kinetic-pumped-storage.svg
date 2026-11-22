@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Pumped storage: water pumped up to the upper reservoir at night, falling through a turbine to the lower reservoir at peak times, electricity to the National Grid">
+  <style>.l{font:700 28px Arial,Helvetica,sans-serif;fill:#10212B}.t{fill:#0B5550}.h{paint-order:stroke;stroke:#FFFFFF;stroke-width:7px;stroke-linejoin:round}.g{paint-order:stroke;stroke:#EEF2DC;stroke-width:7px;stroke-linejoin:round}</style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#10212B"/></marker>
+  </defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <path d="M0 200 H60 L80 150 H280 L300 200 Q420 330 540 470 H800 V560 H0 z" fill="#EEF2DC" stroke="#10212B" stroke-width="2"/>
+  <path d="M80 150 L95 200 H265 L280 150" fill="#E2F2EF" stroke="#10212B" stroke-width="2"/>
+  <path d="M86 168 H274" stroke="#0F766E" stroke-width="2"/>
+  <rect x="278" y="120" width="18" height="82" fill="#E8ECF1" stroke="#10212B" stroke-width="2"/>
+  <text class="l h" x="168" y="132" text-anchor="middle">upper reservoir</text>
+  <path d="M560 470 Q570 520 620 525 H740 Q780 520 790 470" fill="#E2F2EF" stroke="#10212B" stroke-width="2"/>
+  <path d="M566 488 H786" stroke="#0F766E" stroke-width="2"/>
+  <text class="l g" x="676" y="555" text-anchor="middle">lower reservoir</text>
+  <path d="M250 196 L470 455" stroke="#10212B" stroke-width="16" stroke-linecap="round"/>
+  <path d="M250 196 L470 455" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+  <rect x="440" y="430" width="100" height="70" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <circle cx="490" cy="465" r="20" fill="#FFFFFF" stroke="#0F766E" stroke-width="3"/>
+  <path d="M490 445 V485 M470 465 H510 M476 451 L504 479 M504 451 L476 479" stroke="#0F766E" stroke-width="2"/>
+  <path d="M540 480 H570" stroke="#10212B" stroke-width="10"/>
+  <text class="l g" x="490" y="532" text-anchor="middle">turbine</text>
+  <path d="M300 220 L430 373" stroke="#0F766E" stroke-width="4" marker-end="url(#ah)"/>
+  <text class="l t h" x="352" y="240">falls at peak times</text>
+  <path d="M390 410 L262 258" stroke="#10212B" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#ag)"/>
+  <text class="l g" x="28" y="300">pumped up</text>
+  <text class="l g" x="28" y="334">at night</text>
+  <path d="M690 420 L670 260 L650 420 M656 380 H684 M662 320 H678 M650 280 H690" fill="none" stroke="#10212B" stroke-width="2"/>
+  <path d="M520 430 Q590 300 670 270" fill="none" stroke="#10212B" stroke-width="2"/>
+  <path d="M690 280 Q740 300 790 290" fill="none" stroke="#10212B" stroke-width="2"/>
+  <path d="M592 340 l-14 26 h14 l-10 24 l26 -34 h-14 l10 -16 z" fill="#0F766E"/>
+  <text class="l h" x="790" y="196" text-anchor="end">National Grid</text>
+</svg>

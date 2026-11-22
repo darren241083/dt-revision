@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Inside the factory: parts are cut from a sheet, and the offcuts are reused to make smaller parts">
+  <style>.l{font:700 26px Arial,Helvetica,sans-serif;fill:#10212B}.t{fill:#0B5550}</style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+    <pattern id="off" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#F3E8DC"/><path d="M0 0 V12" stroke="#7A4D24" stroke-width="2"/></pattern>
+  </defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <path d="M20 150 L20 110 L100 70 L100 110 L180 70 L180 110 L260 70 L260 110 L340 70 L340 110 L420 70 L420 110 L500 70 L500 110 L580 70 L580 110 L660 70 L660 110 L740 70 L780 90 L780 150" fill="none" stroke="#DCE3E6" stroke-width="3"/>
+  <rect x="20" y="150" width="760" height="420" rx="18" fill="none" stroke="#DCE3E6" stroke-width="3"/>
+  <text class="l t" x="400" y="190" text-anchor="middle">inside the factory</text>
+  <rect x="50" y="230" width="240" height="250" fill="url(#off)" stroke="#7A4D24" stroke-width="2"/>
+  <rect x="66" y="246" width="96" height="140" fill="#F3E8DC" stroke="#7A4D24" stroke-width="3"/>
+  <rect x="178" y="246" width="96" height="140" fill="#F3E8DC" stroke="#7A4D24" stroke-width="3"/>
+  <text class="l" x="170" y="530" text-anchor="middle">parts cut out</text>
+  <path d="M300 355 H350" stroke="#0F766E" stroke-width="4" marker-end="url(#ah)"/>
+  <g transform="translate(372 300)" fill="url(#off)" stroke="#7A4D24" stroke-width="2">
+    <rect x="0" y="0" width="150" height="24"/><rect x="10" y="34" width="130" height="22"/><rect x="0" y="66" width="72" height="44"/><rect x="82" y="66" width="68" height="44"/>
+  </g>
+  <text class="l" x="447" y="530" text-anchor="middle">offcuts</text>
+  <path d="M532 355 H582" stroke="#0F766E" stroke-width="4" marker-end="url(#ah)"/>
+  <g transform="translate(604 290)" fill="#F3E8DC" stroke="#7A4D24" stroke-width="3">
+    <rect x="0" y="0" width="60" height="44" rx="6"/><rect x="78" y="0" width="60" height="44" rx="6"/>
+    <rect x="0" y="62" width="60" height="44" rx="6"/><rect x="78" y="62" width="60" height="44" rx="6"/>
+  </g>
+  <text class="l" x="673" y="530" text-anchor="middle">smaller parts</text>
+</svg>
