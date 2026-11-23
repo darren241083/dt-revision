@@ -218,8 +218,7 @@
           "image": {
             "file": "assets/img/gcse/g02-sustainability-environment-people/reusing-waste.svg",
             "alt": "Parts cut from a sheet, with the offcuts reused to make smaller parts.",
-            "credit": "DT",
-            "unchecked": true
+            "credit": "DT"
           },
           "imageOnReveal": true
         },
