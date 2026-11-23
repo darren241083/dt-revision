@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A critical path network: numbered events joined by task arrows with durations; the longest chain of tasks, the critical path, is drawn thicker">
+  <style>.l{font:700 24px Arial,Helvetica,sans-serif;fill:#10212B}.m{font:700 20px Arial,Helvetica,sans-serif;fill:#5A6B75}.w{font:700 22px Arial,Helvetica,sans-serif;fill:#FFFFFF}</style>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+  <marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B4301D"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#10212B"/></marker></defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <path d="M100.7 274.4 L213.1 180.7" stroke="#0F766E" stroke-width="8" marker-end="url(#ah)"/><rect x="140" y="191" width="40" height="30" rx="6" fill="#FFFFFF"/><text class="l" x="160" y="214" text-anchor="middle">3</text>
+  <path d="M290.0 150.0 L422.0 150.0" stroke="#0F766E" stroke-width="8" marker-end="url(#ah)"/><rect x="340" y="116" width="40" height="30" rx="6" fill="#FFFFFF"/><text class="l" x="360" y="139" text-anchor="middle">4</text>
+  <path d="M503.5 171.9 L659.8 273.8" stroke="#0F766E" stroke-width="8" marker-end="url(#ah)"/><rect x="565" y="191" width="40" height="30" rx="6" fill="#FFFFFF"/><text class="l" x="585" y="214" text-anchor="middle">5</text>
+  <path d="M100.7 325.6 L213.1 419.3" stroke="#5A6B75" stroke-width="2.5" marker-end="url(#ak)"/><rect x="140" y="341" width="40" height="30" rx="6" fill="#FFFFFF"/><text class="m" x="160" y="364" text-anchor="middle">2</text>
+  <path d="M289.0 441.1 L423.2 410.6" stroke="#5A6B75" stroke-width="2.5" marker-end="url(#ak)"/><rect x="340" y="391" width="40" height="30" rx="6" fill="#FFFFFF"/><text class="m" x="360" y="414" text-anchor="middle">3</text>
+  <path d="M276.4 180.0 L438.3 364.0" stroke="#5A6B75" stroke-width="2.5" marker-end="url(#ak)"/><rect x="340" y="241" width="40" height="30" rx="6" fill="#FFFFFF"/><text class="m" x="360" y="264" text-anchor="middle">2</text>
+  <path d="M506.7 384.1 L656.0 319.1" stroke="#5A6B75" stroke-width="2.5" marker-end="url(#ak)"/><rect x="565" y="316" width="40" height="30" rx="6" fill="#FFFFFF"/><text class="m" x="585" y="339" text-anchor="middle">2</text>
+  <circle cx="70" cy="300" r="36" fill="#0F766E" stroke="#0F766E" stroke-width="2"/><text class="w" x="70" y="308" text-anchor="middle">1</text>
+  <circle cx="250" cy="150" r="36" fill="#0F766E" stroke="#0F766E" stroke-width="2"/><text class="w" x="250" y="158" text-anchor="middle">2</text>
+  <circle cx="250" cy="450" r="36" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/><text class="l" x="250" y="458" text-anchor="middle">3</text>
+  <circle cx="470" cy="150" r="36" fill="#0F766E" stroke="#0F766E" stroke-width="2"/><text class="w" x="470" y="158" text-anchor="middle">4</text>
+  <circle cx="470" cy="400" r="36" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/><text class="l" x="470" y="408" text-anchor="middle">5</text>
+  <circle cx="700" cy="300" r="36" fill="#0F766E" stroke="#0F766E" stroke-width="2"/><text class="w" x="700" y="308" text-anchor="middle">6</text>
+</svg>

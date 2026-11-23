@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A design sketch of a desk lamp with leader lines from its shade, arm, hinge and base to short handwritten-style notes beside it">
+  <style>.n{font:700 20px Arial,Helvetica,sans-serif;fill:#0B5550}.k{font:700 22px Arial,Helvetica,sans-serif;fill:#FFFFFF}</style>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker></defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <path d="M250 500 H410 L400 470 H260 Z" fill="#FFFFFF" stroke="#10212B" stroke-width="3" stroke-linejoin="round"/><path d="M330 470 L280 300 L420 190" fill="none" stroke="#10212B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="280" cy="300" r="12" fill="#FFFFFF" stroke="#10212B" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M395 150 L470 120 L530 230 L455 260 Z" fill="#FFFFFF" stroke="#10212B" stroke-width="3" stroke-linejoin="round"/><path d="M455 260 Q500 270 530 230" fill="#FBEFD6" stroke="#10212B" stroke-width="3"/>
+  <path d="M250 158 C 330 140 380 130 410 150" fill="none" stroke="#5A6B75" stroke-width="2" stroke-dasharray="3 6"/>
+  <circle cx="500" cy="180" r="5" fill="#0F766E"/><path d="M500 180 L580 90" stroke="#0F766E" stroke-width="2"/><rect x="594" y="76" width="200" height="12" rx="6" fill="#DCE3E6"/><rect x="594" y="96" width="150" height="12" rx="6" fill="#DCE3E6"/>
+  <circle cx="350" cy="245" r="5" fill="#0F766E"/><path d="M350 245 L580 300" stroke="#0F766E" stroke-width="2"/><rect x="594" y="286" width="200" height="12" rx="6" fill="#DCE3E6"/><rect x="594" y="306" width="150" height="12" rx="6" fill="#DCE3E6"/>
+  <circle cx="282" cy="312" r="5" fill="#0F766E"/><path d="M282 312 L240 260" stroke="#0F766E" stroke-width="2"/><rect x="26" y="246" width="200" height="12" rx="6" fill="#DCE3E6"/><rect x="26" y="266" width="150" height="12" rx="6" fill="#DCE3E6"/>
+  <circle cx="300" cy="490" r="5" fill="#0F766E"/><path d="M300 490 L240 545" stroke="#0F766E" stroke-width="2"/><rect x="26" y="531" width="200" height="12" rx="6" fill="#DCE3E6"/><rect x="26" y="551" width="150" height="12" rx="6" fill="#DCE3E6"/>
+  <circle cx="390" cy="482" r="5" fill="#0F766E"/><path d="M390 482 L580 470" stroke="#0F766E" stroke-width="2"/><rect x="594" y="456" width="200" height="12" rx="6" fill="#DCE3E6"/><rect x="594" y="476" width="150" height="12" rx="6" fill="#DCE3E6"/>
+</svg>

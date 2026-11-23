@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A dimensioned working drawing: front view and plan of a stepped block, with measurements in millimetres and a title block for the materials and part details">
+  <style>.n{font:700 20px Arial,Helvetica,sans-serif;fill:#0B5550}.k{font:700 22px Arial,Helvetica,sans-serif;fill:#FFFFFF}</style>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker></defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="20" y="20" width="760" height="560" fill="none" stroke="#10212B" stroke-width="2"/>
+  <path d="M140 320 H460 V240 H330 V180 H140 Z" fill="#FFFFFF" stroke="#10212B" stroke-width="3" stroke-linejoin="round"/><circle cx="235" cy="270" r="0" fill="none"/>
+  <path d="M140 175 V130 M330 175 V130 M460 236 V150 M465 320 H520 M465 240 H520 M135 180 H90 M135 320 H90" stroke="#B9DDD6" stroke-width="1.5"/>
+  <path d="M143 140 H327" stroke="#0F766E" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/><rect x="213" y="114" width="44" height="22" fill="#FFFFFF"/><text class="n" x="235" y="132" text-anchor="middle">60</text>
+  <path d="M143 112 H457" stroke="#0F766E" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/><rect x="278" y="86" width="44" height="22" fill="#FFFFFF"/><text class="n" x="300" y="104" text-anchor="middle">100</text>
+  <path d="M500 243 V317" stroke="#0F766E" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/><text class="n" x="510" y="287" text-anchor="start">25</text>
+  <path d="M100 183 V317" stroke="#0F766E" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/><text class="n" x="90" y="257" text-anchor="end">45</text>
+  <path d="M140 380 H460 V500 H140 Z M330 380 V500" fill="#FFFFFF" stroke="#10212B" stroke-width="3" stroke-linejoin="round"/><circle cx="235" cy="440" r="22" fill="#FFFFFF" stroke="#10212B" stroke-width="3"/><path d="M235 408 V472 M203 440 H267" stroke="#5A6B75" stroke-width="1.5" stroke-dasharray="10 4 2 4"/>
+  <path d="M465 380 H520 M465 500 H520" stroke="#B9DDD6" stroke-width="1.5"/>
+  <path d="M500 383 V497" stroke="#0F766E" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/><text class="n" x="510" y="447" text-anchor="start">40</text>
+  <path d="M140 322 V378 M330 322 V378 M460 322 V378" stroke="#B9DDD6" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <rect x="560" y="400" width="200" height="160" fill="#F3F6F6" stroke="#10212B" stroke-width="2"/><path d="M560 440 H760 M560 480 H760 M560 520 H760" stroke="#10212B" stroke-width="1.5"/><rect x="575" y="414" width="120" height="12" rx="6" fill="#DCE3E6"/><rect x="575" y="454" width="150" height="12" rx="6" fill="#DCE3E6"/><rect x="575" y="494" width="90" height="12" rx="6" fill="#DCE3E6"/><rect x="575" y="534" width="130" height="12" rx="6" fill="#DCE3E6"/>
+</svg>

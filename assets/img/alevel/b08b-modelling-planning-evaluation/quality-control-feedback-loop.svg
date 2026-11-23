@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Flow chart: a part goes into a process box, then a test diamond; a pass arrow leads on to dispatch, and a fail arrow loops back to the process box">
+  <style>.l{font:700 24px Arial,Helvetica,sans-serif;fill:#10212B}.m{font:700 20px Arial,Helvetica,sans-serif;fill:#5A6B75}.w{font:700 22px Arial,Helvetica,sans-serif;fill:#FFFFFF}</style>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+  <marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B4301D"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#10212B"/></marker></defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="40" y="200" width="200" height="130" rx="10" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/><path d="M140 260 C120 260 118 238 132 224 C134 234 140 234 142 218 C156 230 162 260 140 260 Z" fill="#FBE9E0" stroke="#A3441A" stroke-width="2.5" stroke-linejoin="round"/><path d="M104 296 H170 L196 282 V296 Q180 304 170 304 H104 Z" fill="#E8ECF1" stroke="#10212B" stroke-width="2" stroke-linejoin="round"/><rect x="80" y="292" width="26" height="14" rx="4" fill="#10212B"/>
+  <path d="M420 175 L520 265 L420 355 L320 265 Z" fill="#E2F2EF" stroke="#0F766E" stroke-width="2"/><circle cx="420" cy="265" r="20" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/><path d="M420 265 L432 255" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/><circle cx="420" cy="265" r="3" fill="#10212B"/>
+  <rect x="600" y="210" width="170" height="110" rx="55" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/><path d="M661 250 L685 238 L709 250 V276 L685 288 L661 276 Z M661 250 L685 262 L709 250 M685 262 V288" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M244 265 H312" stroke="#10212B" stroke-width="3" marker-end="url(#ak)"/>
+  <path d="M524 265 H592" stroke="#1F7A45" stroke-width="4" marker-end="url(#ah)"/><circle cx="558" cy="230" r="16" fill="#1F7A45"/><path d="M550 230 L556 237 L567 223" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M420 360 V470 H140 V338" fill="none" stroke="#B4301D" stroke-width="4" stroke-dasharray="12 8" marker-end="url(#ar)"/><circle cx="420" cy="420" r="16" fill="#B4301D"/><path d="M413 413 L427 427 M427 413 L413 427" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+</svg>
