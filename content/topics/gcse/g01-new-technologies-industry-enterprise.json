@@ -12,7 +12,10 @@
     "title": "ClearRevise AQA GCSE D&T 8552",
     "pages": "2–4"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/gcse/g01-new-technologies-industry-enterprise.m4a",
+    "length": 309
+  },
   "needs": [
     "Explain what automation is, with its advantages and disadvantages.",
     "Say where and why robots are used in industry.",
