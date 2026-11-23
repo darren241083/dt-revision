@@ -12,7 +12,10 @@
     "title": "ClearRevise AQA GCSE D&T 8552",
     "pages": "5–7"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/gcse/g02-sustainability-environment-people.m4a",
+    "length": 302
+  },
   "needs": [
     "Explain sustainability, finite and non-finite resources, with examples.",
     "Describe the five stages of a Life Cycle Assessment.",
