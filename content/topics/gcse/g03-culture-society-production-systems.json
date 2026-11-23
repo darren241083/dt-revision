@@ -448,10 +448,9 @@
           "tags": [],
           "text": "Designing so worn out or broken parts can be replaced.",
           "image": {
-            "file": "assets/img/gcse/g03-culture-society-production-systems/design-for-maintenance.svg",
+            "file": "assets/img/gcse/g03-culture-society-production-systems/design-for-maintenance.webp",
             "alt": "A product with its cover unscrewed, a worn part coming out and a new part going in.",
-            "credit": "DT",
-            "unchecked": true
+            "credit": "DT"
           },
           "imageOnReveal": true
         },
