@@ -12,7 +12,10 @@
     "title": "My Revision Notes: AQA A Level Design and Technology: Product Design",
     "pages": "134–136"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/alevel/b08a-design-brief-research-ideas.m4a",
+    "length": 306
+  },
   "needs": [
     "Explain why a design process is usually cyclic, and put its stages in order.",
     "Describe what a design brief contains.",
