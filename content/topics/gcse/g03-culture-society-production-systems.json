@@ -161,7 +161,12 @@
           "term": "Inclusive design",
           "ask": "Who should a new product be designed for?",
           "tags": [],
-          "text": "Designing so as many people as possible can use it safely, easily and with dignity, whatever their age, gender or disability."
+          "text": "Designing so as many people as possible can use it safely, easily and with dignity, whatever their age, gender or disability.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/inclusive-design.webp",
+            "alt": "Inclusive design",
+            "credit": "--"
+          }
         },
         {
           "term": "Modern materials",
