@@ -208,8 +208,7 @@
           "image": {
             "file": "assets/img/gcse/g03-culture-society-production-systems/flexible-manufacturing-system-fms.svg",
             "alt": "A robot loading several CNC machines that make different products.",
-            "credit": "DT",
-            "unchecked": true
+            "credit": "DT"
           },
           "imageOnReveal": true
         },
