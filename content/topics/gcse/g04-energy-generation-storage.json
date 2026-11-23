@@ -12,7 +12,10 @@
     "title": "ClearRevise AQA GCSE D&T 8552",
     "pages": "13–16"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/gcse/g04-energy-generation-storage.m4a",
+    "length": 283
+  },
   "needs": [
     "Describe how turbines and generators produce electricity.",
     "Give advantages and disadvantages of fossil fuels, nuclear power and renewables.",
