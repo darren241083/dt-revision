@@ -1,0 +1,1013 @@
+{
+  "id": "b08a-design-brief-research-ideas",
+  "level": "alevel",
+  "title": "Design brief, research and ideas",
+  "titleMark": "research and ideas",
+  "spec": [
+    "3.2.4"
+  ],
+  "section": "2",
+  "materials": [],
+  "book": {
+    "title": "My Revision Notes: AQA A Level Design and Technology: Product Design",
+    "pages": "134–136"
+  },
+  "audio": null,
+  "needs": [
+    "Explain why a design process is usually cyclic, and put its stages in order.",
+    "Describe what a design brief contains.",
+    "Describe ways to research existing products, materials and users, and to gather inspiration.",
+    "Explain what a design specification is, when it's written and how it's used.",
+    "Describe ideas generation methods, including SCAMPER and Thinking Hats."
+  ],
+  "doNow": [
+    {
+      "q": "What does a design brief outline?",
+      "a": "The needs and wants of a specific user or target market.",
+      "from": "Pre-read p134"
+    },
+    {
+      "q": "Name three ideas generation methods.",
+      "a": "Any three: mind maps, SCAMPER, collaborative team designing, the 4x4 technique, Thinking Hats, discussing designs with a client.",
+      "from": "Pre-read p135"
+    },
+    {
+      "q": "What is tensile strength?",
+      "a": "The ability to resist stretching by pulling forces.",
+      "from": "3.1.1"
+    },
+    {
+      "q": "What is demand pull?",
+      "a": "Demand by consumers for desirable features.",
+      "from": "3.2.3.4"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I help a designer explore a style before any ideas are drawn.",
+      "I'm made of images chosen for their styles and colours.",
+      "I'm a collage."
+    ],
+    "answer": "Mood board",
+    "options": [
+      "Mood board",
+      "Mind map",
+      "Inspiration box",
+      "Design specification"
+    ]
+  },
+  "bigPicture": {
+    "question": "How do designers get from a problem to good ideas?",
+    "lenses": [
+      {
+        "icon": "refresh",
+        "text": "A cycle, not a line"
+      },
+      {
+        "icon": "target",
+        "text": "Setting out the problem"
+      },
+      {
+        "icon": "search",
+        "text": "Researching products and users"
+      },
+      {
+        "icon": "eye",
+        "text": "Finding inspiration"
+      },
+      {
+        "icon": "check",
+        "text": "Criteria to meet"
+      },
+      {
+        "icon": "idea",
+        "text": "Ways to create ideas"
+      }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "process",
+      "label": "The design process",
+      "icon": "cycle",
+      "pages": "134",
+      "summary": "An organised way of designing and making, usually repeated as a cycle.",
+      "items": [
+        {
+          "term": "Design process",
+          "ask": "How might a designer organise the work from a problem to a finished prototype?",
+          "tags": [],
+          "text": "An organised way of designing and making a prototype of a product."
+        },
+        {
+          "term": "Cyclic (iterative) process",
+          "ask": "Why might a designer go round the same stages more than once?",
+          "tags": [],
+          "text": "Usually cyclic, not linear, because ongoing improvement matters to commercial success."
+        },
+        {
+          "term": "Not a fixed recipe",
+          "ask": "Does every project need the same amount of research, modelling and testing?",
+          "tags": [],
+          "text": "Gives structure, but the depth of each stage varies by project."
+        },
+        {
+          "term": "The design cycle",
+          "tags": [],
+          "text": "The stages, starting from the problem:",
+          "steps": [
+            "Problem or brief",
+            "Investigation: research and analysis",
+            "Specification",
+            "Ideas generation and development",
+            "Modelling",
+            "Planning production",
+            "Prototype manufacture",
+            "Testing and evaluation, then round again"
+          ],
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/the-design-cycle.svg",
+            "alt": "Diagram of the design cycle: eight numbered stages round a ring, from problem or brief to testing and evaluation.",
+            "credit": "DT",
+            "unchecked": true
+          }
+        }
+      ],
+      "check": [
+        {
+          "q": "Why is the design process usually cyclic rather than linear?",
+          "a": "Ongoing improvements matter to commercial success, so the stages are repeated."
+        },
+        {
+          "q": "Which stage of the design cycle comes straight after the specification?",
+          "a": "Ideas generation and development."
+        }
+      ]
+    },
+    {
+      "id": "brief",
+      "label": "Design brief",
+      "icon": "doc",
+      "pages": "134",
+      "summary": "Sets out the problem and the needs of the user or target market.",
+      "items": [
+        {
+          "term": "Design brief",
+          "ask": "Before designing anything, what would you need to know about who it's for?",
+          "tags": [],
+          "text": "Outlines the needs and wants of a specific user or target market."
+        },
+        {
+          "term": "The problem",
+          "ask": "What should a brief describe first?",
+          "tags": [],
+          "text": "A description of the problem or need: the situation to be solved."
+        },
+        {
+          "term": "Context",
+          "ask": "How could a brief help a designer picture the situation?",
+          "tags": [],
+          "text": "Images and details of the context, situation or problem."
+        },
+        {
+          "term": "Existing products",
+          "ask": "Why mention products that are already on sale?",
+          "tags": [],
+          "text": "Says where existing products are inadequate or unsuitable."
+        },
+        {
+          "term": "Client or user",
+          "ask": "Who else should a brief tell the designer about?",
+          "tags": [],
+          "text": "Information about the client or user group."
+        },
+        {
+          "term": "Product and success",
+          "ask": "How much should a brief say about the product itself?",
+          "tags": [],
+          "text": "A basic description and key functions, and the key areas for success."
+        }
+      ],
+      "check": [
+        {
+          "q": "What does a design brief outline?",
+          "a": "The needs and wants of a specific user or target market."
+        },
+        {
+          "q": "Name two things a design brief contains.",
+          "a": "Any two: the problem or need; images of the context; shortcomings of existing products; client or user information; a basic description and key functions; key areas for success."
+        }
+      ]
+    },
+    {
+      "id": "primary",
+      "label": "Primary research",
+      "icon": "search",
+      "pages": "134",
+      "summary": "First-hand analysis of existing products: strengths, weaknesses and what to improve.",
+      "items": [
+        {
+          "term": "Primary research",
+          "ask": "How could you find out what's good and bad about products already on sale?",
+          "tags": [],
+          "text": "Analysing existing products' strengths, weaknesses and areas to improve."
+        },
+        {
+          "term": "Using the product",
+          "ask": "What's the quickest way to find out how well a product does its job?",
+          "tags": [],
+          "text": "Use it for its intended task to get first-hand knowledge."
+        },
+        {
+          "term": "Taking it apart",
+          "ask": "How could you discover how a product is put together and made?",
+          "tags": [],
+          "text": "Disassemble it to assess its function, components, materials and manufacture.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/taking-it-apart.webp",
+            "alt": "A games controller taken apart, its plastic case, circuit parts and wires laid out flat.",
+            "credit": "repaired by Dmitry G · CC BY-SA 3.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Comparing products",
+          "ask": "How can you tell whether a product is better or worse than its rivals?",
+          "tags": [],
+          "text": "Compare its function, components, materials and manufacture with equivalent products."
+        },
+        {
+          "term": "Focus groups and questionnaires",
+          "ask": "How could you get views on a product from people other than yourself?",
+          "tags": [],
+          "text": "Seek objective views on the product from other people.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "Ergonomics and needs",
+          "ask": "Apart from how it looks, what makes a product right for its users?",
+          "tags": [],
+          "text": "Assess ergonomic features for ease of use, and check it meets consumer needs.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/ergonomics-and-needs.webp",
+            "alt": "Two hands gripping a smooth wooden handle.",
+            "credit": "PattayaPatrol · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Aesthetics and cost",
+          "ask": "What else would a customer judge before buying?",
+          "tags": [],
+          "text": "Assess how the product looks and what it costs."
+        }
+      ],
+      "check": [
+        {
+          "q": "Why would a designer take an existing product apart?",
+          "a": "To assess its function, components, materials and manufacture."
+        },
+        {
+          "q": "Name two ways of getting objective views on a product from other people.",
+          "a": "Focus groups and questionnaires."
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "label": "Materials and other research",
+      "icon": "book",
+      "pages": "134–135",
+      "summary": "Research into materials, people, trends, constraints, standards and wider factors.",
+      "items": [
+        {
+          "term": "Materials research",
+          "ask": "How can a designer be sure a material is right before choosing it?",
+          "tags": [],
+          "text": "Materials, construction and finishes are researched so the choices are appropriate."
+        },
+        {
+          "term": "Technical data",
+          "ask": "What facts about a material might a designer need from a specialist?",
+          "tags": [],
+          "text": "Data such as toughness and tensile strength, from specialist researchers.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/technical-data.webp",
+            "alt": "A universal testing machine with two grips for pulling a test sample.",
+            "credit": "Ganitz · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Client and specialists",
+          "ask": "Who could you ask about what the product needs to do?",
+          "tags": [],
+          "text": "Discuss needs with the client or users, and consult specialists and specialist forums.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/client-and-specialists.webp",
+            "alt": "A technician soldering a circuit board at an electronics workbench.",
+            "credit": "Sadiq dt · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Trends and influences",
+          "ask": "Why look at what's fashionable now, and what was popular in the past?",
+          "tags": [],
+          "text": "Investigate historical and current style influences, fashions and trends."
+        },
+        {
+          "term": "Design constraints",
+          "ask": "What limits might a design have to work within?",
+          "tags": [],
+          "text": "Identify constraints such as size, environment and method of use."
+        },
+        {
+          "term": "Standards and safety",
+          "ask": "What safety rules might a product and its materials have to meet?",
+          "tags": [],
+          "text": "Check British Standards; investigate materials' and components' safety and COSHH compliance.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/standards-and-safety.webp",
+            "alt": "Nine red-bordered hazard pictograms, including flammable, toxic, corrosive and explosive.",
+            "credit": "Mpelletier1 · CC BY-SA 3.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Anthropometric data",
+          "ask": "How do you make sure a product fits the people who use it?",
+          "tags": [],
+          "text": "Body measurement data, analysed so the product is the correct fit.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/anthropometric-data.svg",
+            "alt": "Diagram of a standing person with measurement lines for height, arm span and shoulder width, and a hand grip.",
+            "credit": "DT",
+            "unchecked": true
+          }
+        }
+      ],
+      "check": [
+        {
+          "q": "Give two examples of materials technical information.",
+          "a": "Toughness and tensile strength data."
+        },
+        {
+          "q": "Why does a designer analyse anthropometric data?",
+          "a": "To make sure the product is the correct fit for its users."
+        }
+      ]
+    },
+    {
+      "id": "inspire",
+      "label": "Inspiration materials",
+      "icon": "eye",
+      "pages": "135",
+      "summary": "Collections of images and samples that explore a style and direction.",
+      "items": [
+        {
+          "term": "Mood board",
+          "ask": "How could you show the look and feel you're aiming for before you design?",
+          "tags": [],
+          "text": "A collage of relevant images, including suitable styles and colours.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/mood-board.webp",
+            "alt": "A collage of landscape photos with fanned-out paint colour swatches on top.",
+            "credit": "Vyacheslav Argenberg · CC BY 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Inspiration box",
+          "ask": "How could you collect real colours and materials to work from?",
+          "tags": [],
+          "text": "A box of swatches, colour samples, materials and products.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "Design decisions",
+          "ask": "What makes inspiration materials useful, not just decoration?",
+          "tags": [],
+          "text": "They explore colour, texture, form and style, and should lead to design decisions."
+        }
+      ],
+      "check": [
+        {
+          "q": "What is a mood board?",
+          "a": "A collage of relevant images, including suitable styles and colours."
+        },
+        {
+          "q": "What does an inspiration box contain?",
+          "a": "Swatches, colour samples, materials and products."
+        }
+      ]
+    },
+    {
+      "id": "spec",
+      "label": "Design specification",
+      "icon": "list",
+      "pages": "135",
+      "summary": "The key criteria the design must meet, written after research.",
+      "items": [
+        {
+          "term": "Design specification",
+          "ask": "How will you know at the end whether your design is a success?",
+          "tags": [],
+          "text": "The key criteria to address when designing; the design is judged against them."
+        },
+        {
+          "term": "After research",
+          "ask": "When should the specification be written, and why then?",
+          "tags": [],
+          "text": "Written after investigation and analysis of research."
+        },
+        {
+          "term": "Essential and desirable",
+          "ask": "Are all of a product's requirements equally important?",
+          "tags": [],
+          "text": "Lists essential requirements, as well as desirable features."
+        },
+        {
+          "term": "Set by the client",
+          "ask": "In industry, who mainly decides what goes in a specification?",
+          "tags": [],
+          "text": "Commercial specifications are mainly determined by the client."
+        },
+        {
+          "term": "Measurable criteria",
+          "ask": "What makes a specification point easy to check later?",
+          "tags": [],
+          "text": "Strong criteria are measurable or testable, and say why they matter."
+        },
+        {
+          "term": "Typical elements",
+          "ask": "What headings could a specification cover?",
+          "tags": [],
+          "text": "Function, user, environment, sustainability, maintenance, size, weight, ergonomics, aesthetics, cost, quality, safety."
+        },
+        {
+          "term": "Constant reference",
+          "ask": "Should the specification only be used at the very end?",
+          "tags": [],
+          "text": "Referred to throughout the design process, not just a final checklist."
+        }
+      ],
+      "check": [
+        {
+          "q": "When is a design specification written?",
+          "a": "After investigation and analysis of research."
+        },
+        {
+          "q": "Name four typical specification elements.",
+          "a": "Any four: function, user, environment, sustainability, maintenance, size, weight, ergonomics, aesthetics, cost, quality, safety."
+        }
+      ]
+    },
+    {
+      "id": "ideas",
+      "label": "Ideas generation",
+      "icon": "idea",
+      "pages": "135–136",
+      "summary": "Techniques for creating, rethinking and developing ideas, alone or in teams.",
+      "items": [
+        {
+          "term": "Mind map",
+          "ask": "How could you lay out everything about a problem on one page to spark ideas?",
+          "tags": [],
+          "text": "Sets out the relevant elements visually, to encourage creativity.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/mind-map.webp",
+            "alt": "A colourful mind map with a central topic and branches of linked words.",
+            "credit": "Vmarss · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "SCAMPER",
+          "ask": "How could you rethink an existing design, one prompt at a time?",
+          "tags": [],
+          "text": "Substitute, combine, adapt, modify, put to another use, eliminate, reverse: new ideas from existing designs."
+        },
+        {
+          "term": "Collaborative team designing",
+          "ask": "Why might a team come up with a better product than one designer alone?",
+          "tags": [],
+          "text": "Uses specialist expertise and often gives better products than a single designer."
+        },
+        {
+          "term": "Meetings and video conferencing",
+          "ask": "How can a design team share ideas when its members are in different places?",
+          "tags": [],
+          "text": "Creative discussion in meetings, or by video conferencing.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/meetings-and-video-conferencing.webp",
+            "alt": "People in a meeting room watching a video call projected on a large screen.",
+            "credit": "Ssr · CC BY-SA 3.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "4x4 technique",
+          "ask": "How could passing one sheet round a group produce several developed ideas?",
+          "tags": [],
+          "text": "An idea in the centre, developed in turn by others into four drawings around it.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/4x4-technique.svg",
+            "alt": "Diagram of a sheet with a lamp idea in the centre and four developed lamp designs in boxes around it.",
+            "credit": "DT",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Thinking Hats",
+          "ask": "How could a group make sure an idea is looked at from every point of view?",
+          "tags": [],
+          "text": "Six coloured hats worn in turn, each a different viewpoint; Edward de Bono's technique.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "Developing through discussion",
+          "ask": "How could feedback from real people shape your early ideas?",
+          "tags": [],
+          "text": "Discuss designs with the client or target market; use their feedback to modify them."
+        }
+      ],
+      "check": [
+        {
+          "q": "What does SCAMPER help a designer do?",
+          "a": "Create new ideas from elements of existing designs."
+        },
+        {
+          "q": "How does Edward de Bono's Thinking Hats technique work?",
+          "a": "Six coloured hats are worn in turn, each representing a different viewpoint, to improve creative discussion."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Design process",
+      "def": "An organised way of designing and making a prototype of a product."
+    },
+    {
+      "term": "Iterative design",
+      "def": "A cyclic process: the stages repeat as the design is improved."
+    },
+    {
+      "term": "Design brief",
+      "def": "Outlines the needs and wants of a specific user or target market."
+    },
+    {
+      "term": "Primary research",
+      "def": "First-hand research, such as using and taking apart existing products."
+    },
+    {
+      "term": "Anthropometric data",
+      "def": "Body measurements, used to make sure a product fits its users."
+    },
+    {
+      "term": "COSHH",
+      "def": "Controls on substances that may harm health."
+    },
+    {
+      "term": "Mood board",
+      "def": "A collage of relevant images showing suitable styles and colours."
+    },
+    {
+      "term": "Inspiration box",
+      "def": "A box of swatches, colour samples, materials and products."
+    },
+    {
+      "term": "Specification",
+      "def": "The key criteria to be addressed when designing."
+    },
+    {
+      "term": "SCAMPER",
+      "def": "A technique for creating new ideas from elements of existing designs."
+    },
+    {
+      "term": "Mind map",
+      "def": "Sets out the relevant elements visually, to encourage creativity."
+    },
+    {
+      "term": "Thinking Hats",
+      "def": "Six coloured hats worn in turn, each a different viewpoint."
+    }
+  ],
+  "apply": [
+    {
+      "q": "A tool company wants to know why its cordless drill is awkward to hold, and how it's made.",
+      "tools": [
+        "Use it and take it apart",
+        "Make a mood board",
+        "Use the SCAMPER technique",
+        "Make an inspiration box"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Using and disassembling it gives first-hand knowledge of its ergonomics, components and manufacture",
+        "A collage of styles and colours sets the look of the new drill",
+        "Prompts such as substitute and eliminate create new ideas",
+        "Swatches and samples show suitable colours and materials"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A furniture company wants new ideas for its best-selling garden chair, building on what works.",
+      "tools": [
+        "Use the SCAMPER technique",
+        "Send out a questionnaire",
+        "Check British Standards",
+        "Analyse anthropometric data"
+      ],
+      "tool": 0,
+      "reasons": [
+        "It creates new ideas from elements of an existing design, such as substituting a material",
+        "It gathers objective views from other people",
+        "It makes sure the product meets the relevant standards",
+        "It makes sure the chair is the correct fit"
+      ],
+      "reason": 0
+    }
+  ],
+  "order": {
+    "q": "Put the stages of the design cycle in order, starting from the problem.",
+    "steps": [
+      "Problem or brief",
+      "Investigation",
+      "Specification",
+      "Ideas generation and development",
+      "Modelling",
+      "Planning production",
+      "Prototype manufacture",
+      "Testing and evaluation"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Why is the design process usually cyclic rather than linear?",
+      "options": [
+        "Ongoing improvements are important to commercial success",
+        "It means no specification is needed",
+        "Each stage only has to be done once",
+        "It removes the need for testing"
+      ],
+      "answer": 0,
+      "why": "The stages repeat as the design is improved, which matters to commercial success.",
+      "chunk": "process"
+    },
+    {
+      "q": "Every project should go through each stage of the design process in the same depth.",
+      "tf": false,
+      "why": "The process gives structure, but projects need different depths of investigation, modelling and testing.",
+      "chunk": "process"
+    },
+    {
+      "q": "In the design cycle, which stage comes straight after investigation?",
+      "options": [
+        "Specification",
+        "Modelling",
+        "Planning production",
+        "Prototype manufacture"
+      ],
+      "answer": 0,
+      "why": "Research is investigated and analysed, then the specification is written from it.",
+      "chunk": "process"
+    },
+    {
+      "q": "Which stage comes last, before the design cycle goes round again?",
+      "options": [
+        "Testing and evaluation",
+        "Prototype manufacture",
+        "Planning production",
+        "Ideas generation and development"
+      ],
+      "answer": 0,
+      "why": "The prototype is tested and evaluated, and the findings feed the next round.",
+      "chunk": "process"
+    },
+    {
+      "q": "What does a design brief outline?",
+      "options": [
+        "The needs and wants of a specific user or target market",
+        "Measurable criteria for judging the final design",
+        "The timings of each manufacturing stage",
+        "The results of testing the prototype"
+      ],
+      "answer": 0,
+      "why": "The brief sets out the problem and who it is for; the specification comes later.",
+      "chunk": "brief"
+    },
+    {
+      "q": "A design brief can say where existing products are inadequate or unsuitable.",
+      "tf": true,
+      "why": "Shortcomings of existing products help show the problem or need.",
+      "chunk": "brief"
+    },
+    {
+      "q": "Why would a designer take apart an existing product?",
+      "options": [
+        "To assess its function, components, materials and manufacture",
+        "To write the design brief",
+        "To make a mood board",
+        "To set the price of the new product"
+      ],
+      "answer": 0,
+      "why": "Disassembly is primary research into how the product works and is made.",
+      "chunk": "primary"
+    },
+    {
+      "q": "Using a product for its intended task gives the designer first-hand knowledge of it.",
+      "tf": true,
+      "why": "It is part of primary research into existing products.",
+      "chunk": "primary"
+    },
+    {
+      "q": "Which two methods seek objective views of a product from other people?",
+      "options": [
+        "Focus groups and questionnaires",
+        "Mood boards and inspiration boxes",
+        "Mind maps and SCAMPER",
+        "Anthropometric data and COSHH"
+      ],
+      "answer": 0,
+      "why": "Both gather other people's views rather than the designer's own.",
+      "chunk": "primary"
+    },
+    {
+      "q": "Which are examples of materials technical information?",
+      "options": [
+        "Toughness and tensile strength data",
+        "Fashions and trends",
+        "The client's requirements",
+        "Colour swatches"
+      ],
+      "answer": 0,
+      "why": "Designers get technical data on materials from specialist researchers.",
+      "chunk": "other"
+    },
+    {
+      "q": "Why does a designer analyse anthropometric data?",
+      "options": [
+        "To make sure the product is the correct fit for its users",
+        "To check materials are safe to handle",
+        "To find out current fashions",
+        "To decide the price"
+      ],
+      "answer": 0,
+      "why": "Anthropometric data is body measurements, used to get the right fit.",
+      "chunk": "other"
+    },
+    {
+      "q": "COSHH is about substances that may harm health.",
+      "tf": true,
+      "why": "Designers check that materials and components are safe and COSHH compliant.",
+      "chunk": "other"
+    },
+    {
+      "q": "Size, environment and method of use are examples of what?",
+      "options": [
+        "Design constraints",
+        "Inspiration materials",
+        "SCAMPER prompts",
+        "Thinking Hats"
+      ],
+      "answer": 0,
+      "why": "Constraints are limits the design has to work within.",
+      "chunk": "other"
+    },
+    {
+      "q": "What is an inspiration box?",
+      "options": [
+        "A box of swatches, colour samples, materials and products",
+        "A collage of images in suitable styles and colours",
+        "A box of finished prototypes",
+        "A list of specification points"
+      ],
+      "answer": 0,
+      "why": "A mood board is the collage; an inspiration box holds real samples.",
+      "chunk": "inspire"
+    },
+    {
+      "q": "Mood boards are decoration and shouldn't affect design decisions.",
+      "tf": false,
+      "why": "Inspiration materials should lead to design decisions.",
+      "chunk": "inspire"
+    },
+    {
+      "q": "When is a design specification written?",
+      "options": [
+        "After investigation and analysis of research",
+        "Before the design brief",
+        "After the prototype is made",
+        "Only at the final evaluation"
+      ],
+      "answer": 0,
+      "why": "The specification turns research into criteria for the design.",
+      "chunk": "spec"
+    },
+    {
+      "q": "A specification lists essential requirements, but never desirable features.",
+      "tf": false,
+      "why": "It lists essential requirements as well as desirable features.",
+      "chunk": "spec"
+    },
+    {
+      "q": "Who mainly determines a commercial specification?",
+      "options": [
+        "The client",
+        "The production engineer",
+        "A focus group",
+        "A specialist researcher"
+      ],
+      "answer": 0,
+      "why": "In commercial design, the client mainly sets the specification.",
+      "chunk": "spec"
+    },
+    {
+      "q": "The specification should be referred to throughout the design process, not just used as a final checklist.",
+      "tf": true,
+      "why": "Designers keep checking ideas against it all the way through.",
+      "chunk": "spec"
+    },
+    {
+      "q": "In SCAMPER, what does 'Eliminate' mean?",
+      "options": [
+        "Simplify the design by removing unnecessary elements",
+        "Reorganise the design in a radical way",
+        "Use other products for inspiration",
+        "Try other materials"
+      ],
+      "answer": 0,
+      "why": "Eliminate simplifies; Reverse reorganises; Adapt borrows; Substitute swaps elements.",
+      "chunk": "ideas"
+    },
+    {
+      "q": "In SCAMPER, what does the R stand for?",
+      "options": [
+        "Reverse",
+        "Redesign",
+        "Recycle",
+        "Refine"
+      ],
+      "answer": 0,
+      "why": "Reverse: reorganise the design in a radical way.",
+      "chunk": "ideas"
+    },
+    {
+      "q": "What is Edward de Bono's Thinking Hats technique?",
+      "options": [
+        "Six coloured hats worn in turn, each a different viewpoint",
+        "Four people developing one idea on a sheet",
+        "A collage of images and colours",
+        "Seven prompts for rethinking a design"
+      ],
+      "answer": 0,
+      "why": "It improves creative discussion of ideas and collaborative work.",
+      "chunk": "ideas"
+    },
+    {
+      "q": "Collaborative team designing often results in better products than one designer working alone.",
+      "tf": true,
+      "why": "It makes the most of specialist expertise to improve creativity.",
+      "chunk": "ideas"
+    },
+    {
+      "q": "In the 4x4 technique, what happens after one person draws an idea in the centre of the sheet?",
+      "options": [
+        "Others develop it further in turn, giving four development drawings",
+        "Six people each judge it from a different viewpoint",
+        "It is compared against the specification",
+        "It is made into a card model"
+      ],
+      "answer": 0,
+      "why": "It benefits from a range of alternative ideas and viewpoints.",
+      "chunk": "ideas"
+    }
+  ],
+  "written": [
+    {
+      "type": "describe",
+      "q": "A company is about to design a new lunchbox for primary school children. Describe what its design brief should contain.",
+      "marks": 4,
+      "points": [
+        "A description of the problem or need: the situation the lunchbox must deal with.",
+        "Images and details of the context or situation.",
+        "Where existing lunchboxes are inadequate or unsuitable.",
+        "Information about the client or user group: the children and parents.",
+        "A basic description of the product and its key functions.",
+        "The key areas to focus on for the product to succeed."
+      ],
+      "model": "The brief should describe the problem or need the lunchbox has to meet, with images and details of the situation it will be used in. It should say where existing lunchboxes are inadequate or unsuitable, and give information about the user group, the children and their parents. It should also give a basic description of the lunchbox and its key functions, and the key areas to focus on for it to succeed.",
+      "note": "1 mark per content point described, up to 4."
+    },
+    {
+      "type": "explain",
+      "q": "Explain why the design process used in commercial product development is usually cyclic rather than linear.",
+      "marks": 2,
+      "points": [
+        "Ongoing improvements are important to commercial success.",
+        "So stages such as investigation, modelling and testing are repeated as the design is improved."
+      ],
+      "model": "Ongoing improvements are important to a product's commercial success, so instead of going through the stages once, the designers repeat stages such as investigation, modelling and testing as the design is improved.",
+      "note": "1 mark for the reason, 1 for how it links to repeating the stages."
+    },
+    {
+      "type": "compare",
+      "q": "Compare a mood board and an inspiration box as inspiration materials.",
+      "marks": 4,
+      "points": [
+        "Both organise inspiration and help explore colour, form and style.",
+        "Both should lead to design decisions, not just decoration.",
+        "A mood board is a collage of relevant images.",
+        "It shows appropriate styles and colours.",
+        "An inspiration box holds real swatches, colour samples, materials and products.",
+        "So it lets the designer explore real materials and textures, not just pictures."
+      ],
+      "model": "Both are ways of organising inspiration to explore colour, form and style, and both should lead to design decisions rather than being decoration. A mood board is a collage of relevant images showing appropriate styles and colours, whereas an inspiration box holds real swatches, colour samples, materials and products, so the designer can explore real materials and textures rather than pictures.",
+      "note": "1 mark per valid point, up to 4. At least one similarity and one difference for full marks."
+    },
+    {
+      "type": "explain",
+      "q": "Explain why a designer would analyse existing products as part of their primary research.",
+      "marks": 4,
+      "points": [
+        "To find their strengths, weaknesses and areas for improvement.",
+        "Using a product for its intended task gives first-hand knowledge of it.",
+        "Taking it apart shows its function, components, materials and manufacture.",
+        "Comparing these with equivalent products shows which works best.",
+        "Assessing ergonomics, aesthetics and cost shows whether it meets consumer needs."
+      ],
+      "model": "Analysing existing products shows their strengths, weaknesses and areas for improvement, which the new design can build on. Using a product for its intended task gives the designer first-hand knowledge of it, and taking it apart shows its function, components, materials and manufacture. Comparing these with equivalent products, and assessing ergonomics, aesthetics and cost, shows whether consumer needs are met.",
+      "note": "1 mark per point explained, up to 4."
+    },
+    {
+      "type": "describe",
+      "q": "Describe two ideas generation methods that a design team could use.",
+      "marks": 4,
+      "points": [
+        "SCAMPER: new ideas from existing designs by substituting, combining, adapting, modifying, putting to another use, eliminating or reversing.",
+        "Mind map: sets out the relevant elements visually to encourage creativity.",
+        "4x4 technique: one person draws an idea in the centre; others develop it in turn into four drawings.",
+        "Thinking Hats: six coloured hats worn in turn, each a different viewpoint, to improve creative discussion.",
+        "Collaborative team designing: makes the most of specialist expertise, through meetings or video conferencing.",
+        "Discussion: designs are discussed with the client or target market, and feedback is used to modify them."
+      ],
+      "model": "In the 4x4 technique, one person draws an idea in the centre of a sheet, then others develop it in turn, giving four development drawings around it from different viewpoints. In Edward de Bono's Thinking Hats, six coloured hats are worn in turn, each standing for a different viewpoint, which improves the creative discussion of ideas.",
+      "note": "Up to 2 marks per method: 1 for naming it, 1 for describing how it works."
+    },
+    {
+      "type": "evaluate",
+      "q": "Evaluate the importance of the design specification in the design process.",
+      "marks": 6,
+      "points": [
+        "It is written after investigation and analysis, so it is based on research.",
+        "It lists essential requirements and desirable features, so priorities are clear.",
+        "Commercial specifications are mainly set by the client, so the design meets the client's needs.",
+        "It covers elements such as function, user, cost, quality and safety.",
+        "It is referred to throughout the process, not only as a final checklist.",
+        "Criteria need to be measurable or testable; vague ones are hard to judge the design against.",
+        "Justified conclusion, e.g. it is central to the process, as long as its criteria are based on research and can be tested."
+      ],
+      "model": "The specification is written after investigation and analysis, so it turns research into the key criteria the design must meet. It lists essential requirements as well as desirable features, and in commercial design it is mainly set by the client, so the design keeps to the client's needs. It covers elements such as function, user, cost, quality and safety, and it is referred to throughout the process, not only as a final checklist. However, it is only useful if its criteria are measurable or testable: a vague criterion is hard to judge a design against. So the specification is central to the design process, as long as it is based on research and its criteria can be tested.",
+      "note": "Tick the points made, then use the levels under the model answer to decide the mark.",
+      "levels": [
+        {
+          "level": 3,
+          "marks": "5–6",
+          "text": "Detailed, balanced points on both sides, with a justified conclusion."
+        },
+        {
+          "level": 2,
+          "marks": "3–4",
+          "text": "Some points, mostly on one side, or a conclusion that isn't justified."
+        },
+        {
+          "level": 1,
+          "marks": "1–2",
+          "text": "Simple points, with no conclusion."
+        }
+      ]
+    }
+  ],
+  "related": [
+    {
+      "id": "b07-product-life-cycle",
+      "spec": "3.2.3.4"
+    },
+    {
+      "id": "b01-design-methods-processes",
+      "spec": "3.2.1"
+    },
+    {
+      "id": "b08b-modelling-planning-evaluation",
+      "spec": "3.2.4"
+    }
+  ]
+}

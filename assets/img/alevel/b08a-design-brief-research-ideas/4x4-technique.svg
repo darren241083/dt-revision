@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A sheet with a first idea, a lamp, sketched in a box in the centre and four boxes around it, each a developed version of the lamp drawn in a different colour, with arrows from the centre to each box">
+  <style>.l{font:700 24px Arial,Helvetica,sans-serif;fill:#10212B}.n{font:700 22px Arial,Helvetica,sans-serif;fill:#FFFFFF}</style>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker></defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="60" y="30" width="680" height="540" rx="6" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <rect x="75" y="45" width="200" height="165" rx="12" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <path d="M143 123 Q175 73 207 123 Z" fill="#FFFFFF" stroke="#1D5FA8" stroke-width="3" stroke-linejoin="round"/><path d="M175 123 L189 169 M151 171 H199" fill="none" stroke="#1D5FA8" stroke-width="3" stroke-linecap="round"/>
+  <rect x="525" y="45" width="200" height="165" rx="12" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <path d="M603 123 V85 H647 V123 Z" fill="#FFFFFF" stroke="#9B2C6C" stroke-width="3" stroke-linejoin="round"/><path d="M625 123 V145 L609 169 M601 171 H649" fill="none" stroke="#9B2C6C" stroke-width="3" stroke-linecap="round"/>
+  <rect x="75" y="390" width="200" height="165" rx="12" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <path d="M141 468 L175 426 L209 468 Z" fill="#FFFFFF" stroke="#A3441A" stroke-width="3" stroke-linejoin="round"/><path d="M175 468 Q197 490 175 514 M151 516 H199" fill="none" stroke="#A3441A" stroke-width="3" stroke-linecap="round"/>
+  <rect x="525" y="390" width="200" height="165" rx="12" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <path d="M597 468 Q595 430 625 430 Q655 430 653 468 Z" fill="#FFFFFF" stroke="#5B3FA0" stroke-width="3" stroke-linejoin="round"/><path d="M625 468 V514 M601 516 H649" fill="none" stroke="#5B3FA0" stroke-width="3" stroke-linecap="round"/>
+  <rect x="315" y="225" width="170" height="150" rx="12" fill="#E2F2EF" stroke="#0F766E" stroke-width="2"/>
+  <path d="M370 302 L382 266 H418 L430 302 Z" fill="#FFFFFF" stroke="#0F766E" stroke-width="3" stroke-linejoin="round"/><path d="M400 302 V346 M376 348 H424" fill="none" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M315 228 L284 214" stroke="#0F766E" stroke-width="3" marker-end="url(#ah)"/>
+  <path d="M485 228 L516 214" stroke="#0F766E" stroke-width="3" marker-end="url(#ah)"/>
+  <path d="M315 372 L284 386" stroke="#0F766E" stroke-width="3" marker-end="url(#ah)"/>
+  <path d="M485 372 L516 386" stroke="#0F766E" stroke-width="3" marker-end="url(#ah)"/>
+</svg>

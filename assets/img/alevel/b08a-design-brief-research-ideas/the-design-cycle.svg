@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="The design cycle: eight stages in a loop, from the problem or brief, through investigation, specification, ideas and development, modelling, planning production and prototype manufacture, to testing and evaluation, then back to the start">
+  <style>.l{font:700 24px Arial,Helvetica,sans-serif;fill:#10212B}.n{font:700 22px Arial,Helvetica,sans-serif;fill:#FFFFFF}</style>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker></defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <circle cx="400" cy="300" r="170" fill="none" stroke="#B9DDD6" stroke-width="10"/>
+  <path d="M-8 -10 L4 0 L-8 10" transform="translate(465.1 142.9) rotate(22.5)" fill="none" stroke="#0F766E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="400.0" cy="130.0" r="24" fill="#0F766E"/><text class="n" x="400.0" y="138.0" text-anchor="middle">1</text>
+  <text class="l" x="400.0" y="70.0" text-anchor="middle">Problem or</text>
+  <text class="l" x="400.0" y="96.0" text-anchor="middle">brief</text>
+  <path d="M-8 -10 L4 0 L-8 10" transform="translate(557.1 234.9) rotate(67.5)" fill="none" stroke="#0F766E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="520.2" cy="179.8" r="24" fill="#0F766E"/><text class="n" x="520.2" y="187.8" text-anchor="middle">2</text>
+  <text class="l" x="547.1" y="160.9" text-anchor="start">Investigation</text>
+  <path d="M-8 -10 L4 0 L-8 10" transform="translate(557.1 365.1) rotate(112.5)" fill="none" stroke="#0F766E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="570.0" cy="300.0" r="24" fill="#0F766E"/><text class="n" x="570.0" y="308.0" text-anchor="middle">3</text>
+  <text class="l" x="608.0" y="308.0" text-anchor="start">Specification</text>
+  <path d="M-8 -10 L4 0 L-8 10" transform="translate(465.1 457.1) rotate(157.5)" fill="none" stroke="#0F766E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="520.2" cy="420.2" r="24" fill="#0F766E"/><text class="n" x="520.2" y="428.2" text-anchor="middle">4</text>
+  <text class="l" x="547.1" y="442.1" text-anchor="start">Ideas and</text>
+  <text class="l" x="547.1" y="468.1" text-anchor="start">development</text>
+  <path d="M-8 -10 L4 0 L-8 10" transform="translate(334.9 457.1) rotate(202.5)" fill="none" stroke="#0F766E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="400.0" cy="470.0" r="24" fill="#0F766E"/><text class="n" x="400.0" y="478.0" text-anchor="middle">5</text>
+  <text class="l" x="400.0" y="522.0" text-anchor="middle">Modelling</text>
+  <path d="M-8 -10 L4 0 L-8 10" transform="translate(242.9 365.1) rotate(247.5)" fill="none" stroke="#0F766E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="279.8" cy="420.2" r="24" fill="#0F766E"/><text class="n" x="279.8" y="428.2" text-anchor="middle">6</text>
+  <text class="l" x="252.9" y="442.1" text-anchor="end">Planning</text>
+  <text class="l" x="252.9" y="468.1" text-anchor="end">production</text>
+  <path d="M-8 -10 L4 0 L-8 10" transform="translate(242.9 234.9) rotate(292.5)" fill="none" stroke="#0F766E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="230.0" cy="300.0" r="24" fill="#0F766E"/><text class="n" x="230.0" y="308.0" text-anchor="middle">7</text>
+  <text class="l" x="192.0" y="295.0" text-anchor="end">Prototype</text>
+  <text class="l" x="192.0" y="321.0" text-anchor="end">manufacture</text>
+  <path d="M-8 -10 L4 0 L-8 10" transform="translate(334.9 142.9) rotate(337.5)" fill="none" stroke="#0F766E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="279.8" cy="179.8" r="24" fill="#0F766E"/><text class="n" x="279.8" y="187.8" text-anchor="middle">8</text>
+  <text class="l" x="252.9" y="147.9" text-anchor="end">Testing and</text>
+  <text class="l" x="252.9" y="173.9" text-anchor="end">evaluation</text>
+  <path d="M400 262 A38 38 0 1 1 362 300" fill="none" stroke="#0F766E" stroke-width="5" marker-end="url(#ah)"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A standing figure with measurement lines for height, arm span and shoulder width, and a hand grip with a measurement across it">
+  <style>.l{font:700 24px Arial,Helvetica,sans-serif;fill:#10212B}.n{font:700 22px Arial,Helvetica,sans-serif;fill:#FFFFFF}</style>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker></defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <path d="M330 76 H620 M380 520 H620" stroke="#DCE3E6" stroke-width="2" stroke-dasharray="6 6"/>
+  <path d="M120 200 V262 M540 200 V262" stroke="#DCE3E6" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="330" cy="110" r="34" fill="#E8ECF1" stroke="#10212B" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M285 155 H375 L392 175 L540 175 L540 200 L392 200 L385 320 L380 520 H345 L333 345 H327 L315 520 H280 L275 320 L268 200 L120 200 L120 175 L268 175 Z" fill="#E8ECF1" stroke="#10212B" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M610 80 L610 516" stroke="#0F766E" stroke-width="2.5" marker-start="url(#ah)" marker-end="url(#ah)"/><path d="M600 76 H620 M600 520 H620" stroke="#0F766E" stroke-width="2"/>
+  <path d="M124 252 L536 252" stroke="#0F766E" stroke-width="2.5" marker-start="url(#ah)" marker-end="url(#ah)"/><path d="M120 242 V262 M540 242 V262" stroke="#0F766E" stroke-width="2"/>
+  <path d="M289 140 L371 140" stroke="#0F766E" stroke-width="2.5" marker-start="url(#ah)" marker-end="url(#ah)"/><path d="M285 130 V150 M375 130 V150" stroke="#0F766E" stroke-width="2"/>
+  <rect x="680" y="300" width="44" height="120" rx="20" fill="#E8ECF1" stroke="#10212B" stroke-width="2" stroke-linejoin="round"/><path d="M670 330 h64 M670 352 h64 M670 374 h64 M670 396 h64" stroke="#10212B" stroke-width="2"/>
+  <path d="M684 450 L720 450" stroke="#0F766E" stroke-width="2.5" marker-start="url(#ah)" marker-end="url(#ah)"/><path d="M680 440 V460 M724 440 V460" stroke="#0F766E" stroke-width="2"/>
+</svg>
