@@ -12,7 +12,10 @@
     "title": "ClearRevise AQA GCSE D&T 8552",
     "pages": "8–11"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/gcse/g03-culture-society-production-systems.m4a",
+    "length": 449
+  },
   "needs": [
     "Explain how culture, fashion, faiths and beliefs affect design.",
     "Explain inclusive design, with examples of inclusive features.",
