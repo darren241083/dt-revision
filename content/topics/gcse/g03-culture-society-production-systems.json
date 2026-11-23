@@ -150,7 +150,12 @@
           "term": "Average user",
           "ask": "Who might struggle with a product designed for a 'typical' person?",
           "tags": [],
-          "text": "Products are often designed for the average user, which can leave others out."
+          "text": "Products are often designed for the average user, which can leave others out.",
+          "image": {
+            "file": "assets/img/gcse/g03-culture-society-production-systems/average-user.webp",
+            "alt": "Average user",
+            "credit": "--"
+          }
         },
         {
           "term": "Inclusive design",
