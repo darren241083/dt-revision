@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Top view of a CNC machine bed with an X-axis along the bottom and a Y-axis up the side; a sheet of timber is lined up in the corner where the two axes meet, which is marked as the datum">
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="80" y="60" width="640" height="460" rx="8" fill="#E8EEF0" stroke="#10212B" stroke-width="2"/>
+  <path d="M120 100 V480 M200 100 V480 M280 100 V480 M360 100 V480 M440 100 V480 M520 100 V480 M600 100 V480 M680 100 V480" fill="none" stroke="#5A6B75" stroke-width="2" opacity=".35"/>
+  <rect x="150" y="230" width="380" height="220" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/>
+  <path d="M180 280 H500 M180 340 H490 M180 400 H500" fill="none" stroke="#7A4D24" stroke-width="2" opacity=".4"/>
+  <path d="M150 450 H672 M150 450 V128" fill="none" stroke="#0F766E" stroke-width="5"/>
+  <path d="M692 450 L674 460 L674 440 Z" fill="#0F766E"/><path d="M150 108 L160 126 L140 126 Z" fill="#0F766E"/>
+  <circle cx="150" cy="450" r="18" fill="#FFFFFF" stroke="#10212B" stroke-width="3"/><path d="M150 432 A18 18 0 0 1 168 450 H150 Z M150 468 A18 18 0 0 1 132 450 H150 Z" fill="#10212B"/>
+</svg>

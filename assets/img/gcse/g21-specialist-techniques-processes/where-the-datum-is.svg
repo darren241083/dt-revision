@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A flat rectangular plate with two drilled holes. The bottom-left corner is marked as the datum point, and dimension lines run from the left edge and the bottom edge to the centre of each hole">
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="150" y="170" width="460" height="330" rx="4" fill="#E8EEF0" stroke="#10212B" stroke-width="2"/>
+  <circle cx="300" cy="380" r="26" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <circle cx="480" cy="270" r="26" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <path d="M284 380 H316 M300 364 V396 M464 270 H496 M480 254 V286" fill="none" stroke="#10212B" stroke-width="2" stroke-linecap="round"/>
+  <path d="M150 160 V60 M300 350 V110 M480 240 V60 M630 380 H720 M510 270 H760 M620 500 H760" fill="none" stroke="#5A6B75" stroke-width="2" stroke-dasharray="8 8"/>
+  <path d="M150 500 H610 M150 500 V170" fill="none" stroke="#0F766E" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="150" cy="500" r="20" fill="#FFFFFF" stroke="#10212B" stroke-width="3"/>
+  <path d="M150 480 A20 20 0 0 1 170 500 H150 Z M150 520 A20 20 0 0 1 130 500 H150 Z" fill="#10212B"/>
+  <path d="M162 125 L288 125" fill="none" stroke="#0F766E" stroke-width="3" stroke-linecap="butt"/><path d="M300 125 L284 134 L284 116 Z" fill="#0F766E"/><path d="M150 125 L166 116 L166 134 Z" fill="#0F766E"/>
+  <path d="M162 75 L468 75" fill="none" stroke="#0F766E" stroke-width="3" stroke-linecap="butt"/><path d="M480 75 L464 84 L464 66 Z" fill="#0F766E"/><path d="M150 75 L166 66 L166 84 Z" fill="#0F766E"/>
+  <path d="M680 488 L680 392" fill="none" stroke="#0F766E" stroke-width="3" stroke-linecap="butt"/><path d="M680 380 L689 396 L671 396 Z" fill="#0F766E"/><path d="M680 500 L671 484 L689 484 Z" fill="#0F766E"/>
+  <path d="M740 488 L740 282" fill="none" stroke="#0F766E" stroke-width="3" stroke-linecap="butt"/><path d="M740 270 L749 286 L731 286 Z" fill="#0F766E"/><path d="M740 500 L731 484 L749 484 Z" fill="#0F766E"/>
+</svg>

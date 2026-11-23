@@ -1,0 +1,851 @@
+{
+  "id": "g21-specialist-techniques-processes",
+  "level": "gcse",
+  "title": "Specialist techniques and processes",
+  "titleMark": "techniques",
+  "spec": [
+    "3.2.8"
+  ],
+  "section": "B",
+  "materials": [],
+  "book": {
+    "title": "ClearRevise AQA GCSE D&T 8552",
+    "pages": "106"
+  },
+  "audio": null,
+  "needs": [
+    "Say what a production aid is and give examples.",
+    "Describe how jigs, templates and paper patterns help accuracy.",
+    "Name the tools for measuring lengths and angles, and drawing curves.",
+    "Explain what a datum reference point is and why it's used.",
+    "Explain what a scale drawing and a scale are."
+  ],
+  "doNow": [
+    {
+      "q": "Give two examples of production aids.",
+      "a": "Any two of: jigs, templates, paper patterns.",
+      "from": "Pre-read p106"
+    },
+    {
+      "q": "What is a datum reference point?",
+      "a": "The point from which all measurements are taken.",
+      "from": "Pre-read p106"
+    },
+    {
+      "q": "Why are templates or moulds used in batch production?",
+      "a": "To keep every product in the batch consistent.",
+      "from": "3.2.7"
+    },
+    {
+      "q": "When marking out a cutting line, where do you measure from?",
+      "a": "From a datum point.",
+      "from": "3.2.5"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I hold a piece of material while it's cut, drilled or bent.",
+      "I secure the work quickly without damaging it.",
+      "The work always sits against my reference point or datum edge."
+    ],
+    "answer": "Jig",
+    "options": [
+      "Jig",
+      "Template",
+      "Paper pattern",
+      "French curves"
+    ]
+  },
+  "bigPicture": {
+    "question": "How do makers get every part accurate, and every copy the same?",
+    "lenses": [
+      {
+        "icon": "search",
+        "text": "What it is"
+      },
+      {
+        "icon": "tool",
+        "text": "What it's used for"
+      },
+      {
+        "icon": "target",
+        "text": "How it helps accuracy"
+      },
+      {
+        "icon": "copy",
+        "text": "Making identical items"
+      }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "jigs",
+      "label": "Production aids and jigs",
+      "icon": "tool",
+      "pages": "106",
+      "summary": "Production aids speed up production and make it more accurate. A jig holds the work.",
+      "items": [
+        {
+          "term": "Production aid",
+          "ask": "What sorts of things could help a workshop make products faster and more accurately?",
+          "tags": [],
+          "text": "Any device, tool, template, jig or pattern that makes production faster and more accurate.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "Jig",
+          "ask": "How could you stop a piece of material moving while you cut, drill or bend it?",
+          "tags": [],
+          "text": "Holds a piece of material in place while it's cut, drilled or bent.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/jig.webp",
+            "alt": "A metal bicycle frame held in place in a frame-building jig in a workshop",
+            "credit": "4300streetcar · CC BY 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Accuracy and efficiency",
+          "ask": "What two things get better when you use a jig?",
+          "tags": [],
+          "text": "A jig makes work more accurate and more efficient."
+        },
+        {
+          "term": "Securing the work",
+          "ask": "How should a good jig grip the workpiece?",
+          "tags": [],
+          "text": "Holds the workpiece quickly, without damaging the material.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/securing-the-work.svg",
+            "alt": "Side view of a toggle clamp pressing a pad down on a timber workpiece that sits against a stop on a jig base",
+            "credit": "DT",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Datum edge",
+          "ask": "How does a jig make sure every workpiece sits in exactly the same position?",
+          "tags": [],
+          "text": "The workpiece is always located against a reference point or datum edge.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/datum-edge.svg",
+            "alt": "Top view of a jig: a timber workpiece pushed into the corner of an L-shaped fence, with a cross marking where the hole will be drilled",
+            "credit": "DT",
+            "unchecked": true
+          },
+          "imageOnReveal": true
+        }
+      ],
+      "check": [
+        {
+          "q": "What is a production aid?",
+          "a": "Any device, tool, template, jig or pattern that makes production faster and more accurate."
+        },
+        {
+          "q": "Give two ways a jig helps when making a product.",
+          "a": "Any two: holds the material in place; improves accuracy and efficiency; secures it quickly without damage; locates it against a datum edge."
+        }
+      ]
+    },
+    {
+      "id": "templates",
+      "label": "Templates",
+      "icon": "copy",
+      "pages": "106",
+      "summary": "A shaped piece of material used to cut, drill and shape the same item again and again.",
+      "items": [
+        {
+          "term": "Template",
+          "ask": "What could you use to cut, drill or shape the same outline again and again?",
+          "tags": [],
+          "text": "A shaped piece of material used in cutting, drilling and shaping.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/template.svg",
+            "alt": "A pencil drawing around a curved template on a timber board, with two outlines of the same shape already marked",
+            "credit": "DT",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Accurate and consistent",
+          "ask": "How does a template help when you need lots of identical parts?",
+          "tags": [],
+          "text": "Makes each item accurately and lets it be copied to a consistent quality."
+        },
+        {
+          "term": "Durable material",
+          "ask": "What should a template be made from if it will be used many times?",
+          "tags": [],
+          "text": "A template for repeated use should be made of a durable material."
+        }
+      ],
+      "check": [
+        {
+          "q": "Name three processes a template is used for.",
+          "a": "Cutting, drilling and shaping."
+        },
+        {
+          "q": "What should a template for repeated use be made from?",
+          "a": "A durable material."
+        }
+      ]
+    },
+    {
+      "id": "patterns",
+      "label": "Paper patterns",
+      "icon": "board",
+      "pages": "106",
+      "summary": "Paper shapes fixed to the material, or used to plan where shapes are cut.",
+      "items": [
+        {
+          "term": "Paper pattern",
+          "ask": "How could you get a complicated shape onto a piece of material before cutting it out?",
+          "tags": [],
+          "text": "A paper shape that is often attached to the material to be cut.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/paper-pattern.svg",
+            "alt": "A paper pattern with a curved outline stuck onto a sheet of plywood, ready to be cut out",
+            "credit": "DT",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Laying out shapes",
+          "ask": "How could you plan where each shape goes on a board before you cut any of them?",
+          "tags": [
+            "timber"
+          ],
+          "text": "Paper patterns are used to lay out the shapes to be cut from wood.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/laying-out-shapes.svg",
+            "alt": "Paper shapes of rectangles, circles and wedges laid out close together on a plywood sheet before cutting",
+            "credit": "DT",
+            "unchecked": true
+          },
+          "imageOnReveal": true
+        }
+      ],
+      "check": [
+        {
+          "q": "What is often done with a paper pattern before cutting?",
+          "a": "It is attached to the material to be cut."
+        },
+        {
+          "q": "How can paper patterns help before cutting shapes from wood?",
+          "a": "They are used to lay out the shapes to be cut."
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "label": "Measurements",
+      "icon": "scale",
+      "pages": "106",
+      "summary": "Accurate measuring and drawing tools for lengths, angles and curves.",
+      "items": [
+        {
+          "term": "Accuracy",
+          "ask": "Why does accurate measuring matter for the finished product?",
+          "tags": [],
+          "text": "Accuracy is needed to make a quality, finished product."
+        },
+        {
+          "term": "Ruler or tape measure",
+          "ask": "What simple tools could you use to take a measurement?",
+          "tags": [],
+          "text": "Simple tools for taking measurements.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/ruler-or-tape-measure.webp",
+            "alt": "Close-up of a white folding wooden rule with metal ends",
+            "credit": "User:Goele · CC0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Protractor",
+          "ask": "What could you use to measure an angle accurately?",
+          "tags": [],
+          "text": "Measures angles, used with a ruler or a T-square.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/protractor.webp",
+            "alt": "A brass semicircular protractor next to a pair of dividers on a leather desk",
+            "credit": "Compo · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "French curves",
+          "ask": "What could help you draw smooth curves of different sizes?",
+          "tags": [],
+          "text": "Shaped guides that let curves be drawn in different sizes.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/french-curves.webp",
+            "alt": "A set of French curves in different colours and shapes",
+            "credit": "Инженер Павел Серков · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        }
+      ],
+      "check": [
+        {
+          "q": "Why is accuracy important when measuring?",
+          "a": "It's needed to make a quality, finished product."
+        },
+        {
+          "q": "What is a protractor used with to measure angles?",
+          "a": "A ruler or a T-square."
+        }
+      ]
+    },
+    {
+      "id": "datum",
+      "label": "Datum reference point",
+      "icon": "target",
+      "pages": "106",
+      "summary": "One point that every measurement is taken from, so sizes stay accurate.",
+      "items": [
+        {
+          "term": "Datum reference point",
+          "ask": "Where should you measure from to keep every size on a part accurate?",
+          "tags": [],
+          "text": "The point from which all measurements are taken."
+        },
+        {
+          "term": "Where the datum is",
+          "ask": "Where on a part would be a sensible place to measure from?",
+          "tags": [],
+          "text": "Often a corner of the design, or the centre or edge of a circular shape.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/where-the-datum-is.svg",
+            "alt": "A flat plate with two holes, with the datum point at the bottom-left corner and every hole measured from the left and bottom edges",
+            "credit": "DT",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Only from the datum",
+          "ask": "What happens to accuracy when every measurement starts from the same point?",
+          "tags": [],
+          "text": "Taking measurements only from the datum points makes work more accurate."
+        },
+        {
+          "term": "Datum in CAM",
+          "ask": "How does a CAM machine know where to start measuring from?",
+          "tags": [],
+          "text": "CAM machinery is lined up to the point where the X- and Y-axes meet.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/datum-in-cam.svg",
+            "alt": "Top view of a CNC machine bed with a sheet of timber lined up in the corner where the X- and Y-axes meet",
+            "credit": "DT",
+            "unchecked": true
+          },
+          "imageOnReveal": true
+        },
+        {
+          "term": "Scaling sizes",
+          "ask": "Why is measuring from the X- and Y-axes useful if a design needs to be bigger or smaller?",
+          "tags": [],
+          "text": "Measuring from the datum lets sizes be scaled up or down accurately."
+        }
+      ],
+      "check": [
+        {
+          "q": "Where is a single datum point often found?",
+          "a": "In a corner of the design, or the centre or edge of a circular shape."
+        },
+        {
+          "q": "In CAM, where is the machinery lined up to?",
+          "a": "The point where the X- and Y-axes meet."
+        }
+      ]
+    },
+    {
+      "id": "scale",
+      "label": "Scale drawing",
+      "icon": "map",
+      "pages": "106",
+      "summary": "An accurate drawing at a more practical size, with its scale shown.",
+      "items": [
+        {
+          "term": "Scale drawing",
+          "ask": "How could a designer draw a whole building accurately on one sheet of paper?",
+          "tags": [],
+          "text": "Shows an object or building accurately at a more practical size.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/scale-drawing.webp",
+            "alt": "Floor plan of a building drawn to scale, with a large round hall in the centre",
+            "credit": "Ar. Asia Jabeen, Ar. Naveed Hussain, Ar. Mazhar Munir · CC BY 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Scale",
+          "ask": "What tells you how much bigger or smaller a drawing's sizes are than the real thing?",
+          "tags": [],
+          "text": "The set amount the drawing's measurements are enlarged or reduced by.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/scale.webp",
+            "alt": "An old wooden scale rule marked with several different scales",
+            "credit": "ElliotCaspar · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Scale on the drawing",
+          "ask": "How would someone reading a drawing know how much it has been enlarged or reduced?",
+          "tags": [],
+          "text": "The scale factor is shown on the drawing, for example 1:5."
+        },
+        {
+          "term": "Shapes and spatial relationships",
+          "ask": "What does drawing something to scale help people understand about a design?",
+          "tags": [],
+          "text": "Gives a clear understanding of the proposed shapes and how they relate in space."
+        }
+      ],
+      "check": [
+        {
+          "q": "What is the scale of a drawing?",
+          "a": "The set amount its measurements have been enlarged or reduced by."
+        },
+        {
+          "q": "Why is a product drawn to scale?",
+          "a": "It shows it accurately at a practical size and gives a clear understanding of its shapes and spatial relationships."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Production aid",
+      "def": "A device, tool, template, jig or pattern that makes production faster and more accurate."
+    },
+    {
+      "term": "Jig",
+      "def": "Holds material in place while it's cut, drilled or bent."
+    },
+    {
+      "term": "Template",
+      "def": "A shaped piece of material used in cutting, drilling and shaping."
+    },
+    {
+      "term": "Paper pattern",
+      "def": "A paper shape attached to the material to be cut, or used to lay out shapes."
+    },
+    {
+      "term": "Protractor",
+      "def": "Measures angles, used with a ruler or T-square."
+    },
+    {
+      "term": "French curves",
+      "def": "Guides for drawing curves in different sizes."
+    },
+    {
+      "term": "Datum reference point",
+      "def": "The point from which all measurements are taken."
+    },
+    {
+      "term": "Datum edge",
+      "def": "The edge a workpiece is always located against in a jig."
+    },
+    {
+      "term": "Scale drawing",
+      "def": "An accurate drawing of an object or building at a more practical size."
+    },
+    {
+      "term": "Scale",
+      "def": "The amount a drawing's measurements are enlarged or reduced by, e.g. 1:5."
+    }
+  ],
+  "apply": [
+    {
+      "q": "A workshop has to drill two holes in exactly the same place on 50 pine shelf brackets.",
+      "tools": [
+        "A jig",
+        "A paper pattern",
+        "French curves",
+        "A scale drawing"
+      ],
+      "tool": 0,
+      "reasons": [
+        "It holds each bracket quickly against a datum edge, so every hole is accurate",
+        "It's used to lay out shapes to be cut from wood",
+        "They let curves be drawn in different sizes",
+        "It shows the bracket accurately at a more practical size"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A furniture maker needs to cut the same curved chair back from 30 pieces of plywood, all to a consistent quality.",
+      "tools": [
+        "A durable template",
+        "A protractor",
+        "A tape measure",
+        "A scale drawing"
+      ],
+      "tool": 0,
+      "reasons": [
+        "A shaped piece that lasts lets the outline be copied accurately every time",
+        "It measures angles when used with a ruler or T-square",
+        "It takes simple length measurements",
+        "It shows proposed shapes and spatial relationships"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A designer wants to show a client a new acrylic bus shelter, accurately, on one sheet of paper.",
+      "tools": [
+        "A scale drawing",
+        "A paper pattern",
+        "A jig",
+        "A template"
+      ],
+      "tool": 0,
+      "reasons": [
+        "Its sizes are reduced by a set scale shown on the drawing, so it fits but stays accurate",
+        "It is attached to the material to be cut",
+        "It holds material while it's cut, drilled or bent",
+        "It's a shaped piece used for cutting, drilling and shaping"
+      ],
+      "reason": 0
+    }
+  ],
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      {
+        "n": "Jig",
+        "why": "The only one that holds the material while it's cut, drilled or bent."
+      },
+      {
+        "n": "Template",
+        "why": "The only one that's a shaped piece of material used for cutting, drilling and shaping."
+      },
+      {
+        "n": "Paper pattern",
+        "why": "The only one made of paper and attached to the material to be cut."
+      },
+      {
+        "n": "French curves",
+        "why": "The only one used for drawing curves, not listed as a production aid."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Which of these is a production aid?",
+      "options": [
+        "A jig",
+        "A scale",
+        "A datum point",
+        "A CAM axis"
+      ],
+      "answer": 0,
+      "why": "Production aids are devices, tools, templates, jigs or patterns.",
+      "chunk": "jigs"
+    },
+    {
+      "q": "Production aids improve the speed and accuracy of the production process.",
+      "tf": true,
+      "why": "That is what makes something a production aid.",
+      "chunk": "jigs"
+    },
+    {
+      "q": "What does a jig do?",
+      "options": [
+        "Holds a piece of material during cutting, drilling or bending",
+        "Draws curves in different sizes",
+        "Shows the scale of a drawing",
+        "Measures angles with a T-square"
+      ],
+      "answer": 0,
+      "why": "A jig holds the material in place while it is worked on.",
+      "chunk": "jigs"
+    },
+    {
+      "q": "A jig holds the workpiece securely, but slowly, and may damage the material.",
+      "tf": false,
+      "why": "A jig secures the work quickly and without damaging the material.",
+      "chunk": "jigs"
+    },
+    {
+      "q": "In a jig, what is the workpiece always located against?",
+      "options": [
+        "A reference point or datum edge",
+        "A paper pattern",
+        "A French curve",
+        "The centre of the drill"
+      ],
+      "answer": 0,
+      "why": "Locating against a datum edge puts every workpiece in the same place.",
+      "chunk": "jigs"
+    },
+    {
+      "q": "What is a template?",
+      "options": [
+        "A shaped piece of material used in cutting, drilling and shaping",
+        "A device that holds material while it's bent",
+        "The point all measurements are taken from",
+        "A drawing at a more practical size"
+      ],
+      "answer": 0,
+      "why": "Templates are shaped pieces used to cut, drill and shape items.",
+      "chunk": "templates"
+    },
+    {
+      "q": "Templates let an item be replicated to a consistent quality.",
+      "tf": true,
+      "why": "Each item made with the template is accurate and the same.",
+      "chunk": "templates"
+    },
+    {
+      "q": "A template that will be used many times should be made of a thin, flimsy material.",
+      "tf": false,
+      "why": "For repeated use, a template should be made of a durable material.",
+      "chunk": "templates"
+    },
+    {
+      "q": "How are paper patterns often used?",
+      "options": [
+        "Attached to the material to be cut",
+        "Clamped in a pillar drill",
+        "Used to measure angles",
+        "Loaded into CAM machinery as the datum"
+      ],
+      "answer": 0,
+      "why": "Paper patterns are often fixed to the material before it is cut.",
+      "chunk": "patterns"
+    },
+    {
+      "q": "Paper patterns can be used to lay out shapes to be cut from wood.",
+      "tf": true,
+      "why": "Laying out the shapes plans where each one is cut.",
+      "chunk": "patterns"
+    },
+    {
+      "q": "Which tool is used to measure angles?",
+      "options": [
+        "Protractor",
+        "French curves",
+        "Tape measure",
+        "Jig"
+      ],
+      "answer": 0,
+      "why": "A protractor measures angles, used with a ruler or T-square.",
+      "chunk": "measure"
+    },
+    {
+      "q": "What are French curves used for?",
+      "options": [
+        "Drawing curves in different sizes",
+        "Measuring angles",
+        "Holding work while it's drilled",
+        "Showing the scale of a drawing"
+      ],
+      "answer": 0,
+      "why": "French curves let curves be drawn in different sizes.",
+      "chunk": "measure"
+    },
+    {
+      "q": "A protractor is used with a ruler or a T-square to measure angles.",
+      "tf": true,
+      "why": "The ruler or T-square gives the straight line to measure from.",
+      "chunk": "measure"
+    },
+    {
+      "q": "What is a datum reference point?",
+      "options": [
+        "The point from which all measurements are taken",
+        "The largest size on a drawing",
+        "The last mark made on the material",
+        "The scale shown on a drawing"
+      ],
+      "answer": 0,
+      "why": "Every measurement starts from the datum.",
+      "chunk": "datum"
+    },
+    {
+      "q": "Where is a single datum point often found?",
+      "options": [
+        "A corner of the design, or the centre or edge of a circular shape",
+        "Wherever the last hole was drilled",
+        "In the middle of the longest edge",
+        "On the scale line of a drawing"
+      ],
+      "answer": 0,
+      "why": "Corners and the centre or edge of circles are common datum points.",
+      "chunk": "datum"
+    },
+    {
+      "q": "Accuracy increases when measurements are taken from only the datum points.",
+      "tf": true,
+      "why": "Measuring from one set point keeps every size accurate.",
+      "chunk": "datum"
+    },
+    {
+      "q": "In CAM, the machinery is aligned to the point where the X- and Y-axes meet.",
+      "tf": true,
+      "why": "That point is the machine's datum.",
+      "chunk": "datum"
+    },
+    {
+      "q": "What does a scale drawing do?",
+      "options": [
+        "Represents an object accurately at a more practical size",
+        "Holds material while it's cut",
+        "Lays out shapes to be cut from wood",
+        "Measures angles accurately"
+      ],
+      "answer": 0,
+      "why": "A scale drawing shows the object accurately, made bigger or smaller.",
+      "chunk": "scale"
+    },
+    {
+      "q": "What is the 'scale' of a drawing?",
+      "options": [
+        "The set amount its measurements are enlarged or reduced by",
+        "The point all its measurements are taken from",
+        "The paper it is drawn on",
+        "The tool used to draw its curves"
+      ],
+      "answer": 0,
+      "why": "The scale is the specified amount of enlarging or reducing.",
+      "chunk": "scale"
+    },
+    {
+      "q": "The scale factor of a scale drawing is kept secret and not shown on the drawing.",
+      "tf": false,
+      "why": "The scale factor is shown on the drawing, for example 1:5.",
+      "chunk": "scale"
+    },
+    {
+      "q": "A scale drawing gives a clear understanding of the proposed shapes and spatial relationships.",
+      "tf": true,
+      "why": "Drawing to scale shows how the shapes look and relate to each other.",
+      "chunk": "scale"
+    }
+  ],
+  "written": [
+    {
+      "type": "describe",
+      "q": "A school workshop is drilling a hole in the same place on 40 identical pine parts. Describe how a jig helps.",
+      "marks": 4,
+      "points": [
+        "It holds each piece of pine in place while it is drilled.",
+        "Each piece is always located against a reference point or datum edge.",
+        "So every hole is drilled accurately.",
+        "It secures each piece quickly, which makes making more efficient.",
+        "It holds the work without damaging the material."
+      ],
+      "model": "The jig holds each piece of pine in place while it is drilled. Every piece is located against the same reference point or datum edge, so each hole is drilled accurately. The jig secures each piece quickly, which makes the work more efficient, and it does this without damaging the material.",
+      "note": "1 mark per point, up to 4."
+    },
+    {
+      "type": "explain",
+      "q": "Explain what a datum reference point is and why it is used.",
+      "marks": 2,
+      "points": [
+        "It is the point from which all measurements are taken.",
+        "Taking measurements only from this point increases accuracy."
+      ],
+      "model": "A datum reference point is the point from which all measurements are taken. Measuring only from this point makes the work more accurate.",
+      "note": "1 mark for what it is, 1 mark for why it is used."
+    },
+    {
+      "type": "explain",
+      "q": "Explain how production aids help when making a batch of identical products.",
+      "marks": 4,
+      "points": [
+        "Production aids are devices, tools, templates, jigs or patterns.",
+        "They improve the speed of the production process.",
+        "They improve the accuracy of the production process.",
+        "Templates let each item be replicated to a consistent quality.",
+        "Jigs secure the work quickly, against a datum edge, without damaging it."
+      ],
+      "model": "Production aids are devices, tools, templates, jigs or patterns. They make the production process faster and more accurate. A template lets each item be copied to a consistent quality, and a jig secures the work quickly against a datum edge without damaging it.",
+      "note": "1 mark per point, up to 4."
+    },
+    {
+      "type": "describe",
+      "q": "Describe the equipment used to measure lengths and angles, and to draw curves.",
+      "marks": 3,
+      "points": [
+        "A ruler or tape measure is used to take measurements.",
+        "A protractor measures angles, used with a ruler or T-square.",
+        "French curves let curves be drawn in different sizes."
+      ],
+      "model": "Lengths are measured with a simple ruler or a tape measure. Angles are measured with a protractor, used with a ruler or a T-square. French curves let curves be drawn in different sizes.",
+      "note": "1 mark for each piece of equipment and its use, up to 3."
+    },
+    {
+      "type": "compare",
+      "q": "Compare a template and a jig as production aids.",
+      "marks": 4,
+      "points": [
+        "Both are production aids that improve speed and accuracy.",
+        "A template is a shaped piece of material.",
+        "A template is used in cutting, drilling and shaping.",
+        "A template lets an item be replicated to a consistent quality.",
+        "A jig holds the material in place during cutting, drilling or bending.",
+        "A jig locates the work against a reference point or datum edge."
+      ],
+      "model": "Both are production aids that make production faster and more accurate. A template is a shaped piece of material used in cutting, drilling and shaping, so an item can be copied to a consistent quality. A jig instead holds the material in place while it is cut, drilled or bent, always locating it against a datum edge.",
+      "note": "1 mark per point, up to 4. At least one point must compare the two."
+    },
+    {
+      "type": "evaluate",
+      "q": "A workshop is making 30 identical pine coat hooks. Each has a curved outline and two holes drilled in the same place. Evaluate the use of a template and a jig to make them.",
+      "marks": 6,
+      "points": [
+        "A template is a shaped piece used in cutting, drilling and shaping, so it suits the curved outline.",
+        "A template lets each hook be replicated to a consistent quality.",
+        "For 30 uses, the template should be made of a durable material.",
+        "A jig holds each hook in place while it is drilled.",
+        "The jig locates each hook against a datum edge, so the holes are accurate on every one.",
+        "The jig secures the work quickly without damage, so it's efficient.",
+        "Justified conclusion, e.g. use both: the template for the outline and the jig for the holes, so all 30 are accurate and the same."
+      ],
+      "model": "A template is a shaped piece of material used for cutting and shaping, so it suits the curved outline, and each hook can be copied to a consistent quality. Because it will be used 30 times, it should be made of a durable material. A jig holds each hook while it is drilled and locates it against a datum edge, so the holes are accurate on every hook. It secures the work quickly without damaging it, so it is efficient. Neither aid does the whole job alone, so the best choice is both: the template for the outline and the jig for the holes, so all 30 hooks are accurate and identical.",
+      "note": "Tick the points made, then use the levels under the model answer to decide the mark.",
+      "levels": [
+        {
+          "level": 3,
+          "marks": "5–6",
+          "text": "Detailed, balanced points on both sides, with a justified conclusion."
+        },
+        {
+          "level": 2,
+          "marks": "3–4",
+          "text": "Some points, mostly on one side, or a conclusion that isn't justified."
+        },
+        {
+          "level": 1,
+          "marks": "1–2",
+          "text": "Simple points, with no conclusion."
+        }
+      ]
+    }
+  ],
+  "related": [
+    {
+      "id": "g19-shaping-timbers-polymers",
+      "spec": "3.2.5"
+    },
+    {
+      "id": "g29-materials-quality-control-tolerance",
+      "spec": "3.3.8"
+    },
+    {
+      "id": "g30-templates-marking-out-material-management",
+      "spec": "3.3.9"
+    }
+  ]
+}

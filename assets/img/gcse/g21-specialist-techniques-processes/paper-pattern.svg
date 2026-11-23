@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A paper pattern of a curved shape stuck onto a sheet of plywood, ready for the shape to be cut out along its outline">
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="80" y="90" width="640" height="420" rx="4" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/>
+  <path d="M110 150 H690 M110 250 H680 M110 350 H690 M110 450 H670" fill="none" stroke="#7A4D24" stroke-width="2" opacity=".3"/>
+  <rect x="190" y="140" width="420" height="320" fill="#FFFFFF" stroke="#5A6B75" stroke-width="2"/>
+  <path d="M190 140 L230 140 L190 180 Z" fill="#E8EEF0" stroke="#5A6B75" stroke-width="2"/>
+  <path d="M260 400 C240 330 260 240 330 220 C380 205 400 250 430 240 C480 222 520 190 545 240 C570 290 520 330 540 380 C550 410 520 420 490 415 L300 415 C280 415 266 412 260 400 Z" fill="none" stroke="#10212B" stroke-width="4"/>
+</svg>

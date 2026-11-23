@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Side view of a toggle clamp on a jig base pressing a rubber pad down onto a timber workpiece, which sits against a stop at the end of the jig">
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="80" y="420" width="640" height="50" rx="4" fill="#E8EEF0" stroke="#10212B" stroke-width="2"/>
+  <rect x="600" y="330" width="50" height="90" fill="#0F766E" stroke="#10212B" stroke-width="2"/>
+  <rect x="200" y="350" width="400" height="70" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/>
+  <path d="M230 385 H560" fill="none" stroke="#7A4D24" stroke-width="2" opacity=".45"/>
+  <rect x="110" y="380" width="70" height="40" fill="#5A6B75" stroke="#10212B" stroke-width="2"/>
+  <path d="M145 380 V300" fill="none" stroke="#10212B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M145 300 L330 300" fill="none" stroke="#10212B" stroke-width="12" stroke-linecap="round"/>
+  <path d="M145 300 L95 190" fill="none" stroke="#10212B" stroke-width="10" stroke-linecap="round"/>
+  <rect x="78" y="150" width="30" height="50" rx="10" fill="#0F766E" stroke="#10212B" stroke-width="2" transform="rotate(-24 93 175)"/>
+  <circle cx="145" cy="300" r="10" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <path d="M310 300 V335" fill="none" stroke="#10212B" stroke-width="6"/>
+  <rect x="285" y="335" width="50" height="15" rx="4" fill="#10212B"/>
+</svg>

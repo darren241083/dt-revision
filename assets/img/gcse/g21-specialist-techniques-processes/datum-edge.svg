@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Top view of a jig: a timber workpiece pushed into the corner of an L-shaped fence, with arrows showing it pushed against both edges and a cross marking where the hole will be drilled">
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="110" y="70" width="580" height="460" rx="10" fill="#F3F6F6" stroke="#10212B" stroke-width="2"/>
+  <path d="M170 110 H210 V430 H630 V470 H170 Z" fill="#0F766E" stroke="#10212B" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="210" y="250" width="330" height="180" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/>
+  <path d="M250 290 H500 M250 330 H470 M250 370 H510" fill="none" stroke="#7A4D24" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+  <circle cx="300" cy="340" r="22" fill="#FFFFFF" stroke="#10212B" stroke-width="2"/>
+  <path d="M272 340 H328 M300 312 V368" fill="none" stroke="#10212B" stroke-width="2" stroke-linecap="round"/>
+  <path d="M640 340 L572 340" fill="none" stroke="#0F766E" stroke-width="4" stroke-linecap="butt"/><path d="M560 340 L576 331 L576 349 Z" fill="#0F766E"/>
+  <path d="M375 150 L375 213" fill="none" stroke="#0F766E" stroke-width="4" stroke-linecap="butt"/><path d="M375 225 L366 209 L384 209 Z" fill="#0F766E"/>
+</svg>

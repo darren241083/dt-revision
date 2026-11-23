@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A sheet of plywood with several paper shapes laid out close together on it before any are cut, so they fit on the board with little left over">
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="60" y="90" width="680" height="420" rx="4" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/>
+  <path d="M90 140 H710 M90 240 H700 M90 340 H710 M90 450 H690" fill="none" stroke="#7A4D24" stroke-width="2" opacity=".3"/>
+  <g fill="#FFFFFF" stroke="#10212B" stroke-width="3" stroke-linejoin="round">
+    <rect x="90" y="120" width="200" height="140" rx="6"/>
+    <rect x="90" y="280" width="200" height="200" rx="6"/>
+    <circle cx="380" cy="190" r="72"/>
+    <circle cx="380" cy="360" r="72"/>
+    <path d="M470 120 H700 V215 L470 250 Z"/>
+    <path d="M470 272 L700 237 V480 H470 Z"/>
+  </g>
+</svg>

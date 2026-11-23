@@ -32,7 +32,7 @@
         { "id": "g18-polymers-processes-finishes", "code": "G18", "title": "Polymers: processes and finishes", "spec": ["3.2.8", "3.2.9"], "section": "B", "pages": "79–82", "built": false },
         { "id": "g19-shaping-timbers-polymers", "code": "G19", "title": "Shaping timbers and polymers", "spec": ["3.2.5", "3.2.8"], "section": "B", "pages": "83–86", "built": true },
         { "id": "g20-scales-of-production", "code": "G20", "title": "Scales of production", "spec": ["3.2.7"], "section": "B", "pages": "104–105", "built": true },
-        { "id": "g21-specialist-techniques-processes", "code": "G21", "title": "Specialist techniques and processes", "spec": ["3.2.8"], "section": "B", "pages": "106", "built": false },
+        { "id": "g21-specialist-techniques-processes", "code": "G21", "title": "Specialist techniques and processes", "spec": ["3.2.8"], "section": "B", "pages": "106", "built": true },
         { "id": "g22-investigation-primary-secondary-data", "code": "G22", "title": "Investigation, primary and secondary data", "spec": ["3.3.1"], "section": "C", "pages": "110–111", "built": false },
         { "id": "g23-ergonomics", "code": "G23", "title": "Ergonomics", "spec": ["3.3.2"], "section": "C", "pages": "112–113", "built": false },
         { "id": "g24-designing-manufacturing-challenges", "code": "G24", "title": "Designing, manufacturing and challenges", "spec": ["3.3.2"], "section": "C", "pages": "114–116", "built": false },

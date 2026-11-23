@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A curved shaped template laid on a timber board, with a pencil drawing around its edge and two outlines of the same shape already marked on the board beside it">
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect x="60" y="120" width="680" height="380" rx="4" fill="#F3E8DC" stroke="#7A4D24" stroke-width="2"/>
+  <path d="M90 170 H710 M90 260 H700 M90 360 H710 M90 450 H690" fill="none" stroke="#7A4D24" stroke-width="2" opacity=".3"/>
+  <path d="M100 440 V250 Q100 180 170 180 Q240 180 240 250 V440 Z" fill="none" stroke="#10212B" stroke-width="3" stroke-dasharray="10 7"/>
+  <path d="M280 440 V250 Q280 180 350 180 Q420 180 420 250 V440 Z" fill="none" stroke="#10212B" stroke-width="3" stroke-dasharray="10 7"/>
+  <path d="M470 440 V250 Q470 180 540 180 Q610 180 610 250 V440 Z" fill="#0F766E" stroke="#10212B" stroke-width="2"/>
+  <circle cx="540" cy="250" r="14" fill="#F3E8DC" stroke="#10212B" stroke-width="2"/>
+  <path d="M610 330 L700 210" fill="none" stroke="#10212B" stroke-width="18" stroke-linecap="round"/>
+  <path d="M610 330 L700 210" fill="none" stroke="#E8EEF0" stroke-width="12" stroke-linecap="round"/>
+  <path d="M606 336 L615 322 L603 324 Z" fill="#10212B"/>
+</svg>
