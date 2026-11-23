@@ -12,7 +12,10 @@
     "title": "ClearRevise AQA GCSE D&T 8552",
     "pages": "106"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/gcse/g21-specialist-techniques-processes.m4a",
+    "length": 327
+  },
   "needs": [
     "Say what a production aid is and give examples.",
     "Describe how jigs, templates and paper patterns help accuracy.",
