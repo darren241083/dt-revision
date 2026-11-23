@@ -12,7 +12,10 @@
     "title": "My Revision Notes: AQA A Level Design and Technology: Product Design",
     "pages": "136–138"
   },
-  "audio": null,
+  "audio": {
+    "file": "assets/audio/alevel/b08b-modelling-planning-evaluation.m4a",
+    "length": 366
+  },
   "needs": [
     "Describe how models, CAD and flow charts are used to develop and communicate designs.",
     "Explain how manufacture is planned, including critical path analysis and a quality control feedback loop.",
