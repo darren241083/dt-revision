@@ -374,7 +374,12 @@
           "term": "Scaling sizes",
           "ask": "Why is measuring from the X- and Y-axes useful if a design needs to be bigger or smaller?",
           "tags": [],
-          "text": "Measuring from the datum lets sizes be scaled up or down accurately."
+          "text": "Measuring from the datum lets sizes be scaled up or down accurately.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/scaling-sizes.webp",
+            "alt": "Scaling sizes",
+            "credit": "--"
+          }
         }
       ],
       "check": [
