@@ -569,7 +569,12 @@
           "term": "SCAMPER",
           "ask": "How could you rethink an existing design, one prompt at a time?",
           "tags": [],
-          "text": "Substitute, combine, adapt, modify, put to another use, eliminate, reverse: new ideas from existing designs."
+          "text": "Substitute, combine, adapt, modify, put to another use, eliminate, reverse: new ideas from existing designs.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/scamper.webp",
+            "alt": "SCAMPER",
+            "credit": "--"
+          }
         },
         {
           "term": "Collaborative team designing",
