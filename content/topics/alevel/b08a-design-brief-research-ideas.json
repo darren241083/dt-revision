@@ -378,7 +378,12 @@
           "term": "Trends and influences",
           "ask": "Why look at what's fashionable now, and what was popular in the past?",
           "tags": [],
-          "text": "Investigate historical and current style influences, fashions and trends."
+          "text": "Investigate historical and current style influences, fashions and trends.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/trends-and-influences.webp",
+            "alt": "Chairs from different eras displayed in a row in a museum gallery.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Design constraints",
