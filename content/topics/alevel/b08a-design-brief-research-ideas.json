@@ -247,7 +247,12 @@
           "term": "Primary research",
           "ask": "How could you find out what's good and bad about products already on sale?",
           "tags": [],
-          "text": "Analysing existing products' strengths, weaknesses and areas to improve."
+          "text": "Analysing existing products' strengths, weaknesses and areas to improve.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/primary-research.webp",
+            "alt": "Primary research",
+            "credit": "--"
+          }
         },
         {
           "term": "Using the product",
