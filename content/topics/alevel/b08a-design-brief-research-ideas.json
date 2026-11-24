@@ -100,7 +100,12 @@
           "term": "Design process",
           "ask": "How might a designer organise the work from a problem to a finished prototype?",
           "tags": [],
-          "text": "An organised way of designing and making a prototype of a product."
+          "text": "An organised way of designing and making a prototype of a product.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/design-process.webp",
+            "alt": "Design process",
+            "credit": "--"
+          }
         },
         {
           "term": "Cyclic (iterative) process",
