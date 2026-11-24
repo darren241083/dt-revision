@@ -293,7 +293,12 @@
           "ask": "How could you get views on a product from people other than yourself?",
           "tags": [],
           "text": "Seek objective views on the product from other people.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/focus-groups-and-questionnaires.webp",
+            "alt": "A small group around a workshop table with paper questionnaires and wooden product models.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Ergonomics and needs",
