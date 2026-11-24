@@ -207,8 +207,7 @@
           "image": {
             "file": "assets/img/gcse/g21-specialist-techniques-processes/paper-pattern.svg",
             "alt": "A paper pattern with a curved outline stuck onto a sheet of plywood, ready to be cut out",
-            "credit": "DT",
-            "unchecked": true
+            "credit": "DT"
           }
         },
         {
@@ -221,8 +220,7 @@
           "image": {
             "file": "assets/img/gcse/g21-specialist-techniques-processes/laying-out-shapes.svg",
             "alt": "Paper shapes of rectangles, circles and wedges laid out close together on a plywood sheet before cutting",
-            "credit": "DT",
-            "unchecked": true
+            "credit": "DT"
           },
           "imageOnReveal": true
         }
