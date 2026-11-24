@@ -281,7 +281,12 @@
           "term": "Comparing products",
           "ask": "How can you tell whether a product is better or worse than its rivals?",
           "tags": [],
-          "text": "Compare its function, components, materials and manufacture with equivalent products."
+          "text": "Compare its function, components, materials and manufacture with equivalent products.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/comparing-products.webp",
+            "alt": "Five electric kettles of different designs lined up on a workshop bench.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Focus groups and questionnaires",
