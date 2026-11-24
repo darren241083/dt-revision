@@ -111,7 +111,12 @@
           "term": "Cyclic (iterative) process",
           "ask": "Why might a designer go round the same stages more than once?",
           "tags": [],
-          "text": "Usually cyclic, not linear, because ongoing improvement matters to commercial success."
+          "text": "Usually cyclic, not linear, because ongoing improvement matters to commercial success.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/cyclic-iterative-process.webp",
+            "alt": "Cyclic (iterative) process",
+            "credit": "--"
+          }
         },
         {
           "term": "Not a fixed recipe",
