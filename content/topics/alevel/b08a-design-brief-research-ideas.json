@@ -580,7 +580,12 @@
           "term": "Collaborative team designing",
           "ask": "Why might a team come up with a better product than one designer alone?",
           "tags": [],
-          "text": "Uses specialist expertise and often gives better products than a single designer."
+          "text": "Uses specialist expertise and often gives better products than a single designer.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/collaborative-team-designing.webp",
+            "alt": "A design team at a workshop table with sketches, a laptop and blue prototype parts.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Meetings and video conferencing",
