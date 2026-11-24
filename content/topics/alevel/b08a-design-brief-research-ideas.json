@@ -503,7 +503,12 @@
           "term": "Essential and desirable",
           "ask": "Are all of a product's requirements equally important?",
           "tags": [],
-          "text": "Lists essential requirements, as well as desirable features."
+          "text": "Lists essential requirements, as well as desirable features.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/essential-and-desirable.webp",
+            "alt": "Essential and desirable",
+            "credit": "--"
+          }
         },
         {
           "term": "Set by the client",
