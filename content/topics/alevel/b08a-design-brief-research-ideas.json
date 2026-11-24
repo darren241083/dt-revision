@@ -258,7 +258,12 @@
           "term": "Using the product",
           "ask": "What's the quickest way to find out how well a product does its job?",
           "tags": [],
-          "text": "Use it for its intended task to get first-hand knowledge."
+          "text": "Use it for its intended task to get first-hand knowledge.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/using-the-product.webp",
+            "alt": "Using the product",
+            "credit": "--"
+          }
         },
         {
           "term": "Taking it apart",
