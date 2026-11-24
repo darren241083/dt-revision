@@ -167,7 +167,12 @@
           "term": "Design brief",
           "ask": "Before designing anything, what would you need to know about who it's for?",
           "tags": [],
-          "text": "Outlines the needs and wants of a specific user or target market."
+          "text": "Outlines the needs and wants of a specific user or target market.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/design-brief.webp",
+            "alt": "A designer and a client at a workshop table, going over printed sheets for a new project.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "The problem",
