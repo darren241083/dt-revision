@@ -181,7 +181,12 @@
           "term": "Accurate and consistent",
           "ask": "How does a template help when you need lots of identical parts?",
           "tags": [],
-          "text": "Makes each item accurately and lets it be copied to a consistent quality."
+          "text": "Makes each item accurately and lets it be copied to a consistent quality.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/accurate-and-consistent.webp",
+            "alt": "A tall stack of identical curved plywood parts on a workbench, with a matching part beside it",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Durable material",
