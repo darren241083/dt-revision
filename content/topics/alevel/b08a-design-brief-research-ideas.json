@@ -616,13 +616,23 @@
           "ask": "How could a group make sure an idea is looked at from every point of view?",
           "tags": [],
           "text": "Six coloured hats worn in turn, each a different viewpoint; Edward de Bono's technique.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/thinking-hats.webp",
+            "alt": "Six hats in a row on a workbench: blue, white, red, yellow, green and black.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Developing through discussion",
           "ask": "How could feedback from real people shape your early ideas?",
           "tags": [],
-          "text": "Discuss designs with the client or target market; use their feedback to modify them."
+          "text": "Discuss designs with the client or target market; use their feedback to modify them.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/developing-through-discussion.webp",
+            "alt": "A designer showing a client folded card models on a workbench.",
+            "credit": "AI-generated image"
+          }
         }
       ],
       "check": [
