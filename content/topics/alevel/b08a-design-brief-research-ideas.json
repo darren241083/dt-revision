@@ -486,7 +486,12 @@
           "term": "Design specification",
           "ask": "How will you know at the end whether your design is a success?",
           "tags": [],
-          "text": "The key criteria to address when designing; the design is judged against them."
+          "text": "The key criteria to address when designing; the design is judged against them.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/design-specification.webp",
+            "alt": "Design specification",
+            "credit": "--"
+          }
         },
         {
           "term": "After research",
