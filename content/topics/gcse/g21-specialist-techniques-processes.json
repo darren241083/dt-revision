@@ -116,7 +116,12 @@
           "term": "Accuracy and efficiency",
           "ask": "What two things get better when you use a jig?",
           "tags": [],
-          "text": "A jig makes work more accurate and more efficient."
+          "text": "A jig makes work more accurate and more efficient.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/accuracy-and-efficiency.webp",
+            "alt": "Accuracy and efficiency",
+            "credit": "AI"
+          }
         },
         {
           "term": "Securing the work",
