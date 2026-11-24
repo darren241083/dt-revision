@@ -438,7 +438,12 @@
           "term": "Shapes and spatial relationships",
           "ask": "What does drawing something to scale help people understand about a design?",
           "tags": [],
-          "text": "Gives a clear understanding of the proposed shapes and how they relate in space."
+          "text": "Gives a clear understanding of the proposed shapes and how they relate in space.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/shapes-and-spatial-relationships.webp",
+            "alt": "Shapes and spatial relationships",
+            "credit": "--"
+          }
         }
       ],
       "check": [
