@@ -178,7 +178,12 @@
           "term": "The problem",
           "ask": "What should a brief describe first?",
           "tags": [],
-          "text": "A description of the problem or need: the situation to be solved."
+          "text": "A description of the problem or need: the situation to be solved.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/the-problem.webp",
+            "alt": "The problem",
+            "credit": "--"
+          }
         },
         {
           "term": "Context",
