@@ -315,7 +315,12 @@
           "term": "Aesthetics and cost",
           "ask": "What else would a customer judge before buying?",
           "tags": [],
-          "text": "Assess how the product looks and what it costs."
+          "text": "Assess how the product looks and what it costs.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/aesthetics-and-cost.webp",
+            "alt": "Aesthetics and cost",
+            "credit": "--"
+          }
         }
       ],
       "check": [
