@@ -328,7 +328,12 @@
           "term": "Datum reference point",
           "ask": "Where should you measure from to keep every size on a part accurate?",
           "tags": [],
-          "text": "The point from which all measurements are taken."
+          "text": "The point from which all measurements are taken.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/datum-reference-point.webp",
+            "alt": "Datum reference point",
+            "credit": "--"
+          }
         },
         {
           "term": "Where the datum is",
