@@ -189,7 +189,12 @@
           "term": "Context",
           "ask": "How could a brief help a designer picture the situation?",
           "tags": [],
-          "text": "Images and details of the context, situation or problem."
+          "text": "Images and details of the context, situation or problem.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/context.webp",
+            "alt": "Context",
+            "credit": "--"
+          }
         },
         {
           "term": "Existing products",
