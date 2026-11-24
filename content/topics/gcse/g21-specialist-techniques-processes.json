@@ -427,7 +427,12 @@
           "term": "Scale on the drawing",
           "ask": "How would someone reading a drawing know how much it has been enlarged or reduced?",
           "tags": [],
-          "text": "The scale factor is shown on the drawing, for example 1:5."
+          "text": "The scale factor is shown on the drawing, for example 1:5.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/scale-on-the-drawing.webp",
+            "alt": "Scale on the drawing",
+            "credit": "--"
+          }
         },
         {
           "term": "Shapes and spatial relationships",
