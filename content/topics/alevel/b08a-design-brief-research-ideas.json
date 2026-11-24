@@ -122,7 +122,12 @@
           "term": "Not a fixed recipe",
           "ask": "Does every project need the same amount of research, modelling and testing?",
           "tags": [],
-          "text": "Gives structure, but the depth of each stage varies by project."
+          "text": "Gives structure, but the depth of each stage varies by project.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/not-a-fixed-recipe.webp",
+            "alt": "Not a fixed recipe",
+            "credit": "--"
+          }
         },
         {
           "term": "The design cycle",
