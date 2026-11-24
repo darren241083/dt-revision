@@ -1,0 +1,963 @@
+{
+  "id": "a02-classification-of-materials",
+  "level": "alevel",
+  "title": "Classification of materials",
+  "titleMark": "Classification",
+  "spec": [
+    "3.1.1"
+  ],
+  "section": "1",
+  "materials": [],
+  "book": {
+    "title": "My Revision Notes: AQA A Level Design and Technology: Product Design",
+    "pages": "3–5"
+  },
+  "audio": null,
+  "needs": [
+    "Name the seven classifications of materials.",
+    "Define each classification and its sub-classifications.",
+    "Name specific materials in each classification.",
+    "Explain why thermoplastics can be recycled and thermosets can't.",
+    "Explain why modern materials are not smart materials."
+  ],
+  "doNow": [
+    {
+      "q": "Name the seven classifications of materials.",
+      "a": "Metals, woods, polymers, papers and boards, composites, smart materials, modern materials.",
+      "from": "Pre-read p3"
+    },
+    {
+      "q": "Which kind of polymer springs back after being squashed?",
+      "a": "An elastomer.",
+      "from": "Pre-read p4"
+    },
+    {
+      "q": "What is the difference between hardness and toughness?",
+      "a": "Hardness resists scratching and indentation; toughness absorbs an impact without fracturing.",
+      "from": "3.1.1"
+    },
+    {
+      "q": "What does an electrical insulator do?",
+      "a": "It does not let electricity flow through it.",
+      "from": "3.1.1"
+    }
+  ],
+  "starter": {
+    "clues": [
+      "I'm a polymer.",
+      "When I'm heated, a chemical change locks my molecules together with rigid cross links.",
+      "Once I've set, no amount of heat will let you reshape me."
+    ],
+    "answer": "Thermosetting polymer",
+    "options": [
+      "Thermosetting polymer",
+      "Thermoplastic",
+      "Elastomer",
+      "Composite"
+    ]
+  },
+  "bigPicture": {
+    "question": "How do designers sort materials, and why does it matter?",
+    "lenses": [
+      {
+        "icon": "layers",
+        "text": "The seven classifications"
+      },
+      {
+        "icon": "flow",
+        "text": "Sub-classifications"
+      },
+      {
+        "icon": "book",
+        "text": "What each one means"
+      },
+      {
+        "icon": "box",
+        "text": "Materials to name"
+      },
+      {
+        "icon": "cog",
+        "text": "Inside polymers"
+      },
+      {
+        "icon": "check",
+        "text": "Choosing the right one"
+      }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "classes",
+      "label": "Seven classifications",
+      "icon": "layers",
+      "pages": "3",
+      "summary": "Every product design material sits in one of seven groups.",
+      "items": [
+        {
+          "term": "Material classifications",
+          "ask": "If you sorted every material in the workshop into groups, what groups would you use?",
+          "tags": [],
+          "text": "Metals, woods, polymers, papers and boards, composites, smart and modern materials."
+        },
+        {
+          "term": "Sub-classifications",
+          "ask": "Is 'wood' just one group, or could you split it up further?",
+          "tags": [],
+          "text": "Metals, woods and polymers split again, as wood splits into hardwood, softwood and manufactured board."
+        },
+        {
+          "term": "Why classify?",
+          "ask": "Why does a designer need to know which group a material belongs to?",
+          "tags": [],
+          "text": "So the most suitable material can be chosen for each application."
+        },
+        {
+          "term": "Specific names",
+          "ask": "In an exam answer, why might writing just 'metal' cost you marks?",
+          "tags": [],
+          "text": "Always name the exact material (low carbon steel), never just 'metal'."
+        }
+      ],
+      "check": [
+        {
+          "q": "Which three classifications split into sub-classifications?",
+          "a": "Metals, woods and polymers."
+        },
+        {
+          "q": "Why should an exam answer say 'low carbon steel' rather than 'metal'?",
+          "a": "Material questions need the specific material named, not just its classification."
+        }
+      ]
+    },
+    {
+      "id": "metals",
+      "label": "Metals",
+      "icon": "metal",
+      "pages": "3",
+      "summary": "Ferrous, non-ferrous and alloys.",
+      "items": [
+        {
+          "term": "Ferrous metal",
+          "ask": "A magnet sticks to some metals but not others. What might those metals have in common?",
+          "tags": [],
+          "text": "Mostly iron and carbon; magnetic and will rust. E.g. low and medium carbon steel, cast iron.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/ferrous-metal.webp",
+            "alt": "Two rusty steel bars looped together, lying on gravel.",
+            "credit": "Public Domain Photos · CC BY 2.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Non-ferrous metal",
+          "ask": "Why does a copper pipe never go rusty?",
+          "tags": [],
+          "text": "Contains no iron; not magnetic and won't rust. E.g. aluminium, copper, zinc, silver, gold, titanium, tin.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/non-ferrous-metal.webp",
+            "alt": "Copper pipes running along a wall just below a wooden ceiling.",
+            "credit": "Santeri Viinamäki · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Alloy",
+          "ask": "Brass isn't dug out of the ground. How do you think it's made?",
+          "tags": [],
+          "text": "Two or more metals mixed, or elements combined where at least one is a metal."
+        },
+        {
+          "term": "Ferrous alloy",
+          "ask": "Stainless steel is an alloy that contains iron. Which kind of alloy does that make it?",
+          "tags": [],
+          "text": "An alloy that contains iron, like stainless steel or die steel (tool steel).",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/ferrous-alloy.webp",
+            "alt": "A set of polished stainless steel cutlery: a knife, two forks and two spoons.",
+            "credit": "Unknown · CC0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Non-ferrous alloy",
+          "ask": "What would you call an alloy made without any iron, and can you name one?",
+          "tags": [],
+          "text": "An alloy with no iron, like bronze, brass, duralumin or pewter.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/non-ferrous-alloy.webp",
+            "alt": "A polished pewter tankard with a handle.",
+            "credit": "geni · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        }
+      ],
+      "check": [
+        {
+          "q": "Give two ways ferrous metals differ from non-ferrous metals.",
+          "a": "Ferrous metals contain iron (mostly iron and carbon), are magnetic and will rust; non-ferrous metals contain no iron, aren't magnetic and don't rust."
+        },
+        {
+          "q": "Name one ferrous alloy and one non-ferrous alloy.",
+          "a": "Ferrous: stainless steel or die steel (tool steel). Non-ferrous: bronze, brass, duralumin or pewter."
+        }
+      ]
+    },
+    {
+      "id": "woods",
+      "label": "Woods",
+      "icon": "tree",
+      "pages": "4",
+      "summary": "Hardwoods, softwoods and manufactured boards.",
+      "items": [
+        {
+          "term": "Hardwood",
+          "ask": "Think of a big leafy tree that goes bare every winter. What can you say about its timber?",
+          "tags": [],
+          "text": "From broad-leafed (deciduous) trees, generally slow growing. E.g. oak, ash, mahogany, teak, birch, beech."
+        },
+        {
+          "term": "Softwood",
+          "ask": "Christmas trees grow quickly and keep their needles all year. What kind of timber do they give?",
+          "tags": [],
+          "text": "From coniferous (cone-bearing) trees, generally fast growing and evergreen. E.g. pine, spruce, Douglas fir, redwood, cedar, larch.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/softwood.webp",
+            "alt": "Stacks of felled logs beside a forest track lined with conifers.",
+            "credit": "Bob Peace · CC BY-SA 2.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Manufactured board",
+          "ask": "A tree trunk is only so wide. How could you get a wooden sheet bigger than any plank?",
+          "tags": [],
+          "text": "A man-made, wood-based composite, made in much larger sizes than solid wood. E.g. plywood, chipboard, MDF."
+        }
+      ],
+      "check": [
+        {
+          "q": "What kind of tree does a softwood come from?",
+          "a": "A coniferous (cone-bearing) tree, usually evergreen and fast growing."
+        },
+        {
+          "q": "Why can a manufactured board be used where solid wood is too small?",
+          "a": "Manufactured boards are made in much larger sizes than solid wood."
+        }
+      ]
+    },
+    {
+      "id": "polymers",
+      "label": "Polymers",
+      "icon": "atom",
+      "pages": "4–5",
+      "summary": "Thermoplastics, thermosetting polymers and elastomers.",
+      "items": [
+        {
+          "term": "Thermoplastic",
+          "ask": "Why can an old plastic bottle be melted down and made into something new?",
+          "tags": [],
+          "text": "Can be reheated and reshaped again and again, so it can be recycled. E.g. LDPE, HDPE, PP, HIPS, ABS, PMMA, PET, nylon, PVC.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/thermoplastic.webp",
+            "alt": "A wire cage packed with used plastic drinks bottles.",
+            "credit": "Radulf del Maresme · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Thermosetting polymer",
+          "ask": "Why can't a melamine plate be melted down and moulded into something new?",
+          "tags": [],
+          "text": "A chemical change on heating forms rigid cross links, so it can't be reshaped. E.g. UF, MF, polyester and epoxy resin.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/thermosetting-polymer.webp",
+            "alt": "A white melamine dinner plate with a floral border.",
+            "credit": "Rezowan · CC BY-SA 3.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Elastomer",
+          "ask": "What lets a squashed rubber ball spring straight back into shape?",
+          "tags": [],
+          "text": "Deforms under pressure at room temperature, then returns to its shape when released. E.g. natural rubber, polybutadiene, neoprene, silicone.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/elastomer.webp",
+            "alt": "A pile of brightly coloured rubber bouncy balls.",
+            "credit": "frankieleon · CC BY 2.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Molecular structure",
+          "ask": "What could be going on inside a polymer that lets it soften, set hard or stretch?",
+          "tags": [],
+          "text": "Thermoplastics have long linear chains held by van der Waals forces; elastomers have weak bonds, so they stretch.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/molecular-structure.svg",
+            "alt": "Three panels of polymer molecules labelled Thermoplastic, Thermosetting and Elastomer: separate chains, chains joined by cross links, and coiled chains.",
+            "credit": "DT",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Recyclability",
+          "ask": "A product is meant to go in the recycling bin. Which kind of polymer should you never suggest?",
+          "tags": [],
+          "text": "Thermosetting polymers can't be recycled, so never choose one for a product that will be.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/recyclability.webp",
+            "alt": "A blue recycling wheelie bin next to a black bin on grass.",
+            "credit": "SAF1999 · CC0",
+            "unchecked": true
+          }
+        }
+      ],
+      "check": [
+        {
+          "q": "Why can a thermoplastic be recycled after its first use?",
+          "a": "It can be reheated and reshaped again and again."
+        },
+        {
+          "q": "What happens to a thermosetting polymer's molecules when it is heated?",
+          "a": "A chemical change makes them form rigid cross links, so it can't be reheated and reshaped."
+        }
+      ]
+    },
+    {
+      "id": "papers",
+      "label": "Papers and boards",
+      "icon": "file",
+      "pages": "4",
+      "summary": "Compliant materials, from layout paper to moulded pulp.",
+      "items": [
+        {
+          "term": "Compliant material",
+          "ask": "Why is card so easy to turn into a box with just a knife, a ruler and some folds?",
+          "tags": [],
+          "text": "Can be scored, folded and cut with basic tools to make items such as packaging nets.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/compliant-material.webp",
+            "alt": "An open, empty cardboard box standing on a wooden floor.",
+            "credit": "Creativity103 · CC BY 2.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Papers",
+          "ask": "How many different kinds of paper could you find in a designer's studio?",
+          "tags": [],
+          "text": "Layout, cartridge, tracing, bleed proof, treated and watercolour paper."
+        },
+        {
+          "term": "Boards",
+          "ask": "Packaging isn't all made from the same card. Which kinds of board can you think of?",
+          "tags": [],
+          "text": "Corrugated, bleached, duplex, foil-backed, laminated and metal effect card; mount board; moulded paper pulp.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/boards.webp",
+            "alt": "A chair made from layers of corrugated cardboard, shown on a red display plinth.",
+            "credit": "Daderot · CC0",
+            "unchecked": true
+          }
+        }
+      ],
+      "check": [
+        {
+          "q": "What does 'compliant' mean for papers and boards?",
+          "a": "They can be scored, folded and cut with basic tools, for example into nets for packaging."
+        },
+        {
+          "q": "Name three types of paper.",
+          "a": "Any three: layout, cartridge, tracing, bleed proof, treated, watercolour."
+        }
+      ]
+    },
+    {
+      "id": "composites",
+      "label": "Composites",
+      "icon": "layers",
+      "pages": "5",
+      "summary": "Two or more materials combined for better properties.",
+      "items": [
+        {
+          "term": "Composite",
+          "ask": "Why might combining two different materials give you something better than either one alone?",
+          "tags": [],
+          "text": "Two or more different materials combined, giving a material with enhanced properties.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/composite.webp",
+            "alt": "A cut-away drawing of a composite sheet, showing layers of fibres set inside the material.",
+            "credit": "PerOX · Public Domain",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Fibre based",
+          "ask": "What could you set inside a plastic or cement to make it stronger?",
+          "tags": [],
+          "text": "Fibres set in another material, like CFRP, GRP or fibre cement.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/fibre-based.webp",
+            "alt": "Close-up of dark woven carbon fibre fabric.",
+            "credit": "Acheolg · CC BY-SA 4.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Particle based",
+          "ask": "What would you get if tiny hard particles were held together inside another material?",
+          "tags": [],
+          "text": "Particles held together in another material, like tungsten carbide or concrete.",
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/particle-based.svg",
+            "alt": "A block of grey material packed with many small teal particles of different sizes.",
+            "credit": "DT",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Sheet based",
+          "ask": "How could thin layers be bonded together to make one strong material?",
+          "tags": [],
+          "text": "Layers bonded together, like aluminium composite board or glulam (engineered wood).",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/sheet-based.svg",
+            "alt": "The end of a laminated timber beam showing eight bonded layers, beside a panel with two thin metal skins on a thicker core.",
+            "credit": "DT",
+            "unchecked": true
+          }
+        }
+      ],
+      "check": [
+        {
+          "q": "What is a composite?",
+          "a": "Two or more different materials combined, giving a material with enhanced properties."
+        },
+        {
+          "q": "Name the three types of composite.",
+          "a": "Fibre based, particle based and sheet based."
+        }
+      ]
+    },
+    {
+      "id": "smartmodern",
+      "label": "Smart and modern",
+      "icon": "bolt",
+      "pages": "5",
+      "summary": "Materials that react to change, and new materials that don't.",
+      "items": [
+        {
+          "term": "Smart material",
+          "ask": "A mug changes colour when hot tea goes in. What kind of material is doing that?",
+          "tags": [],
+          "text": "Its physical properties change in response to an input like electricity, pressure, temperature or light.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/smart-material.webp",
+            "alt": "Coffee poured into a black mug beside a white mug whose face appears when it is hot.",
+            "credit": "damianosullivan · CC BY-SA 3.0",
+            "unchecked": true
+          }
+        },
+        {
+          "term": "Smart examples",
+          "ask": "Which materials can you think of that change when they're heated, lit or pressed?",
+          "tags": [],
+          "text": "Shape memory alloys (SMA), thermochromic pigment and film, phosphorescent and photochromic pigments, electroluminescent wire, piezo electric material.",
+          "imageOnReveal": true
+        },
+        {
+          "term": "Modern material",
+          "ask": "If a material isn't found in nature, how might it come about?",
+          "tags": [],
+          "text": "Developed through new or improved processes, for example by human intervention."
+        },
+        {
+          "term": "Not smart",
+          "ask": "A material is new and high-tech. Does that make it smart?",
+          "tags": [],
+          "text": "Modern materials don't react to external change, so they are not smart materials."
+        },
+        {
+          "term": "Modern examples",
+          "ask": "Which materials can you name that people have invented, rather than found?",
+          "tags": [],
+          "text": "Precious metal clay (PMC), Kevlar, high density modelling foam, polymorph.",
+          "imageOnReveal": true
+        }
+      ],
+      "check": [
+        {
+          "q": "What makes a material 'smart'?",
+          "a": "Its physical properties change in response to an input or a change in its environment, such as electricity, pressure, temperature or light."
+        },
+        {
+          "q": "Why is Kevlar a modern material, not a smart one?",
+          "a": "It was developed through new processes, but it doesn't react to external change."
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Ferrous metal",
+      "def": "A metal made mostly of iron and carbon; magnetic and will rust."
+    },
+    {
+      "term": "Non-ferrous metal",
+      "def": "A metal that contains no iron; not magnetic and won't rust."
+    },
+    {
+      "term": "Alloy",
+      "def": "Two or more metals, or elements combined where at least one is a metal."
+    },
+    {
+      "term": "Hardwood",
+      "def": "Wood from a broad-leafed (deciduous) tree."
+    },
+    {
+      "term": "Softwood",
+      "def": "Wood from a coniferous (cone-bearing) tree."
+    },
+    {
+      "term": "Manufactured board",
+      "def": "A man-made, wood-based composite sheet."
+    },
+    {
+      "term": "Thermoplastic",
+      "def": "A polymer that can be reheated and reshaped again and again."
+    },
+    {
+      "term": "Thermosetting polymer",
+      "def": "A polymer that forms rigid cross links when heated and can't be reshaped."
+    },
+    {
+      "term": "Elastomer",
+      "def": "A polymer that deforms under pressure and returns to shape when released."
+    },
+    {
+      "term": "Van der Waals forces",
+      "def": "What holds a thermoplastic's long linear chain molecules together."
+    },
+    {
+      "term": "Compliant material",
+      "def": "Can be scored, folded and cut with basic tools."
+    },
+    {
+      "term": "Composite",
+      "def": "Two or more different materials combined for enhanced properties."
+    },
+    {
+      "term": "Smart material",
+      "def": "Its physical properties change in response to an input or the environment."
+    },
+    {
+      "term": "Modern material",
+      "def": "Developed through new or improved processes; doesn't react to change."
+    }
+  ],
+  "apply": [
+    {
+      "q": "A kitchen notice board must hold fridge magnets.",
+      "tools": [
+        "Low carbon steel",
+        "Aluminium",
+        "Copper",
+        "Titanium"
+      ],
+      "tool": 0,
+      "reasons": [
+        "It is a ferrous metal, mostly iron and carbon, so it is magnetic",
+        "It contains no iron, so it will never rust",
+        "It is an alloy of two or more metals",
+        "It is a smart material that reacts to its environment"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "The seal inside a water bottle lid must squash when the lid is screwed on, then spring back when it's opened.",
+      "tools": [
+        "Silicone",
+        "Epoxy resin",
+        "PMMA (acrylic)",
+        "MDF"
+      ],
+      "tool": 0,
+      "reasons": [
+        "An elastomer deforms under pressure and returns to its shape when released",
+        "A thermosetting polymer forms rigid cross links when heated",
+        "A thermoplastic can be reheated and reshaped again and again",
+        "A manufactured board comes in much larger sizes than solid wood"
+      ],
+      "reason": 0
+    },
+    {
+      "q": "A takeaway pizza box is cut from a flat net, scored and folded into shape.",
+      "tools": [
+        "Corrugated card",
+        "Oak",
+        "Aluminium composite board",
+        "Melamine formaldehyde"
+      ],
+      "tool": 0,
+      "reasons": [
+        "A compliant material can be scored, folded and cut with basic tools",
+        "A hardwood comes from a broad-leafed, slow-growing tree",
+        "A sheet-based composite has layers bonded together",
+        "A thermosetting polymer can't be reheated and reshaped"
+      ],
+      "reason": 0
+    }
+  ],
+  "oddOne": {
+    "q": "Which is the odd one out?",
+    "items": [
+      {
+        "n": "Stainless steel",
+        "why": "The only ferrous alloy: the rest contain no iron."
+      },
+      {
+        "n": "Brass",
+        "why": "The only one made mainly of copper and zinc."
+      },
+      {
+        "n": "Pewter",
+        "why": "The only one based on tin."
+      },
+      {
+        "n": "Duralumin",
+        "why": "The only one based on aluminium."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "q": "How many classifications of material are there for product design?",
+      "options": [
+        "Seven",
+        "Five",
+        "Three",
+        "Ten"
+      ],
+      "answer": 0,
+      "why": "Metals, woods, polymers, papers and boards, composites, smart materials and modern materials.",
+      "chunk": "classes"
+    },
+    {
+      "q": "In an exam answer, writing 'metal' is as good as writing 'low carbon steel'.",
+      "tf": false,
+      "why": "Always give the specific material's name, not just its classification.",
+      "chunk": "classes"
+    },
+    {
+      "q": "Which of these is a ferrous metal?",
+      "options": [
+        "Cast iron",
+        "Aluminium",
+        "Copper",
+        "Titanium"
+      ],
+      "answer": 0,
+      "why": "Ferrous metals contain mostly iron and carbon; the others contain no iron.",
+      "chunk": "metals"
+    },
+    {
+      "q": "Non-ferrous metals are magnetic and will rust.",
+      "tf": false,
+      "why": "Non-ferrous metals contain no iron, so they aren't magnetic and don't rust.",
+      "chunk": "metals"
+    },
+    {
+      "q": "Brass is an example of…",
+      "options": [
+        "a non-ferrous alloy",
+        "a ferrous alloy",
+        "a ferrous metal",
+        "a composite"
+      ],
+      "answer": 0,
+      "why": "Brass is an alloy with no iron in it, like bronze, duralumin and pewter.",
+      "chunk": "metals"
+    },
+    {
+      "q": "What must an alloy always contain?",
+      "options": [
+        "At least one metal",
+        "Iron",
+        "Carbon",
+        "A polymer"
+      ],
+      "answer": 0,
+      "why": "An alloy is two or more metals, or elements combined where at least one is a metal.",
+      "chunk": "metals"
+    },
+    {
+      "q": "Cedar is…",
+      "options": [
+        "a softwood",
+        "a hardwood",
+        "a manufactured board",
+        "a composite"
+      ],
+      "answer": 0,
+      "why": "Cedar comes from a coniferous tree, like pine, spruce, Douglas fir, redwood and larch.",
+      "chunk": "woods"
+    },
+    {
+      "q": "Hardwoods come from broad-leafed (deciduous) trees.",
+      "tf": true,
+      "why": "Hardwood trees are broad-leafed, generally slow growing and lose their leaves in autumn.",
+      "chunk": "woods"
+    },
+    {
+      "q": "Which of these is a manufactured board?",
+      "options": [
+        "MDF",
+        "Beech",
+        "Spruce",
+        "Teak"
+      ],
+      "answer": 0,
+      "why": "MDF is a man-made, wood-based composite; the others are solid woods.",
+      "chunk": "woods"
+    },
+    {
+      "q": "Softwood trees are generally slow growing.",
+      "tf": false,
+      "why": "Softwoods are generally fast growing; hardwoods are the slow-growing ones.",
+      "chunk": "woods"
+    },
+    {
+      "q": "Which type of polymer can be reheated and reshaped again and again?",
+      "options": [
+        "Thermoplastic",
+        "Thermosetting polymer",
+        "Composite",
+        "Modern material"
+      ],
+      "answer": 0,
+      "why": "That's why thermoplastics can be recycled after their first use.",
+      "chunk": "polymers"
+    },
+    {
+      "q": "What holds a thermoplastic's long linear chain molecules together?",
+      "options": [
+        "Van der Waals forces",
+        "Rigid cross links",
+        "Iron and carbon",
+        "Glue"
+      ],
+      "answer": 0,
+      "why": "Thermoplastics have long linear chains held by van der Waals forces; thermosets have rigid cross links.",
+      "chunk": "polymers"
+    },
+    {
+      "q": "A thermosetting polymer can be reshaped if it is heated to a very high temperature.",
+      "tf": false,
+      "why": "Its rigid cross links mean it can't be reheated and reshaped, even at very high temperatures.",
+      "chunk": "polymers"
+    },
+    {
+      "q": "Neoprene is an example of…",
+      "options": [
+        "an elastomer",
+        "a thermosetting polymer",
+        "a thermoplastic",
+        "a composite"
+      ],
+      "answer": 0,
+      "why": "Neoprene, like natural rubber, polybutadiene and silicone, deforms under pressure and returns to shape.",
+      "chunk": "polymers"
+    },
+    {
+      "q": "Which of these is a thermosetting polymer?",
+      "options": [
+        "Epoxy resin",
+        "PET",
+        "Nylon",
+        "HDPE"
+      ],
+      "answer": 0,
+      "why": "Epoxy resin is a thermoset, like UF, MF and polyester resin; the others are thermoplastics.",
+      "chunk": "polymers"
+    },
+    {
+      "q": "A thermosetting polymer is a good choice for a product that will be recycled.",
+      "tf": false,
+      "why": "Thermosetting polymers can't be recycled, so they are the wrong choice.",
+      "chunk": "polymers"
+    },
+    {
+      "q": "Why are papers and boards called compliant materials?",
+      "options": [
+        "They can be scored, folded and cut with basic tools",
+        "They are always recycled",
+        "They react to changes in temperature",
+        "They come in larger sizes than solid wood"
+      ],
+      "answer": 0,
+      "why": "Being compliant is what lets them be made into items such as packaging nets.",
+      "chunk": "papers"
+    },
+    {
+      "q": "Duplex card and mount board are classified as papers and boards.",
+      "tf": true,
+      "why": "Both are boards, in the same classification as papers such as layout and cartridge paper.",
+      "chunk": "papers"
+    },
+    {
+      "q": "Glulam is which type of composite?",
+      "options": [
+        "Sheet based",
+        "Fibre based",
+        "Particle based",
+        "Smart"
+      ],
+      "answer": 0,
+      "why": "Glulam is an engineered wood made of layers, like aluminium composite board.",
+      "chunk": "composites"
+    },
+    {
+      "q": "Tungsten carbide is a particle-based composite.",
+      "tf": true,
+      "why": "Tungsten carbide and concrete are both particle based.",
+      "chunk": "composites"
+    },
+    {
+      "q": "What is a composite?",
+      "options": [
+        "Two or more different materials combined for enhanced properties",
+        "A metal containing two or more elements",
+        "A material whose properties change with temperature",
+        "A wood from a broad-leafed tree"
+      ],
+      "answer": 0,
+      "why": "Combining the materials gives properties better than either alone. An alloy is a mix of metals.",
+      "chunk": "composites"
+    },
+    {
+      "q": "Which of these is a smart material?",
+      "options": [
+        "Thermochromic pigment",
+        "Kevlar",
+        "Polymorph",
+        "Precious metal clay"
+      ],
+      "answer": 0,
+      "why": "Thermochromic pigment reacts to temperature; the others are modern materials.",
+      "chunk": "smartmodern"
+    },
+    {
+      "q": "Modern materials react to changes in their environment.",
+      "tf": false,
+      "why": "Modern materials don't react to external change; that's why they aren't smart materials.",
+      "chunk": "smartmodern"
+    },
+    {
+      "q": "Kevlar is…",
+      "options": [
+        "a modern material",
+        "a smart material",
+        "an elastomer",
+        "a ferrous alloy"
+      ],
+      "answer": 0,
+      "why": "Kevlar was developed through new processes, like PMC, modelling foam and polymorph.",
+      "chunk": "smartmodern"
+    }
+  ],
+  "written": [
+    {
+      "type": "explain",
+      "q": "Explain how ferrous metals differ from non-ferrous metals. Name one example of each.",
+      "marks": 4,
+      "points": [
+        "Ferrous metals contain mostly iron and carbon…",
+        "…non-ferrous metals contain no iron.",
+        "Ferrous metals are magnetic and will rust; non-ferrous metals are not magnetic and don't rust.",
+        "Ferrous example: low carbon steel, medium carbon steel or cast iron.",
+        "Non-ferrous example: aluminium, copper, zinc, silver, gold, titanium or tin."
+      ],
+      "model": "Ferrous metals contain mostly iron and carbon, while non-ferrous metals contain no iron. Because of the iron, ferrous metals are magnetic and will rust; non-ferrous metals are not magnetic and don't rust. Low carbon steel is ferrous; aluminium is non-ferrous.",
+      "note": "1 mark per point, up to 4. Both examples are needed for an example mark."
+    },
+    {
+      "type": "define",
+      "q": "Define the term 'composite' and name one example.",
+      "marks": 3,
+      "points": [
+        "Two or more different materials combined…",
+        "…giving a material with enhanced properties.",
+        "Any named composite: CFRP, GRP, fibre cement, tungsten carbide, concrete, aluminium composite board, glulam."
+      ],
+      "model": "A composite is made of two or more different materials combined, resulting in a material with enhanced properties. An example is carbon fibre reinforced plastic (CFRP).",
+      "note": "1 mark per point."
+    },
+    {
+      "type": "compare",
+      "q": "Compare hardwoods and softwoods.",
+      "marks": 4,
+      "points": [
+        "Hardwoods come from broad-leafed (deciduous) trees; softwoods from coniferous (cone-bearing) trees.",
+        "Hardwood trees are generally slow growing; softwood trees are generally fast growing.",
+        "Hardwood trees lose their leaves in autumn; softwood trees tend to be evergreen.",
+        "Examples: hardwood such as oak, ash, mahogany, teak, birch or beech; softwood such as pine, spruce, Douglas fir, redwood, cedar or larch."
+      ],
+      "model": "Hardwoods come from broad-leafed, deciduous trees, whereas softwoods come from coniferous, cone-bearing trees. Hardwood trees are generally slow growing and lose their leaves in autumn, while softwood trees are generally fast growing and tend to be evergreen. Oak is a hardwood; pine is a softwood.",
+      "note": "1 mark per comparison point; each point must cover both woods."
+    },
+    {
+      "type": "explain",
+      "q": "A drinks bottle will be collected and recycled after use. Explain why it should be made from a thermoplastic rather than a thermosetting polymer.",
+      "marks": 4,
+      "points": [
+        "A thermoplastic can be reheated and reshaped again and again…",
+        "…so it can be recycled after its first use.",
+        "Heating a thermosetting polymer causes a chemical change that forms rigid cross links…",
+        "…so it can't be reheated and reshaped, and can't be recycled."
+      ],
+      "model": "A thermoplastic can be reheated and reshaped again and again, so the bottle can be recycled after its first use. When a thermosetting polymer is heated, a chemical change forms rigid cross links between its molecules, so it can't be reheated and reshaped, which means it can't be recycled.",
+      "note": "2 marks for the thermoplastic, 2 for the thermosetting polymer: 1 for what it is, 1 for linking it to recycling."
+    },
+    {
+      "type": "describe",
+      "q": "Describe what is meant by a smart material and a modern material. Name two examples of each.",
+      "marks": 6,
+      "points": [
+        "A smart material's physical properties change in response to an input or a change in its environment…",
+        "…such as electricity, pressure, temperature or light.",
+        "Two smart materials: e.g. shape memory alloy, thermochromic pigment or film, phosphorescent pigment, photochromic pigment, electroluminescent wire, piezo electric material.",
+        "A modern material is developed through the invention of new or improved processes, e.g. by human intervention.",
+        "Modern materials don't react to external change, so they are not smart.",
+        "Two modern materials: e.g. Kevlar, precious metal clay (PMC), high density modelling foam, polymorph."
+      ],
+      "model": "A smart material is one whose physical properties change in response to an input or a change in its environment, such as electricity, pressure, temperature or light. Examples are shape memory alloy and thermochromic pigment. A modern material has been developed through the invention of new or improved processes, for example by human intervention. Modern materials don't react to external change, so they are not smart. Examples are Kevlar and polymorph.",
+      "note": "1 mark per point, up to 6."
+    },
+    {
+      "type": "explain",
+      "q": "Explain one reason why a designer might choose a manufactured board rather than solid wood for a large wardrobe side panel.",
+      "marks": 2,
+      "points": [
+        "Manufactured boards are available in much larger sizes than solid wood…",
+        "…so the large panel can be cut from one sheet."
+      ],
+      "model": "Manufactured boards are available in much larger sizes than solid wood, so the large side panel can be cut from one sheet.",
+      "note": "1 mark for the reason, 1 for linking it to the panel."
+    }
+  ],
+  "related": [
+    {
+      "id": "a01-materials-their-applications",
+      "spec": "3.1.1"
+    },
+    {
+      "id": "a03-investigating-testing-materials",
+      "spec": "3.1.1"
+    }
+  ]
+}
