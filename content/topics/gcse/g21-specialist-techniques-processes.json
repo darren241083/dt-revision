@@ -351,7 +351,12 @@
           "term": "Only from the datum",
           "ask": "What happens to accuracy when every measurement starts from the same point?",
           "tags": [],
-          "text": "Taking measurements only from the datum points makes work more accurate."
+          "text": "Taking measurements only from the datum points makes work more accurate.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/only-from-the-datum.webp",
+            "alt": "Only from the datum",
+            "credit": "--"
+          }
         },
         {
           "term": "Datum in CAM",
