@@ -389,7 +389,12 @@
           "term": "Design constraints",
           "ask": "What limits might a design have to work within?",
           "tags": [],
-          "text": "Identify constraints such as size, environment and method of use."
+          "text": "Identify constraints such as size, environment and method of use.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/design-constraints.webp",
+            "alt": "Design constraints",
+            "credit": "--"
+          }
         },
         {
           "term": "Standards and safety",
