@@ -345,7 +345,12 @@
           "term": "Materials research",
           "ask": "How can a designer be sure a material is right before choosing it?",
           "tags": [],
-          "text": "Materials, construction and finishes are researched so the choices are appropriate."
+          "text": "Materials, construction and finishes are researched so the choices are appropriate.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/materials-research.webp",
+            "alt": "Materials research",
+            "credit": "--"
+          }
         },
         {
           "term": "Technical data",
