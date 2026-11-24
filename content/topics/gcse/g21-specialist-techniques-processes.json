@@ -192,7 +192,12 @@
           "term": "Durable material",
           "ask": "What should a template be made from if it will be used many times?",
           "tags": [],
-          "text": "A template for repeated use should be made of a durable material."
+          "text": "A template for repeated use should be made of a durable material.",
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/durable-material.webp",
+            "alt": "Durable material",
+            "credit": "AI"
+          }
         }
       ],
       "check": [
