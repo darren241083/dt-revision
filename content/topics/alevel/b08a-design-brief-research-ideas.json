@@ -200,7 +200,12 @@
           "term": "Existing products",
           "ask": "Why mention products that are already on sale?",
           "tags": [],
-          "text": "Says where existing products are inadequate or unsuitable."
+          "text": "Says where existing products are inadequate or unsuitable.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/existing-products.webp",
+            "alt": "Existing products",
+            "credit": "--"
+          }
         },
         {
           "term": "Client or user",
