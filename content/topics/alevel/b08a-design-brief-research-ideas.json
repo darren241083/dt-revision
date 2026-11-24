@@ -211,7 +211,12 @@
           "term": "Client or user",
           "ask": "Who else should a brief tell the designer about?",
           "tags": [],
-          "text": "Information about the client or user group."
+          "text": "Information about the client or user group.",
+          "image": {
+            "file": "assets/img/alevel/b08a-design-brief-research-ideas/client-or-user.webp",
+            "alt": "Client or user",
+            "credit": "--"
+          }
         },
         {
           "term": "Product and success",
