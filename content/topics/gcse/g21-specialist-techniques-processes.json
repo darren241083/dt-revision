@@ -93,7 +93,12 @@
           "ask": "What sorts of things could help a workshop make products faster and more accurately?",
           "tags": [],
           "text": "Any device, tool, template, jig or pattern that makes production faster and more accurate.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/gcse/g21-specialist-techniques-processes/production-aid.webp",
+            "alt": "Wooden and metal jigs and templates on a workshop wall, with a pupil drilling at the bench below",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Jig",
