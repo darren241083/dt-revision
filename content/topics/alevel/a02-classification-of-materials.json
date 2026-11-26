@@ -367,7 +367,12 @@
           "term": "Papers",
           "ask": "How many different kinds of paper could you find in a designer's studio?",
           "tags": [],
-          "text": "Layout, cartridge, tracing, bleed proof, treated and watercolour paper."
+          "text": "Layout, cartridge, tracing, bleed proof, treated and watercolour paper.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/papers.webp",
+            "alt": "Different papers laid out on a bench: tracing paper, sketches, watercolour and coloured sheets.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Boards",
