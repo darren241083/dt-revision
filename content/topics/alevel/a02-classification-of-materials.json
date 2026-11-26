@@ -252,7 +252,12 @@
           "term": "Manufactured board",
           "ask": "A tree trunk is only so wide. How could you get a wooden sheet bigger than any plank?",
           "tags": [],
-          "text": "A man-made, wood-based composite, made in much larger sizes than solid wood. E.g. plywood, chipboard, MDF."
+          "text": "A man-made, wood-based composite, made in much larger sizes than solid wood. E.g. plywood, chipboard, MDF.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/manufactured-board.webp",
+            "alt": "A stack of plywood sheets on bearers in a joinery workshop.",
+            "credit": "AI-generated image"
+          }
         }
       ],
       "check": [
