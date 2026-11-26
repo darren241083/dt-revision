@@ -177,7 +177,12 @@
           "term": "Alloy",
           "ask": "Brass isn't dug out of the ground. How do you think it's made?",
           "tags": [],
-          "text": "Two or more metals mixed, or elements combined where at least one is a metal."
+          "text": "Two or more metals mixed, or elements combined where at least one is a metal.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/alloy.webp",
+            "alt": "A stack of yellow brass ingots on a dark workbench in a metal workshop.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Ferrous alloy",
