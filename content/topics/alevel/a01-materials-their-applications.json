@@ -97,7 +97,7 @@
           "term": "A compromise",
           "ask": "What different things does a designer have to weigh up when choosing a material?",
           "tags": [],
-          "text": "Choice balances aesthetics, cost, manufacturing method, disposal and reuse.",
+          "text": "Aesthetics, cost, manufacturing method, and disposal and reuse all have to be weighed up. The best choice is a compromise between them. Cost covers waste, tooling, labour and finishing, not only the price of the raw material.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/a-compromise.webp",
             "alt": "A compromise",
@@ -108,7 +108,7 @@
           "term": "Function first",
           "ask": "In the end, what matters most when choosing a material?",
           "tags": [],
-          "text": "The final choice rests mostly on product function and material properties.",
+          "text": "What the product has to do, and the properties that suit that job. A material should be chosen because its properties suit the function, not because it's usually used for that product. Function covers loads, temperature, moisture, impact and expected service life.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/function-first.webp",
             "alt": "Function first",
@@ -119,7 +119,7 @@
           "term": "Justify it",
           "ask": "Why isn't 'it's strong' a good enough reason for choosing a material?",
           "tags": [],
-          "text": "Name the exact property and link it to the product, never just 'strong'.",
+          "text": "'Strong' is too vague: it doesn't say which property, or why the product needs it. Name the exact property and link it to the product. Acrylic suits car headlight covers because it is transparent, so light shines through onto the road.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/justify-it.webp",
             "alt": "Justify it",
@@ -149,7 +149,7 @@
           "term": "Mechanical properties",
           "ask": "What do you think 'mechanical properties' describe?",
           "tags": [],
-          "text": "How a material reacts when an external force acts on it.",
+          "text": "Mechanical properties are how a material reacts when an external force acts on it. They include five kinds of strength (compressive, tensile, bending, shear and torsional), plus hardness, toughness, plasticity, ductility, malleability and elasticity.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/mechanical-properties.webp",
             "alt": "Mechanical properties",
@@ -160,7 +160,7 @@
           "term": "Compressive strength",
           "ask": "What must a column holding up a heavy roof be able to resist?",
           "tags": [],
-          "text": "Withstands being crushed or shortened by pushing forces (compression).",
+          "text": "The column must resist being crushed by the roof pushing down on it. Compressive strength is the ability to withstand being crushed or shortened by pushing forces (compression).",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/compressive-strength.webp",
             "alt": "Compressive strength",
@@ -171,7 +171,7 @@
           "term": "Tensile strength",
           "ask": "What must the cables of a suspension bridge resist?",
           "tags": [],
-          "text": "Resists being stretched by pulling forces (tension).",
+          "text": "The cables must resist being stretched by the weight pulling on them. Tensile strength is the ability to resist stretching or pulling forces (tension).",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/tensile-strength.webp",
             "alt": "Tensile strength",
@@ -182,7 +182,7 @@
           "term": "Bending strength",
           "ask": "What force is a loaded bookshelf fighting against?",
           "tags": [],
-          "text": "Resists forces that would bend the material.",
+          "text": "The load is trying to bend the shelf downwards. Bending strength is the ability to resist forces that would bend the material. When something bends, one face is squashed (compression) while the other is stretched (tension).",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/bending-strength.webp",
             "alt": "Bending strength",
@@ -193,7 +193,7 @@
           "term": "Shear strength",
           "ask": "What kind of force acts on a material when a guillotine cuts it?",
           "tags": [],
-          "text": "Resists sliding forces acting along a parallel plane.",
+          "text": "Shear: the blades push in opposite directions, so the material slides apart along a plane. Shear strength is the ability to resist sliding forces acting along a parallel plane.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/shear-strength.webp",
             "alt": "Shear strength",
@@ -204,7 +204,7 @@
           "term": "Torsional strength",
           "ask": "What must a drive shaft resist as it turns?",
           "tags": [],
-          "text": "Withstands twisting forces from applied torque (torsion).",
+          "text": "The shaft must resist being twisted by the turning force (torque). Torsional strength is the ability to withstand twisting forces from applied torque (torsion).",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/torsional-strength.webp",
             "alt": "Torsional strength",
@@ -234,7 +234,7 @@
           "term": "Hardness",
           "ask": "What property does a drill bit need to cut other materials without wearing away?",
           "tags": [],
-          "text": "Resists abrasive wear such as scratching, indentation or cutting.",
+          "text": "A drill bit must be hard so it isn't worn away as it cuts. Hardness is the ability to resist abrasive wear such as scratching, indentation or cutting. A hardness test presses an indenter into the surface: the smaller the dent, the harder the material.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/hardness.webp",
             "alt": "Hardness",
@@ -245,7 +245,7 @@
           "term": "Toughness",
           "ask": "What lets a hammer head take a hard hit without breaking?",
           "tags": [],
-          "text": "Absorbs an impact force without fracturing.",
+          "text": "The head must be tough enough to absorb each blow without cracking. Toughness is the ability to absorb an impact force without fracturing. A tough material can deform instead of breaking suddenly.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/toughness.webp",
             "alt": "Toughness",
@@ -256,7 +256,7 @@
           "term": "Plasticity",
           "ask": "What property lets modelling clay keep its new shape after you squash it?",
           "tags": [],
-          "text": "Can be permanently deformed and keeps its new shape.",
+          "text": "Clay can be squashed into a new shape and stays that way. Plasticity is the ability to be permanently deformed without cracking and keep the new shape.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/plasticity.webp",
             "alt": "Plasticity",
@@ -267,7 +267,7 @@
           "term": "Ductility",
           "ask": "What property lets a metal be pulled out into thin wire?",
           "tags": [],
-          "text": "Can be drawn out thinner under tension without cracking, as in wire.",
+          "text": "The metal is ductile, so it can be stretched into thin wire without snapping. Ductility is the ability to be drawn out under tension, reducing the cross-section without cracking.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/ductility.webp",
             "alt": "Ductility",
@@ -278,7 +278,7 @@
           "term": "Malleability",
           "ask": "What lets a blacksmith hammer hot metal into shape without it cracking?",
           "tags": [],
-          "text": "Can be deformed by compression without cracking; easier when hotter.",
+          "text": "Hot metal is malleable, so hammering squashes it into shape without cracking. Malleability is the ability to be deformed by compression without cracking. It increases as the temperature rises, which is why the metal is heated first.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/malleability.webp",
             "alt": "Malleability",
@@ -289,7 +289,7 @@
           "term": "Elasticity",
           "ask": "What lets a rubber band spring back after you stretch it?",
           "tags": [],
-          "text": "Can be deformed, then returns to its original shape when the force goes.",
+          "text": "Rubber is elastic, so it springs back to its original shape when you let go. Elasticity is the ability to be deformed, then return to the original shape when the force is removed. That only works if the elastic limit isn't exceeded.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/elasticity.webp",
             "alt": "Elasticity",
@@ -319,7 +319,7 @@
           "term": "Physical properties",
           "ask": "How are physical properties different from mechanical ones?",
           "tags": [],
-          "text": "Linked to the material's actual make-up or structure.",
+          "text": "Mechanical properties describe how a material reacts to a force; physical properties come from the material itself. Physical properties are linked to the material's actual make-up or structure. They include density, fusibility, magnetism and corrosion resistance.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/physical-properties.webp",
             "alt": "Physical properties",
@@ -330,7 +330,7 @@
           "term": "Density",
           "ask": "Two blocks are the same size. Why might one be much heavier?",
           "tags": [],
-          "text": "The mass of the material in a standard volume.",
+          "text": "The heavier block has more mass packed into the same volume. Density is the mass of the material in a standard volume. Low density, as in aluminium, makes portable products lighter to carry; high density can add stability.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/density.webp",
             "alt": "Density",
@@ -341,7 +341,7 @@
           "term": "Fusibility",
           "ask": "What property must a metal have to be cast in a mould?",
           "tags": [],
-          "text": "Can be melted from solid to liquid by heat, vital for casting metal.",
+          "text": "The metal must melt into a liquid that can be poured into the mould. Fusibility is the ability to be turned from a solid to a liquid or molten state, usually by heat. Good fusibility is essential for any metal being cast.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/fusibility.webp",
             "alt": "Fusibility",
@@ -352,7 +352,7 @@
           "term": "Magnetism",
           "ask": "Why will some materials stick to a magnet?",
           "tags": [],
-          "text": "A natural force that makes the material attract iron or steels.",
+          "text": "A magnet attracts iron and steels, so things made of them stick to it. Magnetism is the natural force between objects that makes a material attract iron or steels.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/magnetism.webp",
             "alt": "Magnetism",
@@ -363,7 +363,7 @@
           "term": "Corrosion or degradation resistance",
           "ask": "Why do some materials last for years outdoors while others rust or rot?",
           "tags": [],
-          "text": "Withstands attack and decay from the environment.",
+          "text": "Some materials resist attack from their surroundings, so they don't rust or rot. Corrosion or degradation resistance is the ability to withstand environmental attack and decay. Moisture, UV light, chemicals and microorganisms can all cause it.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/corrosion-or-degradation-resistance.webp",
             "alt": "Corrosion or degradation resistance",
@@ -393,7 +393,7 @@
           "term": "Electrical conductor",
           "ask": "What does the metal inside a cable need to let through easily?",
           "tags": [],
-          "text": "Lets electric current flow through with very little resistance.",
+          "text": "It must let electric current flow through easily. An electrical conductor is a material that lets electric current flow through it; a good one gives very little resistance. Conductors are needed wherever there's an electrical pathway.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/electrical-conductor.webp",
             "alt": "Electrical conductor",
@@ -404,7 +404,7 @@
           "term": "Electrical insulator",
           "ask": "Why is a cable wrapped in a coating?",
           "tags": [],
-          "text": "Stops electricity flowing through the material.",
+          "text": "The coating keeps the current inside the cable. An electrical insulator is a material that stops electricity flowing through it. Insulators are needed wherever current must be contained.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/electrical-insulator.webp",
             "alt": "Electrical insulator",
@@ -415,7 +415,7 @@
           "term": "Thermal conductor",
           "ask": "Why does the base of a pan heat up so quickly?",
           "tags": [],
-          "text": "Lets heat pass through it, quickly if its conductivity is high.",
+          "text": "The base is a good thermal conductor, so heat passes through it quickly. A thermal conductor is a material that lets heat energy transfer through it; high conductivity means the heat moves quickly. Cookware and heat sinks need high conductivity.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/thermal-conductor.webp",
             "alt": "Thermal conductor",
@@ -426,7 +426,7 @@
           "term": "Thermal insulator",
           "ask": "Why can you hold a pan's handle while it cooks?",
           "tags": [],
-          "text": "Stops heat passing through the material.",
+          "text": "The handle is a thermal insulator, so the pan's heat doesn't travel through it to your hand. A thermal insulator is a material that stops heat passing through it. Low thermal conductivity suits handles and insulation.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/thermal-insulator.webp",
             "alt": "Thermal insulator",
@@ -437,7 +437,7 @@
           "term": "Thermal expansion",
           "ask": "What happens to the size of a material when it gets hot?",
           "tags": [],
-          "text": "The material's volume increases when it is heated.",
+          "text": "It gets bigger: its volume increases. Thermal expansion is the increase in a material's volume in response to heat.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/thermal-expansion.webp",
             "alt": "Thermal expansion",
@@ -467,7 +467,7 @@
           "term": "Opaque",
           "ask": "What word describes a material that lets no light through?",
           "tags": [],
-          "text": "Lets no light travel through.",
+          "text": "The word is opaque. Opaque means the material stops light travelling through it.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/opaque.webp",
             "alt": "Opaque",
@@ -479,7 +479,7 @@
           "term": "Translucent",
           "ask": "Frosted glass lets light in, but you can't see clearly through it. What word describes it?",
           "tags": [],
-          "text": "Lets light through but diffuses it so objects look blurred; frosted glass is one.",
+          "text": "Frosted glass is translucent. Translucent means the material lets light through but diffuses it, so objects behind look blurred.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/translucent.webp",
             "alt": "Translucent",
@@ -491,7 +491,7 @@
           "term": "Transparent",
           "ask": "What word describes a material you can see clearly through?",
           "tags": [],
-          "text": "Lets light pass easily, so you can see clearly through it.",
+          "text": "The word is transparent. Transparent means light passes through easily, so you can see clearly through the material. Acrylic is used for car headlight covers because it is transparent, letting the light shine onto the road.",
           "image": {
             "file": "assets/img/alevel/a01-materials-their-applications/transparent.webp",
             "alt": "Transparent",

@@ -100,7 +100,7 @@
           "term": "Product life cycle (PLC)",
           "ask": "How could you track a product's life from launch to the end?",
           "tags": [],
-          "text": "Charts a product's sales from introduction to withdrawal; plan its decline and replacement carefully.",
+          "text": "Chart its sales over time, from launch to withdrawal. The product life cycle (PLC) is the cycle of introduction, evolution and growth, maturity, decline and replacement that a product's sales go through. Companies must plan the decline and replacement stages carefully.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/product-life-cycle-plc.webp",
             "alt": "Product life cycle (PLC)",
@@ -112,7 +112,7 @@
           "term": "Introduction",
           "ask": "What happens to sales when a product is first launched?",
           "tags": [],
-          "text": "Sales start low, then take off; launched with publicity after market research.",
+          "text": "Sales start low while the market becomes aware of the product, then begin to take off. Introduction is the launch stage, backed by publicity after market research, when sales are low but starting to rise. Development costs are still being recovered.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/introduction.webp",
             "alt": "Introduction",
@@ -123,7 +123,7 @@
           "term": "Evolution and growth",
           "ask": "What makes sales grow, and where do the new customers come from?",
           "tags": [],
-          "text": "Advertising grows sales as consumers move to it from older products.",
+          "text": "Advertising helps sales grow, and new customers switch to it from older products. Evolution and growth is the stage when demand and sales rise. Makers may expand capacity, add variants and improve production efficiency, and competitors may enter the market.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/evolution-and-growth.webp",
             "alt": "Evolution and growth",
@@ -135,7 +135,7 @@
           "term": "Maturity",
           "ask": "What happens to sales once a product is well known?",
           "tags": [],
-          "text": "Sales peak; the aim is to keep the product here as long as possible.",
+          "text": "Sales level off at their peak. Maturity is the stage of peak, steady sales, which companies try to keep going for as long as possible. Improvements focus on differentiation, cost reduction, reliability, styling or added features.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/maturity.webp",
             "alt": "Maturity",
@@ -146,7 +146,7 @@
           "term": "Decline",
           "ask": "Why do sales of a product eventually fall?",
           "tags": [],
-          "text": "Sales fall, as most people who want one have bought it; then it's withdrawn.",
+          "text": "Most people who want one have already bought it, and changing technology, fashion, regulation or replacement products cut demand. Decline is the stage when sales fall and the product is eventually withdrawn. Makers may first reduce variants or reposition it.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/decline.webp",
             "alt": "Decline",
@@ -158,7 +158,7 @@
           "term": "Replacement",
           "ask": "What can a company do when an old product stops selling well?",
           "tags": [],
-          "text": "An updated, improved version is released to keep sales going.",
+          "text": "It can release an updated, improved version. Replacement is the stage when a new version takes over to keep sales going, starting a new cycle.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/replacement.webp",
             "alt": "Replacement",
@@ -170,7 +170,7 @@
           "term": "Life-cycle assessment",
           "ask": "How is a life-cycle assessment different from the product life cycle?",
           "tags": [],
-          "text": "Not the PLC: it follows a product's environmental impact, not its sales.",
+          "text": "It tracks a product's environmental impact, not its sales. A life-cycle assessment is a study of a product's material and energy impacts from extraction through manufacture and use to end of life. The PLC describes how a product's market develops.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/life-cycle-assessment.webp",
             "alt": "Life-cycle assessment",
@@ -237,7 +237,7 @@
           "term": "Extension strategy",
           "ask": "How can a company keep an older product selling?",
           "tags": [],
-          "text": "Updating or redesigning a product to maintain its sales.",
+          "text": "It can update or redesign the product. An extension strategy is a way of updating or redesigning a product to maintain its sales. Evolving a product like this can extend the commercial life of a whole product family.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/extension-strategy.webp",
             "alt": "Extension strategy",
@@ -249,7 +249,7 @@
           "term": "Smartphones",
           "ask": "Which phone ranges keep selling year after year, and how?",
           "tags": [],
-          "text": "The Apple iPhone and Samsung Galaxy use extension strategies to keep selling.",
+          "text": "The Apple iPhone and Samsung Galaxy ranges are updated and redesigned to keep them selling. Both are examples of extension strategies.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/smartphones.webp",
             "alt": "Smartphones",
@@ -261,7 +261,7 @@
           "term": "Toyota Corolla",
           "ask": "How many times do you think the Toyota Corolla has been redesigned in 50 years?",
           "tags": [],
-          "text": "Redesigned 11 times in 50 years to keep it selling.",
+          "text": "The car has been redesigned 11 times in 50 years. Each redesign is an extension strategy to maintain its sales.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/toyota-corolla.webp",
             "alt": "Toyota Corolla",
@@ -273,7 +273,7 @@
           "term": "Ways to refresh",
           "ask": "What could a company change to give an old product a new lease of life?",
           "tags": [],
-          "text": "New materials, updated electronics, new styling, better sustainability or user experience.",
+          "text": "A company could use new materials, update the electronics, restyle it, improve its sustainability or redesign the user experience. Refreshing a product like this can extend the commercial life of a product family.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/ways-to-refresh.webp",
             "alt": "Ways to refresh",
@@ -303,7 +303,7 @@
           "term": "Demand pull",
           "ask": "What happens when lots of customers want a feature?",
           "tags": [],
-          "text": "Consumers' demand for desirable features, which product designers often respond to.",
+          "text": "Designers often respond by adding or improving that feature. Demand pull is demand by consumers for desirable features. Improved battery life and larger memory in smartphones are examples.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/demand-pull.webp",
             "alt": "Demand pull",
@@ -314,7 +314,7 @@
           "term": "Battery life",
           "ask": "What do smartphone users wish their phones could do for longer?",
           "tags": [],
-          "text": "Smartphone users want batteries that last longer, so designers improve them.",
+          "text": "Smartphone users want their batteries to last longer, so designers improve battery life. This is an example of demand pull.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/battery-life.webp",
             "alt": "Battery life",
@@ -326,7 +326,7 @@
           "term": "Larger memory",
           "ask": "What do people run out of on their phones, and how do designers respond?",
           "tags": [],
-          "text": "Users want phones that store more, so memory gets larger.",
+          "text": "People run out of memory on their phones, so designers give smartphones larger memory. This is demand pull: consumers want the feature, and designers respond.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/larger-memory.webp",
             "alt": "Larger memory",
@@ -357,7 +357,7 @@
           "term": "Technology push",
           "ask": "When a new material or technology is invented, what do designers then do?",
           "tags": [],
-          "text": "New technology or materials are developed, and designers find ways to use them in new or improved products.",
+          "text": "They look for ways to use it in new or improved products. Technology push is when new technology or materials are developed first, and designers then find ways to use them in products. It is not driven by consumer demand.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/technology-push.webp",
             "alt": "Technology push",
@@ -368,7 +368,7 @@
           "term": "R&D costs",
           "ask": "Why might a company be keen to turn its research into products?",
           "tags": [],
-          "text": "The cost of research and development drives companies to push new ideas.",
+          "text": "Research and development is very expensive, so companies are keen to push the new ideas it produces. These costs drive technology push.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/r-d-costs.webp",
             "alt": "R&D costs",
@@ -379,7 +379,7 @@
           "term": "May not sell",
           "ask": "What's the risk of launching a product nobody asked for?",
           "tags": [],
-          "text": "Not driven by consumer demand, so it may not sell: consumers have to be sold its merits.",
+          "text": "A product nobody asked for may not sell, because it isn't driven by consumer demand. Consumers have to be sold the merits of its new ideas and features. Google Glass failed because consumers weren't convinced it was worth the cost.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/may-not-sell.webp",
             "alt": "May not sell",
@@ -390,7 +390,7 @@
           "term": "Google Glass",
           "ask": "Why might a head-mounted computer fail to sell?",
           "tags": [],
-          "text": "A head-mounted computer that failed: not worth the cost, with safety and privacy worries.",
+          "text": "Consumers may not be convinced it is worth the expense. Google Glass is a head-mounted computer that failed: not seen as worth the cost, with safety and privacy worries too.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/google-glass.webp",
             "alt": "Google Glass",
@@ -420,7 +420,7 @@
           "term": "Planned obsolescence",
           "ask": "Why do some products seem to need replacing every few years?",
           "tags": [],
-          "text": "Designing and making products that need replacing on a regular basis.",
+          "text": "They are designed that way on purpose. Planned obsolescence is the design and manufacture of products that need replacing on a regular basis. Spare parts that stop being available, or software that no longer works with the product, can force a replacement.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/planned-obsolescence.webp",
             "alt": "Planned obsolescence",
@@ -431,7 +431,7 @@
           "term": "Spare parts",
           "ask": "What happens when you can't get the part you need to fix a product?",
           "tags": [],
-          "text": "Parts stop being available, so the product can't be repaired.",
+          "text": "The product can't be repaired, so it has to be replaced. Unavailable spare parts are one factor in planned obsolescence.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/spare-parts.webp",
             "alt": "Spare parts",
@@ -442,7 +442,7 @@
           "term": "Software incompatibility",
           "ask": "Why might a phone that still works need replacing anyway?",
           "tags": [],
-          "text": "New software won't work with the product, so it has to be replaced.",
+          "text": "New software may not work with the phone, so it has to be replaced. This software incompatibility is one factor in planned obsolescence.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/software-incompatibility.webp",
             "alt": "Software incompatibility",
@@ -454,7 +454,7 @@
           "term": "Fairphone",
           "ask": "How could a phone be designed to last longer?",
           "tags": [],
-          "text": "Modular and upgradeable: a more customer-friendly, sustainable approach.",
+          "text": "It could be made modular and upgradeable. The Fairphone is a modular, upgradeable phone: an example of a more customer-friendly and sustainable approach than planned obsolescence.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/fairphone.webp",
             "alt": "Fairphone",
@@ -485,7 +485,7 @@
           "term": "Evolution",
           "ask": "Why do products like TVs keep changing over the years?",
           "tags": [],
-          "text": "Gradual change in products due to new technologies, manufacturing methods and materials.",
+          "text": "Research keeps bringing new features, such as OLED screens, 4K and smart capability. Evolution is the gradual change in products due to new technologies, manufacturing methods and materials. It can extend the commercial life of a product family.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/evolution.webp",
             "alt": "Evolution",
@@ -496,7 +496,7 @@
           "term": "R&D departments",
           "ask": "Whose job is it in a company to come up with new product ideas?",
           "tags": [],
-          "text": "Explore and develop new ideas for products.",
+          "text": "It is the job of the research and development (R&D) department. R&D departments are the teams that explore and develop new ideas for products. Their work is very expensive, and it drives the evolution of products.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/r-d-departments.webp",
             "alt": "R&D departments",
@@ -507,7 +507,7 @@
           "term": "Cost of R&D",
           "ask": "How much do you think a big tech company spends on research in a year?",
           "tags": [],
-          "text": "Research and development is very expensive: Apple spent $2.5 billion in 2016.",
+          "text": "A huge amount: Apple spent $2.5 billion on research and development in 2016. These high costs lead companies to push new ideas onto the market.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/cost-of-r-d.webp",
             "alt": "Cost of R&D",
@@ -518,7 +518,7 @@
           "term": "Television",
           "ask": "What new features has research brought to TVs?",
           "tags": [],
-          "text": "R&D brought LED, OLED, HDR, 4K (UHD), curved screens and smart features.",
+          "text": "Research has brought LED and OLED screens, HDR, 4K (UHD), curved screens and smart capability. These features show how R&D departments drive the evolution of products.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/television.webp",
             "alt": "Television",
@@ -529,7 +529,7 @@
           "term": "SLR camera",
           "ask": "How have cameras improved through research?",
           "tags": [],
-          "text": "R&D brought more pixels, faster firing, Wi-Fi, water resistance and an articulated screen.",
+          "text": "Research has given SLR cameras a higher pixel count, a faster firing rate, multiple cards, Wi-Fi, water resistance and an articulated screen. These features show the gradual evolution of a product.",
           "image": {
             "file": "assets/img/alevel/b07-product-life-cycle/slr-camera.webp",
             "alt": "SLR camera",

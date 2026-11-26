@@ -97,7 +97,7 @@
           "term": "Material classifications",
           "ask": "If you sorted every material in the workshop into groups, what groups would you use?",
           "tags": [],
-          "text": "Metals, woods, polymers, papers and boards, composites, smart and modern materials.",
+          "text": "Seven groups: metals, woods, polymers, papers and boards, composites, smart materials and modern materials.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/material-classifications.webp",
             "alt": "A spread of wood blocks, metal tubes, coloured plastic and card samples on a workshop bench.",
@@ -108,7 +108,7 @@
           "term": "Sub-classifications",
           "ask": "Is 'wood' just one group, or could you split it up further?",
           "tags": [],
-          "text": "Metals, woods and polymers split again, as wood splits into hardwood, softwood and manufactured board.",
+          "text": "Wood splits further, into hardwood, softwood and manufactured board. Sub-classifications are the smaller groups inside metals, woods and polymers. Metals split into ferrous, non-ferrous and alloys; polymers into thermoplastics, thermosetting polymers and elastomers.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/sub-classifications.webp",
             "alt": "Three boards side by side on a bench: a darker plank, a pale pine plank and a layered plywood strip.",
@@ -119,7 +119,7 @@
           "term": "Why classify?",
           "ask": "Why does a designer need to know which group a material belongs to?",
           "tags": [],
-          "text": "So the most suitable material can be chosen for each application.",
+          "text": "So the most suitable material can be chosen for each application. A material should be picked because its properties suit the job, not just because it is often used for that product.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/why-classify.webp",
             "alt": "A designer at a studio desk with a computer, holding up one material sample from a row of swatches.",
@@ -130,7 +130,7 @@
           "term": "Specific names",
           "ask": "In an exam answer, why might writing just 'metal' cost you marks?",
           "tags": [],
-          "text": "Always name the exact material (low carbon steel), never just 'metal'."
+          "text": "Writing just 'metal' is too vague, because analysing products and identifying materials needs the specific material. Always give the exact name, like low carbon steel, and know named examples for every classification."
         }
       ],
       "check": [
@@ -155,7 +155,7 @@
           "term": "Ferrous metal",
           "ask": "A magnet sticks to some metals but not others. What might those metals have in common?",
           "tags": [],
-          "text": "Mostly iron and carbon; magnetic and will rust. E.g. low and medium carbon steel, cast iron.",
+          "text": "They all contain iron, which makes them ferrous metals. Ferrous metals are mostly iron and carbon; they are magnetic and will rust. Low carbon steel, medium carbon steel and cast iron are examples.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/ferrous-metal.webp",
             "alt": "Two rusty steel bars looped together, lying on gravel.",
@@ -166,7 +166,7 @@
           "term": "Non-ferrous metal",
           "ask": "Why does a copper pipe never go rusty?",
           "tags": [],
-          "text": "Contains no iron; not magnetic and won't rust. E.g. aluminium, copper, zinc, silver, gold, titanium, tin.",
+          "text": "Copper contains no iron, so it is a non-ferrous metal and won't rust. Non-ferrous metals are metals with no iron; they are not magnetic and do not rust. Others include aluminium, zinc, silver, gold, titanium and tin.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/non-ferrous-metal.webp",
             "alt": "Copper pipes running along a wall just below a wooden ceiling.",
@@ -177,7 +177,7 @@
           "term": "Alloy",
           "ask": "Brass isn't dug out of the ground. How do you think it's made?",
           "tags": [],
-          "text": "Two or more metals mixed, or elements combined where at least one is a metal.",
+          "text": "Brass is made by mixing copper and zinc, so it is an alloy. An alloy is a mix of two or more metals, or of elements where at least one is a metal. Alloying can change strength, hardness and corrosion resistance.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/alloy.webp",
             "alt": "A stack of yellow brass ingots on a dark workbench in a metal workshop.",
@@ -188,7 +188,7 @@
           "term": "Ferrous alloy",
           "ask": "Stainless steel is an alloy that contains iron. Which kind of alloy does that make it?",
           "tags": [],
-          "text": "An alloy that contains iron, like stainless steel or die steel (tool steel).",
+          "text": "Stainless steel is a ferrous alloy. A ferrous alloy is an alloy that contains iron. Die steel (tool steel) is another, and stainless steel also contains chromium, which helps it resist corrosion.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/ferrous-alloy.webp",
             "alt": "A set of polished stainless steel cutlery: a knife, two forks and two spoons.",
@@ -199,7 +199,7 @@
           "term": "Non-ferrous alloy",
           "ask": "What would you call an alloy made without any iron, and can you name one?",
           "tags": [],
-          "text": "An alloy with no iron, like bronze, brass, duralumin or pewter.",
+          "text": "It is a non-ferrous alloy, like bronze, brass, duralumin or pewter. A non-ferrous alloy is an alloy with no iron in it. Bronze is mainly copper and tin, and duralumin is aluminium-based.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/non-ferrous-alloy.webp",
@@ -230,7 +230,7 @@
           "term": "Hardwood",
           "ask": "Think of a big leafy tree that goes bare every winter. What can you say about its timber?",
           "tags": [],
-          "text": "From broad-leafed (deciduous) trees, generally slow growing. E.g. oak, ash, mahogany, teak, birch, beech.",
+          "text": "It is a hardwood, from a tree that is generally slow growing. Hardwood is wood from broad-leafed (deciduous) trees, which lose their leaves in autumn. Oak, ash, mahogany, teak, birch and beech are hardwoods.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/hardwood.webp",
             "alt": "A tall stack of timber planks on bearers in a timber store, with a worker beside it.",
@@ -241,7 +241,7 @@
           "term": "Softwood",
           "ask": "Christmas trees grow quickly and keep their needles all year. What kind of timber do they give?",
           "tags": [],
-          "text": "From coniferous (cone-bearing) trees, generally fast growing and evergreen. E.g. pine, spruce, Douglas fir, redwood, cedar, larch.",
+          "text": "They give softwood. Softwood is wood from coniferous (cone-bearing) trees, which are generally fast growing and evergreen. Pine, spruce, Douglas fir, redwood, cedar and larch are softwoods.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/softwood.webp",
             "alt": "Stacks of felled logs beside a forest track lined with conifers.",
@@ -252,7 +252,7 @@
           "term": "Manufactured board",
           "ask": "A tree trunk is only so wide. How could you get a wooden sheet bigger than any plank?",
           "tags": [],
-          "text": "A man-made, wood-based composite, made in much larger sizes than solid wood. E.g. plywood, chipboard, MDF.",
+          "text": "Bond wood veneers, particles or fibres into a manufactured board, which comes in much larger sizes than solid wood. Manufactured board is a man-made, wood-based composite. Plywood, chipboard and MDF are examples.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/manufactured-board.webp",
             "alt": "A stack of plywood sheets on bearers in a joinery workshop.",
@@ -282,7 +282,7 @@
           "term": "Thermoplastic",
           "ask": "Why can an old plastic bottle be melted down and made into something new?",
           "tags": [],
-          "text": "Can be reheated and reshaped again and again, so it can be recycled. E.g. LDPE, HDPE, PP, HIPS, ABS, PMMA, PET, nylon, PVC.",
+          "text": "The bottle is a thermoplastic, like PET, which softens again whenever it is heated. A thermoplastic is a polymer that can be reheated and reshaped again and again, so it can be recycled. Others include LDPE, HDPE, PP, ABS and PVC.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/thermoplastic.webp",
             "alt": "A wire cage packed with used plastic drinks bottles.",
@@ -293,7 +293,7 @@
           "term": "Thermosetting polymer",
           "ask": "Why can't a melamine plate be melted down and moulded into something new?",
           "tags": [],
-          "text": "A chemical change on heating forms rigid cross links, so it can't be reshaped. E.g. UF, MF, polyester and epoxy resin.",
+          "text": "The plate is melamine formaldehyde, a thermosetting polymer, so it can't be reheated and reshaped, even at very high temperatures. A thermosetting polymer is one that changes chemically when heated, forming rigid cross links. Others include urea formaldehyde, polyester resin and epoxy resin.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/thermosetting-polymer.webp",
             "alt": "A white melamine dinner plate with a floral border.",
@@ -304,7 +304,7 @@
           "term": "Elastomer",
           "ask": "What lets a squashed rubber ball spring straight back into shape?",
           "tags": [],
-          "text": "Deforms under pressure at room temperature, then returns to its shape when released. E.g. natural rubber, polybutadiene, neoprene, silicone.",
+          "text": "Rubber is an elastomer: weak bonds let it deform, then spring back once released. An elastomer is a polymer that can be squashed or stretched at room temperature, then returns to its original shape. Natural rubber, polybutadiene, neoprene and silicone are examples.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/elastomer.webp",
             "alt": "A pile of brightly coloured rubber bouncy balls.",
@@ -315,7 +315,7 @@
           "term": "Molecular structure",
           "ask": "What could be going on inside a polymer that lets it soften, set hard or stretch?",
           "tags": [],
-          "text": "Thermoplastics have long linear chains held by van der Waals forces; elastomers have weak bonds, so they stretch.",
+          "text": "Thermoplastics have long linear chains held by van der Waals forces; thermosetting polymers have rigid cross links; elastomers have weak bonds that let them stretch.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/molecular-structure.svg",
             "alt": "Three panels of polymer molecules labelled Thermoplastic, Thermosetting and Elastomer: separate chains, chains joined by cross links, and coiled chains.",
@@ -326,7 +326,7 @@
           "term": "Recyclability",
           "ask": "A product is meant to go in the recycling bin. Which kind of polymer should you never suggest?",
           "tags": [],
-          "text": "Thermosetting polymers can't be recycled, so never choose one for a product that will be.",
+          "text": "Never suggest a thermosetting polymer, because thermosetting polymers can't be recycled. Pick a thermoplastic instead, as it can be reheated and reshaped after its first use.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/recyclability.webp",
             "alt": "A blue recycling wheelie bin next to a black bin on grass.",
@@ -356,7 +356,7 @@
           "term": "Compliant material",
           "ask": "Why is card so easy to turn into a box with just a knife, a ruler and some folds?",
           "tags": [],
-          "text": "Can be scored, folded and cut with basic tools to make items such as packaging nets.",
+          "text": "Card is a compliant material, like all papers and boards. A compliant material is one that can be scored, folded and cut with basic tools, to make items like packaging nets. Score lines control where it folds.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/compliant-material.webp",
             "alt": "An open, empty cardboard box standing on a wooden floor.",
@@ -367,7 +367,7 @@
           "term": "Papers",
           "ask": "How many different kinds of paper could you find in a designer's studio?",
           "tags": [],
-          "text": "Layout, cartridge, tracing, bleed proof, treated and watercolour paper.",
+          "text": "At least six: layout, cartridge, tracing, bleed proof, treated and watercolour paper. Layout and tracing paper are see-through enough to trace over ideas, and bleed proof paper reduces the spread of marker ink.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/papers.webp",
             "alt": "Different papers laid out on a bench: tracing paper, sketches, watercolour and coloured sheets.",
@@ -378,7 +378,7 @@
           "term": "Boards",
           "ask": "Packaging isn't all made from the same card. Which kinds of board can you think of?",
           "tags": [],
-          "text": "Corrugated, bleached, duplex, foil-backed, laminated and metal effect card; mount board; moulded paper pulp.",
+          "text": "Corrugated, bleached, duplex, foil-backed, laminated and metal effect card; mount board; moulded paper pulp. Corrugated card has a fluted core that adds stiffness and protection with little extra weight.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/boards.webp",
@@ -409,7 +409,7 @@
           "term": "Composite",
           "ask": "Why might combining two different materials give you something better than either one alone?",
           "tags": [],
-          "text": "Two or more different materials combined, giving a material with enhanced properties.",
+          "text": "The mix can have properties that neither material gives as well on its own. A composite is two or more different materials combined, giving a material with enhanced properties. Composites can be fibre based, particle based or sheet based.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/composite.webp",
             "alt": "A cut-away drawing of a composite sheet, showing layers of fibres set inside the material.",
@@ -420,7 +420,7 @@
           "term": "Fibre based",
           "ask": "What could you set inside a plastic or cement to make it stronger?",
           "tags": [],
-          "text": "Fibres set in another material, like CFRP, GRP or fibre cement.",
+          "text": "Fibres: carbon or glass fibres set in plastic make CFRP or GRP, and fibres in cement make fibre cement. CFRP is very stiff and strong for its low mass.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/fibre-based.webp",
@@ -432,7 +432,7 @@
           "term": "Particle based",
           "ask": "What would you get if tiny hard particles were held together inside another material?",
           "tags": [],
-          "text": "Particles held together in another material, like tungsten carbide or concrete.",
+          "text": "A particle based composite, like tungsten carbide or concrete. Tungsten carbide has hard carbide particles held in a metal binder, so it is extremely hard and wear resistant, and it is used for cutting tips.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/particle-based.svg",
@@ -444,7 +444,7 @@
           "term": "Sheet based",
           "ask": "How could thin layers be bonded together to make one strong material?",
           "tags": [],
-          "text": "Layers bonded together, like aluminium composite board or glulam (engineered wood).",
+          "text": "Layers bonded together make a sheet based composite, like aluminium composite board or glulam (engineered wood). Aluminium composite board has thin aluminium skins on a light core, so it is stiff for little mass. Glulam bonds timber layers into large structural members.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/sheet-based.svg",
             "alt": "The end of a laminated timber beam showing eight bonded layers, beside a panel with two thin metal skins on a thicker core.",
@@ -474,7 +474,7 @@
           "term": "Smart material",
           "ask": "A mug changes colour when hot tea goes in. What kind of material is doing that?",
           "tags": [],
-          "text": "Its physical properties change in response to an input like electricity, pressure, temperature or light.",
+          "text": "A smart material: thermochromic pigment, which changes colour with temperature. A smart material is one whose physical properties change in response to an input like electricity, pressure, temperature or light.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/smart-material.webp",
             "alt": "Coffee poured into a black mug beside a white mug whose face appears when it is hot.",
@@ -485,7 +485,7 @@
           "term": "Smart examples",
           "ask": "Which materials can you think of that change when they're heated, lit or pressed?",
           "tags": [],
-          "text": "Shape memory alloys (SMA), thermochromic pigment and film, phosphorescent and photochromic pigments, electroluminescent wire, piezo electric material.",
+          "text": "Shape memory alloys (SMA), thermochromic pigment and film, phosphorescent and photochromic pigments, electroluminescent wire, piezo electric material. Heat makes an SMA return to its shape, light changes photochromic pigment, and pressing piezo electric material gives an electrical charge.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/smart-examples.webp",
@@ -497,7 +497,7 @@
           "term": "Modern material",
           "ask": "If a material isn't found in nature, how might it come about?",
           "tags": [],
-          "text": "Developed through new or improved processes, for example by human intervention.",
+          "text": "People develop it through new or improved processes. A modern material is one developed by inventing new or improved processes, for example through human intervention. Modern materials give performance that traditional materials struggle to match.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/modern-material.webp",
             "alt": "A sheet of yellow woven Kevlar fabric on a workbench, held flat by a gloved hand.",
@@ -508,7 +508,7 @@
           "term": "Not smart",
           "ask": "A material is new and high-tech. Does that make it smart?",
           "tags": [],
-          "text": "Modern materials don't react to external change, so they are not smart materials.",
+          "text": "Being new doesn't make it smart: modern materials don't react to external change, so they are not smart materials. Only a material whose properties change in response to an input, like temperature or light, is smart.",
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/not-smart.webp",
             "alt": "Not smart",
@@ -519,7 +519,7 @@
           "term": "Modern examples",
           "ask": "Which materials can you name that people have invented, rather than found?",
           "tags": [],
-          "text": "Precious metal clay (PMC), Kevlar, high density modelling foam, polymorph.",
+          "text": "Precious metal clay (PMC), Kevlar, high density modelling foam and polymorph. Kevlar fibre is very strong for its low mass, and polymorph softens in hot water so it can be shaped by hand.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/modern-examples.webp",

@@ -27,15 +27,29 @@ const line = (text, cls = "") => h("span", { class: `ln-line ${cls}`.trim() }, t
 const lines = (n) => Array.from({ length: n }, () => line());
 
 // Item text as a short note line: "Tenon saw – shallow, accurate cuts in small pieces of wood".
-// The candidates run longest first: the first sentence, then cut back at safe points only (a
+// The note is the item's definition sentence when it has one ("<Term> is …", "An <term> is …",
+// "<Term>s are …", "<Term> means …"; A-level reveals answer the ask first and define the term
+// after), less its opening words; otherwise the first sentence.
+// The candidates run longest first: that sentence, then cut back at safe points only (a
 // colon or semicolon, or before ", such as", ", e.g.", ", often", ", usually", ", plus",
-// ", which"), so a list is never cut in the middle.
-const CUT = /[;:](?= )|,(?= (such as|e\.g\.|often|usually|plus|which)\b)/g;
+// ", which", or a closing bracket such as "(compression)"), so a list is never cut in the middle.
+const CUT = /[;:](?= )|,(?= (such as|e\.g\.|often|usually|plus|which)\b)| (?=\([^()]*\)$)/g;
+const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function noteSentence(it) {
+  const all = it.text.split(/(?<=\.)\s/);
+  const def = new RegExp(`^(?:(?:a|an|the)\\s+)?${escRe(it.term)}s?\\s+(?:is|are|means)\\s+`, "i");
+  const d = all.find((x) => def.test(x));
+  return d ? d.replace(def, "") : all[0];
+}
 function noteCandidates(it) {
-  let s = it.text.split(/(?<=\.)\s/)[0].replace(/[.:]\s*$/, "").trim();
+  let s = noteSentence(it).replace(/[.:]\s*$/, "").trim();
   if (/^[A-Z](?![A-Z])/.test(s)) s = s[0].toLowerCase() + s.slice(1); // not "CNC …"
-  const cuts = [...s.matchAll(CUT)].map((m) => m.index).reverse();
-  return [s, ...cuts.map((i) => s.slice(0, i))].map((x) => `${it.term} – ${x}`);
+  // Second, always: a shorter wording of the same note ("the ability to resist …" → "can
+  // resist …"; "a material that lets …" → "lets …"), which is also what a line too long for
+  // every candidate falls back to, on two small lines.
+  const short = s.replace(/^the ability to /, "can ").replace(/^((a|an) (material|product) that|the material) /, "");
+  const cuts = [...short.matchAll(CUT)].map((m) => m.index).reverse();
+  return [s, short, ...cuts.map((i) => short.slice(0, i))].map((x) => `${it.term} – ${x}`);
 }
 
 const sentence = (s) => s.replace(/\.$/, "");
@@ -311,8 +325,15 @@ export function fitFilled(sheet) {
       }
       if (ok) break;
     }
-    if (!ok) { ink.textContent = cands[0]; l.classList.remove("small"); }
-    if (!ok) l.classList.add("wrap");
+    if (!ok) {
+      // Two small lines: the longest wording that fits on them (shorter wording first, then cuts).
+      l.classList.remove("small");
+      l.classList.add("wrap");
+      const two = () => ink.getBoundingClientRect().height <= l.getBoundingClientRect().height + 0.5;
+      const tries = cands.slice(1).filter((c) => words(c) >= 4);
+      ink.textContent = tries[0] ?? cands[0];
+      for (const c of tries) { ink.textContent = c; if (two()) break; }
+    }
   }
   for (const el of sheet.querySelectorAll(".ln-ans, .ln-choice .ln-line, .ln-steps .ln-line")) {
     const ink = el.firstElementChild;

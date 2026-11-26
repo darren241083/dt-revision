@@ -15,8 +15,16 @@ const pick = (list, rnd = Math.random) => list[Math.floor(rnd() * list.length)];
 const MATERIAL = { timber: "timber", polymer: "polymers" };
 
 // Words of a term long enough to give it away if they appear in the text.
-const giveaway = (it) => it.term.toLowerCase().split(/[^a-z]+/).filter((w) => w.length >= 4)
-  .some((w) => it.text.toLowerCase().includes(w));
+const termWords = (it) => it.term.toLowerCase().split(/[^a-z]+/).filter((w) => w.length >= 4);
+// The item's text with its own term's words blanked, and words from the same stem ("hardness":
+// hard, harder; "elasticity": elastic), so an option never names its own term. A-level texts
+// often define the term by name.
+const stem = (w) => { const s = w.replace(/(ness|ility|ity|ism|ive|ion|ing|ed|es|s)$/, ""); return s.length >= 4 ? s : w; };
+function blanked(it) {
+  let t = it.text;
+  for (const w of termWords(it)) t = t.replace(new RegExp(`\\b${stem(w)}\\w*`, "gi"), "___");
+  return t.replace(/___(?:[ -]___)+/g, "___");
+}
 
 function mc(q, right, wrong, why, chunk, item) {
   const options = [right, ...shuffle(wrong).slice(0, 3)];
@@ -32,8 +40,12 @@ export function itemQuestions(T) {
     if (items.length < 3) continue;
     for (const it of items) {
       const others = items.filter((o) => o !== it);
-      out.push(mc(`${c.label}: which describes “${it.term}”${it.term.endsWith("?") ? "" : "?"}`, it.text, others.map((o) => o.text), null, c.id, it.term));
-      if (!giveaway(it)) out.push(mc(`${c.label}: which one is this? ${it.text}`, it.term, others.map((o) => o.term), null, c.id, it.term));
+      out.push(mc(`${c.label}: which describes “${it.term}”${it.term.endsWith("?") ? "" : "?"}`, blanked(it), others.map(blanked), null, c.id, it.term));
+      // Skipped when the blanks would leave the clue hard to read.
+      const clue = blanked(it), blanks = (clue.match(/___/g) || []).length;
+      if (blanks <= 2 && blanks / clue.split(/\s+/).length <= 0.1) {
+        out.push(mc(`${c.label}: which one is this? ${clue}`, it.term, others.map((o) => o.term), null, c.id, it.term));
+      }
     }
     // Material questions (GCSE): the right item has the tag. Wrong options are only items the
     // sources limit to the other material ("only"), and the chunk needs 3 of them.

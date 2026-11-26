@@ -100,7 +100,7 @@
           "term": "Design process",
           "ask": "How might a designer organise the work from a problem to a finished prototype?",
           "tags": [],
-          "text": "An organised way of designing and making a prototype of a product.",
+          "text": "Designers follow a design process, working through a series of stages from the problem to testing a prototype. A design process is an organised way to design a product and make its prototype. Its stages include investigation, specification, ideas, modelling and planning production.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/design-process.webp",
             "alt": "Design process",
@@ -111,7 +111,7 @@
           "term": "Cyclic (iterative) process",
           "ask": "Why might a designer go round the same stages more than once?",
           "tags": [],
-          "text": "Usually cyclic, not linear, because ongoing improvement matters to commercial success.",
+          "text": "Ongoing improvement matters to a product's commercial success, so each round refines the design. A cyclic (iterative) process is a design process that repeats its stages instead of being linear. Test results or user feedback can send a project back to earlier decisions.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/cyclic-iterative-process.webp",
             "alt": "Cyclic (iterative) process",
@@ -122,7 +122,7 @@
           "term": "Not a fixed recipe",
           "ask": "Does every project need the same amount of research, modelling and testing?",
           "tags": [],
-          "text": "Gives structure, but the depth of each stage varies by project.",
+          "text": "Each project needs a different depth of investigation, modelling and testing. A design process gives structure, but it shouldn't be treated as a rigid recipe.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/not-a-fixed-recipe.webp",
             "alt": "Not a fixed recipe",
@@ -172,7 +172,7 @@
           "term": "Design brief",
           "ask": "Before designing anything, what would you need to know about who it's for?",
           "tags": [],
-          "text": "Outlines the needs and wants of a specific user or target market.",
+          "text": "You'd need their needs and wants, which a design brief sets out. A design brief is an outline of the problem and of what a specific user or target market needs and wants. It comes first in the design cycle, before investigation.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/design-brief.webp",
             "alt": "A designer and a client at a workshop table, going over printed sheets for a new project.",
@@ -183,7 +183,7 @@
           "term": "The problem",
           "ask": "What should a brief describe first?",
           "tags": [],
-          "text": "A description of the problem or need: the situation to be solved.",
+          "text": "A description of the problem or need comes first, setting out the situation to be solved.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/the-problem.webp",
             "alt": "The problem",
@@ -194,7 +194,7 @@
           "term": "Context",
           "ask": "How could a brief help a designer picture the situation?",
           "tags": [],
-          "text": "Images and details of the context, situation or problem.",
+          "text": "Images and details of the context, situation or problem help the designer picture it.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/context.webp",
             "alt": "Context",
@@ -205,7 +205,7 @@
           "term": "Existing products",
           "ask": "Why mention products that are already on sale?",
           "tags": [],
-          "text": "Says where existing products are inadequate or unsuitable.",
+          "text": "To show where existing products fall short, being inadequate or unsuitable for the need. Primary research later analyses their strengths and weaknesses.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/existing-products.webp",
             "alt": "Existing products",
@@ -216,7 +216,7 @@
           "term": "Client or user",
           "ask": "Who else should a brief tell the designer about?",
           "tags": [],
-          "text": "Information about the client or user group.",
+          "text": "The brief gives information about the client or user group the product is for.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/client-or-user.webp",
             "alt": "Client or user",
@@ -227,7 +227,7 @@
           "term": "Product and success",
           "ask": "How much should a brief say about the product itself?",
           "tags": [],
-          "text": "A basic description and key functions, and the key areas for success."
+          "text": "Only a basic description of the product and its key functions, plus the key areas to focus on for success. The detailed criteria come later, in the design specification."
         }
       ],
       "check": [
@@ -252,7 +252,7 @@
           "term": "Primary research",
           "ask": "How could you find out what's good and bad about products already on sale?",
           "tags": [],
-          "text": "Analysing existing products' strengths, weaknesses and areas to improve.",
+          "text": "Analyse them for strengths, weaknesses and areas to improve, by using them and taking them apart. Primary research is information you collect directly for your own project. Methods include questionnaires, focus groups, interviews and observation.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/primary-research.webp",
             "alt": "Primary research",
@@ -263,7 +263,7 @@
           "term": "Using the product",
           "ask": "What's the quickest way to find out how well a product does its job?",
           "tags": [],
-          "text": "Use it for its intended task to get first-hand knowledge.",
+          "text": "Use it yourself for the task it was designed for, to get first-hand knowledge of how well it works.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/using-the-product.webp",
             "alt": "Using the product",
@@ -274,7 +274,7 @@
           "term": "Taking it apart",
           "ask": "How could you discover how a product is put together and made?",
           "tags": [],
-          "text": "Disassemble it to assess its function, components, materials and manufacture.",
+          "text": "Take it apart, so you can assess its function, components, materials and manufacture. The aim is to learn useful design lessons, not to copy the product.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/taking-it-apart.webp",
@@ -286,7 +286,7 @@
           "term": "Comparing products",
           "ask": "How can you tell whether a product is better or worse than its rivals?",
           "tags": [],
-          "text": "Compare its function, components, materials and manufacture with equivalent products.",
+          "text": "Compare its function, components, materials and manufacture with those of equivalent products.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/comparing-products.webp",
             "alt": "Five electric kettles of different designs lined up on a workshop bench.",
@@ -297,7 +297,7 @@
           "term": "Focus groups and questionnaires",
           "ask": "How could you get views on a product from people other than yourself?",
           "tags": [],
-          "text": "Seek objective views on the product from other people.",
+          "text": "Use focus groups or questionnaires to seek objective views from other people. A focus group is a guided group discussion that can show shared views and disagreements. Members can sway each other, so treat the results as qualitative evidence.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/focus-groups-and-questionnaires.webp",
@@ -309,7 +309,7 @@
           "term": "Ergonomics and needs",
           "ask": "Apart from how it looks, what makes a product right for its users?",
           "tags": [],
-          "text": "Assess ergonomic features for ease of use, and check it meets consumer needs.",
+          "text": "Ease of use and meeting consumer needs matter, so assess its ergonomic features and check key development criteria are met. Ergonomics uses information about people to improve comfort, safety, efficiency and control.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/ergonomics-and-needs.webp",
             "alt": "Two hands gripping a smooth wooden handle.",
@@ -320,7 +320,7 @@
           "term": "Aesthetics and cost",
           "ask": "What else would a customer judge before buying?",
           "tags": [],
-          "text": "Assess how the product looks and what it costs.",
+          "text": "How it looks and what it costs, so assess the product's aesthetics and cost.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/aesthetics-and-cost.webp",
             "alt": "Aesthetics and cost",
@@ -350,7 +350,7 @@
           "term": "Materials research",
           "ask": "How can a designer be sure a material is right before choosing it?",
           "tags": [],
-          "text": "Materials, construction and finishes are researched so the choices are appropriate.",
+          "text": "Research materials, construction and finishes, so the choices made are appropriate. Useful findings are turned into material requirements for the design.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/materials-research.webp",
             "alt": "Materials research",
@@ -361,7 +361,7 @@
           "term": "Technical data",
           "ask": "What facts about a material might a designer need from a specialist?",
           "tags": [],
-          "text": "Data such as toughness and tensile strength, from specialist researchers.",
+          "text": "Technical data such as its toughness and tensile strength, supplied by specialist researchers. A tensile test finds tensile strength by pulling a sample apart while measuring force and extension.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/technical-data.webp",
             "alt": "A universal testing machine with two grips for pulling a test sample.",
@@ -372,7 +372,7 @@
           "term": "Client and specialists",
           "ask": "Who could you ask about what the product needs to do?",
           "tags": [],
-          "text": "Discuss needs with the client or users, and consult specialists and specialist forums.",
+          "text": "Discuss requirements with the client or user group, and consult specialists to identify key specification criteria. Specialist internet forums help too, and integrated circuit developers are an example of specialists for electronic products.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/client-and-specialists.webp",
             "alt": "A technician soldering a circuit board at an electronics workbench.",
@@ -383,7 +383,7 @@
           "term": "Trends and influences",
           "ask": "Why look at what's fashionable now, and what was popular in the past?",
           "tags": [],
-          "text": "Investigate historical and current style influences, fashions and trends.",
+          "text": "Investigating historical and current style influences, fashions and trends gives research that can inform design decisions about style. Market research also looks at trends, alongside competing products, price points and gaps.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/trends-and-influences.webp",
             "alt": "Chairs from different eras displayed in a row in a museum gallery.",
@@ -394,7 +394,7 @@
           "term": "Design constraints",
           "ask": "What limits might a design have to work within?",
           "tags": [],
-          "text": "Identify constraints such as size, environment and method of use.",
+          "text": "Constraints such as size, environment and method of use, which research should identify. Findings are turned into implications for the design, such as dimensions, user priorities or constraints.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/design-constraints.webp",
             "alt": "Design constraints",
@@ -405,7 +405,7 @@
           "term": "Standards and safety",
           "ask": "What safety rules might a product and its materials have to meet?",
           "tags": [],
-          "text": "Check British Standards; investigate materials' and components' safety and COSHH compliance.",
+          "text": "Check relevant British Standards, and check materials and components are safe and COSHH compliant. British Standards, published by the BSI, can set safety requirements, dimensions and test methods. COSHH covers substances that may harm health.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/standards-and-safety.webp",
             "alt": "Nine red-bordered hazard pictograms, including flammable, toxic, corrosive and explosive.",
@@ -416,7 +416,7 @@
           "term": "Anthropometric data",
           "ask": "How do you make sure a product fits the people who use it?",
           "tags": [],
-          "text": "Body measurement data, analysed so the product is the correct fit.",
+          "text": "Analyse anthropometric data so the product is the correct fit for its users. Anthropometric data is the measurement of human body dimensions. Percentiles show where a measurement sits in a population, and the right one to use depends on the product's function.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/anthropometric-data.svg",
@@ -447,7 +447,7 @@
           "term": "Mood board",
           "ask": "How could you show the look and feel you're aiming for before you design?",
           "tags": [],
-          "text": "A collage of relevant images, including suitable styles and colours.",
+          "text": "Make a mood board to show the look you're aiming for. A mood board is a collage of relevant images, chosen for suitable styles and colours. It can also help explore form and emotional direction.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/mood-board.webp",
@@ -459,14 +459,14 @@
           "term": "Inspiration box",
           "ask": "How could you collect real colours and materials to work from?",
           "tags": [],
-          "text": "A box of swatches, colour samples, materials and products.",
+          "text": "Collect real samples in an inspiration box. An inspiration box is a box of swatches, colour samples, materials and products. Real samples help you explore texture as well as colour.",
           "imageOnReveal": true
         },
         {
           "term": "Design decisions",
           "ask": "What makes inspiration materials useful, not just decoration?",
           "tags": [],
-          "text": "They explore colour, texture, form and style, and should lead to design decisions."
+          "text": "They should lead to design decisions, not become decorative pages with no link to the design proposal. They help explore colour, texture, form, style and emotional direction."
         }
       ],
       "check": [
@@ -491,7 +491,7 @@
           "term": "Design specification",
           "ask": "How will you know at the end whether your design is a success?",
           "tags": [],
-          "text": "The key criteria to address when designing; the design is judged against them.",
+          "text": "By judging it against the design specification, which turns research into criteria. A design specification is a list of the key criteria to address when designing.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/design-specification.webp",
             "alt": "Design specification",
@@ -502,13 +502,13 @@
           "term": "After research",
           "ask": "When should the specification be written, and why then?",
           "tags": [],
-          "text": "Written after investigation and analysis of research."
+          "text": "After the investigation and analysis of research, because it turns those findings into criteria. In the design cycle it comes after investigation and before ideas generation."
         },
         {
           "term": "Essential and desirable",
           "ask": "Are all of a product's requirements equally important?",
           "tags": [],
-          "text": "Lists essential requirements, as well as desirable features.",
+          "text": "Essential requirements matter more than desirable features, and a specification lists both.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/essential-and-desirable.webp",
             "alt": "Essential and desirable",
@@ -519,13 +519,13 @@
           "term": "Set by the client",
           "ask": "In industry, who mainly decides what goes in a specification?",
           "tags": [],
-          "text": "Commercial specifications are mainly determined by the client."
+          "text": "The client mainly decides what goes in a commercial specification."
         },
         {
           "term": "Measurable criteria",
           "ask": "What makes a specification point easy to check later?",
           "tags": [],
-          "text": "Strong criteria are measurable or testable, and say why they matter."
+          "text": "Making it measurable or testable, so the design can later be judged against it. Strong criteria also explain why they matter."
         },
         {
           "term": "Typical elements",
@@ -537,7 +537,7 @@
           "term": "Constant reference",
           "ask": "Should the specification only be used at the very end?",
           "tags": [],
-          "text": "Referred to throughout the design process, not just a final checklist."
+          "text": "It should be referred to all through the design process, not only used as a final evaluation checklist. Evaluation compares evidence against its criteria and identifies the next development action."
         }
       ],
       "check": [
@@ -562,7 +562,7 @@
           "term": "Mind map",
           "ask": "How could you lay out everything about a problem on one page to spark ideas?",
           "tags": [],
-          "text": "Sets out the relevant elements visually, to encourage creativity.",
+          "text": "Make a mind map. A mind map is a way of setting out the relevant elements visually, to encourage creativity.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/mind-map.webp",
@@ -574,7 +574,7 @@
           "term": "SCAMPER",
           "ask": "How could you rethink an existing design, one prompt at a time?",
           "tags": [],
-          "text": "Substitute, combine, adapt, modify, put to another use, eliminate, reverse: new ideas from existing designs.",
+          "text": "Use SCAMPER: substitute, combine, adapt, modify, put to another use, eliminate, reverse. SCAMPER is a technique for creating new ideas from elements of existing designs. Eliminate means simplifying the design by removing unnecessary elements.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/scamper.webp",
             "alt": "SCAMPER",
@@ -585,7 +585,7 @@
           "term": "Collaborative team designing",
           "ask": "Why might a team come up with a better product than one designer alone?",
           "tags": [],
-          "text": "Uses specialist expertise and often gives better products than a single designer.",
+          "text": "Pooling members' specialist expertise improves creativity and often gives better products than a single designer. Working together also lowers the risk of finding manufacturing or cost problems very late.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/collaborative-team-designing.webp",
             "alt": "A design team at a workshop table with sketches, a laptop and blue prototype parts.",
@@ -596,7 +596,7 @@
           "term": "Meetings and video conferencing",
           "ask": "How can a design team share ideas when its members are in different places?",
           "tags": [],
-          "text": "Creative discussion in meetings, or by video conferencing.",
+          "text": "Video conferencing lets them hold creative discussions, just as they would in a meeting. Digital prototypes can also be reviewed by teams in different places.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/meetings-and-video-conferencing.webp",
@@ -608,7 +608,7 @@
           "term": "4x4 technique",
           "ask": "How could passing one sheet round a group produce several developed ideas?",
           "tags": [],
-          "text": "An idea in the centre, developed in turn by others into four drawings around it.",
+          "text": "One person draws an idea in the centre, then others develop it further in four boxes around it. The 4x4 technique is a collaborative activity that turns one idea into four development drawings. It brings in a range of alternative ideas and viewpoints.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/4x4-technique.svg",
@@ -620,7 +620,7 @@
           "term": "Thinking Hats",
           "ask": "How could a group make sure an idea is looked at from every point of view?",
           "tags": [],
-          "text": "Six coloured hats worn in turn, each a different viewpoint; Edward de Bono's technique.",
+          "text": "Use Thinking Hats: six coloured hats are worn in turn, each standing for a different viewpoint. Thinking Hats is a technique, devised by Edward de Bono, for improving creative discussion and collaborative work.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/thinking-hats.webp",
@@ -632,7 +632,7 @@
           "term": "Developing through discussion",
           "ask": "How could feedback from real people shape your early ideas?",
           "tags": [],
-          "text": "Discuss designs with the client or target market; use their feedback to modify them.",
+          "text": "Discuss sketches or models of initial ideas with the client or target market, then use their feedback to modify the design.",
           "image": {
             "file": "assets/img/alevel/b08a-design-brief-research-ideas/developing-through-discussion.webp",
             "alt": "A designer showing a client folded card models on a workbench.",

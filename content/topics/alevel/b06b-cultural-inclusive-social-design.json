@@ -94,9 +94,9 @@
       "items": [
         {
           "term": "Avoiding offence",
-          "ask": "Why should a company check what a product's name means in other countries?",
+          "ask": "Why should a company check how people in other countries will see its product?",
           "tags": [],
-          "text": "Products must not offend people in domestic or global markets.",
+          "text": "A product must not offend people in its domestic or global markets, and what is fine in one country may offend in another. Avoid stereotypes, disrespectful symbols and assumptions that leave groups out.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/avoiding-offence.webp",
             "alt": "Avoiding offence",
@@ -132,7 +132,7 @@
           "term": "Colour",
           "ask": "Why might a product's colour go down well in one country but badly in another?",
           "tags": [],
-          "text": "A colour can mean different things in different countries.",
+          "text": "A colour can mean different things in different countries. Designers must research its cultural significance in each country they sell to.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/colour.webp",
             "alt": "Colour",
@@ -144,7 +144,7 @@
           "term": "Beliefs and customs",
           "ask": "What might a designer not know about the people they're designing for in another culture?",
           "tags": [],
-          "text": "Religious beliefs, traditions and customs may be outside the designer's experience.",
+          "text": "Religious beliefs, traditions and customs may be outside the designer's experience. Designers must research them so the product doesn't offend.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/beliefs-and-customs.webp",
             "alt": "Beliefs and customs",
@@ -156,7 +156,7 @@
           "term": "User research",
           "ask": "How can a designer make sure a product respects a community they're not part of?",
           "tags": [],
-          "text": "Involve the communities concerned and avoid stereotypes or disrespectful symbols.",
+          "text": "Include people from the communities concerned in user research, and avoid stereotypes or disrespectful symbols. This matters most when a product carries cultural meaning.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/user-research.webp",
             "alt": "User research",
@@ -187,7 +187,7 @@
           "term": "Inclusive design",
           "ask": "What does inclusive design aim to do?",
           "tags": [],
-          "text": "Mainstream products usable by as many people as possible without special adaptation (BSI).",
+          "text": "It aims to suit as many people as possible. Inclusive design is designing mainstream products and services that as many people as reasonably possible can access and use without special adaptation (BSI). It considers differences in age, strength, dexterity, reach, vision, hearing and mobility.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/inclusive-design.webp",
             "alt": "Inclusive design",
@@ -199,7 +199,7 @@
           "term": "Disability Discrimination Act (1995)",
           "ask": "Which 1995 law changed public transport and access for disabled people?",
           "tags": [],
-          "text": "The DDA 1995, now replaced by the Equality Act 2010, changed public transport and access.",
+          "text": "The DDA 1995 changed public transport and access for disabled people. It has since been replaced by the Equality Act 2010, which protects disabled people from discrimination in England, Scotland and Wales.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/disability-discrimination-act-1995.webp",
             "alt": "Disability Discrimination Act (1995)",
@@ -211,7 +211,7 @@
           "term": "Without stigma",
           "ask": "Why might someone avoid using a product that's obviously 'for disabled people'?",
           "tags": [],
-          "text": "Suit a diverse range of people without singling anyone out.",
+          "text": "A product that singles people out can stigmatise them, so designers should suit a diverse range of people without stigmatising anyone. Inclusive products can improve usability for everyone, not just one narrow group.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/without-stigma.webp",
             "alt": "Without stigma",
@@ -223,7 +223,7 @@
           "term": "In the home",
           "ask": "What could make a new house, or a kitchen tool, easier for more people to use?",
           "tags": [],
-          "text": "Wider doors for wheelchairs in new houses and OXO Good Grips easy-to-use utensils.",
+          "text": "Wider doors for wheelchair users and easy-to-use kitchen utensils. Updated standards set wider doors for new houses, and OXO's award-winning Good Grips range is a kitchen example.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/in-the-home.webp",
             "alt": "In the home",
@@ -236,7 +236,7 @@
           "term": "Getting about",
           "ask": "What changes help people with different needs get around town?",
           "tags": [],
-          "text": "Low-floor buses, bright-yellow handrails, crossings with bumps, ramps and sensory feedback.",
+          "text": "Low-floor buses, bright-yellow handrails, and crossings with raised bumps, ramps and sensory feedback. Lower bus floors help wheelchair users, and the yellow handrails are highly visible.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/getting-about.webp",
             "alt": "Getting about",
@@ -249,7 +249,7 @@
           "term": "Hearing induction loops",
           "ask": "How could a theatre help audience members with a hearing impairment?",
           "tags": [],
-          "text": "In theatres, for audience members with a hearing impairment.",
+          "text": "A theatre can fit hearing induction loops for audience members with a hearing impairment. They are one example of inclusive design.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/hearing-induction-loops.webp",
             "alt": "Hearing induction loops",
@@ -262,7 +262,7 @@
           "term": "Specialist products",
           "ask": "Where would someone who needs extra help with everyday tasks find products made for them?",
           "tags": [],
-          "text": "Kettle pourers and door handle adapters, sold by specialist shops.",
+          "text": "In specialist shops, which sell products such as kettle pourers and door handle adapters. Inclusive design can't make every mainstream product suit every person.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/specialist-products.webp",
             "alt": "Specialist products",
@@ -294,7 +294,7 @@
           "term": "Social issues",
           "ask": "What problems in society do you think design could help with?",
           "tags": [],
-          "text": "Issues affecting people: environment, health, poverty, discrimination, unemployment.",
+          "text": "Design can help with clean water, sanitation, healthcare, housing, mobility and emergency response. Social issues are issues affecting people, such as the environment, health, poverty, discrimination and unemployment.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/social-issues.webp",
             "alt": "Social issues",
@@ -305,9 +305,9 @@
         },
         {
           "term": "Child-friendly litter bins",
-          "ask": "How could a litter bin get children into good habits?",
+          "ask": "What kind of litter bin could help children learn good habits?",
           "tags": [],
-          "text": "Innovative bin designs encourage children to adopt good habits.",
+          "text": "An innovative, child-friendly litter bin design can encourage children to adopt good habits. It is one way designers help society through products that address social issues.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/child-friendly-litter-bins.webp",
             "alt": "Child-friendly litter bins",
@@ -320,7 +320,7 @@
           "term": "Black box devices",
           "ask": "How could a car insurer find out how a young driver really drives?",
           "tags": [],
-          "text": "Car insurance companies use them to monitor young drivers.",
+          "text": "Car insurance companies use black box devices to monitor how young drivers drive.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/black-box-devices.webp",
             "alt": "Black box devices",
@@ -333,7 +333,7 @@
           "term": "Police scanning devices",
           "ask": "What could a handheld scanner help the police to find?",
           "tags": [],
-          "text": "Detect illegal drugs and explosives.",
+          "text": "Police use scanning devices to check for illegal drugs and explosives.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/police-scanning-devices.webp",
             "alt": "Police scanning devices",
@@ -345,7 +345,7 @@
           "term": "Local context",
           "ask": "Why might a clever solution fail in a remote village?",
           "tags": [],
-          "text": "Solutions must not rely on resources or maintenance that aren't available locally.",
+          "text": "A solution can fail if it relies on resources or maintenance that aren't available locally. Effective social design means understanding the local context first.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/local-context.webp",
             "alt": "Local context",
@@ -376,7 +376,7 @@
           "term": "UN Article 25 (1948)",
           "ask": "What did the UN declare in 1948 that everyone has a right to?",
           "tags": [],
-          "text": "Everyone's right to food, clothing, housing and medical care for health and well-being.",
+          "text": "Everyone has a right to a decent standard of living for their health and well-being, including food, clothing, housing and medical care. It is part of the UN's Declaration of Human Rights, and some designers and organisations have responded to it.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/un-article-25-1948.webp",
             "alt": "UN Article 25 (1948)",
@@ -388,7 +388,7 @@
           "term": "Wind-up radio",
           "ask": "How could people listen to the radio where batteries are hard to get?",
           "tags": [],
-          "text": "A radio needing no batteries, by Trevor Baylis, for parts of Africa short of them.",
+          "text": "A wind-up radio needs no batteries, so it works where batteries are hard to get. Trevor Baylis designed it for parts of Africa that lacked radio batteries.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/wind-up-radio.webp",
             "alt": "Wind-up radio",
@@ -400,7 +400,7 @@
           "term": "GravityLight",
           "ask": "What could replace dangerous, costly kerosene lamps in people's homes?",
           "tags": [],
-          "text": "LED lighting replacing dangerous, costly kerosene lamps in Kenya.",
+          "text": "An LED light called GravityLight can replace dangerous, costly kerosene lamps. The GravityLight Foundation made it in response to this problem in Kenya.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/gravitylight.webp",
             "alt": "GravityLight",
@@ -412,7 +412,7 @@
           "term": "Practical Action",
           "ask": "How could a charity use technology to help people out of poverty?",
           "tags": [],
-          "text": "An NGO giving appropriate, technological 'open design' answers to poverty.",
+          "text": "Practical Action is an NGO that tackles poverty in developing countries with appropriate, technological 'open design' solutions.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/practical-action.webp",
             "alt": "Practical Action",
@@ -424,7 +424,7 @@
           "term": "da Vinci system",
           "ask": "How could robots help in an operating theatre?",
           "tags": [],
-          "text": "A robotic surgery system by Intuitive Surgical, for advanced, safe surgery.",
+          "text": "A robotic system can help surgeons carry out advanced, safe surgery. The da Vinci system is a robotic surgery system from Intuitive Surgical.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/da-vinci-system.webp",
             "alt": "da Vinci system",
@@ -436,7 +436,7 @@
           "term": "Touch Bionics",
           "ask": "How could technology make a better artificial hand or limb?",
           "tags": [],
-          "text": "Improved prostheses using advanced composites, motors and control systems.",
+          "text": "By using advanced composites, motors and control systems. Touch Bionics is a company that responded to the challenge of improving prostheses (artificial limbs).",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/touch-bionics.webp",
             "alt": "Touch Bionics",
@@ -480,7 +480,7 @@
           "term": "Temporary communities",
           "ask": "What forces huge numbers of people to leave their homes?",
           "tags": [],
-          "text": "Conflict, poverty and victimisation leave huge communities of destitute migrants.",
+          "text": "Conflict, poverty and victimisation leave huge temporary communities of destitute migrants all over the world.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/temporary-communities.webp",
             "alt": "Temporary communities",
@@ -492,7 +492,7 @@
           "term": "Humanitarian organisations and NGOs",
           "ask": "Who provides the basics, like water, for people in a temporary camp?",
           "tags": [],
-          "text": "Provide basic infrastructure for these temporary communities.",
+          "text": "Humanitarian organisations and NGOs are the groups that provide basic infrastructure for temporary migrant communities. NGO stands for non-governmental organisation. Designers and companies also respond to migrants' needs.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/humanitarian-organisations-and-ngos.webp",
             "alt": "Humanitarian organisations and NGOs",
@@ -504,7 +504,7 @@
           "term": "Solar cookers",
           "ask": "How could families in a camp cook food without fuel?",
           "tags": [],
-          "text": "From the UNHCR, for preparing food.",
+          "text": "Solar cookers let families in camps prepare food using the sun's energy. They are the response of the United Nations High Commissioner for Refugees (UNHCR) to migrants' need for food preparation.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/solar-cookers.webp",
             "alt": "Solar cookers",
@@ -517,7 +517,7 @@
           "term": "Water distillation",
           "ask": "How could people in a camp get clean water?",
           "tags": [],
-          "text": "Technology from SunDwater, for clean water.",
+          "text": "Water distillation technology can provide clean water in camps. It is the SunDwater company's response to migrants' need for clean water.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/water-distillation.webp",
             "alt": "Water distillation",
@@ -530,7 +530,7 @@
           "term": "Adiff clothing",
           "ask": "How could a piece of clothing help someone with nowhere to sleep?",
           "tags": [],
-          "text": "Multi-purpose clothing by Angela Luna that becomes a shelter.",
+          "text": "Multi-purpose clothing can double as a shelter. Angela Luna designed the Adiff range in response to migrants' need for clothing.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/adiff-clothing.webp",
             "alt": "Adiff clothing",
@@ -543,7 +543,7 @@
           "term": "Hospitainers and maternitainers",
           "ask": "Where could people in a camp get medical care, such as help having a baby?",
           "tags": [],
-          "text": "Adapted shipping containers for medical care, from the UNFPA.",
+          "text": "Hospitainers and maternitainers are shipping containers adapted to give medical care at refugee crisis locations. They come from the United Nations Population Fund (UNFPA).",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/hospitainers-and-maternitainers.webp",
             "alt": "Hospitainers and maternitainers",
@@ -575,7 +575,7 @@
           "term": "Temporary accommodation",
           "ask": "What is one of the first things people need in a refugee crisis?",
           "tags": [],
-          "text": "One of the key needs in a refugee crisis.",
+          "text": "Somewhere to stay. Temporary accommodation is one of the key needs to provide in a refugee crisis.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/temporary-accommodation.webp",
             "alt": "Temporary accommodation",
@@ -588,7 +588,7 @@
           "term": "Better Shelter",
           "ask": "What could a well-known furniture company design for families who have lost their homes?",
           "tags": [],
-          "text": "The Ikea Foundation's flat-pack shelter, made to meet that need.",
+          "text": "A flat-pack shelter they can live in. Better Shelter is the Ikea Foundation's flat-pack shelter, made in response to refugees' need for temporary accommodation.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/better-shelter.webp",
             "alt": "Better Shelter",
@@ -601,7 +601,7 @@
           "term": "No tools",
           "ask": "What tools do you think you'd need to put up an emergency shelter?",
           "tags": [],
-          "text": "It can be put up without any tools.",
+          "text": "None: the Better Shelter can be put up without any tools.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/no-tools.webp",
             "alt": "No tools",
@@ -638,7 +638,7 @@
           "term": "Solar power",
           "ask": "Where could a shelter get electricity in a camp with no mains supply?",
           "tags": [],
-          "text": "A solar-powered electrical system.",
+          "text": "From the sun: the Better Shelter has a solar-powered electrical system.",
           "caption": "An integrated solar-powered lighting system provides illumination without relying on mains electricity. This improves usability and independence in locations with limited infrastructure.",
           "imageOnReveal": true,
           "image": {
@@ -670,7 +670,7 @@
           "term": "Fairtrade",
           "ask": "What do you think the Fairtrade movement is for?",
           "tags": [],
-          "text": "A movement for the ethical treatment of farmers and workers in developing countries.",
+          "text": "It tackles the exploitation of farmers and craft workers in developing countries. Fairtrade is a movement for the ethical treatment of farmers and workers in developing countries. Its systems seek better trading conditions and set standards for producers and workers.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fairtrade.webp",
             "alt": "Fairtrade",
@@ -694,7 +694,7 @@
           "term": "Fairtrade mark",
           "ask": "How can a shopper tell that a product meets Fairtrade standards?",
           "tags": [],
-          "text": "A certification label shown on qualifying products.",
+          "text": "By looking for the Fairtrade mark on it. The Fairtrade mark is a certification label that only qualifying products can display.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fairtrade-mark.webp",
             "alt": "Fairtrade mark",
@@ -720,7 +720,7 @@
           "term": "Fairtrade status",
           "ask": "Why would a school or council want to be known for supporting Fairtrade?",
           "tags": [],
-          "text": "Schools and councils seek it to promote sustainable development, producer benefits, active citizenship and demand.",
+          "text": "To promote sustainable development, benefits for producers, active citizenship and more demand for Fairtrade food and craft. Schools and local authorities can seek Fairtrade mark status.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/fairtrade-status.webp",
             "alt": "Fairtrade status",
@@ -732,7 +732,7 @@
           "term": "Pushpanjali",
           "ask": "How can a Fairtrade organisation help craftspeople in India?",
           "tags": [],
-          "text": "A Fairtrade organisation in India giving craftspeople sustainable work and social benefits.",
+          "text": "Pushpanjali is a Fairtrade organisation in India that gives craftsmen and women sustainable work and many other social benefits.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/pushpanjali.webp",
             "alt": "Pushpanjali",
@@ -744,7 +744,7 @@
           "term": "Effect on design",
           "ask": "Why might a designer care that shoppers recognise the Fairtrade scheme?",
           "tags": [],
-          "text": "Shoppers recognise the scheme, so it affects material choice, branding and demand.",
+          "text": "Shoppers' recognition of Fairtrade can affect demand, so it influences a designer's material choice and branding.",
           "image": {
             "file": "assets/img/alevel/b06b-cultural-inclusive-social-design/effect-on-design.webp",
             "alt": "Effect on design",

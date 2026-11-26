@@ -100,27 +100,27 @@
           "term": "Modelling",
           "ask": "Why make a 3D version of an idea before making the real thing?",
           "tags": [],
-          "text": "Producing a 3D CAD design or physical mock-up to develop ideas and prototypes."
+          "text": "A 3D version lets you develop and check an idea, reducing uncertainty before the real product is made. Modelling is making a design in 3D, either as a CAD model or a physical mock-up, to develop ideas and prototypes."
         },
         {
           "term": "Modelling materials",
           "ask": "What cheap, easy-to-shape materials could a quick model be made from?",
           "tags": [],
-          "text": "Card, styrofoam, clay, wire, polymorph, corriflute and balsa.",
+          "text": "Models are often made from card, styrofoam, clay, wire, polymorph, corriflute or balsa. Polymorph softens in hot water, is shaped by hand and hardens as it cools. Styrofoam is very light and easy to shape.",
           "imageOnReveal": true
         },
         {
           "term": "Sketch models",
           "ask": "How could you try out an idea in 3D in a few minutes?",
           "tags": [],
-          "text": "Very quick models in card and paper, easily cut, folded and glued.",
+          "text": "Make a sketch model from paper and card. Sketch models are very quick models in paper and card, which are easily cut, folded and glued. A card model like this can test an idea's volume and layout.",
           "imageOnReveal": true
         },
         {
           "term": "Scale models",
           "ask": "Why might a model smaller than the real thing be useful to show people?",
           "tags": [],
-          "text": "Help communicate a product's aesthetics and function.",
+          "text": "A scale model lets people see how the product will look and work before it is made full size. Scale models are used to communicate a product's aesthetics and function.",
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/scale-models.webp",
             "alt": "A small-scale model of a pick-up style car photographed outdoors.",
@@ -132,19 +132,19 @@
           "term": "Full-size models",
           "ask": "What can you only check with a model that's the real size?",
           "tags": [],
-          "text": "Let you test size, proportion, ergonomics and function."
+          "text": "A real-size model lets you test size, proportion, ergonomics and function. Full-size models are built at the same size as the final product, so potential users can try them out."
         },
         {
           "term": "Recording models",
           "ask": "Why keep a record of a model once it's been made?",
           "tags": [],
-          "text": "Photograph models and note the lessons learned; sketch on photos to show developments."
+          "text": "A record keeps the lessons learned from each model, so they can guide the next stage. Photographs of models are kept with notes, and sketching on the photos is a useful way to show development ideas."
         },
         {
           "term": "Reducing uncertainty",
           "ask": "How can different kinds of model answer different questions?",
           "tags": [],
-          "text": "Models reduce uncertainty: card tests layout, foam tests form, CAD tests fit."
+          "text": "Each kind of model checks something different: a card model tests volume and layout, foam tests form and a CAD assembly tests fit. A working prototype can test function. Together, models reduce uncertainty before the product is made."
         }
       ],
       "check": [
@@ -169,7 +169,7 @@
           "term": "Spreadsheet timeline",
           "ask": "How could you keep track of a project's stages and deadlines?",
           "tags": [],
-          "text": "Shows the main stages and dates, with space for notes.",
+          "text": "Use a spreadsheet timeline to plan the project. A spreadsheet timeline is a table of the main stages and their dates, with space for notes. It should be updated whenever development changes the design.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/spreadsheet-timeline.svg",
@@ -182,7 +182,7 @@
           "term": "Concurrent stages",
           "ask": "How could a factory save time by doing jobs side by side?",
           "tags": [],
-          "text": "Sub-assemblies are made at the same time as other stages, ready for final assembly.",
+          "text": "Make sub-assemblies alongside other stages, ready to join at final assembly. Concurrent stages are production stages that run at the same time, not one after another. A motor unit or control panel could be made as a sub-assembly.",
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/concurrent-stages.webp",
             "alt": "An old black-and-white photo of a factory floor where parts are built up as sub-assemblies.",
@@ -194,13 +194,13 @@
           "term": "Timings and sequence",
           "ask": "What has to be worked out about each operation in commercial production?",
           "tags": [],
-          "text": "The timings of operations and the order of activities need detailed planning."
+          "text": "How long each operation takes, and the order of activities, must be planned in detail. Flow charts help to plan efficient production operations and timings."
         },
         {
           "term": "Critical path analysis (CPA)",
           "ask": "How could a diagram show which jobs depend on others finishing first?",
           "tags": [],
-          "text": "A graphical method for planning production: tasks, their durations and which depend on others.",
+          "text": "A CPA network links each task to those it depends on. Critical path analysis (CPA) is a graphical method of planning production that shows tasks, their durations and dependencies. The critical path, the longest chain of dependent tasks, sets the shortest possible project time.",
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/critical-path-analysis-cpa.svg",
             "alt": "A network of numbered events joined by task arrows with durations; the longest chain, the critical path, is drawn thicker.",
@@ -229,13 +229,13 @@
           "term": "Efficient manufacture",
           "ask": "What should good planning mean for the making stage?",
           "tags": [],
-          "text": "Effective planning makes manufacture as efficient as possible."
+          "text": "Good planning should make manufacture as efficient as possible. Manufacture then follows the plan, which sets out the sequence, tools, resources, quality checks, health and safety controls and contingency."
         },
         {
           "term": "Working drawings",
           "ask": "What does a maker need in front of them when manufacture starts?",
           "tags": [],
-          "text": "Dimensioned drawings with details of materials and components.",
+          "text": "They need dimensioned working drawings, with details of the materials and components. Working drawings are drawings with enough information for someone else to make the part. They can include tolerances, surface finish, hole details and assembly notes.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/working-drawings.svg",
@@ -267,44 +267,44 @@
           "term": "Ongoing evaluation",
           "ask": "When in the design process should a designer evaluate their work?",
           "tags": [],
-          "text": "An integral, ongoing part of the process, from summarising investigations onwards."
+          "text": "All the way through, not only at the end. Ongoing evaluation is checking and testing work at every stage of the design process. It starts with a summary of key points after disassembly and other investigation work."
         },
         {
           "term": "Early designs",
           "ask": "Who should see your first designs and CAD views, and why?",
           "tags": [],
-          "text": "Evaluate initial designs and 3D CAD views with the client or potential users."
+          "text": "The client or potential users should evaluate initial designs and 3D CAD views. Their responses show what to change, informing further development work."
         },
         {
           "term": "Testing prototypes",
           "ask": "How can a model or prototype be improved before the final version?",
           "tags": [],
-          "text": "Test models and prototypes with potential users, then refine them."
+          "text": "Test it with potential users, then refine it using what the testing shows. Testing models and prototypes with potential users is part of the ongoing evaluation that runs through the whole design process."
         },
         {
           "term": "Materials experiments",
           "ask": "How could you check a material or process will work for your prototype?",
           "tags": [],
-          "text": "Materials and manufacturing experiments check their suitability."
+          "text": "Run materials and manufacturing experiments to check they suit the prototype. These experiments are part of ongoing evaluation, alongside testing models and prototypes with potential users."
         },
         {
           "term": "Against the specification",
           "ask": "How do you judge whether a finished product has met its targets?",
           "tags": [],
-          "text": "Compare the finished product in detail with each specification criterion."
+          "text": "Compare the finished product in detail with each specification criterion. This works best when the criteria are measurable or testable. The findings then lead to suggestions for further improvements."
         },
         {
           "term": "Testing in use",
           "ask": "Where should a finished product's function and comfort be tested?",
           "tags": [],
-          "text": "Test function, ergonomics, aesthetics and size in the intended environment.",
+          "text": "It should be tested where it will really be used. Testing in use means testing function, ergonomics, aesthetics and size in the product's intended environment. The tests should reflect the conditions it will meet in use.",
           "imageOnReveal": true
         },
         {
           "term": "Outside opinions",
           "ask": "Why ask people outside the design team for their views?",
           "tags": [],
-          "text": "Objective third-party feedback from potential users, and expert opinion from specialists."
+          "text": "Outsiders give objective feedback that goes beyond the designer's own assumptions. Potential users give third-party feedback, and specialists give expert opinion."
         }
       ],
       "check": [
@@ -329,7 +329,7 @@
           "term": "Flow charts",
           "ask": "How could you show the stages of a manufacturing process on one page?",
           "tags": [],
-          "text": "Show elements such as manufacturing processes and quality control stages.",
+          "text": "Draw it as a flow chart. Flow charts are diagrams that show the stages of manufacturing processes and quality control in order. A test can branch into pass and fail routes, as in a quality control feedback loop.",
           "imageOnReveal": true,
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/flow-charts.webp",
@@ -342,7 +342,7 @@
           "term": "3D CAD",
           "ask": "How could a client see what a product will look like before it's made?",
           "tags": [],
-          "text": "Generates realistic views of designs, and virtual models.",
+          "text": "Show them realistic views or a virtual model made in 3D CAD. 3D CAD is computer-aided design that generates realistic views of designs and virtual models. It is also used for form development, assemblies and checking that parts don't clash.",
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/3d-cad.webp",
             "alt": "A 3D CAD render of a machined metal part above a photo of the real part.",
@@ -354,7 +354,7 @@
           "term": "2D CAD",
           "ask": "How are accurate drawings of parts made, ready for machining?",
           "tags": [],
-          "text": "Draws parts for working drawings and CNC machining.",
+          "text": "Parts are drawn precisely using 2D CAD. 2D CAD is computer-aided design used to draw parts for working drawings and CNC machining. It is also useful for profiles, sheet layouts and laser-cut shapes.",
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/2d-cad.webp",
             "alt": "A 2D CAD program showing a dimensioned floor plan of an office.",
@@ -366,13 +366,13 @@
           "term": "Illustration",
           "ask": "Besides looks, what should a drawing of an idea show?",
           "tags": [],
-          "text": "Sketches, CAD renders and diagrams show how an idea works and looks."
+          "text": "It should show how the idea works, as well as how it looks. Illustration is using sketches, CAD renders and diagrams to communicate a design idea. Exploded views help clients and users understand assembly and function."
         },
         {
           "term": "Annotation",
           "ask": "What could notes on a drawing explain?",
           "tags": [],
-          "text": "Notes explain decisions, dimensions, materials and mechanisms.",
+          "text": "They can explain design decisions, dimensions, materials, mechanisms and links to user evidence. Annotation is the notes added to a drawing to explain a design idea.",
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/annotation.svg",
             "alt": "A design sketch of a desk lamp with leader lines from its parts to short notes.",
@@ -403,7 +403,7 @@
           "term": "Commercial design",
           "ask": "How do big companies usually go about designing and making products?",
           "tags": [],
-          "text": "Relies on collaborative working and an iterative (cyclic) process, for ongoing improvement.",
+          "text": "Big companies work in collaborative teams and follow an iterative (cyclic) process. This allows the ongoing product improvements needed to sustain commercial success. Designers, engineers, suppliers and manufacturing specialists exchange information continuously.",
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/commercial-design.webp",
             "alt": "Cars moving along a modern factory assembly line.",
@@ -415,19 +415,19 @@
           "term": "Bespoke design",
           "ask": "How might designing a one-off for a single client be different?",
           "tags": [],
-          "text": "Uses a linear process, with a definite start and end."
+          "text": "It runs once from start to finish instead of going round a cycle. Bespoke design is one-off design for a single client, using a linear process with a definite start and end. Unit cost is high, but the product can be highly customised."
         },
         {
           "term": "The client's demands",
           "ask": "What does a bespoke designer concentrate on most?",
           "tags": [],
-          "text": "Understanding and meeting the individual client's demands, with high standards of manufacture."
+          "text": "Bespoke designers focus on understanding and meeting the individual client's demands, and on high standards of manufacture. Skilled labour, flexible equipment and adaptable processes help to achieve this."
         },
         {
           "term": "UCD standards",
-          "ask": "Why might a company want its design methods to meet an international standard?",
+          "ask": "What kind of design standards are companies giving more priority to?",
           "tags": [],
-          "text": "Methods meeting user-centred design (UCD) standards like ISO 13407 are a growing priority."
+          "text": "Standards for user-centred design: design methods that meet them are becoming a higher priority for companies. UCD standards are standards for user-centred design, such as ISO 13407. User-centred design keeps attention on the people who will use the product."
         }
       ],
       "check": [
@@ -452,44 +452,44 @@
           "term": "Collaborative working",
           "ask": "Why might a product need more than one person's knowledge?",
           "tags": [],
-          "text": "Combining the expertise, skills and knowledge of everyone designing and making a product."
+          "text": "Design development is rarely done by one person, as a product needs many different kinds of expertise. Collaborative working is combining the expertise, skills and knowledge of the people who design and make a product."
         },
         {
           "term": "Specialist team members",
           "ask": "Whose know-how does an industrial design team draw on?",
           "tags": [],
-          "text": "Each member's particular expertise and specialist knowledge."
+          "text": "Industrial design teams use each member's particular expertise and specialist knowledge. Members might include engineers, industrial designers, material specialists and marketers."
         },
         {
           "term": "External consultancies",
           "ask": "Where can a company get expert help it doesn't have in-house?",
           "tags": [],
-          "text": "Outside firms help with styling, ergonomics, marketing and material selection."
+          "text": "It can bring in external consultancies. External consultancies are outside firms that give specialist help with product styling, ergonomics, marketing and material selection."
         },
         {
           "term": "Production design specialists",
           "ask": "Who decides how a product will be made and what tooling it needs?",
           "tags": [],
-          "text": "Oversee manufacturing decisions and tooling."
+          "text": "These decisions belong to production design specialists. Production design specialists are the team members who oversee manufacturing decisions and tooling."
         },
         {
           "term": "Fewer late problems",
           "ask": "Why is it better to involve manufacturing people early on?",
           "tags": [],
-          "text": "Reduces the risk of finding manufacturing or cost problems very late."
+          "text": "Early involvement reduces the risk of finding manufacturing or cost problems very late. It also lets tooling and supply-chain planning develop while prototypes are still being tested."
         },
         {
           "term": "Virtual collaboration",
           "ask": "How can team members in different places work on the same design?",
           "tags": [],
-          "text": "Teams in different places share CAD files, comments, schedules and test data.",
+          "text": "They share CAD files, comments, schedules and test data digitally. Virtual collaboration is teamwork between people in different places through shared digital information. Digital prototypes can be reviewed by the whole team, wherever they are.",
           "imageOnReveal": true
         },
         {
           "term": "Clear communication",
           "ask": "What could go wrong when lots of people work on one design?",
           "tags": [],
-          "text": "Version control and clear responsibilities stop teams working from conflicting information."
+          "text": "Different team members could end up working from conflicting information. Clear communication is reliable sharing of information across the team, backed by version control and clear responsibilities."
         }
       ],
       "check": [
@@ -514,38 +514,38 @@
           "term": "Continuing refinement",
           "ask": "How does a design keep getting better over time?",
           "tags": [],
-          "text": "Designs are modified in a continuing cycle of refinements, based on evaluation."
+          "text": "Designs are modified again and again in a continuing, cyclic process of refinements. Each change is based on evaluating the ideas so far."
         },
         {
           "term": "Focus group feedback",
           "ask": "Whose opinions help refine a prototype?",
           "tags": [],
-          "text": "Feedback from focus groups and individuals helps refine prototypes.",
+          "text": "Focus groups and individuals give feedback that helps refine prototypes. Focus group feedback is the views from a moderated group discussion, which can reveal shared attitudes and disagreement. Group dynamics can sway answers, so treat it as qualitative evidence.",
           "imageOnReveal": true
         },
         {
           "term": "Production engineers",
           "ask": "Who can say whether a design change will cause problems in the factory?",
           "tags": [],
-          "text": "Give feedback on the manufacturing implications of changes."
+          "text": "Ask the production engineers. Production engineers are engineers who give feedback on the manufacturing implications of design changes. Their feedback is part of each cycle of refinement."
         },
         {
           "term": "Product life cycle",
           "ask": "Why do companies keep releasing new versions of a product?",
           "tags": [],
-          "text": "Keeping a product's life cycle going needs improved versions designed and released."
+          "text": "Keeping a product's life cycle going needs improved versions to be designed and released. A product life cycle is the stages a product goes through, from introduction to decline. New materials, styling or updated electronics can extend its commercial life."
         },
         {
           "term": "Technological innovation",
           "ask": "Where do some product improvements come from?",
           "tags": [],
-          "text": "Some improvements come from newly available technological innovations."
+          "text": "Some improvements come from technological innovations that have newly become available. This is technology push, where designers find uses for newly developed technology or materials. It isn't driven by consumer demand, so the products may not sell."
         },
         {
           "term": "Retail data",
           "ask": "How could sales figures shape the next version of a product?",
           "tags": [],
-          "text": "Sales data guides design work on improved versions, to maintain sales.",
+          "text": "They show which products or variants sell and how demand changes, which guides work on improved versions to maintain sales. Retail data is sales information, which EPOS systems record as products are sold.",
           "image": {
             "file": "assets/img/alevel/b08b-modelling-planning-evaluation/retail-data.webp",
             "alt": "A bar chart of yearly sales by region, rising steeply in recent years.",
@@ -557,7 +557,7 @@
           "term": "Back to earlier decisions",
           "ask": "What could send a project back to an earlier stage?",
           "tags": [],
-          "text": "Test results, customer feedback, supplier capability or regulation."
+          "text": "Test results, customer feedback, supplier capability or regulation can send a project back to earlier decisions. This happens because the process stays cyclic, even in large commercial projects."
         }
       ],
       "check": [
