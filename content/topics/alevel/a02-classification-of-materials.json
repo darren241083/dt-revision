@@ -97,7 +97,12 @@
           "term": "Material classifications",
           "ask": "If you sorted every material in the workshop into groups, what groups would you use?",
           "tags": [],
-          "text": "Metals, woods, polymers, papers and boards, composites, smart and modern materials."
+          "text": "Metals, woods, polymers, papers and boards, composites, smart and modern materials.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/material-classifications.webp",
+            "alt": "A spread of wood blocks, metal tubes, coloured plastic and card samples on a workshop bench.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Sub-classifications",
