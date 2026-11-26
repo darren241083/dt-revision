@@ -108,7 +108,12 @@
           "term": "Sub-classifications",
           "ask": "Is 'wood' just one group, or could you split it up further?",
           "tags": [],
-          "text": "Metals, woods and polymers split again, as wood splits into hardwood, softwood and manufactured board."
+          "text": "Metals, woods and polymers split again, as wood splits into hardwood, softwood and manufactured board.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/sub-classifications.webp",
+            "alt": "Three boards side by side on a bench: a darker plank, a pale pine plank and a layered plywood strip.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Why classify?",
