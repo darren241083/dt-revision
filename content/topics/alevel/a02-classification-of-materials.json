@@ -497,7 +497,12 @@
           "term": "Modern material",
           "ask": "If a material isn't found in nature, how might it come about?",
           "tags": [],
-          "text": "Developed through new or improved processes, for example by human intervention."
+          "text": "Developed through new or improved processes, for example by human intervention.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/modern-material.webp",
+            "alt": "A sheet of yellow woven Kevlar fabric on a workbench, held flat by a gloved hand.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Not smart",
