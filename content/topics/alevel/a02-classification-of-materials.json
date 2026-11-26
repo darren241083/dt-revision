@@ -289,8 +289,7 @@
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/molecular-structure.svg",
             "alt": "Three panels of polymer molecules labelled Thermoplastic, Thermosetting and Elastomer: separate chains, chains joined by cross links, and coiled chains.",
-            "credit": "DT",
-            "unchecked": true
+            "credit": "DT"
           }
         },
         {
@@ -301,8 +300,7 @@
           "image": {
             "file": "assets/img/alevel/a02-classification-of-materials/recyclability.webp",
             "alt": "A blue recycling wheelie bin next to a black bin on grass.",
-            "credit": "SAF1999 · CC0",
-            "unchecked": true
+            "credit": "SAF1999 · CC0"
           }
         }
       ],
