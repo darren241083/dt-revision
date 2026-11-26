@@ -119,7 +119,12 @@
           "term": "Why classify?",
           "ask": "Why does a designer need to know which group a material belongs to?",
           "tags": [],
-          "text": "So the most suitable material can be chosen for each application."
+          "text": "So the most suitable material can be chosen for each application.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/why-classify.webp",
+            "alt": "A designer at a studio desk with a computer, holding up one material sample from a row of swatches.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Specific names",
