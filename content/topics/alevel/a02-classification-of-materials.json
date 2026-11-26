@@ -508,7 +508,12 @@
           "term": "Not smart",
           "ask": "A material is new and high-tech. Does that make it smart?",
           "tags": [],
-          "text": "Modern materials don't react to external change, so they are not smart materials."
+          "text": "Modern materials don't react to external change, so they are not smart materials.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/not-smart.webp",
+            "alt": "Not smart",
+            "credit": "AI"
+          }
         },
         {
           "term": "Modern examples",
