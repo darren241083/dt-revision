@@ -230,7 +230,12 @@
           "term": "Hardwood",
           "ask": "Think of a big leafy tree that goes bare every winter. What can you say about its timber?",
           "tags": [],
-          "text": "From broad-leafed (deciduous) trees, generally slow growing. E.g. oak, ash, mahogany, teak, birch, beech."
+          "text": "From broad-leafed (deciduous) trees, generally slow growing. E.g. oak, ash, mahogany, teak, birch, beech.",
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/hardwood.webp",
+            "alt": "A tall stack of timber planks on bearers in a timber store, with a worker beside it.",
+            "credit": "AI-generated image"
+          }
         },
         {
           "term": "Softwood",
