@@ -515,7 +515,12 @@
           "ask": "Which materials can you name that people have invented, rather than found?",
           "tags": [],
           "text": "Precious metal clay (PMC), Kevlar, high density modelling foam, polymorph.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/modern-examples.webp",
+            "alt": "Modern examples",
+            "credit": "AI"
+          }
         }
       ],
       "check": [
