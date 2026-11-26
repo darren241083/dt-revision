@@ -486,7 +486,12 @@
           "ask": "Which materials can you think of that change when they're heated, lit or pressed?",
           "tags": [],
           "text": "Shape memory alloys (SMA), thermochromic pigment and film, phosphorescent and photochromic pigments, electroluminescent wire, piezo electric material.",
-          "imageOnReveal": true
+          "imageOnReveal": true,
+          "image": {
+            "file": "assets/img/alevel/a02-classification-of-materials/smart-examples.webp",
+            "alt": "Smart examples",
+            "credit": "--"
+          }
         },
         {
           "term": "Modern material",
